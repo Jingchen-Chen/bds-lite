@@ -79,6 +79,14 @@ stages gated behind `RUN_HEAVY=1`). The cluster analysis is a **single end-to-en
 of `analysis/generate_rescue_analysis.py`; its outputs were verified to reproduce
 bit-for-bit (see `analysis/README.md`, `docs/statistics.md`).
 
+## Tracing any number to its evidence
+
+Start at **[`docs/traceability.md`](docs/traceability.md)** — the hub that ties together
+the claim → evidence map (`manuscript/tables/table6_claim_evidence_final.csv`), the
+paper → artifact reproduce map above, and the **provenance crosswalk**
+([`docs/provenance_crosswalk.md`](docs/provenance_crosswalk.md)), which resolves the
+verbatim `source_artifact` paths in the shipped CSVs to their public-repo locations.
+
 ## Important caveats
 
 - **ISIC2018 `_test` = validation.** ISIC2018 has no test split; everything labeled

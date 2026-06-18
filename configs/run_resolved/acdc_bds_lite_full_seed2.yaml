@@ -57,6 +57,14 @@ dataset:
   processed_dir: data/processed/acdc
   image_dir: .
   mask_dir: .
+  # >>> ADDED NOTE (not part of the original resolved snapshot) <<<
+  # split_file is VESTIGIAL. The data loader (NpzSegmentationDataset) IGNORES this
+  # field; it selects samples by globbing data/processed/<dataset>/<split>/*.npz.
+  # The authoritative partition is the seed-2026 manifests in splits/<dataset>/
+  # (ISIC 2075/519, ACDC 1350/186/366, Synapse 1738/473/1568); 0 train/val overlap
+  # and matching case IDs were verified. The path named below is a STALE seed-1
+  # split that is NOT shipped and was NEVER consumed -- a reviewer cannot reach a
+  # leakage conclusion from it. See run_resolved/README.md and docs/config_of_record.md.
   split_file: splits/acdc_split.json
   class_names:
   - background
@@ -85,6 +93,8 @@ class_names:
 - right_ventricle
 - myocardium
 - left_ventricle
+# ADDED NOTE: split_file is VESTIGIAL (ignored by the loader). See the note above,
+# run_resolved/README.md, and docs/config_of_record.md.
 split_file: splits/acdc_split.json
 input_size:
 - 224
