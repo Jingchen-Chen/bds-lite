@@ -1,0 +1,16 @@
+dataset,cluster_unit,n_clusters,metric,mean_oriented_delta,bootstrap_ci_low,bootstrap_ci_high,p_value_holm,decision_alpha_0_05,source_artifact
+isic2018,image,519,dsc,-0.0003,-0.0046,0.0037,0.0029,significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+isic2018,image,519,iou,0.0021,-0.0028,0.0065,0.0009,significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+isic2018,image,517,hd95,1.0409,0.2476,1.8092,0.0029,significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+isic2018,image,517,assd,0.2207,-0.0119,0.4383,0.0001,significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+isic2018,image,519,boundary_f1,0.0077,0.0006,0.0146,0.0029,significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+acdc,patient,20,dsc,-0.0040,-0.0125,0.0039,1.0,not significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+acdc,patient,20,iou,-0.0033,-0.0122,0.0051,1.0,not significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+acdc,patient,20,hd95,-1.0175,-1.9705,-0.1999,0.1600,not significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+acdc,patient,20,assd,-0.4036,-0.7932,-0.1105,0.1479,not significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+acdc,patient,20,boundary_f1,-0.0048,-0.0142,0.0036,1.0,not significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+synapse,case,12,dsc,0.0020,-0.0141,0.0166,1.0,not significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+synapse,case,12,iou,0.0014,-0.0139,0.0159,1.0,not significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+synapse,case,12,hd95,-0.1528,-0.7685,0.4168,1.0,not significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+synapse,case,12,assd,-0.0964,-0.3756,0.1252,1.0,not significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+synapse,case,12,boundary_f1,0.0020,-0.0160,0.0189,1.0,not significant,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv

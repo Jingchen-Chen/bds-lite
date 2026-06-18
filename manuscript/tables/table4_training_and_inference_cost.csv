@@ -1,0 +1,4 @@
+method,parameters_total,deploy_parameters,inference_gflops,inference_latency_ms,inference_peak_memory_mb,training_step_mean_ms,training_step_std_ms,training_peak_memory_mb,profiling_note,source_artifact
+U-Net,1927042,1927042,15.970,1.93,76.17,39.62,3.98,600.29,batch 8 224x224 AMP no-update profile,results/submission_blocker_resolution_v1/profiling/training_cost_combined_summary.csv
+BDS-Lite,2198003,1928114,16.079,2.40,77.21,57.17,4.71,873.57,deploy graph after removing 269889-param boundary branch,results/submission_blocker_resolution_v1/profiling/training_cost_combined_summary.csv
+U-Net+GSL,1927042,1927042,15.970,1.97,76.17,52.32,1.09,600.29,exact CPU Euclidean distance transform inside timed step,results/submission_blocker_resolution_v1/profiling/training_cost_combined_summary.csv

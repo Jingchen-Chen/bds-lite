@@ -1,0 +1,14 @@
+dataset:
+  name: acdc
+  modality: mri
+  task: cardiac_segmentation
+  num_classes: 4
+  in_channels: 1
+  processed_dir: data/processed/acdc
+  train_split: train
+  val_split: val
+  test_split: test
+  metrics:
+    primary: dsc
+    boundary: hd95
+

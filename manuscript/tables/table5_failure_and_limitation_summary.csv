@@ -1,0 +1,11 @@
+item,category,observation,evidence_value,source_artifact
+ISIC_0016060,failure case,unfavorable lesion case,DSC change -0.223; Boundary F1 change -0.218 with large distance degradation,results/submission_blocker_resolution_v1/manuscript/BDS_Lite_number_corrected_draft.md (Sec 5.5)
+patient052_frame01_slice_5,failure case,favorable DSC with worse HD95/ASSD (overlap-distance conflict),qualitative panel,results/submission_blocker_resolution_v1/manuscript/BDS_Lite_number_corrected_draft.md (Sec 5.5)
+case0004_slice134,failure case,marked Synapse distance failure,qualitative panel,results/submission_blocker_resolution_v1/manuscript/BDS_Lite_number_corrected_draft.md (Sec 5.5)
+ACDC overall,limitation,no stable advantage; unfavorable mean distance directions,cluster Holm p 1.0 (DSC/IoU/BF1); HD95/ASSD oriented deltas negative,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+Synapse distance,limitation,overlap/boundary up while HD95/ASSD worsen,BDS-Lite HD95 10.1985->10.3413; ASSD 3.7515->3.8280,results/final_manuscript_audit_v2/recomputed_main_test_means.csv
+GSL comparison,limitation,matched three-seed means mixed in both directions,Table 2 matched rows,results/submission_blocker_resolution_v1/matched_gsl_main_comparison.csv
+Seed count,limitation,only three seeds; no Holm-corrected seed-level superiority,all seed-level Holm p 1.0,results/final_manuscript_audit_v2/seed_level_wilcoxon_summary.csv
+Cluster sizes,limitation,ACDC 20 patients / Synapse 12 cases; subgroup analyses exploratory,n_clusters,results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+Efficiency scope,limitation,no time-to-convergence or cross-hardware claim; single environment,training-step profile note,results/submission_blocker_resolution_v1/training_cost_final_decision.md
+Generalization,limitation,public 2D benchmarks only; no clinical/3D conclusion,scope statement,results/submission_candidate_manuscript_v1/manuscript/BDS_Lite_submission_candidate_v1.md (Sec 7)

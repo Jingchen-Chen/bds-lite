@@ -1,0 +1,106 @@
+project:
+  name: bds-lite
+  output_dir: results
+  seed: 1
+data:
+  processed_root: data/processed
+  num_workers: 4
+  image_size:
+  - 224
+  - 224
+  normalize: zscore
+model:
+  name: unet
+  base_channels: 32
+  use_boundary_decoder: false
+  use_boundary_gate: false
+  use_surface_loss: false
+  use_distillation: false
+  inference_disable_boundary_decoder: true
+loss:
+  dice_weight: 1.0
+  ce_weight: 1.0
+  boundary_weight: 0.0
+  distill_weight: 0.0
+  surface_weight: 0.0
+  distance_weight: 0.0
+  foreground_class_weights: null
+trainer:
+  device: cuda
+  epochs: 150
+  batch_size: 8
+  lr: 0.0003
+  weight_decay: 1.0e-05
+  amp: true
+  save_every: 25
+  scheduler: cosine
+  grad_clip: 1.0
+  init_from_checkpoint: null
+  freeze_encoder_epochs: 0
+metrics:
+- dsc
+- iou
+- hd95
+- assd
+- boundary_f1
+dataset:
+  name: isic2018
+  modality: dermoscopy
+  task: skin_lesion_segmentation
+  num_classes: 2
+  in_channels: 3
+  processed_dir: data/processed/isic2018
+  image_dir: .
+  mask_dir: .
+  split_file: splits/isic2018_split.json
+  class_names:
+  - background
+  - lesion
+  input_size:
+  - 224
+  - 224
+  spacing_policy: unit_spacing_2d
+  ignore_index: null
+  train_split: train
+  val_split: val
+  test_split: test
+  metrics:
+    primary: dice
+    boundary: boundary_f1
+  root: data/processed/isic2018
+name: isic2018
+root: data/processed/isic2018
+image_dir: .
+mask_dir: .
+num_classes: null
+class_names:
+- background
+- lesion
+split_file: splits/isic2018_split.json
+input_size:
+- 224
+- 224
+spacing_policy: unit_spacing_2d
+ignore_index: null
+model_name: unet
+encoder: compact_unet_encoder
+decoder: compact_unet_decoder
+base_channels: 32
+use_boundary_decoder: false
+use_boundary_gate: false
+use_surface_loss: false
+use_distillation: false
+inference_disable_boundary_decoder: true
+experiment:
+  name: isic2018_unet
+  dataset: isic2018
+  model: unet
+  group: reproducibility_grid
+dataset_config: configs/datasets/isic2018.yaml
+model_config: configs/models/unet.yaml
+dataset_name: isic2018
+seeds:
+- 1
+- 2
+- 3
+output_dir: outputs/runs

@@ -1,0 +1,4 @@
+experiment,model,dataset,device,batch_size,input_shape,boundary_branch,total_params,deploy_params,removed_boundary_params,flops,fps,latency_ms,peak_memory_mb,notes
+isic2018_unet_baseline,unet,isic2018,cuda,1,1x3x224x224,false,1927042,1927042,0,15969615872,560.9178303144047,1.7827923199365614,65.44677734375,CUDA profile with warmup 10 iterations 50
+isic2018_bdslite_boundary_gate_damped_surface,bdslite_unet,isic2018,cuda,1,1x3x224x224,false,2198003,1928114,269889,16078798848,570.0191648397348,1.7543269800080452,66.49609375,Boundary decoder removable at inference; deploy_params excludes boundary_decoder parameters; CUDA profile with warmup 10 iterations 50
+isic2018_ege_unet_baseline,ege_unet,isic2018,cuda,1,1x3x224x224,false,55253,55253,0,192631936,786.2468442429151,1.2718652002513409,17.0283203125,"Modern compact 2D baseline (EGE-UNet, Ruan et al. MICCAI 2023); CUDA profile with warmup 10 iterations 50"

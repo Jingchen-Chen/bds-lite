@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or its artifacts, please cite the paper below."
+title: "BDS-Lite: training-time boundary distillation for lightweight medical image segmentation (companion repository)"
+authors:
+  - family-names: Chen
+    given-names: Jingchen
+license: MIT
+repository-code: "https://github.com/REPLACE-ME/bds-lite"
+# Zenodo archive of the large binaries (checkpoints + prediction arrays).
+# Replace with the minted VERSION DOI (not just the concept DOI) before release.
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.REPLACE-ME"
+    description: "Zenodo deposit (checkpoints and prediction arrays)"
+preferred-citation:
+  type: article
+  title: "When Does Boundary Distillation Help Lightweight Medical Image Segmentation?"
+  authors:
+    - family-names: Chen
+      given-names: Jingchen
+  year: 2026
+  journal: "PeerJ Computer Science"
+  notes: "Under review. Update with volume/DOI once published."

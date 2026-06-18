@@ -1,0 +1,25 @@
+# Conda environment mirroring the setup that produced the manuscript results.
+# See docs/compute.md for hardware/CUDA details and requirements.txt for the
+# authoritative pip pins. PyTorch is installed via pip to get the exact
+# CUDA 13.0 build (torch==2.11.0+cu130); adjust the index URL for your platform.
+name: bds-lite
+channels:
+  - conda-forge
+dependencies:
+  - python=3.14.4
+  - pip
+  - pip:
+      - numpy==2.4.4
+      - scipy==1.17.1
+      - torch==2.11.0
+      - torchvision==0.26.0
+      - scikit-image==0.26.0
+      - pandas==3.0.2
+      - Pillow==12.2.0
+      - PyYAML==6.0.3
+      - einops==0.8.2
+      - tqdm==4.67.3
+      - matplotlib==3.10.9
+      - h5py==3.16.0
+      # Optional, raw ACDC conversion only (version to confirm; see requirements.txt):
+      # - nibabel==5.3.2

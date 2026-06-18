@@ -1,0 +1,27 @@
+# Exact versions used to produce the manuscript results.
+# Environment: Python 3.14.4, CUDA 13.0 (see docs/compute.md).
+#
+# PyTorch is pinned to the CUDA 13.0 build actually used. If you install from
+# PyPI without the matching CUDA wheel index you may receive a CPU build or a
+# different CUDA variant; see https://pytorch.org for the correct index URL.
+
+numpy==2.4.4
+scipy==1.17.1
+torch==2.11.0
+torchvision==0.26.0
+scikit-image==0.26.0
+pandas==3.0.2
+Pillow==12.2.0
+PyYAML==6.0.3
+einops==0.8.2
+tqdm==4.67.3
+matplotlib==3.10.9
+h5py==3.16.0
+
+# --- Optional extra: raw-data conversion only ---
+# nibabel is required ONLY to convert the raw ACDC NIfTI volumes to the processed
+# .npz tensors (scripts/convert_acdc.py). It is NOT needed to reproduce results
+# from the processed/prediction artifacts. It was not installed in the venv that
+# produced the results, so the version below is a recent stable pin to CONFIRM,
+# not the exact version of record.
+# nibabel==5.3.2

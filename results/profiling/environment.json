@@ -1,0 +1,19 @@
+{
+  "generated": "2026-06-09",
+  "platform": "Linux-7.0.0-22-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "torch": "2.11.0+cu130",
+  "cuda_runtime": "13.0",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "inference_warmup": 10,
+  "inference_iterations": 50,
+  "training_warmup": 10,
+  "training_iterations": 40,
+  "input_size": [
+    224,
+    224
+  ],
+  "training_batch_size": 8,
+  "optimizer_step": false,
+  "weights_saved": false
+}

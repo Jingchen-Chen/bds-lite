@@ -1,0 +1,43 @@
+project:
+  name: bds-lite
+  output_dir: results
+  seed: 2026
+
+data:
+  processed_root: data/processed
+  num_workers: 4
+  image_size: [224, 224]
+  normalize: zscore
+
+model:
+  name: unet
+  base_channels: 32
+
+loss:
+  dice_weight: 1.0
+  ce_weight: 1.0
+  boundary_weight: 0.0
+  distill_weight: 0.0
+  surface_weight: 0.0
+  distance_weight: 0.0
+  foreground_class_weights: null
+
+trainer:
+  device: auto
+  epochs: 150
+  batch_size: 8
+  lr: 0.0003
+  weight_decay: 0.00001
+  amp: true
+  save_every: 25
+  scheduler: cosine
+  grad_clip: 1.0
+  init_from_checkpoint: null
+  freeze_encoder_epochs: 0
+
+metrics:
+  - dsc
+  - iou
+  - hd95
+  - assd
+  - boundary_f1

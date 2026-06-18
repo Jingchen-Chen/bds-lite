@@ -1,0 +1,4 @@
+dataset,task,train,validation,test,unit,input_size,normalization,split_seed,source_artifact
+ISIC2018,binary skin lesion (2D),2075,519,none in manifest family,images,224x224,z-score,n/a (locked manifest),"data/splits/isic2018/{train,val}.json"
+ACDC,cardiac MRI multi-structure (2D slices),1350,186,366,slices (70/10/20 patients),224x224,z-score,2026,"data/splits/acdc/{train,val,test}.json"
+Synapse,abdominal multi-organ CT (2D slices),1738,473,1568,slices (14/4/12 cases),224x224,z-score,2026,"data/splits/synapse/{train,val,test}.json"

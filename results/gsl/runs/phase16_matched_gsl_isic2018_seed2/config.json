@@ -1,0 +1,105 @@
+{
+  "project": {
+    "name": "bds-lite",
+    "output_dir": "results/gsl",
+    "seed": 2
+  },
+  "data": {
+    "processed_root": "data/processed",
+    "num_workers": 4,
+    "image_size": [
+      224,
+      224
+    ],
+    "normalize": "zscore"
+  },
+  "model": {
+    "name": "unet",
+    "base_channels": 32
+  },
+  "loss": {
+    "dice_weight": 1.0,
+    "ce_weight": 1.0,
+    "boundary_weight": 0.0,
+    "distill_weight": 0.0,
+    "surface_weight": 0.0,
+    "distance_weight": 0.0,
+    "foreground_class_weights": null,
+    "far_fp_weight": 0.0,
+    "use_boundary_dou": false,
+    "lambda_boundary_dou": 1.0,
+    "use_gsl": true,
+    "lambda_gsl": 1.0,
+    "gsl_alpha_schedule": "step5"
+  },
+  "trainer": {
+    "device": "cuda",
+    "epochs": 150,
+    "batch_size": 8,
+    "lr": 0.0003,
+    "weight_decay": 1e-05,
+    "amp": true,
+    "save_every": 25,
+    "scheduler": "cosine",
+    "grad_clip": 1.0,
+    "init_from_checkpoint": null,
+    "freeze_encoder_epochs": 0
+  },
+  "metrics": [
+    "dsc",
+    "iou",
+    "hd95",
+    "assd",
+    "boundary_f1"
+  ],
+  "dataset": {
+    "name": "isic2018",
+    "modality": "dermoscopy",
+    "task": "skin_lesion_segmentation",
+    "num_classes": 2,
+    "in_channels": 3,
+    "processed_dir": "data/processed/isic2018",
+    "image_dir": ".",
+    "mask_dir": ".",
+    "split_file": "results/gsl/splits/isic2018_locked_seed2026.json",
+    "class_names": [
+      "background",
+      "lesion"
+    ],
+    "input_size": [
+      224,
+      224
+    ],
+    "spacing_policy": "unit_spacing_2d",
+    "ignore_index": null,
+    "train_split": "train",
+    "val_split": "val",
+    "test_split": "test",
+    "metrics": {
+      "primary": "dice",
+      "boundary": "boundary_f1"
+    },
+    "root": "data/processed/isic2018"
+  },
+  "experiment": {
+    "name": "phase16_matched_gsl_isic2018_seed2",
+    "dataset": "isic2018",
+    "model": "unet_gsl",
+    "group": "phase16_memory_bounded_matched_gsl"
+  },
+  "phase16_protocol": {
+    "source_phase15_config": "internal phase-15 predecessor (not included in public release)",
+    "locked_split_seed": 2026,
+    "locked_split_manifest": "results/gsl/splits/isic2018_locked_seed2026.json",
+    "locked_split_manifest_sha256": "14f49e351af7404416cc9e2969d572528cd77c3bd770cc41b98e59ff02a59af6",
+    "memory_bounded_dtm": "SciPy exact Euclidean distance_transform_edt on CPU, returned to the training device",
+    "memory_bounded_wrapper": "scripts/gsl/gsl_memory_bounded.py",
+    "memory_bounded_wrapper_sha256": "32b6374d0bb6141967102dca0018e33272f675c09d5c99d7b1b423d1e0fe8782",
+    "scientific_loss_definition_changed": false,
+    "batch_size_changed": false,
+    "gradient_accumulation": 1,
+    "amp": true,
+    "checkpoint_rule": "maximum validation DSC over 150 epochs",
+    "test_set_tuning": false
+  }
+}

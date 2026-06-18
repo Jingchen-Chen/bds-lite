@@ -1,0 +1,13 @@
+claim,status,supporting_evidence,source_artifact
+"BDS-Lite improves ISIC2018 boundary/distance means while DSC is nearly unchanged",supported,"BF1 0.5520->0.5597; HD95 18.5128->17.4435; ASSD 5.9192->5.6753; DSC 0.8830 vs 0.8828",results/final_manuscript_audit_v2/recomputed_main_test_means.csv
+"ISIC2018 cluster-level boundary/distance shifts reach Holm significance",supported,"HD95 Holm p 0.0029; Boundary F1 Holm p 0.0029; ASSD Holm p 0.0001",results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+"ACDC shows no stable advantage",supported,"cluster Holm p 1.0 for DSC/IoU/BF1; unfavorable mean distance directions",results/midterm_q2_rescue/analysis/cluster_level_statistics.csv
+"Synapse overlap/boundary means up but distance means worse",supported,"DSC 0.8544->0.8573; BF1 0.8608->0.8632; HD95 10.1985->10.3413; ASSD 3.7515->3.8280",results/final_manuscript_audit_v2/recomputed_main_test_means.csv
+"GSL is a strong comparator; matched means mixed in both directions",supported,matched three-seed GSL rows (lower ISIC means; higher Synapse DSC/BF1),results/submission_blocker_resolution_v1/matched_gsl_main_comparison.csv
+"BDS-Lite beats GSL",not claimed,matched three-seed means do not support superiority in either direction,results/submission_blocker_resolution_v1/matched_gsl_execution_report.md
+"Auxiliary boundary branch removable; deploy graph close to U-Net",supported,"deploy params 1928114 vs 1927042 (+0.056%); FLOPs +0.68%; gate-removal DSC changes small",results/submission_blocker_resolution_v1/profiling/training_cost_combined_summary.csv
+"No Holm-corrected seed-level superiority at n=3",supported,all seed-level Holm-corrected p 1.0,results/final_manuscript_audit_v2/seed_level_wilcoxon_summary.csv
+"Local profiling shows method-specific step time and peak memory",supported,"U-Net 39.62ms/600.29MB; BDS-Lite 57.17ms/873.57MB; GSL 52.32ms/600.29MB",results/submission_blocker_resolution_v1/profiling/training_cost_combined_summary.csv
+"Universal superiority / clinical deployment readiness / faster training",not claimed,explicitly excluded by efficiency wording policy,results/submission_blocker_resolution_v1/efficiency_final_wording.md
+"Conclusions for 3D architectures or prospective clinical use",not claimed,scope limited to public 2D benchmarks,results/submission_candidate_manuscript_v1/manuscript/BDS_Lite_submission_candidate_v1.md
+"Reference years/DOIs and author metadata verified",requires human verification,bibliography and metadata not machine-verified,results/submission_candidate_manuscript_v1/human_tasks_before_submission.md
