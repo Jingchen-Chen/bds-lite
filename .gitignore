@@ -1,6 +1,6 @@
 # Raw and processed datasets are NOT redistributed (third-party licenses).
 # Rebuild them locally from raw sources via scripts/convert_*.py (see docs/data_access.md).
-data/
+/data/
 outputs/
 
 # Large binaries belong on Zenodo, not in git (see ZENODO_MANIFEST.csv).
@@ -16,6 +16,7 @@ outputs/
 # Python / tooling caches.
 __pycache__/
 *.py[cod]
+build/
 *.egg-info/
 .eggs/
 .ipynb_checkpoints/

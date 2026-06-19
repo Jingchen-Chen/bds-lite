@@ -48,9 +48,12 @@ python scripts/prepare_boundary_targets.py   # adds boundary/SDF targets used in
 ```
 
 `scripts/convert_acdc.py` requires `nibabel` (optional extra; see `requirements.txt`).
-The converters partition data according to the **seed-2026** manifests in `splits/`
-(subject-disjoint; each manifest carries a `sha256` and `count`). ISIC2018 has no test
-split — see [`naming.md`](naming.md) for the `_test`→validation caveat.
+The restored converters do not read the manifest JSON files directly. They write
+processed samples into split directories, and the committed **seed-2026** manifests in
+`splits/` document the locked partition that those directories must match for exact
+reproduction (subject-disjoint; each manifest carries a `sha256` and `count`).
+ISIC2018 has no test split — see [`naming.md`](naming.md) for the `_test`→validation
+caveat.
 
 ## Ethics / licensing
 

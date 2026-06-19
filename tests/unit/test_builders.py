@@ -37,15 +37,23 @@ def test_config_of_record_name_alias_builds_bdslite() -> None:
     record = build_model(
         {
             "dataset": {"in_channels": 3, "num_classes": 2},
-            "model": {"name": "bds_lite", "base_channels": 32, "boundary_gate": True,
-                      "boundary_gate_scale": 0.25},
+            "model": {
+                "name": "bds_lite",
+                "base_channels": 32,
+                "boundary_gate": True,
+                "boundary_gate_scale": 0.25,
+            },
         }
     )
     public = build_model(
         {
             "dataset": {"in_channels": 3, "num_classes": 2},
-            "model": {"name": "bdslite_unet", "base_channels": 32, "boundary_gate": True,
-                      "boundary_gate_scale": 0.25},
+            "model": {
+                "name": "bdslite_unet",
+                "base_channels": 32,
+                "boundary_gate": True,
+                "boundary_gate_scale": 0.25,
+            },
         }
     )
     assert isinstance(record, BDSLiteUNet) and isinstance(public, BDSLiteUNet)

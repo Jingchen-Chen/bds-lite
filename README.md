@@ -55,6 +55,7 @@ binaries — trained checkpoints and per-case prediction arrays — which are on
 
 ```bash
 pip install -r requirements.txt   # exact pins; PyTorch built for CUDA 13.0
+pip install -e . --no-deps        # install the local bds_lite package
 # or: conda env create -f environment.yml
 ```
 
