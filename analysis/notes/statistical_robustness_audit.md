@@ -40,7 +40,8 @@ selecting the more favorable statistic.
 
 ## Effect size and sensitivity
 
-`cluster_level_statistics.csv` reports rank-biserial effect sizes.
+`cluster_level_statistics.csv` reports sign-based effect sizes,
+`(n_favorable - n_unfavorable) / n_nonzero`.
 `outlier_sensitivity.csv` reports full, 1%, and 5% trimmed means plus the share
 of absolute change contributed by the largest cases. The ISIC2018 HD95 result
 is directionally stable after trimming. ISIC2018 Dice changes sign after

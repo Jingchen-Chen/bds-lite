@@ -66,8 +66,8 @@ agreement can rise while rare distant errors worsen HD95 or ASSD.
 
 ## Explicit trade-offs
 
-- ISIC2018: 64/517 cases (12.4%) have nearly unchanged Dice
-  (`|delta| <= 0.005`) and Boundary F1 gain above 0.01.
+- ISIC2018: 64/519 DSC/Boundary-F1-eligible images (12.3%) have nearly
+  unchanged Dice (`|delta| <= 0.005`) and Boundary F1 gain above 0.01.
 - ACDC: the corresponding count is 12/351 (3.4%).
 - Synapse: the corresponding count is 16/820 (2.0%).
 - Synapse has about 21% of usable slices where Dice or Boundary F1 is favorable

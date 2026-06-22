@@ -1,56 +1,6 @@
-# Final Caption Set (conservative)
+Figure 1. BDS-Lite architecture and training pipeline. (A) Overall architecture. A shared encoder with four stages produces multi-scale features that feed two parallel decoders: a segmentation decoder (D_s, retained at inference) and an auxiliary boundary decoder (D_b, removed at inference). A learned 1×1 projection maps the segmentation feature to match the dimensionality of the boundary feature, providing both the input to a boundary-aware feature modulation gate and the anchor for a feature distillation loss that transfers boundary information into the segmentation path. The gate rescales segmentation features before a final 1×1 convolution produces *K*-class segmentation logits. Blue arrows and boxes denote components retained at inference; orange denotes training-only components. (B) Training-only boundary supervision. Boundary targets are generated from ground-truth masks via morphological erosion, XOR, and dilation, and supervised with combined BCE and Dice losses. (C) Segmentation loss. Segmentation logits are supervised against the ground-truth mask with combined cross-entropy and Dice losses. At inference, the boundary decoder and all training-only branches are removed; only the segmentation path, projection, and gate are retained, adding 1,072 parameters to the baseline U-Net.
 
-Captions are deliberately conservative: no significance claims from three seed
-means, no winner highlighting, no universal-superiority or hardware claims.
+Figure 2. Cluster-level BDS-Lite-versus-U-Net effect-size heatmap.** Each cell reports the mean oriented Δ between BDS-Lite and the baseline U-Net, with signs oriented so that positive values consistently indicate BDS-Lite improvement across all five metrics. "fav" denotes the fraction of clusters in which BDS-Lite was favorable. Cell color encodes the cluster-level sign-based effect size (green = favorable, red = unfavorable). Bold outlines mark metrics with a Holm-significant Wilcoxon signed-rank shift (p_Holm < 0.05); a significant shift indicates a reliable distributional difference, not necessarily a final favorable decision (see Table 3, Decision column).
 
-## Figure 1
+Figure 3. Representative and failure cases selected by deterministic metric criteria. Per-panel deltas are raw BDS-Lite − U-Net values; for HD95 and ASSD, positive raw Δ indicates worse distance error, opposite to the oriented Δ convention in Table 3. Boundary overlay colors: ground truth (green), U-Net prediction (red), BDS-Lite prediction (cyan). Error-map colors follow the plotting-script color mapping. Panels are illustrative and representative rather than inferential.
 
-**BDS-Lite training and inference graphs.** The compact U-Net encoder-decoder
-is the retained segmentation path. During training, an auxiliary boundary
-decoder supplies boundary supervision and features used for distillation and
-bounded gating. The auxiliary boundary decoder is removed at inference. The
-diagram describes the studied implementation and does not imply a
-hardware-specific property.
-
-## Figure 2 (Phase 16 matched replacement)
-
-**Matched three-seed comparison under the locked protocol.** Bars show seed
-means and error bars show seed standard deviations for U-Net, BDS-Lite, and
-U-Net+GSL on ISIC2018 validation, ACDC test, and Synapse test (test where
-applicable). Higher DSC and Boundary F1 and lower HD95 and ASSD are favorable.
-All methods use the locked split family and maximum-validation-DSC checkpoint
-rule; test data were not used for model or checkpoint selection. The metric
-directions are mixed across datasets, and the plot does not imply significance
-from three seed means or any universal superiority.
-
-## Figure 3
-
-**Distributions of per-case BDS-Lite versus U-Net changes.** Distance changes
-are oriented so positive values indicate favorable movement for BDS-Lite.
-ISIC2018 uses image-level units. ACDC and Synapse slice distributions are
-descriptive because slices from the same patient or case are not independent;
-cluster-aware analyses provide the inferential summaries.
-
-## Figure 4
-
-**Boundary F1 and surface-distance changes can disagree.** Each point is a
-seed-averaged image or slice in the available analysis, with distance changes
-oriented so positive values are favorable for BDS-Lite. Boundary improvement
-does not always imply distance improvement. Correlations are descriptive and
-do not establish causality or slice independence for ACDC and Synapse.
-
-## Figure 5
-
-**Exploratory ACDC and Synapse class-level heterogeneity.** Cells show
-seed-averaged oriented BDS-Lite minus U-Net changes; positive values are
-favorable after metric orientation. Color scales are metric-specific and
-should not be compared across panels. These slice-derived summaries are
-exploratory and do not establish organ-specific efficacy.
-
-## Figure 6
-
-**Automatically selected illustrative cases.** The panels include an ISIC2018
-favorable example, an ISIC2018 unfavorable example, an ACDC example in which
-Dice and distance changes conflict, and a Synapse distance failure. Selection
-used predeclared metric criteria before visual review. The examples are
-illustrative and do not estimate prevalence or establish causality.

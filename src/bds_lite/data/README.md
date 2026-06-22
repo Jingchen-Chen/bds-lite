@@ -1,7 +1,7 @@
 # Data preprocessing provenance
 
-This package restores the data-preprocessing source from the private/source
-checkout at `/home/jingchen/bds-lite/src/bds_lite/data/`. The source files
+This package restores the data-preprocessing source from the author's
+source checkout (the original `src/bds_lite/data/` tree). The source files
 restored byte-for-byte are:
 
 - `boundary.py`

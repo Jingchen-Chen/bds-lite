@@ -39,13 +39,16 @@ manuscript/      the paper (.md) + Tables 1–6 (.csv/.md) + integration audit
 src/bds_lite/    U-Net, BDS-Lite (h_φ + bounded gate), GSL, losses, metrics, data
 configs/         base + dataset configs, run_resolved/ (config of record), gsl/
 splits/          locked seed-2026 split manifests (sha256, subject-disjoint)
-scripts/         train / evaluate / convert / profile (+ scripts/gsl/)
+scripts/         train / evaluate / convert / profile (+ scripts/gsl/, scripts/figures/)
 analysis/        cluster-aware analysis script + outputs/ (artifacts of record)
 results/         main means, matched-GSL, seed-level stats, profiling, gsl/
-figures/         Figures 1–6 + the 24 failure panels + captions
-docs/            data access, mechanism, naming caveat, compute, statistics, config
+figures/         paper figures + the 24 failure panels + captions (legacy 6-figure set retained)
+docs/            data access, mechanism, naming, compute, statistics, config, paper_mapping
 tests/           unit tests (split integrity, metrics, losses, boundary, profiling)
 ```
+
+Top-level guides: `RELEASE_INVENTORY.md` (what is shipped / missing), `DATASETS.md`
+(data access), `REPRODUCIBILITY.md` (env + commands).
 
 **Not in git:** raw datasets (third-party; see `docs/data_access.md`), and large
 binaries — trained checkpoints and per-case prediction arrays — which are on **Zenodo**
@@ -71,9 +74,17 @@ Linux. See `docs/compute.md`.
 | Table 3 (cluster statistics) | `analysis/outputs/cluster_level_statistics.csv` |
 | Table 4 (training/inference cost) | `results/profiling/training_cost_combined_summary.csv` |
 | Table 5 (failure/limitation) | `analysis/outputs/failure_case_manifest.csv` (+ `manuscript/tables/table5_*`) |
-| Table 6 (claim evidence) | `manuscript/tables/table6_claim_evidence_final.csv` |
-| Figures 1–6 | `figures/figure{1..6}_*.{pdf,png}` |
-| 24 failure panels | `figures/failure_panels/*.png` |
+| Table 6 (claim evidence; release-internal) | `manuscript/tables/table6_claim_evidence_final.csv` |
+| Figure 1 (architecture) | `figures/figure_architecture_schematic.*` via `scripts/figures/generate_architecture_figure.py` |
+| Figure 2 (cluster effect-size heatmap) | `figures/figure_cluster_effect_size_heatmap.*` via `scripts/figures/generate_effect_size_heatmap.py` |
+| Figure 3 (failure cases) | `figures/failure_panels/*.png` via `analysis/generate_rescue_analysis.py` |
+| Legacy six-figure set | `figures/figure{1..6}_*.{pdf,png}` (earlier layout; see `docs/paper_mapping.md`) |
+
+> The **final paper has 4 tables (1–4) and 3 figures**; Tables 5–6 are release-internal
+> supporting artifacts. The complete table/figure → config/artifact/script crosswalk and
+> the figure-numbering reconciliation are in **[`docs/paper_mapping.md`](docs/paper_mapping.md)**.
+> See also [`RELEASE_INVENTORY.md`](RELEASE_INVENTORY.md), [`DATASETS.md`](DATASETS.md),
+> and [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md).
 
 `reproduce.sh` documents the full convert → train → evaluate → analysis flow (compute
 stages gated behind `RUN_HEAVY=1`). The cluster analysis is a **single end-to-end run**
