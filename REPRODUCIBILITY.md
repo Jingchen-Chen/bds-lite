@@ -1,9 +1,6 @@
 # Reproducibility
 
-This repository is built so that **every reported number traces to a config, a script,
-and a machine-readable artifact**. This file is the operational entry point; deeper
-detail lives in `reproduce.sh`, `docs/compute.md`, `docs/statistics.md`, and
-`docs/traceability.md`.
+This repository is built so that **every reported number traces to a config, a script, and a machine-readable artifact**. This file is the operational entry point; deeper detail lives in `reproduce.sh`, `docs/compute.md`, `docs/statistics.md`, and `docs/traceability.md`.
 
 ## Environment of record
 
@@ -11,9 +8,7 @@ detail lives in `reproduce.sh`, `docs/compute.md`, `docs/statistics.md`, and
 - **CUDA runtime:** 13.0.
 - **Python:** 3.14.4.
 - **PyTorch:** 2.11.0 (`torch==2.11.0+cu130`), TorchVision 0.26.0.
-- Key libraries: NumPy 2.4.4, SciPy 1.17.1, scikit-image 0.26.0, pandas 3.0.2,
-  matplotlib 3.10.9, h5py 3.16.0. Exact pins: `requirements.txt`; conda:
-  `environment.yml`. Full detail: `docs/compute.md`.
+- Key libraries: NumPy 2.4.4, SciPy 1.17.1, scikit-image 0.26.0, pandas 3.0.2, matplotlib 3.10.9, h5py 3.16.0. Exact pins: `requirements.txt`; conda: `environment.yml`. Full detail: `docs/compute.md`.
 
 ```bash
 pip install -r requirements.txt    # exact pins; PyTorch is a CUDA-13.0 build
@@ -25,10 +20,7 @@ pip install -e . --no-deps         # install the local bds_lite package
 
 - **Training/model seeds: 1, 2, 3** (three independent runs per configuration).
 - **Data split seed: 2026** (locked manifests under `splits/`).
-- The cluster-aware analysis uses a module-global RNG seeded `default_rng(20260606)`;
-  bootstrap CI endpoints reproduce **exactly only when `analysis/generate_rescue_analysis.py`
-  is run end-to-end** (all non-bootstrap quantities are fully deterministic). See
-  `docs/statistics.md`.
+- The cluster-aware analysis uses a module-global RNG seeded `default_rng(20260606)`; bootstrap CI endpoints reproduce **exactly only when `analysis/generate_rescue_analysis.py` is run end-to-end** (all non-bootstrap quantities are fully deterministic). See `docs/statistics.md`.
 
 ## What is and isn't shipped
 
@@ -40,9 +32,7 @@ pip install -e . --no-deps         # install the local bds_lite package
 
 ## Main commands
 
-`reproduce.sh` documents the full convert → train → evaluate → analysis flow. Heavy
-compute stages are gated behind `RUN_HEAVY=1` so the script is safe to read top-to-bottom;
-the committed artifacts of record already reflect those stages.
+`reproduce.sh` documents the full convert → train → evaluate → analysis flow. Heavy compute stages are gated behind `RUN_HEAVY=1` so the script is safe to read top-to-bottom; the committed artifacts of record already reflect those stages.
 
 ```bash
 # 0. data: see DATASETS.md (download raw, then scripts/convert_*.py + prepare_boundary_targets.py)
@@ -77,25 +67,13 @@ See `docs/paper_mapping.md` for the complete table/figure → artifact crosswalk
 
 ## Verified reproductions
 
-- The cluster-aware analysis regenerates `cluster_level_statistics.csv` and
-  `failure_case_manifest.csv` **bit-for-bit (identical sha256)** when run end-to-end
-  (see `analysis/README.md`).
-- The GSL comparator's surface term is **bit-identical** to its Apache-2.0 upstream
-  (MIST); see `THIRD_PARTY_NOTICES.md`.
-- Split manifests are seed-2026, subject-disjoint, sha256-stamped; guarded by
-  `tests/unit/test_split_integrity.py`.
+- The cluster-aware analysis regenerates `cluster_level_statistics.csv` and `failure_case_manifest.csv` **bit-for-bit (identical sha256)** when run end-to-end (see `analysis/README.md`).
+- The GSL comparator's surface term is **bit-identical** to its Apache-2.0 upstream (MIST); see `THIRD_PARTY_NOTICES.md`.
+- Split manifests are seed-2026, subject-disjoint, sha256-stamped; guarded by `tests/unit/test_split_integrity.py`.
 
 ## Known limitations
 
-- **No raw data** (third-party licenses) and **no checkpoints/prediction arrays** in git
-  — the latter are on Zenodo. Reproducing Table 3 needs the Zenodo prediction bundle plus
-  locally rebuilt processed ground truth. The final paper has no Figure 3; real-image
-  per-case panels are not redistributed (datasets' terms) but are regenerable locally.
-- **Three seeds** are descriptive replication, not a basis for seed-level superiority
-  claims; ACDC/Synapse cluster sizes are small (20 patients / 12 cases).
-- GPU kernels (distance transforms, interpolation) may introduce last-bit
-  nondeterminism across hardware; conclusions are reported at the cluster-aware
-  statistical level, not bit-exact prediction reproduction.
-- The published (typeset) figures were finalized in the LaTeX project; the scripts here
-  reproduce their **content** from artifacts of record, not pixel-identical exports
-  (see `docs/paper_mapping.md`).
+- **No raw data** (third-party licenses) and **no checkpoints/prediction arrays** in git — the latter are on Zenodo. Reproducing Table 3 needs the Zenodo prediction bundle plus locally rebuilt processed ground truth. The final paper has no Figure 3; real-image per-case panels are not redistributed (datasets' terms) but are regenerable locally.
+- **Three seeds** are descriptive replication, not a basis for seed-level superiority claims; ACDC/Synapse cluster sizes are small (20 patients / 12 cases).
+- GPU kernels (distance transforms, interpolation) may introduce last-bit nondeterminism across hardware; conclusions are reported at the cluster-aware statistical level, not bit-exact prediction reproduction.
+- The published (typeset) figures were finalized in the LaTeX project; the scripts here reproduce their **content** from artifacts of record, not pixel-identical exports (see `docs/paper_mapping.md`).

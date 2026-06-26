@@ -1,10 +1,6 @@
 # Provenance crosswalk (original working tree → public repo)
 
-The shipped tables and result CSVs keep their **`source_artifact` columns verbatim**:
-they record the exact path, in the author's original working tree, where each number
-was computed. That is the faithful provenance trail. Because this public repository
-reorganizes artifacts into clean paths, use the table below to locate the shipped copy
-of any referenced file. The numbers are byte-identical; only the location changed.
+The shipped tables and result CSVs keep their **`source_artifact` columns verbatim**: they record the exact path, in the author's original working tree, where each number was computed. That is the faithful provenance trail. Because this public repository reorganizes artifacts into clean paths, use the table below to locate the shipped copy of any referenced file. The numbers are byte-identical; only the location changed.
 
 | Original path (as cited in `source_artifact`) | Public-repo location |
 |---|---|

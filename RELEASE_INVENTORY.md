@@ -1,12 +1,8 @@
 # Release inventory
 
-Audit of what the manuscript claims and where each item lives in this release. Source
-paths refer to the author's working tree (`bds-lite/`); target paths are in this public
-repository. The companion `docs/provenance_crosswalk.md` resolves the verbatim
-`source_artifact` paths embedded in the shipped CSVs.
+Audit of what the manuscript claims and where each item lives in this release. Source paths refer to the author's working tree (`bds-lite/`); target paths are in this public repository. The companion `docs/provenance_crosswalk.md` resolves the verbatim `source_artifact` paths embedded in the shipped CSVs.
 
-Status legend: ✅ present · ➕ added/regenerated in this pass · 🌐 distributed via Zenodo ·
-⚠️ caveat (see notes).
+Status legend: ✅ present · ➕ added/regenerated in this pass · 🌐 distributed via Zenodo · ⚠️ caveat (see notes).
 
 ## Datasets and protocol
 
@@ -81,20 +77,8 @@ Status legend: ✅ present · ➕ added/regenerated in this pass · 🌐 distrib
 
 ## Missing / caveats / to confirm
 
-1. **No committed script bit-reproduces the typeset Figure 1 or Figure 2 PNG.** The
-   published figures were finalized in the LaTeX project. `generate_architecture_figure.py`
-   regenerates the *schematic* (the published Fig 1 is a polished multi-panel redrawing);
-   `generate_effect_size_heatmap.py` regenerates Fig 2 faithfully from the artifact of
-   record. Content is reproducible; pixels are not guaranteed identical.
-2. **Figure numbering drift.** The shipped `figures/figure1..figure6_*` set is the earlier
-   six-figure layout; the final paper has two figures. Reconciled in
-   `docs/paper_mapping.md`; the legacy files are retained for provenance.
-3. **Table 3 `Decision` column semantics differ** between the shipped CSV/MD
-   (signed-rank significance) and the typeset Table 3 (stricter ✓ favorable rule). Same
-   underlying data; both renderings derivable from `cluster_level_statistics.csv`. Flagged
-   in `docs/paper_mapping.md` — not silently changed.
-4. **Large binaries on Zenodo, not git** (checkpoints, prediction arrays). Reproducing
-   Table 3 requires downloading the Zenodo prediction bundle + rebuilding processed
-   ground truth from raw data. (The final paper has no Figure 3.)
-5. **DOI placeholder.** `CITATION.cff` / README Zenodo DOI must be filled after the first
-   Zenodo deposition.
+1. **No committed script bit-reproduces the typeset Figure 1 or Figure 2 PNG.** The published figures were finalized in the LaTeX project. `generate_architecture_figure.py` regenerates the *schematic* (the published Fig 1 is a polished multi-panel redrawing); `generate_effect_size_heatmap.py` regenerates Fig 2 faithfully from the artifact of record. Content is reproducible; pixels are not guaranteed identical.
+2. **Figure numbering drift.** The shipped `figures/figure1..figure6_*` set is the earlier six-figure layout; the final paper has two figures. Reconciled in `docs/paper_mapping.md`; the legacy files are retained for provenance.
+3. **Table 3 `Decision` column semantics differ** between the shipped CSV/MD (signed-rank significance) and the typeset Table 3 (stricter ✓ favorable rule). Same underlying data; both renderings derivable from `cluster_level_statistics.csv`. Flagged in `docs/paper_mapping.md` — not silently changed.
+4. **Large binaries on Zenodo, not git** (checkpoints, prediction arrays). Reproducing Table 3 requires downloading the Zenodo prediction bundle + rebuilding processed ground truth from raw data. (The final paper has no Figure 3.)
+5. **DOI placeholder.** `CITATION.cff` / README Zenodo DOI must be filled after the first Zenodo deposition.

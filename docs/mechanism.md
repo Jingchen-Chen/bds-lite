@@ -1,9 +1,6 @@
 # When does boundary distillation help? (mechanism notes)
 
-These notes summarize the **conditional, mixed** picture reported in the manuscript.
-They are an interpretation of the measured results, not a claim of uniform
-improvement. The numbers below are cluster-aware (see `docs/statistics.md`); the
-artifacts of record are in `analysis/outputs/` and `results/`.
+These notes summarize the **conditional, mixed** picture reported in the manuscript. They are an interpretation of the measured results, not a claim of uniform improvement. The numbers below are cluster-aware (see `docs/statistics.md`); the artifacts of record are in `analysis/outputs/` and `results/`.
 
 ## Summary of the three datasets
 
@@ -15,23 +12,14 @@ artifacts of record are in `analysis/outputs/` and `results/`.
 
 ## Why the effect is task-dependent
 
-- The auxiliary boundary decoder `h_φ` and the bounded gate
-  `q̃ = q · (1 + α(g − 0.5))`, α = 0.25, only **re-weight** the segmentation
-  features near predicted boundaries. They help most when boundary error is the
-  binding constraint and the gate has a coherent boundary signal to act on.
-- When the backbone already resolves boundaries well (ACDC), the bounded gate's
-  small perturbation neither helps nor hurts consistently.
-- When there are many small, low-contrast structures (Synapse), improving average
-  boundary agreement can still leave (or worsen) large-distance outliers, which HD95
-  and ASSD are sensitive to.
+- The auxiliary boundary decoder `h_φ` and the bounded gate `q̃ = q · (1 + α(g − 0.5))`, α = 0.25, only **re-weight** the segmentation features near predicted boundaries. They help most when boundary error is the binding constraint and the gate has a coherent boundary signal to act on.
+- When the backbone already resolves boundaries well (ACDC), the bounded gate's small perturbation neither helps nor hurts consistently.
+- When there are many small, low-contrast structures (Synapse), improving average boundary agreement can still leave (or worsen) large-distance outliers, which HD95 and ASSD are sensitive to.
 
 ## What is explicitly NOT claimed
 
 - No uniform improvement across datasets or metrics.
-- No state-of-the-art claim, no clinical-deployment-readiness claim, no claim of
-  faster training.
-- No Holm-corrected seed-level superiority at n = 3 (all seed-level adjusted
-  p ≈ 1.0; the cluster-level analysis is the primary evidence).
+- No state-of-the-art claim, no clinical-deployment-readiness claim, no claim of faster training.
+- No Holm-corrected seed-level superiority at n = 3 (all seed-level adjusted p ≈ 1.0; the cluster-level analysis is the primary evidence).
 
-See `manuscript/tables/table6_claim_evidence_final.csv` for the claim-by-claim
-evidence map and `analysis/notes/` for the longer per-case and subgroup commentary.
+See `manuscript/tables/table6_claim_evidence_final.csv` for the claim-by-claim evidence map and `analysis/notes/` for the longer per-case and subgroup commentary.

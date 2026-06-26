@@ -1,11 +1,6 @@
 # Results artifacts
 
-Machine-readable results backing the manuscript tables. Each CSV's **`source_artifact`
-column is kept verbatim** — it records the exact path, in the author's original working
-tree, where the value was computed (preserving the provenance trail and the verified
-file hashes). To locate the shipped copy of any referenced path, use
-[`../docs/provenance_crosswalk.md`](../docs/provenance_crosswalk.md). See
-[`../docs/traceability.md`](../docs/traceability.md) for the full claim → evidence map.
+Machine-readable results backing the manuscript tables. Each CSV's **`source_artifact` column is kept verbatim** — it records the exact path, in the author's original working tree, where the value was computed (preserving the provenance trail and the verified file hashes). To locate the shipped copy of any referenced path, use [`../docs/provenance_crosswalk.md`](../docs/provenance_crosswalk.md). See [`../docs/traceability.md`](../docs/traceability.md) for the full claim → evidence map.
 
 | File | Backs | Notes |
 |---|---|---|
@@ -16,5 +11,4 @@ file hashes). To locate the shipped copy of any referenced path, use
 | `profiling/` | Table 4 | training/inference cost + environment |
 | `gsl/evaluations/`, `gsl/runs/`, `gsl/splits/`, `gsl/checkpoints/` (Zenodo) | GSL provenance | per-seed evals, run config/metrics, locked seed-2026 split |
 
-The cluster-aware statistics (Table 3) and the 24-panel failure selection (Table 5)
-live under [`../analysis/outputs/`](../analysis/outputs/).
+The cluster-aware statistics (Table 3) and the 24-panel failure selection (Table 5) live under [`../analysis/outputs/`](../analysis/outputs/).

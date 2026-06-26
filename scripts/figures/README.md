@@ -1,8 +1,6 @@
 # Figure generation
 
-Scripts that regenerate manuscript figures from committed artifacts of record.
-None of them recompute experimental results; they visualize the CSV/JSON
-artifacts and prediction arrays already shipped (or distributed via Zenodo).
+Scripts that regenerate manuscript figures from committed artifacts of record. None of them recompute experimental results; they visualize the CSV/JSON artifacts and prediction arrays already shipped (or distributed via Zenodo).
 
 | Manuscript figure | Generator | Source data | Output |
 |---|---|---|---|
@@ -12,17 +10,9 @@ artifacts and prediction arrays already shipped (or distributed via Zenodo).
 
 ## Reproducibility note (read before comparing to the typeset PDF)
 
-The figures **typeset in the published manuscript** were finalized inside the
-LaTeX project (e.g., the polished multi-panel Figure 1, whose input panel is a
-synthetic image). The scripts here regenerate the **content** of those figures
-from the artifacts of record — the numbers, panels, and structure are
-reproducible — but they are not guaranteed to be pixel-identical to the
-hand-finalized publication exports. See `docs/paper_mapping.md` for the full
-figure/table → artifact crosswalk.
+The figures **typeset in the published manuscript** were finalized inside the LaTeX project (e.g., the polished multi-panel Figure 1, whose input panel is a synthetic image). The scripts here regenerate the **content** of those figures from the artifacts of record — the numbers, panels, and structure are reproducible — but they are not guaranteed to be pixel-identical to the hand-finalized publication exports. See `docs/paper_mapping.md` for the full figure/table → artifact crosswalk.
 
-The earlier `figures/figure1..figure6_*.{png,pdf}` set corresponds to a previous
-six-figure manuscript layout; it is retained for provenance. The final paper
-uses two figures, mapped above.
+The earlier `figures/figure1..figure6_*.{png,pdf}` set corresponds to a previous six-figure manuscript layout; it is retained for provenance. The final paper uses two figures, mapped above.
 
 ## Running
 
