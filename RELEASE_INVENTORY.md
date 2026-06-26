@@ -61,8 +61,8 @@ Status legend: ✅ present · ➕ added/regenerated in this pass · 🌐 distrib
 |---|---|---|---|
 | Figure 1 (architecture) | `figures/figure_architecture_schematic.*` (+ legacy `figure1_*`) | `scripts/figures/generate_architecture_figure.py` | ➕ ⚠️ schematic, see below |
 | Figure 2 (cluster-level effect-size heatmap) | `figures/figure_cluster_effect_size_heatmap.*` | `scripts/figures/generate_effect_size_heatmap.py` | ➕ regenerated from Table 3 CSV |
-| Figure 3 (representative / failure cases) | `figures/failure_panels/*.png` (+ legacy `figure6_failure_cases.*`) | `analysis/generate_rescue_analysis.py` | ✅ |
-| 24 deterministic failure panels | `figures/failure_panels/*.png` | `analysis/generate_rescue_analysis.py` | ✅ |
+| ~~Figure 3~~ | **removed from the final paper**; representative/failure cases are reported in text + `analysis/outputs/failure_case_manifest.csv` | `analysis/generate_rescue_analysis.py` | 🚫 removed (final paper has 2 figures) |
+| Real-image per-case panels | generated locally only — **not shipped** (datasets' redistribution terms; regenerable) | `analysis/generate_rescue_analysis.py` | 🚫 not redistributed |
 | Captions | `figures/captions.md` | — | ✅ ⚠️ six-figure legacy text |
 
 ## Release scaffolding (this repository)
@@ -87,14 +87,14 @@ Status legend: ✅ present · ➕ added/regenerated in this pass · 🌐 distrib
    `generate_effect_size_heatmap.py` regenerates Fig 2 faithfully from the artifact of
    record. Content is reproducible; pixels are not guaranteed identical.
 2. **Figure numbering drift.** The shipped `figures/figure1..figure6_*` set is the earlier
-   six-figure layout; the final paper has three figures. Reconciled in
+   six-figure layout; the final paper has two figures. Reconciled in
    `docs/paper_mapping.md`; the legacy files are retained for provenance.
 3. **Table 3 `Decision` column semantics differ** between the shipped CSV/MD
    (signed-rank significance) and the typeset Table 3 (stricter ✓ favorable rule). Same
    underlying data; both renderings derivable from `cluster_level_statistics.csv`. Flagged
    in `docs/paper_mapping.md` — not silently changed.
 4. **Large binaries on Zenodo, not git** (checkpoints, prediction arrays). Reproducing
-   Table 3 / Figure 3 requires downloading the Zenodo prediction bundle + rebuilding
-   processed ground truth from raw data.
+   Table 3 requires downloading the Zenodo prediction bundle + rebuilding processed
+   ground truth from raw data. (The final paper has no Figure 3.)
 5. **DOI placeholder.** `CITATION.cff` / README Zenodo DOI must be filled after the first
    Zenodo deposition.

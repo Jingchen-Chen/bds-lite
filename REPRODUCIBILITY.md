@@ -69,7 +69,7 @@ python scripts/figures/generate_effect_size_heatmap.py
 |---|---|---|
 | `scripts/reeval_main_seeds.py` | `results/main_test_means.csv` | Table 2 (U-Net, BDS-Lite) |
 | `scripts/gsl/run_phase16_gsl.sh` + `aggregate_phase16_gsl.py` | `results/matched_gsl_summary.csv` | Table 2 (U-Net+GSL) |
-| `analysis/generate_rescue_analysis.py` | `analysis/outputs/cluster_level_statistics.csv`, `failure_case_manifest.csv`, `figures/failure_panels/*` | Table 3, Figure 3 |
+| `analysis/generate_rescue_analysis.py` | `analysis/outputs/cluster_level_statistics.csv`, `failure_case_manifest.csv` (real-image case panels are generated locally and **not shipped**) | Table 3 |
 | `scripts/profile_model.py` | `results/profiling/*`, `results/resource_profile_isic2018_comparison.csv` | Table 4 |
 | `scripts/figures/generate_effect_size_heatmap.py` | `figures/figure_cluster_effect_size_heatmap.*` | Figure 2 |
 
@@ -88,8 +88,9 @@ See `docs/paper_mapping.md` for the complete table/figure → artifact crosswalk
 ## Known limitations
 
 - **No raw data** (third-party licenses) and **no checkpoints/prediction arrays** in git
-  — the latter are on Zenodo. Reproducing Table 3 / Figure 3 needs the Zenodo prediction
-  bundle plus locally rebuilt processed ground truth.
+  — the latter are on Zenodo. Reproducing Table 3 needs the Zenodo prediction bundle plus
+  locally rebuilt processed ground truth. The final paper has no Figure 3; real-image
+  per-case panels are not redistributed (datasets' terms) but are regenerable locally.
 - **Three seeds** are descriptive replication, not a basis for seed-level superiority
   claims; ACDC/Synapse cluster sizes are small (20 patients / 12 cases).
 - GPU kernels (distance transforms, interpolation) may introduce last-bit

@@ -5,7 +5,7 @@ This file maps every table and figure in the **final manuscript**
 to the configs, scripts, and machine-readable artifacts that produce it. It is the
 single place that reconciles the paper's numbering with the repository contents.
 
-The final paper has **4 tables** and **3 figures**. (An earlier draft had 6 figures;
+The final paper has **4 tables** and **2 figures**. (An earlier draft had 6 figures;
 those source files are retained under `figures/figure1..figure6_*` for provenance —
 see the figure section below.)
 
@@ -51,22 +51,22 @@ everything needed to reproduce either rendering.
 |---|---|---|---|
 | **Figure 1** | BDS-Lite architecture and training pipeline | schematic (code) | `scripts/figures/generate_architecture_figure.py` → `figures/figure_architecture_schematic.*` |
 | **Figure 2** | Cluster-level BDS-Lite-vs-U-Net effect-size heatmap | `analysis/outputs/cluster_level_statistics.csv` (= Table 3) | `scripts/figures/generate_effect_size_heatmap.py` → `figures/figure_cluster_effect_size_heatmap.*` |
-| **Figure 3** | Representative / failure cases | `analysis/outputs/failure_case_manifest.csv` + per-case prediction arrays (Zenodo) + processed GT; rendered panels in `figures/failure_panels/*.png` | `analysis/generate_rescue_analysis.py` |
+| **(removed) Figure 3** | The final paper has **no Figure 3**. Representative/failure cases are reported in the text and in `analysis/outputs/failure_case_manifest.csv` (real-image panels generated locally, **not redistributed**) | `analysis/generate_rescue_analysis.py` |
 
 **Caveat (publication vs reproduced figures).** The figures *typeset in the manuscript*
-were finalized in the LaTeX project (a polished multi-panel Figure 1; a combined
-Figure 3 montage assembled from the 24 selected panels). The scripts above regenerate
-the **content** — the architecture structure, the heatmap values, and the case panels —
-from the artifacts of record, but are not guaranteed pixel-identical to the typeset
-exports. There is **no committed script that bit-reproduces the typeset Figure 2 PNG**;
+were finalized in the LaTeX project (a polished multi-panel Figure 1 whose input panel is
+a synthetic image). The scripts above regenerate the **content** — the architecture
+structure and the heatmap values — from the artifacts of record, but are not guaranteed
+pixel-identical to the typeset exports. There is **no committed script that bit-reproduces the typeset Figure 2 PNG**;
 `generate_effect_size_heatmap.py` reproduces it faithfully from the artifact of record.
 
 **Legacy six-figure set.** `figures/figure1_architecture_training_inference_decoupling`,
 `figure2_matched_main_results`, `figure3_per_case_delta_distributions`,
 `figure4_boundary_distance_relationships`, `figure5_subgroup_organ_heatmap`, and
 `figure6_failure_cases` belong to a previous six-figure manuscript layout. They are kept
-for provenance and are described in `figures/captions.md`. The final paper uses the three
-figures mapped above; `figure6_failure_cases` corresponds to the final Figure 3 montage.
+for provenance and are described in `figures/captions.md`. The final paper uses the two
+figures mapped above; the legacy `figure6_failure_cases` is **not** used in the final
+paper (which has no Figure 3).
 
 ## Key numbers (must stay consistent across paper and docs)
 

@@ -11,8 +11,11 @@ The committed files in [`outputs/`](outputs/) are the **artifacts of record**:
 - `cluster_level_statistics.csv` — manuscript Table 3 (per-dataset, per-metric
   cluster bootstrap CIs, Holm-adjusted signed-rank p-values, sign effect sizes,
   leave-one-cluster-out ranges).
-- `failure_case_manifest.csv` — the 24 deterministically selected failure cases
-  (rendered in `../figures/failure_panels/`).
+- `failure_case_manifest.csv` — the 24 deterministically selected representative/failure
+  cases. The analysis script renders real-image panels locally into
+  `../figures/failure_panels/`, but these are **not redistributed** (datasets' terms).
+  The final paper has no Figure 3; these representative/failure cases are reported in the
+  manuscript text and in this manifest.
 - `per_case_metrics.csv`, `per_class_case_metrics.csv`, and the per-case /
   subgroup / outlier / tradeoff / correlation summaries.
 - `analysis_run_summary.json` — run provenance (sample and cluster counts).

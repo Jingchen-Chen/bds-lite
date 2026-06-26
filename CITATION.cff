@@ -5,7 +5,7 @@ authors:
   - family-names: Chen
     given-names: Jingchen
 license: MIT
-repository-code: "https://github.com/REPLACE-ME/bds-lite"
+repository-code: "https://github.com/Jingchen-Chen/bds-lite"
 # Zenodo archive of the large binaries (checkpoints + prediction arrays).
 # Replace with the minted VERSION DOI (not just the concept DOI) before release.
 identifiers:
