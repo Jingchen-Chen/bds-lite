@@ -107,7 +107,11 @@ Map of each paper item to its artifact of record. All paths below exist in this 
 | Figure 1 (architecture) | schematic (synthetic input; no dataset image) | `scripts/figures/generate_architecture_figure.py` |
 | Figure 2 (effect-size heatmap) | `figures/Figure_2.png` (content) | `scripts/figures/generate_effect_size_heatmap.py` |
 
-The cluster analysis is a **single end-to-end run** of `analysis/generate_rescue_analysis.py`; `cluster_level_statistics.csv` and `failure_case_manifest.csv` reproduce **bit-for-bit (identical sha256)** when run end-to-end (all non-bootstrap quantities are fully deterministic; the bootstrap RNG is seeded `default_rng(20260606)`). See [`analysis/README.md`](analysis/README.md), [`docs/statistics.md`](docs/statistics.md), and the traceability hub [`docs/traceability.md`](docs/traceability.md). Split manifests are seed-2026, subject-disjoint, and sha256-stamped, guarded by `tests/unit/test_split_integrity.py`.
+Given a fixed set of per-case prediction arrays, running `analysis/generate_rescue_analysis.py` once from beginning to end deterministically regenerates the cluster-aware analysis outputs. During release verification, `cluster_level_statistics.csv` and `failure_case_manifest.csv` reproduced bit-for-bit with identical SHA-256 hashes from the fixed prediction arrays used for the manuscript. All non-bootstrap quantities are deterministic, and the bootstrap random-number generator is seeded with `default_rng(20260606)`.
+
+These bit-for-bit guarantees apply only to the analysis stage with fixed input prediction arrays. Fresh model training and re-evaluation may produce small numerical differences across GPU hardware, CUDA versions, PyTorch builds, and nondeterministic kernels.
+
+See [`analysis/README.md`](analysis/README.md), [`docs/statistics.md`](docs/statistics.md), and the traceability hub [`docs/traceability.md`](docs/traceability.md). The seed-2026 split manifests are subject-disjoint and SHA-256 stamped, with integrity checks implemented in `tests/unit/test_split_integrity.py`.
 
 ## Figures (image-rights note)
 
