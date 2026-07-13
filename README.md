@@ -79,7 +79,7 @@ bash   scripts/gsl/run_phase16_gsl.sh          # U-Net+GSL comparator, matched p
 python scripts/reeval_main_seeds.py
 python scripts/profile_model.py
 
-# 3. Cluster-aware analysis (SINGLE end-to-end run; needs the Zenodo prediction arrays)
+# 3. Cluster-aware analysis
 python analysis/generate_rescue_analysis.py
 
 # 4. Figures from artifacts of record (the paper has two figures)
@@ -95,7 +95,7 @@ A two-layer comparison. **Matched layer:** U-Net, BDS-Lite, and U-Net+GSL are tr
 
 ## Reproducibility instructions and artifacts
 
-Map of each paper item to its artifact of record (all paths below exist in this repo unless marked *Zenodo*):
+Map of each paper item to its artifact of record. All paths below exist in this repository:
 
 | Paper item | Artifact of record | Producing script |
 |---|---|---|
