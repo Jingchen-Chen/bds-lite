@@ -50,8 +50,6 @@ manuscript/      typeset PDF, paper figures, figure captions, tables.docx
 
 Top-level guides: [`RELEASE_INVENTORY.md`](RELEASE_INVENTORY.md) (what is shipped / missing), [`DATASETS.md`](DATASETS.md) (data access), [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) (environment + commands).
 
-**Not in git:** raw datasets (third-party — see `DATASETS.md`) and large binaries (trained checkpoints `*.pt`, per-case prediction arrays `*.npy/.npz`), which are on **Zenodo** (see [`ZENODO_MANIFEST.csv`](ZENODO_MANIFEST.csv); DOI to be minted at deposit — `TODO`). `.npy/.npz/.pt` and `*.log` are git-ignored by design.
-
 ## Requirements / dependencies
 
 - **Hardware of record:** single NVIDIA GeForce RTX 5060 Laptop GPU; Linux x86_64.
