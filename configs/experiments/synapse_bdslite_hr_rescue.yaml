@@ -1,0 +1,39 @@
+extends:
+  - configs/base.yaml
+  - configs/datasets/synapse.yaml
+
+project:
+  seed: 2026
+
+experiment:
+  name: synapse_bdslite_hr_rescue
+  group: bds_lite_architectural
+
+model:
+  name: bdslite_unet_hr
+  base_channels: 32
+  boundary_classes: 1
+  spatial_channels: 16
+  fusion_type: concat
+  boundary_gate: true
+  boundary_gate_scale: 0.25
+  disable_boundary_at_inference: true
+
+loss:
+  dice_weight: 1.0
+  ce_weight: 1.0
+  boundary_weight: 0.05
+  distill_weight: 0.05
+  surface_weight: 1.0
+  distance_weight: 0.0
+
+trainer:
+  epochs: 150
+  batch_size: 16
+  lr: 0.0001
+  weight_decay: 0.00001
+  amp: true
+  save_every: 25
+  scheduler: cosine
+  grad_clip: 1.0
+  device: cuda

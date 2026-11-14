@@ -1,0 +1,96 @@
+{
+  "dataset": "acdc",
+  "passed": true,
+  "problems": [],
+  "gate": {
+    "status": "PASSED",
+    "rule": "teacher validation Boundary F1 >= decoder-only mean AND DSC >= decoder-only mean",
+    "teacher": {
+      "boundary_f1": 0.9014044055445112,
+      "dsc": 0.8419892514750188
+    },
+    "thresholds": {
+      "boundary_f1_min": 0.8355933277660293,
+      "dsc_min": 0.7885247220597073,
+      "runs": [
+        "results/revision_runs/acdc_m2_aux_boundary_only_unweighted_seed1",
+        "results/revision_runs/acdc_m2_aux_boundary_only_unweighted_seed2",
+        "results/revision_runs/acdc_m2_aux_boundary_only_unweighted_seed3"
+      ]
+    }
+  },
+  "cache_check": {
+    "seed": 20261107,
+    "indices": [
+      549,
+      917,
+      271,
+      1063,
+      1099,
+      276,
+      686,
+      196,
+      1269,
+      195,
+      851,
+      1213,
+      219,
+      23,
+      707,
+      877,
+      378,
+      1046,
+      70,
+      1237
+    ],
+    "max_abs_difference": 0.0002491474151611328,
+    "tolerance": 0.001,
+    "passed": true
+  },
+  "feasibility": {
+    "F1_gate": true,
+    "F2_kd_decreased": true,
+    "F3_batch_size": true
+  },
+  "teacher": {
+    "run": "acdc_kd_teacher_seed100",
+    "selected_epoch": 13,
+    "epoch1_train_total": 2.081200258872088,
+    "cache_hash": null
+  },
+  "students": [
+    {
+      "run": "acdc_kd_band_seed1",
+      "selected_epoch": 77,
+      "epoch1_train_total": 2.8885129900539623,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.0347826466840857,
+      "kd_last10_mean": 0.2599470652552212,
+      "kd_decreased": true
+    },
+    {
+      "run": "acdc_kd_band_seed2",
+      "selected_epoch": 50,
+      "epoch1_train_total": 3.3417211785035974,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.0893726832726423,
+      "kd_last10_mean": 0.25998321257969914,
+      "kd_decreased": true
+    },
+    {
+      "run": "acdc_kd_band_seed3",
+      "selected_epoch": 86,
+      "epoch1_train_total": 3.144343479941873,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.1084864672492531,
+      "kd_last10_mean": 0.2599536429433261,
+      "kd_decreased": true
+    }
+  ]
+}

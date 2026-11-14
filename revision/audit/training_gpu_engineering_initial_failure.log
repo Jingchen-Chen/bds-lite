@@ -1,0 +1,32 @@
+{"dataset": "isic2018", "batch_size": 8, "updated_state_exact": true, "gradient_probes": 1, "peak_allocated_bytes": 2018781184, "seconds_without_probe": 1.077480915992055, "seconds_with_probe": 0.27769513201201335, "amp_skipped_steps": 0, "probe": {"epoch": 1, "step": 50, "seg_norm": 3.350011851838726, "precision": "fp32_pre_update", "sdf_norm": 0.2836230219534424, "sdf_cosine": 0.9251338534003091, "sdf_norm_ratio": 0.08466328911575934, "boundary_norm": 0.03729384037835485, "boundary_cosine": 0.08023366100155349, "boundary_norm_ratio": 0.011132450280104329, "distill_norm": 0.019890417462107575, "distill_cosine": -0.18994504192574654, "distill_norm_ratio": 0.005937417042626369, "aux_norm": 0.28727399319859803, "aux_cosine": 0.9106346346930048, "aux_norm_ratio": 0.08575312742279449}}
+{"dataset": "acdc", "batch_size": 16, "updated_state_exact": true, "gradient_probes": 1, "peak_allocated_bytes": 4029017088, "seconds_without_probe": 0.20632626599399373, "seconds_with_probe": 0.47602496499894187, "amp_skipped_steps": 0, "probe": {"epoch": 1, "step": 50, "seg_norm": 1.3488311379552995, "precision": "fp32_pre_update", "sdf_norm": 0.06100621820476201, "sdf_cosine": 0.8744841090702254, "sdf_norm_ratio": 0.04522895156264087, "boundary_norm": 0.03115793996624649, "boundary_cosine": -0.2722239350387835, "boundary_norm_ratio": 0.023099956020795148, "distill_norm": 0.009853315898942594, "distill_cosine": -0.3697806583284993, "distill_norm_ratio": 0.0073050774271709714, "aux_norm": 0.054002686272051556, "aux_cosine": 0.7633539713141669, "aux_norm_ratio": 0.04003665451697276}}
+Traceback (most recent call last):
+  File "/home/jc/bds-lite/analysis/revision/validate_training_gpu.py", line 100, in <module>
+    main()
+    ~~~~^^
+  File "/home/jc/bds-lite/analysis/revision/validate_training_gpu.py", line 66, in main
+    metrics, _ = epoch_train(
+                 ~~~~~~~~~~~^
+        model, [batch], criterion, optimizer, scheduler, 1, 49, probes, enabled
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/jc/bds-lite/scripts/revision/train_run.py", line 87, in epoch_train
+    probes.append(dict(epoch=epoch, step=step, **gradient_probe(model, batch, criterion)))
+                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jc/bds-lite/scripts/revision/training_support.py", line 117, in gradient_probe
+    gs = torch.autograd.grad(loss, parameters, retain_graph=True, allow_unused=True)
+  File "/home/jc/bds-followup/.venv/lib/python3.14/site-packages/torch/autograd/__init__.py", line 532, in grad
+    result = _engine_run_backward(
+        outputs,
+    ...<5 lines>...
+        accumulate_grad=False,
+    )
+  File "/home/jc/bds-followup/.venv/lib/python3.14/site-packages/torch/autograd/graph.py", line 869, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        t_outputs, *args, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )  # Calls into the C++ engine to run the backward pass
+    ^
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn

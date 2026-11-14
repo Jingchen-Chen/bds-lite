@@ -1,0 +1,27 @@
+\begin{tabular}{p{4.0cm}lrp{4.2cm}p{3.6cm}p{2.6cm}}
+\toprule
+Family & 2026 & Runs & Purpose & Evidence class & Use here \\
+\midrule
+Single-seed exploration & Apr & 37 & Recipe development on validation data & Exploratory & No \\
+Original grid & Apr--May & 117 & 13-arm grid; U-Net and BDS-Lite are the original set & Validated (U-Net, BDS-Lite); re-evaluated post hoc (4 ablation arms); unvalidated (7 other arms) & Original set; S15 \\
+Gate pilot & May & 15 & Gate and stop-gradient pilot & Exploratory & No \\
+Follow-up family & May & 36 & Follow-up family; 18 of these are gate variants of the same checkpoints & Validated & Retrained set \\
+Earlier loss baselines & May & 18 & Earlier GSL and Boundary DoU runs & Unvalidated; superseded & No \\
+BDS-Lite path + GSL & May & 9 & BDS-Lite path combined with GSL & Unvalidated & No \\
+EGE-UNet compact baseline & May & 9 & Compact comparator, dropped before submission & Unvalidated & No \\
+Original GSL & Jun & 9 & U-Net+GSL rows of the original submission & Validated by exact retraining & Via retrain \\
+ISIC U/S/B/F factorial & Oct & 12 & Development study & Validated (re-evaluated on test) & Four arms reused on ISIC2018 \\
+ISIC pathway controls & Oct & 6 & Gate only; gate with decoder & Exploratory; re-evaluated post hoc on test & S15 \\
+ISIC boundary-specificity control & Oct & 3 & Feature matching without boundary supervision & Exploratory; re-evaluated post hoc on test & S15 \\
+ISIC D4 augmentation baseline & Oct & 3 & U-Net with flips and rotations & Exploratory (development images) & S15 \\
+ACDC index-grid region vs paper-GSL & Oct & 6 & Development data, 10 patients & Exploratory & No \\
+ACDC three-index context control & Oct & 3 & Three adjacent slices as input; development data & Exploratory & S15 \\
+ACDC phase-reduction control & Oct & 6 & Loss reduction unit; development data & Exploratory & No \\
+Prespecified ablations & Nov & 46 & Ablations, Attention U-Net & Validated (prespecified) & Yes \\
+Prespecified comparators & Nov & 27 & GSL, Boundary Loss, LB-UNet & Validated (prespecified) & Yes \\
+Prespecified sensitivity & Nov & 23 & Decoder-only arm; $\alpha$ and $\lambda$ sensitivity & Validated (prespecified) & Yes \\
+Frozen additional trainings & Nov & 40 & Seeds 4--10 on ISIC2018; decoder plus surface; ACDC correction & Validated (frozen); source of both confirmed contrasts & Yes \\
+\midrule
+Total completed & & 425 & & & \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,8 @@
+{
+ "checkpoint": "outputs/runs/isic2018_bds_lite_gate_surface_seed3/best.pt",
+ "checkpoint_sha256": "e1b6bb1ef8a6adf917e54e9158b9167d2e1be245e61edc0ddeb55427c37ec7a3",
+ "n_samples": 1000,
+ "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
+ "per_case_sha256": "9f7e84d9b53e359beead22c4fc8aeabfb63268fad83f569a953c418d8687f02c",
+ "protocol_sha256": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095"
+}

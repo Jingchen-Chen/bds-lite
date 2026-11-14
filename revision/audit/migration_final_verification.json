@@ -1,0 +1,23 @@
+{
+  "original_files_checked": 46422,
+  "authorized_report_updates_with_verified_original_backups": [
+    "results/final_manuscript_audit_v2/final_artifact_manifest.csv",
+    "results/final_manuscript_audit_v2/final_audit_report.md",
+    "results/final_manuscript_audit_v2/final_completion_report.md"
+  ],
+  "observed_live_operational_changes": [
+    {
+      "path": "/home/jc/bds-followup/research/boundary_attribution_20261017/monitoring/events/LATEST.json",
+      "sha256": "03a2e69a0de7cf392a28e80997c20e5b2cef178741951de97d6df20b97a888be",
+      "snapshot": "revision/audit/live_monitor_drift/LATEST_03a2e69a0de7.json"
+    },
+    {
+      "path": "/home/jc/bds-followup/research/boundary_attribution_20261017/monitoring/events/last_delivery_failure.json",
+      "sha256": "f0cd1bf249f427773e77ce7dc6b66cf5859c36dc564f4a3315390d7b17d071bf",
+      "snapshot": "revision/audit/live_monitor_drift/last_delivery_failure_f0cd1bf249f4.json"
+    }
+  ],
+  "migrated_files_checked": 32926,
+  "unexpected_failures": [],
+  "scope": "Original scientific content preserved; live monitor changes separated, no source restoration attempted"
+}

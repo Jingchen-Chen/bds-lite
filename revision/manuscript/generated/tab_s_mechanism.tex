@@ -1,0 +1,16 @@
+\begin{tabular}{lccc}
+\toprule
+Measure & ISIC2018 & ACDC & Synapse \\
+\midrule
+Teacher head on deployed $q_s$, distilled arms (AP) & 0.123 & 0.191 & 0.104 \\
+Teacher head on deployed $q_s$, undistilled arms (AP) & 0.035 & 0.070 & 0.012 \\
+Teacher decoder itself (AP) & 0.172 & 0.543 & 0.570 \\
+Readout of $F_s$, distilled minus undistilled (AP) & +0.009 & +0.001 & $-$0.006 \\
+\quad 95\% interval & [$-$0.007, +0.025] & [$-$0.048, +0.050] & [$-$0.060, +0.047] \\
+Readout of $F_s$, arms without a decoder (AP) & 0.126 & 0.366 & 0.320 \\
+Gate modulation, band / off-band & 0.75 & 1.08 & 1.11 \\
+$R^2$ of $q_s$ for the teacher feature, distilled arms & 0.70 to 0.79 & 0.28 to 0.73 & $-$0.08 to 0.61 \\
+Gate: mean $|$factor$-1|$ & 0.084 & 0.069 & 0.095 \\
+Gate: constant per-channel part & 0.072 & 0.069 & 0.095 \\
+\bottomrule
+\end{tabular}

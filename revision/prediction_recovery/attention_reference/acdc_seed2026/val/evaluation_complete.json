@@ -1,0 +1,25 @@
+{
+  "entry": {
+    "run_id": "attention_reference_acdc_seed2026_val",
+    "family": "attention_reference",
+    "dataset": "acdc",
+    "seed": 2026,
+    "split": "val",
+    "checkpoint": "results/checkpoints/acdc_attention_unet_baseline/best.pt",
+    "checkpoint_sha256": "79b48f55c0b264c9f8dcda4ff751de228e12ed4d40536a6aabb74035d20bd7df",
+    "manifest": "recovered/followup/splits/acdc/val.json",
+    "manifest_sha256": "4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90",
+    "batch": 16,
+    "classes": 4,
+    "output": "revision/prediction_recovery/attention_reference/acdc_seed2026/val"
+  },
+  "protocol_sha256": "3619ae1081487603740dea88bbc509f554705a1924ae6dc77ae33028b0e059b7",
+  "outputs": {
+    "predictions.npz": "2df11cd0410dff7aaaf7b76a6f32460dce59e144804fda2c90a5bf2c663bf210",
+    "per_case.csv": "a86346cda860c5f13c837c92c2d7b68d71373dff6eaa4f74bf6e02c25bd4b22a",
+    "provenance.json": "83735cc4f31add3f2e890a5459a541acce369658f044f41ee373b77a25adf55e"
+  },
+  "images": 186,
+  "class_rows": 558,
+  "seconds": 2.872324227995705
+}

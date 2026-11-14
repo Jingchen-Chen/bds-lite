@@ -1,0 +1,20 @@
+[
+ {
+  "cohort": "famO_full",
+  "seed": 1,
+  "n": 77,
+  "max_abs_dsc_diff": 0.0002508142322005247
+ },
+ {
+  "cohort": "famO_full",
+  "seed": 2,
+  "n": 77,
+  "max_abs_dsc_diff": 0.00021189485210326708
+ },
+ {
+  "cohort": "famO_full",
+  "seed": 3,
+  "n": 77,
+  "max_abs_dsc_diff": 0.0012375279351450885
+ }
+]

@@ -1,0 +1,684 @@
+{
+  "status": "exploratory; validation images only; no new-arm test metric exists",
+  "decision_rule": "Option A (protocol OPEN-2): feasibility only, not the direction of any estimate",
+  "feasibility": {
+    "F1_teacher_gate": true,
+    "F2_students_stable": true,
+    "F3_resources": true
+  },
+  "proceed_to_phase2": true,
+  "gate": {
+    "status": "PASSED",
+    "rule": "teacher validation Boundary F1 >= decoder-only mean AND DSC >= decoder-only mean",
+    "teacher": {
+      "boundary_f1": 0.5921659671890172,
+      "dsc": 0.9014674442017768,
+      "images": 519
+    },
+    "thresholds": {
+      "boundary_f1_min": 0.5376352265487206,
+      "dsc_min": 0.8631866601530269
+    },
+    "source": "mean over decoder-only seeds 1-10 of final_metrics.json metrics.val.<metric>.mean"
+  },
+  "cache_check": {
+    "seed": 20261107,
+    "indices": [
+      848,
+      1416,
+      418,
+      1637,
+      1694,
+      426,
+      1058,
+      2064,
+      1953,
+      302,
+      1309,
+      1871,
+      339,
+      36,
+      1087,
+      1349,
+      582,
+      1615,
+      108,
+      1905
+    ],
+    "max_abs_difference": 0.00025141239166259766,
+    "tolerance": 0.001,
+    "passed": true
+  },
+  "teacher": {
+    "run": "isic2018_kd_teacher_seed100",
+    "epochs": 150,
+    "selected_epoch": 16,
+    "best_val_dsc": 0.9014674442017773,
+    "val": {
+      "dsc": {
+        "mean": 0.9014674442017768,
+        "valid": 519,
+        "total": 519
+      },
+      "iou": {
+        "mean": 0.8346300056800823,
+        "valid": 519,
+        "total": 519
+      },
+      "boundary_f1": {
+        "mean": 0.5921659671890172,
+        "valid": 519,
+        "total": 519
+      },
+      "hd95": {
+        "mean": 11.67808524859434,
+        "valid": 519,
+        "total": 519
+      },
+      "assd": {
+        "mean": 4.410899612600404,
+        "valid": 519,
+        "total": 519
+      }
+    },
+    "finite": true,
+    "median_epoch_seconds": 10.52075677207904,
+    "peak_allocated_mib": 696.54833984375,
+    "peak_reserved_mib": 852.0,
+    "max_temperature_c": 87,
+    "amp_skipped_steps": 0
+  },
+  "teacher_diagnostics": {
+    "train": {
+      "images": 2075,
+      "metrics": {
+        "dsc": 0.9579344044671845,
+        "iou": 0.9211305616349768,
+        "boundary_f1": 0.8385141723977692,
+        "hd95": 4.023669765713703,
+        "assd": 1.481968200063131
+      },
+      "empty_band_fraction": 0.0,
+      "band_pixels_mean": 859.929156626506,
+      "band_entropy_bits_mean": 0.8016043087672087,
+      "band_prob_histogram_10bins": [
+        74475,
+        168859,
+        220214,
+        217283,
+        201579,
+        200831,
+        215166,
+        225506,
+        181940,
+        78500
+      ],
+      "band_abs_error_mean": 0.4171310049285267,
+      "image_abs_error_mean": 0.01409777663289923
+    },
+    "val": {
+      "images": 519,
+      "metrics": {
+        "dsc": 0.9014932709393916,
+        "iou": 0.8346623513578645,
+        "boundary_f1": 0.5922079003501904,
+        "hd95": 11.676513541181194,
+        "assd": 4.410247949506506
+      },
+      "empty_band_fraction": 0.0,
+      "band_pixels_mean": 900.5838150289018,
+      "band_entropy_bits_mean": 0.8134955767537353,
+      "band_prob_histogram_10bins": [
+        17530,
+        43477,
+        54374,
+        57005,
+        60106,
+        60451,
+        56924,
+        54318,
+        44148,
+        19070
+      ],
+      "band_abs_error_mean": 0.4505659648788112,
+      "image_abs_error_mean": 0.03937817986661756
+    }
+  },
+  "students": [
+    {
+      "run": "isic2018_kd_band_seed1",
+      "epochs": 150,
+      "selected_epoch": 75,
+      "best_val_dsc": 0.8636351483596586,
+      "val": {
+        "dsc": {
+          "mean": 0.8636351483596586,
+          "valid": 519,
+          "total": 519
+        },
+        "iou": {
+          "mean": 0.7881659989938081,
+          "valid": 519,
+          "total": 519
+        },
+        "boundary_f1": {
+          "mean": 0.5540728977100464,
+          "valid": 519,
+          "total": 519
+        },
+        "hd95": {
+          "mean": 20.22179688565059,
+          "valid": 518,
+          "total": 519
+        },
+        "assd": {
+          "mean": 6.841566510699891,
+          "valid": 518,
+          "total": 519
+        }
+      },
+      "finite": true,
+      "median_epoch_seconds": 14.444640290457755,
+      "peak_allocated_mib": 853.00927734375,
+      "peak_reserved_mib": 2236.0,
+      "max_temperature_c": 87,
+      "amp_skipped_steps": 310,
+      "kd_epoch1": 0.7787466746110182,
+      "kd_last10_mean": 0.626380262031005,
+      "kd_decreased": true,
+      "probes": [
+        {
+          "epoch": 0,
+          "loss_seg": 1.5208542346954346,
+          "loss_boundary": 0.07407177984714508,
+          "loss_kd": 0.706065833568573,
+          "seg_norm": 7.2307944219400575,
+          "boundary_norm": 0.06154123532397381,
+          "boundary_norm_ratio": 0.00851099225518598,
+          "boundary_cosine": -0.0013942870015316434,
+          "kd_norm": 0.7567486610382741,
+          "kd_norm_ratio": 0.1046563651072844,
+          "kd_cosine": 0.45587499728799036
+        },
+        {
+          "epoch": 1,
+          "loss_seg": 0.4952632784843445,
+          "loss_boundary": 0.05855784937739372,
+          "loss_kd": 0.6843435168266296,
+          "seg_norm": 1.381767439757196,
+          "boundary_norm": 0.03450410520167088,
+          "boundary_norm_ratio": 0.024970993098327704,
+          "boundary_cosine": 0.11530421205868126,
+          "kd_norm": 0.6755746250809624,
+          "kd_norm_ratio": 0.4889206429699012,
+          "kd_cosine": 0.1602162841018872
+        },
+        {
+          "epoch": 25,
+          "loss_seg": 0.24467721581459045,
+          "loss_boundary": 0.03250481188297272,
+          "loss_kd": 0.6511671543121338,
+          "seg_norm": 2.401119205114071,
+          "boundary_norm": 0.1045627380016828,
+          "boundary_norm_ratio": 0.04354749975718731,
+          "boundary_cosine": 0.43896891179031144,
+          "kd_norm": 0.8603956983202767,
+          "kd_norm_ratio": 0.3583311051312013,
+          "kd_cosine": 0.8620488733802372
+        },
+        {
+          "epoch": 50,
+          "loss_seg": 0.14896121621131897,
+          "loss_boundary": 0.03102814219892025,
+          "loss_kd": 0.6273518204689026,
+          "seg_norm": 0.7148294408932703,
+          "boundary_norm": 0.11110026095226497,
+          "boundary_norm_ratio": 0.15542205538349269,
+          "boundary_cosine": 0.616128849591224,
+          "kd_norm": 0.6068255244401402,
+          "kd_norm_ratio": 0.8489095296380553,
+          "kd_cosine": 0.3375675403779241
+        },
+        {
+          "epoch": 75,
+          "loss_seg": 0.15028147399425507,
+          "loss_boundary": 0.03333636000752449,
+          "loss_kd": 0.6494419574737549,
+          "seg_norm": 1.2212818751373145,
+          "boundary_norm": 0.16183661501179752,
+          "boundary_norm_ratio": 0.13251372865383879,
+          "boundary_cosine": 0.30511188857490446,
+          "kd_norm": 1.7450996798336809,
+          "kd_norm_ratio": 1.428908195036851,
+          "kd_cosine": 0.3000955647210918
+        },
+        {
+          "epoch": 100,
+          "loss_seg": 0.10010275989770889,
+          "loss_boundary": 0.0289588812738657,
+          "loss_kd": 0.6265567541122437,
+          "seg_norm": 1.3973344334535307,
+          "boundary_norm": 0.2275480342166401,
+          "boundary_norm_ratio": 0.16284436192862728,
+          "boundary_cosine": 0.40861085058043967,
+          "kd_norm": 2.111884999673813,
+          "kd_norm_ratio": 1.5113668919288428,
+          "kd_cosine": 0.14708726437340428
+        },
+        {
+          "epoch": 125,
+          "loss_seg": 0.07366953790187836,
+          "loss_boundary": 0.028802812099456787,
+          "loss_kd": 0.6210067868232727,
+          "seg_norm": 0.7241501063458791,
+          "boundary_norm": 0.2651243307263568,
+          "boundary_norm_ratio": 0.3661179200320718,
+          "boundary_cosine": 0.696888402967467,
+          "kd_norm": 3.3988072759653307,
+          "kd_norm_ratio": 4.693512085658582,
+          "kd_cosine": 0.759124660307443
+        },
+        {
+          "epoch": 150,
+          "loss_seg": 0.07248197495937347,
+          "loss_boundary": 0.02961539290845394,
+          "loss_kd": 0.6455806493759155,
+          "seg_norm": 0.8914831680920966,
+          "boundary_norm": 0.30043922536918755,
+          "boundary_norm_ratio": 0.33701054167087763,
+          "boundary_cosine": 0.753966955762014,
+          "kd_norm": 5.859173375134391,
+          "kd_norm_ratio": 6.572388111010411,
+          "kd_cosine": 0.8369776509413892
+        }
+      ]
+    },
+    {
+      "run": "isic2018_kd_band_seed2",
+      "epochs": 150,
+      "selected_epoch": 67,
+      "best_val_dsc": 0.8627763882731887,
+      "val": {
+        "dsc": {
+          "mean": 0.862776388273189,
+          "valid": 519,
+          "total": 519
+        },
+        "iou": {
+          "mean": 0.7847231172380665,
+          "valid": 519,
+          "total": 519
+        },
+        "boundary_f1": {
+          "mean": 0.5483970902762291,
+          "valid": 519,
+          "total": 519
+        },
+        "hd95": {
+          "mean": 21.897441122982954,
+          "valid": 518,
+          "total": 519
+        },
+        "assd": {
+          "mean": 7.325501168786789,
+          "valid": 518,
+          "total": 519
+        }
+      },
+      "finite": true,
+      "median_epoch_seconds": 14.359895714034792,
+      "peak_allocated_mib": 853.00927734375,
+      "peak_reserved_mib": 2236.0,
+      "max_temperature_c": 86,
+      "amp_skipped_steps": 371,
+      "kd_epoch1": 0.7674332921321575,
+      "kd_last10_mean": 0.645887721639413,
+      "kd_decreased": true,
+      "probes": [
+        {
+          "epoch": 0,
+          "loss_seg": 1.4136457443237305,
+          "loss_boundary": 0.091792993247509,
+          "loss_kd": 0.7242596745491028,
+          "seg_norm": 6.890214353101656,
+          "boundary_norm": 0.06073327838985555,
+          "boundary_norm_ratio": 0.008814425107473796,
+          "boundary_cosine": -0.07696737353756909,
+          "kd_norm": 1.2794258663146754,
+          "kd_norm_ratio": 0.1856873822421413,
+          "kd_cosine": 0.31493910559629396
+        },
+        {
+          "epoch": 1,
+          "loss_seg": 0.5152344703674316,
+          "loss_boundary": 0.07233445346355438,
+          "loss_kd": 0.6824406385421753,
+          "seg_norm": 2.889354273609991,
+          "boundary_norm": 0.036642403578657244,
+          "boundary_norm_ratio": 0.012681865949541668,
+          "boundary_cosine": -0.046964035083089495,
+          "kd_norm": 0.42308251073268727,
+          "kd_norm_ratio": 0.1464280495461996,
+          "kd_cosine": 0.38233618276977355
+        },
+        {
+          "epoch": 25,
+          "loss_seg": 0.18614786863327026,
+          "loss_boundary": 0.03238225355744362,
+          "loss_kd": 0.6533048748970032,
+          "seg_norm": 0.7678312966349262,
+          "boundary_norm": 0.1214809475964414,
+          "boundary_norm_ratio": 0.15821307119003883,
+          "boundary_cosine": 0.48529835696432033,
+          "kd_norm": 0.761867676826197,
+          "kd_norm_ratio": 0.9922331639321487,
+          "kd_cosine": -0.5937264878289383
+        },
+        {
+          "epoch": 50,
+          "loss_seg": 0.15909242630004883,
+          "loss_boundary": 0.03200879693031311,
+          "loss_kd": 0.6385388374328613,
+          "seg_norm": 0.7502849201662124,
+          "boundary_norm": 0.19294864179268803,
+          "boundary_norm_ratio": 0.25716715957711594,
+          "boundary_cosine": 0.3804607244238224,
+          "kd_norm": 0.4895253144784518,
+          "kd_norm_ratio": 0.6524525567833699,
+          "kd_cosine": 0.45807387027742624
+        },
+        {
+          "epoch": 75,
+          "loss_seg": 0.12751512229442596,
+          "loss_boundary": 0.03502140939235687,
+          "loss_kd": 0.6748821139335632,
+          "seg_norm": 0.7325362460346825,
+          "boundary_norm": 0.2886901046127381,
+          "boundary_norm_ratio": 0.3940966828268998,
+          "boundary_cosine": 0.6826824428540031,
+          "kd_norm": 3.3486415260633304,
+          "kd_norm_ratio": 4.571298067761123,
+          "kd_cosine": 0.7814156056144235
+        },
+        {
+          "epoch": 100,
+          "loss_seg": 0.09832051396369934,
+          "loss_boundary": 0.03097516857087612,
+          "loss_kd": 0.6371662020683289,
+          "seg_norm": 0.6716597309235199,
+          "boundary_norm": 0.2089766091312721,
+          "boundary_norm_ratio": 0.3111346408157194,
+          "boundary_cosine": 0.6382771043834412,
+          "kd_norm": 2.3052958057816655,
+          "kd_norm_ratio": 3.4322376340947605,
+          "kd_cosine": 0.6784912516016436
+        },
+        {
+          "epoch": 125,
+          "loss_seg": 0.08286723494529724,
+          "loss_boundary": 0.029759664088487625,
+          "loss_kd": 0.6369284987449646,
+          "seg_norm": 0.7547934783330732,
+          "boundary_norm": 0.264317575300272,
+          "boundary_norm_ratio": 0.3501852929148318,
+          "boundary_cosine": 0.8113501868198872,
+          "kd_norm": 6.1483301502876335,
+          "kd_norm_ratio": 8.145711809627633,
+          "kd_cosine": 0.7375900377143784
+        },
+        {
+          "epoch": 150,
+          "loss_seg": 0.07530947029590607,
+          "loss_boundary": 0.02899329923093319,
+          "loss_kd": 0.6238599419593811,
+          "seg_norm": 0.6833787299759627,
+          "boundary_norm": 0.24631908506312641,
+          "boundary_norm_ratio": 0.3604430080400519,
+          "boundary_cosine": 0.7727086070470399,
+          "kd_norm": 4.52558875432384,
+          "kd_norm_ratio": 6.622372859750879,
+          "kd_cosine": 0.6785541368168667
+        }
+      ]
+    },
+    {
+      "run": "isic2018_kd_band_seed3",
+      "epochs": 150,
+      "selected_epoch": 107,
+      "best_val_dsc": 0.8596935999685635,
+      "val": {
+        "dsc": {
+          "mean": 0.8596935999685639,
+          "valid": 519,
+          "total": 519
+        },
+        "iou": {
+          "mean": 0.7817291764833062,
+          "valid": 519,
+          "total": 519
+        },
+        "boundary_f1": {
+          "mean": 0.5322761103132847,
+          "valid": 519,
+          "total": 519
+        },
+        "hd95": {
+          "mean": 22.51134601898304,
+          "valid": 517,
+          "total": 519
+        },
+        "assd": {
+          "mean": 7.325634762558301,
+          "valid": 517,
+          "total": 519
+        }
+      },
+      "finite": true,
+      "median_epoch_seconds": 14.409189309051726,
+      "peak_allocated_mib": 853.00927734375,
+      "peak_reserved_mib": 2236.0,
+      "max_temperature_c": 87,
+      "amp_skipped_steps": 354,
+      "kd_epoch1": 0.7726204821696648,
+      "kd_last10_mean": 0.6229195865300985,
+      "kd_decreased": true,
+      "probes": [
+        {
+          "epoch": 0,
+          "loss_seg": 1.3734874725341797,
+          "loss_boundary": 0.09283596277236938,
+          "loss_kd": 0.7111596465110779,
+          "seg_norm": 7.663873469265978,
+          "boundary_norm": 0.08291549074313753,
+          "boundary_norm_ratio": 0.01081900569935674,
+          "boundary_cosine": 0.09237884242261736,
+          "kd_norm": 0.9706025653013287,
+          "kd_norm_ratio": 0.1266464757271482,
+          "kd_cosine": 0.3921180139112428
+        },
+        {
+          "epoch": 1,
+          "loss_seg": 0.4370799958705902,
+          "loss_boundary": 0.07072152942419052,
+          "loss_kd": 0.6806418895721436,
+          "seg_norm": 1.3191326411784126,
+          "boundary_norm": 0.030778138229996376,
+          "boundary_norm_ratio": 0.023332102678091216,
+          "boundary_cosine": 0.03826461319301922,
+          "kd_norm": 0.2432290891770334,
+          "kd_norm_ratio": 0.18438561944745077,
+          "kd_cosine": 0.2564049771091858
+        },
+        {
+          "epoch": 25,
+          "loss_seg": 0.164845809340477,
+          "loss_boundary": 0.03066532127559185,
+          "loss_kd": 0.6440252065658569,
+          "seg_norm": 0.7578812038921742,
+          "boundary_norm": 0.10734208225642854,
+          "boundary_norm_ratio": 0.141634443109504,
+          "boundary_cosine": 0.6022935499651674,
+          "kd_norm": 0.7224184347878665,
+          "kd_norm_ratio": 0.9532080108040876,
+          "kd_cosine": 0.20514784034588557
+        },
+        {
+          "epoch": 50,
+          "loss_seg": 0.15530821681022644,
+          "loss_boundary": 0.030990315601229668,
+          "loss_kd": 0.6310821771621704,
+          "seg_norm": 0.8324207282102047,
+          "boundary_norm": 0.12536007687778283,
+          "boundary_norm_ratio": 0.15059701498222017,
+          "boundary_cosine": 0.5993635165055994,
+          "kd_norm": 0.4592693139597413,
+          "kd_norm_ratio": 0.5517273878405459,
+          "kd_cosine": 0.5070179523243016
+        },
+        {
+          "epoch": 75,
+          "loss_seg": 0.12932538986206055,
+          "loss_boundary": 0.034088604152202606,
+          "loss_kd": 0.6459487080574036,
+          "seg_norm": 0.864310067344011,
+          "boundary_norm": 0.2210534486696329,
+          "boundary_norm_ratio": 0.25575711428298065,
+          "boundary_cosine": 0.8394044753850127,
+          "kd_norm": 2.7503873544544373,
+          "kd_norm_ratio": 3.182176696039494,
+          "kd_cosine": 0.7610411974052234
+        },
+        {
+          "epoch": 100,
+          "loss_seg": 0.09671580046415329,
+          "loss_boundary": 0.030520249158143997,
+          "loss_kd": 0.6363111734390259,
+          "seg_norm": 1.6862894190227093,
+          "boundary_norm": 0.22097879038499812,
+          "boundary_norm_ratio": 0.13104440310908586,
+          "boundary_cosine": 0.6462290468791315,
+          "kd_norm": 4.361443210480298,
+          "kd_norm_ratio": 2.586414384909072,
+          "kd_cosine": 0.6761796836020793
+        },
+        {
+          "epoch": 125,
+          "loss_seg": 0.07965680956840515,
+          "loss_boundary": 0.028824344277381897,
+          "loss_kd": 0.6346282362937927,
+          "seg_norm": 1.7507687151511264,
+          "boundary_norm": 0.3087567470361198,
+          "boundary_norm_ratio": 0.17635496017500402,
+          "boundary_cosine": 0.5576798988925137,
+          "kd_norm": 7.013995838971858,
+          "kd_norm_ratio": 4.006237819006498,
+          "kd_cosine": 0.7549292374297591
+        },
+        {
+          "epoch": 150,
+          "loss_seg": 0.0737767145037651,
+          "loss_boundary": 0.02908136509358883,
+          "loss_kd": 0.6351020336151123,
+          "seg_norm": 1.5608576888629129,
+          "boundary_norm": 0.3313611376754986,
+          "boundary_norm_ratio": 0.21229426618444353,
+          "boundary_cosine": 0.693080826473285,
+          "kd_norm": 6.738421325221683,
+          "kd_norm_ratio": 4.31712729052873,
+          "kd_cosine": 0.7205508739323214
+        }
+      ]
+    }
+  ],
+  "validation_contrasts_kd_band_minus_decoder": {
+    "boundary_f1": {
+      "delta": 0.007280139551132825,
+      "se_run": 0.006702083042524088,
+      "se_unit": 0.0039003878123946996,
+      "df": 2.219812714055928,
+      "low": -0.023110013806378157,
+      "high": 0.03767029290864381,
+      "p": 0.4383734831882918,
+      "mann_whitney_p": 0.3706293706293706,
+      "n_a": 3,
+      "n_b": 10,
+      "arm_a_mean": 0.5449153660998535,
+      "arm_b_mean": 0.5376352265487206,
+      "arm_a_sd": 0.011307819756043903,
+      "arm_b_sd": 0.00479129895104658,
+      "classification": "undetermined"
+    },
+    "dsc": {
+      "delta": -0.0011516146192230847,
+      "se_run": 0.001329697623814533,
+      "se_unit": 0.0016346705949668514,
+      "df": 3.011927107387868,
+      "low": -0.007842631111371044,
+      "high": 0.005539401872924873,
+      "p": 0.622595978549432,
+      "mann_whitney_p": 0.46853146853146854,
+      "n_a": 3,
+      "n_b": 10,
+      "arm_a_mean": 0.8620350455338038,
+      "arm_b_mean": 0.8631866601530269,
+      "arm_a_sd": 0.0020727138545309923,
+      "arm_b_sd": 0.0018331617400630725,
+      "classification": "no relevant effect"
+    },
+    "hd95": {
+      "delta": -0.8055288045822344,
+      "se_run": 0.8068535929819904,
+      "se_unit": 0.4134982305405147,
+      "df": 2.3761749375766894,
+      "low": -4.170534921593747,
+      "high": 2.559477312429278,
+      "p": 0.4549446178711495,
+      "mann_whitney_p": 0.2867132867132867,
+      "n_a": 3,
+      "n_b": 10,
+      "arm_a_mean": 21.100694285395246,
+      "arm_b_mean": 20.29516548081301,
+      "arm_a_sd": 1.3379616321250527,
+      "arm_b_sd": 0.7368781728461123,
+      "classification": "undetermined"
+    },
+    "iou": {
+      "delta": -0.0017170300881307332,
+      "se_run": 0.002007271142137724,
+      "se_unit": 0.002005342354397938,
+      "df": 2.69837263745827,
+      "low": -0.011345490710377581,
+      "high": 0.007911430534116115,
+      "p": 0.5921419651887598,
+      "mann_whitney_p": 0.46853146853146854,
+      "n_a": 3,
+      "n_b": 10,
+      "arm_a_mean": 0.7848727642383936,
+      "arm_b_mean": 0.7865897943265243,
+      "arm_a_sd": 0.0032210195088599285,
+      "arm_b_sd": 0.0023891739421261597,
+      "classification": "undetermined"
+    },
+    "assd": {
+      "delta": -0.09474017360480502,
+      "se_run": 0.21674812801369053,
+      "se_unit": 0.11418270995530631,
+      "df": 2.1685085923329166,
+      "low": -1.0740931011990895,
+      "high": 0.8846127539894795,
+      "p": 0.7336476736439212,
+      "mann_whitney_p": 0.46853146853146854,
+      "n_a": 3,
+      "n_b": 10,
+      "arm_a_mean": 6.875091278052423,
+      "arm_b_mean": 6.780351104447618,
+      "arm_a_sd": 0.3678677368844291,
+      "arm_b_sd": 0.13677939844686623,
+      "classification": "undetermined"
+    }
+  },
+  "supervision": {
+    "thermal_resumes": 139,
+    "halts": []
+  }
+}

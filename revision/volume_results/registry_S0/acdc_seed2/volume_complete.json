@@ -1,0 +1,5 @@
+{
+ "prediction": "revision/extra_cohorts/famO_unet/acdc_seed2/test/predictions.npz",
+ "prediction_sha256": "a207a264c4d1584f0ee8792f865b01e40710114c006c967b9a6d700bd2a78149",
+ "protocol_sha256": "5a80b1e949f2d5a8ebba5f0822312304bb2164618ac763b19ed5730ac3c6370b"
+}

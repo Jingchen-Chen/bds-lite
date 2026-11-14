@@ -1,0 +1,770 @@
+%% Supplementary material for the revised manuscript. All tables and numbers are generated.
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{booktabs,graphicx,xcolor,amsmath,amssymb,longtable,url,algorithm,algpseudocode}
+\usepackage{siunitx}
+\usepackage{placeins}
+\usepackage[font=small,skip=4pt]{caption}
+\makeatletter
+\input{generated/numbers.tex}
+\input{generated/numbers_extra.tex}
+\input{generated/numbers_expansion.tex}
+\input{generated/numbers_audit.tex}
+\input{generated/numbers_kd.tex}
+\input{generated/numbers_restructure.tex}
+\input{generated/numbers_followup.tex}
+\input{generated/numbers_final.tex}
+\input{generated/numbers_review.tex}
+\newcommand{\R}[1]{\ifcsname R@#1\endcsname\csname R@#1\endcsname\else\textbf{\textcolor{red}{[#1]}}\fi}
+% compact headings: less space before sections and run-in paragraph headings
+\renewcommand\section{\@startsection{section}{1}{\z@}{-2.4ex \@plus -1ex \@minus -.2ex}{1.2ex \@plus .2ex}{\normalfont\large\bfseries}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}{1.6ex \@plus .5ex \@minus .2ex}{-1em}{\normalfont\normalsize\bfseries}}
+\makeatother
+\newcommand{\sg}{\operatorname{sg}}
+% shrink a table to the line width when it is wider, but never enlarge it
+\newsavebox{\fitbox}
+\newcommand{\fitwidth}[1]{\sbox{\fitbox}{#1}\ifdim\wd\fitbox>\linewidth\resizebox{\linewidth}{!}{\usebox{\fitbox}}\else\usebox{\fitbox}\fi}
+\emergencystretch=3em
+% float placement: pack tables and figures with the text instead of on near-empty float pages
+\renewcommand{\topfraction}{0.9}\renewcommand{\bottomfraction}{0.8}\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.85}\setcounter{topnumber}{4}\setcounter{bottomnumber}{3}\setcounter{totalnumber}{6}
+\def\UrlBreaks{\do\/\do-\do.\do\_}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+\title{Supplementary material: When does boundary distillation help lightweight medical image segmentation?}
+\date{}
+\begin{document}
+\maketitle
+\noindent Citations refer to the reference list of the main article. The one work cited only here is Hatamizadeh A, Nath V, Tang Y, Yang D, Roth HR, Xu D (2022), Swin UNETR: Swin transformers for semantic segmentation of brain tumors in MRI images, in \emph{Brainlesion: Glioma, Multiple Sclerosis, Stroke and Traumatic Brain Injuries}, Lecture Notes in Computer Science, Springer, pp.~272--284, doi:10.1007/978-3-031-08999-2\_22. Some tables are not reproduced in this document; where this applies, the text says so, and their values are in the evidence archive described in S16. ``Retrained'' (the retrained set of the main text) denotes the released training pipeline used in all stages of the main text; ``original'' denotes checkpoints from the earlier pipeline of the main text, whose trainer is not preserved: U and BDS-Lite (seeds 1--3) were the models of the first version of this manuscript (S4), and the earlier grid of S15 was trained with the same pipeline. Arm names follow main-text Table~3 and Table~\ref{tab:s-components}: one letter per training component, D (boundary decoder), S (surface loss), F (feature distillation) and G (gate), added to the plain U-Net U; BDS-Lite is D+F+G+S, and D+KD-band is D trained with external-teacher boundary-band distillation; D+KD-band$_{\mathrm{cmp}}$ is the same arm with the compact teacher (identifier \texttt{kd\_band\_peer} in the result files, written D+KD-band$_{\mathrm{c}}$ in earlier records). Codes used in some generated tables: M0 = U, M1 = U+S, M2 = D (``decoder-only''), M7 = D+S, M3 = D+F+G, M4 = D+G+S, M5 = D+F+S, M6 = BDS-Lite (``full''); GSL U-Net+GSL, C1 U-Net+Boundary Loss, C3 Attention U-Net, C4 LB-UNet. Interval readings and confirmation labels are defined in the Statistics section of the main text and in Table~\ref{tab:labels}. Some generated tables of S5--S8 use an older vocabulary: ``within SESOI'' is \emph{no relevant effect}, ``beyond'' is a \emph{relevant} gain or harm, and ``inconclusive'' covers both \emph{size unclear} and \emph{undetermined}; ``gain, size unclear'' and ``harm, size unclear'' are the reading \emph{size unclear} with its sign.
+
+The main text rounds Boundary F1, DSC and IoU to three decimals and classifies results as confirmed, detected or not detected (main-text Statistics). This supplement keeps four decimals and the prespecified readings against the smallest effect size of interest (SESOI): ``gain of unclear size'' (interval excludes zero but overlaps 0.01) and ``supported, not confirmed'' correspond to \emph{detected}, or to \emph{confirmed} for the confirmatory stage-3 contrast; ``undetermined'', ``unresolved'' and ``not established'' correspond to \emph{not detected}. Three-decimal values are rounded from the exact values, so they can differ in the last digit from a rounding of the four-decimal values printed here.
+
+Stages used below: stage 1 is the matched ablation with reference methods (main-text study 1) and its ISIC2018 ten-run extension (study 2); stage 2 is the exploratory external-teacher study (study 3); stage 3 is the ACDC replication (study 4); the controls and the augmentation comparison (study 5) are reported in S21.
+
+\begin{table}[!htbp]
+\centering
+\small
+\begin{tabular}{@{}p{2.9cm}p{7.6cm}p{3.1cm}@{}}
+\toprule
+Label & Definition & Used for \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Reading of a 95\% interval against the SESOI}} \\
+Relevant gain / deficit & interval wholly above $+$SESOI / below $-$SESOI & all contrasts \\
+Size unclear & interval excludes zero but overlaps the SESOI (gain or deficit by its sign) & all contrasts \\
+No relevant effect & interval wholly inside $\pm$SESOI; the only reading that is evidence of absence & all contrasts \\
+Undetermined & interval includes zero and extends beyond $\pm$SESOI & all contrasts \\
+Unresolved & Holm-adjusted $p\geq0.05$ within a prespecified family & follow-up C1--C4 \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Confirmation status}} \\
+Confirmed & fresh-seed Holm $p<0.05$, fresh-seed interval excludes zero, same sign as the ten-run estimate & ISIC2018 ten-run extension \\
+Supported & only the ten-run interval excludes zero & ISIC2018 ten-run extension \\
+Not established & neither & ISIC2018 ten-run extension \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Prespecified decision (replication primary endpoint)}} \\
+Success & lower 95\% bound above zero; the prespecified wording adds ``of unclear size'' if that bound is below 0.01 & replication \\
+Failure / inconclusive & upper bound below 0.01 / otherwise & replication \\
+\bottomrule
+\end{tabular}
+\caption{\label{tab:labels}Interpretation labels used in the supplement. SESOI: 0.01 for DSC, IoU and Boundary F1; 2\,px for HD95; 0.5\,px for ASSD. Intervals of the stage-1 pooled rows are normal; all others use Welch degrees of freedom.}
+\end{table}
+
+\section*{S1. Boundary-aware methods: contributions and limitations}
+Table~\ref{tab:s-methods} lists the boundary-aware methods discussed in the Related work of the main text and the two designs studied here.
+\begin{table}[!htbp]\centering\small
+\fitwidth{%
+\begin{tabular}{p{2.6cm}p{1.8cm}p{3.8cm}p{1.6cm}p{2.6cm}p{3.6cm}}
+\toprule
+Method & Category & Mechanism & Extra inference cost & Metric families reported in original work & Limitation relevant here \\
+\midrule
+Boundary loss (Kervadec et al.) & loss & probability $\times$ signed distance, rebalanced with a region loss & none & overlap, HD & schedule-sensitive; backbone differs across papers \\
+HD loss (Karimi \& Salcudean) & loss & distance-transform estimate of Hausdorff distance & none & overlap, HD, ASSD & computationally heavier distance maps \\
+GSL (Celaya et al.) & loss & normalized distance-weighted error, region-to-surface annealing & none & overlap, HD95, ASSD & 3D origin; CPU distance transforms \\
+Boundary DoU (Sun et al.) & loss & band-restricted difference-over-union & none & overlap, HD, Boundary IoU & evaluated with other backbones and splits \\
+Active boundary loss (Wang et al.) & loss & differentiable boundary alignment & none & boundary F-score, mIoU & natural-image evaluation \\
+Psi-Net (Murugesan et al.) & multitask & mask, contour, distance heads & retained heads & overlap, HD & extra heads at inference \\
+Gated-SCNN (Takikawa et al.) & architecture & gated shape stream & retained stream & mIoU, boundary F-score & heavy backbone \\
+LB-UNet (Xu \& Tong) & lightweight architecture & boundary and prediction-map auxiliary modules & retained modules & overlap & binary skin-lesion only \\
+EGE-UNet (Ruan et al.) & lightweight architecture & grouped multi-axis attention & retained & overlap & overlap-only evaluation \\
+STDC (Fan et al.) & training-only head & detail head with boundary-derived targets, discarded at inference & none & mIoU, speed & natural-image evaluation \\
+BPKD (Liu et al.) & distillation & boundary and body knowledge from a separate teacher & none & mIoU & requires a teacher network \\
+MISSU; dual self-distillation (Wang et al.; Banerjee et al.) & self-distillation & distillation within one network & none & overlap, HD & 3D models \\
+BCE + Boundary DoU (Sutassananon et al., 2025) & loss & binary cross-entropy plus a Boundary DoU term, fixed or adaptive weighting & none & -- & benefit differed between U-Net and SwinUNETR \\
+CTO (Lin et al., 2025) & architecture & convolutional and vision-transformer encoder streams; decoder guided by boundary masks from edge-detection operators & retained decoder guidance and transformer stream & -- & hybrid convolution--transformer encoder \\
+SIKD (Dong et al., 2025) & distillation & teacher of the student's architecture, trained on class-wise averaged images & none & -- & teacher trained on class-wise averaged images \\
+BDS-Lite (this work) & training recipe & boundary decoder $\to$ stop-gradient distillation + bounded gate; SDF loss & projection + gate (1,072 params) & overlap, boundary, distance, volume & -- \\
+D+KD-band (this work) & distillation & external pretrained teacher's class probabilities, soft cross-entropy in a band around its predicted contours & none & overlap, boundary, distance & -- \\
+\bottomrule
+\end{tabular}}
+\caption{\label{tab:s-methods}Boundary-aware approaches. Metric families were checked against each source paper. Table~1 of the main text is a condensed version of this table. For the three methods published in 2025, the metric families were not checked against the full papers and are left blank.}
+\end{table}
+\FloatBarrier
+
+\section*{S2. Training step and comparator objectives}
+\begin{algorithm}[ht]
+\caption{BDS-Lite training step and deployment}
+\begin{algorithmic}[1]
+\Require batch $(x,y)$, targets $y_b$ (boundary) and $\phi$ (SDF) precomputed from $y$
+\State $\{f_\ell\}\gets\mathrm{Enc}(x)$;\quad $F_s\gets D_s(\{f_\ell\})$;\quad $q_s\gets P(F_s)$
+\State $g\gets\sigma(W_gq_s+b_g)$;\quad $z_s\gets W_o\bigl(F_s\odot[1+\alpha(g-0.5)]\bigr)$
+\State $(z_b,q_b)\gets D_b(\{f_\ell\})$ \Comment{training only}
+\State $L\gets L_{\mathrm{ce}}(z_s,y)+L_{\mathrm{dice}}(z_s,y)+\lambda_{\mathrm{sdf}}L_{\mathrm{sdf}}(z_s,\phi)+\lambda_bL_{\mathrm{boundary}}(z_b,y_b)+\lambda_d\,\mathrm{SmoothL1}(q_s,\sg(q_b))$
+\State backpropagate $L$ (mixed precision), clip gradient norm to 1, AdamW step
+\State \textbf{Deployment:} delete $D_b$; keep Enc, $D_s$, $P$, gate, $W_o$; predict $\arg\max_k z_s$
+\end{algorithmic}
+\end{algorithm}
+
+\paragraph{Soft Dice.} With $\varepsilon=10^{-6}$, $n$ indexing images in the batch and $u$ pixels,
+\[
+L_{\mathrm{dice}}=1-\frac{1}{K-1}\sum_{k=1}^{K-1}\frac{2\sum_{n,u}p_{nk}(u)y_{nk}(u)+\varepsilon}{\sum_{n,u}\left(p_{nk}(u)+y_{nk}(u)\right)+\varepsilon}.
+\]
+
+\paragraph{Surface loss (S), moved from the main text.} For image $n$ and foreground class $k$, let $\phi_{nk}(u)$ be the signed Euclidean distance of pixel $u$ to the class boundary (positive outside, negative inside; $\phi\equiv0$ if the class is absent), $s_{nk}=\max_u|\phi_{nk}(u)|$, and $v_{nk}=\mathbb{1}[s_{nk}>0]$. The surface loss is
+\begin{equation}
+L_{\mathrm{sdf}}=\frac{\sum_{n,k}v_{nk}\sum_u p_{nk}(u)\,\phi_{nk}(u)/s_{nk}}{HW\sum_{n,k}v_{nk}}.
+\end{equation}
+Because $\phi_{nk}$ changes sign at the boundary, minimizing $L_{\mathrm{sdf}}$ penalizes probability mass outside the object in proportion to its normalized distance from the boundary and rewards probability mass inside the object in proportion to its normalized depth. $L_{\mathrm{sdf}}$ is the boundary loss of Kervadec et al. (2021) with three differences: each image--class distance map is divided by its own largest absolute value $s_{nk}$, so that large and small structures contribute on one scale; its weight $\lambda_{\mathrm{sdf}}=1$ is fixed; and no schedule rebalances it against $L_{\mathrm{seg}}$. The U-Net+Boundary Loss comparator instead uses the released implementation, with unnormalized pixel distances and a schedule that shifts weight from the region loss to the boundary term during training, and GSL normalizes a distance-weighted error and anneals from a region to a surface term (below, and S3).
+
+\paragraph{U-Net+GSL.} $L_{\mathrm{GSL}}=\alpha_tL_{\mathrm{reg}}+(1-\alpha_t)L_{\mathrm{surf}}$ is added to $L_{\mathrm{seg}}$ with $\lambda_{\mathrm{gsl}}=1$, where $L_{\mathrm{reg}}$ is cross-entropy plus squared-denominator Dice and
+\[
+L_{\mathrm{surf}}=1-\frac1N\sum_n\frac{\sum_kw'_{nk}\sum_u\left(D_{nk}(u)\,(1-y_{nk}(u)-p_{nk}(u))\right)^2}{\sum_kw'_{nk}\sum_uD_{nk}(u)^2},
+\]
+with $D_{nk}$ the exact Euclidean distance to class $k$ (image diagonal if absent) and $w'_{nk}=1/(1+(\sum_uy_{nk})^2)$. The schedule is the published step schedule: $\alpha_t=1-\lfloor(t-1)/5\rfloor/29$ for epochs $t\le145$ and $\alpha_t=0$ afterwards.
+
+\paragraph{U-Net+Boundary Loss.} Following the official implementation, $L=w_r(t)L_{\mathrm{seg}}+w_b(t)\frac{1}{N(K-1)HW}\sum_{n,k,u}p_{nk}(u)\tilde\phi_{nk}(u)$ with unnormalized signed distances $\tilde\phi$ and the published rebalancing $w_r(1)=1$, $w_b(1)=0.01$, $w_r\leftarrow\max(0.1,w_r-0.01)$, $w_b\leftarrow w_b+0.01$ after every epoch.
+
+\paragraph{LB-UNet fidelity and parameter accounting.} The pinned upstream source (commit 913ee68, hash verified against all nine runs) retains the paper's channel widths. Static CPU inspection gives 55,865 registered parameters for the unmodified RGB one-output model and 55,874 for our RGB two-output version; the wrapper adds none, and the output-head change adds only nine. Strict loading of all nine selected checkpoints verifies their state-dictionary shapes against the released graph with the dataset-specific input/output channels. Counting only Conv2d and BatchNorm2d gives 38,489 parameters, close to the paper's rounded 0.038\,M, but omits 15,872 learned spatial parameters, 992 custom LayerNorm parameters and 512 GroupNorm parameters. This is a possible counting-convention explanation, not evidence of how the paper counted. The class head, CE+Dice objective, morphological boundary targets and locked schedule are adaptations; the genetic-algorithm targets and published recipe were not reproduced. We therefore describe the comparator as adapted LB-UNet, not an exact reproduction.
+
+\section*{S3. Datasets, arms, and comparator implementations}
+
+\paragraph{Metric morphology.} Boundary F1 is computed on each class separately using dilation XOR erosion with SciPy's default four-connected cross element; a match is within two iterations of cross-element dilation (Manhattan distance), not a Euclidean-radius disk. HD95/ASSD instead use erosion-defined inner surfaces and Euclidean distance transforms on the resized grid. The KD training band uses a $3\times3$ square element and teacher predictions. Metric boundaries, reference-error contours and the KD band are therefore distinct objects.
+
+
+\begin{table}[!htbp]
+\centering
+\fitwidth{\input{generated/tab_datasets.tex}}
+\caption{\label{tab:datasets}Datasets. Class absent: fraction of training images without the class (range over classes). DSC loss per 1\,px shift: $L/(2A)$ from the first-order contour-displacement approximation in the main Methods on non-empty training masks (range over classes). The confirmatory replication used the \R{OT.patients} official ACDC test patients (\R{OT.slices} slices) as its test set. Per-class descriptors are given below.}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.45\linewidth]{../figures/synthetic_targets.pdf}
+\caption{\label{fig:datasets}Training targets on synthetic masks that mimic the three task structures: class mask, union boundary target $y_b$, and signed-distance target $\phi$ (minimum over classes; negative inside), computed by the released target code. The masks are synthetic; no dataset image or annotation is used in this figure.}
+\end{figure}
+
+
+{\small\input{generated/tab_descriptors.tex}}
+
+\medskip\noindent Structural descriptors of the training masks (per foreground class). Empty frac.: fraction of images without the class; area fraction and number of 4-connected components per image; $L/A$: perimeter-to-area ratio for non-empty masks; $\partial$DSC/1\,px: $L/(2A)$. ISIC2018 masks have a median of \R{CMP.isic2018.median} component and \R{CMP.isic2018.single}\% have exactly one; the higher mean comes from a minority of fragmented masks. Synapse classes are numeric IDs; by area, emptiness and difficulty they correspond to aorta, gallbladder, left kidney, right kidney, liver, pancreas, spleen, and stomach.
+
+\paragraph{Why LiTS and BraTS were not added.} We did not add liver-tumor (LiTS) or brain-tumor (BraTS) segmentation. BraTS is multimodal, outside the single-channel and RGB inputs of our pipeline. LiTS is single-channel CT and would fit the pipeline; it was not added because every further task multiplies a training program of repeated runs that already used the available compute, and we gave priority to repeated runs per recipe over a fourth task. Work on both tasks relies on larger, often volumetric transformer models (Hatamizadeh et al., 2022).
+
+\begin{table}[!htbp]\centering\small
+\begin{tabular}{llcccc}
+\toprule
+Arm & Code & Boundary decoder (D) & Surface loss (S) & Distillation (F) & Gate (G) \\
+\midrule
+U & M0 & & & & \\
+U+S & M1 & & yes & & \\
+D & M2 & yes & & & \\
+D+S & M7 & yes & yes & & \\
+D+F+G & M3 & yes & & yes & yes \\
+D+G+S & M4 & yes & yes & & yes \\
+D+F+S & M5 & yes & yes & yes & \\
+D+F+G+S (BDS-Lite) & M6 & yes & yes & yes & yes \\
+\bottomrule
+\end{tabular}
+\caption{\label{tab:s-components}Components of each ablation arm (main-text Table~3 lists only the arms of the core comparisons). U, U+S, D and D+S form a two-by-two factorial of decoder and surface loss; D+S was added under the frozen protocol (S13).}
+\end{table}
+
+\begin{table}[!htbp]\centering\small
+\begin{tabular}{p{2.6cm}p{4.5cm}p{8.2cm}}
+\toprule
+Method & Source & Adaptation to the matched protocol \\
+\midrule
+U-Net+GSL & Celaya et al.; MIST GenSurfLoss (Apache-2.0) & 2D multi-class port; exact SciPy Euclidean distance transform; step schedule (5 epochs); $\lambda_{\mathrm{gsl}}=1$ added to CE+Dice. Retrained because the checkpoints behind the original rows are not available to us; the retrain reproduces the original training logs (S7). \\
+U-Net+Boundary Loss & LIVIAETS/boundary-loss, commit 171c32d (MIT) & SurfaceLoss and one\_hot2dist as released; rebalancing schedule of the released \texttt{gdl\_surface\_steal} configuration; region term = CE+Dice of our U-Net instead of generalized Dice; all foreground classes. \\
+Attention U-Net & in-repository implementation, width $c=32$ & identical encoder; additive attention gates on skip connections. \\
+LB-UNet & xuxuxuxuxuxjh/LB-UNet, commit 913ee68 (no license; fetched at run time, not redistributed) & official architecture and widths; $K$-class output trained with CE+Dice; official deep-supervision weights on the foreground union and our union boundary target (the official genetic-algorithm key-point maps are binary-lesion specific); locked schedule instead of 256\,px/300 epochs/augmentation. Parameter count in our environment: 55,874 (2 classes) versus 0.038\,M reported in the paper. \\
+\bottomrule
+\end{tabular}
+\caption{Comparator sources and adaptations.}
+\end{table}
+
+
+\section*{S4. Correction of the ISIC2018 evaluation}
+\paragraph{Evidence.} The original ISIC2018 U-Net and BDS-Lite checkpoints record 226.9 optimizer steps per epoch (all six runs), equal to $1{,}815/8$ and not to $2{,}075/8$; ACDC (85) and Synapse (109) match their documented partitions. The best validation DSC in each ISIC training log equals, to six decimals, the evaluation on the 389-image validation set of the earlier split-seed-1 partition. Comparing the split manifests directly, of the 519 images of the documented validation set used for the original ISIC2018 results, 358 were in that partition's training set, 84 in its validation set, and 77 in its test set; the two partitions cover the same 2,594-image pool, and the official test set has no image identifier in common with it. Rerunning the checkpoints on the 519 images reproduces the original per-image values (maximum absolute DSC difference $4\times10^{-4}$ for U-Net and $1.1\times10^{-3}$ for BDS-Lite). All 18 original checkpoint files are byte-identical (SHA-256) to the archive manifest of the public release. With the original aggregation, the present evaluator reproduces every ACDC and Synapse value of the original Table~2 (per seed, maximum absolute difference $2\times10^{-4}$ for DSC, IoU and Boundary F1 and 0.03\,px for HD95 and ASSD) and of the original Table~3 (mean differences within 0.015; Wilcoxon statistics identical in 9 of 10 rows), with residual differences explained by CPU versus GPU arithmetic.
+
+\paragraph{How the error arose.} The original grid was evaluated on the 390-image test list of the earlier partition, and those per-image files are preserved. That list shares no image with these models' training or selection images. When a fault in our Boundary F1 implementation was corrected (non-empty boundaries with no overlap scored 1 instead of 0), a re-evaluation script set the ISIC2018 split to the validation set of the documented partition, on the mistaken assumption that no test set existed. This replaced the U-Net and BDS-Lite results, and the other arms of the grid kept their 390-image evaluation. Table~\ref{tab:membership} divides the submitted paired analysis by what each image was to these models. It reproduces the submitted values exactly in its first row. The favorable HD95 and Boundary F1 differences lie in the training images. The last row uses the preserved per-image files, whose Boundary F1 comes from the historical implementation (correlation with the present one \R{LEG.r.low}--\R{LEG.r.high} on ACDC and Synapse, mean absolute difference \R{LEG.gap.low}--\R{LEG.gap.high}).
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_s_membership.tex}}
+\caption{\label{tab:membership}BDS-Lite minus U-Net, original ISIC2018 models, seed-averaged paired differences with 95\% bootstrap intervals over images, positive favoring BDS-Lite. Post hoc.}
+\end{table}
+
+\paragraph{Originally reported values.} These values are preserved with their status; none was overwritten.
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_s_original.tex}}
+\caption{Originally submitted Table~2 (three-seed means; ISIC2018 on the 519-image set; original aggregation, in which classes absent from both prediction and reference count as perfect), as in the public release of that version.}
+\end{table}
+
+\paragraph{Repeated lesions.} Image IDs of the official test set do not occur in the development pool, but the ISIC archive contains repeated images of the same lesion under different IDs (re-captures, color or orientation changes). Each test image was compared with all 2,594 development images by the maximum Pearson correlation of channel-standardized $32\times32$ thumbnails over the eight flips and rotations. Visual inspection showed certain repeats above $r=0.99$ and both repeats and distinct lesions between 0.95 and 0.97; neither correlation nor reference-mask agreement separates them cleanly. The contrasts were therefore repeated after excluding test images above four thresholds (Table~\ref{tab:duplicates}; $r>0.99$: \R{DUP.n.0.99} images; $>0.96$: \R{DUP.n.0.96}; $>0.93$: \R{DUP.n.0.93}; $>0.90$: \R{DUP.n.0.9}). The follow-up family of the table (defined in S5) equals the retrained set on ISIC2018.
+
+\begin{table}[!htbp]\centering\small
+\input{generated/rl_tab_s_duplicates.tex}
+\caption{\label{tab:duplicates}BDS-Lite minus U-Net on the official ISIC2018 test set after excluding test images that repeat a development image above each correlation threshold; seed-averaged paired differences over images, positive favouring BDS-Lite.}
+\end{table}
+
+
+\section*{S5. BDS-Lite versus U-Net: model sets and run-level variation}
+\paragraph{Image-level tests.} For the original and the retrained models, BDS-Lite was compared with U-Net on all five metrics by paired differences over test units, with 95\% percentile bootstrap intervals and Holm correction over the five metrics within each dataset. These tests describe fixed models (S14); their tables are not reproduced here, and the values are in the evidence archive (S16).
+
+\paragraph{Two model sets.} Table~\ref{tab:s-two-sets} compares the original and retrained sets on all three datasets.
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_two_sets.tex}}
+\caption{\label{tab:s-two-sets}BDS-Lite versus U-Net in the two three-seed model sets. Mean $\pm$ SD over three seeds of image- or slice-level values; $\Delta$ is the unit-weighted paired difference with distance differences negated, so positive favors BDS-Lite, and it need not equal the difference of the means shown. ISIC2018: official test set; the ten-run extension results in S13 supersede the retrained row. $^{*}$Holm $p<0.05$ with an interval excluding zero; these image-level tests describe fixed models (S14). Values differ from the original Table~2 because classes absent from both masks are no longer scored as perfect.}
+\end{table}
+
+\paragraph{Run-level variation.} The run-level margin is the 95\% half-width for a difference of two three-run means, added after the results were known (S7). ``Same-recipe gap'' is the difference between the three-run means of the original and retrained sets for one recipe, oriented so that positive favors the original set. Run means are weighted by test unit, so they differ slightly from the seed-averaged paired differences of the fixed-model tables; the two aggregations treat a class that is undefined in only some seeds differently.
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_s_run_level.tex}}
+\caption{Run-level variation and BDS-Lite differences (differences of run means).}
+\end{table}
+
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_selected_epochs.tex}
+\caption{Selected checkpoint epochs (seeds 1/2/3) under the maximum-validation-DSC rule. Selection averages class DSC per slice/image with both-empty classes scored as 1, then averages slices/images; this differs from the reported both-empty-excluded analysis and patient/case recipe means. Validation sets are small on ACDC (10 patients) and Synapse (4 cases), and validation curves fluctuate between epochs. The retrained set tends to select earlier epochs. The trainer of the original set is not preserved, so the cause cannot be established.}
+\end{table}
+
+\paragraph{ACDC U-Net gap.} Of the 9 other retrained arms, excluding LB-UNet, \R{RL.acdc.dsc.above.S0} reached the unit-weighted DSC of the original U-Net (\R{RL.acdc.dsc.S0.mean}). The two sets also selected different checkpoints: for U-Net, epochs \R{SEL.acdc.S0} in the original set and \R{SEL.acdc.M0} in the retrained set, from noisy validation curves on 10 patients.
+
+\paragraph{Two pipelines, one recipe.} U-Net training Dice loss at the last epoch was \R{TL.isic2018.S}, \R{TL.acdc.S}, and \R{TL.synapse.S} in the original set against \R{TL.isic2018.M}, \R{TL.acdc.M}, and \R{TL.synapse.M} in the retrained set on ISIC2018, ACDC, and Synapse, and the retrained runs selected earlier epochs. On ISIC2018 the two sets also differ in training images. No augmentation appears in the original configurations. The cause cannot be established because the trainer is lost, so we compare arms only within a set.
+
+\paragraph{Aggregation on Synapse.} Synapse slices differ in which organs they contain, so a value averaged first over samples and one averaged first over cases can differ. Retrained contrasts on Synapse DSC moved by up to 0.04 between such aggregations for one ablation (D+F+G), and we therefore treat small Synapse differences with caution. The main tables use the prespecified unit-weighted aggregation.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.75\linewidth]{../figures/run_level.pdf}
+\caption{Individual three-seed training runs on the test data. Markers: three runs per arm; vertical ticks: run means, weighted by test unit. Gray band: retrained U-Net mean $\pm$ run-level margin. The HD95 axes are reversed, so better values lie to the right in every panel. Arrows give the mean of arms outside the plotted range.}
+\end{figure}
+
+\paragraph{Follow-up family with class weights.} The retrained U-Net and BDS-Lite on ISIC2018 and Synapse come from a follow-up study that used the released pipeline; the training adapter used for all other retrained arms reproduces an archived run of that study exactly (identical selected epoch and per-image test metrics). In that study the ACDC BDS-Lite models used foreground class weights $(1.5,1.0,1.25)$, so we trained a further unweighted ACDC BDS-Lite set as the retrained reference. The follow-up family therefore equals the retrained set on ISIC2018 and Synapse and differs on ACDC BDS-Lite only. Its arm means and its paired BDS-Lite versus U-Net analysis are not reproduced here; the values are in the evidence archive (S16).
+
+
+\section*{S6. Ablations}
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_ablation_means.tex}}
+\caption{Three-seed means $\pm$ seed SD of the ablation arms other than D+S. ACDC values of D use the corrected unweighted runs (S13).}
+\end{table}
+Image-level tests of each ablation arm against full BDS-Lite and against the retrained U-Net (Holm correction over all ablation--metric tests within each dataset) describe fixed models and are descriptive when comparing recipes (S14). Their tables are not reproduced here; the values are in the evidence archive (S16). The recipe-level contrasts of the ablation are in S13.
+
+
+\section*{S7. Comparators, omnibus test, GSL reproduction, and published results}
+
+\begin{table}[!htbp]
+\centering
+\fitwidth{\input{generated/tab_all_arms_runlevel.tex}}
+\caption{\label{tab:s-arms}Stage 1: all arms relative to U-Net, seeds 1--3: seed-averaged paired differences over test units (positive favors the arm; HD95 in pixels with the sign reversed). $^{\dagger}$The difference of run means exceeds the run-level margin, the 95\% half-width for a difference of two three-run means (added post hoc). The ACDC and Synapse U-Nets are low references (S5). The individual runs are shown in S5; image-level tests of these models are in the evidence archive (S16).}
+\end{table}
+
+All comparators were trained by the same adapter on the documented partitions; ISIC2018 values are on the official test set.
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_comparator_means.tex}}
+\caption{Comparator and retrained-reference absolute means (seeds 1--3; mean $\pm$ sample SD of per-run image/slice class-macro scores, excluding classes absent in both masks). This is the aggregation used in Table~4 of the main text. Run-level contrasts separately use patient/case means and common defined test units; differences of these descriptive means need not equal those contrasts.}
+\end{table}
+Image-level tests of the comparators against the retrained U-Net and against the retrained BDS-Lite (paired differences over test units, Holm correction over all comparator--metric tests within each dataset) describe fixed models (S14); their tables are not reproduced here, and the values are in the evidence archive (S16).
+
+\paragraph{Omnibus test.} Friedman test over the cluster means of all eleven retrained arms per dataset and metric ($\chi^2$ from \R{OM.min.chi2} to \R{OM.max.chi2}, $p\le$\,\R{OM.max.p}; mean rank 1 is the highest-scoring arm). LB-UNet ranked last in \R{OM.acdc.C4.last} of 5 ACDC and \R{OM.synapse.C4.last} of 5 Synapse metrics, so these rejections partly reflect that arm. BDS-Lite never had the lowest mean rank; its positions ranged from \R{OM.M6.bestpos} to \R{OM.M6.worstpos} of \R{OM.arms}. Each arm contributes its own cluster means over the samples on which its metric is defined, so pairwise post-hoc differences are not identical to the paired family deltas. The table of $\chi^2$, $p$ and mean ranks is not reproduced here; the values are in the evidence archive (S16).
+
+\paragraph{Reproduction of the original U-Net+GSL.} The checkpoints behind the originally submitted U-Net+GSL rows are not available to us, so U-Net+GSL was retrained with the original configuration and the same loss implementation on the documented partitions. Each retrained run was compared epoch by epoch with the original training log. In \R{GSLTR.equal} of \R{GSLTR.complete} runs (\R{GSLTR.datasets}) the validation DSC equals the original value at every epoch (maximum absolute difference \R{GSLTR.maxdiff}), so the same checkpoint epoch is selected. Because the retrain reads the documented partitions through exact manifests, this also establishes that the original U-Net+GSL ISIC2018 models were trained on the documented 2,075-image set, unlike the original U-Net and BDS-Lite models. Their originally reported ISIC2018 value was the best-validation value on the 519-image selection set. With the original aggregation, the \R{GSLT2.runs} retrained runs reproduce the originally submitted U-Net+GSL values (maximum absolute difference \R{GSLT2.overlap} for DSC, IoU and Boundary F1 and \R{GSLT2.distance}\,px for HD95 and ASSD).
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_s_gsl_trajectory.tex}}
+\caption{Retrained U-Net+GSL versus the original training logs (validation DSC as logged during training).}
+\end{table}
+
+\paragraph{Adapted LB-UNet results.} The adapted LB-UNet showed the clearest divergence between metric families. On ISIC2018 its DSC and HD95 differences from U were \R{C.isic2018.C4.M0.dsc.delta} and \R{C.isic2018.C4.M0.hd95.delta}\,px (positive: better), beyond the 95\% half-width for a difference of two three-run means (Table~\ref{tab:s-arms}), whereas its Boundary F1 difference (\R{C.isic2018.C4.M0.boundary_f1.delta}) was within it; on the multi-class tasks its DSC differences were \R{C.acdc.C4.M0.dsc.delta} and \R{C.synapse.C4.M0.dsc.delta} under our protocol, which differs from its augmented 256-pixel binary-lesion setting. All three datasets remain fully reported in the absolute-score and contrast tables above, including these favorable ISIC2018 DSC and HD95 results; the main text does not report the adapted LB-UNet. Table~\ref{tab:s-lit}, panel A, repeats six of the seven models of main-text Table~4 at four decimals; all adapted LB-UNet rows are supplementary under this reporting scope, irrespective of performance. No run, metric or statistical analysis was removed or changed. For convenience, absolute values on all three datasets are repeated here at the main table's precision:
+\input{generated/lb_adapted_scores.tex}
+
+\paragraph{Main comparison provenance.} All seven evaluated models use seeds 1--3 on every dataset. The main comparison retains the same six core models on all three datasets; all adapted LB-UNet results remain fully reported here, and the published LB-UNet reference stays in panel B. This reporting-scope decision applies to every dataset regardless of the direction of the results. Absolute means and sample SDs are recomputed from the class-level test outputs; they are not relative effects. The matched panel uses image/slice metrics, whereas the published ACDC/Synapse rows use volume aggregation; neither their DSC nor their distances establish a matched accuracy gap. Swin-Unet (Cao et al.) is the 2D reference; Swin UNETR (Hatamizadeh et al., 2022) is a different 3D model and was not run.
+
+\paragraph{Published results.} The published Swin-Unet (Cao et al., ECCV 2022 Workshops) is a 2D architecture, distinct from the 3D Swin UNETR (Hatamizadeh et al., 2022), which we did not evaluate. TransUNet labels Synapse HD in millimeters, but its released code calls HD95 without voxel spacing; these values are retained as reported rather than converted to physical distances. Swin-Unet HD is likewise retained as reported. Its released code calls the MedPy \texttt{hd95} function without voxel spacing on each reconstructed volume and averages cases and foreground classes. Thus the released implementations support a 95th-percentile index-distance interpretation, but do not independently prove the exact historical implementation behind the published points. Panel B keeps the papers' HD label. Every value was verified against the cited page or table. Not directly comparable with our study: protocols differ in training cases (Synapse: 18 versus our 14), pretraining, augmentation, resolution, split (ISIC2018 lightweight models use a random 7:3 split), and metric aggregation. The published values, with the source's HD label, are in panel B of Table~\ref{tab:s-lit} and in Table~8 of the main text.
+\begin{table}[!htbp]\centering
+{\small\setlength{\tabcolsep}{4pt}%
+\expandafter\def\csname supcite@Cao2022SwinUnet\endcsname{(Cao et al., 2023)}%
+\expandafter\def\csname supcite@Chen2021TransUNetArxiv\endcsname{(Chen et al., 2021)}%
+\expandafter\def\csname supcite@Ruan2023EGEUNet\endcsname{(Ruan et al., 2023)}%
+\expandafter\def\csname supcite@Xu2024LBUNet\endcsname{(Xu and Tong, 2024)}%
+\def\citep#1{\csname supcite@#1\endcsname}%
+\fitwidth{\input{generated/tab_lit_main_plain.tex}}}
+\caption{\label{tab:s-lit}Matched experiments and published context; the main text gives the matched panel for seven models (Table~4 of the main text) and repeats panel B as its Table~8; the adapted LB-UNet is reported only here. A: the same six matched-protocol models on each dataset (Decoder-only: D; BDS-Lite (full): D+F+G+S); mean $\pm$ sample SD of per-run image/slice class-macro scores, seeds 1--3; distances average defined pairs only. B: published DSC converted to 0--1; dashes mean not reported. $^\dagger$Source-reported HD retains its label; released code uses a volume-level 95th percentile without spacing, distinct from A's 2D pixel HD95. Published ISIC2018 references use a random 7:3 split, $256\times256$ inputs, augmentation and pixel-pooled DSC; published ACDC and Synapse scores are volume-level with ImageNet pretraining and other training and split protocols (Synapse: 18 training cases versus our 14). Different data partitions, training and metric aggregation prevent a ranking across the two panels.}
+\end{table}
+A longer version of this comparison, which adds the R50 U-Net of Chen et al. (2021), the ISIC2018 challenge entries ranked first and fifth with their Jaccard scores (Codella et al., 2019), and volume-level and Jaccard scores of earlier-pipeline models, is not reproduced here; the published values are in the cited sources, and the values of this study are in the evidence archive (S16).
+
+
+\FloatBarrier
+\section*{S8. Error analysis}
+\paragraph{All-case distance sensitivity.} Primary HD95 and ASSD omit one-sided empty pairs. The prespecified all-case analysis assigns them the image diagonal (316.8\,px) and assigns zero to both-empty pairs. It is a failure penalty, not a measured distance. Positive values favor BDS-Lite.
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_all_case.tex}
+\caption{Primary and all-case distance differences, BDS-Lite versus U-Net.}
+\end{table}
+
+\paragraph{Error location.} Table~\ref{tab:errorbands} splits the error pixels by type and by distance from the reference contour. Spurious components per image rose under BDS-Lite in both three-seed model sets: from \R{EB.isic2018.S0.spurious} to \R{EB.isic2018.S6.spurious} and \R{EB.isic2018.M0.spurious} to \R{EB.isic2018.M6.spurious} on ISIC2018, \R{EB.acdc.S0.spurious} to \R{EB.acdc.S6.spurious} and \R{EB.acdc.M0.spurious} to \R{EB.acdc.M6.spurious} on ACDC, and \R{EB.synapse.S0.spurious} to \R{EB.synapse.S6.spurious} and \R{EB.synapse.M0.spurious} to \R{EB.synapse.M6.spurious} on Synapse.
+\begin{figure}[!tbp]\centering
+\includegraphics[width=\linewidth]{../figures/error_geometry.pdf}
+\caption{Error pixels per image by type and distance from the reference contour, retrained arms, seeds 1--3. Totals at the right of each bar.}
+\end{figure}
+\FloatBarrier
+{\footnotesize\setlength{\tabcolsep}{3pt}\input{generated/rl_tab_s_errorbands.tex}}
+
+
+\paragraph{Missed structures and false alarms by reference area.} Table~\ref{tab:collapse} gives the rates for every arm by the share of the image or slice that the reference structure occupies.
+\begin{table}[!tbp]\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\fitwidth{\input{generated/tab_s_collapse_wide.tex}}
+\caption{\label{tab:collapse}Missed structures and false alarms by reference area, seed means. Missed: share of the reference structures in the bin whose prediction is empty; DSC: mean DSC over the pairs in the bin (reference present); $n$: reference structures per seed. Empty ref.: false-alarm rate on pairs with an empty reference (none on ISIC2018). ACDC has no structure above 5\%. ``--'': not available for that arm.}
+\end{table}
+
+\paragraph{Per-class DSC.} Per-class DSC of the retrained arms on ACDC and Synapse is plotted in Figure~\ref{fig:structerr} (S12). The per-class table of seed means for every arm is not reproduced here; the values are in the evidence archive (S16).
+
+
+\FloatBarrier
+\section*{S9. Volume-level evaluation}
+Slice predictions were stacked into volumes. Distances are in index units (ACDC processed 224 grid; Synapse original H5 grid), not millimeters. Absolute 3D DSC was \R{VOL.acdc.S0.dsc}\% and \R{VOL.acdc.S6.dsc}\% for the original U-Net and BDS-Lite on ACDC, and \R{VOL.synapse.S0.dsc}\% and \R{VOL.synapse.S6.dsc}\% on Synapse. For the retrained U-Net of the matched protocol (seeds 1--3), it was \R{VOL.acdc.M0.dsc}\% on ACDC and \R{VOL.synapse.M0.dsc}\% on Synapse; these are the volume-level values of main-text Table~8. Volume metrics penalize slice-wise inconsistency, which 2D training does not constrain. The follow-up family equals the retrained set on Synapse; on ACDC its BDS-Lite is class-weighted (S5). Paired volume-level differences between BDS-Lite and U-Net per patient (ACDC, frames averaged) or case (Synapse), with Holm correction over three endpoints within each dataset and model set, describe fixed models; their table is not reproduced here, and the values are in the evidence archive (S16).
+
+
+\section*{S10. Gradient diagnostics}
+In seed-1 diagnostic runs of the full recipe we computed, every 50 steps, the gradients of the segmentation loss and of each auxiliary loss on the shared encoder parameters. These runs are single-seed, and the ACDC run used the class-weighted configuration, so they are indicative only. The cosine between the auxiliary and segmentation gradients had means of \R{GR.isic2018.aux.all.cos}, \R{GR.acdc.aux.all.cos}, and \R{GR.synapse.aux.all.cos} on ISIC2018, ACDC, and Synapse. Negative cosines were rare (\R{GR.isic2018.aux.all.conflict}\%, \R{GR.acdc.aux.all.conflict}\%, and \R{GR.synapse.aux.all.conflict}\% of probes), so we do not interpret these values as gradient conflict. With one run per dataset, the ordering across datasets is an observation, not a test.
+
+{\small\input{generated/rl_tab_s_gradient.tex}}
+
+\emph{Numerical consistency.} The auxiliary gradient and its three components were obtained in separate FP32 backward passes (cuDNN convolutions with TF32 enabled), so the linearity identity $|g_{\mathrm{aux}}|\cos_{\mathrm{aux}}=\sum_k|g_k|\cos_k$ holds only up to accumulation error, and exact equivalence of the separate and combined passes is not claimed. Over all probes of the three runs, the median relative residual was at most \R{GRA.rel.median.max}; attributing the whole residual to the auxiliary cosine changes it by at most \R{GRA.cos_err.max} (99th percentile \R{GRA.cos_err.p99}), far below the smallest difference between the dataset means (\R{GRA.gap.min}). The residual therefore cannot affect the reported cosines or their ordering.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{../figures/gradient_cosine.pdf}
+\caption{Cosine similarity between the segmentation gradient and auxiliary gradients on shared encoder parameters, every 50 steps (dots) with 25-probe moving average (lines), seed-1 diagnostic runs.}
+\end{figure}
+
+
+\section*{S11. Sensitivity to $\alpha$ and $\lambda$}
+The gate scale was varied over $\alpha\in\{0,0.1,0.25,0.5,1.0\}$ with three seeds on ISIC2018 and one seed on Synapse, and the auxiliary weights over $\lambda_b=\lambda_d\in\{0.01,0.05,0.2\}$ with one seed on ISIC2018 (Synapse $\alpha$ and ISIC2018 $\lambda$ were reduced to one seed before training). Single-seed rows are descriptive, and no value was selected from these runs.
+
+\emph{Gate scale, ISIC2018.} Against $\alpha=0.25$, none of the \R{SENS.isic2018.alpha.M6.tests} contrasts lay beyond the threshold (\R{SENS.isic2018.alpha.M6.equivalent} within it, the others inconclusive). Against U-Net, \R{SENS.isic2018.alpha.M0.equivalent} of the \R{SENS.isic2018.alpha.M0.tests} contrasts were within the threshold. The response was not monotonic. Validation DSC ranged from \R{SENSM.isic2018.alpha.val.min} to \R{SENSM.isic2018.alpha.val.max} (highest at $\alpha=$\,\R{SENSM.isic2018.alpha.val.argmax}; prespecified value \R{SENSM.isic2018.alpha.0.25.val}), so $\alpha=0.25$, chosen in single-seed development runs (main text), is not singled out by these validation data.
+
+\emph{Gate scale, Synapse (seed 1).} Overlap intervals were inconclusive and HD95 stayed within the threshold for every value (for example DSC \R{SENS.synapse.alpha.0.M6.dsc.delta}, \R{SENS.synapse.alpha.0.M6.dsc.ci}, for $\alpha=0$). Every $\alpha$, including $\alpha=0$, had higher DSC than the seed-1 U-Net, which reflects that U-Net run, the weakest of its three seeds (DSC \R{SEED.synapse.M0.dsc.s1} versus \R{SEED.synapse.M0.dsc.s2} and \R{SEED.synapse.M0.dsc.s3}).
+
+\emph{Auxiliary weights, ISIC2018 (seed 1).} Both alternatives gave higher seed-1 test values than $\lambda=0.05$ on every endpoint (Boundary F1 \R{SENS.isic2018.lambda.0.01.M6.boundary_f1.delta} at $\lambda=0.01$ and \R{SENS.isic2018.lambda.0.2.M6.boundary_f1.delta} at $\lambda=0.2$), whereas validation DSC did not distinguish the three values (\R{SENSM.isic2018.lambda.0.01.val}, \R{SENSM.isic2018.lambda.0.05.val}, \R{SENSM.isic2018.lambda.0.2.val}). The $\lambda=0.05$ seed-1 run was the weakest of its three seeds on the test set (Boundary F1 \R{SEED.isic2018.M6.boundary_f1.s1} versus \R{SEED.isic2018.M6.boundary_f1.s2} and \R{SEED.isic2018.M6.boundary_f1.s3}), so part of this difference is run-to-run variation. A multi-seed study would be needed to separate the two.
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_s_sensitivity_means.tex}}
+\caption{Validation and test means per setting (presp. = prespecified value). ISIC2018 validation DSC is on the 519 documented validation images; ``--'' where the reference run's validation record is not on the same pipeline.}
+\end{table}
+The paired image-level differences of each setting against the prespecified value and against U-Net (same seeds), on which the counts above rest, are not reproduced here; the values are in the evidence archive (S16).
+
+
+\section*{S12. Qualitative examples}
+The qualitative figure of the main text (Figure~3) shows ACDC images, reference masks and predictions of D and D+KD-band for three official test slices (licence: S16). \emph{Selection.} The seed is 206, the seed whose paired run-level DSC difference (D+KD-band minus D) equals the median over the 17 seeds. Among the 866 test slices whose ground truth contains RV, MYO and LV, the slices nearest the 90th, 50th and 10th percentiles of the paired slice-level difference in mean DSC were taken, with at most one slice per patient; the rule was fixed before rendering and uses the secondary endpoint, so the figure is illustrative and does not bear on the primary result. \emph{Display.} Each panel shows a $140\times140$\,mm field centred on the heart at physical aspect ratio. Intensity is windowed per row to the 0.5th--99.5th percentiles of the displayed field, and the MR image is dimmed in the change column. The change column marks, at label level and including background, pixels corrected by D+KD-band, new errors of D+KD-band and pixels wrong in both models. No prediction or label was modified; cropping, windowing and overlays were made by the authors. Synapse images and annotations and ISIC2018 photographs are not reproduced, because we could not establish permission to republish them; contour maps of ISIC2018 reference masks and structure-level errors are shown instead. Figure~\ref{fig:qualitative} applies a fixed selection rule to D and BDS-Lite in the retrained set (seeds 1--3). In \R{QUALR.extreme.unstable} of the \R{QUALR.extreme.n} extreme cases (largest gain or loss on each dataset), at least one seed gave a difference below 2\,px in the selected direction or of the opposite sign.
+
+Figure~\ref{fig:qualitative} shows the official ISIC2018 test images with the largest positive, median and largest negative seed-averaged HD95 difference between D and BDS-Lite, with the predictions of four arms against the reference contour. These cases are selected by a difference between two arms. Figure~\ref{fig:qualitative-kd} instead selects five test images by reference-mask area alone, at the 10th, 30th, 50th, 70th and 90th percentile ranks, so that no model score enters the choice, and draws seed 1 of U, D and D+KD-band. In the two extreme examples the difference comes from a separate false-positive region rather than from the lesion contour.
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.7\linewidth]{../figures/contours_isic2018_retrained.pdf}
+\caption{\label{fig:qualitative}Official ISIC2018 test images with the largest positive, median and largest negative seed-averaged HD95 difference between D and BDS-Lite (seeds 1--3; positive: BDS-Lite better), each shown with the seed closest to that average, for U, D, BDS-Lite and U-Net+GSL. Grey: agreement; orange: false positive; blue: false negative; black line: reference contour; numbers: HD95 in pixels. The reference masks are ISIC2018 Task~1 test ground truth released under CC-0; no photograph is reproduced.}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=0.5\linewidth]{../figures/contours_isic2018_kd.pdf}
+\caption{\label{fig:qualitative-kd}Five official ISIC2018 test images at the 10th, 30th, 50th, 70th and 90th percentile ranks of reference-mask area, with the predictions of U, D and D+KD-band (seed 1). Grey: agreement; orange: false positive; blue: false negative; black line: reference contour; dashed line: predicted contour; numbers: Boundary F1 of the panel. The selection uses no model score. In the 10th-percentile image D has a Boundary F1 of 0.00 and U of 0.13; the rule was not changed after seeing this. The reference masks are ISIC2018 Task~1 test ground truth released under CC-0; no photograph is reproduced.}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{../figures/structure_errors.pdf}
+\caption{\label{fig:structerr}Left: Synapse reference structures missed entirely, by reference area. Middle and right: DSC per class where the class is present, ACDC and Synapse (numeric class IDs; Synapse names are inferred, S3). Retrained arms, seeds 1--3.}
+\end{figure}
+
+
+
+\FloatBarrier
+\section*{S13. Additional trainings: protocols, results, and mechanism}
+
+Figure~\ref{fig:s-central} is the forest plot of the contrasts of main-text Table~5.
+\begin{figure}[!htbp]\centering
+\includegraphics{../figures/central_question.pdf}
+\caption{\label{fig:s-central}The boundary decoder, in-network transfer and the complete recipe: Boundary F1 differences (first arm minus second arm) with 95\% CIs; the right-hand column repeats the values of main-text Table~5 at four decimals. Group headings name the contrast; $n$: runs per arm. Filled squares: ten runs per arm on ISIC2018; open circles: three runs per arm; diamonds: inverse-variance fixed-effect summary over the three datasets, with the width spanning its 95\% CI. Shading: the $\pm0.01$ SESOI.}
+\end{figure}
+
+The ten-run Boundary F1 contrasts of the ISIC2018 extension, with fresh-seed estimates, Holm-adjusted $p$ and their readings, are the Boundary F1 rows of the all-metrics table of frozen contrasts below; they are not repeated in a separate table.
+
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_central.tex}}
+\caption{Full stage-1 central contrasts by dataset and pooled, three runs per arm, with 95\% intervals and the frozen effect readings. Positive favors adding D or F+G; HD95 sign reversed, in pixels. Table~5 of the main text gives the Boundary F1 rows at three decimals; Figure~\ref{fig:s-central} shows per-dataset Boundary F1 and the ten-run contrasts.}
+\end{table}
+
+\paragraph{Protocol.} The additional trainings followed a protocol fixed before they were run, and the criteria that would justify a stronger claim for BDS-Lite were fixed with it, before any of these runs was launched; none of those criteria was met. Configurations, sources and data manifests were hash-checked at every launch, rebuilt seed-1 configurations of the four ISIC2018 arms replayed the archived validation trajectory exactly over four epochs, and all 40 runs passed integrity checks before any of their test metrics was read.
+
+\paragraph{Correction of the ACDC arm D.} The first ACDC runs of D used foreground class weights $(1.5,1.0,1.25)$, unlike every other retrained ACDC arm, contrary to the design. Three unweighted runs replaced them in all analyses. Only contrasts involving this arm changed, and no Holm decision changed.
+
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_ten_seed_final.tex}}
+\caption{ISIC2018 official test set, ten independent trainings per arm. Mean $\pm$ SD of run means; each run averages its own defined test images (for HD95 and ASSD, images with a one-sided empty prediction are undefined and excluded), so these means need not subtract to the contrasts, which use images defined in every run of both arms. HD95 and ASSD in pixels. Seeds 1--3 are the retrained runs; seeds 4--10 were added under the frozen protocol.}
+\end{table}
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{../figures/ten_seed.pdf}
+\caption{Ten independent trainings per arm on the ISIC2018 official test set. Open markers: seeds 1--3, which prompted the questions. Filled markers: seeds 4--10, used for confirmation. Vertical bars: means over ten runs. The HD95 axis is reversed, so better values lie to the right in every panel.}
+\end{figure}
+
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_s_ten_seed_all.tex}}
+\caption{\label{tab:s-ten-all}Frozen contrasts on ISIC2018, all metrics. Positive favors the first arm, with distance differences negated. Holm correction over six contrasts within each metric on fresh seeds 4--10.}
+\end{table}
+
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_s_interaction.tex}}
+\caption{Factorial and transfer-path effects on Boundary F1, seeds 1--3, with 95\% intervals. Interaction: $(\text{decoder+surface}-\text{decoder})-(\text{surface}-\text{U-Net})$. Pooled by inverse variance.}
+\end{table}
+
+\paragraph{Validation images.} All four ten-run arms also have per-image results on the 519 validation images, which were used to select checkpoints by DSC but not by Boundary F1. The contrasts below use the same estimator and are post hoc. Decoder versus U-Net was labeled no relevant effect (DSC and HD95 also). BDS-Lite versus decoder had an interval excluding zero but did not pass Holm correction over the six contrasts.
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_validation.tex}
+\caption{Boundary F1 contrasts, ten runs per arm, on validation images and the official test set. Positive favors the first arm; 95\% intervals combine run and image variation.}
+\end{table}
+
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_components.tex}}
+\caption{Exploratory additive component effects with 95\% intervals, fitted over the eight ablation cells with the ISIC2018 ten-run arms. Positive favors adding the component (HD95 sign reversed, in pixels). The additive form is an assumption, since the interaction is unresolved.}
+\end{table}
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{../figures/transfer_mechanism.pdf}
+\caption{Where distillation puts boundary signal. Left: boundary average precision of the frozen teacher head applied to the deployed projection $q_s$. Right: linear readout of boundaries from the feature $F_s$ that makes the prediction. Markers: individual runs; vertical bars: means. Distilled arms: BDS-Lite, D+F+G and D+F+S. Inference only, post hoc, seeds 1--3.}
+\end{figure}
+
+\begin{table}[!htbp]\centering
+\resizebox{0.9\linewidth}{!}{\input{generated/tab_s_mechanism.tex}}
+\caption{What distillation and the gate do. Inference only, post hoc, seeds 1--3. Average precision (AP) against the union boundary target on up to 300 test images per dataset; readouts are closed-form ridge fits on validation pixels. Distilled arms: BDS-Lite, D+F+G and D+F+S. Undistilled arms: D and D+G+S. Gate structure uses 96 test images per dataset.}
+\end{table}
+
+
+\paragraph{Probes and gate (post hoc, diagnostic).} Measured on the trained networks of stage 1: a frozen teacher head applied to the projection $q_s$ reached a boundary average precision of \R{MECH.isic2018.head.dist}, \R{MECH.acdc.head.dist} and \R{MECH.synapse.head.dist} in distilled arms against \R{MECH.isic2018.head.plain}, \R{MECH.acdc.head.plain} and \R{MECH.synapse.head.plain} in undistilled arms (ISIC2018, ACDC, Synapse; Welch $p\le$\,\R{MECH.acdc.head.p}). A linear boundary readout from $F_s$, the feature that makes the prediction, differed between distilled and undistilled arms by \R{MECH.isic2018.fs.diff}, \R{MECH.acdc.fs.diff} and \R{MECH.synapse.fs.diff} in average precision, with every interval including zero. These observations are consistent with several explanations, including a learned projection that reads information already present in $F_s$. In gradient probes of seed 1 only, the distillation gradient was nearly orthogonal to the segmentation gradient (S10). The gate learned a nearly constant per-channel scale, and removing it from trained models changed at most \R{GATE.labels.runmax}\% of pixel labels in any model (S19).
+
+\paragraph{Additive component model (exploratory).} In an additive model over the eight ablation cells, the pooled Boundary F1 coefficient of S was \R{OA.K.surface.boundary_f1.est} \R{OA.K.surface.boundary_f1.ci} and its HD95 coefficient \R{OA.K.surface.hd95.est}\,px \R{OA.K.surface.hd95.ci}; those of F and G were \R{OA.K.distill.boundary_f1.est} \R{OA.K.distill.boundary_f1.ci} and \R{OA.K.gate.boundary_f1.est} \R{OA.K.gate.boundary_f1.ci}. Additive coefficients are not isolated causal effects when components interact; the main text reports the factorial contrasts instead (Table~5 of the main text), in which the surface-loss intervals include zero.
+
+\section*{S14. Repeatability of image-level tests}
+This analysis was designed after the ten-seed results were known and uses completed runs only. For one recipe, two disjoint groups of $k$ of its ten runs are compared with the Wilcoxon signed-rank test on per-image differences of group means, as in the prespecified families. Any significant result is therefore a difference between trained models and not between recipes. At most 2,000 splits are sampled per recipe. The table reports how often $p<0.05$ occurred. Rates stay high as $k$ grows from 3 to 5 because the image-level test measures how consistently two fixed sets of models differ across images, and this does not shrink with averaging in the way a comparison of recipes would.
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_seed_subset.tex}
+\caption{Same-recipe comparisons on the ISIC2018 official test set.}
+\end{table}
+
+
+\section*{S15. Record of trainings and development controls}
+\paragraph{Record.} Table~\ref{tab:ledger} lists the \R{LED.completed} trainings that preceded the analyses in this article. They correspond to \R{LED.distinct} distinct models by tensor hash: some records are the same checkpoint evaluated in another way, and two April arm names are aliases. Allowing for runs that reproduce earlier ones exactly, they amount to about \R{LED.independent} independent trainings. The recipe itself came from the first row: the gate scale, boundary and distillation weights, and surface weight were set there on validation data with one seed.
+\begin{table}[!htbp]\centering\scriptsize
+\fitwidth{\input{generated/tab_s_ledger.tex}}
+\caption{\label{tab:ledger}Completed trainings by family.}
+\end{table}
+
+\paragraph{All training records.} Table~\ref{tab:inventory} lists every training record and withdrawn design slot in the frozen experiment inventory (\R{INV.records} rows, \R{INV.completed} with a completed 150-epoch trajectory), by family, including runs whose results do not favour any arm of this article and runs that are not used here. Records are not independent models (aliases, re-evaluations and exact reproductions are included; Design count, below).
+{\scriptsize\setlength{\tabcolsep}{3pt}
+\input{generated/tab_s_inventory.tex}}
+
+\paragraph{Evidence classes.} Table~2 of the main text uses two evidence levels: Confirmatory for studies 2 and 4 (the fresh-seed test of the ISIC2018 extension and the primary endpoint of the ACDC replication) and Exploratory for studies 1, 3 and 5. Stage 1 had an analysis plan fixed before its runs, but its recipe and questions came from earlier exploratory runs, so it is exploratory. In the ISIC2018 extension a contrast is confirmed only by its fresh-seed rule (only BDS-Lite and U-Net+GSL below D on ISIC2018 Boundary F1; under the prespecified reading of the ten-run interval, a relevant harm and a harm of unclear size, respectively, Table~\ref{tab:s-ten-all}). The development controls below were chosen or evaluated on validation data and support no test-set claim. The historical re-evaluation below, the mechanism probes (S10, S13), the teacher evaluation (S23) and the analyses of S20, S22 and S24 are post hoc; they can narrow the scope of a statement but confirm nothing. Completed historical runs that were not re-evaluated with the present evaluator support no conclusion.
+
+\paragraph{Development controls.} A development study on the retrained pipeline added the arms below, with seeds 1--3, and was evaluated in that study only on the 519 ISIC2018 validation images, which it had reused many times; the post hoc test-image re-evaluation follows below. The contrasts use the estimator of the main text and are not test results. A gate without distillation lies below D (decoder without a gate), and a gate with distillation matches it. Feature matching without boundary supervision shows no gain over the gate alone. All of these intervals include zero.
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_development.tex}
+\caption{Development controls on ISIC2018 validation images, three runs per arm, with 95\% intervals. Gate only (G), gate with decoder (C), gate with feature matching and no boundary supervision (D), gate with decoder and distillation (B), decoder without gate (M2).}
+\end{table}
+
+\paragraph{Historical re-evaluation.} A protocol fixed before any official-test result of the arms concerned existed re-scored existing checkpoints by inference only, on CPU, with the evaluator of the main text. It covered four ablation arms of the earlier 13-arm grid (decoder only; decoder with distillation; decoder with gate; decoder with gate and surface loss) on the official ISIC2018 test, ACDC, Synapse, and the clean 390-image ISIC2018 split; the development controls G, C, and D on the official ISIC2018 test; and Boundary F1 at 1 and 4\,px for the four ten-run arms. Seeds were 1--3 except for the tolerance analysis. Before any official-test result was read, each model had to reproduce its saved per-case results: \R{HR.parity.passed} of \R{HR.parity.n} checks passed (largest mean DSC difference \R{HR.parity.maxdiff} against a limit of 0.002; at most \R{HR.parity.maxshare}\% of rows beyond 0.01 against a limit of 2\%), and all \R{HR.folders} output folders passed independent recomputation. The reading of each possible outcome was fixed in the protocol. All of these results are post hoc and have three runs per arm, and the trainer of the earlier grid is lost, so they compare two training pipelines rather than replicate one. None confirms a contrast or changes a label in the main text.
+
+\emph{Earlier grid} (Table~\ref{tab:s-hist-april}). The decoder's pooled Boundary F1 difference from U-Net was \R{H.H1.pooled.boundary_f1.delta} \R{H.H1.pooled.boundary_f1.ci}, so its direction did not hold across training pipelines; on the official ISIC2018 test it was \R{H.H1.isic2018.boundary_f1.delta} \R{H.H1.isic2018.boundary_f1.ci}, the same sign as in the retrained set. Distillation added to D without a gate changed pooled Boundary F1 by \R{H.H2.pooled.boundary_f1.delta} \R{H.H2.pooled.boundary_f1.ci}; the closest retrained estimate, distillation and gate added together, is \R{I.distillationandgate-without-surface.pooled.boundary_f1.three.est} \R{I.distillationandgate-without-surface.pooled.boundary_f1.three.ci}, and the two differ in the gate and in the pipeline, so they are not pooled. On the official ISIC2018 test BDS-Lite did not score below D (\R{H.H5.isic2018.boundary_f1.delta} \R{H.H5.isic2018.boundary_f1.ci}), so the confirmed deficit of the main text is specific to the retrained set. Every pooled Boundary F1 interval included zero, and pooled HD95 showed no relevant effect in all five contrasts.
+\begin{table}[!htbp]\centering\scriptsize
+\fitwidth{\input{generated/tab_s_hist_april.tex}}
+\caption{\label{tab:s-hist-april}Earlier 13-arm grid re-evaluated post hoc: Boundary F1 differences with 95\% intervals, seeds 1--3. Pooled over the official ISIC2018 test, ACDC, and Synapse by inverse variance; the clean 390-image split is a sensitivity column and is not pooled. Full: BDS-Lite. Holm over the five contrasts within each metric; no pooled Boundary F1 contrast passed.}
+\end{table}
+
+\emph{Development controls on test images} (Table~\ref{tab:s-hist-october}). The gate without distillation (C) scored below D, in the direction seen on validation images, where its interval included zero (\R{D.D6.boundary_f1.delta} \R{D.D6.boundary_f1.ci}; with all ten decoder runs \R{Ds.D6.boundary_f1.delta} \R{Ds.D6.boundary_f1.ci}), and the gate with distillation (B) did not (\R{D.D7.boundary_f1.delta} \R{D.D7.boundary_f1.ci}; ten decoder runs \R{Ds.D7.boundary_f1.delta} \R{Ds.D7.boundary_f1.ci}). This is consistent with a cost of an unconstrained gate that distillation removes, with the test images showing the pattern more clearly than the development images. Feature matching without boundary supervision against the gate alone (\R{D.D4.boundary_f1.delta} \R{D.D4.boundary_f1.ci}) and boundary supervision added to matching (\R{D.D5.boundary_f1.delta} \R{D.D5.boundary_f1.ci}) were both undetermined, so these runs do not show whether the boundary content of the target matters.
+\begin{table}[!htbp]\centering\scriptsize
+\fitwidth{\input{generated/tab_s_hist_october.tex}}
+\caption{\label{tab:s-hist-october}Development controls re-evaluated post hoc on the official ISIC2018 test, three runs per arm, with 95\% intervals. Arms as in the development table above; decoder: the retrained arm D, seeds 1--3. Holm over the eight contrasts.}
+\end{table}
+
+\emph{Boundary F1 tolerance} (Table~\ref{tab:s-tolerance}). The 2\,px values reproduced the frozen ones. At 1\,px every status matched. At 4\,px the gain of D over U was \R{T.4.decoder.unet.status} and the deficit of BDS-Lite against the decoder was \R{T.4.full.decoder.status} rather than confirmed, so these results depend on the tolerance; the frozen 2\,px statuses stand. The direction of these two contrasts and of U-Net+GSL against the decoder did not change with tolerance.
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_tolerance.tex}
+\caption{\label{tab:s-tolerance}ISIC2018 official test, ten runs per arm: Boundary F1 differences at three matching tolerances, with the status by the frozen rule of the main text (confirmed: fresh seeds pass Holm with the same sign; supported: ten-run interval excludes zero). Post hoc except at 2\,px.}
+\end{table}
+
+\paragraph{Stopped study.} A further study was stopped before completion; none of its test outputs were analysed or reported.
+
+\paragraph{Augmentation in the development study.} In the development study described above, a U-Net trained with flips and rotations selected much later checkpoints and raised mean validation scores more than any boundary signal of that study, but empty predictions rose from \R{DEV.U.empty} to \R{DEV.UA.empty} of 1,557 seed-image pairs, and the frozen screen of the development study failed on a penalized ASSD. This U-Net was scored on validation images only. The boundary arms of the development study were not trained with augmentation; D and D+KD-band were trained with augmentation later, in the augmentation comparison of S21.
+
+\paragraph{Adjacent slices.} On recovered ACDC development data (70 training and 10 validation patients, a different preparation from the main experiments, test patients untouched), three adjacent slices as input raised patient-level DSC by \R{CTX01.dsc.low}--\R{CTX01.dsc.high} and lowered ASSD by \R{CTX.assd.low}--\R{CTX.assd.high}\% and HD95 by \R{CTX.hd95.low}--\R{CTX.hd95.high}\% across three seeds, in normalized index units. This changes the input and first-layer weights together, so it is not a matched 2.5D comparison.
+
+
+\paragraph{Design count.} The core design comprises \R{FIN.runs.total} training runs, including \R{FIN.teachers} teachers; runs that serve several studies are counted once, in the study that trained them (table below). Study 5 is the follow-up of S21: its controls (D+KD-full, D+KD-band$_{\mathrm{cmp}}$) and its augmentation comparison (D$_{\mathrm{aug}}$, D+KD-band$_{\mathrm{aug}}$). The training records contain more completed runs (aliases, re-evaluations and exact reproductions, and the runs of the stopped study, which are excluded); these are not independent models.
+
+\begin{center}
+\footnotesize
+\fitwidth{\input{generated/tab_s_design_count.tex}}
+\end{center}
+
+\section*{S16. Third-party data, code, and licenses}
+
+\paragraph{What is provided, and what is not.} The statistical evidence is preserved in two archives with SHA-256 manifests (\path{primary-evidence-20261110.tar.gz} and \path{final-supplement-20261110.tar.gz}; 2,832 files): per-case results, run records, the protocols and analysis plans of every study, the timestamp proofs of the ACDC analysis plan (S18), analysis scripts and source snapshots. Each frozen file is identified by its SHA-256 digest, and the OpenTimestamps proofs are included in the archives. Commit identifiers quoted inside the frozen protocol files refer to the authors' development repository, which also holds confidential review material and is not public; it is available to the editor on request. From the archives alone, the script \path{verify_archived_statistics.py} recomputes 40 ACDC metric contrasts and 20 Holm values without datasets, checkpoints or a GPU. The archives do not contain the datasets, which are third-party, nor model checkpoints, prediction maps or teacher caches, and the recorded Python environment is a partial inventory, not a portable lockfile. Retraining and inference therefore cannot yet be reproduced from the provided material alone. The code, configuration files, split manifests, analysis scripts and both archives are in the public repository named in the data statement of the submission (\url{https://github.com/Jingchen-Chen/bds-lite}).
+
+Figure~3 of the main text reproduces three ACDC test slices with their reference masks; no other ACDC image or annotation, no Synapse image or annotation and no ISIC2018 photograph appears in the article or supplement, and ISIC2018 Task~1 reference masks are shown as contours. Licences of the other resources were checked on 2026-11-07 at the links given. The ACDC licence was checked against the dataset's licence terms: CC BY-NC-SA 4.0, use for non-commercial scientific research only, and citation of Bernard et al. (2018). Figures that contain ACDC images are marked CC BY-NC-SA 4.0.
+\begin{table}[!htbp]\centering\scriptsize
+\fitwidth{%
+\begin{tabular}{p{2.6cm}p{4.6cm}p{4.2cm}p{4.0cm}}
+\toprule
+Resource & Source & License or terms & Use here \\
+\midrule
+ISIC2018 Task~1 & \url{https://challenge.isic-archive.com/data/}; Codella et al. (2019); Tschandl et al. (2018) & Task~1 rows marked CC-0; ISIC terms of use (\url{https://challenge.isic-archive.com/terms-of-use/}): images under each contributor's license (CC0, BY, or BY-NC), annotations CC0. Attribution: HAM10000 Dataset (c) ViDIR Group, Medical University of Vienna; MSK Dataset (c) Anonymous & Training, validation, official test; contours of test reference masks (\path{ISIC2018_Task1_Test_GroundTruth.zip}, CC-0) in the contour figures of S12; no photographs \\
+ACDC & \url{https://www.creatis.insa-lyon.fr/Challenge/acdc/}; Bernard et al. (2018) & Citation required for any use; CC BY-NC-SA 4.0 as stated on the distribution portal & Training and test; three test slices with reference masks in Figure~3 of the main text, marked CC BY-NC-SA 4.0 \\
+Synapse (BTCV) & \url{https://www.synapse.org/Synapse:syn3193805}, doi:10.7303/syn3193805; Landman et al. (2015) & Provider's access terms; no license for republication found & Training and test; aggregate statistics only \\
+GSL & MIST GenSurfLoss; Celaya et al. & Apache-2.0 & Loss ported to 2D \\
+Boundary Loss & LIVIAETS/boundary-loss, commit 171c32d & MIT & Loss and schedule \\
+LB-UNet & xuxuxuxuxuxjh/LB-UNet, commit 913ee68 & No license stated & Fetched at run time, not redistributed \\
+TransUNet test list & Chen et al. (2021) & As released by the authors & Synapse test cases \\
+ACDC official test patients 101--150 & \url{https://www.creatis.insa-lyon.fr/Challenge/acdc/}; Bernard et al. (2018) & As for ACDC & Official test set of stage 3; source of the slices in Figure~3 of the main text \\
+\path{segmentation_models_pytorch} 0.6.0 & PyPI & MIT & Teacher network of D+KD-band; installed, not redistributed \\
+ResNet-34 ImageNet encoder weights & Hugging Face \texttt{smp-hub/resnet34.imagenet}, revision \texttt{7a57b34f} & As published by the provider & Teacher initialization; hash-checked; not redistributed \\
+\bottomrule
+\end{tabular}}
+\caption{Third-party resources.}
+\end{table}
+
+
+\section*{S17. Exploratory external-teacher distillation (stage 2)}
+\paragraph{Protocol.} One protocol covered ISIC2018 (with one amendment, below) and one covered ACDC and Synapse; a single analysis script was applied to all three datasets. Each protocol was fixed before any of its teachers or students was trained, and each test set was evaluated once, after integrity checks.
+
+\paragraph{Design.} One teacher per dataset, a U-Net with an ImageNet-pretrained ResNet-34 encoder (\path{segmentation_models_pytorch} 0.6.0; seed 100), was trained with the students' data, optimizer, schedule, budget and checkpoint rule, with the unweighted CE+Dice loss, and had to reach at least the validation Boundary F1 and DSC of D before any student was trained (all three passed). On ACDC and Synapse the single input channel is replicated to three channels; ACDC images, stored per-volume z-scored, are passed unchanged, and ISIC2018 and Synapse images receive ImageNet normalization inside the teacher. The teacher's softmax for every training image is cached in float16. Each student equals the dataset's prespecified configuration of D except for the seed and the external-teacher distillation term $L_{\mathrm{kd}}$ of the main text, with $\lambda_{\mathrm{kd}}=1$; for two classes the loss reduces exactly to the binary loss used on ISIC2018. A student with seed $s$ starts from the same initial weights and batch order as the run of D with seed $s$, but the analysis is unpaired. The analysis used the runs of D from stage 1, including its ISIC2018 extension (ISIC2018: seeds 1--10; ACDC and Synapse: seeds 1--3).
+
+\paragraph{Amendment.} The ISIC2018 protocol originally planned seven further student seeds and a D+KD-full control (the same loss over the whole image). An amendment cancelled both while the three seed-1--3 students were finishing, before the validation analysis was run and before any test output of the new arm existed, so that the study covered three datasets with three student seeds each. The D+KD-full control was run later, on ACDC (S21).
+
+\paragraph{Results.} The ISIC2018 comparison uses three D+KD-band runs against ten runs of D: \R{KD.isic2018.boundary_f1.delta} \R{KD.isic2018.boundary_f1.ci}, $p=$\,\R{KD.isic2018.boundary_f1.p}, Holm $p=$\,\R{KD.isic2018.boundary_f1.holm}. The ACDC and Synapse comparisons use three runs per arm, with Holm $p$ values of \R{KD.acdc.boundary_f1.holm} and \R{KD.synapse.boundary_f1.holm} (Table~\ref{tab:kd}); no gain was detected after correction. ACDC was selected for the replication on the basis of this analysis.
+
+\paragraph{Sensitivity analysis with balanced reference runs (post hoc).} Restricting the ISIC2018 reference to seeds 1--3, as on the other two datasets, gives \R{KDB.isic2018.boundary_f1.delta} \R{KDB.isic2018.boundary_f1.ci}, $p=$\,\R{KDB.isic2018.boundary_f1.p}, Holm $p=$\,\R{KDB.isic2018.boundary_f1.holm}, with the estimator and Holm family unchanged. This version discards seven existing reference runs and was computed after all results were known; the ACDC and Synapse contrasts are identical in both versions, and no reading changes.
+
+Contrasts of D+KD-band against U-Net and BDS-Lite were computed descriptively, without multiplicity adjustment, and are not interpreted.
+\begin{table}[!htbp]\centering\small
+\fitwidth{\input{generated/tab_s_kd_all.tex}}
+\caption{\label{tab:s-kd-orig}Original frozen D+KD-band minus D analysis (main-text analysis): all metrics and original test sets. Means are arm means of run means; $\Delta$ with 95\% intervals from the estimator of the main text (HD95 and ASSD signs reversed, so positive favors D+KD-band). Unadjusted $p$. Three D+KD-band runs per dataset; runs of D: ISIC2018 ten, ACDC and Synapse three.}
+\end{table}
+\begin{table}[!htbp]\centering\small
+\resizebox{0.85\linewidth}{!}{\input{generated/tab_s_kd_costs.tex}}
+\caption{Training cost of the exploratory study. Summed epoch time excludes thermal pauses. The rows of D are one existing reference run per dataset.}
+\end{table}
+
+
+\section*{S18. Confirmatory ACDC replication (stage 3)}
+
+\begin{table}[!htbp]
+\centering
+\fitwidth{\input{generated/tab_kd.tex}}
+\caption{\label{tab:kd}Stages 2 and 3: D+KD-band minus D, test Boundary F1, with 95\% intervals that include retraining variation. Runs: D+KD-band versus D. Stage 2 is the original analysis of S17 (D runs: seeds 1--10 on ISIC2018, seeds 1--3 on ACDC and Synapse), with Holm correction over its three datasets; a post hoc version with three reference runs on ISIC2018 is given in S17 as a sensitivity analysis. Stage 3 has a single primary endpoint; ACDC was selected on the basis of stage 2.}
+\end{table}
+\paragraph{Analysis plan.} The confirmatory study had a prespecified analysis plan, fixed and timestamped before the test patients were used, with one amendment (Dev-1, below). The archived study report lists every prespecified output, including those not repeated here.
+
+\paragraph{Design.} Hypothesis: on ACDC, D+KD-band yields higher test Boundary F1 than D. Primary endpoint: test Boundary F1 on the \R{OT.patients} official test patients (101--150), with the per-slice label macro averaged per patient and then per run, \R{CF.n} runs per arm (seeds \R{CF.seed.first}--\R{CF.seed.last}, none used before). Estimator: the frozen unpaired estimator of the main text. Decision: success if the lower 95\% bound exceeds zero, with ``of unclear size'' if it lies below 0.01; failure if the upper bound lies below 0.01; otherwise inconclusive. The sample size gives power \R{CF.power} at $\Delta=+0.015$ under the 90\% upper bound on between-seed variance from the exploratory runs; no run failed, so achieved and planned power are equal. Runs alternated by seed between arms to balance thermal drift. Training, selection, and the teacher and its cache were frozen and not changed.
+
+\paragraph{The reference arm D.} It is the network of the main text with the training-only decoder ($\lambda_b=0.05$, BCE + Dice on the union two-pixel target, gradient reaching the shared encoder), CE + Dice without class weights, no distillation ($\lambda_d=0$), no surface loss, $\lambda_{\mathrm{kd}}=0$, and the gate present at scale 0, where it is the identity. Its configuration equals that of the stage-1 ACDC runs of D in every model, loss, and trainer setting, but it differs from them in seeds (201--217 versus 1--3), trainer script (the study's launcher calling the frozen KD trainer at $\lambda_{\mathrm{kd}}=0$, versus the trainer of stage 1; the two were bitwise identical in weights, optimizer state, and batch order over 50 steps, but are not shown identical over 150 epochs), and test patients (held-out 101--150 versus the internal 20). The ISIC2018 and Synapse runs of D are other datasets, and the decoder of the historical re-evaluation (S15) comes from a different, lost pipeline. These contrasts differ in seeds, numbers of runs, trainer and test patients; they support separate conclusions against the same definition of D and do not establish a head-to-head difference between distillation designs.
+
+\paragraph{Held-out data.} The organizers' NIfTI files of patients 101--150 passed an integrity check before any model saw them: exactly these patients with end-diastolic and end-systolic frames, label values in $\{0,1,2,3\}$, equal image and label geometry, and the expected adjacency of left ventricle and myocardium. The third-party conversion that produced our ACDC training data was reconstructed (clipping at the 99th percentile, per-volume z-scoring, and the slice order of the original); on \R{PRE.gate.slices} development slices the masks were bit-exact and images agreed within \R{PRE.gate.diff} z-units. On the \R{PRE.impact.patients} validation patients the reconstruction changed the exploratory models' run-level Boundary F1 by at most \R{PRE.impact.bf1} and DSC by at most \R{PRE.impact.dsc}, and shifted their validation D+KD-band minus D Boundary F1 contrast by \R{PRE.impact.shift.bf1}. Its effect on patients 101--150 cannot be measured, because the original conversion of those patients does not exist.
+
+\paragraph{Amendment and deviations.} \emph{Dev-1 (amendment).} The prespecified integrity check could never pass: the plan listed \R{DEV.registered} source files (\R{DEV.recorded} shared with the parent study plus its own \R{DEV.study} scripts), whereas the frozen trainer records only the \R{DEV.recorded} in each run's provenance, and the check required exact equality. Before either test set was accessed, it was replaced by a stricter check: the \R{DEV.recorded} recorded hashes must equal the plan, the \R{DEV.study} study files must equal the plan, and all \R{DEV.registered} listed files must be unchanged on disk; every other original check still applied. The amended check passed before and after the single evaluation. \emph{Dev-2.} The prespecified seed correlation of the paired sensitivity analysis was computed but not written by the analysis script; it was recovered with the unchanged function. Hypotheses, endpoint, estimator, metrics, and decision rules were unchanged.
+
+\paragraph{Results.} The primary result, arm means, and overlap are in the main text. Its interval establishes a positive gain but crosses 0.01, which the prespecified rule reports as a gain ``of unclear size''; the lower bound is \R{CF.low}. Per-run values ranged from \R{CF.kd.min} to \R{CF.kd.max} for D+KD-band and from \R{CF.dec.min} to \R{CF.dec.max} for D. The cross-arm correlation of seed-paired run means was \R{CF.seedcorr}. Secondary analyses are descriptive and cannot change the primary decision; the seed-paired interval and the per-structure readings cannot either, and no secondary result is described as above the smallest effect of interest.
+\begin{table}[!htbp]\centering\small
+\fitwidth{\input{generated/tab_s_confirm.tex}}
+\caption{Stage 3: D+KD-band minus D (HD95 and ASSD in pixels, signs reversed). The exploratory models were selected and reported before this study; their result on the held-out patients is context, not a confirmation. The internal 20 patients were seen in the exploratory study. ``Interval excludes zero'' is unadjusted.}
+\end{table}
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_confirm_perclass.tex}
+\caption{Stage 3, per structure on the held-out patients: $\Delta$ [95\% CI], descriptive. In DSC and Boundary F1 every interval excludes zero; in HD95 only the left-ventricle interval does.}
+\end{table}
+
+\paragraph{Timestamp.} OpenTimestamps proofs of the analysis plan and of a manifest of the frozen study files carry an attestation in Bitcoin block \R{TS.block}, verified against the block header obtained from two independent block explorers. Both files therefore existed no later than \R{TS.blocktime}, \R{TS.gap.h}\,h before the first test-set access (\R{TS.testaccess}). The timestamp does not show that the plan predates the training launch (\R{TS.launch}, about \R{TS.lag.min}\,min earlier); that ordering rests on local version-control records.
+
+\paragraph{Limitations stated in advance.} ACDC was selected after the exploratory results, and the held-out set removes test-set reuse but not that selection. Preprocessing of the held-out patients is a validated reconstruction. The held-out patients come from the same center and protocol as the training data. The label check covers label values and left-ventricle--myocardium adjacency only. Evaluation is per 2D slice, averaged per patient, without volume-level metrics. There is one teacher, trained once, and no D+KD-full control. Combined estimates of exploratory and replication runs mix two trainer paths, shown identical over 50 steps only.
+
+\paragraph{Cost.} The ACDC teacher has \R{KDC.acdc.teacher.params} parameters and took \R{KDC.acdc.teacher.hours}\,h of summed epoch time (median \R{KDC.acdc.teacher.epoch}\,s per epoch); its cache holds \R{KDC.acdc.cache.slices} training slices in float16 (about \R{KDC.acdc.cache.gb}\,GB), and the time to compute it was not recorded. Summed student epoch time over \R{CF.n} runs was \R{CF.hours.kd}\,h for D+KD-band and \R{CF.hours.dec}\,h for D, a difference of \R{CF.hours.diff}\,h (\R{CF.hours.pct}\%); both are computed from unrounded times. Both arms have \R{KDC.acdc.student.params} parameters during training and the same deployed graph; inference latency was not measured separately.
+
+
+
+\paragraph{Prespecified decision text.} Under the prespecified rule, a lower 95\% bound above zero is a success, qualified as ``of unclear size'' when that bound is below 0.01. The prespecified wording reports a gain of \R{CF.delta} [95\% CI \R{CF.low}, \R{CF.high}], of unclear size, with \R{CF.n} fresh seeds per arm on the \R{OT.patients} official ACDC test patients; notes that ACDC was chosen after the exploratory three-dataset results; and states that the result does not show transfer to other datasets or, without a D+KD-full control, that the gain is specific to boundaries. That control was run afterwards (S21).
+
+\section*{S19. Inference cost: full profile}
+\paragraph{Summary.} For ISIC2018 inputs we counted parameters and forward-pass GFLOPs and measured median FP32 GPU latency at batch sizes 1 and 16 and single-thread CPU latency. With its gate retained, deployed BDS-Lite has \R{RF.params.extra} more parameters than U-Net (\R{RF.gflops.pct}\% more GFLOPs) and, in our profile, \R{RF.gpu.b1.pct}\% and \R{RF.gpu.b16.pct}\% higher GPU latency at batch sizes 1 and 16 (Table~\ref{tab:s-resource}); replacing the trained gate by the identity changed Boundary F1 by at most \R{GID.maxabs} on the three datasets (below). D and the distilled students share one inference architecture, which is the plain U-Net (\R{RS.KDC.student.deployed} parameters on ACDC) once the unused projection and the scale-zero gate are removed, and were not profiled separately. External-teacher distillation adds its cost in training: the ACDC teacher (\R{KDC.acdc.teacher.params} parameters, used only in training) took \R{RF.teacher.hours}\,h of summed epoch time, computing its cache of \R{KDC.acdc.cache.slices} training slices took \R{RF.cache.sec}\,s in a post hoc benchmark (the original duration was not recorded), and summed epoch time over \R{CF.n} runs was \R{RF.s3.hours.kd}\,h for D+KD-band and \R{RF.s3.hours.dec}\,h for D.
+
+\paragraph{Inference network of D and of the distilled students (note to main-text Table~3).} After the boundary decoder, the unused projection $P$ and the gate, which is the identity at scale zero in these arms, are removed, the inference network is the plain U-Net (\R{RS.KDC.student.deployed} parameters on ACDC; the ACDC teacher has \R{KDC.acdc.teacher.params}, \R{RS.KDC.ratio.deployed} times as many). The trained graphs execute $P$ and the scale-zero gate until they are pruned, and inference latency was not measured separately for these arms.
+
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_resource.tex}}
+\caption{\label{tab:s-resource}Full inference-cost profile for ISIC2018 input (3 channels, 2 classes). Latencies are medians in ms (fp32); batch sizes 1, 8, and 16; CPU single-thread and all-thread measurements. $^a$FLOPs counted with forward hooks on the deployed graph. Table~9 of the main text repeats four rows of this profile (inference parameters, GFLOPs, GPU latency at batch sizes 1 and 16, single-thread CPU latency).}
+\end{table}
+
+The complete recorded profile of the adapted LB-UNet on ISIC2018 and Synapse (parameters, GFLOPs, CPU and GPU latencies in FP32 and automatic mixed precision at batch sizes 1, 8 and 16, and CUDA kernel counts) is not reproduced here; the values are in the evidence archive (S16).
+
+\paragraph{Replacing the trained gate by the identity (post hoc, fixed checkpoints).} On trained BDS-Lite checkpoints, replacing the trained gate by the identity changed Boundary F1 by \R{GID.isic2018.bf1} \R{GID.isic2018.bf1.ci} on the 1,000 official ISIC2018 test images, \R{GID.acdc.bf1} \R{GID.acdc.bf1.ci} on the 20 internal ACDC patients and \R{GID.synapse.bf1} \R{GID.synapse.bf1.ci} on the 12 Synapse cases (intervals conditional on the trained models). The outputs are not exactly invariant, but every interval lies inside the 0.01 threshold. This concerns these checkpoints and this hardware, not general equivalence; the gate-collapsed graph in the profile above is the pruned version.
+
+\section*{S20. Recipe-level standard error: a variance term counted twice (post hoc sensitivity analysis)}
+
+\paragraph{Summary.} The recipe-level SE of the main text (Statistics) counts the run-by-unit residual variance twice, so under an additive model its intervals are conservative. This section quantifies the excess with an alternative estimator chosen after the results were known. Every reading, label and decision in the main text and in S1--S19, including the stage-3 decision, uses the prespecified estimator; the alternative intervals are a sensitivity analysis.
+
+\paragraph{The shared term.} Write the per-unit score of run $r$ of arm $a$ on test unit $u$ as $y_{aru}=\mu_a+\rho_{ar}+\upsilon_u+\gamma_{au}+\varepsilon_{aru}$, with a run effect, a unit effect common to both arms, an arm-by-unit effect and a run-by-unit residual of variance $\sigma^2_{\varepsilon,a}$, on test units shared by both arms. The between-run term of the main-text SE equation, $s_A^2/n_A+s_B^2/n_B$, then has expectation $\sum_a(\sigma^2_{\rho,a}+\sigma^2_{\varepsilon,a}/U)/n_a$, and the test-unit term has expectation $[\mathrm{Var}(\gamma_{Au}-\gamma_{Bu})+\sum_a\sigma^2_{\varepsilon,a}/n_a]/U$. The variance of $\Delta$ over new runs and new test units contains $\sum_a\sigma^2_{\varepsilon,a}/(n_aU)$ once, but SE$^2$ contains it twice, so SE$^2$ overestimates the variance by
+\[
+\text{shared}=\sum_a\frac{\sigma^2_{\varepsilon,a}}{n_a\,U}.
+\]
+For stage-1 linear contrasts the same argument gives $\sigma^2_\varepsilon\sum_cw_c^2/(n_cU)$ with a residual variance pooled over cells. In three illustrative simulations under this model, the mean of SE$^2$ exceeded the empirical variance of $\Delta$, and the mean of SE$^2-\text{shared}$ matched it within Monte Carlo error.
+
+\paragraph{Alternative estimator.} $\sigma^2_{\varepsilon,a}$ is estimated by the residual mean square of an additive run-plus-unit fit within arm $a$, pooled over cells for linear contrasts. Subtracting $k$ times the shared term from each of the two components of the SE equation gives method-of-moments estimates of the between-run and test-unit variance. Each is truncated at zero, because a variance cannot be negative, so the adjusted variance is $\max(\text{between-run}-k\cdot\text{shared},0)+\max(\text{test-unit}-k\cdot\text{shared},0)+k\cdot\text{shared}$, with $k=1$ as the central value. Without truncation, negative component estimates offset part of the other component, and in \R{RS.n.untrunc.below.shared} of the \R{RS.n.comparisons} comparisons the adjusted variance fell below the shared term itself, which under the model is a lower bound. Table~\ref{tab:s20} also gives these untruncated intervals; they are narrower because of the negative component estimates and are not a preferred result. The \R{RS.n.comparisons} comparisons are the \R{RS.n.bf1} non-pooled contrasts whose Boundary F1 rows appear in Table~\ref{tab:s20}, each evaluated on all five metrics; the stage-2 ISIC2018 contrast enters twice, as 3 vs 3 and as 3 vs 10. Of the secondary metrics, Table~\ref{tab:s20} prints only those of stage 3. Degrees of freedom and reference distributions are those of the prespecified analysis, and pooled stage-1 estimates were recomputed with the adjusted per-dataset variances.
+
+\paragraph{Size.} With the shared term removed ($k=1$), the Boundary F1 SE fell by at most \R{RS.red.isic.max}\% on ISIC2018, whose 1,000 test images make the term small, by \R{RS.red.s3}\% in stage 3, and by \R{RS.red.small.min}--\R{RS.red.small.max}\% in the ACDC and Synapse contrasts of stages 1--2, which have 20 patients and 12 cases. The term is therefore not negligible by the criterion fixed before the first computation (every Boundary F1 SE falling by less than 5\%).
+
+\paragraph{Stability.} At $k=1$, \R{RS.n.trunc.k1} of the \R{RS.n.comparisons} comparisons (five metrics; \R{RS.n.trunc.bf1.k1} of the \R{RS.n.bf1} Boundary F1 comparisons) had at least one component truncated at zero; at $k=0.5$ and $k=1.5$ the counts were \R{RS.n.trunc.k05} and \R{RS.n.trunc.k15}. The residual mean squares of stages 1--2 come from three runs per arm. Under the model the residual mean square has at least 22 degrees of freedom per arm here, so its relative sampling SD is at most about 0.30, and the range $k=0.5$ to $1.5$ covers more than $\pm1.6$ such SDs.
+
+\paragraph{Intervals.} Table~\ref{tab:s20} gives both estimators for every Boundary F1 comparison of the main text and for the stage-3 secondary metrics. Of the \R{RS.n.rows} intervals (the \R{RS.n.comparisons} comparisons above and the three pooled stage-1 contrasts of Table~\ref{tab:s20}, each on five metrics), \R{RS.n.excl.pre} exclude zero under the prespecified estimator, and \R{RS.n.excl.k05}, \R{RS.n.excl.k1} and \R{RS.n.excl.k15} with the shared term removed at $k=0.5$, 1 and 1.5. At $k=1$, \R{RS.n.flips.k1} intervals changed from including to excluding zero: \R{RS.n.flips.k1.bf1} for Boundary F1 (the ACDC D $-$ U contrast of stage 1 and the pooled D+F+G $-$ D contrast) and three secondary stage-2 metrics (\R{RS.flips.other}), which are not rows of Table~\ref{tab:s20}; their prespecified intervals are in Table~\ref{tab:s-kd-orig}. For pooled D+F+G $-$ D the interval was \R{RS.tr.nosurf.adj.k05.ci}, \R{RS.tr.nosurf.adj.ci} and \R{RS.tr.nosurf.adj.k15.ci} at $k=0.5$, 1 and 1.5 (prespecified: \R{A1.nosurf.boundary_f1.ci}), so whether it excludes zero depends on the size assumed for the shared term. For the stage-3 primary endpoint the interval was \R{RS.s3.adj.k05.ci}, \R{RS.s3.adj.ci} and \R{RS.s3.adj.k15.ci}.
+
+\paragraph{Why the pooled interval is not monotone in $k$.} When both components are truncated, the adjusted variance equals its floor, $k\cdot\text{shared}$, which rises with $k$. For ACDC, the between-run component is \R{RS.pd.acdc.run}, the test-unit component \R{RS.pd.acdc.unit} and the shared term \R{RS.pd.acdc.shared} (all $\times10^{-5}$). At $k=0.5$ only the test-unit component is truncated, and the adjusted variance is the between-run component; at $k=1$ both are truncated, and it is the floor, \R{RS.pd.acdc.shared}; at $k=1.5$ the floor is \R{RS.pd.acdc.floor.k15}, above the prespecified SE$^2$ of \R{RS.pd.acdc.se2.k0}. Because ACDC carries \R{RS.pd.acdc.w.k15}--\R{RS.pd.acdc.w.k05}\% of the weight, its SE (\R{RS.pd.acdc.se.k0}, \R{RS.pd.acdc.se.k05}, \R{RS.pd.acdc.se.k1} and \R{RS.pd.acdc.se.k15} at $k=0$, 0.5, 1 and 1.5) drives the pooled SE, and the shifting weights move the pooled estimate between \R{RS.pd.pooled.est.k0} and \R{RS.pd.pooled.est.k05} (Table~\ref{tab:s20pooled}).
+
+\paragraph{Coverage.} In a plug-in simulation (\R{RS.cov.reps} replicates for each of \R{RS.cov.n} comparisons, using their estimated variance components with negative estimates set to zero, under normal, homoscedastic errors), the 95\% intervals covered the true difference in \R{RS.cov.pre.min}--\R{RS.cov.pre.max} of replicates with the prespecified SE and in \R{RS.cov.adj.min}--\R{RS.cov.adj.max} with the shared term removed (Monte Carlo SE about 0.003; Table~\ref{tab:s20cov}).
+
+\paragraph{Limitations and conclusion.} The residual variance rests on three runs per arm in stages 1--2, the model assumes additive run and unit effects with homoscedastic residuals, the degrees of freedom were not adjusted, and the alternative estimator, the truncation and the range of $k$ were chosen after the results were known. Truncation, non-monotonicity in $k$ (\R{RS.n.nonmono} comparisons) and adjusted SEs above the prespecified SE at $k=1.5$ (\R{RS.n.above.pre.k15} comparisons) show that the variance components are poorly determined. The prespecified estimator therefore remains the basis of inference; it is conservative under the model, and no reading rests on the adjusted intervals.
+
+\begin{table}[!htbp]\centering\scriptsize
+\fitwidth{\input{generated/tab_s20.tex}}
+\caption{\label{tab:s20}Boundary F1 comparisons with the prespecified estimator and with the shared term removed (post hoc). $\neq0$: the 95\% interval excludes zero (\checkmark) or not (--); for the adjusted estimator at $k=0.5/1/1.5$ times the estimated shared term. Shared: the shared term as a percentage of the prespecified SE$^2$. Trunc.: a variance component truncated at zero at $k=1$. Untrunc.: the shared term subtracted from SE$^2$ at $k=1$ without truncation (the first computation), retained for disclosure; its narrower intervals reflect negative component estimates and are not a preferred result. Pooled rows use normal intervals; all other rows use the prespecified $t$ degrees of freedom. Readings and labels use the prespecified estimator only.}
+\end{table}
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s20_pooled.tex}
+\caption{\label{tab:s20pooled}Per-dataset terms behind the pooled stage-1 D+F+G $-$ D Boundary F1 contrast under the prespecified estimator and with the shared term removed (post hoc). SE: per-dataset SE under each estimator. Weight: inverse-variance share in the pooled estimate. Truncated: the variance component(s) set to zero. The untruncated block is retained for disclosure; its narrower interval reflects negative component estimates and is not a preferred result. Each dataset's estimate is the same under every estimator; only the weights, and with them the pooled estimate, change. Per-dataset intervals use the prespecified $t$ degrees of freedom; pooled rows use normal intervals. Readings use the prespecified estimator only.}
+\end{table}
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s20_coverage.tex}
+\caption{\label{tab:s20cov}Coverage of nominal 95\% intervals in the plug-in simulation, \R{RS.cov.reps} replicates per row (Monte Carlo SE about 0.003). Stage-1 rows use the pooled within-cell form with $\nu=4$; the others use Welch degrees of freedom.}
+\end{table}
+
+
+
+\FloatBarrier
+\section*{S21. Follow-up controls for D+KD-band on ACDC (exploratory)}
+\paragraph{Status.} The controls were designed after the stage-3 replication had been analysed. Their analysis plan was fixed before any follow-up run was trained; it specifies the arms, seeds, endpoints, estimator, the Holm family, the failed-run policy and the reading of each possible outcome. Unlike the stage-3 plan, it has no external timestamp. The follow-up arms are evaluated on the same \R{OT.patients} official ACDC test patients as stage 3, whose results had already been examined, and they reuse the stage-3 runs of D and D+KD-band without retraining. Every follow-up comparison is therefore exploratory, and none can change the stage-3 decision.
+
+\paragraph{Arms.} All arms use the stage-3 configuration (seeds \R{CF.seed.first}--\R{CF.seed.last}; data, model, losses, optimiser, schedule, 150 epochs, checkpoint rule), the frozen trainer, and the same queue guards; each configuration differs from the stage-3 configuration only in the seed, the KD region and the teacher cache. \emph{D+KD-full}: the external teacher's cache, $\lambda_{\mathrm{kd}}=1$, the same clamp, and $B_n\equiv1$, so that $L_{\mathrm{kd}}$ is the per-pixel soft cross-entropy averaged over every pixel of the batch. Because most pixels are background on which teacher and student agree, its value per pixel is lower than that of the band loss at the same $\lambda_{\mathrm{kd}}$; the weight was not retuned, as prespecified. \emph{Compact teacher}: the student architecture trained once by the D recipe with seed 100 and frozen; its softmax on the 1,350 training slices was cached by the steps of the external teacher's cache (fp32, TF32 off; cached-versus-online check on 20 slices; validation consistency with the run's own record). It was not required to pass a quality gate. \emph{D+KD-band}$_{\mathrm{cmp}}$: D+KD-band reading the compact teacher's cache.
+
+\paragraph{Comparisons.} C1 D+KD-band $-$ D+KD-full (is the band restriction needed?); C2 D+KD-full $-$ D (general distillation effect of this teacher); C3 D+KD-band$_{\mathrm{cmp}}$ $-$ D (does a teacher without pretraining or capacity advantage give a gain?); C4 D+KD-band $-$ D+KD-band$_{\mathrm{cmp}}$ (comparison of teacher configurations, with pretraining, capacity, realization and predicted band geometry entangled). Estimator: the stage-3 run-level contrast with Welch--Satterthwaite degrees of freedom; Holm over C1--C4 on test Boundary F1; secondary metrics Holm-adjusted within metric (descriptive). Each comparison is classified as positive or negative (Holm $p<0.05$), equivalent (95\% interval inside $\pm$SESOI) or unresolved, and a prespecified mapping turns the classes of C1--C2 and C3--C4 into the band case B1--B5 and the teacher case T1--T5.
+
+\paragraph{Runs.} All 17 runs of each follow-up arm and the compact teacher completed; no run failed or was excluded, and no loss was non-finite. The GPU's thermal guard paused the queue \R{FU.thermal.resumes} times at epoch boundaries; each pause resumed from the saved epoch under the frozen configuration, source and data hash checks. The compact teacher selected epoch \R{FU.teacher.epoch} (validation DSC \R{FU.teacher.val.dsc}, Boundary F1 \R{FU.teacher.val.bf1}; the external teacher's validation Boundary F1 was \R{FU.ext.val.bf1}). Integrity checks passed before the test patients were evaluated, once per run. Summed epoch time over 17 runs was \R{FU.hours.kd_full}\,h for D+KD-full and \R{FU.hours.kd_band_peer}\,h for D+KD-band$_{\mathrm{cmp}}$, against \R{FU.hours.kd_band}\,h for D+KD-band and \R{FU.hours.decoder}\,h for D in stage 3. An external timestamp of the plan, first planned, was dropped before training; there was no other deviation from the plan.
+
+\paragraph{Results.} On test Boundary F1, C2 (\R{FU.C2.boundary_f1.delta} \R{FU.C2.boundary_f1.ci}, Holm $p=$\,\R{FU.C2.boundary_f1.holm}) and C3 (\R{FU.C3.boundary_f1.delta} \R{FU.C3.boundary_f1.ci}, Holm $p=$\,\R{FU.C3.boundary_f1.holm}) were positive; C1 (\R{FU.C1.boundary_f1.delta} \R{FU.C1.boundary_f1.ci}, Holm $p=$\,\R{FU.C1.boundary_f1.holm}) and C4 (\R{FU.C4.boundary_f1.delta} \R{FU.C4.boundary_f1.ci}, Holm $p=$\,\R{FU.C4.boundary_f1.holm}) were unresolved. The prespecified mapping gives band case \R{FU.case.band} (whole-image distillation also raised Boundary F1, and whether the band restriction adds to it is unresolved) and teacher case \R{FU.case.teacher} (a teacher without pretraining or capacity advantage also raised Boundary F1, and the difference between the teacher configurations is unresolved). C1 and C4 have positive point estimates, so neither reading establishes that the band or the pretrained teacher contributes nothing. Secondary metrics (Table~\ref{tab:s-followup-all}) are descriptive; the band arm had smaller HD95 and ASSD than D+KD-full. Per structure (Table~\ref{tab:s-followup-perclass}), all intervals of C2 and C3 for Boundary F1 lay above zero except the right ventricle in C3 and the left ventricle in C2.
+
+\begin{table}[!htbp]\centering\scriptsize
+\fitwidth{\input{generated/tab_s_followup_all.tex}}
+\caption{\label{tab:s-followup-all}Follow-up comparisons, all metrics, official ACDC patients 101--150 (secondary, exploratory). Positive $\Delta$ favours the first arm; HD95 and ASSD in pixels with sign reversed. Holm: over C1--C4 within each metric (Boundary F1 is the prespecified family). Arm means are means of run means (between-run SD).}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\fitwidth{\input{generated/tab_s_followup_perclass.tex}}
+\caption{\label{tab:s-followup-perclass}Follow-up comparisons per structure (descriptive, unadjusted).}
+\end{table}
+
+\paragraph{The teachers on the official patients (post hoc, descriptive).} Evaluated after all students had been trained, the compact teacher reached Boundary F1 \R{FU.teacher.test.bf1} on the \R{OT.patients} official patients, below the mean of the D runs (\R{CF.dec.mean}) and of its own students (\R{FU.C3.boundary_f1.mean.a}); the external teacher reached \R{RS.TCH.off.bf1}. Each value comes from one trained teacher.
+
+\subsection*{Augmentation comparison (E3)}
+\paragraph{Design and status.} Prespecified in the same analysis plan before its runs: D and D+KD-band, each trained with one transform per training sample, drawn uniformly from the eight elements of the dihedral group D4 (rotations by multiples of 90\textdegree, with or without a flip), applied identically to the image, the mask, the boundary target and the cached teacher probabilities; no interpolation and no test-time augmentation. The cached probabilities are transformed, not recomputed by the teacher on transformed images. Seeds 201--210, ten runs per arm; all other settings as in stage 3. The single prespecified primary contrast is D+KD-band$_{\mathrm{aug}}$ $-$ D$_{\mathrm{aug}}$ on test Boundary F1, without multiplicity adjustment; the other metrics are descriptive. E3 is evaluated on the same 50 official patients, whose results had been examined, so it is exploratory and cannot change the stage-3 decision. No augmentation-by-distillation interaction test was prespecified; a post hoc test is reported in S24.
+
+\paragraph{Runs.} The runs were trained after the controls of S21 had been evaluated. All 20 runs completed 150 epochs with the first-maximum validation checkpoint rule and passed the prespecified source, configuration and provenance checks, and the test evaluation was run once per run after all training had ended. Summed epoch time was 3.75\,h for D$_{\mathrm{aug}}$ and 3.81\,h for D+KD-band$_{\mathrm{aug}}$. The analysis matched an independent implementation in all 195 scalar checks.
+
+\paragraph{Results.} D+KD-band$_{\mathrm{aug}}$ minus D$_{\mathrm{aug}}$ on Boundary F1 was \R{E3.E3.boundary_f1.delta} \R{E3.E3.boundary_f1.ci} ($p=$\,\R{E3.E3.boundary_f1.p}; undetermined). The secondary IoU interval lay below zero (\R{E3.E3.iou.delta} \R{E3.E3.iou.ci}, nominal $p=$\,\R{E3.E3.iou.p}); it is descriptive and does not replace the primary endpoint. E3a and E3b compare the ten augmented runs with the 17 unaugmented stage-3 runs of the same arm; they are exploratory, not prespecified.
+
+\begin{table}[!htbp]\centering\scriptsize
+\fitwidth{\input{generated/tab_s_e3_all.tex}}
+\caption{\label{tab:s-e3-all}Augmentation control, all metrics, official ACDC patients 101--150 (exploratory). E3: prespecified primary contrast (Boundary F1) and descriptive secondary metrics; E3a, E3b: augmented versus unaugmented runs of one arm, exploratory, not prespecified. Positive $\Delta$ favours the first arm; HD95 and ASSD in pixels with sign reversed. Unadjusted $p$. Arm means are means of run means (between-run SD).}
+\end{table}
+
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_e3_perseed.tex}
+\caption{\label{tab:s-e3-seed}Augmentation control: run means per seed (patient-level means over the 50 official patients).}
+\end{table}
+
+\begin{table}[!htbp]\centering\small
+\fitwidth{\input{generated/tab_s_e3_perclass.tex}}
+\caption{\label{tab:s-e3-class}Augmentation control per structure, D+KD-band$_{\mathrm{aug}}$ $-$ D$_{\mathrm{aug}}$ (descriptive, unadjusted).}
+\end{table}
+
+
+\FloatBarrier
+\section*{S22. Post hoc analyses: reference estimators, error location, and the D mean across stages}
+All analyses in this section were designed after the stage-3 results were known.
+
+\paragraph{Reference estimators.} The prespecified SE adds a between-run term and a test-unit term (main-text Methods), each of which contains the run-by-unit residual (S20). For the stage-3 and follow-up contrasts we fitted a crossed random-effects model, $y_{aru}=\mu_a+r_{ar}+p_u+(ap)_{au}+e_{aru}$, with runs nested in arms and patients crossed with arms, by the method of moments for this balanced design: $\mathrm{Var}(\hat\Delta)=\mathrm{MS}_{\mathrm{run},A}/(n_AU)+\mathrm{MS}_{\mathrm{run},B}/(n_BU)+\max\{0,\,s_d^2-\hat\sigma_e^2(1/n_A+1/n_B)\}/U$, with Satterthwaite degrees of freedom. It counts the residual once and agrees with the S20 adjustment at $k=1$ up to the degrees of freedom. A hierarchical bootstrap (10{,}000 draws; patients resampled once per draw for both arms, runs resampled within each arm) is shown as a second reference; resampling both levels can add residual variance under the crossed model, but does not guarantee coverage under misspecification. Table~\ref{tab:s-ref} lists all three. They change no prespecified reading.
+
+\begin{table}[!htbp]\centering\scriptsize
+\fitwidth{\input{generated/tab_s_reference_estimators.tex}}
+\caption{\label{tab:s-ref}Prespecified and reference 95\% intervals (post hoc), official ACDC patients.}
+\end{table}
+
+\paragraph{Error location and gain.} For each D run on the official patients, the wrong pixels of each structure (false positives and false negatives) were split by whether they lie within 2\,px of the reference inner contour, with the definition of S8, and pooled over slices and runs. The per-patient gain of each distillation arm is its mean Boundary F1 minus that of D. Spearman correlations across patients are descriptive; a split-seed version (error share from D seeds 201--208, gain against D seeds 209--217) removes the chance errors that the same D runs would otherwise contribute to both quantities. No arm showed a positive association across patients (all pairs: \R{EL.kd_band.all.rho}, \R{EL.kd_full.all.rho} and \R{EL.kd_band_peer.all.rho} for D+KD-band, D+KD-full and D+KD-band$_{\mathrm{cmp}}$; split-seed, per structure: \R{EL.split.min} to \R{EL.split.max}). The gain was instead larger where D scored lower ($\rho$ \R{EL.dcorr.min} to \R{EL.dcorr.max}). With 24 correlations of gain and near-boundary share computed, single nominal $p$ values are not interpreted.
+
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_error_location.tex}
+\caption{\label{tab:s-errloc}Share of D's wrong pixels within 2\,px of the reference contour, mean Boundary F1 gain over D, and Spearman $\rho$ between gain and near-boundary share across the 50 patients (post hoc).}
+\end{table}
+
+\paragraph{The D mean in stages 1 and 3.} The D Boundary F1 mean is \R{SH.decoder.early.internal_test.slice} in the stage-1 table of matched-protocol means (Table~\ref{tab:s-lit}) (seeds 1--3, 20 internal patients, slice-level aggregation) and \R{CF.dec.mean} in stage 3 (seeds 201--217, 50 official patients, patient-level aggregation). Table~\ref{tab:s-shift} describes aggregation, seed/trainer and cohort differences; it does not identify their causes. Aggregation accounts for a small part (stage-1 runs, internal patients: \R{SH.decoder.early.internal_test.slice} per slice, \R{SH.decoder.early.internal_test.patient} per patient). The seed-set/trainer point estimates are small but uncertain: on the same patients, seeds 201--217 differed from seeds 1--3 by \R{SH.seedset.decoder.internal_test.delta} \R{SH.seedset.decoder.internal_test.ci} (internal) and \R{SH.seedset.decoder.official_test.delta} \R{SH.seedset.decoder.official_test.ci} (official). The larger observed difference is between cohorts and their preprocessing pipelines: the same stage-3 runs scored \R{SH.patients.decoder.stage3.delta} \R{SH.patients.decoder.stage3.ci} lower on the official than on the internal patients, and D+KD-band shifted similarly (\R{SH.patients.kd_band.stage3.delta}). This shift combines differences whose contributions our data cannot separate: the official patients are different patients (10 per pathology group), and their preprocessing is our reconstruction of the third-party conversion, validated on development and validation data but not on them (S18). A reconstruction error that lowered both arms equally would leave the arm contrast unchanged, but one that interacts with the arms cannot be excluded.
+
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_stage_shift.tex}
+\caption{\label{tab:s-shift}Boundary F1 of D and D+KD-band by seed set and test patients (post hoc). Slice-level: class macro per slice, averaged over slices (as in Table~\ref{tab:s-lit}); patient-level: averaged per patient first (the stage-3 estimator). Means of run means (SD between runs).}
+\end{table}
+
+
+
+\section*{S23. Frozen teachers on the official ACDC patients (post hoc, descriptive)}
+\paragraph{Status.} This evaluation was added after every student result on patients 101--150 had been examined. It is inference only, post hoc and descriptive, and it changes no prespecified reading. Its interpretation rule was fixed before the teacher inference reported here; the external teacher's earlier one-time evaluation on these patients had been seen before then, and the new predictions are pixel-identical to it.
+
+\paragraph{Method.} Each frozen teacher (the external teacher of D+KD-band, D+KD-full and D+KD-band$_{\mathrm{aug}}$, and the compact teacher of D+KD-band$_{\mathrm{cmp}}$) was evaluated with the student evaluator and the patient-level aggregation of the main text. Before any teacher was evaluated, all \R{TE.recomputed} student runs were recomputed from their saved predictions and equalled their saved per-case files, and \R{TE.hashes} artifact hashes matched. Teacher minus group is the teacher's patient score minus the group's per-patient mean over runs, averaged over the \R{OT.patients} patients, with a 95\% percentile bootstrap over patients (\R{TE.draws} draws). These intervals are conditional on the evaluated runs, are not the run-level estimator of the main text, and are not tests.
+
+\paragraph{Result.} The external teacher scored \R{TE.ext.bf1} in Boundary F1, and none of the \R{TE.runs} student runs exceeded it (Table~\ref{tab:s-teacher-groups}); the compact teacher scored \R{TE.cmp.bf1}, and \R{TE.cmp.D.above} of \R{TE.cmp.D.runs} D runs scored higher. The prespecified rule compared the external teacher with D$_{\mathrm{aug}}$ (teacher minus D$_{\mathrm{aug}}$ \R{TE.ext.Daug.delta}, \R{TE.ext.Daug.text}): outcome \R{TE.outcome}, ``This explanation is not supported'', the explanation being that augmented students score above the teacher. A further check, defined after these results: without augmentation, D+KD-band closed \R{TE.prop.share}\% of the external teacher's lead over D (confirmatory contrast divided by teacher minus D); the same share of the teacher's lead over D$_{\mathrm{aug}}$ gives \R{TE.prop.expected}, just above the upper bound \R{TE.prop.upper} of the augmented contrast's 95\% interval. The check uses point estimates only and ignores the uncertainty of the confirmatory gain, of both teacher leads and of the interval, so it narrowly excludes proportional transfer at face value and tests nothing. One realization of each teacher was evaluated; the result does not explain the distillation effect or establish teacher quality as its cause.
+
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_teacher_scores.tex}
+\caption{\label{tab:s-teacher-scores}Frozen teachers on official ACDC patients 101--150, patient-level scores (post hoc, descriptive). Parameters of the full teacher graph.}
+\end{table}
+\begin{table}[!htbp]\centering
+\fitwidth{\input{generated/tab_s_teacher_groups.tex}}
+\caption{\label{tab:s-teacher-groups}Teachers versus student groups, Boundary F1 (post hoc, descriptive). Run means: the group's run-level means over the 50 patients. Runs $>$ ext./comp.: runs whose mean exceeds the external/compact teacher. Teacher $-$ group: paired over patients with a 95\% percentile bootstrap over patients, conditional on the evaluated runs.}
+\end{table}
+
+
+\section*{S24. Further post hoc analyses: interaction, pooling, run-to-run variation, missed structures}
+\paragraph{Status.} The analyses of this section were added after every result of the article was known. They use saved per-case evaluation outputs only; no model was trained or executed. They are post hoc and exploratory and change no prespecified estimate, decision or reading.
+
+\paragraph{Augmentation-by-distillation interaction.} On the official ACDC patients 101--150, $I=(\bar m_{\mathrm{KD}}-\bar m_{\mathrm{D}})-(\bar m_{\mathrm{KD,aug}}-\bar m_{\mathrm{D,aug}})$ is the difference between the stage-3 contrast and the E3 contrast (S21). All four arms were scored on the same 50 patients, so the two contrasts share patient effects, and adding their squared standard errors would count the patient term of each contrast separately. Three standard errors are therefore reported. \emph{Prespecified form:} the estimator of the main text extended to a four-arm linear contrast, $\mathrm{SE}^2=\sum_a s_a^2/n_a+\widehat{\mathrm{Var}}_u(dd_u)/U$, where $dd_u$ is the per-patient double difference of arm means and the degrees of freedom are the Welch--Satterthwaite value of the four between-run terms (for Boundary F1, \R{RV.int.all.boundary_f1.df}). \emph{Crossed model:} the method-of-moments estimate of S22 for four arms, $\sum_a\mathrm{MS}_{\mathrm{run},a}/(n_aU)+\max\{0,\,s_{dd}^2-\hat\sigma_e^2\sum_a 1/n_a\}/U$, which counts the run-by-patient residual once (S20). \emph{Bootstrap:} 10{,}000 draws in which patients are resampled once and shared by the four arms and runs are resampled within each arm. For Boundary F1 the prespecified-form standard error is \R{RV.int.all.boundary_f1.se}; the sum of the two contrasts' squared standard errors gives \R{RV.int.all.boundary_f1.se.naive}, so the treatment of the shared patients changes little here, because the between-run terms dominate. The unaugmented arms have 17 runs and the augmented arms 10; the lower block of Table~\ref{tab:s-review-interaction} restricts all four arms to seeds 201--210. Seeds are not paired in any estimate.
+
+\begin{table}[!htbp]\centering\scriptsize
+\fitwidth{\input{generated/tab_s_review_interaction.tex}}
+\caption{\label{tab:s-review-interaction}Augmentation-by-distillation interaction on official ACDC patients 101--150 (post hoc). $\Delta$: D+KD-band minus D without and with D4 augmentation; $I$: their difference. HD95 and ASSD in pixels with signs reversed, so positive values favour distillation. Unadjusted $p$ of the prespecified-form estimate.}
+\end{table}
+
+\emph{Reading.} For Boundary F1, DSC and IoU every interval excludes zero in both blocks; for HD95 and ASSD the intervals include zero, except the crossed-model ASSD interval with all runs. The test was specified after both simple contrasts were known and uses patients whose results had been examined, so it is exploratory. It indicates that the distillation contrast was larger without than with augmentation in this cohort; the E3 reading itself remains undetermined.
+
+\paragraph{Sensitivity of the pooled stage-1 summaries to the pooling rule.} The prespecified summary pools the three per-dataset contrasts by inverse variance and uses a normal interval, although each per-dataset standard error rests on three runs per cell (4 degrees of freedom). Table~\ref{tab:s-review-pooling} repeats the three pooled Boundary F1 summaries of the main text with a $t$ interval (Satterthwaite degrees of freedom of the weighted mean, weights treated as fixed), with equal weights, and with each dataset left out. A DerSimonian--Laird random-effects summary equals the fixed-effect summary for all three contrasts, because the estimated between-dataset variance is zero. For the decoder contrast the three per-dataset estimates are nearly equal (\R{IN.dec.isic2018.boundary_f1.est}, \R{IN.dec.acdc.boundary_f1.est} and \R{IN.dec.synapse.boundary_f1.est}), so the rules differ in the interval and not in the estimate: ACDC has the smallest standard error and carries \R{RV.pool.dec.noacdc.share}\% of the inverse-variance weight, and the interval includes zero with equal weights and without ACDC. The prespecified readings stand; the table shows how far they depend on the pooling rule.
+
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_review_pooling.tex}
+\caption{\label{tab:s-review-pooling}Pooled Boundary F1 contrasts of stage 1 (three runs per arm) under alternative pooling rules (post hoc). Readings as in the main-text Statistics.}
+\end{table}
+
+\paragraph{Run-to-run variation.} Table~\ref{tab:s-review-sd} gives the mean and standard deviation of run means for every arm with ten or more runs.
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_review_run_sd.tex}
+\caption{\label{tab:s-review-sd}Boundary F1: mean and standard deviation of run means for every arm with ten or more runs (image-level means on ISIC2018, patient-level means on ACDC).}
+\end{table}
+
+\paragraph{Missed structures and false alarms.} For each run, a pair of an image or slice and a foreground class is \emph{missed} if its reference is not empty and its prediction is empty, and a \emph{false alarm} if its reference is empty and its prediction is not. Both score approximately zero in DSC, IoU and Boundary F1 and have undefined distances. Pairs with a non-empty and with an empty reference number \R{RV.err.isic2018.matched.present} and 0 on ISIC2018, \R{RV.err.acdc.matched.present} and \R{RV.err.acdc.matched.absent} on the internal ACDC patients, \R{RV.err.synapse.matched.present} and \R{RV.err.synapse.matched.absent} on Synapse, and \R{RV.err.acdc.official.present} and \R{RV.err.acdc.official.absent} on the official ACDC patients. Table~\ref{tab:s-review-errors} extends the table of the main text to D+F+G and to the control arms; rates by reference area are in S8. The table is descriptive and no difference was tested.
+\begin{table}[!htbp]\centering\small
+\input{generated/tab_s_review_errors.tex}
+\caption{\label{tab:s-review-errors}Missed structures and false alarms, mean $\pm$ SD over runs (post hoc, descriptive).}
+\end{table}
+
+\end{document}

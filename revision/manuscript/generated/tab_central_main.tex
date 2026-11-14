@@ -1,0 +1,17 @@
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llr@{}}
+\toprule
+Metric & Contrast & Pooled $\Delta$ [95\% CI] \\
+\midrule
+Boundary F1 & Decoder vs U-Net & +0.0159 [+0.0053, +0.0265] \\
+ & Transfer, no surface loss & +0.0092 [$-$0.0010, +0.0194] \\
+ & Transfer, with surface loss & +0.0011 [$-$0.0104, +0.0125] \\
+\midrule
+DSC & Decoder vs U-Net & +0.0007 [$-$0.0038, +0.0051] \\
+ & Transfer, no surface loss & +0.0010 [$-$0.0040, +0.0061] \\
+ & Transfer, with surface loss & $-$0.0023 [$-$0.0085, +0.0039] \\
+\midrule
+HD95 (px) & Decoder vs U-Net & $-$0.43 [$-$1.35, +0.49] \\
+ & Transfer, no surface loss & +0.59 [$-$0.36, +1.54] \\
+ & Transfer, with surface loss & $-$0.44 [$-$1.33, +0.44] \\
+\bottomrule
+\end{tabular*}

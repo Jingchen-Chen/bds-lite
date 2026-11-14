@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.4, pytest-9.1.1, pluggy-1.7.0
+rootdir: /home/jc/bds-lite
+configfile: pyproject.toml
+testpaths: tests
+collected 65 items
+
+tests/revision/test_thermal_supervision.py .                             [  1%]
+tests/revision/test_training_integrity.py .....                          [  9%]
+tests/unit/test_boundary.py ..                                           [ 12%]
+tests/unit/test_builders.py ...........                                  [ 29%]
+tests/unit/test_converters.py ..                                         [ 32%]
+tests/unit/test_cross_dataset_report.py ...                              [ 36%]
+tests/unit/test_final_ablation_report.py ..                              [ 40%]
+tests/unit/test_losses.py .........                                      [ 53%]
+tests/unit/test_metrics.py ........                                      [ 66%]
+tests/unit/test_profiling.py ..                                          [ 69%]
+tests/unit/test_recent_boundary_losses.py ...........                    [ 86%]
+tests/unit/test_seed_averaged_results.py ...                             [ 90%]
+tests/unit/test_split_integrity.py ......                                [100%]
+
+============================== 65 passed in 1.67s ==============================

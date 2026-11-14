@@ -1,0 +1,12 @@
+% generated from revision/tables/resource_profile.csv (ISIC2018 3-channel, 2-class graphs)
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Model & Deploy params & GFLOPs$^a$ & GPU b1 & GPU b8 & GPU b16 & CPU 1 thr. & CPU all & CUDA kernels \\
+\midrule
+U-Net & 1,927,042 & 15.970 & 1.66 & 17.41 & 36.75 & 129.9 & 17.3 & 104 \\
+BDS-Lite (deployed) & 1,928,114 & 16.079 & 1.79 & 20.19 & 42.26 & 134.8 & 18.7 & 115 \\
+BDS-Lite (gate-collapsed) & 1,927,042 & 15.970 & 1.66 & 17.48 & 36.84 & 131.1 & 17.8 & 104 \\
+Attention U-Net & 1,948,773 & 16.281 & 1.86 & 19.46 & 41.05 & 136.0 & 19.4 & 131 \\
+LB-UNet & 55,874 & 0.144 & 3.56 & 3.58 & 3.91 & 6.5 & 5.4 & 462 \\
+\bottomrule
+\end{tabular}

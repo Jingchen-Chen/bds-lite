@@ -1,0 +1,325 @@
+{"time": "2026-11-07T08:20:07+00:00", "event": "paused", "reason": "gpu 83 C"}
+{"time": "2026-11-07T08:21:07+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:24:17+00:00", "event": "start", "pid": 253926}
+{"time": "2026-11-07T08:24:53+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T08:25:23+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:26:05+00:00", "event": "parity", "model": "o_G_seed1", "rows": 64, "mean_abs_diff": 2.9585026732892317e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T08:27:21+00:00", "event": "paused", "reason": "gpu 83 C"}
+{"time": "2026-11-07T08:28:07+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:28:51+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T08:29:21+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:29:39+00:00", "event": "done", "cohort": "o_G", "dataset": "isic2018", "seed": 1, "n": 1000}
+{"time": "2026-11-07T08:29:47+00:00", "event": "parity", "model": "o_G_seed2", "rows": 64, "mean_abs_diff": 1.8491629250050323e-07, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T08:30:05+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T08:30:50+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:30:52+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T08:31:55+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:32:40+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T08:33:25+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:34:10+00:00", "event": "paused", "reason": "gpu 86 C"}
+{"time": "2026-11-07T08:34:40+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:35:04+00:00", "event": "done", "cohort": "o_G", "dataset": "isic2018", "seed": 2, "n": 1000}
+{"time": "2026-11-07T08:35:12+00:00", "event": "parity", "model": "o_G_seed3", "rows": 64, "mean_abs_diff": 9.808205935990522e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T08:35:22+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T08:37:08+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:39:11+00:00", "event": "done", "cohort": "o_G", "dataset": "isic2018", "seed": 3, "n": 1000}
+{"time": "2026-11-07T08:39:17+00:00", "event": "paused", "reason": "gpu 83 C"}
+{"time": "2026-11-07T08:40:03+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:40:05+00:00", "event": "parity", "model": "o_C_seed1", "rows": 64, "mean_abs_diff": 1.2085815348505946e-07, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T08:40:47+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T08:41:17+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:42:01+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T08:42:31+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:42:33+00:00", "event": "paused", "reason": "gpu 85 C"}
+{"time": "2026-11-07T08:42:48+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:43:33+00:00", "event": "done", "cohort": "o_C", "dataset": "isic2018", "seed": 1, "n": 1000}
+{"time": "2026-11-07T08:43:42+00:00", "event": "parity", "model": "o_C_seed2", "rows": 64, "mean_abs_diff": 2.2659421602400087e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T08:43:55+00:00", "event": "paused", "reason": "gpu 86 C"}
+{"time": "2026-11-07T08:44:10+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:45:18+00:00", "event": "paused", "reason": "gpu 87 C"}
+{"time": "2026-11-07T08:45:33+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:46:00+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T08:46:15+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:46:22+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T08:47:52+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:48:11+00:00", "event": "done", "cohort": "o_C", "dataset": "isic2018", "seed": 2, "n": 1000}
+{"time": "2026-11-07T08:48:19+00:00", "event": "parity", "model": "o_C_seed3", "rows": 64, "mean_abs_diff": 1.9163413107481375e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T08:48:57+00:00", "event": "paused", "reason": "gpu 87 C"}
+{"time": "2026-11-07T08:49:12+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:49:40+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T08:50:10+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:51:15+00:00", "event": "done", "cohort": "o_C", "dataset": "isic2018", "seed": 3, "n": 1000}
+{"time": "2026-11-07T08:51:24+00:00", "event": "parity", "model": "o_D_seed1", "rows": 64, "mean_abs_diff": 9.164635455305437e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T08:52:17+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T08:53:17+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:54:00+00:00", "event": "paused", "reason": "gpu 86 C"}
+{"time": "2026-11-07T08:54:15+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:54:52+00:00", "event": "done", "cohort": "o_D", "dataset": "isic2018", "seed": 1, "n": 1000}
+{"time": "2026-11-07T08:55:00+00:00", "event": "parity", "model": "o_D_seed2", "rows": 64, "mean_abs_diff": 7.92772118374252e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T08:56:07+00:00", "event": "paused", "reason": "gpu 83 C"}
+{"time": "2026-11-07T08:56:38+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:57:20+00:00", "event": "paused", "reason": "gpu 85 C"}
+{"time": "2026-11-07T08:57:35+00:00", "event": "resumed"}
+{"time": "2026-11-07T08:58:00+00:00", "event": "done", "cohort": "o_D", "dataset": "isic2018", "seed": 2, "n": 1000}
+{"time": "2026-11-07T08:58:09+00:00", "event": "parity", "model": "o_D_seed3", "rows": 64, "mean_abs_diff": 2.651409015452799e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T08:59:03+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T08:59:18+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:00:41+00:00", "event": "done", "cohort": "o_D", "dataset": "isic2018", "seed": 3, "n": 1000}
+{"time": "2026-11-07T09:00:41+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T09:01:41+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:02:39+00:00", "event": "done", "cohort": "a_decoder", "dataset": "acdc", "seed": 1, "n": 366}
+{"time": "2026-11-07T09:02:39+00:00", "event": "parity", "model": "a_decoder_acdc_seed1", "rows": 1049, "mean_abs_diff": 1.1513541346208633e-05, "share_rows_beyond": 0.0009532888465204957, "passed": true}
+{"time": "2026-11-07T09:02:43+00:00", "event": "paused", "reason": "gpu 83 C"}
+{"time": "2026-11-07T09:03:13+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:03:59+00:00", "event": "done", "cohort": "a_decoder", "dataset": "acdc", "seed": 2, "n": 366}
+{"time": "2026-11-07T09:03:59+00:00", "event": "parity", "model": "a_decoder_acdc_seed2", "rows": 1057, "mean_abs_diff": 4.86133429824509e-05, "share_rows_beyond": 0.000946073793755913, "passed": true}
+{"time": "2026-11-07T09:04:37+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T09:06:22+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:06:31+00:00", "event": "done", "cohort": "a_decoder", "dataset": "acdc", "seed": 3, "n": 366}
+{"time": "2026-11-07T09:06:31+00:00", "event": "parity", "model": "a_decoder_acdc_seed3", "rows": 1041, "mean_abs_diff": 1.7226536550674076e-05, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:07:19+00:00", "event": "done", "cohort": "a_distill", "dataset": "acdc", "seed": 1, "n": 366}
+{"time": "2026-11-07T09:07:19+00:00", "event": "parity", "model": "a_distill_acdc_seed1", "rows": 1039, "mean_abs_diff": 5.487803449333306e-06, "share_rows_beyond": 0.0009624639076034649, "passed": true}
+{"time": "2026-11-07T09:07:49+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T09:08:34+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:08:52+00:00", "event": "done", "cohort": "a_distill", "dataset": "acdc", "seed": 2, "n": 366}
+{"time": "2026-11-07T09:08:52+00:00", "event": "parity", "model": "a_distill_acdc_seed2", "rows": 1051, "mean_abs_diff": 1.475891948932162e-05, "share_rows_beyond": 0.0009514747859181732, "passed": true}
+{"time": "2026-11-07T09:08:57+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T09:11:12+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:11:54+00:00", "event": "done", "cohort": "a_distill", "dataset": "acdc", "seed": 3, "n": 366}
+{"time": "2026-11-07T09:11:54+00:00", "event": "parity", "model": "a_distill_acdc_seed3", "rows": 1049, "mean_abs_diff": 8.88570344392825e-06, "share_rows_beyond": 0.0019065776930409914, "passed": true}
+{"time": "2026-11-07T09:12:37+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T09:14:07+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:14:16+00:00", "event": "done", "cohort": "a_gate", "dataset": "acdc", "seed": 1, "n": 366}
+{"time": "2026-11-07T09:14:16+00:00", "event": "parity", "model": "a_gate_acdc_seed1", "rows": 1049, "mean_abs_diff": 5.1817654812436054e-05, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:15:07+00:00", "event": "done", "cohort": "a_gate", "dataset": "acdc", "seed": 2, "n": 366}
+{"time": "2026-11-07T09:15:07+00:00", "event": "parity", "model": "a_gate_acdc_seed2", "rows": 1052, "mean_abs_diff": 5.838147538184124e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:15:59+00:00", "event": "done", "cohort": "a_gate", "dataset": "acdc", "seed": 3, "n": 366}
+{"time": "2026-11-07T09:15:59+00:00", "event": "parity", "model": "a_gate_acdc_seed3", "rows": 1054, "mean_abs_diff": 6.261889648007113e-05, "share_rows_beyond": 0.0018975332068311196, "passed": true}
+{"time": "2026-11-07T09:16:51+00:00", "event": "done", "cohort": "a_gate_surface", "dataset": "acdc", "seed": 1, "n": 366}
+{"time": "2026-11-07T09:16:51+00:00", "event": "parity", "model": "a_gate_surface_acdc_seed1", "rows": 1056, "mean_abs_diff": 3.735047611441722e-05, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:17:42+00:00", "event": "done", "cohort": "a_gate_surface", "dataset": "acdc", "seed": 2, "n": 366}
+{"time": "2026-11-07T09:17:42+00:00", "event": "parity", "model": "a_gate_surface_acdc_seed2", "rows": 1054, "mean_abs_diff": 1.0432419214168043e-05, "share_rows_beyond": 0.0009487666034155598, "passed": true}
+{"time": "2026-11-07T09:18:01+00:00", "event": "paused", "reason": "gpu 83 C"}
+{"time": "2026-11-07T09:21:46+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:22:19+00:00", "event": "done", "cohort": "a_gate_surface", "dataset": "acdc", "seed": 3, "n": 366}
+{"time": "2026-11-07T09:22:19+00:00", "event": "parity", "model": "a_gate_surface_acdc_seed3", "rows": 1047, "mean_abs_diff": 2.3197634525295996e-05, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:23:00+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T09:26:30+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:26:37+00:00", "event": "done", "cohort": "a_decoder", "dataset": "isic390", "seed": 1, "n": 390}
+{"time": "2026-11-07T09:26:37+00:00", "event": "parity", "model": "a_decoder_isic390_seed1", "rows": 390, "mean_abs_diff": 1.489731886294976e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:27:14+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T09:31:44+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:31:54+00:00", "event": "done", "cohort": "a_decoder", "dataset": "isic390", "seed": 2, "n": 390}
+{"time": "2026-11-07T09:31:54+00:00", "event": "parity", "model": "a_decoder_isic390_seed2", "rows": 390, "mean_abs_diff": 6.992563315266764e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:32:42+00:00", "event": "done", "cohort": "a_decoder", "dataset": "isic390", "seed": 3, "n": 390}
+{"time": "2026-11-07T09:32:42+00:00", "event": "parity", "model": "a_decoder_isic390_seed3", "rows": 390, "mean_abs_diff": 5.170674012622278e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:33:28+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T09:35:28+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:35:30+00:00", "event": "done", "cohort": "a_distill", "dataset": "isic390", "seed": 1, "n": 390}
+{"time": "2026-11-07T09:35:30+00:00", "event": "parity", "model": "a_distill_isic390_seed1", "rows": 390, "mean_abs_diff": 6.415743291299236e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:36:16+00:00", "event": "done", "cohort": "a_distill", "dataset": "isic390", "seed": 2, "n": 390}
+{"time": "2026-11-07T09:36:16+00:00", "event": "parity", "model": "a_distill_isic390_seed2", "rows": 390, "mean_abs_diff": 5.418322452599433e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:37:01+00:00", "event": "done", "cohort": "a_distill", "dataset": "isic390", "seed": 3, "n": 390}
+{"time": "2026-11-07T09:37:01+00:00", "event": "parity", "model": "a_distill_isic390_seed3", "rows": 390, "mean_abs_diff": 3.14714137805705e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:37:53+00:00", "event": "done", "cohort": "a_gate", "dataset": "isic390", "seed": 1, "n": 390}
+{"time": "2026-11-07T09:37:53+00:00", "event": "parity", "model": "a_gate_isic390_seed1", "rows": 390, "mean_abs_diff": 2.12470437632728e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:38:46+00:00", "event": "done", "cohort": "a_gate", "dataset": "isic390", "seed": 2, "n": 390}
+{"time": "2026-11-07T09:38:46+00:00", "event": "parity", "model": "a_gate_isic390_seed2", "rows": 390, "mean_abs_diff": 4.316739084964105e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:39:39+00:00", "event": "done", "cohort": "a_gate", "dataset": "isic390", "seed": 3, "n": 390}
+{"time": "2026-11-07T09:39:39+00:00", "event": "parity", "model": "a_gate_isic390_seed3", "rows": 390, "mean_abs_diff": 1.7529992933917882e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:40:33+00:00", "event": "done", "cohort": "a_gate_surface", "dataset": "isic390", "seed": 1, "n": 390}
+{"time": "2026-11-07T09:40:33+00:00", "event": "parity", "model": "a_gate_surface_isic390_seed1", "rows": 390, "mean_abs_diff": 4.2287341256441735e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:41:27+00:00", "event": "done", "cohort": "a_gate_surface", "dataset": "isic390", "seed": 2, "n": 390}
+{"time": "2026-11-07T09:41:27+00:00", "event": "parity", "model": "a_gate_surface_isic390_seed2", "rows": 390, "mean_abs_diff": 2.037108105645835e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:42:22+00:00", "event": "done", "cohort": "a_gate_surface", "dataset": "isic390", "seed": 3, "n": 390}
+{"time": "2026-11-07T09:42:22+00:00", "event": "parity", "model": "a_gate_surface_isic390_seed3", "rows": 390, "mean_abs_diff": 2.1303435842057183e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:43:10+00:00", "event": "done", "cohort": "a_unet", "dataset": "isic390", "seed": 1, "n": 390}
+{"time": "2026-11-07T09:43:10+00:00", "event": "parity", "model": "a_unet_isic390_seed1", "rows": 390, "mean_abs_diff": 8.264752691888866e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:43:58+00:00", "event": "done", "cohort": "a_unet", "dataset": "isic390", "seed": 2, "n": 390}
+{"time": "2026-11-07T09:43:58+00:00", "event": "parity", "model": "a_unet_isic390_seed2", "rows": 390, "mean_abs_diff": 3.2851899767205595e-07, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:44:47+00:00", "event": "done", "cohort": "a_unet", "dataset": "isic390", "seed": 3, "n": 390}
+{"time": "2026-11-07T09:44:47+00:00", "event": "parity", "model": "a_unet_isic390_seed3", "rows": 390, "mean_abs_diff": 2.0165637329983e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:45:40+00:00", "event": "done", "cohort": "a_full", "dataset": "isic390", "seed": 1, "n": 390}
+{"time": "2026-11-07T09:45:40+00:00", "event": "parity", "model": "a_full_isic390_seed1", "rows": 390, "mean_abs_diff": 4.6709872084660375e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:46:18+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T09:47:34+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:47:50+00:00", "event": "done", "cohort": "a_full", "dataset": "isic390", "seed": 2, "n": 390}
+{"time": "2026-11-07T09:47:50+00:00", "event": "parity", "model": "a_full_isic390_seed2", "rows": 390, "mean_abs_diff": 5.2506507814964465e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:48:45+00:00", "event": "done", "cohort": "a_full", "dataset": "isic390", "seed": 3, "n": 390}
+{"time": "2026-11-07T09:48:45+00:00", "event": "parity", "model": "a_full_isic390_seed3", "rows": 390, "mean_abs_diff": 3.535726272541062e-06, "share_rows_beyond": 0.0, "passed": true}
+{"time": "2026-11-07T09:52:13+00:00", "event": "done", "cohort": "a_decoder", "dataset": "synapse", "seed": 1, "n": 1568}
+{"time": "2026-11-07T09:52:13+00:00", "event": "parity", "model": "a_decoder_synapse_seed1", "rows": 4371, "mean_abs_diff": 0.0002409925384303513, "share_rows_beyond": 0.002059025394646534, "passed": true}
+{"time": "2026-11-07T09:53:53+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T09:56:38+00:00", "event": "resumed"}
+{"time": "2026-11-07T09:58:23+00:00", "event": "done", "cohort": "a_decoder", "dataset": "synapse", "seed": 2, "n": 1568}
+{"time": "2026-11-07T09:58:23+00:00", "event": "parity", "model": "a_decoder_synapse_seed2", "rows": 4321, "mean_abs_diff": 1.1931706839662937e-05, "share_rows_beyond": 0.001388567461235825, "passed": true}
+{"time": "2026-11-07T10:00:53+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T10:01:23+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:01:45+00:00", "event": "paused", "reason": "gpu 83 C"}
+{"time": "2026-11-07T10:04:00+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:04:33+00:00", "event": "done", "cohort": "a_decoder", "dataset": "synapse", "seed": 3, "n": 1568}
+{"time": "2026-11-07T10:04:33+00:00", "event": "parity", "model": "a_decoder_synapse_seed3", "rows": 4205, "mean_abs_diff": 1.72797890450882e-05, "share_rows_beyond": 0.002615933412604043, "passed": true}
+{"time": "2026-11-07T10:07:14+00:00", "event": "paused", "reason": "gpu 83 C"}
+{"time": "2026-11-07T10:09:14+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:09:55+00:00", "event": "done", "cohort": "a_distill", "dataset": "synapse", "seed": 1, "n": 1568}
+{"time": "2026-11-07T10:09:55+00:00", "event": "parity", "model": "a_distill_synapse_seed1", "rows": 4141, "mean_abs_diff": 5.484225817808941e-06, "share_rows_beyond": 0.0007244626901714562, "passed": true}
+{"time": "2026-11-07T10:12:24+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T10:14:40+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:15:29+00:00", "event": "done", "cohort": "a_distill", "dataset": "synapse", "seed": 2, "n": 1568}
+{"time": "2026-11-07T10:15:29+00:00", "event": "parity", "model": "a_distill_synapse_seed2", "rows": 4216, "mean_abs_diff": 1.989777671307369e-05, "share_rows_beyond": 0.0014231499051233396, "passed": true}
+{"time": "2026-11-07T10:16:47+00:00", "event": "paused", "reason": "gpu 87 C"}
+{"time": "2026-11-07T10:17:02+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:18:09+00:00", "event": "paused", "reason": "gpu 85 C"}
+{"time": "2026-11-07T10:18:24+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:18:30+00:00", "event": "paused", "reason": "gpu 85 C"}
+{"time": "2026-11-07T10:19:30+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:20:24+00:00", "event": "done", "cohort": "a_distill", "dataset": "synapse", "seed": 3, "n": 1568}
+{"time": "2026-11-07T10:20:24+00:00", "event": "parity", "model": "a_distill_synapse_seed3", "rows": 4020, "mean_abs_diff": 3.1854677811971044e-05, "share_rows_beyond": 0.0012437810945273632, "passed": true}
+{"time": "2026-11-07T10:21:59+00:00", "event": "paused", "reason": "gpu 85 C"}
+{"time": "2026-11-07T10:22:14+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:23:03+00:00", "event": "paused", "reason": "gpu 85 C"}
+{"time": "2026-11-07T10:23:18+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:24:25+00:00", "event": "paused", "reason": "gpu 85 C"}
+{"time": "2026-11-07T10:25:25+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:25:42+00:00", "event": "done", "cohort": "a_gate", "dataset": "synapse", "seed": 1, "n": 1568}
+{"time": "2026-11-07T10:25:42+00:00", "event": "parity", "model": "a_gate_synapse_seed1", "rows": 4172, "mean_abs_diff": 2.7668435726990737e-06, "share_rows_beyond": 0.0016778523489932886, "passed": true}
+{"time": "2026-11-07T10:26:07+00:00", "event": "paused", "reason": "gpu 83 C"}
+{"time": "2026-11-07T10:26:38+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:27:21+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T10:27:36+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:28:23+00:00", "event": "paused", "reason": "gpu 83 C"}
+{"time": "2026-11-07T10:29:08+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:29:51+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T10:30:52+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:30:54+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T10:31:39+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:32:22+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T10:32:52+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:33:14+00:00", "event": "done", "cohort": "a_gate", "dataset": "synapse", "seed": 2, "n": 1568}
+{"time": "2026-11-07T10:33:14+00:00", "event": "parity", "model": "a_gate_synapse_seed2", "rows": 4286, "mean_abs_diff": 0.00025048297866425706, "share_rows_beyond": 0.0018665422305179655, "passed": true}
+{"time": "2026-11-07T10:33:35+00:00", "event": "paused", "reason": "gpu 85 C"}
+{"time": "2026-11-07T10:33:50+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:35:41+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T10:35:56+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:36:23+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T10:36:38+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:36:45+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T10:37:00+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:38:03+00:00", "event": "done", "cohort": "a_gate", "dataset": "synapse", "seed": 3, "n": 1568}
+{"time": "2026-11-07T10:38:03+00:00", "event": "parity", "model": "a_gate_synapse_seed3", "rows": 4073, "mean_abs_diff": 6.828993140306494e-06, "share_rows_beyond": 0.00220967345936656, "passed": true}
+{"time": "2026-11-07T10:38:51+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T10:39:21+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:39:44+00:00", "event": "paused", "reason": "gpu 83 C"}
+{"time": "2026-11-07T10:39:59+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:40:05+00:00", "event": "paused", "reason": "gpu 85 C"}
+{"time": "2026-11-07T10:40:35+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:43:04+00:00", "event": "paused", "reason": "gpu 85 C"}
+{"time": "2026-11-07T10:43:20+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:43:38+00:00", "event": "done", "cohort": "a_gate_surface", "dataset": "synapse", "seed": 1, "n": 1568}
+{"time": "2026-11-07T10:43:38+00:00", "event": "parity", "model": "a_gate_surface_synapse_seed1", "rows": 4261, "mean_abs_diff": 2.1878384346751822e-05, "share_rows_beyond": 0.0018774935461159353, "passed": true}
+{"time": "2026-11-07T10:43:46+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T10:44:31+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:44:34+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T10:45:34+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:47:24+00:00", "event": "paused", "reason": "gpu 86 C"}
+{"time": "2026-11-07T10:47:39+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:48:27+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T10:49:13+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:50:23+00:00", "event": "done", "cohort": "a_gate_surface", "dataset": "synapse", "seed": 2, "n": 1568}
+{"time": "2026-11-07T10:50:23+00:00", "event": "parity", "model": "a_gate_surface_synapse_seed2", "rows": 4226, "mean_abs_diff": 1.1277066074510955e-05, "share_rows_beyond": 0.001656412683388547, "passed": true}
+{"time": "2026-11-07T10:52:28+00:00", "event": "paused", "reason": "gpu 86 C"}
+{"time": "2026-11-07T10:52:43+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:54:14+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T10:57:30+00:00", "event": "resumed"}
+{"time": "2026-11-07T10:57:47+00:00", "event": "done", "cohort": "a_gate_surface", "dataset": "synapse", "seed": 3, "n": 1568}
+{"time": "2026-11-07T10:57:47+00:00", "event": "parity", "model": "a_gate_surface_synapse_seed3", "rows": 4338, "mean_abs_diff": 2.02659991223042e-05, "share_rows_beyond": 0.0009220839096357768, "passed": true}
+{"time": "2026-11-07T10:59:55+00:00", "event": "paused", "reason": "gpu 86 C"}
+{"time": "2026-11-07T11:00:25+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:00:32+00:00", "event": "done", "cohort": "a_decoder", "dataset": "isic2018", "seed": 1, "n": 1000}
+{"time": "2026-11-07T11:00:46+00:00", "event": "paused", "reason": "gsl"}
+{"time": "2026-11-07T11:33:18+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:34:24+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T11:36:24+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:37:09+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T11:37:39+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:37:40+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T11:38:25+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:38:33+00:00", "event": "done", "cohort": "a_decoder", "dataset": "isic2018", "seed": 2, "n": 1000}
+{"time": "2026-11-07T11:39:07+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T11:40:07+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:41:34+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T11:41:49+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:42:08+00:00", "event": "done", "cohort": "a_decoder", "dataset": "isic2018", "seed": 3, "n": 1000}
+{"time": "2026-11-07T11:42:38+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T11:43:39+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:44:43+00:00", "event": "paused", "reason": "gpu 86 C"}
+{"time": "2026-11-07T11:45:13+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:46:03+00:00", "event": "done", "cohort": "a_distill", "dataset": "isic2018", "seed": 1, "n": 1000}
+{"time": "2026-11-07T11:46:37+00:00", "event": "paused", "reason": "gpu 86 C"}
+{"time": "2026-11-07T11:47:07+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:47:51+00:00", "event": "paused", "reason": "gpu 83 C"}
+{"time": "2026-11-07T11:48:36+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:49:21+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T11:49:51+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:50:11+00:00", "event": "done", "cohort": "a_distill", "dataset": "isic2018", "seed": 2, "n": 1000}
+{"time": "2026-11-07T11:50:13+00:00", "event": "paused", "reason": "gpu 86 C"}
+{"time": "2026-11-07T11:50:44+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:51:29+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T11:52:30+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:53:35+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T11:54:20+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:54:42+00:00", "event": "done", "cohort": "a_distill", "dataset": "isic2018", "seed": 3, "n": 1000}
+{"time": "2026-11-07T11:55:04+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T11:56:20+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:57:26+00:00", "event": "paused", "reason": "gpu 84 C"}
+{"time": "2026-11-07T11:57:56+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:57:58+00:00", "event": "paused", "reason": "gpu 82 C"}
+{"time": "2026-11-07T11:58:43+00:00", "event": "resumed"}
+{"time": "2026-11-07T11:59:36+00:00", "event": "done", "cohort": "a_gate", "dataset": "isic2018", "seed": 1, "n": 1000}
+{"time": "2026-11-07T12:01:55+00:00", "event": "done", "cohort": "a_gate", "dataset": "isic2018", "seed": 2, "n": 1000}
+{"time": "2026-11-07T12:04:19+00:00", "event": "done", "cohort": "a_gate", "dataset": "isic2018", "seed": 3, "n": 1000}
+{"time": "2026-11-07T12:06:40+00:00", "event": "done", "cohort": "a_gate_surface", "dataset": "isic2018", "seed": 1, "n": 1000}
+{"time": "2026-11-07T12:09:01+00:00", "event": "done", "cohort": "a_gate_surface", "dataset": "isic2018", "seed": 2, "n": 1000}
+{"time": "2026-11-07T12:11:24+00:00", "event": "done", "cohort": "a_gate_surface", "dataset": "isic2018", "seed": 3, "n": 1000}
+{"time": "2026-11-07T12:11:28+00:00", "event": "tolerance done", "arm": "unet", "seed": 1}
+{"time": "2026-11-07T12:11:30+00:00", "event": "tolerance done", "arm": "unet", "seed": 2}
+{"time": "2026-11-07T12:11:33+00:00", "event": "tolerance done", "arm": "unet", "seed": 3}
+{"time": "2026-11-07T12:11:35+00:00", "event": "tolerance done", "arm": "unet", "seed": 4}
+{"time": "2026-11-07T12:11:38+00:00", "event": "tolerance done", "arm": "unet", "seed": 5}
+{"time": "2026-11-07T12:11:40+00:00", "event": "tolerance done", "arm": "unet", "seed": 6}
+{"time": "2026-11-07T12:11:43+00:00", "event": "tolerance done", "arm": "unet", "seed": 7}
+{"time": "2026-11-07T12:11:45+00:00", "event": "tolerance done", "arm": "unet", "seed": 8}
+{"time": "2026-11-07T12:11:48+00:00", "event": "tolerance done", "arm": "unet", "seed": 9}
+{"time": "2026-11-07T12:11:50+00:00", "event": "tolerance done", "arm": "unet", "seed": 10}
+{"time": "2026-11-07T12:11:52+00:00", "event": "tolerance done", "arm": "decoder", "seed": 1}
+{"time": "2026-11-07T12:11:57+00:00", "event": "tolerance done", "arm": "decoder", "seed": 2}
+{"time": "2026-11-07T12:11:59+00:00", "event": "tolerance done", "arm": "decoder", "seed": 3}
+{"time": "2026-11-07T12:12:02+00:00", "event": "tolerance done", "arm": "decoder", "seed": 4}
+{"time": "2026-11-07T12:12:04+00:00", "event": "tolerance done", "arm": "decoder", "seed": 5}
+{"time": "2026-11-07T12:12:07+00:00", "event": "tolerance done", "arm": "decoder", "seed": 6}
+{"time": "2026-11-07T12:12:09+00:00", "event": "tolerance done", "arm": "decoder", "seed": 7}
+{"time": "2026-11-07T12:12:11+00:00", "event": "tolerance done", "arm": "decoder", "seed": 8}
+{"time": "2026-11-07T12:12:14+00:00", "event": "tolerance done", "arm": "decoder", "seed": 9}
+{"time": "2026-11-07T12:12:16+00:00", "event": "tolerance done", "arm": "decoder", "seed": 10}
+{"time": "2026-11-07T12:12:18+00:00", "event": "tolerance done", "arm": "full", "seed": 1}
+{"time": "2026-11-07T12:12:21+00:00", "event": "tolerance done", "arm": "full", "seed": 2}
+{"time": "2026-11-07T12:12:23+00:00", "event": "tolerance done", "arm": "full", "seed": 3}
+{"time": "2026-11-07T12:12:26+00:00", "event": "tolerance done", "arm": "full", "seed": 4}
+{"time": "2026-11-07T12:12:28+00:00", "event": "tolerance done", "arm": "full", "seed": 5}
+{"time": "2026-11-07T12:12:30+00:00", "event": "tolerance done", "arm": "full", "seed": 6}
+{"time": "2026-11-07T12:12:33+00:00", "event": "tolerance done", "arm": "full", "seed": 7}
+{"time": "2026-11-07T12:12:38+00:00", "event": "tolerance done", "arm": "full", "seed": 8}
+{"time": "2026-11-07T12:12:40+00:00", "event": "tolerance done", "arm": "full", "seed": 9}
+{"time": "2026-11-07T12:12:42+00:00", "event": "tolerance done", "arm": "full", "seed": 10}
+{"time": "2026-11-07T12:12:45+00:00", "event": "tolerance done", "arm": "gsl", "seed": 1}
+{"time": "2026-11-07T12:12:47+00:00", "event": "tolerance done", "arm": "gsl", "seed": 2}
+{"time": "2026-11-07T12:12:50+00:00", "event": "tolerance done", "arm": "gsl", "seed": 3}
+{"time": "2026-11-07T12:12:52+00:00", "event": "tolerance done", "arm": "gsl", "seed": 4}
+{"time": "2026-11-07T12:12:54+00:00", "event": "tolerance done", "arm": "gsl", "seed": 5}
+{"time": "2026-11-07T12:12:57+00:00", "event": "tolerance done", "arm": "gsl", "seed": 6}
+{"time": "2026-11-07T12:12:59+00:00", "event": "tolerance done", "arm": "gsl", "seed": 7}
+{"time": "2026-11-07T12:13:01+00:00", "event": "tolerance done", "arm": "gsl", "seed": 8}
+{"time": "2026-11-07T12:13:04+00:00", "event": "tolerance done", "arm": "gsl", "seed": 9}
+{"time": "2026-11-07T12:13:06+00:00", "event": "tolerance done", "arm": "gsl", "seed": 10}
+{"time": "2026-11-07T12:13:14+00:00", "event": "validation", "status": "PASSED", "failures": 0, "parity_failed": 0}
+{"time": "2026-11-07T12:13:14+00:00", "event": "finished"}

@@ -1,0 +1,631 @@
+commit d55a171dcdc629309f9cbb089dfe4dca8ea548a3
+Author:     Codex <codex@localhost>
+AuthorDate: Wed Oct 21 00:38:29 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Wed Oct 21 00:38:29 2026 +0200
+
+    Describe paired patient joint outcomes without reopening training
+
+commit 87afff2f543d041755b8a4bf612a157052d1f346
+Author:     Codex <codex@localhost>
+AuthorDate: Tue Oct 20 19:27:26 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Tue Oct 20 19:27:26 2026 +0200
+
+    Check primary constraint prior art without reopening closed training
+
+commit dcd12f9f30a97447191e6539fec1f5ffbe1766f2
+Author:     Codex <codex@localhost>
+AuthorDate: Tue Oct 20 19:23:35 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Tue Oct 20 19:23:35 2026 +0200
+
+    Audit fixed M V baseline and close failed reduction unit screen
+
+commit cf81af77317c75548f218faa799476b643d0848e
+Author:     Codex <codex@localhost>
+AuthorDate: Tue Oct 20 11:48:37 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Tue Oct 20 11:48:37 2026 +0200
+
+    Record healthy live phase baseline and ignore stale completed snapshot
+
+commit 6bd9af7a5419f64af5ff0ccbaa7dff330f38f151
+Author:     Codex <codex@localhost>
+AuthorDate: Tue Oct 20 11:46:48 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Tue Oct 20 11:46:48 2026 +0200
+
+    Launch fixed six-run phase-reduction baseline after independently passed profile
+
+commit 47b6d99df09e4bef2049e138e38b21924f543bf3
+Author:     Codex <codex@localhost>
+AuthorDate: Tue Oct 20 11:42:02 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Tue Oct 20 11:42:02 2026 +0200
+
+    Gate matched phase-reduction training with integration and immutable inputs
+
+commit 2ca97654d22e2212d92e948425a5bdae794ea55a
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 14:42:27 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 14:42:27 2026 +0200
+
+    Close offset correction novelty claim and prove matched phase-reduction gradients
+
+commit 5b35d48740e05da88e9eb6992309d20da3af1e74
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 14:26:18 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 14:26:18 2026 +0200
+
+    Verify real objective ranks and preserve constant-shift counterexample
+
+commit ac8ab8af98b80359b5a564fe581d865ef79d8424
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 14:18:39 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 14:18:39 2026 +0200
+
+    Freeze fixed-model objective alignment and gradient-equivalent score-shift control
+
+commit 8a585742ff5123d7ab748a9ad912b5b1fa056f69
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 14:05:46 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 14:05:46 2026 +0200
+
+    Record mixed destinations of local lost support and bound one robust-training primary check
+
+commit 65f5d32b1ca91536267170f4b08f72efb3700801
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 14:02:56 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 14:02:56 2026 +0200
+
+    Freeze complete multiclass destination diagnostic before native mask reads
+
+commit 45f66a574e2845aa323e2c32562d5162cbc92375
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 14:00:01 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 14:00:01 2026 +0200
+
+    Record fixed-model context intervention and heterogeneous support-loss evidence
+
+commit 6eab8875ca99c92248d3e4ad10a39ab0487b7136
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 13:56:23 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 13:56:23 2026 +0200
+
+    Freeze train-only reference ranks for local support loss diagnostic
+
+commit 28b2e3f7f67edf25b5e1138ba6f34980810adf7a
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 13:52:50 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 13:52:50 2026 +0200
+
+    Validate fixed-grid target support and freeze fixed-model context intervention
+
+commit 2b206a37cf0c2c46fe9e1943ce70f8e23bbfc103
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 13:49:03 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 13:49:03 2026 +0200
+
+    Ground loss-bias limits and freeze fixed-grid label reference diagnostic
+
+commit fb3f11623224b3b027545c2da8f2d875a1a1c71c
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 13:41:41 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 13:41:41 2026 +0200
+
+    Validate exact local lost support and bound one primary loss-bias review
+
+commit af517c4818ac72d9b8550e1b0e4a87841dea5d7d
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 13:39:19 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 13:39:19 2026 +0200
+
+    Verify plane-presence tradeoff and freeze exact native overlap-transition check
+
+commit deacfcb76e28692fc0aa294c2a09b8e4eed34ac7
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 13:34:02 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 13:34:02 2026 +0200
+
+    Freeze complete count-only class-plane tradeoff implementation
+
+commit 66090f3a6ce7c222a09bdc7b54619050f5575091
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 13:29:26 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 13:29:26 2026 +0200
+
+    Validate patient-level robustness and freeze class-plane tradeoff diagnostic
+
+commit 4ada67c7bcc2e8ef0a335b560d6988f6c3ff0b4b
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 13:26:47 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 13:26:47 2026 +0200
+
+    Freeze paired-patient sensitivity validation without new model runs
+
+commit 6b40746df30f095593bd88fcd4af1a8dae99352c
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 13:20:11 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 13:20:11 2026 +0200
+
+    Record hourly completed-state health and immutable-contract check
+
+commit 860788c11d8003979077c784420c4babbe40faed
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 13:18:30 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 13:18:30 2026 +0200
+
+    Record submitted access request and clarify existing dataset usability
+
+commit f77033458e06050fe9976473fe3104875cf816bf
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 12:27:36 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 12:27:36 2026 +0200
+
+    Verify official cardiac-cohort terms and prepare unsent development-only access draft
+
+commit 24ecb1d0ee9c09fbd8e6c24c8c66fe096c252d78
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 12:20:06 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 12:20:06 2026 +0200
+
+    Synthesize audited research evidence and bound one cohort-document feasibility task
+
+commit 29e286563404307962d58da452341d73b57d4d9d
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 12:15:51 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 12:15:51 2026 +0200
+
+    Archive full context baseline audit and enforce prospective input-route stop
+
+commit 957c86a09f5ad8e4c8d93e81c6c2683d6012acf0
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 12:13:33 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 12:13:33 2026 +0200
+
+    Freeze completed-context independent pixel replay and full budget screen
+
+commit 1dde20d2694d90c1de03c52f42f464f3bf66bf4c
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 10:18:35 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 10:18:35 2026 +0200
+
+    Prepare independent exposure and guard audit during healthy context training
+
+commit 8ac9c100592fb4f759ff61237aa224a51ef9b987
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 09:35:45 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 09:35:45 2026 +0200
+
+    Record healthy context queue launch and hourly audit handoff
+
+commit 10ae491dc64d6c02b6687cabf93b7c482550cd25
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 09:34:03 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 09:34:03 2026 +0200
+
+    Verify disposable context profile and authorize fixed three-seed baseline
+
+commit f578da162470a404c3204082d010927834a236fa
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 09:31:45 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 09:31:45 2026 +0200
+
+    Freeze isolated three-index region baseline integration and gates
+
+commit 3d4f82f89c9a33d94e89427b74555a879aca8491
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 07:28:38 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 07:28:38 2026 +0200
+
+    Close isolated-component descriptor and freeze a single ordinary context-input control
+
+commit fe3efa28fcc8c2b3ba4efda753991a3a8b9d4d42
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 07:18:07 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 07:18:07 2026 +0200
+
+    Freeze CPU-only original-error component decomposition with independent toy checks
+
+commit 1c9823cae3cff30a9912ce4a5e0eceec21c0c2f3
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 06:13:55 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 06:13:55 2026 +0200
+
+    Localize repeatable cardiac residual and reject generic shape module before mask diagnostic
+
+commit 339ed1a1f5fe57a1abe169fb7b664410ab45b0d2
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 06:06:21 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 06:06:21 2026 +0200
+
+    Close failed cardiac objective route after exact independent six-run audit
+
+commit bfe05364cab317338a14b3c6bb246c6e0453a5a1
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 06:01:18 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 06:01:18 2026 +0200
+
+    Freeze independent native prediction replay and complete cardiac baseline audit
+
+commit 562470aff01a119ab5811b82d8519d688dc3b6b6
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 00:51:29 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 00:51:29 2026 +0200
+
+    Clarify peak reserved CUDA memory in monitor handoff
+
+commit d306e3fd0d7c7798ef98881b1eb415c712ae662e
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 00:51:10 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 00:51:10 2026 +0200
+
+    Record fixed baseline launch and independent three-seed initialization check
+
+commit fa780944396b58c371df653eb54d37007840d8d4
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 00:48:57 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 00:48:57 2026 +0200
+
+    Accept independently checked runtime budget for fixed cardiac index baseline
+
+commit 60de76cd559386af8802a4723a39041ecfd0d39b
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 00:46:20 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 00:46:20 2026 +0200
+
+    Freeze isolated cardiac baseline integration and train-only profile gates
+
+commit 1e892fb6b66ad7afd7bd17474a08204949b0e36a
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 00:28:24 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 00:28:24 2026 +0200
+
+    Verify all cardiac index inputs and freeze separately gated baseline execution
+
+commit c4e1de480ca1b8c62e0fa623a2a449d06c16c3c3
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 00:22:29 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 00:22:29 2026 +0200
+
+    Preserve pre-array failure and narrowly validate editable HEAD separately
+
+commit 4c2393680bfff1cea4f4570253af3050039eabb9
+Author:     Codex <codex@localhost>
+AuthorDate: Mon Oct 19 00:19:41 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Mon Oct 19 00:19:41 2026 +0200
+
+    Freeze tested CPU index preparation and independent full-volume replay
+
+commit 488cf61d2e32f9885a895cbc82fdc79113562063
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 23:20:52 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 23:20:52 2026 +0200
+
+    Freeze patient-level index-grid baseline design and CPU preparation gates
+
+commit 9b667d64a02b5422bcc28842a76a20e290b7cc19
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 22:17:17 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 22:17:17 2026 +0200
+
+    Reject generic boundary confidence candidate against direct modern benchmark
+
+commit dabbac7dd245b2d03ee9a90b280e1628dc0cc53c
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 22:11:46 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 22:11:46 2026 +0200
+
+    Review foundational segmentation QC and bound contemporary comparison
+
+commit 02c54d9bda0ca11da4c924595311fabee25d9847
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 20:30:11 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 20:30:11 2026 +0200
+
+    Audit surface-loss formulas and gradients without changing frozen experiments
+
+commit 376415d53ba03a07f050b6e70c4d0092dc1a76ac
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 20:07:47 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 20:07:47 2026 +0200
+
+    Verify bounded annotation provenance screen failure and freeze loss baseline audit
+
+commit 13aa92d734f704285b9b4c46e3403b5156a32fd2
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 19:35:05 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 19:35:05 2026 +0200
+
+    Verify known identity components and focused primary reading; bound next route check
+
+commit 603db063d17478ecaa83c654bc6fb7221c728db7
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 19:25:59 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 19:25:59 2026 +0200
+
+    Verify ranking screen failure and official ISIC group overlap; freeze validation plan
+
+commit 3bf3f8f901ee047f1fcedd03a71f69a89b4a5a54
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 19:17:04 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 19:17:04 2026 +0200
+
+    Implement frozen zero-training operating-point diagnosis
+
+commit f6aa4fc1c4169c735fd5cb355ce84056c0ec1a42
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 19:12:51 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 19:12:51 2026 +0200
+
+    Audit official ACDC development data and preserve geometry failure; freeze ranking diagnostic
+
+commit 06d7be6f6f99641cd547f81e8aea214f7d2712cc
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 18:28:51 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 18:28:51 2026 +0200
+
+    Complete miss diagnosis and freeze official ACDC development-only data recovery
+
+commit a681e76e65e1e790f440c23e219245de70709710
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 18:10:35 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 18:10:35 2026 +0200
+
+    Preserve diagnostic failure and verify identity masks before probability rounding
+
+commit 41d80f779f40726ee0d3e43fde344eb34a943dee
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 18:05:57 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 18:05:57 2026 +0200
+
+    Audit augmented baseline failure guard and freeze zero-training complete-miss diagnosis
+
+commit 7694d17deceb756f67a27f35c236df4379102756
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 16:32:48 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 16:32:48 2026 +0200
+
+    Validate tolerance sensitivity and freeze conventional region-only D4 baseline
+
+commit d4d24f9d210286dcd9ec61073bb81e910eefd602
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 16:23:29 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 16:23:29 2026 +0200
+
+    Audit specificity controls, stop architecture expansion, freeze tolerance sensitivity audit
+
+commit bd265e7efc7d4683db35ac781a54ff9d5bf133df
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 14:42:04 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 14:42:04 2026 +0200
+
+    Audit pathway controls and freeze boundary-supervision specificity experiment
+
+commit 64e69f1931e4221d40920b7a6b6937fabf98d4c0
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 11:11:18 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 11:11:18 2026 +0200
+
+    exp(attribution): audit matrix and prepare pathway controls
+
+commit c7eb1e0497b574f23a5a9cac0a9fe12099375521
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 05:04:30 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 05:04:30 2026 +0200
+
+    feat(monitor): schedule hourly research checks and continuation
+
+commit 8dc6b0ac29702cf0f233c2c9189924f670c0a2ac
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 04:44:39 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 04:44:39 2026 +0200
+
+    docs(attribution): record validated execution and queue status
+
+commit 315f3ec42527120e692feb142a427bdb357d8119
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 04:43:04 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 04:43:04 2026 +0200
+
+    fix(attribution): preserve GradScaler overflow handling
+
+commit bebaa03ec3741e26ec8e4e18f0ddab1ba9d650a5
+Author:     Codex <codex@localhost>
+AuthorDate: Sun Oct 18 04:38:19 2026 +0200
+Commit:     Codex <codex@localhost>
+CommitDate: Sun Oct 18 04:38:19 2026 +0200
+
+    exp(attribution): prepare matched boundary and surface study
+
+commit 3104cb339101caaa190f4002c98bad9ff7b3bfa4
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Mon Jul 13 21:30:31 2026 +0200
+Commit:     GitHub <noreply@github.com>
+CommitDate: Mon Jul 13 21:30:31 2026 +0200
+
+    Update README.md
+
+commit 17d8655f3fe863f74b00402d6324e4e4f53f631f
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Mon Jul 13 21:26:35 2026 +0200
+Commit:     GitHub <noreply@github.com>
+CommitDate: Mon Jul 13 21:26:35 2026 +0200
+
+    Update REPRODUCIBILITY.md
+
+commit 204aef19d631ad2294e511f527b57f0855317c1c
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Mon Jul 13 21:23:09 2026 +0200
+Commit:     GitHub <noreply@github.com>
+CommitDate: Mon Jul 13 21:23:09 2026 +0200
+
+    Delete docs/zenodo.md
+
+commit 1ff81b036a3b41b4f3a3876699e03d0333f73530
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Mon Jul 13 21:22:39 2026 +0200
+Commit:     GitHub <noreply@github.com>
+CommitDate: Mon Jul 13 21:22:39 2026 +0200
+
+    Revise section titles and clarify artifact mapping
+    
+    Updated section headers and improved clarity in the README.
+
+commit c4ba21fdc177df444d5fa62bc9a5d13f8ce9a45d
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Mon Jul 13 21:11:16 2026 +0200
+Commit:     GitHub <noreply@github.com>
+CommitDate: Mon Jul 13 21:11:16 2026 +0200
+
+    Update CITATION.cff
+
+commit d345d49c4795a2f75d2f6f83a9b1059ced933f99
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Mon Jul 13 21:08:49 2026 +0200
+Commit:     GitHub <noreply@github.com>
+CommitDate: Mon Jul 13 21:08:49 2026 +0200
+
+    Delete ZENODO_MANIFEST.csv
+
+commit 099c9d7a68254f94a52a813352cf46dbe4986431
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Mon Jul 13 21:06:57 2026 +0200
+Commit:     GitHub <noreply@github.com>
+CommitDate: Mon Jul 13 21:06:57 2026 +0200
+
+    Update GitHub stats URL in README.md
+    
+    Removed mention of raw datasets and large binaries not in git.
+
+commit 890fc5ae8754ea1e5bd06d645f3d63178e1eead4
+Author:     Jingchen-Chen <[email redacted]>
+AuthorDate: Fri Jun 26 19:45:46 2026 +0200
+Commit:     Jingchen-Chen <[email redacted]>
+CommitDate: Fri Jun 26 19:45:46 2026 +0200
+
+    docs: streamline release materials
+
+commit 5319de32d7d820eb74a9a322442be030dd0e9fd8
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Fri Jun 26 18:42:11 2026 +0200
+Commit:     Jingchen Chen <[email redacted]>
+CommitDate: Fri Jun 26 18:42:11 2026 +0200
+
+    docs: align release docs with final figures
+
+commit 1d149bbf1a001eb4b720a84aa45704ee27a84a95
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Wed Jun 24 18:01:07 2026 +0200
+Commit:     Jingchen Chen <[email redacted]>
+CommitDate: Wed Jun 24 18:01:07 2026 +0200
+
+    Update final manuscript draft
+
+commit 6c4ba273681b58603538990a30c1167d94480686
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Tue Jun 23 00:07:24 2026 +0200
+Commit:     Jingchen Chen <[email redacted]>
+CommitDate: Tue Jun 23 00:07:24 2026 +0200
+
+    Upload release repository snapshot
+
+commit 4bd611c04d415e3dffbc0d52189e53689ef7372d
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Fri Jun 19 22:51:38 2026 +0200
+Commit:     Jingchen Chen <[email redacted]>
+CommitDate: Fri Jun 19 22:51:38 2026 +0200
+
+    Restore data preprocessing module for release provenance
+
+commit 4e930adcd81ee0bd486905a1c8cd54f8320f8d07
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Thu Jun 18 23:47:27 2026 +0200
+Commit:     Jingchen Chen <[email redacted]>
+CommitDate: Thu Jun 18 23:47:27 2026 +0200
+
+    Apply final-review changes
+    
+    - run_resolved/: inline VESTIGIAL-split_file warning on all 18 snapshots + README
+      (loader globs seed-2026 data/processed/; stale seed-1 split never consumed)
+    - remove build-process docs (audit/AUDIT.md, audit/STAGE2_PROPOSAL.md)
+    - add docs/traceability.md hub; link crosswalk prominently from README + results/README.md
+    - prune over-broad analysis notes (deployment_value_analysis, gsl_comparison_audit)
+    
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit 1b0c4f63e3bda0f2d4013ec84c937a1324bd9e93
+Author:     Jingchen Chen <[email redacted]>
+AuthorDate: Thu Jun 18 23:35:55 2026 +0200
+Commit:     Jingchen Chen <[email redacted]>
+CommitDate: Thu Jun 18 23:35:55 2026 +0200
+
+    Initial public reproducibility release for BDS-Lite
+    
+    Companion repository tracing every reported number to a config, script, and
+    machine-readable artifact. Conditional/mixed findings (ISIC2018 boundary gains,
+    ACDC null, Synapse distance trade-off); no SOTA/uniform-improvement claims.
+    
+    - src: U-Net, BDS-Lite (h_phi + bounded gate alpha=0.25), GSL comparator
+    - GSL re-based to MIST (Apache-2.0); surface term bit-identical to original
+    - configs of record (run_resolved) + matched GSL; seed-2026 split manifests
+    - cluster-aware analysis reproduces artifacts of record bit-for-bit
+    - large binaries (checkpoints, predictions) -> Zenodo (ZENODO_MANIFEST.csv)
+    
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>

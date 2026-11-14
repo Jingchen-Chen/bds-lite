@@ -1,0 +1,2 @@
+{"utc": "2026-11-02T18:14:44.378903+00:00", "event": "cool_ready", "temperature_c": 46, "memory_mib": 13}
+{"utc": "2026-11-02T18:14:44.379128+00:00", "event": "queue_start", "attempt": 1, "stdout": "revision/training_supervision/queue_attempt_1793643284379070931.log"}

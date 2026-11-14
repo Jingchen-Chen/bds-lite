@@ -1,0 +1,11 @@
+dataset,family,comparison,metric,n,excluded_units,mean_difference,ci95_low,ci95_high,p_raw,p_holm,practical_judgement,approx_normal_mde80_alpha05_over3,unit,geometry,bootstrap_draws,rng_seed
+acdc,V,full-U,dsc,20,0,0.014231918226718477,0.0027488093105581066,0.02991566353284969,0.01923370361328125,0.05770111083984375,inconclusive,0.023260236451471884,patient,processed224 index grid,10000,20261102
+acdc,V,full-U,hd95,20,0,1.7794896860451375,0.6618694194672323,3.0175450359818776,0.05316925048828125,0.1063385009765625,not assigned: uncalibrated 3D index distances,2.0418009388110083,patient,processed224 index grid,10000,20261102
+acdc,V,full-U,assd_pooled,20,0,0.2621313551652773,0.04508174891555553,0.5103072600958704,0.08969497680664062,0.1063385009765625,not assigned: uncalibrated 3D index distances,0.40527694704827105,patient,processed224 index grid,10000,20261102
+acdc,V-sensitivity,full-U,hd95_penalized,20,0,1.7794896860451375,0.6618694194672323,3.0175450359818776,,,not assigned: uncalibrated 3D index distances,2.0418009388110083,patient,processed224 index grid,10000,20261102
+acdc,V-sensitivity,full-U,assd_penalized,20,0,0.2621313551652773,0.04508174891555553,0.5103072600958704,,,not assigned: uncalibrated 3D index distances,0.40527694704827105,patient,processed224 index grid,10000,20261102
+synapse,V,full-U,dsc,12,0,0.013764667053752502,0.006717085111688906,0.020476683133729353,0.0068359375,0.0205078125,inconclusive,0.011733781524038776,case,native H5 index grid,10000,20261102
+synapse,V,full-U,hd95,11,1,-1.9013271415443356,-7.57147064066791,3.683321085628213,0.46484375,0.9296875,not assigned: uncalibrated 3D index distances,9.690854908750655,case,native H5 index grid,10000,20261102
+synapse,V,full-U,assd_pooled,11,1,-0.1656505671817835,-0.7771749228282984,0.5000347007569109,0.5771484375,0.9296875,not assigned: uncalibrated 3D index distances,1.1072190324813072,case,native H5 index grid,10000,20261102
+synapse,V-sensitivity,full-U,hd95_penalized,12,0,-1.7946404034798136,-7.012779397622022,3.369399725372412,,,not assigned: uncalibrated 3D index distances,8.853232035276104,case,native H5 index grid,10000,20261102
+synapse,V-sensitivity,full-U,assd_penalized,12,0,-0.15627286903357354,-0.7221157774081226,0.46396233466025577,,,not assigned: uncalibrated 3D index distances,1.0112034026820693,case,native H5 index grid,10000,20261102

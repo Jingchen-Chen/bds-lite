@@ -1,0 +1,17 @@
+\begin{tabular}{llllll}
+\toprule
+Metric & Contrast & ISIC2018 & ACDC & Synapse & Pooled (label) \\
+\midrule
+Boundary F1 & Decoder vs U-Net & +0.016 [$-$0.019, +0.051] & +0.016 [$-$0.001, +0.033] & +0.015 [$-$0.046, +0.076] & +0.016 [+0.005, +0.027] (gain, size unclear) \\
+ & Transfer, no surface loss & $-$0.005 [$-$0.047, +0.037] & +0.011 [$-$0.005, +0.026] & +0.021 [$-$0.052, +0.094] & +0.009 [$-$0.001, +0.019] (undetermined) \\
+ & Transfer, with surface loss & $-$0.013 [$-$0.052, +0.026] & +0.003 [$-$0.018, +0.024] & +0.006 [$-$0.028, +0.040] & +0.001 [$-$0.010, +0.013] (undetermined) \\
+\midrule
+DSC & Decoder vs U-Net & $-$0.001 [$-$0.007, +0.006] & +0.016 [$-$0.007, +0.038] & +0.016 [$-$0.045, +0.076] & +0.001 [$-$0.004, +0.005] (no relevant effect) \\
+ & Transfer, no surface loss & $-$0.001 [$-$0.009, +0.008] & +0.006 [$-$0.009, +0.021] & +0.019 [$-$0.048, +0.087] & +0.001 [$-$0.004, +0.006] (no relevant effect) \\
+ & Transfer, with surface loss & $-$0.004 [$-$0.014, +0.006] & +0.002 [$-$0.023, +0.028] & +0.007 [$-$0.024, +0.039] & $-$0.002 [$-$0.008, +0.004] (no relevant effect) \\
+\midrule
+HD95 (px) & Decoder vs U-Net & $-$0.16 [$-$2.97, +2.65] & $-$1.41 [$-$4.09, +1.27] & $-$0.11 [$-$1.87, +1.66] & $-$0.43 [$-$1.35, +0.49] (no relevant effect) \\
+ & Transfer, no surface loss & +0.45 [$-$2.13, +3.04] & +1.38 [$-$0.89, +3.64] & $-$0.04 [$-$2.22, +2.14] & +0.59 [$-$0.36, +1.54] (no relevant effect) \\
+ & Transfer, with surface loss & $-$0.07 [$-$5.07, +4.92] & $-$1.13 [$-$3.26, +1.00] & $-$0.08 [$-$1.71, +1.56] & $-$0.44 [$-$1.33, +0.44] (no relevant effect) \\
+\bottomrule
+\end{tabular}

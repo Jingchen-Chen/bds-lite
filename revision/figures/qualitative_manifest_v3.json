@@ -1,0 +1,440 @@
+{
+ "rule": "Selection: the fixed rule of figure_qualitative.py (prereg_revision.md), applied to the central contrast of the paper. Per dataset, the test sample with the largest positive, median, and largest negative seed-averaged HD95 difference decoder-only minus BDS-Lite (positive = BDS-Lite better), from the per-case CSVs; lexicographic ID ties; samples with undefined HD95 in any seed of either arm are excluded. The shown seed is the one whose per-seed difference is closest to the seed mean.",
+ "first": "M2",
+ "second": "M6",
+ "isic2018": {
+  "cases": [
+   {
+    "role": "largest BDS-Lite gain",
+    "id": "ISIC_0022856",
+    "delta_hd95_decoder_minus_bds": 45.08378378550211,
+    "shown_seed": 3,
+    "per_seed_delta": [
+     70.8208236694336,
+     -0.30713653564453125,
+     64.73766422271729
+    ],
+    "panels": {
+     "M0": {
+      "hd95": 6.324555397033691,
+      "fp_near": 195,
+      "fp_far": 292,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "M2": {
+      "hd95": 75.03329467773438,
+      "fp_near": 196,
+      "fp_far": 517,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 2
+     },
+     "M6": {
+      "hd95": 10.29563045501709,
+      "fp_near": 197,
+      "fp_far": 573,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "GSL": {
+      "hd95": 72.83712005615234,
+      "fp_near": 186,
+      "fp_far": 232,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 2
+     }
+    }
+   },
+   {
+    "role": "median",
+    "id": "ISIC_0020318",
+    "delta_hd95_decoder_minus_bds": -0.10748910903930664,
+    "shown_seed": 3,
+    "per_seed_delta": [
+     -4.180339813232422,
+     2.680119514465332,
+     1.17775297164917
+    ],
+    "panels": {
+     "M0": {
+      "hd95": 9.0,
+      "fp_near": 681,
+      "fp_far": 1068,
+      "fn_near": 128,
+      "fn_far": 45,
+      "spurious": 0
+     },
+     "M2": {
+      "hd95": 7.0,
+      "fp_near": 572,
+      "fp_far": 681,
+      "fn_near": 195,
+      "fn_far": 41,
+      "spurious": 1
+     },
+     "M6": {
+      "hd95": 5.82224702835083,
+      "fp_near": 641,
+      "fp_far": 566,
+      "fn_near": 107,
+      "fn_far": 5,
+      "spurious": 0
+     },
+     "GSL": {
+      "hd95": 56.66546630859375,
+      "fp_near": 532,
+      "fp_far": 831,
+      "fn_near": 249,
+      "fn_far": 320,
+      "spurious": 0
+     }
+    }
+   },
+   {
+    "role": "largest BDS-Lite loss",
+    "id": "ISIC_0036178",
+    "delta_hd95_decoder_minus_bds": -52.436142921447754,
+    "shown_seed": 3,
+    "per_seed_delta": [
+     -20.35620880126953,
+     -73.9154691696167,
+     -63.03675079345703
+    ],
+    "panels": {
+     "M0": {
+      "hd95": 57.48912811279297,
+      "fp_near": 568,
+      "fp_far": 890,
+      "fn_near": 2,
+      "fn_far": 0,
+      "spurious": 3
+     },
+     "M2": {
+      "hd95": 5.0,
+      "fp_near": 594,
+      "fp_far": 442,
+      "fn_near": 1,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "M6": {
+      "hd95": 68.03675079345703,
+      "fp_near": 590,
+      "fp_far": 1582,
+      "fn_near": 23,
+      "fn_far": 0,
+      "spurious": 3
+     },
+     "GSL": {
+      "hd95": 70.65967559814453,
+      "fp_near": 552,
+      "fp_far": 1198,
+      "fn_near": 23,
+      "fn_far": 0,
+      "spurious": 4
+     }
+    }
+   }
+  ],
+  "methods_shown": [
+   "M0",
+   "M2",
+   "M6",
+   "GSL"
+  ]
+ },
+ "acdc": {
+  "cases": [
+   {
+    "role": "largest BDS-Lite gain",
+    "id": "patient065_frame14_slice_7",
+    "delta_hd95_decoder_minus_bds": 33.16456661621729,
+    "shown_seed": 3,
+    "per_seed_delta": [
+     50.880372643470764,
+     -0.5,
+     49.11332720518112
+    ],
+    "panels": {
+     "M0": {
+      "hd95": 1.0,
+      "fp_near": 15,
+      "fp_far": 0,
+      "fn_near": 22,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "M2": {
+      "hd95": 50.32043397426605,
+      "fp_near": 34,
+      "fp_far": 25,
+      "fn_near": 21,
+      "fn_far": 0,
+      "spurious": 2
+     },
+     "M6": {
+      "hd95": 1.2071067690849304,
+      "fp_near": 28,
+      "fp_far": 1,
+      "fn_near": 21,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "GSL": {
+      "hd95": 1.0,
+      "fp_near": 14,
+      "fp_far": 0,
+      "fn_near": 16,
+      "fn_far": 0,
+      "spurious": 0
+     }
+    }
+   },
+   {
+    "role": "median",
+    "id": "patient056_frame01_slice_2",
+    "delta_hd95_decoder_minus_bds": -0.028584943877326092,
+    "shown_seed": 3,
+    "per_seed_delta": [
+     0.35424721240997314,
+     -0.47905449072519946,
+     0.03905244668324803
+    ],
+    "panels": {
+     "M0": {
+      "hd95": 1.8047378460566204,
+      "fp_near": 199,
+      "fp_far": 8,
+      "fn_near": 166,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "M2": {
+      "hd95": 1.6485281387964885,
+      "fp_near": 142,
+      "fp_far": 3,
+      "fn_near": 199,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "M6": {
+      "hd95": 1.6094756921132405,
+      "fp_near": 185,
+      "fp_far": 27,
+      "fn_near": 172,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "GSL": {
+      "hd95": 2.0,
+      "fp_near": 152,
+      "fp_far": 3,
+      "fn_near": 208,
+      "fn_far": 0,
+      "spurious": 0
+     }
+    }
+   },
+   {
+    "role": "largest BDS-Lite loss",
+    "id": "patient032_frame01_slice_8",
+    "delta_hd95_decoder_minus_bds": -46.83124595218234,
+    "shown_seed": 1,
+    "per_seed_delta": [
+     -45.66776484251022,
+     -31.816958109537758,
+     -63.009014904499054
+    ],
+    "panels": {
+     "M0": {
+      "hd95": 1.5,
+      "fp_near": 30,
+      "fp_far": 0,
+      "fn_near": 145,
+      "fn_far": 7,
+      "spurious": 0
+     },
+     "M2": {
+      "hd95": 10.738012135028839,
+      "fp_near": 44,
+      "fp_far": 22,
+      "fn_near": 133,
+      "fn_far": 7,
+      "spurious": 2
+     },
+     "M6": {
+      "hd95": 56.40577697753906,
+      "fp_near": 31,
+      "fp_far": 42,
+      "fn_near": 236,
+      "fn_far": 8,
+      "spurious": 2
+     },
+     "GSL": {
+      "hd95": 1.0,
+      "fp_near": 29,
+      "fp_far": 0,
+      "fn_near": 131,
+      "fn_far": 7,
+      "spurious": 0
+     }
+    }
+   }
+  ],
+  "methods_shown": [
+   "M0",
+   "M2",
+   "M6",
+   "GSL"
+  ]
+ },
+ "synapse": {
+  "cases": [
+   {
+    "role": "largest BDS-Lite gain",
+    "id": "case0036_slice093",
+    "delta_hd95_decoder_minus_bds": 23.694162368774414,
+    "shown_seed": 1,
+    "per_seed_delta": [
+     24.238576889038086,
+     46.843910217285156,
+     0.0
+    ],
+    "panels": {
+     "M0": {
+      "hd95": 1.0,
+      "fp_near": 6,
+      "fp_far": 57,
+      "fn_near": 4,
+      "fn_far": 0,
+      "spurious": 3
+     },
+     "M2": {
+      "hd95": 25.238576889038086,
+      "fp_near": 11,
+      "fp_far": 26,
+      "fn_near": 7,
+      "fn_far": 0,
+      "spurious": 5
+     },
+     "M6": {
+      "hd95": 1.0,
+      "fp_near": 7,
+      "fp_far": 38,
+      "fn_near": 6,
+      "fn_far": 0,
+      "spurious": 2
+     },
+     "GSL": {
+      "hd95": 1.0,
+      "fp_near": 7,
+      "fp_far": 74,
+      "fn_near": 10,
+      "fn_far": 0,
+      "spurious": 2
+     }
+    }
+   },
+   {
+    "role": "median",
+    "id": "case0029_slice099",
+    "delta_hd95_decoder_minus_bds": 0.0,
+    "shown_seed": 1,
+    "per_seed_delta": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "panels": {
+     "M0": {
+      "hd95": 1.0,
+      "fp_near": 7,
+      "fp_far": 0,
+      "fn_near": 2,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "M2": {
+      "hd95": 1.0,
+      "fp_near": 9,
+      "fp_far": 0,
+      "fn_near": 6,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "M6": {
+      "hd95": 1.0,
+      "fp_near": 8,
+      "fp_far": 0,
+      "fn_near": 2,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "GSL": {
+      "hd95": 1.0,
+      "fp_near": 8,
+      "fp_far": 0,
+      "fn_near": 5,
+      "fn_far": 0,
+      "spurious": 0
+     }
+    }
+   },
+   {
+    "role": "largest BDS-Lite loss",
+    "id": "case0003_slice184",
+    "delta_hd95_decoder_minus_bds": -34.182320614655815,
+    "shown_seed": 1,
+    "per_seed_delta": [
+     -25.673348248004913,
+     -21.495819330215454,
+     -55.37779426574707
+    ],
+    "panels": {
+     "M0": {
+      "hd95": 26.44894027709961,
+      "fp_near": 5,
+      "fp_far": 155,
+      "fn_near": 137,
+      "fn_far": 1,
+      "spurious": 2
+     },
+     "M2": {
+      "hd95": 1.2071067690849304,
+      "fp_near": 22,
+      "fp_far": 2,
+      "fn_near": 110,
+      "fn_far": 1,
+      "spurious": 1
+     },
+     "M6": {
+      "hd95": 26.880455017089844,
+      "fp_near": 9,
+      "fp_far": 53,
+      "fn_near": 164,
+      "fn_far": 20,
+      "spurious": 1
+     },
+     "GSL": {
+      "hd95": 27.48029088973999,
+      "fp_near": 9,
+      "fp_far": 63,
+      "fn_near": 121,
+      "fn_far": 1,
+      "spurious": 2
+     }
+    }
+   }
+  ],
+  "methods_shown": [
+   "M0",
+   "M2",
+   "M6",
+   "GSL"
+  ]
+ }
+}

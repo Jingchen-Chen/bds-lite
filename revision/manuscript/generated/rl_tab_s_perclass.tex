@@ -1,0 +1,194 @@
+% generated from revision/tables/families/per_class_dsc.csv; seed means
+\begin{longtable}{lllll}
+\toprule
+Dataset & Method & Class ID & DSC (reference present) & False-alarm rate \\
+\midrule
+ISIC2018 & U-Net (original) & 1 & 0.835 & -- \\
+ISIC2018 & BDS-Lite (original) & 1 & 0.838 & -- \\
+ISIC2018 & BDS-Lite, gate set to identity at inference (original) & 1 & 0.837 & -- \\
+ISIC2018 & U-Net + aux. boundary only & 1 & 0.840 & -- \\
+ISIC2018 & BDS-Lite - SDF & 1 & 0.840 & -- \\
+ISIC2018 & BDS-Lite - distillation & 1 & 0.840 & -- \\
+ISIC2018 & BDS-Lite - gate (alpha=0) & 1 & 0.838 & -- \\
+ISIC2018 & U-Net + GSL & 1 & 0.842 & -- \\
+ISIC2018 & U-Net + Boundary Loss & 1 & 0.841 & -- \\
+ISIC2018 & Attention U-Net & 1 & 0.842 & -- \\
+ISIC2018 & LB-UNet & 1 & 0.857 & -- \\
+ACDC & U-Net (original) & 2 & 0.798 & 0.556 \\
+ACDC & U-Net (original) & 3 & 0.866 & 0.368 \\
+ACDC & U-Net (original) & 1 & 0.741 & 0.340 \\
+ACDC & BDS-Lite (original) & 2 & 0.793 & 0.511 \\
+ACDC & BDS-Lite (original) & 3 & 0.872 & 0.386 \\
+ACDC & BDS-Lite (original) & 1 & 0.740 & 0.438 \\
+ACDC & BDS-Lite, gate set to identity at inference (original) & 2 & 0.793 & 0.511 \\
+ACDC & BDS-Lite, gate set to identity at inference (original) & 3 & 0.872 & 0.386 \\
+ACDC & BDS-Lite, gate set to identity at inference (original) & 1 & 0.741 & 0.438 \\
+ACDC & U-Net & 2 & 0.776 & 0.422 \\
+ACDC & U-Net & 3 & 0.847 & 0.333 \\
+ACDC & U-Net & 1 & 0.698 & 0.229 \\
+ACDC & BDS-Lite (full) & 2 & 0.793 & 0.511 \\
+ACDC & BDS-Lite (full) & 3 & 0.866 & 0.421 \\
+ACDC & BDS-Lite (full) & 1 & 0.720 & 0.353 \\
+ACDC & U-Net + SDF only & 2 & 0.782 & 0.489 \\
+ACDC & U-Net + SDF only & 3 & 0.857 & 0.263 \\
+ACDC & U-Net + SDF only & 1 & 0.712 & 0.294 \\
+ACDC & U-Net + aux. boundary only & 2 & 0.790 & 0.533 \\
+ACDC & U-Net + aux. boundary only & 3 & 0.868 & 0.404 \\
+ACDC & U-Net + aux. boundary only & 1 & 0.728 & 0.392 \\
+ACDC & BDS-Lite - SDF & 2 & 0.787 & 0.467 \\
+ACDC & BDS-Lite - SDF & 3 & 0.869 & 0.351 \\
+ACDC & BDS-Lite - SDF & 1 & 0.746 & 0.346 \\
+ACDC & BDS-Lite - distillation & 2 & 0.789 & 0.533 \\
+ACDC & BDS-Lite - distillation & 3 & 0.859 & 0.316 \\
+ACDC & BDS-Lite - distillation & 1 & 0.722 & 0.340 \\
+ACDC & BDS-Lite - gate (alpha=0) & 2 & 0.781 & 0.556 \\
+ACDC & BDS-Lite - gate (alpha=0) & 3 & 0.861 & 0.333 \\
+ACDC & BDS-Lite - gate (alpha=0) & 1 & 0.723 & 0.366 \\
+ACDC & U-Net + GSL & 2 & 0.792 & 0.511 \\
+ACDC & U-Net + GSL & 3 & 0.874 & 0.404 \\
+ACDC & U-Net + GSL & 1 & 0.722 & 0.307 \\
+ACDC & U-Net + Boundary Loss & 2 & 0.782 & 0.444 \\
+ACDC & U-Net + Boundary Loss & 3 & 0.863 & 0.351 \\
+ACDC & U-Net + Boundary Loss & 1 & 0.755 & 0.392 \\
+ACDC & Attention U-Net & 2 & 0.792 & 0.467 \\
+ACDC & Attention U-Net & 3 & 0.863 & 0.351 \\
+ACDC & Attention U-Net & 1 & 0.724 & 0.418 \\
+ACDC & LB-UNet & 2 & 0.513 & 0.889 \\
+ACDC & LB-UNet & 3 & 0.665 & 0.702 \\
+ACDC & LB-UNet & 1 & 0.464 & 0.739 \\
+ACDC & U-Net (follow-up) & 2 & 0.776 & 0.422 \\
+ACDC & U-Net (follow-up) & 3 & 0.847 & 0.333 \\
+ACDC & U-Net (follow-up) & 1 & 0.698 & 0.229 \\
+ACDC & BDS-Lite (follow-up) & 2 & 0.791 & 0.511 \\
+ACDC & BDS-Lite (follow-up) & 3 & 0.866 & 0.386 \\
+ACDC & BDS-Lite (follow-up) & 1 & 0.744 & 0.405 \\
+Synapse & U-Net (original) & 5 & 0.885 & 0.192 \\
+Synapse & U-Net (original) & 1 & 0.769 & 0.031 \\
+Synapse & U-Net (original) & 4 & 0.750 & 0.074 \\
+Synapse & U-Net (original) & 8 & 0.527 & 0.145 \\
+Synapse & U-Net (original) & 2 & 0.518 & 0.055 \\
+Synapse & U-Net (original) & 6 & 0.201 & 0.073 \\
+Synapse & U-Net (original) & 3 & 0.801 & 0.090 \\
+Synapse & U-Net (original) & 7 & 0.824 & 0.073 \\
+Synapse & BDS-Lite (original) & 5 & 0.874 & 0.169 \\
+Synapse & BDS-Lite (original) & 1 & 0.781 & 0.027 \\
+Synapse & BDS-Lite (original) & 4 & 0.757 & 0.096 \\
+Synapse & BDS-Lite (original) & 8 & 0.545 & 0.154 \\
+Synapse & BDS-Lite (original) & 2 & 0.488 & 0.031 \\
+Synapse & BDS-Lite (original) & 6 & 0.240 & 0.075 \\
+Synapse & BDS-Lite (original) & 3 & 0.791 & 0.091 \\
+Synapse & BDS-Lite (original) & 7 & 0.829 & 0.075 \\
+Synapse & BDS-Lite, gate set to identity at inference (original) & 5 & 0.874 & 0.169 \\
+Synapse & BDS-Lite, gate set to identity at inference (original) & 1 & 0.781 & 0.027 \\
+Synapse & BDS-Lite, gate set to identity at inference (original) & 4 & 0.756 & 0.096 \\
+Synapse & BDS-Lite, gate set to identity at inference (original) & 8 & 0.545 & 0.154 \\
+Synapse & BDS-Lite, gate set to identity at inference (original) & 2 & 0.488 & 0.031 \\
+Synapse & BDS-Lite, gate set to identity at inference (original) & 6 & 0.240 & 0.075 \\
+Synapse & BDS-Lite, gate set to identity at inference (original) & 3 & 0.791 & 0.091 \\
+Synapse & BDS-Lite, gate set to identity at inference (original) & 7 & 0.829 & 0.075 \\
+Synapse & U-Net & 5 & 0.876 & 0.170 \\
+Synapse & U-Net & 1 & 0.747 & 0.037 \\
+Synapse & U-Net & 4 & 0.744 & 0.135 \\
+Synapse & U-Net & 8 & 0.497 & 0.142 \\
+Synapse & U-Net & 2 & 0.508 & 0.069 \\
+Synapse & U-Net & 6 & 0.193 & 0.080 \\
+Synapse & U-Net & 3 & 0.772 & 0.099 \\
+Synapse & U-Net & 7 & 0.814 & 0.083 \\
+Synapse & BDS-Lite (full) & 5 & 0.877 & 0.205 \\
+Synapse & BDS-Lite (full) & 1 & 0.761 & 0.039 \\
+Synapse & BDS-Lite (full) & 4 & 0.751 & 0.086 \\
+Synapse & BDS-Lite (full) & 8 & 0.559 & 0.172 \\
+Synapse & BDS-Lite (full) & 2 & 0.540 & 0.055 \\
+Synapse & BDS-Lite (full) & 6 & 0.198 & 0.073 \\
+Synapse & BDS-Lite (full) & 3 & 0.780 & 0.102 \\
+Synapse & BDS-Lite (full) & 7 & 0.808 & 0.083 \\
+Synapse & U-Net + SDF only & 5 & 0.874 & 0.144 \\
+Synapse & U-Net + SDF only & 1 & 0.706 & 0.031 \\
+Synapse & U-Net + SDF only & 4 & 0.760 & 0.088 \\
+Synapse & U-Net + SDF only & 8 & 0.524 & 0.129 \\
+Synapse & U-Net + SDF only & 2 & 0.496 & 0.051 \\
+Synapse & U-Net + SDF only & 6 & 0.179 & 0.090 \\
+Synapse & U-Net + SDF only & 3 & 0.773 & 0.095 \\
+Synapse & U-Net + SDF only & 7 & 0.792 & 0.065 \\
+Synapse & U-Net + aux. boundary only & 5 & 0.874 & 0.171 \\
+Synapse & U-Net + aux. boundary only & 1 & 0.763 & 0.027 \\
+Synapse & U-Net + aux. boundary only & 4 & 0.734 & 0.091 \\
+Synapse & U-Net + aux. boundary only & 8 & 0.519 & 0.152 \\
+Synapse & U-Net + aux. boundary only & 2 & 0.498 & 0.069 \\
+Synapse & U-Net + aux. boundary only & 6 & 0.181 & 0.068 \\
+Synapse & U-Net + aux. boundary only & 3 & 0.784 & 0.090 \\
+Synapse & U-Net + aux. boundary only & 7 & 0.818 & 0.080 \\
+Synapse & BDS-Lite - SDF & 5 & 0.868 & 0.125 \\
+Synapse & BDS-Lite - SDF & 1 & 0.743 & 0.025 \\
+Synapse & BDS-Lite - SDF & 4 & 0.737 & 0.068 \\
+Synapse & BDS-Lite - SDF & 8 & 0.465 & 0.105 \\
+Synapse & BDS-Lite - SDF & 2 & 0.515 & 0.042 \\
+Synapse & BDS-Lite - SDF & 6 & 0.199 & 0.056 \\
+Synapse & BDS-Lite - SDF & 3 & 0.724 & 0.058 \\
+Synapse & BDS-Lite - SDF & 7 & 0.774 & 0.067 \\
+Synapse & BDS-Lite - distillation & 5 & 0.875 & 0.155 \\
+Synapse & BDS-Lite - distillation & 1 & 0.700 & 0.013 \\
+Synapse & BDS-Lite - distillation & 4 & 0.737 & 0.072 \\
+Synapse & BDS-Lite - distillation & 8 & 0.509 & 0.153 \\
+Synapse & BDS-Lite - distillation & 2 & 0.530 & 0.071 \\
+Synapse & BDS-Lite - distillation & 6 & 0.188 & 0.078 \\
+Synapse & BDS-Lite - distillation & 3 & 0.772 & 0.093 \\
+Synapse & BDS-Lite - distillation & 7 & 0.789 & 0.056 \\
+Synapse & BDS-Lite - gate (alpha=0) & 5 & 0.880 & 0.180 \\
+Synapse & BDS-Lite - gate (alpha=0) & 1 & 0.727 & 0.024 \\
+Synapse & BDS-Lite - gate (alpha=0) & 4 & 0.753 & 0.095 \\
+Synapse & BDS-Lite - gate (alpha=0) & 8 & 0.505 & 0.144 \\
+Synapse & BDS-Lite - gate (alpha=0) & 2 & 0.529 & 0.079 \\
+Synapse & BDS-Lite - gate (alpha=0) & 6 & 0.160 & 0.085 \\
+Synapse & BDS-Lite - gate (alpha=0) & 3 & 0.786 & 0.109 \\
+Synapse & BDS-Lite - gate (alpha=0) & 7 & 0.818 & 0.080 \\
+Synapse & U-Net + GSL & 5 & 0.868 & 0.146 \\
+Synapse & U-Net + GSL & 1 & 0.760 & 0.018 \\
+Synapse & U-Net + GSL & 4 & 0.744 & 0.063 \\
+Synapse & U-Net + GSL & 8 & 0.517 & 0.129 \\
+Synapse & U-Net + GSL & 2 & 0.491 & 0.053 \\
+Synapse & U-Net + GSL & 6 & 0.211 & 0.063 \\
+Synapse & U-Net + GSL & 3 & 0.774 & 0.055 \\
+Synapse & U-Net + GSL & 7 & 0.798 & 0.057 \\
+Synapse & U-Net + Boundary Loss & 5 & 0.871 & 0.175 \\
+Synapse & U-Net + Boundary Loss & 1 & 0.708 & 0.016 \\
+Synapse & U-Net + Boundary Loss & 4 & 0.738 & 0.082 \\
+Synapse & U-Net + Boundary Loss & 8 & 0.481 & 0.111 \\
+Synapse & U-Net + Boundary Loss & 2 & 0.514 & 0.057 \\
+Synapse & U-Net + Boundary Loss & 6 & 0.183 & 0.069 \\
+Synapse & U-Net + Boundary Loss & 3 & 0.746 & 0.051 \\
+Synapse & U-Net + Boundary Loss & 7 & 0.776 & 0.042 \\
+Synapse & Attention U-Net & 5 & 0.860 & 0.135 \\
+Synapse & Attention U-Net & 1 & 0.717 & 0.020 \\
+Synapse & Attention U-Net & 4 & 0.720 & 0.068 \\
+Synapse & Attention U-Net & 8 & 0.505 & 0.109 \\
+Synapse & Attention U-Net & 2 & 0.304 & 0.028 \\
+Synapse & Attention U-Net & 6 & 0.139 & 0.043 \\
+Synapse & Attention U-Net & 3 & 0.762 & 0.078 \\
+Synapse & Attention U-Net & 7 & 0.799 & 0.051 \\
+Synapse & LB-UNet & 5 & 0.705 & 0.123 \\
+Synapse & LB-UNet & 1 & 0.144 & 0.037 \\
+Synapse & LB-UNet & 4 & 0.390 & 0.164 \\
+Synapse & LB-UNet & 8 & 0.322 & 0.122 \\
+Synapse & LB-UNet & 2 & 0.209 & 0.164 \\
+Synapse & LB-UNet & 6 & 0.069 & 0.133 \\
+Synapse & LB-UNet & 3 & 0.281 & 0.178 \\
+Synapse & LB-UNet & 7 & 0.427 & 0.156 \\
+Synapse & U-Net (follow-up) & 5 & 0.876 & 0.170 \\
+Synapse & U-Net (follow-up) & 1 & 0.747 & 0.037 \\
+Synapse & U-Net (follow-up) & 4 & 0.744 & 0.135 \\
+Synapse & U-Net (follow-up) & 8 & 0.497 & 0.142 \\
+Synapse & U-Net (follow-up) & 2 & 0.508 & 0.069 \\
+Synapse & U-Net (follow-up) & 6 & 0.193 & 0.080 \\
+Synapse & U-Net (follow-up) & 3 & 0.772 & 0.099 \\
+Synapse & U-Net (follow-up) & 7 & 0.814 & 0.083 \\
+Synapse & BDS-Lite (follow-up) & 5 & 0.877 & 0.205 \\
+Synapse & BDS-Lite (follow-up) & 1 & 0.761 & 0.039 \\
+Synapse & BDS-Lite (follow-up) & 4 & 0.751 & 0.086 \\
+Synapse & BDS-Lite (follow-up) & 8 & 0.559 & 0.172 \\
+Synapse & BDS-Lite (follow-up) & 2 & 0.540 & 0.055 \\
+Synapse & BDS-Lite (follow-up) & 6 & 0.198 & 0.073 \\
+Synapse & BDS-Lite (follow-up) & 3 & 0.780 & 0.102 \\
+Synapse & BDS-Lite (follow-up) & 7 & 0.808 & 0.083 \\
+\bottomrule
+\end{longtable}

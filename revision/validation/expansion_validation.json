@@ -1,0 +1,12 @@
+{
+ "runs": 40,
+ "failures": {},
+ "duplicate_trajectories": [],
+ "independent_recomputation": {
+  "isic2018_m0_unet_seed4": [],
+  "isic2018_m2_aux_boundary_only_seed4": [],
+  "isic2018_m6_full_seed4": [],
+  "isic2018_gsl_seed4": []
+ },
+ "status": "PASSED"
+}

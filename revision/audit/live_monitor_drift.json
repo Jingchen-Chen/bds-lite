@@ -1,0 +1,20 @@
+{
+  "original_files_checked": 46422,
+  "migrated_files_checked": 32926,
+  "failures": [
+    {
+      "path": "/home/jc/bds-followup/research/boundary_attribution_20261017/monitoring/events/LATEST.json",
+      "reason": "original bytes changed",
+      "current_sha256": "6217272cec578d91dabb07159cb92e33bd3a80c79170872b57f7de964f6494c0",
+      "captured_path": "revision/audit/live_monitor_drift/LATEST.json",
+      "classification": "source changed during audit; live operational state; original pre-migration copy retained, not reverted"
+    },
+    {
+      "path": "/home/jc/bds-followup/research/boundary_attribution_20261017/monitoring/events/last_delivery_failure.json",
+      "reason": "original bytes changed",
+      "current_sha256": "f0cd1bf249f427773e77ce7dc6b66cf5859c36dc564f4a3315390d7b17d071bf",
+      "captured_path": "revision/audit/live_monitor_drift/last_delivery_failure.json",
+      "classification": "source changed during audit; live operational state; original pre-migration copy retained, not reverted"
+    }
+  ]
+}

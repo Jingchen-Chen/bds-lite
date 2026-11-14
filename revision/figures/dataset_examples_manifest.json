@@ -1,0 +1,8 @@
+{
+ "rule": "max present classes, then median foreground area, lexicographic ties (training split)",
+ "samples": {
+  "isic2018": "data/processed/isic2018/train/ISIC_0009874.npz",
+  "acdc": "data/processed/acdc/train/patient096_frame08_slice_11.npz",
+  "synapse": "data/processed/synapse/train/case0007_slice099.npz"
+ }
+}

@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software or its artifacts, please cite the software and the associated paper."
+title: "BDS-Lite: code and evidence for 'When does boundary distillation help lightweight medical image segmentation?'"
+version: "2.0.0"
+type: software
+authors:
+  - family-names: Chen
+    given-names: Jingchen
+license: MIT
+repository-code: "https://github.com/Jingchen-Chen/bds-lite"
+keywords:
+  - medical image segmentation
+  - boundary distillation
+  - knowledge distillation
+  - lightweight segmentation
+  - U-Net
+preferred-citation:
+  type: article
+  title: "When does boundary distillation help lightweight medical image segmentation?"
+  authors:
+    - family-names: Chen
+      given-names: Jingchen
+    - family-names: Hong
+      given-names: Chenxiang
+    - family-names: Wu
+      given-names: Yao
+    - family-names: Yang
+      given-names: Tao
+  journal: "PeerJ Computer Science"
+  year: 2026
+  notes: "Manuscript CS-2026:06:142937, under revision."

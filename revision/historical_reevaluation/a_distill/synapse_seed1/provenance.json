@@ -1,0 +1,8 @@
+{
+ "checkpoint": "outputs/runs/synapse_bds_lite_boundary_distill_seed1/best.pt",
+ "checkpoint_sha256": "30ac6a87389e10107ae1016378c7a9eacf724c5b666c289fb46e205ce1cd25f2",
+ "n_samples": 1568,
+ "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
+ "per_case_sha256": "7b528be4f3f91a0587b1718cbac05008bd06f303d121941fa57851bca814f7f2",
+ "protocol_sha256": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095"
+}

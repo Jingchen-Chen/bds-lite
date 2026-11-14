@@ -1,0 +1,1556 @@
+# WP5 diagnostics + Tier-A ablations/C3; see ABLATION_PROTOCOL*.md
+runs:
+- run_id: isic2018_wp5_full_seed1
+  approved: true
+  config: configs/revision/isic2018_wp5_full_seed1.yaml
+  config_sha256: 3ba651156914c4be89c1c088f35e2d18b46ed3623a38f2e59dd7e7b1abc1d954
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources:
+  - path: src/bds_lite/__init__.py
+    sha256: 4a1b1fdfa6e2653e73b57415cda03bf4ef61b0353fe3eb8ee953d13f5bb8042d
+  - path: src/bds_lite/data/__init__.py
+    sha256: ce3b2fca30b9e224c09b8b2e60054d92b3e790389a347ef98ec65ae3179713e0
+  - path: src/bds_lite/data/boundary.py
+    sha256: 9fbfcd96ab2ded0b4570276382fb279a8186c95e47089c219e4b35139c92e00b
+  - path: src/bds_lite/data/converters.py
+    sha256: 163690f125c3e90468932868e622087e0f695046d74d1820655a319950548172
+  - path: src/bds_lite/data/datasets.py
+    sha256: 271fbe49c11f20fb96b0f4ce9dec33a3296087af2e6620d193b4321597d83fe4
+  - path: src/bds_lite/data/schema.py
+    sha256: cdb2a15844f13dad43d198b50d0dae0a4e028f0833b10dac019ee537dbd02347
+  - path: src/bds_lite/evaluation/__init__.py
+    sha256: 6cdf7590e6643931831f285d86a48175c78f6ecb061fafa8c154a1a8d72ace9a
+  - path: src/bds_lite/evaluation/metrics.py
+    sha256: 7332676cb92d31111654b805265fcca2741569de71d6bbfbe8af64a428f22f1c
+  - path: src/bds_lite/evaluation/profiling.py
+    sha256: 2c5050644afe3a1b22994d586e45c6a4c6c84c1295b2cf8f7ae7a97322786d5e
+  - path: src/bds_lite/losses/__init__.py
+    sha256: dd342eb439bf1922c0ee125ef8736382acf6dc97b7316ec5c38c0597bb446d43
+  - path: src/bds_lite/losses/boundary_dou.py
+    sha256: aa18141625c41ee13770470507881406e8879b6afce5154cfbc3c838d069f33a
+  - path: src/bds_lite/losses/gsl.py
+    sha256: d33395038de74305e6b94e13a9c72daffa1980a82eb4fc702e2658c261e69e4f
+  - path: src/bds_lite/models/__init__.py
+    sha256: 3adf7a8d8d57c31a661349d84bcac9f6b6e6af0a49b0355179800fe3e45bc7a7
+  - path: src/bds_lite/models/bds_lite.py
+    sha256: 38f29fb103238c7e021d843d7a698bd86cb328c582febb2a4f52f67af36611cd
+  - path: src/bds_lite/models/blocks.py
+    sha256: 1706bbc6005658d0d83a2744a0f28a5de2664c63559d1283f57b6d9b64297853
+  - path: src/bds_lite/models/ege_unet.py
+    sha256: 54a226682610ef6e43d1b61b36768a0ccf08b3a387a770dc081648c636289c20
+  - path: src/bds_lite/models/mobilevit_unet.py
+    sha256: be85324ae710de53749be87b06cfbb8b4a0c8e061605935282a7b2c4bf0c4b02
+  - path: src/bds_lite/models/unet.py
+    sha256: e6662bba98018ee06cacf2608a93085cc0670892ec5057e5a06e6eaa56541f71
+  - path: src/bds_lite/training/__init__.py
+    sha256: 094bb1725286711ebd27fd579e22c6028c80909919eec875c1ee0f4ddf1c04c5
+  - path: src/bds_lite/training/builders.py
+    sha256: 66ac1f684757a7e2da736472674caa51be640d061495794d80a32262fa0e5b46
+  - path: src/bds_lite/training/losses.py
+    sha256: 67aaa72ac6beb8fe520347e70d82a74b6fcb30b64ba1d8afd635973dd91e0407
+  - path: src/bds_lite/training/runner.py
+    sha256: 1c99d29af7cf7acbb7d1da370d4646a090a99e0f868c70162cce86a11a54d812
+  - path: src/bds_lite/utils/__init__.py
+    sha256: 82a4a11ad0deb2075ee67b71ccac18b6935def6228bdd5fcd8308806a523dfc4
+  - path: src/bds_lite/utils/config.py
+    sha256: 1f206a9034abb442d053e24075ff4767870cd6dc61873d2a276cc452a1512cfc
+  - path: src/bds_lite/utils/seed.py
+    sha256: a753ef1e19bc99266365590b3452ef9e99c0250b9edec5415b6d1db67c37262c
+  - path: scripts/revision/acquire_official_isic.py
+    sha256: 79b601e92039ea44109aaddc856b975e4d8f378843eab45790691a5ff4eb7551
+  - path: scripts/revision/build_status.py
+    sha256: a8a36de1dff7cff8783780143e6196eeadfc644cac686b46978cc57a52037d93
+  - path: scripts/revision/catalog_checkpoints.py
+    sha256: a6bb1531f0984c0615bfd571c1d9000785b5c6e886cffc6f89a602f32a8240f1
+  - path: scripts/revision/finalize_reports.py
+    sha256: 57e4634ad80dfb05c0b550620026e5b0d5fbfe50e32a7ebb256a715c1e77d56d
+  - path: scripts/revision/inventory_sources.py
+    sha256: 825e58f45457b5aba1c1e45cc815160bad49796cf4a205b4de87eab9d04d8069
+  - path: scripts/revision/migrate_sources.py
+    sha256: 2f8dee73338783681589fbedbef87da115fb7936234f1fe9654d9861f37bd2af
+  - path: scripts/revision/run_queue.py
+    sha256: 392379e364413609f28f3105d3f8af96a590bdb2c82e0a194b2d1132e774d203
+  - path: scripts/revision/train_run.py
+    sha256: 10c0f722beb4bb4d8cea9e07fd0b30e594df9d69d140f3973d171e6dd6186cc5
+  - path: scripts/revision/training_support.py
+    sha256: a90945ceca92ba158df21ce3334dc6f661376cb92aa2eac5684b85d2ed016cfc
+  - path: scripts/revision/verify_migration.py
+    sha256: eec1b04ac5a6bdc60fbde2474bfbdc395c1f575ef76b240dec50a9b320cceee6
+  - path: scripts/revision/verify_preservation_final.py
+    sha256: 38b92f95c852b0ba872ca6a7ef538c05c19ab278396a5fe14b1df6ee6b7ea9d4
+  - path: analysis/revision/recover_predictions.py
+    sha256: 29700c6421d909bc687e528a7dbbe60e2aba93a882d92facb5c9b4163c56282d
+  - path: revision/TRAINING_ADAPTER_PROTOCOL.md
+    sha256: cdadd5ddc31b8f03a4035bb965a1a7b7f1194e3090a84a7b86918dcc5ae4c7be
+  output: results/revision_runs/isic2018_wp5_full_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_wp5_full_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_wp5_full_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_wp5_full_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_wp5_full_seed1
+  - --resume
+- run_id: acdc_wp5_full_seed1
+  approved: true
+  config: configs/revision/acdc_wp5_full_seed1.yaml
+  config_sha256: df4790d1a629222b539f872808c05184d16650ee9940fff95c740b986e225a80
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources:
+  - path: src/bds_lite/__init__.py
+    sha256: 4a1b1fdfa6e2653e73b57415cda03bf4ef61b0353fe3eb8ee953d13f5bb8042d
+  - path: src/bds_lite/data/__init__.py
+    sha256: ce3b2fca30b9e224c09b8b2e60054d92b3e790389a347ef98ec65ae3179713e0
+  - path: src/bds_lite/data/boundary.py
+    sha256: 9fbfcd96ab2ded0b4570276382fb279a8186c95e47089c219e4b35139c92e00b
+  - path: src/bds_lite/data/converters.py
+    sha256: 163690f125c3e90468932868e622087e0f695046d74d1820655a319950548172
+  - path: src/bds_lite/data/datasets.py
+    sha256: 271fbe49c11f20fb96b0f4ce9dec33a3296087af2e6620d193b4321597d83fe4
+  - path: src/bds_lite/data/schema.py
+    sha256: cdb2a15844f13dad43d198b50d0dae0a4e028f0833b10dac019ee537dbd02347
+  - path: src/bds_lite/evaluation/__init__.py
+    sha256: 6cdf7590e6643931831f285d86a48175c78f6ecb061fafa8c154a1a8d72ace9a
+  - path: src/bds_lite/evaluation/metrics.py
+    sha256: 7332676cb92d31111654b805265fcca2741569de71d6bbfbe8af64a428f22f1c
+  - path: src/bds_lite/evaluation/profiling.py
+    sha256: 2c5050644afe3a1b22994d586e45c6a4c6c84c1295b2cf8f7ae7a97322786d5e
+  - path: src/bds_lite/losses/__init__.py
+    sha256: dd342eb439bf1922c0ee125ef8736382acf6dc97b7316ec5c38c0597bb446d43
+  - path: src/bds_lite/losses/boundary_dou.py
+    sha256: aa18141625c41ee13770470507881406e8879b6afce5154cfbc3c838d069f33a
+  - path: src/bds_lite/losses/gsl.py
+    sha256: d33395038de74305e6b94e13a9c72daffa1980a82eb4fc702e2658c261e69e4f
+  - path: src/bds_lite/models/__init__.py
+    sha256: 3adf7a8d8d57c31a661349d84bcac9f6b6e6af0a49b0355179800fe3e45bc7a7
+  - path: src/bds_lite/models/bds_lite.py
+    sha256: 38f29fb103238c7e021d843d7a698bd86cb328c582febb2a4f52f67af36611cd
+  - path: src/bds_lite/models/blocks.py
+    sha256: 1706bbc6005658d0d83a2744a0f28a5de2664c63559d1283f57b6d9b64297853
+  - path: src/bds_lite/models/ege_unet.py
+    sha256: 54a226682610ef6e43d1b61b36768a0ccf08b3a387a770dc081648c636289c20
+  - path: src/bds_lite/models/mobilevit_unet.py
+    sha256: be85324ae710de53749be87b06cfbb8b4a0c8e061605935282a7b2c4bf0c4b02
+  - path: src/bds_lite/models/unet.py
+    sha256: e6662bba98018ee06cacf2608a93085cc0670892ec5057e5a06e6eaa56541f71
+  - path: src/bds_lite/training/__init__.py
+    sha256: 094bb1725286711ebd27fd579e22c6028c80909919eec875c1ee0f4ddf1c04c5
+  - path: src/bds_lite/training/builders.py
+    sha256: 66ac1f684757a7e2da736472674caa51be640d061495794d80a32262fa0e5b46
+  - path: src/bds_lite/training/losses.py
+    sha256: 67aaa72ac6beb8fe520347e70d82a74b6fcb30b64ba1d8afd635973dd91e0407
+  - path: src/bds_lite/training/runner.py
+    sha256: 1c99d29af7cf7acbb7d1da370d4646a090a99e0f868c70162cce86a11a54d812
+  - path: src/bds_lite/utils/__init__.py
+    sha256: 82a4a11ad0deb2075ee67b71ccac18b6935def6228bdd5fcd8308806a523dfc4
+  - path: src/bds_lite/utils/config.py
+    sha256: 1f206a9034abb442d053e24075ff4767870cd6dc61873d2a276cc452a1512cfc
+  - path: src/bds_lite/utils/seed.py
+    sha256: a753ef1e19bc99266365590b3452ef9e99c0250b9edec5415b6d1db67c37262c
+  - path: scripts/revision/acquire_official_isic.py
+    sha256: 79b601e92039ea44109aaddc856b975e4d8f378843eab45790691a5ff4eb7551
+  - path: scripts/revision/build_status.py
+    sha256: a8a36de1dff7cff8783780143e6196eeadfc644cac686b46978cc57a52037d93
+  - path: scripts/revision/catalog_checkpoints.py
+    sha256: a6bb1531f0984c0615bfd571c1d9000785b5c6e886cffc6f89a602f32a8240f1
+  - path: scripts/revision/finalize_reports.py
+    sha256: 57e4634ad80dfb05c0b550620026e5b0d5fbfe50e32a7ebb256a715c1e77d56d
+  - path: scripts/revision/inventory_sources.py
+    sha256: 825e58f45457b5aba1c1e45cc815160bad49796cf4a205b4de87eab9d04d8069
+  - path: scripts/revision/migrate_sources.py
+    sha256: 2f8dee73338783681589fbedbef87da115fb7936234f1fe9654d9861f37bd2af
+  - path: scripts/revision/run_queue.py
+    sha256: 392379e364413609f28f3105d3f8af96a590bdb2c82e0a194b2d1132e774d203
+  - path: scripts/revision/train_run.py
+    sha256: 10c0f722beb4bb4d8cea9e07fd0b30e594df9d69d140f3973d171e6dd6186cc5
+  - path: scripts/revision/training_support.py
+    sha256: a90945ceca92ba158df21ce3334dc6f661376cb92aa2eac5684b85d2ed016cfc
+  - path: scripts/revision/verify_migration.py
+    sha256: eec1b04ac5a6bdc60fbde2474bfbdc395c1f575ef76b240dec50a9b320cceee6
+  - path: scripts/revision/verify_preservation_final.py
+    sha256: 38b92f95c852b0ba872ca6a7ef538c05c19ab278396a5fe14b1df6ee6b7ea9d4
+  - path: analysis/revision/recover_predictions.py
+    sha256: 29700c6421d909bc687e528a7dbbe60e2aba93a882d92facb5c9b4163c56282d
+  - path: revision/TRAINING_ADAPTER_PROTOCOL.md
+    sha256: cdadd5ddc31b8f03a4035bb965a1a7b7f1194e3090a84a7b86918dcc5ae4c7be
+  output: results/revision_runs/acdc_wp5_full_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_wp5_full_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_wp5_full_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_wp5_full_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_wp5_full_seed1
+  - --resume
+- run_id: synapse_wp5_full_seed1
+  approved: true
+  config: configs/revision/synapse_wp5_full_seed1.yaml
+  config_sha256: 0604ead22a53f69e21df98eb5dacc2e8d5df0303ee7c90a0e14f372f69c582cd
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources:
+  - path: src/bds_lite/__init__.py
+    sha256: 4a1b1fdfa6e2653e73b57415cda03bf4ef61b0353fe3eb8ee953d13f5bb8042d
+  - path: src/bds_lite/data/__init__.py
+    sha256: ce3b2fca30b9e224c09b8b2e60054d92b3e790389a347ef98ec65ae3179713e0
+  - path: src/bds_lite/data/boundary.py
+    sha256: 9fbfcd96ab2ded0b4570276382fb279a8186c95e47089c219e4b35139c92e00b
+  - path: src/bds_lite/data/converters.py
+    sha256: 163690f125c3e90468932868e622087e0f695046d74d1820655a319950548172
+  - path: src/bds_lite/data/datasets.py
+    sha256: 271fbe49c11f20fb96b0f4ce9dec33a3296087af2e6620d193b4321597d83fe4
+  - path: src/bds_lite/data/schema.py
+    sha256: cdb2a15844f13dad43d198b50d0dae0a4e028f0833b10dac019ee537dbd02347
+  - path: src/bds_lite/evaluation/__init__.py
+    sha256: 6cdf7590e6643931831f285d86a48175c78f6ecb061fafa8c154a1a8d72ace9a
+  - path: src/bds_lite/evaluation/metrics.py
+    sha256: 7332676cb92d31111654b805265fcca2741569de71d6bbfbe8af64a428f22f1c
+  - path: src/bds_lite/evaluation/profiling.py
+    sha256: 2c5050644afe3a1b22994d586e45c6a4c6c84c1295b2cf8f7ae7a97322786d5e
+  - path: src/bds_lite/losses/__init__.py
+    sha256: dd342eb439bf1922c0ee125ef8736382acf6dc97b7316ec5c38c0597bb446d43
+  - path: src/bds_lite/losses/boundary_dou.py
+    sha256: aa18141625c41ee13770470507881406e8879b6afce5154cfbc3c838d069f33a
+  - path: src/bds_lite/losses/gsl.py
+    sha256: d33395038de74305e6b94e13a9c72daffa1980a82eb4fc702e2658c261e69e4f
+  - path: src/bds_lite/models/__init__.py
+    sha256: 3adf7a8d8d57c31a661349d84bcac9f6b6e6af0a49b0355179800fe3e45bc7a7
+  - path: src/bds_lite/models/bds_lite.py
+    sha256: 38f29fb103238c7e021d843d7a698bd86cb328c582febb2a4f52f67af36611cd
+  - path: src/bds_lite/models/blocks.py
+    sha256: 1706bbc6005658d0d83a2744a0f28a5de2664c63559d1283f57b6d9b64297853
+  - path: src/bds_lite/models/ege_unet.py
+    sha256: 54a226682610ef6e43d1b61b36768a0ccf08b3a387a770dc081648c636289c20
+  - path: src/bds_lite/models/mobilevit_unet.py
+    sha256: be85324ae710de53749be87b06cfbb8b4a0c8e061605935282a7b2c4bf0c4b02
+  - path: src/bds_lite/models/unet.py
+    sha256: e6662bba98018ee06cacf2608a93085cc0670892ec5057e5a06e6eaa56541f71
+  - path: src/bds_lite/training/__init__.py
+    sha256: 094bb1725286711ebd27fd579e22c6028c80909919eec875c1ee0f4ddf1c04c5
+  - path: src/bds_lite/training/builders.py
+    sha256: 66ac1f684757a7e2da736472674caa51be640d061495794d80a32262fa0e5b46
+  - path: src/bds_lite/training/losses.py
+    sha256: 67aaa72ac6beb8fe520347e70d82a74b6fcb30b64ba1d8afd635973dd91e0407
+  - path: src/bds_lite/training/runner.py
+    sha256: 1c99d29af7cf7acbb7d1da370d4646a090a99e0f868c70162cce86a11a54d812
+  - path: src/bds_lite/utils/__init__.py
+    sha256: 82a4a11ad0deb2075ee67b71ccac18b6935def6228bdd5fcd8308806a523dfc4
+  - path: src/bds_lite/utils/config.py
+    sha256: 1f206a9034abb442d053e24075ff4767870cd6dc61873d2a276cc452a1512cfc
+  - path: src/bds_lite/utils/seed.py
+    sha256: a753ef1e19bc99266365590b3452ef9e99c0250b9edec5415b6d1db67c37262c
+  - path: scripts/revision/acquire_official_isic.py
+    sha256: 79b601e92039ea44109aaddc856b975e4d8f378843eab45790691a5ff4eb7551
+  - path: scripts/revision/build_status.py
+    sha256: a8a36de1dff7cff8783780143e6196eeadfc644cac686b46978cc57a52037d93
+  - path: scripts/revision/catalog_checkpoints.py
+    sha256: a6bb1531f0984c0615bfd571c1d9000785b5c6e886cffc6f89a602f32a8240f1
+  - path: scripts/revision/finalize_reports.py
+    sha256: 57e4634ad80dfb05c0b550620026e5b0d5fbfe50e32a7ebb256a715c1e77d56d
+  - path: scripts/revision/inventory_sources.py
+    sha256: 825e58f45457b5aba1c1e45cc815160bad49796cf4a205b4de87eab9d04d8069
+  - path: scripts/revision/migrate_sources.py
+    sha256: 2f8dee73338783681589fbedbef87da115fb7936234f1fe9654d9861f37bd2af
+  - path: scripts/revision/run_queue.py
+    sha256: 392379e364413609f28f3105d3f8af96a590bdb2c82e0a194b2d1132e774d203
+  - path: scripts/revision/train_run.py
+    sha256: 10c0f722beb4bb4d8cea9e07fd0b30e594df9d69d140f3973d171e6dd6186cc5
+  - path: scripts/revision/training_support.py
+    sha256: a90945ceca92ba158df21ce3334dc6f661376cb92aa2eac5684b85d2ed016cfc
+  - path: scripts/revision/verify_migration.py
+    sha256: eec1b04ac5a6bdc60fbde2474bfbdc395c1f575ef76b240dec50a9b320cceee6
+  - path: scripts/revision/verify_preservation_final.py
+    sha256: 38b92f95c852b0ba872ca6a7ef538c05c19ab278396a5fe14b1df6ee6b7ea9d4
+  - path: analysis/revision/recover_predictions.py
+    sha256: 29700c6421d909bc687e528a7dbbe60e2aba93a882d92facb5c9b4163c56282d
+  - path: revision/TRAINING_ADAPTER_PROTOCOL.md
+    sha256: cdadd5ddc31b8f03a4035bb965a1a7b7f1194e3090a84a7b86918dcc5ae4c7be
+  output: results/revision_runs/synapse_wp5_full_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_wp5_full_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_wp5_full_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_wp5_full_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_wp5_full_seed1
+  - --resume
+- run_id: acdc_m1_sdf_only_seed1
+  approved: true
+  config: configs/revision/acdc_m1_sdf_only_seed1.yaml
+  config_sha256: 6d19da8ebb3f3addb0ee7157158d5f1c8a7d65645fa652cd26679dcad5564246
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: &id001
+  - path: src/bds_lite/__init__.py
+    sha256: 4a1b1fdfa6e2653e73b57415cda03bf4ef61b0353fe3eb8ee953d13f5bb8042d
+  - path: src/bds_lite/data/__init__.py
+    sha256: ce3b2fca30b9e224c09b8b2e60054d92b3e790389a347ef98ec65ae3179713e0
+  - path: src/bds_lite/data/boundary.py
+    sha256: 9fbfcd96ab2ded0b4570276382fb279a8186c95e47089c219e4b35139c92e00b
+  - path: src/bds_lite/data/converters.py
+    sha256: 163690f125c3e90468932868e622087e0f695046d74d1820655a319950548172
+  - path: src/bds_lite/data/datasets.py
+    sha256: 271fbe49c11f20fb96b0f4ce9dec33a3296087af2e6620d193b4321597d83fe4
+  - path: src/bds_lite/data/schema.py
+    sha256: cdb2a15844f13dad43d198b50d0dae0a4e028f0833b10dac019ee537dbd02347
+  - path: src/bds_lite/evaluation/__init__.py
+    sha256: 6cdf7590e6643931831f285d86a48175c78f6ecb061fafa8c154a1a8d72ace9a
+  - path: src/bds_lite/evaluation/metrics.py
+    sha256: 7332676cb92d31111654b805265fcca2741569de71d6bbfbe8af64a428f22f1c
+  - path: src/bds_lite/evaluation/profiling.py
+    sha256: 2c5050644afe3a1b22994d586e45c6a4c6c84c1295b2cf8f7ae7a97322786d5e
+  - path: src/bds_lite/losses/__init__.py
+    sha256: dd342eb439bf1922c0ee125ef8736382acf6dc97b7316ec5c38c0597bb446d43
+  - path: src/bds_lite/losses/boundary_dou.py
+    sha256: aa18141625c41ee13770470507881406e8879b6afce5154cfbc3c838d069f33a
+  - path: src/bds_lite/losses/gsl.py
+    sha256: d33395038de74305e6b94e13a9c72daffa1980a82eb4fc702e2658c261e69e4f
+  - path: src/bds_lite/models/__init__.py
+    sha256: 3adf7a8d8d57c31a661349d84bcac9f6b6e6af0a49b0355179800fe3e45bc7a7
+  - path: src/bds_lite/models/bds_lite.py
+    sha256: 38f29fb103238c7e021d843d7a698bd86cb328c582febb2a4f52f67af36611cd
+  - path: src/bds_lite/models/blocks.py
+    sha256: 1706bbc6005658d0d83a2744a0f28a5de2664c63559d1283f57b6d9b64297853
+  - path: src/bds_lite/models/ege_unet.py
+    sha256: 54a226682610ef6e43d1b61b36768a0ccf08b3a387a770dc081648c636289c20
+  - path: src/bds_lite/models/mobilevit_unet.py
+    sha256: be85324ae710de53749be87b06cfbb8b4a0c8e061605935282a7b2c4bf0c4b02
+  - path: src/bds_lite/models/unet.py
+    sha256: e6662bba98018ee06cacf2608a93085cc0670892ec5057e5a06e6eaa56541f71
+  - path: src/bds_lite/training/__init__.py
+    sha256: 094bb1725286711ebd27fd579e22c6028c80909919eec875c1ee0f4ddf1c04c5
+  - path: src/bds_lite/training/builders.py
+    sha256: 66ac1f684757a7e2da736472674caa51be640d061495794d80a32262fa0e5b46
+  - path: src/bds_lite/training/losses.py
+    sha256: 67aaa72ac6beb8fe520347e70d82a74b6fcb30b64ba1d8afd635973dd91e0407
+  - path: src/bds_lite/training/runner.py
+    sha256: 1c99d29af7cf7acbb7d1da370d4646a090a99e0f868c70162cce86a11a54d812
+  - path: src/bds_lite/utils/__init__.py
+    sha256: 82a4a11ad0deb2075ee67b71ccac18b6935def6228bdd5fcd8308806a523dfc4
+  - path: src/bds_lite/utils/config.py
+    sha256: 1f206a9034abb442d053e24075ff4767870cd6dc61873d2a276cc452a1512cfc
+  - path: src/bds_lite/utils/seed.py
+    sha256: a753ef1e19bc99266365590b3452ef9e99c0250b9edec5415b6d1db67c37262c
+  - path: scripts/revision/acquire_official_isic.py
+    sha256: 79b601e92039ea44109aaddc856b975e4d8f378843eab45790691a5ff4eb7551
+  - path: scripts/revision/build_status.py
+    sha256: a8a36de1dff7cff8783780143e6196eeadfc644cac686b46978cc57a52037d93
+  - path: scripts/revision/catalog_checkpoints.py
+    sha256: a6bb1531f0984c0615bfd571c1d9000785b5c6e886cffc6f89a602f32a8240f1
+  - path: scripts/revision/finalize_reports.py
+    sha256: 57e4634ad80dfb05c0b550620026e5b0d5fbfe50e32a7ebb256a715c1e77d56d
+  - path: scripts/revision/inventory_sources.py
+    sha256: 825e58f45457b5aba1c1e45cc815160bad49796cf4a205b4de87eab9d04d8069
+  - path: scripts/revision/migrate_sources.py
+    sha256: 2f8dee73338783681589fbedbef87da115fb7936234f1fe9654d9861f37bd2af
+  - path: scripts/revision/run_queue.py
+    sha256: 392379e364413609f28f3105d3f8af96a590bdb2c82e0a194b2d1132e774d203
+  - path: scripts/revision/train_run.py
+    sha256: 10c0f722beb4bb4d8cea9e07fd0b30e594df9d69d140f3973d171e6dd6186cc5
+  - path: scripts/revision/training_support.py
+    sha256: a90945ceca92ba158df21ce3334dc6f661376cb92aa2eac5684b85d2ed016cfc
+  - path: scripts/revision/verify_migration.py
+    sha256: eec1b04ac5a6bdc60fbde2474bfbdc395c1f575ef76b240dec50a9b320cceee6
+  - path: scripts/revision/verify_preservation_final.py
+    sha256: 38b92f95c852b0ba872ca6a7ef538c05c19ab278396a5fe14b1df6ee6b7ea9d4
+  - path: analysis/revision/recover_predictions.py
+    sha256: 29700c6421d909bc687e528a7dbbe60e2aba93a882d92facb5c9b4163c56282d
+  - path: revision/TRAINING_ADAPTER_PROTOCOL.md
+    sha256: cdadd5ddc31b8f03a4035bb965a1a7b7f1194e3090a84a7b86918dcc5ae4c7be
+  output: results/revision_runs/acdc_m1_sdf_only_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m1_sdf_only_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_m1_sdf_only_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m1_sdf_only_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_m1_sdf_only_seed1
+  - --resume
+- run_id: acdc_m6_full_unweighted_seed1
+  approved: true
+  config: configs/revision/acdc_m6_full_unweighted_seed1.yaml
+  config_sha256: f98ec54d1bc655b847a59654da022b6ba8b7f4f286206bd3d6f4867be25391e3
+  manifests: &id002
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_m6_full_unweighted_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m6_full_unweighted_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_m6_full_unweighted_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m6_full_unweighted_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_m6_full_unweighted_seed1
+  - --resume
+- run_id: acdc_m6_full_unweighted_seed2
+  approved: true
+  config: configs/revision/acdc_m6_full_unweighted_seed2.yaml
+  config_sha256: 2c3da48cf26a62d69c44ba7515202eae0434edc1bdab80d15b5d70ea917742f9
+  manifests: *id002
+  sources: *id001
+  output: results/revision_runs/acdc_m6_full_unweighted_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m6_full_unweighted_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_m6_full_unweighted_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m6_full_unweighted_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_m6_full_unweighted_seed2
+  - --resume
+- run_id: acdc_m6_full_unweighted_seed3
+  approved: true
+  config: configs/revision/acdc_m6_full_unweighted_seed3.yaml
+  config_sha256: f60d36becccdafc7635a10dba34008ce715f2ca2f63f39e3a6a3fcc1322c6b9a
+  manifests: *id002
+  sources: *id001
+  output: results/revision_runs/acdc_m6_full_unweighted_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m6_full_unweighted_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_m6_full_unweighted_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m6_full_unweighted_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_m6_full_unweighted_seed3
+  - --resume
+- run_id: acdc_m1_sdf_only_unweighted_seed1
+  approved: true
+  config: configs/revision/acdc_m1_sdf_only_unweighted_seed1.yaml
+  config_sha256: 7e4ec8ff928c7cca448569f9b68a66ceae24313cfc825ff70053ded579a11282
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_m1_sdf_only_unweighted_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m1_sdf_only_unweighted_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_m1_sdf_only_unweighted_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m1_sdf_only_unweighted_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_m1_sdf_only_unweighted_seed1
+  - --resume
+- run_id: acdc_m1_sdf_only_unweighted_seed2
+  approved: true
+  config: configs/revision/acdc_m1_sdf_only_unweighted_seed2.yaml
+  config_sha256: cb07cab9940058e4f8e1f7ac5954c38ffcf75faf20793008c582452007118aba
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_m1_sdf_only_unweighted_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m1_sdf_only_unweighted_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_m1_sdf_only_unweighted_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m1_sdf_only_unweighted_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_m1_sdf_only_unweighted_seed2
+  - --resume
+- run_id: acdc_m1_sdf_only_unweighted_seed3
+  approved: true
+  config: configs/revision/acdc_m1_sdf_only_unweighted_seed3.yaml
+  config_sha256: c2edaec35d5dd8ce12e4f72530df38dea36d6abc58ae1e1412fea1c4f1354de4
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_m1_sdf_only_unweighted_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m1_sdf_only_unweighted_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_m1_sdf_only_unweighted_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m1_sdf_only_unweighted_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_m1_sdf_only_unweighted_seed3
+  - --resume
+- run_id: acdc_m3_no_sdf_unweighted_seed1
+  approved: true
+  config: configs/revision/acdc_m3_no_sdf_unweighted_seed1.yaml
+  config_sha256: 1f530e4113e22ecf56038be8478bddbe464227d438b7dad1bfbdaef29a8aa730
+  manifests: *id002
+  sources: *id001
+  output: results/revision_runs/acdc_m3_no_sdf_unweighted_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m3_no_sdf_unweighted_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_m3_no_sdf_unweighted_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m3_no_sdf_unweighted_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_m3_no_sdf_unweighted_seed1
+  - --resume
+- run_id: acdc_m3_no_sdf_unweighted_seed2
+  approved: true
+  config: configs/revision/acdc_m3_no_sdf_unweighted_seed2.yaml
+  config_sha256: 92ebae31087453be694ec31703ea509a5938a064eec265d9c5b1a99f9d48340d
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_m3_no_sdf_unweighted_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m3_no_sdf_unweighted_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_m3_no_sdf_unweighted_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m3_no_sdf_unweighted_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_m3_no_sdf_unweighted_seed2
+  - --resume
+- run_id: acdc_m3_no_sdf_unweighted_seed3
+  approved: true
+  config: configs/revision/acdc_m3_no_sdf_unweighted_seed3.yaml
+  config_sha256: ef9f984ed868c70292ad206302fc333d2afddb5464e2a74909aee4d5b6b1d6a1
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_m3_no_sdf_unweighted_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m3_no_sdf_unweighted_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_m3_no_sdf_unweighted_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m3_no_sdf_unweighted_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_m3_no_sdf_unweighted_seed3
+  - --resume
+- run_id: acdc_m4_no_distill_unweighted_seed1
+  approved: true
+  config: configs/revision/acdc_m4_no_distill_unweighted_seed1.yaml
+  config_sha256: 59190bb8f1680945800a90eb27e0e273df8e51d8ece01e190694b521a9c30b96
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_m4_no_distill_unweighted_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m4_no_distill_unweighted_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_m4_no_distill_unweighted_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m4_no_distill_unweighted_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_m4_no_distill_unweighted_seed1
+  - --resume
+- run_id: acdc_m4_no_distill_unweighted_seed2
+  approved: true
+  config: configs/revision/acdc_m4_no_distill_unweighted_seed2.yaml
+  config_sha256: f016f4ca6249d11b19d8337791a2f4160f8556fb346c5fbb49b4bb847173fa0e
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_m4_no_distill_unweighted_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m4_no_distill_unweighted_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_m4_no_distill_unweighted_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m4_no_distill_unweighted_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_m4_no_distill_unweighted_seed2
+  - --resume
+- run_id: acdc_m4_no_distill_unweighted_seed3
+  approved: true
+  config: configs/revision/acdc_m4_no_distill_unweighted_seed3.yaml
+  config_sha256: 7208f3b99ae458e7c3da732866f529fecff2624f000784a95ff3a180c9a0e4a1
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_m4_no_distill_unweighted_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m4_no_distill_unweighted_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_m4_no_distill_unweighted_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m4_no_distill_unweighted_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_m4_no_distill_unweighted_seed3
+  - --resume
+- run_id: acdc_m5_no_gate_unweighted_seed1
+  approved: true
+  config: configs/revision/acdc_m5_no_gate_unweighted_seed1.yaml
+  config_sha256: 5a3008b379070e995142070153a04895fe9924f264fc8b6b4b5729e28bc31074
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_m5_no_gate_unweighted_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m5_no_gate_unweighted_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_m5_no_gate_unweighted_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m5_no_gate_unweighted_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_m5_no_gate_unweighted_seed1
+  - --resume
+- run_id: acdc_m5_no_gate_unweighted_seed2
+  approved: true
+  config: configs/revision/acdc_m5_no_gate_unweighted_seed2.yaml
+  config_sha256: 0ee5c052335014c2005837db80cc608307c65b852d300024026a99667ecb4b2d
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_m5_no_gate_unweighted_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m5_no_gate_unweighted_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_m5_no_gate_unweighted_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m5_no_gate_unweighted_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_m5_no_gate_unweighted_seed2
+  - --resume
+- run_id: acdc_m5_no_gate_unweighted_seed3
+  approved: true
+  config: configs/revision/acdc_m5_no_gate_unweighted_seed3.yaml
+  config_sha256: cfd963991fd2a9a6178fb61026f5cfa3ec77637f9c4660e663399b5492b5889f
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_m5_no_gate_unweighted_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m5_no_gate_unweighted_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_m5_no_gate_unweighted_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_m5_no_gate_unweighted_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_m5_no_gate_unweighted_seed3
+  - --resume
+- run_id: synapse_m1_sdf_only_seed1
+  approved: true
+  config: configs/revision/synapse_m1_sdf_only_seed1.yaml
+  config_sha256: 245f635453f5415dff8e0e70f8fd51bb3ce0ec156ed515ed64e59e1b126fc8d5
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_m1_sdf_only_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m1_sdf_only_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_m1_sdf_only_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m1_sdf_only_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_m1_sdf_only_seed1
+  - --resume
+- run_id: synapse_m1_sdf_only_seed2
+  approved: true
+  config: configs/revision/synapse_m1_sdf_only_seed2.yaml
+  config_sha256: 52c70087a4fdd3a67920a02010bf2f4ff1329070e0bab83c5625aed4167158c5
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_m1_sdf_only_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m1_sdf_only_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_m1_sdf_only_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m1_sdf_only_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_m1_sdf_only_seed2
+  - --resume
+- run_id: synapse_m1_sdf_only_seed3
+  approved: true
+  config: configs/revision/synapse_m1_sdf_only_seed3.yaml
+  config_sha256: 12f372a53bd6ebf93beced7a6aed7593281ce7367c4700f1f89516c27b34eb3a
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_m1_sdf_only_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m1_sdf_only_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_m1_sdf_only_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m1_sdf_only_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_m1_sdf_only_seed3
+  - --resume
+- run_id: synapse_m3_no_sdf_seed1
+  approved: true
+  config: configs/revision/synapse_m3_no_sdf_seed1.yaml
+  config_sha256: 0d38758f4620f939792c7431e69ab6eade03a1203461f49143e03e0f2d186a8c
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_m3_no_sdf_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m3_no_sdf_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_m3_no_sdf_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m3_no_sdf_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_m3_no_sdf_seed1
+  - --resume
+- run_id: synapse_m3_no_sdf_seed2
+  approved: true
+  config: configs/revision/synapse_m3_no_sdf_seed2.yaml
+  config_sha256: b95743c346bade61bbf3ed2344e5a104614e34a3d3fa313821971344f295f886
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_m3_no_sdf_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m3_no_sdf_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_m3_no_sdf_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m3_no_sdf_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_m3_no_sdf_seed2
+  - --resume
+- run_id: synapse_m3_no_sdf_seed3
+  approved: true
+  config: configs/revision/synapse_m3_no_sdf_seed3.yaml
+  config_sha256: ee8f857fd54557e829e67ef8a5dbb8d45d09299eade1c674409e7b2024c1f98d
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_m3_no_sdf_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m3_no_sdf_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_m3_no_sdf_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m3_no_sdf_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_m3_no_sdf_seed3
+  - --resume
+- run_id: isic2018_m4_no_distill_seed1
+  approved: true
+  config: configs/revision/isic2018_m4_no_distill_seed1.yaml
+  config_sha256: ad92bda10afdebd0b7c18110e9c9043398bae556505dadffd48f296dc2dd7cba
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_m4_no_distill_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_m4_no_distill_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_m4_no_distill_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_m4_no_distill_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_m4_no_distill_seed1
+  - --resume
+- run_id: isic2018_m4_no_distill_seed2
+  approved: true
+  config: configs/revision/isic2018_m4_no_distill_seed2.yaml
+  config_sha256: d94059bd1315201afaab6db2cb079cbba96947880b4985bb5e9611b1fed1af12
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_m4_no_distill_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_m4_no_distill_seed2.yaml
+  - --output
+  - results/revision_runs/isic2018_m4_no_distill_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_m4_no_distill_seed2.yaml
+  - --output
+  - results/revision_runs/isic2018_m4_no_distill_seed2
+  - --resume
+- run_id: isic2018_m4_no_distill_seed3
+  approved: true
+  config: configs/revision/isic2018_m4_no_distill_seed3.yaml
+  config_sha256: 6ced42e3cf47acfed8e452730623554697e68fca3a797f023f87c5a5944fbb20
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_m4_no_distill_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_m4_no_distill_seed3.yaml
+  - --output
+  - results/revision_runs/isic2018_m4_no_distill_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_m4_no_distill_seed3.yaml
+  - --output
+  - results/revision_runs/isic2018_m4_no_distill_seed3
+  - --resume
+- run_id: synapse_m4_no_distill_seed1
+  approved: true
+  config: configs/revision/synapse_m4_no_distill_seed1.yaml
+  config_sha256: d76ed0caec0ed11e97d8da8df441bfd5210a205acd12abfd3cb54658d7f055c8
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_m4_no_distill_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m4_no_distill_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_m4_no_distill_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m4_no_distill_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_m4_no_distill_seed1
+  - --resume
+- run_id: synapse_m4_no_distill_seed2
+  approved: true
+  config: configs/revision/synapse_m4_no_distill_seed2.yaml
+  config_sha256: c63f12d0b805bd8d227e2781d4d090db11beadc99a2334d9ea1601c5456891bc
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_m4_no_distill_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m4_no_distill_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_m4_no_distill_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m4_no_distill_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_m4_no_distill_seed2
+  - --resume
+- run_id: synapse_m4_no_distill_seed3
+  approved: true
+  config: configs/revision/synapse_m4_no_distill_seed3.yaml
+  config_sha256: d7d08f987636665eb371094ae94876f6353882ad822d62313b694ce02ae3b186
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_m4_no_distill_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m4_no_distill_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_m4_no_distill_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m4_no_distill_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_m4_no_distill_seed3
+  - --resume
+- run_id: isic2018_m5_no_gate_seed1
+  approved: true
+  config: configs/revision/isic2018_m5_no_gate_seed1.yaml
+  config_sha256: 792b29450143f6f0953942edd74a3d8aaacf197c6c33dacc4956d0f5b2deec7f
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_m5_no_gate_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_m5_no_gate_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_m5_no_gate_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_m5_no_gate_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_m5_no_gate_seed1
+  - --resume
+- run_id: isic2018_m5_no_gate_seed2
+  approved: true
+  config: configs/revision/isic2018_m5_no_gate_seed2.yaml
+  config_sha256: 2a19f9458de2a601613f713ac79bac0c516cbe9a26573ad2a80a1430e19e7890
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_m5_no_gate_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_m5_no_gate_seed2.yaml
+  - --output
+  - results/revision_runs/isic2018_m5_no_gate_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_m5_no_gate_seed2.yaml
+  - --output
+  - results/revision_runs/isic2018_m5_no_gate_seed2
+  - --resume
+- run_id: isic2018_m5_no_gate_seed3
+  approved: true
+  config: configs/revision/isic2018_m5_no_gate_seed3.yaml
+  config_sha256: 5adaa5fe91fe4b5148e132eb21b193deb5e7f14c9259673e1d04bc617487b1ae
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_m5_no_gate_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_m5_no_gate_seed3.yaml
+  - --output
+  - results/revision_runs/isic2018_m5_no_gate_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_m5_no_gate_seed3.yaml
+  - --output
+  - results/revision_runs/isic2018_m5_no_gate_seed3
+  - --resume
+- run_id: synapse_m5_no_gate_seed1
+  approved: true
+  config: configs/revision/synapse_m5_no_gate_seed1.yaml
+  config_sha256: ed06b5640fe0952df26b7815a72731edebbc860f7285cefbc8076138b5e3022f
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_m5_no_gate_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m5_no_gate_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_m5_no_gate_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m5_no_gate_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_m5_no_gate_seed1
+  - --resume
+- run_id: synapse_m5_no_gate_seed2
+  approved: true
+  config: configs/revision/synapse_m5_no_gate_seed2.yaml
+  config_sha256: d53744eb99bc3482820983bb41935cb5e46ea6b73aae9fedf33a27c8d1d0ce74
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_m5_no_gate_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m5_no_gate_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_m5_no_gate_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m5_no_gate_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_m5_no_gate_seed2
+  - --resume
+- run_id: synapse_m5_no_gate_seed3
+  approved: true
+  config: configs/revision/synapse_m5_no_gate_seed3.yaml
+  config_sha256: 5bce53a11190f656988fccf54855a76f5d347fa6605d7998695c0e17f5031fb4
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_m5_no_gate_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m5_no_gate_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_m5_no_gate_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_m5_no_gate_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_m5_no_gate_seed3
+  - --resume
+- run_id: isic2018_c3_attention_unet_seed1
+  approved: true
+  config: configs/revision/isic2018_c3_attention_unet_seed1.yaml
+  config_sha256: c3c217ac09c74125b9f094380539cd2a4f02bed4b021ebd971d64c0a86f2709d
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_c3_attention_unet_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_c3_attention_unet_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_c3_attention_unet_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_c3_attention_unet_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_c3_attention_unet_seed1
+  - --resume
+- run_id: isic2018_c3_attention_unet_seed2
+  approved: true
+  config: configs/revision/isic2018_c3_attention_unet_seed2.yaml
+  config_sha256: 80c8153e98d37e048dcf4f103f68920483d5dd0636caeed4c6ccdbad24da83c2
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_c3_attention_unet_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_c3_attention_unet_seed2.yaml
+  - --output
+  - results/revision_runs/isic2018_c3_attention_unet_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_c3_attention_unet_seed2.yaml
+  - --output
+  - results/revision_runs/isic2018_c3_attention_unet_seed2
+  - --resume
+- run_id: isic2018_c3_attention_unet_seed3
+  approved: true
+  config: configs/revision/isic2018_c3_attention_unet_seed3.yaml
+  config_sha256: 926e439c52d2ab280790c404ecba4202fbb2bb78a9a61656837def90fbe6f001
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_c3_attention_unet_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_c3_attention_unet_seed3.yaml
+  - --output
+  - results/revision_runs/isic2018_c3_attention_unet_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/isic2018_c3_attention_unet_seed3.yaml
+  - --output
+  - results/revision_runs/isic2018_c3_attention_unet_seed3
+  - --resume
+- run_id: acdc_c3_attention_unet_seed1
+  approved: true
+  config: configs/revision/acdc_c3_attention_unet_seed1.yaml
+  config_sha256: da4d432d281a8edd0c10086df84807508410bb8573a8f1f674da39cd13dae708
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_c3_attention_unet_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_c3_attention_unet_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_c3_attention_unet_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_c3_attention_unet_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_c3_attention_unet_seed1
+  - --resume
+- run_id: acdc_c3_attention_unet_seed2
+  approved: true
+  config: configs/revision/acdc_c3_attention_unet_seed2.yaml
+  config_sha256: 804b1c6b72fd59eef578e282804758257565838cde5c47bd22deaa908a015796
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_c3_attention_unet_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_c3_attention_unet_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_c3_attention_unet_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_c3_attention_unet_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_c3_attention_unet_seed2
+  - --resume
+- run_id: acdc_c3_attention_unet_seed3
+  approved: true
+  config: configs/revision/acdc_c3_attention_unet_seed3.yaml
+  config_sha256: 3c15a8299011434440c1f746ebee33f6373b788f2c34f1e51a59807fbc3b7598
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_c3_attention_unet_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_c3_attention_unet_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_c3_attention_unet_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/acdc_c3_attention_unet_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_c3_attention_unet_seed3
+  - --resume
+- run_id: synapse_c3_attention_unet_seed1
+  approved: true
+  config: configs/revision/synapse_c3_attention_unet_seed1.yaml
+  config_sha256: 5d7fed059a5c35bf4da10287c5bb0fc84425de1c3ac109b273e91160e648c7be
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_c3_attention_unet_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_c3_attention_unet_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_c3_attention_unet_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_c3_attention_unet_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_c3_attention_unet_seed1
+  - --resume
+- run_id: synapse_c3_attention_unet_seed2
+  approved: true
+  config: configs/revision/synapse_c3_attention_unet_seed2.yaml
+  config_sha256: 608ffef1dc882a3b88cab0cdca9b7ad4d8af2513400b15523d95162fec49a6a2
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_c3_attention_unet_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_c3_attention_unet_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_c3_attention_unet_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_c3_attention_unet_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_c3_attention_unet_seed2
+  - --resume
+- run_id: synapse_c3_attention_unet_seed3
+  approved: true
+  config: configs/revision/synapse_c3_attention_unet_seed3.yaml
+  config_sha256: b83fc09ad30a6d434da4dc197d7137ba870087e78469181079415339f10b75a1
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_c3_attention_unet_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_c3_attention_unet_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_c3_attention_unet_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/revision/train_run.py
+  - --config
+  - configs/revision/synapse_c3_attention_unet_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_c3_attention_unet_seed3
+  - --resume

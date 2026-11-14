@@ -1,0 +1,7 @@
+{
+ "checkpoint": "recovered/followup/results/followup_20261018_v2/isic2018_B_seed1/best.pt",
+ "checkpoint_sha256": "1840e618a95a7dd49ca683cc5654b6edd3bcf0145a9bc52f43a398d97f035836",
+ "n_samples": 1000,
+ "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
+ "per_case_sha256": "9af3ed6f38f2159baae771910ebb6b7ceb2da861f66e99a4285a600c6b5ea42a"
+}

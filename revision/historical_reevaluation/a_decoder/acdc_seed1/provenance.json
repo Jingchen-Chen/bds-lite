@@ -1,0 +1,8 @@
+{
+ "checkpoint": "outputs/runs/acdc_bds_lite_boundary_only_seed1/best.pt",
+ "checkpoint_sha256": "d6afcd5597c67f0b2d11e25582d720a54a8be6edc8ff39e4089be0b73616f4e4",
+ "n_samples": 366,
+ "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
+ "per_case_sha256": "9a41d6d090798cc391a04e94b51ff1d375c36fec0e4ddb92673a3434f09a42ef",
+ "protocol_sha256": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095"
+}

@@ -1,0 +1,22 @@
+{
+  "entry": {
+    "run_id": "main_p1b_unet_synapse_seed2_test",
+    "family": "main_p1b_unet",
+    "dataset": "synapse",
+    "seed": 2,
+    "split": "test",
+    "checkpoint": "results/checkpoints/synapse_p1b_unet_seed2/best.pt",
+    "checkpoint_sha256": "d6ca6a52f26cd7668d1ad4cea636f62299358c5e7f9083f87df0c5ef3e546ab2",
+    "manifest": "recovered/followup/splits/synapse/test.json",
+    "manifest_sha256": "bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d",
+    "batch": 16,
+    "classes": 9,
+    "output": "revision/prediction_recovery/main_p1b_unet/synapse_seed2/test"
+  },
+  "protocol_sha256": "5a80b1e949f2d5a8ebba5f0822312304bb2164618ac763b19ed5730ac3c6370b",
+  "prediction_sha256": "28f17b95067e883ce4dd92c1b2040fca09226bbdb3759078fdaef2396c50813d",
+  "per_volume_sha256": "6fbabaf973605fde57d57a3568a6ce968e51323c9fec5fcb7528d5a613f752e9",
+  "volumes": 12,
+  "class_rows": 96,
+  "physical_units": false
+}

@@ -1,0 +1,57 @@
+{
+  "seed": 0,
+  "note": "engineering benchmark; dummy teacher cache (ground-truth masks); no validation or test metric; no model saved",
+  "torch": "2.11.0+cu130",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "results": [
+    {
+      "role": "teacher",
+      "batch_size": 8,
+      "parameters": 24436514,
+      "train_epoch_seconds": 10.55695260502398,
+      "validation_size_inference_seconds": 0.8558253910159692,
+      "peak_allocated_mib": 696.32958984375,
+      "peak_reserved_mib": 852.0,
+      "losses_finite": true,
+      "loss_keys": [
+        "ce",
+        "dice",
+        "lr",
+        "total"
+      ],
+      "amp_skipped_steps": 0,
+      "max_temperature_c": 68.0,
+      "max_nvidia_smi_memory_mib": 1015.0,
+      "median_sm_clock_mhz": 2767.0,
+      "samples": 7,
+      "fits_batch_8": true,
+      "expected_run_hours_without_pauses": 0.47553241650166456
+    },
+    {
+      "role": "student",
+      "batch_size": 8,
+      "parameters": 2198003,
+      "train_epoch_seconds": 13.199416236020625,
+      "validation_size_inference_seconds": 1.3440070210490376,
+      "peak_allocated_mib": 1220.30224609375,
+      "peak_reserved_mib": 1828.0,
+      "losses_finite": true,
+      "loss_keys": [
+        "boundary_bce",
+        "boundary_dice",
+        "ce",
+        "dice",
+        "kd",
+        "lr",
+        "total"
+      ],
+      "amp_skipped_steps": 0,
+      "max_temperature_c": 72.0,
+      "max_nvidia_smi_memory_mib": 1991.0,
+      "median_sm_clock_mhz": 2752.0,
+      "samples": 8,
+      "fits_batch_8": true,
+      "expected_run_hours_without_pauses": 0.6059759690445693
+    }
+  ]
+}

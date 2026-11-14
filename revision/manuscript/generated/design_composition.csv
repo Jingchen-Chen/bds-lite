@@ -1,0 +1,10 @@
+study,group,description,runs_listed,already_counted,runs_counted,source
+1,ablation,matched ablation: 8 arms x 3 datasets x 3 seeds,72,0,72,families/provenance.json; expansion_statistics.cell_path (M7)
+1,comparators,"reference methods: 4 x 3 datasets x 3 seeds, incl. 9 adapted LB-UNet",36,0,36,"families/provenance.json (GSL, C1, C3, C4)"
+2,extension,"U, D, BDS-Lite, U-Net+GSL on ISIC2018, seeds 1-10",40,12,28,expansion_statistics.isic_path; seeds 1-3 are study-1 runs
+3,kdstudents,"D+KD-band, 3 datasets x 3 seeds",9,0,9,inventory: exploratory external KD students
+3,teachers,"external pretrained teachers, one per dataset",3,0,3,inventory: exploratory external teacher
+4,replication,D and D+KD-band on ACDC,34,0,34,inventory: ACDC confirmation
+5a,controls,D+KD-full and D+KD-band_c on ACDC,34,0,34,inventory: follow-up E1/E2 students
+5a,compactteacher,compact teacher,1,0,1,inventory: follow-up compact teacher/cache
+5b,augmentation,D_aug and D+KD-band_aug on ACDC,20,0,20,inventory: follow-up E3 augmentation

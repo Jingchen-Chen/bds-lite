@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/jc/bds-lite/analysis/revision/audit_diagnostic_progress.py", line 81, in <module>
+    main()
+    ~~~~^^
+  File "/home/jc/bds-lite/analysis/revision/audit_diagnostic_progress.py", line 46, in main
+    raise AssertionError("summed auxiliary gradient dot product inconsistent")
+AssertionError: summed auxiliary gradient dot product inconsistent

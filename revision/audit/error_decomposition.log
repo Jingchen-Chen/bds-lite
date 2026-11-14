@@ -1,0 +1,8 @@
+isic2018 val 519 images 16 models
+isic2018 official_validation 100 images 13 models
+isic2018 official_test 1000 images 13 models
+acdc val 186 images 10 models
+acdc test 366 images 10 models
+synapse val 473 images 10 models
+synapse test 1568 images 10 models
+Complete 202444 image-class rows

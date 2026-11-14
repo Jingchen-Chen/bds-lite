@@ -1,0 +1,22 @@
+{
+  "entry": {
+    "run_id": "main_p1b_full_acdc_seed1_test",
+    "family": "main_p1b_full",
+    "dataset": "acdc",
+    "seed": 1,
+    "split": "test",
+    "checkpoint": "results/checkpoints/acdc_p1b_bdslite_full_current_seed1/best.pt",
+    "checkpoint_sha256": "a7e8f8271840b6c577334d7d7e77208d0b7907bb18f4d529c19b5b1cbea8bc5c",
+    "manifest": "recovered/followup/splits/acdc/test.json",
+    "manifest_sha256": "546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638",
+    "batch": 16,
+    "classes": 4,
+    "output": "revision/prediction_recovery/main_p1b_full/acdc_seed1/test"
+  },
+  "protocol_sha256": "5a80b1e949f2d5a8ebba5f0822312304bb2164618ac763b19ed5730ac3c6370b",
+  "prediction_sha256": "743270a882e87a0a9f79f5a7da6284ac4ff0000b05212fb7f9e89719661402cd",
+  "per_volume_sha256": "2b2ea0df59c605b2229b362ae175085e065138aa465563a6d5c6a35d3215995c",
+  "volumes": 40,
+  "class_rows": 120,
+  "physical_units": false
+}

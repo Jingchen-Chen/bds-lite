@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/Beckschen/TransUNet/02ef0010b36eb8328b5e689eadaf613602edf9b8/utils.py",
+    "commit": "02ef0010b36eb8328b5e689eadaf613602edf9b8",
+    "local": "revision/sources/transunet/utils.py.txt",
+    "sha256": "aacd17ec39abe65358dcc683ddaa7ac0cf698a8920485dd4d07b7972ed2d7668"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Beckschen/TransUNet/02ef0010b36eb8328b5e689eadaf613602edf9b8/lists/lists_Synapse/test_vol.txt",
+    "commit": "02ef0010b36eb8328b5e689eadaf613602edf9b8",
+    "local": "revision/sources/transunet/test_vol.txt",
+    "sha256": "7a1cdb883ad2f76f79cb922cee782eb8618ee7a72e75b640bbcee1367d66c2a6"
+  }
+]

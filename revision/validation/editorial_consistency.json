@@ -1,0 +1,668 @@
+{
+  "keys_main.tex": {
+    "passed": true,
+    "detail": []
+  },
+  "refs_main.tex": {
+    "passed": true,
+    "detail": []
+  },
+  "pdf_references_main.tex": {
+    "passed": true,
+    "detail": []
+  },
+  "latex_diagnostics_main.tex": {
+    "passed": true,
+    "detail": []
+  },
+  "pages_main.tex": 15,
+  "keys_supplement.tex": {
+    "passed": true,
+    "detail": []
+  },
+  "refs_supplement.tex": {
+    "passed": true,
+    "detail": []
+  },
+  "pdf_references_supplement.tex": {
+    "passed": true,
+    "detail": []
+  },
+  "latex_diagnostics_supplement.tex": {
+    "passed": true,
+    "detail": []
+  },
+  "pages_supplement.tex": 47,
+  "keys_response_to_reviewers.tex": {
+    "passed": true,
+    "detail": []
+  },
+  "refs_response_to_reviewers.tex": {
+    "passed": true,
+    "detail": []
+  },
+  "pdf_references_response_to_reviewers.tex": {
+    "passed": true,
+    "detail": []
+  },
+  "latex_diagnostics_response_to_reviewers.tex": {
+    "passed": true,
+    "detail": []
+  },
+  "pages_response_to_reviewers.tex": 15,
+  "bibliography": {
+    "passed": true,
+    "detail": []
+  },
+  "main_float_inventory": {
+    "passed": true,
+    "detail": {
+      "figures": 3,
+      "tables": 4
+    }
+  },
+  "review_comments_preserved": {
+    "passed": true,
+    "detail": {
+      "blocks": 35
+    }
+  },
+  "review_comments_original": {
+    "passed": true,
+    "detail": {
+      "fragments": 39,
+      "source": "revision/reviewer.md"
+    }
+  },
+  "literal_primary_wording": {
+    "passed": true,
+    "detail": "Claim boundary A3 Results wording retained to four decimals"
+  },
+  "positive_primary_size_explained": {
+    "passed": true,
+    "detail": "Primary direction is established; >0.01 is not established"
+  },
+  "no_repeated_only_condition": {
+    "passed": true,
+    "detail": "Active prose avoids repeated restrictive summary"
+  },
+  "letter_location_keys": {
+    "passed": true,
+    "detail": {
+      "uses": 62,
+      "missing": []
+    }
+  },
+  "letter_float_names": {
+    "passed": true,
+    "detail": {
+      "uses": 12,
+      "missing": []
+    }
+  },
+  "submission_export_hashes": {
+    "passed": true,
+    "detail": [
+      "Figure1.png",
+      "Figure2.png",
+      "Figure3.pdf"
+    ]
+  },
+  "protected_and_preexisting_preserved": {
+    "passed": true,
+    "detail": []
+  },
+  "independent_central_numbers": {
+    "passed": true,
+    "detail": {
+      "quantities": 572,
+      "max_error": 4.263256414560601e-14,
+      "tolerance": 1e-10
+    }
+  },
+  "full_tables_preserved": {
+    "passed": true,
+    "detail": "Full central, resource, literature, all-arm and ten-run tables retained"
+  },
+  "author_decisions": [
+    "current affiliation, University of Bonn: list as a present address or not",
+    "an earlier version of this manuscript is public as manuscript/BDS-Lite.pdf in the GitHub repository; if you treat it as a public preprint, add a two-sentence correction note here (its ISIC2018 results were evaluated largely on training images; Supplementary S4)",
+    "add the Zenodo DOI of the revision release after minting it (revision/RELEASE\\_GUIDE.md)",
+    "confirm that all co-authors have read and approved the revised manuscript and these responses"
+  ],
+  "numeric_key_counts": {
+    "main.tex": 130,
+    "supplement.tex": 178,
+    "response_to_reviewers.tex": 45
+  },
+  "status": "passed",
+  "failed_checks": [],
+  "tracked_changes": {
+    "passed": true,
+    "pages": 24,
+    "detail": "Current primary values present; no unresolved references. Full figures/tables retained."
+  },
+  "pdf_page_bounds": {
+    "passed": true,
+    "detail": []
+  },
+  "tracked_typography": {
+    "max_overfull_pt": 23.8699,
+    "detail": "Marked-copy warnings; clean PDFs have no overfull, missing-character or unresolved-reference diagnostics. No extracted word crosses physical page bounds."
+  },
+  "table_followup_20261109": {
+    "passed": true,
+    "table1_names": [
+      "Ablation and comparisons",
+      "Seed confirmation",
+      "Exploratory KD",
+      "ACDC confirmation"
+    ],
+    "confirmation_test_label": "Official ACDC test (50 patients)",
+    "table2_columns": [
+      "Metric",
+      "Contrast",
+      "Pooled delta [95% CI]"
+    ],
+    "unchanged_pooled_rows": 9,
+    "supplement_full_numeric_table_unchanged": true,
+    "sesoi_framework_unchanged": true,
+    "registration_and_post_hoc_selection_disclosures_preserved": true,
+    "research_evaluations_run": false,
+    "prior_numerical_audit_rerun": false,
+    "compiled_pages": {
+      "revision/manuscript/main.pdf": 16,
+      "revision/manuscript/supplement.pdf": 45,
+      "revision/response_to_reviewers.pdf": 14,
+      "revision/manuscript/tracked_changes.pdf": 24
+    },
+    "locations": 96,
+    "prose_words": 5193,
+    "pytest": "136 passed, 1 skipped",
+    "document_checks": "No unresolved references or words outside page bounds; visual table inspection passed."
+  },
+  "figure2_followup_20261109": {
+    "passed": true,
+    "selected_option": 1,
+    "rationale": "The three pooled Boundary F1 contrasts already appear exactly in Table 2; retain the full detail once in Supplementary S13.",
+    "moved_plot": "Figure S6, S13, p. 32",
+    "main_figure_inventory": [
+      "Figure 1: architecture",
+      "Figure 2: ACDC confirmation",
+      "Figure 3: qualitative"
+    ],
+    "original_vector_plot_byte_identical": true,
+    "vector_plot_embedded_images": 0,
+    "table2_and_frozen_contrasts_unchanged": true,
+    "numeric_bindings_and_sesoi_rules_unchanged": true,
+    "response_text_unchanged": true,
+    "locations": 96,
+    "compiled_pages": {
+      "revision/manuscript/main.pdf": 15,
+      "revision/manuscript/supplement.pdf": 46,
+      "revision/response_to_reviewers.pdf": 14,
+      "revision/manuscript/tracked_changes.pdf": 24
+    },
+    "pdf_words_outside_page": [],
+    "visually_inspected": [
+      "main p. 8: Table 2 and primary replication",
+      "main p. 9: renumbered Figure 2",
+      "supplement p. 32: full vector forest, Figure S6"
+    ],
+    "additional_evaluations": false,
+    "pytest": "136 passed, 1 skipped",
+    "ruff": "format and lint pass"
+  },
+  "external_teacher_followup_20261109": {
+    "passed": true,
+    "moved_table": "Table S51, S18, p. 44",
+    "main_figure": "Figure 2, p. 9 (external-teacher comparisons); qualitative remains Figure 3",
+    "main_tables": 5,
+    "main_figures": 3,
+    "results_headings": [
+      "Cross-dataset exploration",
+      "Independent ACDC confirmation"
+    ],
+    "frozen_outputs_byte_identical": [
+      "revision/manuscript/generated/tab_kd.tex",
+      "revision/manuscript/generated/tab_central_main.tex",
+      "revision/acdc_confirm/results/results.json",
+      "revision/acdc_confirm/results/contrasts.csv",
+      "revision/kd_unified/contrasts.csv"
+    ],
+    "non_word_count_numeric_bindings_unchanged": true,
+    "literal_primary_results_paragraph_unchanged": true,
+    "supplementary_table_numeric_content_unchanged": true,
+    "holm_sesoi_selection_amendment_timestamp_disclosures_preserved": true,
+    "reviewer_comment_blocks": 35,
+    "reviewer_quoted_fragments": 39,
+    "locations": 96,
+    "compiled_pages": {
+      "revision/manuscript/main.pdf": 15,
+      "revision/manuscript/supplement.pdf": 46,
+      "revision/response_to_reviewers.pdf": 14,
+      "revision/manuscript/tracked_changes.pdf": 24
+    },
+    "pdf_words_outside_page": [],
+    "visually_inspected": [
+      "main p. 8: primary and secondary Results",
+      "main p. 9: vector comparison graphic and Table 3",
+      "supplement p. 44: Table S51 and registration disclosures"
+    ],
+    "vector_plot_embedded_images": 0,
+    "additional_experiments_or_evaluations": false,
+    "statistical_analyses_rerun": false,
+    "prose_words": 5128,
+    "abstract_words": 248,
+    "preview_tooling": "PyMuPDF unavailable in project and system Python; Poppler preview and bounds verification passed. See PLAN.md.",
+    "ruff": "format and lint pass",
+    "pytest": "136 passed, 1 skipped"
+  },
+  "three_stage_followup_20261109": {
+    "passed": true,
+    "main_results_headings": [
+      "Stage 1: Ablation and Comparisons",
+      "Stage 2: Exploratory Knowledge Distillation",
+      "Stage 3: ACDC Confirmation"
+    ],
+    "main_table1_stage_rows": 3,
+    "stage1_extension": "Four ISIC2018 arms, 10 runs each; fresh-seed rules/statistics in S13; not a separate main study",
+    "stage2_counts": "3 D+KD-band vs 10 decoder-only on ISIC2018; 3 vs 3 on ACDC and Synapse",
+    "stage3_counts": "17 vs 17, official ACDC test patients 101\u2013150",
+    "three_stages_are_presentation_grouping_of_separate_protocols": true,
+    "historical_study_identifiers_mapped_in_supplement": true,
+    "discussion_summary_table_removed": true,
+    "discussion_primary_interval_explicit": true,
+    "literal_primary_paragraph_unchanged": true,
+    "non_word_count_numeric_bindings_unchanged": true,
+    "supplementary_external_teacher_numeric_cells_unchanged": true,
+    "holm_sesoi_selection_registration_timestamp_and_amendment_disclosures_preserved": true,
+    "protected_and_preexisting_paths_unchanged": true,
+    "reviewer_comments": 35,
+    "reviewer_quoted_fragments": 39,
+    "locations": 96,
+    "compiled_pages": {
+      "revision/manuscript/main.pdf": 15,
+      "revision/manuscript/supplement.pdf": 46,
+      "revision/response_to_reviewers.pdf": 14,
+      "revision/manuscript/tracked_changes.pdf": 23
+    },
+    "main_figures": [
+      "1 architecture",
+      "2 qualitative",
+      "3 external-teacher contrasts"
+    ],
+    "main_tables": 4,
+    "vector_plot_embedded_images": 0,
+    "pdf_words_outside_page": [],
+    "visually_inspected": [
+      "main p. 6: three-stage table and Methods",
+      "main p. 7: Stage 1 and ten-run findings",
+      "main p. 10: Stages 2\u20133 and unchanged primary passage",
+      "main p. 11: Figure 3 and Discussion",
+      "supplement p. 44: Stage 3 and Table S51"
+    ],
+    "central_quantities_recalculated": 572,
+    "numerical_mismatches": 0,
+    "max_absolute_error": 4.263256414560601e-14,
+    "research_evaluations_or_experiments": false,
+    "prose_words": 5134,
+    "abstract_words": 248,
+    "ruff": "format and lint pass",
+    "pytest": "136 passed, 1 skipped",
+    "source_scan_false_positive": {
+      "error": "AssertionError from overbroad summary-table phrase scan",
+      "reason": "Matched the response sentence explaining removal, not a live table reference",
+      "independent_reference_specific_check": "passed",
+      "published_tests_unchanged": true
+    }
+  },
+  "comparison_and_balanced_kd_20261109": {
+    "passed": true,
+    "main_matched_rows": 19,
+    "numerical_best_means": 9,
+    "acdc_dsc_unrounded_tie": false,
+    "source_files": 63,
+    "absolute_run_metric_means": 189,
+    "frozen_summary_checks": 315,
+    "independent_pandas_max_error": 3.552713678800501e-15,
+    "published_metric_values": 8,
+    "source_hd_labels_retained": true,
+    "published_missing_metrics_not_imputed": true,
+    "lbunet_multiclass_results_preserved": true,
+    "lbunet_checkpoint_shape_checks": 9,
+    "lbunet_parameter_accounting": "The upstream binary graph already has 55,865 registered parameters; the two-output adaptation adds only nine. Counting only Conv2d/BatchNorm2d gives 38,489 (0.038M rounded), omitting 17,376 learned parameters. This demonstrates a possible counting-convention explanation, not proof of the paper's undocumented accounting. Do not claim exact reproduction.",
+    "balanced_kd": [
+      {
+        "dataset": "isic2018",
+        "analysis": "post hoc balanced presentation",
+        "reference_seeds": "1-3",
+        "delta": 0.05232329716088624,
+        "low": -0.037697155439995966,
+        "high": 0.14234374976176845,
+        "p": 0.14671057464230874,
+        "se": 0.025059156808508443,
+        "df": 2.482912279303724,
+        "n_a": 3,
+        "n_b": 3,
+        "units": 1000,
+        "arm_a_mean": 0.43167578474538765,
+        "arm_b_mean": 0.3793524875845014,
+        "p_holm_over_datasets": 0.2934211492846175
+      },
+      {
+        "dataset": "acdc",
+        "analysis": "post hoc balanced presentation",
+        "reference_seeds": "1-3",
+        "delta": 0.023873198328971057,
+        "low": 0.003974484396525337,
+        "high": 0.04377191226141677,
+        "p": 0.029263289569157802,
+        "se": 0.007103504207268441,
+        "df": 3.9119915279564417,
+        "n_a": 3,
+        "n_b": 3,
+        "units": 20,
+        "arm_a_mean": 0.8256377562345341,
+        "arm_b_mean": 0.801764557905563,
+        "p_holm_over_datasets": 0.0877898687074734
+      },
+      {
+        "dataset": "synapse",
+        "analysis": "post hoc balanced presentation",
+        "reference_seeds": "1-3",
+        "delta": 0.015031419481647101,
+        "low": -0.04231405034423097,
+        "high": 0.07237688930752517,
+        "p": 0.5000588550405103,
+        "se": 0.020183886212004565,
+        "df": 3.780625230276987,
+        "n_a": 3,
+        "n_b": 3,
+        "units": 12,
+        "arm_a_mean": 0.5600500052410536,
+        "arm_b_mean": 0.5450185857594065,
+        "p_holm_over_datasets": 0.5000588550405103
+      }
+    ],
+    "original_sensitivity": [
+      {
+        "dataset": "isic2018",
+        "analysis": "original frozen reference (sensitivity in current presentation)",
+        "reference_seeds": "1-10",
+        "delta": 0.03764662717208189,
+        "low": -0.056455520074161436,
+        "high": 0.13174877441832522,
+        "p": 0.248132380825089,
+        "se": 0.024350393371615455,
+        "df": 2.257806388328781,
+        "n_a": 3,
+        "n_b": 10,
+        "units": 1000,
+        "arm_a_mean": 0.43167578474538765,
+        "arm_b_mean": 0.39402915757330575,
+        "p_holm_over_datasets": 0.496264761650178
+      },
+      {
+        "dataset": "acdc",
+        "analysis": "original frozen reference (sensitivity in current presentation)",
+        "reference_seeds": "1-3",
+        "delta": 0.023873198328971057,
+        "low": 0.003974484396525337,
+        "high": 0.04377191226141677,
+        "p": 0.029263289569157802,
+        "se": 0.007103504207268441,
+        "df": 3.9119915279564417,
+        "n_a": 3,
+        "n_b": 3,
+        "units": 20,
+        "arm_a_mean": 0.8256377562345341,
+        "arm_b_mean": 0.801764557905563,
+        "p_holm_over_datasets": 0.0877898687074734
+      },
+      {
+        "dataset": "synapse",
+        "analysis": "original frozen reference (sensitivity in current presentation)",
+        "reference_seeds": "1-3",
+        "delta": 0.015031419481647101,
+        "low": -0.04231405034423097,
+        "high": 0.07237688930752517,
+        "p": 0.5000588550405103,
+        "se": 0.020183886212004565,
+        "df": 3.780625230276987,
+        "n_a": 3,
+        "n_b": 3,
+        "units": 12,
+        "arm_a_mean": 0.5600500052410536,
+        "arm_b_mean": 0.5450185857594065,
+        "p_holm_over_datasets": 0.5000588550405103
+      }
+    ],
+    "independent_kd_checks": {
+      "checks": 24,
+      "max_error": 2.708944180085382e-14
+    },
+    "confirmation_files_and_literal_primary_unchanged": true,
+    "all_prior_numeric_bindings_except_wordcounts_unchanged": true,
+    "compiled_pages": {
+      "revision/manuscript/main.pdf": 15,
+      "revision/manuscript/supplement.pdf": 47,
+      "revision/response_to_reviewers.pdf": 15,
+      "revision/manuscript/tracked_changes.pdf": 24
+    },
+    "locations": 96,
+    "pdf_words_outside_page": [],
+    "visually_inspected": [
+      "main p. 9: final comparison and mean-only ranks",
+      "main Figure 3: complete balanced interval and unchanged confirmation run means",
+      "supplement p. 2: architecture accounting",
+      "supplement p. 12: complete adaptation results",
+      "supplement S17/S18: both exploratory analyses and confirmation"
+    ],
+    "frozen_sources_and_preexisting_edits_preserved": true,
+    "experiments_or_forward_passes_run": false,
+    "source_receipts": "revision/validation/published_metric_protocol_audit.json",
+    "pytest": "136 passed, 1 skipped",
+    "ruff": "385 files formatted; lint passes",
+    "resolved_tooling_failures": [
+      "anchor not unique: With seeds 1",
+      "12 E501 long-string errors; wrapped without suppression",
+      "anchor not found: it was designed for."
+    ]
+  },
+  "table3_consistent_scope_20261109": {
+    "passed": true,
+    "main_matched_rows": 18,
+    "model_order": [
+      "U-Net",
+      "Decoder-only",
+      "BDS-Lite (full)",
+      "U-Net + GSL",
+      "U-Net + Boundary Loss",
+      "Attention U-Net"
+    ],
+    "unrounded_numerical_winners": [
+      {
+        "dataset": "isic2018",
+        "metric": "dsc",
+        "model": "U-Net + GSL",
+        "unrounded_mean": 0.8419486263567096
+      },
+      {
+        "dataset": "isic2018",
+        "metric": "boundary_f1",
+        "model": "U-Net + GSL",
+        "unrounded_mean": 0.38383900426439865
+      },
+      {
+        "dataset": "isic2018",
+        "metric": "hd95",
+        "model": "U-Net + Boundary Loss",
+        "unrounded_mean": 26.929965738173717
+      },
+      {
+        "dataset": "acdc",
+        "metric": "dsc",
+        "model": "U-Net + Boundary Loss",
+        "unrounded_mean": 0.7620162122878765
+      },
+      {
+        "dataset": "acdc",
+        "metric": "boundary_f1",
+        "model": "U-Net + Boundary Loss",
+        "unrounded_mean": 0.8073010491519484
+      },
+      {
+        "dataset": "acdc",
+        "metric": "hd95",
+        "model": "U-Net + Boundary Loss",
+        "unrounded_mean": 5.848271909958648
+      },
+      {
+        "dataset": "synapse",
+        "metric": "dsc",
+        "model": "U-Net + GSL",
+        "unrounded_mean": 0.5324965431537337
+      },
+      {
+        "dataset": "synapse",
+        "metric": "boundary_f1",
+        "model": "U-Net + GSL",
+        "unrounded_mean": 0.5555468313635289
+      },
+      {
+        "dataset": "synapse",
+        "metric": "hd95",
+        "model": "U-Net + GSL",
+        "unrounded_mean": 8.305095273863241
+      }
+    ],
+    "original_published_panel_byte_identical": true,
+    "all_original_s7_tables_byte_identical": true,
+    "adapted_lbunet_all_three_datasets_full_precision": true,
+    "original_multiclass_display_byte_identical": true,
+    "source_files": 63,
+    "absolute_run_metric_means": 189,
+    "independent_raw_max_error": 3.552713678800501e-15,
+    "protected_and_preexisting_files_unchanged": true,
+    "literal_primary_and_research_keys_unchanged": true,
+    "reviewer_blocks": 35,
+    "unchanged_comment_commands": 35,
+    "compiled_pages": {
+      "revision/manuscript/main.pdf": 15,
+      "revision/manuscript/supplement.pdf": 47,
+      "revision/response_to_reviewers.pdf": 15,
+      "revision/manuscript/tracked_changes.pdf": 24
+    },
+    "locations": 96,
+    "pdf_words_outside_page": [],
+    "visually_inspected": [
+      "main p.9: Table 3",
+      "supplement p.12: S7 adaptation scores",
+      "supplement p.13: full absolute/contrast tables"
+    ],
+    "checks": {
+      "ruff": "format and lint pass; 385 files",
+      "pytest": "136 passed, 1 skipped"
+    },
+    "resolved_helper_error": "ValueError: key WCR.rev defined twice with different values; exclude old WCR keys before refresh",
+    "experiments_training_or_inference_run": false
+  },
+  "deployment_scope_20261109": {
+    "passed": true,
+    "main_models": [
+      "U-Net",
+      "BDS-Lite (deployed)",
+      "BDS-Lite (gate-collapsed)",
+      "Attention U-Net"
+    ],
+    "main_numeric_cells_verified": 16,
+    "original_full_s19_table_byte_identical": true,
+    "original_s19_numeric_cells_verified": 40,
+    "complete_lbunet_datasets": [
+      "isic2018",
+      "synapse"
+    ],
+    "lbunet_fields_per_dataset": 20,
+    "complete_lbunet_profile_values_verified": 40,
+    "original_resource_csv_and_all_research_outputs_unchanged": true,
+    "all_research_keys_and_literal_primary_unchanged": true,
+    "gpu_gate_overhead_percent": {
+      "gflops_b1_released_hook": 0.6836919364568761,
+      "gpu_fp32_b1_ms_median": 8.326811343159513,
+      "gpu_fp32_b16_ms_median": 14.988290641211165
+    },
+    "unchanged_reviewer_comments": 35,
+    "compiled_pages": {
+      "revision/manuscript/main.pdf": 15,
+      "revision/manuscript/supplement.pdf": 47,
+      "revision/response_to_reviewers.pdf": 15,
+      "revision/manuscript/tracked_changes.pdf": 24
+    },
+    "locations": 96,
+    "pdf_words_outside_page": [],
+    "visually_inspected": [
+      "main p.11: Table 4",
+      "supplement p.47: S19 Tables S54/S55"
+    ],
+    "experiments_profiling_training_or_inference_run": false
+  },
+  "table2_font_20261109": {
+    "passed": true,
+    "page": 8,
+    "before_pt": 13,
+    "after_pt": 10,
+    "extracted_sizes": [
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "table_rows_unchanged": 9,
+    "all_numeric_cells_and_caption_unchanged": true,
+    "layout": "10pt normalsize; full-width tabular* uses flexible column spacing; numeric column right-aligned",
+    "all_original_research_outputs_and_preexisting_edits_preserved": true,
+    "reviewer_response_source_unchanged": true,
+    "supplement_pdf_byte_identical": true,
+    "locations": 96,
+    "compiled_pages": {
+      "revision/manuscript/main.pdf": 15,
+      "revision/manuscript/supplement.pdf": 47,
+      "revision/response_to_reviewers.pdf": 15,
+      "revision/manuscript/tracked_changes.pdf": 24
+    },
+    "pdf_words_outside_page": [],
+    "visually_inspected": "main p.8: Table 2 versus body and caption",
+    "marked_export_repair": "Temporary-copy tabular normalization plus a natural-width identity resizebox keeps latexdiff from aligning deleted prose inside table cells; the clean 10pt full-width table is unchanged."
+  },
+  "table4_font_20261109": {
+    "passed": true,
+    "page": 11,
+    "before_pt": 12,
+    "after_pt": 10,
+    "extracted_sizes": [
+      10,
+      10,
+      10,
+      10
+    ],
+    "table_rows_unchanged": 4,
+    "numeric_cells_unchanged": 16,
+    "caption_and_scope_unchanged": true,
+    "layout": "10pt normalsize; full-width tabular* uses flexible column spacing; numeric columns right-aligned",
+    "table2_s19_all_research_outputs_and_preexisting_edits_preserved": true,
+    "reviewer_response_source_unchanged": true,
+    "supplement_pdf_byte_identical": true,
+    "locations": 96,
+    "compiled_pages": {
+      "revision/manuscript/main.pdf": 15,
+      "revision/manuscript/supplement.pdf": 47,
+      "revision/response_to_reviewers.pdf": 15,
+      "revision/manuscript/tracked_changes.pdf": 24
+    },
+    "pdf_words_outside_page": [],
+    "visually_inspected": "main p.11: Table 4 versus body and caption",
+    "marked_export": "Existing temporary-copy natural-width normalization/identity boxing extended to Table 4 without changing clean layout or values"
+  }
+}

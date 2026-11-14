@@ -1,0 +1,14 @@
+dataset:
+  name: synapse
+  modality: ct
+  task: abdominal_multi_organ
+  num_classes: 9
+  in_channels: 1
+  processed_dir: data/processed/synapse
+  train_split: train
+  val_split: val
+  test_split: test
+  metrics:
+    primary: dsc
+    boundary: hd95
+

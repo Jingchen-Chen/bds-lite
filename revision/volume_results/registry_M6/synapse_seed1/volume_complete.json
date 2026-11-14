@@ -1,0 +1,5 @@
+{
+ "prediction": "revision/prediction_recovery/main_p1b_full/synapse_seed1/test/predictions.npz",
+ "prediction_sha256": "c1dc6e64777aa782964601da0a6f2f9b5fd65076da28567c4b024986ab571c1f",
+ "protocol_sha256": "5a80b1e949f2d5a8ebba5f0822312304bb2164618ac763b19ed5730ac3c6370b"
+}

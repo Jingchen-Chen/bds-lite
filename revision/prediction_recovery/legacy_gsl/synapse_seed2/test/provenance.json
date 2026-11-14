@@ -1,0 +1,140 @@
+{
+  "entry": {
+    "run_id": "legacy_gsl_synapse_seed2_test",
+    "family": "legacy_gsl",
+    "dataset": "synapse",
+    "seed": 2,
+    "split": "test",
+    "checkpoint": "results/checkpoints/synapse_p2_unet_gsl_seed2/best.pt",
+    "checkpoint_sha256": "dcaf4a93fc6f18ac315c8b7fce87f59cb440cdaf4002b7701ac39f23f732ccdc",
+    "manifest": "recovered/followup/splits/synapse/test.json",
+    "manifest_sha256": "bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d",
+    "batch": 16,
+    "classes": 9,
+    "output": "revision/prediction_recovery/legacy_gsl/synapse_seed2/test"
+  },
+  "embedded_config": {
+    "project": {
+      "name": "bds-lite",
+      "output_dir": "results",
+      "seed": 2
+    },
+    "data": {
+      "processed_root": "data/processed",
+      "num_workers": 4,
+      "image_size": [
+        224,
+        224
+      ],
+      "normalize": "zscore"
+    },
+    "model": {
+      "name": "unet",
+      "base_channels": 32
+    },
+    "loss": {
+      "dice_weight": 1.0,
+      "ce_weight": 1.0,
+      "boundary_weight": 0.0,
+      "distill_weight": 0.0,
+      "surface_weight": 0.0,
+      "distance_weight": 0.0,
+      "foreground_class_weights": null,
+      "far_fp_weight": 0.0,
+      "use_boundary_dou": false,
+      "lambda_boundary_dou": 1.0,
+      "use_gsl": true,
+      "lambda_gsl": 1.0,
+      "gsl_alpha_schedule": "step5"
+    },
+    "trainer": {
+      "device": "cuda",
+      "epochs": 150,
+      "batch_size": 16,
+      "lr": 0.0001,
+      "weight_decay": 1e-05,
+      "amp": true,
+      "save_every": 25,
+      "scheduler": "cosine",
+      "grad_clip": 1.0,
+      "init_from_checkpoint": null,
+      "freeze_encoder_epochs": 0
+    },
+    "metrics": [
+      "dsc",
+      "iou",
+      "hd95",
+      "assd",
+      "boundary_f1"
+    ],
+    "dataset": {
+      "name": "synapse",
+      "modality": "ct",
+      "task": "abdominal_multi_organ",
+      "num_classes": 9,
+      "in_channels": 1,
+      "processed_dir": "data/processed/synapse",
+      "image_dir": ".",
+      "mask_dir": ".",
+      "split_file": "splits/synapse_split.json",
+      "class_names": [
+        "background",
+        "aorta",
+        "gallbladder",
+        "spleen",
+        "left_kidney",
+        "right_kidney",
+        "liver",
+        "stomach",
+        "pancreas"
+      ],
+      "input_size": [
+        224,
+        224
+      ],
+      "spacing_policy": "use_sample_spacing_if_available_else_unit",
+      "ignore_index": null,
+      "train_split": "train",
+      "val_split": "val",
+      "test_split": "test",
+      "metrics": {
+        "primary": "dsc",
+        "boundary": "hd95"
+      },
+      "root": "data/processed/synapse"
+    },
+    "name": "synapse",
+    "root": "data/processed/synapse",
+    "image_dir": ".",
+    "mask_dir": ".",
+    "num_classes": 9,
+    "class_names": [
+      "background",
+      "aorta",
+      "gallbladder",
+      "spleen",
+      "left_kidney",
+      "right_kidney",
+      "liver",
+      "stomach",
+      "pancreas"
+    ],
+    "split_file": "splits/synapse_split.json",
+    "input_size": [
+      224,
+      224
+    ],
+    "spacing_policy": "use_sample_spacing_if_available_else_unit",
+    "ignore_index": null,
+    "experiment": {
+      "name": "synapse_p2_unet_gsl_seed2",
+      "group": "p2_recent_baselines",
+      "dataset": "synapse",
+      "model": "unet_gsl"
+    }
+  },
+  "epoch": 75,
+  "protocol_sha256": "3619ae1081487603740dea88bbc509f554705a1924ae6dc77ae33028b0e059b7",
+  "inference": "FP32 contiguous NCHW; argmax; no postprocessing",
+  "distance_units": "processed index grid; not verified mm"
+}

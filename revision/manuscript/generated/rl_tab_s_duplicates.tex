@@ -1,0 +1,57 @@
+% generated from revision/tables/families/isic_duplicate_sensitivity.csv
+\begin{tabular}{lllrll}
+\toprule
+Family & Metric & Test images kept & $n$ & Oriented $\Delta$ [95\% CI] & SESOI judgement \\
+\midrule
+original & DSC & all & 1000 & +0.0029 [+0.0004, +0.0055] & within SESOI \\
+original & DSC & excl. $r>0.99$ & 969 & +0.0026 [$-$0.0000, +0.0052] & within SESOI \\
+original & DSC & excl. $r>0.96$ & 950 & +0.0024 [$-$0.0002, +0.0051] & within SESOI \\
+original & DSC & excl. $r>0.93$ & 922 & +0.0024 [$-$0.0003, +0.0051] & within SESOI \\
+original & DSC & excl. $r>0.90$ & 833 & +0.0020 [$-$0.0010, +0.0049] & within SESOI \\
+original & IoU & all & 1000 & +0.0049 [+0.0021, +0.0077] & within SESOI \\
+original & IoU & excl. $r>0.99$ & 969 & +0.0043 [+0.0014, +0.0072] & within SESOI \\
+original & IoU & excl. $r>0.96$ & 950 & +0.0041 [+0.0012, +0.0069] & within SESOI \\
+original & IoU & excl. $r>0.93$ & 922 & +0.0040 [+0.0011, +0.0070] & within SESOI \\
+original & IoU & excl. $r>0.90$ & 833 & +0.0032 [+0.0000, +0.0064] & within SESOI \\
+original & BF1 & all & 1000 & +0.0307 [+0.0257, +0.0356] & beyond $+$SESOI \\
+original & BF1 & excl. $r>0.99$ & 969 & +0.0289 [+0.0238, +0.0339] & beyond $+$SESOI \\
+original & BF1 & excl. $r>0.96$ & 950 & +0.0285 [+0.0235, +0.0337] & beyond $+$SESOI \\
+original & BF1 & excl. $r>0.93$ & 922 & +0.0283 [+0.0231, +0.0335] & beyond $+$SESOI \\
+original & BF1 & excl. $r>0.90$ & 833 & +0.0240 [+0.0185, +0.0293] & beyond $+$SESOI \\
+original & HD95 & all & 1000 & $-$0.36 [$-$0.95, +0.23] & within SESOI \\
+original & HD95 & excl. $r>0.99$ & 969 & $-$0.46 [$-$1.06, +0.14] & within SESOI \\
+original & HD95 & excl. $r>0.96$ & 950 & $-$0.48 [$-$1.09, +0.13] & within SESOI \\
+original & HD95 & excl. $r>0.93$ & 922 & $-$0.58 [$-$1.19, +0.03] & within SESOI \\
+original & HD95 & excl. $r>0.90$ & 833 & $-$0.57 [$-$1.21, +0.07] & within SESOI \\
+original & ASSD & all & 1000 & +0.02 [$-$0.16, +0.21] & within SESOI \\
+original & ASSD & excl. $r>0.99$ & 969 & $-$0.00 [$-$0.18, +0.19] & within SESOI \\
+original & ASSD & excl. $r>0.96$ & 950 & $-$0.01 [$-$0.20, +0.18] & within SESOI \\
+original & ASSD & excl. $r>0.93$ & 922 & $-$0.02 [$-$0.22, +0.17] & within SESOI \\
+original & ASSD & excl. $r>0.90$ & 833 & $-$0.06 [$-$0.27, +0.14] & within SESOI \\
+follow-up & DSC & all & 1000 & $-$0.0037 [$-$0.0056, $-$0.0017] & within SESOI \\
+follow-up & DSC & excl. $r>0.99$ & 969 & $-$0.0039 [$-$0.0058, $-$0.0019] & within SESOI \\
+follow-up & DSC & excl. $r>0.96$ & 950 & $-$0.0040 [$-$0.0060, $-$0.0020] & within SESOI \\
+follow-up & DSC & excl. $r>0.93$ & 922 & $-$0.0040 [$-$0.0061, $-$0.0019] & within SESOI \\
+follow-up & DSC & excl. $r>0.90$ & 833 & $-$0.0043 [$-$0.0066, $-$0.0021] & within SESOI \\
+follow-up & IoU & all & 1000 & $-$0.0035 [$-$0.0058, $-$0.0012] & within SESOI \\
+follow-up & IoU & excl. $r>0.99$ & 969 & $-$0.0037 [$-$0.0061, $-$0.0014] & within SESOI \\
+follow-up & IoU & excl. $r>0.96$ & 950 & $-$0.0039 [$-$0.0063, $-$0.0016] & within SESOI \\
+follow-up & IoU & excl. $r>0.93$ & 922 & $-$0.0039 [$-$0.0064, $-$0.0015] & within SESOI \\
+follow-up & IoU & excl. $r>0.90$ & 833 & $-$0.0042 [$-$0.0069, $-$0.0015] & within SESOI \\
+follow-up & BF1 & all & 1000 & +0.0036 [+0.0001, +0.0072] & within SESOI \\
+follow-up & BF1 & excl. $r>0.99$ & 969 & +0.0039 [+0.0003, +0.0076] & within SESOI \\
+follow-up & BF1 & excl. $r>0.96$ & 950 & +0.0034 [$-$0.0003, +0.0071] & within SESOI \\
+follow-up & BF1 & excl. $r>0.93$ & 922 & +0.0034 [$-$0.0004, +0.0072] & within SESOI \\
+follow-up & BF1 & excl. $r>0.90$ & 833 & +0.0025 [$-$0.0013, +0.0065] & within SESOI \\
+follow-up & HD95 & all & 1000 & $-$0.31 [$-$0.88, +0.26] & within SESOI \\
+follow-up & HD95 & excl. $r>0.99$ & 969 & $-$0.31 [$-$0.89, +0.28] & within SESOI \\
+follow-up & HD95 & excl. $r>0.96$ & 950 & $-$0.34 [$-$0.94, +0.24] & within SESOI \\
+follow-up & HD95 & excl. $r>0.93$ & 922 & $-$0.25 [$-$0.86, +0.34] & within SESOI \\
+follow-up & HD95 & excl. $r>0.90$ & 833 & $-$0.21 [$-$0.87, +0.45] & within SESOI \\
+follow-up & ASSD & all & 1000 & $-$0.22 [$-$0.38, $-$0.05] & within SESOI \\
+follow-up & ASSD & excl. $r>0.99$ & 969 & $-$0.22 [$-$0.38, $-$0.06] & within SESOI \\
+follow-up & ASSD & excl. $r>0.96$ & 950 & $-$0.23 [$-$0.39, $-$0.06] & within SESOI \\
+follow-up & ASSD & excl. $r>0.93$ & 922 & $-$0.22 [$-$0.39, $-$0.05] & within SESOI \\
+follow-up & ASSD & excl. $r>0.90$ & 833 & $-$0.24 [$-$0.42, $-$0.05] & within SESOI \\
+\bottomrule
+\end{tabular}

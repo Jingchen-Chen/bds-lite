@@ -1,0 +1,27 @@
+{
+  "scope": "point-in-time checkpoint audit, not final scientific validation",
+  "reports": [
+    {
+      "dataset": "isic2018",
+      "status": "RUNNING/RESUMABLE \u2014 not a completed experiment",
+      "checkpoint_epoch": 50,
+      "global_step": 13000,
+      "probes": 260,
+      "auxiliary_dot_max_absolute_residual": 3.830196616072534e-05,
+      "auxiliary_dot_validation": "pending independent FP32 accumulation audit",
+      "null_sdf_cosines": 0,
+      "max_historical_prefix_val_dsc_delta": 0.0,
+      "prefix_trajectory_matches_1e12": true,
+      "epoch_seconds_mean": 15.450597630518024,
+      "last_sha256": "277b10973f0cb69cc661646e14bfaa2e3d42e7b240b8ca5fcd09b98d28521db4"
+    },
+    {
+      "dataset": "acdc",
+      "status": "NOT STARTED or no safe checkpoint yet"
+    },
+    {
+      "dataset": "synapse",
+      "status": "NOT STARTED or no safe checkpoint yet"
+    }
+  ]
+}

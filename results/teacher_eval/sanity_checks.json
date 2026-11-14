@@ -1,0 +1,111 @@
+{
+  "started_utc": "2026-11-11T11:53:17.318498+00:00",
+  "finished_utc": "2026-11-11T11:55:31.599786+00:00",
+  "passed": true,
+  "problems": [],
+  "artifact_hash_checks": 176,
+  "runs_recomputed_from_predictions": 88,
+  "runs_recomputed_equal_to_saved": 88,
+  "group_checks": [
+    {
+      "group": "D",
+      "runs": 17,
+      "reference": "paper (4 decimals)",
+      "expected": 0.7797,
+      "recomputed": 0.7796910271473292,
+      "difference": -8.97285267076331e-06,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "group": "D",
+      "runs": 17,
+      "reference": "frozen full-precision arm mean",
+      "expected": 0.7796910271473292,
+      "recomputed": 0.7796910271473292,
+      "difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "group": "D+KD-band",
+      "runs": 17,
+      "reference": "paper (4 decimals)",
+      "expected": 0.7975,
+      "recomputed": 0.7975114099217608,
+      "difference": 1.1409921760852093e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "group": "D+KD-band",
+      "runs": 17,
+      "reference": "frozen full-precision arm mean",
+      "expected": 0.7975114099217608,
+      "recomputed": 0.7975114099217608,
+      "difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "group": "D+KD-full",
+      "runs": 17,
+      "reference": "frozen full-precision arm mean",
+      "expected": 0.7902551039018086,
+      "recomputed": 0.7902551039018086,
+      "difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "group": "D+KD-band_c",
+      "runs": 17,
+      "reference": "frozen full-precision arm mean",
+      "expected": 0.7915202362691431,
+      "recomputed": 0.7915202362691431,
+      "difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "group": "D_aug",
+      "runs": 10,
+      "reference": "paper (4 decimals)",
+      "expected": 0.8469,
+      "recomputed": 0.8468818139546442,
+      "difference": -1.8186045355750302e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "group": "D_aug",
+      "runs": 10,
+      "reference": "frozen full-precision arm mean",
+      "expected": 0.8468818139546442,
+      "recomputed": 0.8468818139546442,
+      "difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "group": "D+KD-band_aug",
+      "runs": 10,
+      "reference": "paper (4 decimals)",
+      "expected": 0.8432,
+      "recomputed": 0.8431735089530801,
+      "difference": -2.649104691987425e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "group": "D+KD-band_aug",
+      "runs": 10,
+      "reference": "frozen full-precision arm mean",
+      "expected": 0.8431735089530801,
+      "recomputed": 0.8431735089530801,
+      "difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    }
+  ]
+}

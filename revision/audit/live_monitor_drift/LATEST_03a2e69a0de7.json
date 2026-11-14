@@ -1,0 +1,43 @@
+{
+  "mode": "event",
+  "health": {
+    "timestamp": "2026-11-02T18:25:35.157308+01:00",
+    "unix": 1793640335.157308,
+    "active_root": "/home/jc/bds-followup/results/acdc_phase_reduction_audit_20261020",
+    "queue": {
+      "state": "complete",
+      "phase": "acdc_phase_reduction_audit",
+      "planned_runs": 6,
+      "completed_runs": 6,
+      "current": "acdc_full_phase_seed3",
+      "training": false,
+      "optimizer_steps": 0,
+      "test_accessed": false,
+      "started_unix": 1792516790.498923,
+      "completed_unix": 1792516814.9720032
+    },
+    "run": {
+      "state": "complete",
+      "experiment": "acdc_full_phase_seed3",
+      "cases": 186,
+      "optimizer_steps": 0,
+      "started_unix": 1792516811.1171536,
+      "identity_masks": 20,
+      "completed_unix": 1792516814.5098484
+    },
+    "status_age_seconds": 1123520.6474363804,
+    "service": {
+      "returncode": 0,
+      "stdout": "ActiveState=inactive\nSubState=dead\nMainPID=0\n",
+      "stderr": ""
+    },
+    "gpu": {
+      "returncode": 0,
+      "stdout": "16 %, 13 MiB, 10.71 W\n",
+      "stderr": ""
+    },
+    "event": "complete",
+    "event_fingerprint": "b4c29727d78a381f4ad062a506b993c620445ac633a8753fadb7a99f696df0f2"
+  },
+  "dispatched": false
+}

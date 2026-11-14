@@ -1,0 +1,36 @@
+\begin{tabular}{l S[table-format=1.4(3)] S[table-format=1.4(3)] S[table-format=2.2(3)]}
+\toprule
+Model & {DSC $\uparrow$} & {Boundary F1 $\uparrow$} & {HD95 (px) $\downarrow$} \\
+& \multicolumn{3}{c}{\footnotesize mean $\pm$ SD over three runs} \\
+\midrule
+\multicolumn{4}{l}{\textit{ISIC2018}} \\
+\quad U & 0.8410 +- 0.0033 & 0.3634 +- 0.0165 & 28.27 +- 1.32 \\
+\rowcolor{refshade}\quad D & 0.8402 +- 0.0017 & 0.3794 +- 0.0142 & 28.33 +- 0.92 \\
+\quad D+F+G & 0.8396 +- 0.0044 & 0.3746 +- 0.0218 & 27.88 +- 1.20 \\
+\quad BDS-Lite & 0.8374 +- 0.0051 & 0.3670 +- 0.0150 & 28.55 +- 2.18 \\
+\cmidrule(l{0.6em}){1-4}
+\quad U-Net+GSL & 0.8419 +- 0.0037 & 0.3838 +- 0.0161 & 27.55 +- 1.28 \\
+\quad U-Net+Boundary Loss & 0.8411 +- 0.0055 & 0.3634 +- 0.0441 & 26.93 +- 2.29 \\
+\quad Attention U-Net & 0.8417 +- 0.0023 & 0.3746 +- 0.0251 & 28.03 +- 0.39 \\
+\addlinespace[0.6em]
+\multicolumn{4}{l}{\textit{ACDC}} \\
+\quad U & 0.7420 +- 0.0080 & 0.7828 +- 0.0013 & 7.40 +- 1.08 \\
+\rowcolor{refshade}\quad D & 0.7583 +- 0.0080 & 0.7993 +- 0.0080 & 8.88 +- 0.85 \\
+\quad D+F+G & 0.7634 +- 0.0017 & 0.8092 +- 0.0031 & 7.48 +- 0.56 \\
+\quad BDS-Lite & 0.7584 +- 0.0132 & 0.8006 +- 0.0097 & 8.67 +- 1.28 \\
+\cmidrule(l{0.6em}){1-4}
+\quad U-Net+GSL & 0.7620 +- 0.0090 & 0.8061 +- 0.0056 & 7.39 +- 1.63 \\
+\quad U-Net+Boundary Loss & 0.7620 +- 0.0102 & 0.8073 +- 0.0109 & 5.85 +- 0.42 \\
+\quad Attention U-Net & 0.7568 +- 0.0028 & 0.7957 +- 0.0044 & 8.73 +- 1.08 \\
+\addlinespace[0.6em]
+\multicolumn{4}{l}{\textit{Synapse}} \\
+\quad U & 0.4870 +- 0.0277 & 0.5059 +- 0.0261 & 8.65 +- 0.48 \\
+\rowcolor{refshade}\quad D & 0.5062 +- 0.0176 & 0.5246 +- 0.0191 & 8.73 +- 0.89 \\
+\quad D+F+G & 0.5285 +- 0.0292 & 0.5488 +- 0.0329 & 8.85 +- 0.79 \\
+\quad BDS-Lite & 0.4957 +- 0.0120 & 0.5157 +- 0.0137 & 9.04 +- 0.57 \\
+\cmidrule(l{0.6em}){1-4}
+\quad U-Net+GSL & 0.5325 +- 0.0262 & 0.5555 +- 0.0273 & 8.31 +- 0.12 \\
+\quad U-Net+Boundary Loss & 0.5072 +- 0.0188 & 0.5282 +- 0.0173 & 8.54 +- 0.38 \\
+\quad Attention U-Net & 0.5217 +- 0.0095 & 0.5382 +- 0.0098 & 8.32 +- 0.36 \\
+\bottomrule
+\end{tabular}

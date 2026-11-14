@@ -1,0 +1,29 @@
+extends:
+  - configs/base.yaml
+  - configs/datasets/synapse.yaml
+
+experiment:
+  name: synapse_unet_baseline
+  group: baselines
+
+model:
+  name: unet
+  base_channels: 32
+
+loss:
+  dice_weight: 1.0
+  ce_weight: 1.0
+  boundary_weight: 0.0
+  distill_weight: 0.0
+  surface_weight: 0.0
+
+trainer:
+  device: cuda
+  epochs: 150
+  batch_size: 16
+  lr: 0.0001
+  weight_decay: 0.00001
+  amp: true
+  save_every: 25
+  scheduler: cosine
+  grad_clip: 1.0

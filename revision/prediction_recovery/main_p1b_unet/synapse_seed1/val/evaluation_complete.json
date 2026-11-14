@@ -1,0 +1,25 @@
+{
+  "entry": {
+    "run_id": "main_p1b_unet_synapse_seed1_val",
+    "family": "main_p1b_unet",
+    "dataset": "synapse",
+    "seed": 1,
+    "split": "val",
+    "checkpoint": "results/checkpoints/synapse_p1b_unet_seed1/best.pt",
+    "checkpoint_sha256": "9309788f72747fa564ce0d522fac86153c055a77fbdc61ce31cee1d24c030150",
+    "manifest": "recovered/followup/splits/synapse/val.json",
+    "manifest_sha256": "f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb",
+    "batch": 16,
+    "classes": 9,
+    "output": "revision/prediction_recovery/main_p1b_unet/synapse_seed1/val"
+  },
+  "protocol_sha256": "b767017c1bf03de97f31667795998da67ff6779505441a8ca8198875b6a6bcef",
+  "outputs": {
+    "predictions.npz": "2e39c4a31a539f678952196dae567a5212ae771a9d5f6259f098b1967f0fa109",
+    "per_case.csv": "888edd574ae789d50aa9fe7ca67f8a18734cc39e8b19b8d89f49992003551ca8",
+    "provenance.json": "1a7168396c12d9f3df1f8c2688ab0c56fdfaf591a39b02a59c80cb3a9ccd67d8"
+  },
+  "images": 473,
+  "class_rows": 3784,
+  "seconds": 6.782776933978312
+}

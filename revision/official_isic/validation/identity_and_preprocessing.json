@@ -1,0 +1,9 @@
+{
+  "n": 100,
+  "id_overlap": [],
+  "exact_jpeg_byte_overlap": [],
+  "patient_independence": "not established: incomplete identities",
+  "scope": "official held-out images; no patient-independent claim",
+  "preprocessing": "PIL RGB bilinear 224 /255 CHW; masks nearest >0; no loader zscore",
+  "preregistration_commit": "a6dc26c"
+}

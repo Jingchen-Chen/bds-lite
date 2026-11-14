@@ -1,0 +1,40 @@
+\begin{tabular}{llccccl}
+\toprule
+Metric & Contrast & Fresh $\Delta$ (seeds 4--10) & Holm $p$ & All-seed $\Delta$ [95\% interval] (seeds 1--10) & Effect label & Status \\
+\midrule
+DSC & U-Net + decoder vs U-Net & +0.003 & 1.000 & +0.002 [$-$0.003, +0.006] & no relevant effect & not established \\
+DSC & BDS-Lite vs U-Net & $-$0.003 & 1.000 & $-$0.003 [$-$0.009, +0.002] & no relevant effect & not established \\
+DSC & BDS-Lite vs U-Net + decoder & $-$0.006 & 0.607 & $-$0.005 [$-$0.010, +0.001] & undetermined & not established \\
+DSC & U-Net + GSL vs U-Net & $-$0.003 & 0.895 & $-$0.002 [$-$0.006, +0.002] & no relevant effect & not established \\
+DSC & U-Net + GSL vs BDS-Lite & $-$0.000 & 1.000 & +0.001 [$-$0.004, +0.007] & no relevant effect & not established \\
+DSC & U-Net + GSL vs U-Net + decoder & $-$0.006 & 0.161 & $-$0.004 [$-$0.008, +0.000] & no relevant effect & not established \\
+\midrule
+IoU & U-Net + decoder vs U-Net & +0.004 & 0.809 & +0.003 [$-$0.003, +0.009] & no relevant effect & not established \\
+IoU & BDS-Lite vs U-Net & $-$0.005 & 0.809 & $-$0.004 [$-$0.012, +0.004] & undetermined & not established \\
+IoU & BDS-Lite vs U-Net + decoder & $-$0.009 & 0.488 & $-$0.008 [$-$0.016, +0.000] & undetermined & not established \\
+IoU & U-Net + GSL vs U-Net & $-$0.006 & 0.686 & $-$0.003 [$-$0.009, +0.003] & no relevant effect & not established \\
+IoU & U-Net + GSL vs BDS-Lite & $-$0.001 & 0.870 & +0.002 [$-$0.007, +0.010] & no relevant effect & not established \\
+IoU & U-Net + GSL vs U-Net + decoder & $-$0.010 & 0.099 & $-$0.006 [$-$0.012, $-$0.000] & harm, size unclear & supported, not confirmed \\
+\midrule
+Boundary F1 & U-Net + decoder vs U-Net & +0.023 & 0.260 & +0.021 [+0.001, +0.040] & gain, size unclear & supported, not confirmed \\
+Boundary F1 & BDS-Lite vs U-Net & $-$0.018 & 0.404 & $-$0.011 [$-$0.032, +0.009] & undetermined & not established \\
+Boundary F1 & BDS-Lite vs U-Net + decoder & $-$0.040 & 0.031 & $-$0.032 [$-$0.052, $-$0.012] & relevant harm & confirmed \\
+Boundary F1 & U-Net + GSL vs U-Net & $-$0.023 & 0.288 & $-$0.010 [$-$0.033, +0.012] & undetermined & not established \\
+Boundary F1 & U-Net + GSL vs BDS-Lite & $-$0.005 & 0.698 & +0.001 [$-$0.022, +0.024] & undetermined & not established \\
+Boundary F1 & U-Net + GSL vs U-Net + decoder & $-$0.046 & 0.014 & $-$0.031 [$-$0.052, $-$0.009] & harm, size unclear & confirmed \\
+\midrule
+HD95 (px) & U-Net + decoder vs U-Net & +0.79 & 1.000 & +0.50 [$-$0.89, +1.88] & no relevant effect & not established \\
+HD95 (px) & BDS-Lite vs U-Net & +0.06 & 1.000 & $-$0.07 [$-$1.98, +1.85] & no relevant effect & not established \\
+HD95 (px) & BDS-Lite vs U-Net + decoder & $-$0.72 & 1.000 & $-$0.56 [$-$2.33, +1.21] & undetermined & not established \\
+HD95 (px) & U-Net + GSL vs U-Net & +0.50 & 1.000 & +0.57 [$-$0.75, +1.89] & no relevant effect & not established \\
+HD95 (px) & U-Net + GSL vs BDS-Lite & +0.42 & 1.000 & +0.62 [$-$1.11, +2.36] & undetermined & not established \\
+HD95 (px) & U-Net + GSL vs U-Net + decoder & $-$0.30 & 1.000 & +0.07 [$-$0.96, +1.09] & no relevant effect & not established \\
+\midrule
+ASSD (px) & U-Net + decoder vs U-Net & +0.21 & 1.000 & +0.09 [$-$0.28, +0.46] & no relevant effect & not established \\
+ASSD (px) & BDS-Lite vs U-Net & $-$0.19 & 1.000 & $-$0.21 [$-$0.74, +0.33] & undetermined & not established \\
+ASSD (px) & BDS-Lite vs U-Net + decoder & $-$0.41 & 1.000 & $-$0.30 [$-$0.81, +0.21] & undetermined & not established \\
+ASSD (px) & U-Net + GSL vs U-Net & $-$0.05 & 1.000 & $-$0.01 [$-$0.37, +0.35] & no relevant effect & not established \\
+ASSD (px) & U-Net + GSL vs BDS-Lite & +0.13 & 1.000 & +0.19 [$-$0.31, +0.70] & undetermined & not established \\
+ASSD (px) & U-Net + GSL vs U-Net + decoder & $-$0.28 & 0.858 & $-$0.11 [$-$0.42, +0.20] & no relevant effect & not established \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-10T20:46:15.733762+00:00",
+  "raw_evidence_cutoff_utc": "2026-11-10T20:31:26Z",
+  "unchanged_starting_tracked_files": 1889,
+  "changed_protected_files": [],
+  "scope": "All starting tracked files except six authorized governance/reference/report targets; includes original experimental sources and manuscript/letters. Ignored original primary bytes separately checked by layered manifests and recorded hashes.",
+  "primary_numeric_checks": 4095,
+  "e3_numeric_checks": 195,
+  "prediction_metric_comparisons": 1200,
+  "archives_unique_members": 2832,
+  "archive_only_verification": "Archive-only: 40 contrasts and20 Holm values matched; max error 9.29e-14\nNo datasets, checkpoints, prediction maps, teacher caches or torch required.",
+  "manuscript_and_letters_unchanged": true,
+  "original_estimator_and_protocol_sources_unchanged": true,
+  "large_dependency_scope": "10067 currently present files hashed; 9 missing historical checkpoints; no complete training/inference backup claim",
+  "scientific_readiness": "Ready for manuscript-only revision from v4 with stated limits",
+  "tag": "bds-lite-evidence-v1.0.0",
+  "tag_verification": "Verify annotated tag target after local scoped commits; no remote operation"
+}

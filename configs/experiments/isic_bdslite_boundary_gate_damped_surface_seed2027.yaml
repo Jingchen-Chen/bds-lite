@@ -1,0 +1,9 @@
+extends:
+  - configs/experiments/isic_bdslite_boundary_gate_damped_surface.yaml
+
+project:
+  seed: 2027
+
+experiment:
+  name: isic2018_bdslite_boundary_gate_damped_surface_seed2027
+  group: bds_lite_repeated_seeds

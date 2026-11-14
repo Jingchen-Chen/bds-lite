@@ -1,0 +1,568 @@
+{
+  "written_utc": "2026-11-08T14:38:39+00:00",
+  "note": "Metric-free status record. No metric value was read to produce it; file names, file times, final_metrics.json key names and the partial run progress.json epoch only.",
+  "registered_runs": 70,
+  "completed": 14,
+  "started_incomplete": 1,
+  "never_started": 55,
+  "test_outputs_computed_for": 14,
+  "test_output_mechanism": "scripts/revision/train_run.py scores the test set automatically at the end of every run (preregistration/acdc_confirmation.md section 9); final_metrics.json holds metrics.test and metrics.val (key names checked).",
+  "access_evidence": {
+    "mount_policy": "relatime",
+    "per_case_and_preds_read_after_write": 0,
+    "final_metrics_read_after_write": 10,
+    "final_metrics_read_delay_seconds": "6-10 s after writing, consistent with the queue completion check (scripts/revision/run_queue.py line 62)",
+    "limitation": "relatime records the first read after a write and reads more than 24 h after the previous access; a later read of final_metrics.json within 24 h of its first read would leave no trace.",
+    "reads_in_this_check": "On 2026-11-08 (session 91d524dd) a key-listing script loaded results/revision_runs/acdc_m0_unet_seed4/final_metrics.json twice and printed only key names (top level: artifacts, best_val_dsc, config_sha256, epochs, metrics, selected_epoch; metrics: test, val; per split: assd, boundary_f1, dsc, hd95, iou). No metric value was printed or seen. This accounts for the 10th read-after-write (the earlier count was 9 of 14)."
+  },
+  "transcript_scan": {
+    "script": "revision/audit/experiment_c_blinding_check/scan_transcripts.py",
+    "sources": "~/.claude/projects/-home-jc-bds-lite/*.jsonl and ~/.codex session files mentioning bds-lite",
+    "files": 32,
+    "tool_calls": 1823,
+    "flagged_calls": 80,
+    "outputs_with_expC_run_name_and_test_token": 0,
+    "scanned_utc": "2026-11-08"
+  },
+  "derived_artifacts": {
+    "auto_refresh": "analysis/revision/auto_refresh.py regenerates only seed-1-3 (family_statistics.SEEDS) or seed-1 analyses; no Experiment C seed is read.",
+    "experiment_ledger": "revision/audit/project_audit_20261107/experiment_ledger.csv lists Experiment C runs as BLIND with no metric values."
+  },
+  "runs": [
+    {
+      "run_id": "acdc_m0_unet_seed4",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T03:46:43Z",
+          "accessed_utc": "2026-11-07T03:46:43Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T03:46:43Z",
+          "accessed_utc": "2026-11-07T03:46:43Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T03:46:43Z",
+          "accessed_utc": "2026-11-08T14:36:06Z",
+          "read_after_write": true
+        }
+      }
+    },
+    {
+      "run_id": "acdc_m2_aux_boundary_only_unweighted_seed4",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T04:16:29Z",
+          "accessed_utc": "2026-11-07T04:16:29Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T04:16:29Z",
+          "accessed_utc": "2026-11-07T04:16:29Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T04:16:29Z",
+          "accessed_utc": "2026-11-07T04:16:37Z",
+          "read_after_write": true
+        }
+      }
+    },
+    {
+      "run_id": "acdc_m6_full_unweighted_seed4",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T04:48:09Z",
+          "accessed_utc": "2026-11-07T04:48:09Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T04:48:09Z",
+          "accessed_utc": "2026-11-07T04:48:09Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T04:48:09Z",
+          "accessed_utc": "2026-11-07T04:48:16Z",
+          "read_after_write": true
+        }
+      }
+    },
+    {
+      "run_id": "acdc_gsl_seed4",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T05:20:47Z",
+          "accessed_utc": "2026-11-07T05:20:47Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T05:20:47Z",
+          "accessed_utc": "2026-11-07T05:20:47Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T05:20:47Z",
+          "accessed_utc": "2026-11-07T05:20:56Z",
+          "read_after_write": true
+        }
+      }
+    },
+    {
+      "run_id": "synapse_m0_unet_seed4",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T05:54:23Z",
+          "accessed_utc": "2026-11-07T05:54:23Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T05:54:23Z",
+          "accessed_utc": "2026-11-07T05:54:23Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T05:54:23Z",
+          "accessed_utc": "2026-11-07T05:54:26Z",
+          "read_after_write": false
+        }
+      }
+    },
+    {
+      "run_id": "synapse_m2_aux_boundary_only_seed4",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T06:39:06Z",
+          "accessed_utc": "2026-11-07T06:39:06Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T06:39:06Z",
+          "accessed_utc": "2026-11-07T06:39:06Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T06:39:06Z",
+          "accessed_utc": "2026-11-07T06:39:12Z",
+          "read_after_write": true
+        }
+      }
+    },
+    {
+      "run_id": "synapse_m6_full_seed4",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T07:25:38Z",
+          "accessed_utc": "2026-11-07T07:25:38Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T07:25:38Z",
+          "accessed_utc": "2026-11-07T07:25:38Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T07:25:38Z",
+          "accessed_utc": "2026-11-07T07:25:44Z",
+          "read_after_write": true
+        }
+      }
+    },
+    {
+      "run_id": "synapse_gsl_seed4",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T08:12:59Z",
+          "accessed_utc": "2026-11-07T08:12:59Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T08:12:59Z",
+          "accessed_utc": "2026-11-07T08:12:59Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T08:12:59Z",
+          "accessed_utc": "2026-11-07T08:13:07Z",
+          "read_after_write": true
+        }
+      }
+    },
+    {
+      "run_id": "isic2018_m0_unet_seed11",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T08:51:19Z",
+          "accessed_utc": "2026-11-07T08:51:19Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T08:51:19Z",
+          "accessed_utc": "2026-11-07T08:51:19Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T08:51:19Z",
+          "accessed_utc": "2026-11-07T08:51:29Z",
+          "read_after_write": true
+        }
+      }
+    },
+    {
+      "run_id": "isic2018_m2_aux_boundary_only_seed11",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T09:36:45Z",
+          "accessed_utc": "2026-11-07T09:36:45Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T09:36:45Z",
+          "accessed_utc": "2026-11-07T09:36:45Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T09:36:45Z",
+          "accessed_utc": "2026-11-07T09:36:50Z",
+          "read_after_write": false
+        }
+      }
+    },
+    {
+      "run_id": "acdc_m0_unet_seed5",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T09:57:31Z",
+          "accessed_utc": "2026-11-07T09:57:31Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T09:57:31Z",
+          "accessed_utc": "2026-11-07T09:57:31Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T09:57:31Z",
+          "accessed_utc": "2026-11-07T09:57:36Z",
+          "read_after_write": false
+        }
+      }
+    },
+    {
+      "run_id": "acdc_m2_aux_boundary_only_unweighted_seed5",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T10:27:48Z",
+          "accessed_utc": "2026-11-07T10:27:48Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T10:27:48Z",
+          "accessed_utc": "2026-11-07T10:27:48Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T10:27:48Z",
+          "accessed_utc": "2026-11-07T10:27:51Z",
+          "read_after_write": false
+        }
+      }
+    },
+    {
+      "run_id": "acdc_m6_full_unweighted_seed5",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T11:00:31Z",
+          "accessed_utc": "2026-11-07T11:00:31Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T11:00:31Z",
+          "accessed_utc": "2026-11-07T11:00:31Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T11:00:31Z",
+          "accessed_utc": "2026-11-07T11:00:38Z",
+          "read_after_write": true
+        }
+      }
+    },
+    {
+      "run_id": "acdc_gsl_seed5",
+      "folder_exists": true,
+      "completed": true,
+      "test_bearing_files": {
+        "per_case_test.csv": {
+          "written_utc": "2026-11-07T11:33:10Z",
+          "accessed_utc": "2026-11-07T11:33:10Z",
+          "read_after_write": false
+        },
+        "preds_test.npz": {
+          "written_utc": "2026-11-07T11:33:10Z",
+          "accessed_utc": "2026-11-07T11:33:10Z",
+          "read_after_write": false
+        },
+        "final_metrics.json": {
+          "written_utc": "2026-11-07T11:33:10Z",
+          "accessed_utc": "2026-11-07T11:33:17Z",
+          "read_after_write": true
+        }
+      }
+    },
+    {
+      "run_id": "synapse_m0_unet_seed5",
+      "folder_exists": true,
+      "completed": false,
+      "last_saved_epoch": 112,
+      "test_bearing_files": {}
+    },
+    {
+      "run_id": "synapse_m2_aux_boundary_only_seed5",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m6_full_seed5",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_gsl_seed5",
+      "folder_exists": false
+    },
+    {
+      "run_id": "isic2018_m0_unet_seed12",
+      "folder_exists": false
+    },
+    {
+      "run_id": "isic2018_m2_aux_boundary_only_seed12",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m0_unet_seed6",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m2_aux_boundary_only_unweighted_seed6",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m6_full_unweighted_seed6",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_gsl_seed6",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m0_unet_seed6",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m2_aux_boundary_only_seed6",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m6_full_seed6",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_gsl_seed6",
+      "folder_exists": false
+    },
+    {
+      "run_id": "isic2018_m0_unet_seed13",
+      "folder_exists": false
+    },
+    {
+      "run_id": "isic2018_m2_aux_boundary_only_seed13",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m0_unet_seed7",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m2_aux_boundary_only_unweighted_seed7",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m6_full_unweighted_seed7",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_gsl_seed7",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m0_unet_seed7",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m2_aux_boundary_only_seed7",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m6_full_seed7",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_gsl_seed7",
+      "folder_exists": false
+    },
+    {
+      "run_id": "isic2018_m0_unet_seed14",
+      "folder_exists": false
+    },
+    {
+      "run_id": "isic2018_m2_aux_boundary_only_seed14",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m0_unet_seed8",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m2_aux_boundary_only_unweighted_seed8",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m6_full_unweighted_seed8",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_gsl_seed8",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m0_unet_seed8",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m2_aux_boundary_only_seed8",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m6_full_seed8",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_gsl_seed8",
+      "folder_exists": false
+    },
+    {
+      "run_id": "isic2018_m0_unet_seed15",
+      "folder_exists": false
+    },
+    {
+      "run_id": "isic2018_m2_aux_boundary_only_seed15",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m0_unet_seed9",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m2_aux_boundary_only_unweighted_seed9",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m6_full_unweighted_seed9",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_gsl_seed9",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m0_unet_seed9",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m2_aux_boundary_only_seed9",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m6_full_seed9",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_gsl_seed9",
+      "folder_exists": false
+    },
+    {
+      "run_id": "isic2018_m0_unet_seed16",
+      "folder_exists": false
+    },
+    {
+      "run_id": "isic2018_m2_aux_boundary_only_seed16",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m0_unet_seed10",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m2_aux_boundary_only_unweighted_seed10",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_m6_full_unweighted_seed10",
+      "folder_exists": false
+    },
+    {
+      "run_id": "acdc_gsl_seed10",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m0_unet_seed10",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m2_aux_boundary_only_seed10",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_m6_full_seed10",
+      "folder_exists": false
+    },
+    {
+      "run_id": "synapse_gsl_seed10",
+      "folder_exists": false
+    },
+    {
+      "run_id": "isic2018_m0_unet_seed17",
+      "folder_exists": false
+    },
+    {
+      "run_id": "isic2018_m2_aux_boundary_only_seed17",
+      "folder_exists": false
+    }
+  ]
+}

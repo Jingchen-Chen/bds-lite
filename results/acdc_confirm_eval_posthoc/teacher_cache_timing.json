@@ -1,0 +1,39 @@
+{
+  "label": "re-measured post hoc (author authorization 2026-11-09); inference only",
+  "measured_utc": "2026-11-09T15:21:13.060113+00:00",
+  "what": "training-set pass of the frozen cache step (scripts.kd_mc.cache_mc.infer): teacher forward, softmax, float16 copy into the cache array, and the per-image diagnostics that the step computes in the same loop; excludes model loading, the validation pass, saving and the 20-image check",
+  "images": 1350,
+  "batch_size": 16,
+  "config": "configs/revision/kd_mc/acdc_kd_teacher_seed100.yaml",
+  "checkpoint_sha256": "735747303c444e13dd57457e3540ee410b5de43421b68fd92e2eda69c88dafa0",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 595.99.02",
+  "torch": "2.11.0+cu130",
+  "cuda": "13.0",
+  "runs": [
+    {
+      "repeat": 0,
+      "seconds": 28.011872494011186,
+      "max_abs_difference_to_stored_cache": 0.0,
+      "identical_to_stored_cache": true
+    },
+    {
+      "repeat": 1,
+      "seconds": 27.277531358995475,
+      "max_abs_difference_to_stored_cache": 0.0,
+      "identical_to_stored_cache": true
+    },
+    {
+      "repeat": 2,
+      "seconds": 25.092953487997875,
+      "max_abs_difference_to_stored_cache": 0.0,
+      "identical_to_stored_cache": true
+    }
+  ],
+  "median_seconds": 27.277531358995475,
+  "original_step_file_mtimes_utc": {
+    "queue_stdout.log": "2026-11-07T16:53:03.185726+00:00",
+    "train_teacher_prob_fp16.npy": "2026-11-07T16:53:34.488914+00:00",
+    "cache_complete.json": "2026-11-07T16:53:35.030460+00:00"
+  },
+  "original_step_note": "file modification times bound the whole original cache step (training and validation passes, saving, check); they are not a recorded duration"
+}

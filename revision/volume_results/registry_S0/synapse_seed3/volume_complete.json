@@ -1,0 +1,5 @@
+{
+ "prediction": "revision/extra_cohorts/famO_unet/synapse_seed3/test/predictions.npz",
+ "prediction_sha256": "14bd2c3f7437793fa79a0de63bd10228cf3e701d2e7f4f6370443be5070e43fe",
+ "protocol_sha256": "5a80b1e949f2d5a8ebba5f0822312304bb2164618ac763b19ed5730ac3c6370b"
+}

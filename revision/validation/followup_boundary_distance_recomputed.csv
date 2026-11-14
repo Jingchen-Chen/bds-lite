@@ -1,0 +1,13 @@
+run,finite_max_error,metric_cells,missing_distance_cells
+isic2018_U_seed1,0.0,1557,2
+isic2018_U_seed2,0.0,1557,2
+isic2018_U_seed3,0.0,1557,6
+isic2018_S_seed1,0.0,1557,4
+isic2018_S_seed2,0.0,1557,6
+isic2018_S_seed3,0.0,1557,4
+isic2018_B_seed1,0.0,1557,6
+isic2018_B_seed2,0.0,1557,8
+isic2018_B_seed3,0.0,1557,6
+isic2018_F_seed1,0.0,1557,4
+isic2018_F_seed2,0.0,1557,10
+isic2018_F_seed3,0.0,1557,4

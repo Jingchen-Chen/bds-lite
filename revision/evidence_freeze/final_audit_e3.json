@@ -1,0 +1,397 @@
+{
+  "checked_utc": "2026-11-10T20:25:28.190561+00:00",
+  "training_integrity_passed": true,
+  "registered_run_count": 20,
+  "completed_run_count": 20,
+  "problems": [],
+  "queue_sha256": "ce825c41682ab82dd5ba43105e5030baf5ad63750d6ca5243b77f16db45bfb92",
+  "registration_sha256": "30f771eb0c97c6fb9460c505989a1a0c97c99838553b748f9c565d1fa366a5c3",
+  "frozen_integrity_source_sha256": "e4a1672d46bd69835e8727a1d9ed276b6640c5e8272074b98a80ed56859d5e3f",
+  "evaluation_source_sha256": "ad1a69468fcd045a2f31d34333fdc9bea35ca63694ced48a420bab5c453b0d6d",
+  "registered_e3_evaluation_record_exists_at_check": false,
+  "scientific_status": "training complete; registered test evaluation missing at this observation",
+  "analysis_contract": "E3 primary band-aug minus decoder-aug, 10 runs per arm, Boundary F1, registered estimator, no multiplicity adjustment; secondary/descriptive contrasts remain exploratory on already examined official patients 101-150.",
+  "safe_evaluation_contract": "Frozen analysis/followup/evaluate_test.py --queue e3 checks integrity, refuses existing run output folders or an existing e3 record, takes the GPU flock, uses the frozen official loader and evaluate function, and adds E3 outputs only. It does not retrain or overwrite E1/E2 outputs. analyze.py main would rewrite existing aggregate E1/E2 outputs; use isolated new derived audit outputs instead.",
+  "runs": [
+    {
+      "run": "acdc_followup_decoder_aug_seed201",
+      "epochs": 150,
+      "selected_epoch": 56,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "1eb6a877225446122cb199efc3827db9d6e46af1f49dd3ee807c19c202cf70fb",
+      "history_sha256": "5f713a0d8cd19c2f39c818e6144e6ff01222d7fc9c2da0e68ef3109dfcf4313e",
+      "final_record_sha256": "c1cb7f9720fc78f87ec7791d964a65b540023eb37a41858e1907f1225f62fc55",
+      "provenance_sha256": "f0c68c91b48191b84f2d1903f53d6c9274968cbaf4f5ac30c8eb42c09bd7295a"
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed201",
+      "epochs": 150,
+      "selected_epoch": 83,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "168927316f915b76c6c1f68456e9ffecf74999e97602815ef6bf706dad7ca7e3",
+      "history_sha256": "670867187848a46caed0b973d7ec0a3c1431e9b25ae18396f0fa10d107ecaf10",
+      "final_record_sha256": "0b1346134ee6c13793a132c27f1524b7bafe3a4a42f834db9893f483f75e5e74",
+      "provenance_sha256": "207065804dbf374ecc0fdb3e8bf179ba090de5a760764a20f6e784b58b6a69db"
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed202",
+      "epochs": 150,
+      "selected_epoch": 61,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "1ed2ca67ba0a473c49470fe57a4a52c1ff1f40d15b7af60fff98219a4c0ce470",
+      "history_sha256": "56444edeeeb7f5954e2f3a886330482a2a2478692bee3ed22cb86af3a3c8bdf5",
+      "final_record_sha256": "2d332e7c3fd0ce9dd7b7224c9aab0934dd64dc80cb854967ca1462f91faee942",
+      "provenance_sha256": "1b548d123f252776c5d5805907a61430bc9c81a39e52b9ba442650ab6f5c7fca"
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed202",
+      "epochs": 150,
+      "selected_epoch": 77,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "5a21f69625e3aa0c7937a627455c917f294e31f57d4528e994b57a7155c583db",
+      "history_sha256": "02ff4d0dd96567776c29b2fdbf87e814ab27ab81629681106d3b0dbe7303fd9f",
+      "final_record_sha256": "536c2abebb28efb6064c4505ed322e92406d8d6d6d3c8703c8afcfbfce27b850",
+      "provenance_sha256": "17e85ae8ce8ac9a40d36acadb6f7ebb219408466801c6bf154ab204942f1cd7a"
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed203",
+      "epochs": 150,
+      "selected_epoch": 66,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "97f39ded73e6181f9d83b3a1a5d48857c1ac53b2ff7c5df2b23a3965f2c148dd",
+      "history_sha256": "dfc9ce84ae8fef6b2ad9982059a2dbf71ad860fb756449657080d6eb59d7aab4",
+      "final_record_sha256": "a12a8ac2566a413bc567a7969368854618f718316dd1e6b4e91ee79636d76b45",
+      "provenance_sha256": "b43eeee2de9cfdd239b769bbe60240bf8791053291a05c5f1750438a00836c14"
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed203",
+      "epochs": 150,
+      "selected_epoch": 80,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "b6fd36106ba1ef62b6d7f9af9611a96e5e1bda44df397c9d1aabb65a42d5cf6b",
+      "history_sha256": "f32f0186d0d64408196d32baa6d42a8449d49812d3c705153e4e8ea63175161b",
+      "final_record_sha256": "5675b5259a2edfa81fb3085d664c4c1c6b0c897130b70cd29d3e72909681f182",
+      "provenance_sha256": "92b4c2d56d5f33673998d9958d161f8fbd0d13829b5dd9d4b226d07da7ed3d7e"
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed204",
+      "epochs": 150,
+      "selected_epoch": 76,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "7cf314c26b458f3b4fbc8c54efc09634074e3b32b2b939916576a8dfc5d8a9fb",
+      "history_sha256": "733ba1f2870ceff3ffbea402c73870e55fba39cca1f85d24642096d121fbd722",
+      "final_record_sha256": "37a492b8f22567bd9e5bd70a9177836885be73ca96eb6696041215d3e6aab74f",
+      "provenance_sha256": "659dd0cf16fb722bfc785e61f2fdc11e75bfb963b15a087918a96a5262459ce2"
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed204",
+      "epochs": 150,
+      "selected_epoch": 99,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "aabf73389692384ed3477cf35bd3576c3d4d2ff92b730bfab65769ea805f51a3",
+      "history_sha256": "0b883d4eb72145b337ff1c0fcb7aadf6d584ce7032865a0b0adc500f1fb6a264",
+      "final_record_sha256": "263cff37705b0f7fba38ff155a2a496059b0f4358c77a1d78cbec37543226a07",
+      "provenance_sha256": "a2a93b51f3f221141a916ace1b864b6ffbf27004ab4692e90f804bead21c3899"
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed205",
+      "epochs": 150,
+      "selected_epoch": 81,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "b575b2625e503f4fe1bb6a7103ad843f2aae562b9a5bf0287cf8caf0df78ff1e",
+      "history_sha256": "452ec09366ba15924f5739478b1f159cb0bdf8eab07fbea2132eaa3b416bef8a",
+      "final_record_sha256": "2086576ddf3bcc9d0b6c2622a2c999b03dc23d40203a6a904d74942a648679b7",
+      "provenance_sha256": "8ffc042d6800856edf1cf603ab280c9ad69c6f48067b2f060160137a8cb56f21"
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed205",
+      "epochs": 150,
+      "selected_epoch": 46,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "29a693f40dc296aef7d0f5274fc195e0ef96967a26658d2234b9592f13449690",
+      "history_sha256": "e5e1945dd8abe2faace7f824ed288b345fdd7e9b786d394acc847c2f50c867ae",
+      "final_record_sha256": "dc5acae89e862765925e737f5d984b4dd54344cf14d711d1d5611cd83609b823",
+      "provenance_sha256": "d3bfb2c64cbd87d9e0698b90fd7858470f2a44dd8dd9d2625e1485d53fea9811"
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed206",
+      "epochs": 150,
+      "selected_epoch": 93,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "5dcf5b036378a72c23745e1035f42360d4d6b4e590556f07b49e718508689994",
+      "history_sha256": "1b6124dcaded1c72805a82c7d4e32a5f40922ac76c58a07eb518469513fb9086",
+      "final_record_sha256": "958ae669bbb759b2748a5a789cc9013a4322be89330d9fbc512f91de8ee6f092",
+      "provenance_sha256": "5819b7a0f5f4e56cd2f68a311135f72ee296806bc78b939358636ce9a3330d6c"
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed206",
+      "epochs": 150,
+      "selected_epoch": 59,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "99575c99aa45005a612fb8a2a6530c114089231b2af520413336e4c778c362cc",
+      "history_sha256": "3df2eed8a0038d070be2dfa8c4f69a8e7f4d0577a15ce1502d99f715e0bbf7d1",
+      "final_record_sha256": "65559fcfbfdf8360d36f231c3cae7b051479ae2cd78358821c0ec1526d163c3f",
+      "provenance_sha256": "8fac7cbb2efb3aa374a442f55264fe762a3e6d919f28b6d61af6379ffd31a312"
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed207",
+      "epochs": 150,
+      "selected_epoch": 82,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "182b1392f1f9ad1074e09e4067325eda49019da98a1d8f6e375690bd14fa983d",
+      "history_sha256": "35266e05c17f003f6e9fd1378a075d7386642a0b67210f7676b7883fc8009607",
+      "final_record_sha256": "e436be0ad6e3886305877c6b413a0b4430431a230131d7e83b899eef49370a52",
+      "provenance_sha256": "f766743de4a4794e1efa765a65859e1a9441e02bcff9736604a7b8c7d57d5447"
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed207",
+      "epochs": 150,
+      "selected_epoch": 90,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "ae82dfa3a5c59195d752c605082e049428d411540ba5ff7e0d72b4fa80437561",
+      "history_sha256": "724816e32a84737d2f37feef643edf77e35db401fbf76f1fbb2ef5800501077f",
+      "final_record_sha256": "2a0aef1f4836584a9d96a2be9bbe797ab96628a9f12d65ea766cdc4981172ffe",
+      "provenance_sha256": "a999bac1faa02193ccccad1659bd634d82e65a198c9deae632de2d7c8ec9bdd2"
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed208",
+      "epochs": 150,
+      "selected_epoch": 76,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "230998cdb0f3c452dc1f1289b33a6354d0b6fba0dc7f13ca04750812c40fc32f",
+      "history_sha256": "83ab21312b24c3b91ffd87ad54d13f323a63c29e726fa75f0dda3b4afafa0d3f",
+      "final_record_sha256": "38816b12f68e959c515a54ac14351e03807d69c19d831383c43cc4196a3fec4d",
+      "provenance_sha256": "7882fea9f5e11d41864cc0460dbd4b637adae56c8bdec01ad32f7f687398ec96"
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed208",
+      "epochs": 150,
+      "selected_epoch": 69,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "b6e261e5e8ed5277fd5007d6e3defe71950afae00b4685d142c87b0c5f592a0b",
+      "history_sha256": "b3fc3d0a5f71baa01c2cf52cfb7f5b0ba6912a45d8bfa917441eb59e448a4331",
+      "final_record_sha256": "8964fdf96dd53612d92b3546995e751fa53e54b25a0c89b49be16b987cb977ab",
+      "provenance_sha256": "f0af4077e891c88d3f47ca3dba9424461be39c0ff3bafe1b0bf8ab004c093b4f"
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed209",
+      "epochs": 150,
+      "selected_epoch": 111,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "f76d9dc9dbc693c6eeb8d50c00fa72f394478e9509b3b251d7d0b38062830f91",
+      "history_sha256": "db27c66d36741c5253a5a12cbcdc8a06ce4391d45bb7152f40d1efddd034eba2",
+      "final_record_sha256": "9159498d63a4c7fb2aeef18ea96adbf4af00d32b350d0ec8680a0b191ce12121",
+      "provenance_sha256": "3ba5d8433e1184116f5355b97829918befa0a3af4e879b89301f5d9fcab5b01e"
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed209",
+      "epochs": 150,
+      "selected_epoch": 98,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "7f160ee9ea35326d09f516b5bf00d8c15fd56a26003ac6154c7d1700a1203a14",
+      "history_sha256": "2c5f0bceb7f7c319b9e399c3730ba7e93d03586401a05cd29298305efa5388c9",
+      "final_record_sha256": "4aa7982dd9dfaadf3db781ff95cf446ea25bd37326c221de749b8b6bb892036b",
+      "provenance_sha256": "f60723251df4f3a19cafad89be73560b5c37a3dbf702431c2b45ea2f3253ef01"
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed210",
+      "epochs": 150,
+      "selected_epoch": 76,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "a1b30f69f0bc4a0515e2c1a5e8214bc75a11cfd513809beb9532b8f17f5c80af",
+      "history_sha256": "1c709f245b4b7348b86919de6549342a65ef5d87d9bba445c50ef357bdf9da83",
+      "final_record_sha256": "11eebc82e8e98254976eacca7fa6333e317b3446da3096ed0211b743232af718",
+      "provenance_sha256": "bff4bcd6fe52e4267ddad0c9fae154e691af39ef76257cf49201f7528c88827a"
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed210",
+      "epochs": 150,
+      "selected_epoch": 67,
+      "checks": {
+        "150_sequential_epochs": true,
+        "finite_training_history": true,
+        "first_max_checkpoint": true,
+        "checkpoint_epoch_matches": true,
+        "checkpoint_config_matches": true,
+        "best_validation_score": true,
+        "training_record_test_not_evaluated": true,
+        "no_test_output_in_training_folder": true
+      },
+      "best_checkpoint_sha256": "3f849c6515b47aa65040d620b665a9d1e83f445fd7689eee6172b82ee693e8f2",
+      "history_sha256": "5c5a7eb873158705019199f4e928cfa4cc0bd9f331042ad7074b47bf37c8d647",
+      "final_record_sha256": "2af734ee6abce211ad873b6110b057934ebc4da8fbf14f63ac0769fac7cf3302",
+      "provenance_sha256": "01a3fbdceed50a5e1a17ef9794b27d242b44a47e625a548ca7471ded707c8526"
+    }
+  ]
+}

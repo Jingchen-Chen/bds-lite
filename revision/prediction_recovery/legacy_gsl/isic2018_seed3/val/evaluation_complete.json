@@ -1,0 +1,25 @@
+{
+  "entry": {
+    "run_id": "legacy_gsl_isic2018_seed3_val",
+    "family": "legacy_gsl",
+    "dataset": "isic2018",
+    "seed": 3,
+    "split": "val",
+    "checkpoint": "results/checkpoints/isic2018_p2_unet_gsl_seed3/best.pt",
+    "checkpoint_sha256": "20da9cd09e361fa1f39949887f1accfaf745c02bfdfe03618515140bb42f4459",
+    "manifest": "recovered/followup/splits/isic2018/val.json",
+    "manifest_sha256": "81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e",
+    "batch": 8,
+    "classes": 2,
+    "output": "revision/prediction_recovery/legacy_gsl/isic2018_seed3/val"
+  },
+  "protocol_sha256": "3619ae1081487603740dea88bbc509f554705a1924ae6dc77ae33028b0e059b7",
+  "outputs": {
+    "predictions.npz": "2f46d6c2c2f30df76e1f966f7bb427822f1f9e32a030f7746db34ccb7c8bab7a",
+    "per_case.csv": "a45a0a825f69003de424dd257684d7dd9d78e06b826b71279a48bee64184cda0",
+    "provenance.json": "f1de467cc3c45daa5d0ee58c94ed28e90e6af5f9a704246b80c936bfd87d033b"
+  },
+  "images": 519,
+  "class_rows": 519,
+  "seconds": 4.772334815992508
+}

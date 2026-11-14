@@ -1,0 +1,8 @@
+{
+  "protocol": "revision/volume_statistics_protocol.md",
+  "family": "V: three volume endpoints within dataset",
+  "surface_eligibility": "all classes/frames/methods/seeds finite; all-unit penalties separate",
+  "mde": "approximate normal paired 80% power with conservative alpha .05/3; not exact Wilcoxon power",
+  "training_uncertainty": "conditional on these trained seeds; not training-population uncertainty",
+  "physical_units": false
+}

@@ -1,0 +1,421 @@
+{"utc": "2026-11-07T13:26:36.832292+00:00", "event": "kd_supervisor_started", "pid": 572865, "queue": "revision/queue_kd_phase1.yaml"}
+{"utc": "2026-11-07T13:26:36.871524+00:00", "event": "cool_ready", "temperature_c": 53, "memory_mib": 13}
+{"utc": "2026-11-07T13:26:36.871658+00:00", "event": "queue_start", "attempt": 1, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794057996871638837.log"}
+{"utc": "2026-11-07T13:28:46.873869+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 11}}
+{"utc": "2026-11-07T13:28:46.921655+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T13:28:46.921855+00:00", "event": "queue_start", "attempt": 2, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794058126921831911.log"}
+{"utc": "2026-11-07T13:30:06.923911+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 17}}
+{"utc": "2026-11-07T13:30:06.970945+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:30:06.971090+00:00", "event": "queue_start", "attempt": 3, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794058206971070159.log"}
+{"utc": "2026-11-07T13:31:16.972888+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 22}}
+{"utc": "2026-11-07T13:31:17.019831+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T13:31:17.019981+00:00", "event": "queue_start", "attempt": 4, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794058277019960995.log"}
+{"utc": "2026-11-07T13:32:57.021865+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 30}}
+{"utc": "2026-11-07T13:32:57.069679+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T13:32:57.069836+00:00", "event": "queue_start", "attempt": 5, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794058377069811104.log"}
+{"utc": "2026-11-07T13:34:47.072310+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 39}}
+{"utc": "2026-11-07T13:34:47.118715+00:00", "event": "cool_ready", "temperature_c": 66, "memory_mib": 13}
+{"utc": "2026-11-07T13:34:47.118862+00:00", "event": "queue_start", "attempt": 6, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794058487118843464.log"}
+{"utc": "2026-11-07T13:36:07.120622+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 45}}
+{"utc": "2026-11-07T13:36:07.165352+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:36:07.165494+00:00", "event": "queue_start", "attempt": 7, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794058567165474744.log"}
+{"utc": "2026-11-07T13:37:17.167015+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 50}}
+{"utc": "2026-11-07T13:37:17.212869+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T13:37:17.213012+00:00", "event": "queue_start", "attempt": 8, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794058637212992858.log"}
+{"utc": "2026-11-07T13:38:37.214759+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 56}}
+{"utc": "2026-11-07T13:38:37.260709+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:38:37.260860+00:00", "event": "queue_start", "attempt": 9, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794058717260839313.log"}
+{"utc": "2026-11-07T13:39:57.262415+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 62}}
+{"utc": "2026-11-07T13:39:57.309633+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:39:57.309778+00:00", "event": "queue_start", "attempt": 10, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794058797309757799.log"}
+{"utc": "2026-11-07T13:41:07.311434+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 67}}
+{"utc": "2026-11-07T13:41:07.359577+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:41:07.359749+00:00", "event": "queue_start", "attempt": 11, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794058867359725117.log"}
+{"utc": "2026-11-07T13:42:17.361553+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 72}}
+{"utc": "2026-11-07T13:42:17.408411+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:42:17.408555+00:00", "event": "queue_start", "attempt": 12, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794058937408535008.log"}
+{"utc": "2026-11-07T13:43:27.409994+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 77}}
+{"utc": "2026-11-07T13:43:27.458093+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T13:43:27.458247+00:00", "event": "queue_start", "attempt": 13, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059007458226463.log"}
+{"utc": "2026-11-07T13:44:47.460117+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 83}}
+{"utc": "2026-11-07T13:44:47.508121+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:44:47.508271+00:00", "event": "queue_start", "attempt": 14, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059087508251038.log"}
+{"utc": "2026-11-07T13:45:47.509661+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 87}}
+{"utc": "2026-11-07T13:45:47.556405+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T13:45:47.556560+00:00", "event": "queue_start", "attempt": 15, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059147556538539.log"}
+{"utc": "2026-11-07T13:46:47.557903+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 91}}
+{"utc": "2026-11-07T13:46:47.605045+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T13:46:47.605206+00:00", "event": "queue_start", "attempt": 16, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059207605185623.log"}
+{"utc": "2026-11-07T13:47:57.606906+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 96}}
+{"utc": "2026-11-07T13:47:57.654761+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:47:57.654906+00:00", "event": "queue_start", "attempt": 17, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059277654887015.log"}
+{"utc": "2026-11-07T13:49:17.656736+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 102}}
+{"utc": "2026-11-07T13:49:17.703866+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T13:49:17.704025+00:00", "event": "queue_start", "attempt": 18, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059357704004153.log"}
+{"utc": "2026-11-07T13:50:27.705533+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 107}}
+{"utc": "2026-11-07T13:50:27.752713+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:50:27.752858+00:00", "event": "queue_start", "attempt": 19, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059427752839244.log"}
+{"utc": "2026-11-07T13:51:37.754406+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 112}}
+{"utc": "2026-11-07T13:51:37.799981+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:51:37.800179+00:00", "event": "queue_start", "attempt": 20, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059497800159158.log"}
+{"utc": "2026-11-07T13:52:47.801708+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 117}}
+{"utc": "2026-11-07T13:52:47.848417+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T13:52:47.848567+00:00", "event": "queue_start", "attempt": 21, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059567848547025.log"}
+{"utc": "2026-11-07T13:53:57.850015+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 122}}
+{"utc": "2026-11-07T13:53:57.898882+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:53:57.899041+00:00", "event": "queue_start", "attempt": 22, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059637899021815.log"}
+{"utc": "2026-11-07T13:55:07.900609+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 127}}
+{"utc": "2026-11-07T13:55:07.948694+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:55:07.948854+00:00", "event": "queue_start", "attempt": 23, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059707948834152.log"}
+{"utc": "2026-11-07T13:56:27.950344+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 133}}
+{"utc": "2026-11-07T13:56:27.997207+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T13:56:27.997353+00:00", "event": "queue_start", "attempt": 24, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059787997333442.log"}
+{"utc": "2026-11-07T13:57:27.998877+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 137}}
+{"utc": "2026-11-07T13:57:28.046152+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T13:57:28.046312+00:00", "event": "queue_start", "attempt": 25, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059848046285301.log"}
+{"utc": "2026-11-07T13:58:48.047949+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 143}}
+{"utc": "2026-11-07T13:58:48.094911+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T13:58:48.095053+00:00", "event": "queue_start", "attempt": 26, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059928095033688.log"}
+{"utc": "2026-11-07T13:59:48.096549+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_teacher_seed100", "saved_progress_epoch": 147}}
+{"utc": "2026-11-07T13:59:48.145184+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T13:59:48.145334+00:00", "event": "queue_start", "attempt": 27, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794059988145313428.log"}
+{"utc": "2026-11-07T14:02:38.147818+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 4}}
+{"utc": "2026-11-07T14:02:41.538718+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T14:02:41.538943+00:00", "event": "queue_start", "attempt": 28, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060161538851512.log"}
+{"utc": "2026-11-07T14:03:31.540291+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 6}}
+{"utc": "2026-11-07T14:03:33.930078+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T14:03:33.930241+00:00", "event": "queue_start", "attempt": 29, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060213930220087.log"}
+{"utc": "2026-11-07T14:04:33.945439+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 9}}
+{"utc": "2026-11-07T14:04:33.991918+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T14:04:33.992063+00:00", "event": "queue_start", "attempt": 30, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060273992042978.log"}
+{"utc": "2026-11-07T14:05:33.993534+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 12}}
+{"utc": "2026-11-07T14:05:34.039759+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T14:05:34.039912+00:00", "event": "queue_start", "attempt": 31, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060334039891598.log"}
+{"utc": "2026-11-07T14:06:24.041287+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 14}}
+{"utc": "2026-11-07T14:06:24.088114+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T14:06:24.088256+00:00", "event": "queue_start", "attempt": 32, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060384088237021.log"}
+{"utc": "2026-11-07T14:07:24.089639+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 17}}
+{"utc": "2026-11-07T14:07:24.136808+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T14:07:24.136952+00:00", "event": "queue_start", "attempt": 33, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060444136933526.log"}
+{"utc": "2026-11-07T14:08:24.138465+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 20}}
+{"utc": "2026-11-07T14:08:24.183909+00:00", "event": "cool_ready", "temperature_c": 66, "memory_mib": 13}
+{"utc": "2026-11-07T14:08:24.184082+00:00", "event": "queue_start", "attempt": 34, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060504184061039.log"}
+{"utc": "2026-11-07T14:09:14.185601+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 22}}
+{"utc": "2026-11-07T14:09:14.231871+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T14:09:14.232041+00:00", "event": "queue_start", "attempt": 35, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060554232017411.log"}
+{"utc": "2026-11-07T14:10:04.233653+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 24}}
+{"utc": "2026-11-07T14:10:04.279615+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:10:04.279761+00:00", "event": "queue_start", "attempt": 36, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060604279740457.log"}
+{"utc": "2026-11-07T14:11:04.281191+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 27}}
+{"utc": "2026-11-07T14:11:04.331391+00:00", "event": "cool_ready", "temperature_c": 66, "memory_mib": 13}
+{"utc": "2026-11-07T14:11:04.331535+00:00", "event": "queue_start", "attempt": 37, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060664331515736.log"}
+{"utc": "2026-11-07T14:11:54.332818+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 29}}
+{"utc": "2026-11-07T14:11:54.379072+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T14:11:54.379217+00:00", "event": "queue_start", "attempt": 38, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060714379198205.log"}
+{"utc": "2026-11-07T14:12:54.380708+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 32}}
+{"utc": "2026-11-07T14:12:54.426866+00:00", "event": "cool_ready", "temperature_c": 66, "memory_mib": 13}
+{"utc": "2026-11-07T14:12:54.427007+00:00", "event": "queue_start", "attempt": 39, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060774426986878.log"}
+{"utc": "2026-11-07T14:13:44.428395+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 34}}
+{"utc": "2026-11-07T14:13:44.477608+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T14:13:44.477777+00:00", "event": "queue_start", "attempt": 40, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060824477754939.log"}
+{"utc": "2026-11-07T14:14:34.479401+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 36}}
+{"utc": "2026-11-07T14:14:34.526891+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:14:34.527050+00:00", "event": "queue_start", "attempt": 41, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060874527030392.log"}
+{"utc": "2026-11-07T14:15:34.528579+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 39}}
+{"utc": "2026-11-07T14:15:34.576310+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T14:15:34.576463+00:00", "event": "queue_start", "attempt": 42, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060934576443703.log"}
+{"utc": "2026-11-07T14:16:24.577806+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 41}}
+{"utc": "2026-11-07T14:16:26.961870+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T14:16:26.962024+00:00", "event": "queue_start", "attempt": 43, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794060986962004857.log"}
+{"utc": "2026-11-07T14:17:26.963458+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 44}}
+{"utc": "2026-11-07T14:17:27.010772+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T14:17:27.010923+00:00", "event": "queue_start", "attempt": 44, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061047010903539.log"}
+{"utc": "2026-11-07T14:18:17.012280+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 46}}
+{"utc": "2026-11-07T14:18:19.397137+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T14:18:19.397294+00:00", "event": "queue_start", "attempt": 45, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061099397272022.log"}
+{"utc": "2026-11-07T14:19:19.398832+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 49}}
+{"utc": "2026-11-07T14:19:19.447057+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T14:19:19.447231+00:00", "event": "queue_start", "attempt": 46, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061159447210155.log"}
+{"utc": "2026-11-07T14:20:09.448680+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 51}}
+{"utc": "2026-11-07T14:20:09.496105+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T14:20:09.496288+00:00", "event": "queue_start", "attempt": 47, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061209496267724.log"}
+{"utc": "2026-11-07T14:21:09.497761+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 54}}
+{"utc": "2026-11-07T14:21:09.545155+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T14:21:09.545315+00:00", "event": "queue_start", "attempt": 48, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061269545289422.log"}
+{"utc": "2026-11-07T14:22:09.546764+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 57}}
+{"utc": "2026-11-07T14:22:09.593184+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T14:22:09.593342+00:00", "event": "queue_start", "attempt": 49, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061329593322406.log"}
+{"utc": "2026-11-07T14:22:59.594786+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 59}}
+{"utc": "2026-11-07T14:23:01.974107+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:23:01.974252+00:00", "event": "queue_start", "attempt": 50, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061381974232329.log"}
+{"utc": "2026-11-07T14:24:21.975888+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 63}}
+{"utc": "2026-11-07T14:24:22.022781+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:24:22.022929+00:00", "event": "queue_start", "attempt": 51, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061462022909293.log"}
+{"utc": "2026-11-07T14:25:22.024348+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 66}}
+{"utc": "2026-11-07T14:25:22.071071+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T14:25:22.071223+00:00", "event": "queue_start", "attempt": 52, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061522071204044.log"}
+{"utc": "2026-11-07T14:26:12.072726+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 68}}
+{"utc": "2026-11-07T14:26:14.449506+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:26:14.449659+00:00", "event": "queue_start", "attempt": 53, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061574449638512.log"}
+{"utc": "2026-11-07T14:27:14.451125+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 71}}
+{"utc": "2026-11-07T14:27:14.498960+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T14:27:14.499105+00:00", "event": "queue_start", "attempt": 54, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061634499086427.log"}
+{"utc": "2026-11-07T14:28:04.500462+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 73}}
+{"utc": "2026-11-07T14:28:04.546913+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:28:04.547082+00:00", "event": "queue_start", "attempt": 55, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061684547059673.log"}
+{"utc": "2026-11-07T14:28:54.548700+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 75}}
+{"utc": "2026-11-07T14:28:54.595744+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T14:28:54.595950+00:00", "event": "queue_start", "attempt": 56, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061734595929173.log"}
+{"utc": "2026-11-07T14:29:54.597475+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 78}}
+{"utc": "2026-11-07T14:29:54.643738+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T14:29:54.643879+00:00", "event": "queue_start", "attempt": 57, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061794643858699.log"}
+{"utc": "2026-11-07T14:30:44.645384+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 80}}
+{"utc": "2026-11-07T14:30:44.691240+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T14:30:44.691438+00:00", "event": "queue_start", "attempt": 58, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061844691413834.log"}
+{"utc": "2026-11-07T14:32:14.694050+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 85}}
+{"utc": "2026-11-07T14:32:14.741691+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:32:14.741821+00:00", "event": "queue_start", "attempt": 59, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794061934741802293.log"}
+{"utc": "2026-11-07T14:33:44.743664+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 90}}
+{"utc": "2026-11-07T14:33:44.789996+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:33:44.790124+00:00", "event": "queue_start", "attempt": 60, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794062024790103830.log"}
+{"utc": "2026-11-07T14:35:14.792018+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 95}}
+{"utc": "2026-11-07T14:35:14.838171+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:35:14.838323+00:00", "event": "queue_start", "attempt": 61, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794062114838298694.log"}
+{"utc": "2026-11-07T14:36:44.840203+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 100}}
+{"utc": "2026-11-07T14:36:44.887211+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:36:44.887352+00:00", "event": "queue_start", "attempt": 62, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794062204887330729.log"}
+{"utc": "2026-11-07T14:38:04.889196+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 104}}
+{"utc": "2026-11-07T14:38:07.341365+00:00", "event": "cool_ready", "temperature_c": 59, "memory_mib": 13}
+{"utc": "2026-11-07T14:38:07.341505+00:00", "event": "queue_start", "attempt": 63, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794062287341485809.log"}
+{"utc": "2026-11-07T14:39:47.343488+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 110}}
+{"utc": "2026-11-07T14:39:47.388790+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T14:39:47.388922+00:00", "event": "queue_start", "attempt": 64, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794062387388902483.log"}
+{"utc": "2026-11-07T14:41:07.390705+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 114}}
+{"utc": "2026-11-07T14:41:07.436820+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T14:41:07.436952+00:00", "event": "queue_start", "attempt": 65, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794062467436932773.log"}
+{"utc": "2026-11-07T14:42:37.438891+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 119}}
+{"utc": "2026-11-07T14:42:37.485660+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:42:37.485788+00:00", "event": "queue_start", "attempt": 66, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794062557485770285.log"}
+{"utc": "2026-11-07T14:43:57.487720+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 123}}
+{"utc": "2026-11-07T14:43:59.962716+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T14:43:59.962857+00:00", "event": "queue_start", "attempt": 67, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794062639962837829.log"}
+{"utc": "2026-11-07T14:45:39.964714+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 129}}
+{"utc": "2026-11-07T14:45:40.009419+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T14:45:40.009548+00:00", "event": "queue_start", "attempt": 68, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794062740009528685.log"}
+{"utc": "2026-11-07T14:47:00.011409+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 133}}
+{"utc": "2026-11-07T14:47:02.442408+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T14:47:02.442544+00:00", "event": "queue_start", "attempt": 69, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794062822442524679.log"}
+{"utc": "2026-11-07T14:48:32.444361+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 138}}
+{"utc": "2026-11-07T14:48:32.490620+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:48:32.490747+00:00", "event": "queue_start", "attempt": 70, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794062912490728736.log"}
+{"utc": "2026-11-07T14:50:02.492738+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 143}}
+{"utc": "2026-11-07T14:50:02.539254+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:50:02.539393+00:00", "event": "queue_start", "attempt": 71, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794063002539373303.log"}
+{"utc": "2026-11-07T14:51:32.541332+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed1", "saved_progress_epoch": 148}}
+{"utc": "2026-11-07T14:51:32.587901+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:51:32.588033+00:00", "event": "queue_start", "attempt": 72, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794063092588014598.log"}
+{"utc": "2026-11-07T14:53:32.590164+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 4}}
+{"utc": "2026-11-07T14:53:32.635515+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T14:53:32.635646+00:00", "event": "queue_start", "attempt": 73, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794063212635625221.log"}
+{"utc": "2026-11-07T14:55:02.637397+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 9}}
+{"utc": "2026-11-07T14:55:02.683495+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:55:02.683619+00:00", "event": "queue_start", "attempt": 74, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794063302683600958.log"}
+{"utc": "2026-11-07T14:56:32.685460+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 14}}
+{"utc": "2026-11-07T14:56:35.168957+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T14:56:35.169093+00:00", "event": "queue_start", "attempt": 75, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794063395169074415.log"}
+{"utc": "2026-11-07T14:57:55.172156+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 18}}
+{"utc": "2026-11-07T14:57:57.630434+00:00", "event": "cool_ready", "temperature_c": 59, "memory_mib": 13}
+{"utc": "2026-11-07T14:57:57.630571+00:00", "event": "queue_start", "attempt": 76, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794063477630551272.log"}
+{"utc": "2026-11-07T14:59:27.633720+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 23}}
+{"utc": "2026-11-07T14:59:27.680201+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T14:59:27.680336+00:00", "event": "queue_start", "attempt": 77, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794063567680317712.log"}
+{"utc": "2026-11-07T15:00:57.681999+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 28}}
+{"utc": "2026-11-07T15:00:57.727404+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T15:00:57.727533+00:00", "event": "queue_start", "attempt": 78, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794063657727513865.log"}
+{"utc": "2026-11-07T15:01:57.729096+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 31}}
+{"utc": "2026-11-07T15:01:57.775032+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T15:01:57.775167+00:00", "event": "queue_start", "attempt": 79, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794063717775148686.log"}
+{"utc": "2026-11-07T15:03:17.776957+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 35}}
+{"utc": "2026-11-07T15:03:20.243682+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:03:20.243818+00:00", "event": "queue_start", "attempt": 80, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794063800243797920.log"}
+{"utc": "2026-11-07T15:04:40.245571+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 39}}
+{"utc": "2026-11-07T15:04:42.719884+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:04:42.720023+00:00", "event": "queue_start", "attempt": 81, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794063882720003352.log"}
+{"utc": "2026-11-07T15:06:02.721846+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 43}}
+{"utc": "2026-11-07T15:06:05.109474+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:06:05.109635+00:00", "event": "queue_start", "attempt": 82, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794063965109615682.log"}
+{"utc": "2026-11-07T15:07:25.111392+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 47}}
+{"utc": "2026-11-07T15:07:27.511532+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:07:27.511694+00:00", "event": "queue_start", "attempt": 83, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794064047511672210.log"}
+{"utc": "2026-11-07T15:08:47.513449+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 51}}
+{"utc": "2026-11-07T15:08:47.560502+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:08:47.560654+00:00", "event": "queue_start", "attempt": 84, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794064127560633807.log"}
+{"utc": "2026-11-07T15:10:07.562355+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 55}}
+{"utc": "2026-11-07T15:10:07.609629+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:10:07.609775+00:00", "event": "queue_start", "attempt": 85, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794064207609755924.log"}
+{"utc": "2026-11-07T15:11:27.611429+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 59}}
+{"utc": "2026-11-07T15:11:29.994232+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:11:29.994411+00:00", "event": "queue_start", "attempt": 86, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794064289994390237.log"}
+{"utc": "2026-11-07T15:12:49.996789+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 63}}
+{"utc": "2026-11-07T15:12:52.440104+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T15:12:52.440242+00:00", "event": "queue_start", "attempt": 87, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794064372440223954.log"}
+{"utc": "2026-11-07T15:14:22.442433+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 68}}
+{"utc": "2026-11-07T15:14:22.488785+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:14:22.488909+00:00", "event": "queue_start", "attempt": 88, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794064462488889965.log"}
+{"utc": "2026-11-07T15:15:52.491050+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 73}}
+{"utc": "2026-11-07T15:15:54.923940+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T15:15:54.924081+00:00", "event": "queue_start", "attempt": 89, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794064554924061634.log"}
+{"utc": "2026-11-07T15:17:24.925900+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 78}}
+{"utc": "2026-11-07T15:17:24.972266+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T15:17:24.972414+00:00", "event": "queue_start", "attempt": 90, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794064644972394196.log"}
+{"utc": "2026-11-07T15:18:44.974314+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 82}}
+{"utc": "2026-11-07T15:18:47.451522+00:00", "event": "cool_ready", "temperature_c": 59, "memory_mib": 13}
+{"utc": "2026-11-07T15:18:47.451663+00:00", "event": "queue_start", "attempt": 91, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794064727451644328.log"}
+{"utc": "2026-11-07T15:20:27.453355+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 88}}
+{"utc": "2026-11-07T15:20:27.498776+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T15:20:27.498908+00:00", "event": "queue_start", "attempt": 92, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794064827498888564.log"}
+{"utc": "2026-11-07T15:21:47.500717+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 92}}
+{"utc": "2026-11-07T15:21:49.939619+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T15:21:49.939760+00:00", "event": "queue_start", "attempt": 93, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794064909939739459.log"}
+{"utc": "2026-11-07T15:23:19.941832+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 97}}
+{"utc": "2026-11-07T15:23:19.988387+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T15:23:19.988514+00:00", "event": "queue_start", "attempt": 94, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794064999988494571.log"}
+{"utc": "2026-11-07T15:24:49.990451+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 102}}
+{"utc": "2026-11-07T15:24:50.036724+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T15:24:50.036850+00:00", "event": "queue_start", "attempt": 95, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794065090036830099.log"}
+{"utc": "2026-11-07T15:26:20.038699+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 107}}
+{"utc": "2026-11-07T15:26:20.084448+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T15:26:20.084573+00:00", "event": "queue_start", "attempt": 96, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794065180084554219.log"}
+{"utc": "2026-11-07T15:27:50.086710+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 112}}
+{"utc": "2026-11-07T15:27:52.517524+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T15:27:52.517682+00:00", "event": "queue_start", "attempt": 97, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794065272517664332.log"}
+{"utc": "2026-11-07T15:30:32.520264+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 122}}
+{"utc": "2026-11-07T15:30:32.565930+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T15:30:32.566058+00:00", "event": "queue_start", "attempt": 98, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794065432566038891.log"}
+{"utc": "2026-11-07T15:32:12.568129+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 128}}
+{"utc": "2026-11-07T15:32:12.613181+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T15:32:12.613325+00:00", "event": "queue_start", "attempt": 99, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794065532613300328.log"}
+{"utc": "2026-11-07T15:33:42.615358+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 133}}
+{"utc": "2026-11-07T15:33:42.660627+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:33:42.660751+00:00", "event": "queue_start", "attempt": 100, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794065622660732645.log"}
+{"utc": "2026-11-07T15:35:12.662881+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 138}}
+{"utc": "2026-11-07T15:35:15.132208+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:35:15.132405+00:00", "event": "queue_start", "attempt": 101, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794065715132384164.log"}
+{"utc": "2026-11-07T15:36:55.135437+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 144}}
+{"utc": "2026-11-07T15:36:55.181958+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T15:36:55.182105+00:00", "event": "queue_start", "attempt": 102, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794065815182083677.log"}
+{"utc": "2026-11-07T15:38:15.184178+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed2", "saved_progress_epoch": 148}}
+{"utc": "2026-11-07T15:38:17.570540+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:38:17.570693+00:00", "event": "queue_start", "attempt": 103, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794065897570673286.log"}
+{"utc": "2026-11-07T15:40:27.572971+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 5}}
+{"utc": "2026-11-07T15:40:27.618162+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T15:40:27.618314+00:00", "event": "queue_start", "attempt": 104, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066027618288017.log"}
+{"utc": "2026-11-07T15:41:47.619927+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 9}}
+{"utc": "2026-11-07T15:41:49.979390+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:41:49.979546+00:00", "event": "queue_start", "attempt": 105, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066109979523482.log"}
+{"utc": "2026-11-07T15:43:09.981133+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 13}}
+{"utc": "2026-11-07T15:43:12.363804+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T15:43:12.363940+00:00", "event": "queue_start", "attempt": 106, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066192363921957.log"}
+{"utc": "2026-11-07T15:44:12.365567+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 16}}
+{"utc": "2026-11-07T15:44:12.413188+00:00", "event": "cool_ready", "temperature_c": 65, "memory_mib": 13}
+{"utc": "2026-11-07T15:44:12.413379+00:00", "event": "queue_start", "attempt": 107, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066252413355626.log"}
+{"utc": "2026-11-07T15:45:02.414979+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 18}}
+{"utc": "2026-11-07T15:45:04.798641+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:45:04.798795+00:00", "event": "queue_start", "attempt": 108, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066304798773288.log"}
+{"utc": "2026-11-07T15:46:24.800792+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 22}}
+{"utc": "2026-11-07T15:46:27.219937+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T15:46:27.220069+00:00", "event": "queue_start", "attempt": 109, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066387220049750.log"}
+{"utc": "2026-11-07T15:47:47.221824+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 26}}
+{"utc": "2026-11-07T15:47:49.589136+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T15:47:49.589289+00:00", "event": "queue_start", "attempt": 110, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066469589269242.log"}
+{"utc": "2026-11-07T15:49:19.591299+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 31}}
+{"utc": "2026-11-07T15:49:19.638184+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T15:49:19.638331+00:00", "event": "queue_start", "attempt": 111, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066559638310620.log"}
+{"utc": "2026-11-07T15:50:19.639856+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 34}}
+{"utc": "2026-11-07T15:50:19.684641+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T15:50:19.684811+00:00", "event": "queue_start", "attempt": 112, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066619684793294.log"}
+{"utc": "2026-11-07T15:51:19.686253+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 37}}
+{"utc": "2026-11-07T15:51:19.731173+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T15:51:19.731318+00:00", "event": "queue_start", "attempt": 113, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066679731294733.log"}
+{"utc": "2026-11-07T15:52:39.733058+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 41}}
+{"utc": "2026-11-07T15:52:42.105120+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:52:42.105275+00:00", "event": "queue_start", "attempt": 114, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066762105256016.log"}
+{"utc": "2026-11-07T15:54:02.106894+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 45}}
+{"utc": "2026-11-07T15:54:04.485078+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T15:54:04.485243+00:00", "event": "queue_start", "attempt": 115, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066844485221261.log"}
+{"utc": "2026-11-07T15:55:24.486932+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 49}}
+{"utc": "2026-11-07T15:55:26.909203+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T15:55:26.909341+00:00", "event": "queue_start", "attempt": 116, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794066926909322006.log"}
+{"utc": "2026-11-07T15:56:56.910910+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 54}}
+{"utc": "2026-11-07T15:56:56.957015+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T15:56:56.957248+00:00", "event": "queue_start", "attempt": 117, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067016957226781.log"}
+{"utc": "2026-11-07T15:58:16.959040+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 58}}
+{"utc": "2026-11-07T15:58:19.370817+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:58:19.370973+00:00", "event": "queue_start", "attempt": 118, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067099370950467.log"}
+{"utc": "2026-11-07T15:59:39.372592+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 62}}
+{"utc": "2026-11-07T15:59:41.782458+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T15:59:41.782605+00:00", "event": "queue_start", "attempt": 119, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067181782584839.log"}
+{"utc": "2026-11-07T16:01:01.784772+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 66}}
+{"utc": "2026-11-07T16:01:04.177353+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T16:01:04.177508+00:00", "event": "queue_start", "attempt": 120, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067264177482905.log"}
+{"utc": "2026-11-07T16:02:24.180159+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 70}}
+{"utc": "2026-11-07T16:02:26.560593+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T16:02:26.560743+00:00", "event": "queue_start", "attempt": 121, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067346560722401.log"}
+{"utc": "2026-11-07T16:03:56.562372+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 75}}
+{"utc": "2026-11-07T16:03:56.607768+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T16:03:56.607899+00:00", "event": "queue_start", "attempt": 122, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067436607880200.log"}
+{"utc": "2026-11-07T16:05:16.609774+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 79}}
+{"utc": "2026-11-07T16:05:19.024692+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T16:05:19.024917+00:00", "event": "queue_start", "attempt": 123, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067519024895831.log"}
+{"utc": "2026-11-07T16:06:49.027226+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 84}}
+{"utc": "2026-11-07T16:06:49.074576+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 13}
+{"utc": "2026-11-07T16:06:49.074705+00:00", "event": "queue_start", "attempt": 124, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067609074687295.log"}
+{"utc": "2026-11-07T16:07:49.076153+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 87}}
+{"utc": "2026-11-07T16:07:49.122660+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T16:07:49.122801+00:00", "event": "queue_start", "attempt": 125, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067669122781043.log"}
+{"utc": "2026-11-07T16:08:39.124188+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 89}}
+{"utc": "2026-11-07T16:08:39.170826+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T16:08:39.170991+00:00", "event": "queue_start", "attempt": 126, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067719170968087.log"}
+{"utc": "2026-11-07T16:09:59.173042+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 93}}
+{"utc": "2026-11-07T16:10:01.546773+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T16:10:01.546911+00:00", "event": "queue_start", "attempt": 127, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067801546892070.log"}
+{"utc": "2026-11-07T16:11:01.548424+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 96}}
+{"utc": "2026-11-07T16:11:01.594948+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T16:11:01.595142+00:00", "event": "queue_start", "attempt": 128, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067861595123231.log"}
+{"utc": "2026-11-07T16:12:01.596707+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 99}}
+{"utc": "2026-11-07T16:12:01.642427+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T16:12:01.642569+00:00", "event": "queue_start", "attempt": 129, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794067921642549924.log"}
+{"utc": "2026-11-07T16:13:21.644356+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 103}}
+{"utc": "2026-11-07T16:13:21.690348+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T16:13:21.690492+00:00", "event": "queue_start", "attempt": 130, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794068001690472653.log"}
+{"utc": "2026-11-07T16:14:41.692168+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 107}}
+{"utc": "2026-11-07T16:14:44.074715+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T16:14:44.074849+00:00", "event": "queue_start", "attempt": 131, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794068084074830213.log"}
+{"utc": "2026-11-07T16:16:04.076623+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 111}}
+{"utc": "2026-11-07T16:16:06.468250+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T16:16:06.468391+00:00", "event": "queue_start", "attempt": 132, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794068166468372249.log"}
+{"utc": "2026-11-07T16:17:26.469972+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 115}}
+{"utc": "2026-11-07T16:17:28.866087+00:00", "event": "cool_ready", "temperature_c": 62, "memory_mib": 13}
+{"utc": "2026-11-07T16:17:28.866226+00:00", "event": "queue_start", "attempt": 133, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794068248866205738.log"}
+{"utc": "2026-11-07T16:18:28.868692+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 118}}
+{"utc": "2026-11-07T16:18:28.948373+00:00", "event": "cool_ready", "temperature_c": 63, "memory_mib": 16}
+{"utc": "2026-11-07T16:18:28.948490+00:00", "event": "queue_start", "attempt": 134, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794068308948473779.log"}
+{"utc": "2026-11-07T16:19:18.951225+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 120}}
+{"utc": "2026-11-07T16:19:18.999282+00:00", "event": "cool_ready", "temperature_c": 64, "memory_mib": 13}
+{"utc": "2026-11-07T16:19:18.999447+00:00", "event": "queue_start", "attempt": 135, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794068358999427519.log"}
+{"utc": "2026-11-07T16:20:39.001289+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 124}}
+{"utc": "2026-11-07T16:20:41.421466+00:00", "event": "cool_ready", "temperature_c": 59, "memory_mib": 13}
+{"utc": "2026-11-07T16:20:41.421623+00:00", "event": "queue_start", "attempt": 136, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794068441421602478.log"}
+{"utc": "2026-11-07T16:22:41.425144+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 131}}
+{"utc": "2026-11-07T16:22:41.470575+00:00", "event": "cool_ready", "temperature_c": 61, "memory_mib": 13}
+{"utc": "2026-11-07T16:22:41.470683+00:00", "event": "queue_start", "attempt": 137, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794068561470669031.log"}
+{"utc": "2026-11-07T16:24:41.472651+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 138}}
+{"utc": "2026-11-07T16:24:41.517397+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T16:24:41.517530+00:00", "event": "queue_start", "attempt": 138, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794068681517510924.log"}
+{"utc": "2026-11-07T16:26:11.519594+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 143}}
+{"utc": "2026-11-07T16:26:11.566773+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T16:26:11.566907+00:00", "event": "queue_start", "attempt": 139, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794068771566887822.log"}
+{"utc": "2026-11-07T16:28:11.569119+00:00", "event": "guarded_resume_pending_cooling", "evidence": {"kind": "thermal_epoch_stop", "run": "isic2018_kd_band_seed3", "saved_progress_epoch": 150}}
+{"utc": "2026-11-07T16:28:11.615225+00:00", "event": "cool_ready", "temperature_c": 60, "memory_mib": 13}
+{"utc": "2026-11-07T16:28:11.615362+00:00", "event": "queue_start", "attempt": 140, "queue": "revision/queue_kd_phase1.yaml", "stdout": "/home/jc/bds-lite/revision/kd_comparator/supervision/queue_attempt_1794068891615342530.log"}
+{"utc": "2026-11-07T16:28:31.616330+00:00", "event": "queue_finished", "queue": "revision/queue_kd_phase1.yaml", "attempt": 140}

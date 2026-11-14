@@ -1,0 +1,71 @@
+project:
+  name: bds-lite
+  output_dir: results/revision_runs
+  seed: 3
+data:
+  processed_root: data/processed
+  num_workers: 4
+  image_size:
+  - 224
+  - 224
+  normalize: none_stored
+dataset:
+  name: isic2018
+  modality: dermoscopy
+  task: skin_lesion_segmentation
+  num_classes: 2
+  in_channels: 3
+  processed_dir: data/processed/isic2018
+  image_dir: .
+  mask_dir: .
+  class_names:
+  - background
+  - class_1
+  input_size:
+  - 224
+  - 224
+  spacing_policy: unit_spacing_2d
+  ignore_index: null
+  train_split: train
+  val_split: val
+  test_split: test
+  metrics:
+    primary: dice
+    boundary: boundary_f1
+  root: data/processed/isic2018
+model:
+  name: attention_unet
+  base_channels: 32
+loss:
+  dice_weight: 1.0
+  ce_weight: 1.0
+  boundary_weight: 0.0
+  distill_weight: 0.0
+  surface_weight: 0.0
+  distance_weight: 0.0
+  foreground_class_weights: null
+trainer:
+  device: cuda
+  epochs: 150
+  batch_size: 8
+  lr: 0.0003
+  weight_decay: 1.0e-05
+  amp: true
+  save_every: 25
+  scheduler: cosine
+  grad_clip: 1.0
+  init_from_checkpoint: null
+  freeze_encoder_epochs: 0
+revision:
+  purpose: queue-A c3_attention_unet; see revision/ABLATION_PROTOCOL.md
+  protocol: revision/ABLATION_PROTOCOL.md
+  protocol_sha256: 24a637231215bb6ea43a9b9b664db67c139ca2ef0facad13e5e8609349c0374e
+  gradient_probe: false
+  manifests:
+    train:
+      path: recovered/followup/splits/isic2018/train.json
+      sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+    val:
+      path: recovered/followup/splits/isic2018/val.json
+      sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  arm: c3_attention_unet

@@ -1,0 +1,235 @@
+{
+  "steps": 50,
+  "seed": 1,
+  "train_run_config": "configs/revision/acdc_m2_aux_boundary_only_unweighted_seed1.yaml",
+  "train_run_config_sha256": "258c1d44a0fdedfec8327ce8b0f7af8aa560f4fabca1e991e0810c15d152539f",
+  "launcher_config": "configs/revision/acdc_confirm/equivalence/acdc_equivcheck_decoder_lambda0_seed1.yaml",
+  "launcher_config_sha256": "7e7fa552ac00fac30e7bdbf55fccf3e359989b3644d66bbacce9154431e31752",
+  "outputs": {
+    "train_run": "results/revision_runs/acdc_equivcheck_trainrun_seed1",
+    "launcher": "results/revision_runs/acdc_equivcheck_launcher_seed1",
+    "train_run_repeat": "results/revision_runs/acdc_equivcheck_trainrun_repeat_seed1"
+  },
+  "dump_sha256": {
+    "train_run": "1a9123e8c8bac43ed33f43f3d2b90f29c40656efbedcf54cffb26afed8c8f2fb",
+    "launcher": "9f5ebb2eed96cbdb02569882c8c81ea55e900f8766cc1a0575cb1d9c8823d56d",
+    "train_run_repeat": "cb62cc70a51555bb38d6fb1d01edc7a8d533c479c3ac1acf33c0e1ef9767e492"
+  },
+  "evaluation_outputs_produced": false,
+  "train_run_vs_launcher": {
+    "initial": {
+      "tensors": 140,
+      "bitwise_equal": 140,
+      "max_abs_diff": 0.0,
+      "worst": [
+        [
+          "encoder.inc.net.0.weight",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.weight",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.bias",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.running_mean",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.running_var",
+          0.0
+        ]
+      ]
+    },
+    "final": {
+      "tensors": 140,
+      "bitwise_equal": 140,
+      "max_abs_diff": 0.0,
+      "worst": [
+        [
+          "encoder.inc.net.0.weight",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.weight",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.bias",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.running_mean",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.running_var",
+          0.0
+        ]
+      ]
+    },
+    "optimizer_state_max_abs_diff": 0.0,
+    "optimizer_param_groups_equal": true,
+    "scheduler_equal": true,
+    "batch_order_identical": true,
+    "steps": [
+      50,
+      50
+    ],
+    "amp_overflows": [
+      0,
+      0
+    ],
+    "train_scalars": {
+      "amp_skipped_steps": [
+        0,
+        0
+      ],
+      "boundary_bce": [
+        0.542247263789177,
+        0.542247263789177
+      ],
+      "boundary_dice": [
+        0.9788998007774353,
+        0.9788998007774353
+      ],
+      "ce": [
+        0.844821138381958,
+        0.8448211443424225
+      ],
+      "dice": [
+        0.965998660326004,
+        0.965998660326004
+      ],
+      "lr": [
+        9.998903417374228e-05,
+        9.998903417374228e-05
+      ],
+      "total": [
+        1.886877145767212,
+        1.8868771600723266
+      ]
+    },
+    "train_scalar_keys_only_in": [
+      [],
+      []
+    ],
+    "criterion": [
+      "BDSLiteLoss",
+      "KDCriterionMC"
+    ]
+  },
+  "train_run_vs_repeat": {
+    "initial": {
+      "tensors": 140,
+      "bitwise_equal": 140,
+      "max_abs_diff": 0.0,
+      "worst": [
+        [
+          "encoder.inc.net.0.weight",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.weight",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.bias",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.running_mean",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.running_var",
+          0.0
+        ]
+      ]
+    },
+    "final": {
+      "tensors": 140,
+      "bitwise_equal": 140,
+      "max_abs_diff": 0.0,
+      "worst": [
+        [
+          "encoder.inc.net.0.weight",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.weight",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.bias",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.running_mean",
+          0.0
+        ],
+        [
+          "encoder.inc.net.1.running_var",
+          0.0
+        ]
+      ]
+    },
+    "optimizer_state_max_abs_diff": 0.0,
+    "optimizer_param_groups_equal": true,
+    "scheduler_equal": true,
+    "batch_order_identical": true,
+    "steps": [
+      50,
+      50
+    ],
+    "amp_overflows": [
+      0,
+      0
+    ],
+    "train_scalars": {
+      "amp_skipped_steps": [
+        0,
+        0
+      ],
+      "boundary_bce": [
+        0.542247263789177,
+        0.542247263789177
+      ],
+      "boundary_dice": [
+        0.9788998007774353,
+        0.9788998007774353
+      ],
+      "ce": [
+        0.844821138381958,
+        0.8448211395740509
+      ],
+      "dice": [
+        0.965998660326004,
+        0.965998660326004
+      ],
+      "lr": [
+        9.998903417374228e-05,
+        9.998903417374228e-05
+      ],
+      "total": [
+        1.886877145767212,
+        1.886877145767212
+      ]
+    },
+    "train_scalar_keys_only_in": [
+      [],
+      []
+    ],
+    "criterion": [
+      "BDSLiteLoss",
+      "BDSLiteLoss"
+    ]
+  },
+  "environment": {
+    "torch": "2.11.0+cu130",
+    "cuda": "13.0"
+  }
+}

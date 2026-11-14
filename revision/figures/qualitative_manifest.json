@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ISIC_0016274",
+    "rule": "largest_negative",
+    "seed_mean_delta_hd95_u_minus_f": -69.67295575141907,
+    "selection": "all-three-seed finite paired HD95; lexicographic ties",
+    "displayed_seed": 1,
+    "missing_panels": "GSL/strongest comparator pending"
+  },
+  {
+    "id": "ISIC_0036262",
+    "rule": "median",
+    "seed_mean_delta_hd95_u_minus_f": 0.0518391927083357,
+    "selection": "all-three-seed finite paired HD95; lexicographic ties",
+    "displayed_seed": 1,
+    "missing_panels": "GSL/strongest comparator pending"
+  },
+  {
+    "id": "ISIC_0012647",
+    "rule": "largest_positive",
+    "seed_mean_delta_hd95_u_minus_f": 45.300295193990074,
+    "selection": "all-three-seed finite paired HD95; lexicographic ties",
+    "displayed_seed": 1,
+    "missing_panels": "GSL/strongest comparator pending"
+  }
+]

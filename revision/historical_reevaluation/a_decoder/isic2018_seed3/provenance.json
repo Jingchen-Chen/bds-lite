@@ -1,0 +1,8 @@
+{
+ "checkpoint": "outputs/runs/isic2018_bds_lite_boundary_only_seed3/best.pt",
+ "checkpoint_sha256": "14d33e87cba7a571190291724d099c4adf3d816ff01071a88e8c0fcb53c675e8",
+ "n_samples": 1000,
+ "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
+ "per_case_sha256": "76a4d2302da719e4a9a502c8244a0083c177e9cdc32c6aaaa711ebd02cf6af65",
+ "protocol_sha256": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095"
+}

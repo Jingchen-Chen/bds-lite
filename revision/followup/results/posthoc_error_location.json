@@ -1,0 +1,383 @@
+{
+  "label": "post hoc",
+  "structures": {
+    "all D runs": {
+      "RV": {
+        "near_share_pooled": 0.5483877943365351,
+        "near_share_patient_median": 0.626796258482369
+      },
+      "myocardium": {
+        "near_share_pooled": 0.7978337672242548,
+        "near_share_patient_median": 0.8529091881230675
+      },
+      "LV": {
+        "near_share_pooled": 0.6731422630210272,
+        "near_share_patient_median": 0.734747639018396
+      }
+    },
+    "split: error share from D seeds 201-208, gain vs D seeds 209-217": {
+      "RV": {
+        "near_share_pooled": 0.5508239284172894,
+        "near_share_patient_median": 0.63097826232114
+      },
+      "myocardium": {
+        "near_share_pooled": 0.8052316428604583,
+        "near_share_patient_median": 0.852361727761382
+      },
+      "LV": {
+        "near_share_pooled": 0.695151069887042,
+        "near_share_patient_median": 0.7506253368234979
+      }
+    }
+  },
+  "correlations": [
+    {
+      "variant": "all D runs",
+      "arm": "kd_band",
+      "structure": "RV",
+      "gain_vs_near_share": {
+        "rho": -0.060264105642256906,
+        "p": 0.6776063345498442,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.3072749099639856,
+        "p": 0.029959884606555708,
+        "n": 50
+      },
+      "mean_gain": 0.02628600020936614
+    },
+    {
+      "variant": "all D runs",
+      "arm": "kd_band",
+      "structure": "myocardium",
+      "gain_vs_near_share": {
+        "rho": -0.08917166866746698,
+        "p": 0.5380136413707652,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.40657863145258105,
+        "p": 0.0033901329764878425,
+        "n": 50
+      },
+      "mean_gain": 0.01928785141500249
+    },
+    {
+      "variant": "all D runs",
+      "arm": "kd_band",
+      "structure": "LV",
+      "gain_vs_near_share": {
+        "rho": 0.1472749099639856,
+        "p": 0.3074298165312654,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.030588235294117645,
+        "p": 0.8329886158639351,
+        "n": 50
+      },
+      "mean_gain": 0.010855221702442696
+    },
+    {
+      "variant": "all D runs",
+      "arm": "kd_band",
+      "structure": "all patient-structure pairs",
+      "gain_vs_near_share": {
+        "rho": -0.00039646206498066585,
+        "p": 0.9961581774901249,
+        "n": 150
+      }
+    },
+    {
+      "variant": "all D runs",
+      "arm": "kd_full",
+      "structure": "RV",
+      "gain_vs_near_share": {
+        "rho": -0.17157262905162063,
+        "p": 0.2335063452041421,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.5051140456182474,
+        "p": 0.00018320476408710827,
+        "n": 50
+      },
+      "mean_gain": 0.017830143168216833
+    },
+    {
+      "variant": "all D runs",
+      "arm": "kd_full",
+      "structure": "myocardium",
+      "gain_vs_near_share": {
+        "rho": -0.15447779111644658,
+        "p": 0.2841061350166249,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.4470108043217287,
+        "p": 0.0011362671328834838,
+        "n": 50
+      },
+      "mean_gain": 0.007775686389348966
+    },
+    {
+      "variant": "all D runs",
+      "arm": "kd_full",
+      "structure": "LV",
+      "gain_vs_near_share": {
+        "rho": -0.016182472989195677,
+        "p": 0.9111878287690884,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.28345738295318124,
+        "p": 0.04606777957921461,
+        "n": 50
+      },
+      "mean_gain": 0.0059166957679527175
+    },
+    {
+      "variant": "all D runs",
+      "arm": "kd_full",
+      "structure": "all patient-structure pairs",
+      "gain_vs_near_share": {
+        "rho": -0.16262233877061202,
+        "p": 0.04677817475795047,
+        "n": 150
+      }
+    },
+    {
+      "variant": "all D runs",
+      "arm": "kd_band_peer",
+      "structure": "RV",
+      "gain_vs_near_share": {
+        "rho": -0.26376950780312125,
+        "p": 0.06418594713998627,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.33858343337334934,
+        "p": 0.01616796042974687,
+        "n": 50
+      },
+      "mean_gain": 0.012682611632673051
+    },
+    {
+      "variant": "all D runs",
+      "arm": "kd_band_peer",
+      "structure": "myocardium",
+      "gain_vs_near_share": {
+        "rho": -0.14208883553421367,
+        "p": 0.32496148958915244,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.4313565426170468,
+        "p": 0.001762706817895118,
+        "n": 50
+      },
+      "mean_gain": 0.014101263131668745
+    },
+    {
+      "variant": "all D runs",
+      "arm": "kd_band_peer",
+      "structure": "LV",
+      "gain_vs_near_share": {
+        "rho": -0.015894357743097238,
+        "p": 0.9127628822867416,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.2539735894357743,
+        "p": 0.0751167418758567,
+        "n": 50
+      },
+      "mean_gain": 0.014054193752220348
+    },
+    {
+      "variant": "all D runs",
+      "arm": "kd_band_peer",
+      "structure": "all patient-structure pairs",
+      "gain_vs_near_share": {
+        "rho": -0.07761944975332237,
+        "p": 0.34511191738869695,
+        "n": 150
+      }
+    },
+    {
+      "variant": "split: error share from D seeds 201-208, gain vs D seeds 209-217",
+      "arm": "kd_band",
+      "structure": "RV",
+      "gain_vs_near_share": {
+        "rho": -0.004081632653061224,
+        "p": 0.9775571843853882,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.39217286914765903,
+        "p": 0.004851298044265291,
+        "n": 50
+      },
+      "mean_gain": 0.03219192499025449
+    },
+    {
+      "variant": "split: error share from D seeds 201-208, gain vs D seeds 209-217",
+      "arm": "kd_band",
+      "structure": "myocardium",
+      "gain_vs_near_share": {
+        "rho": -0.14583433373349342,
+        "p": 0.31223772422385965,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.3900600240096038,
+        "p": 0.005106476961337786,
+        "n": 50
+      },
+      "mean_gain": 0.018712022080892732
+    },
+    {
+      "variant": "split: error share from D seeds 201-208, gain vs D seeds 209-217",
+      "arm": "kd_band",
+      "structure": "LV",
+      "gain_vs_near_share": {
+        "rho": 0.23572629051620647,
+        "p": 0.0993541047720476,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": 0.02156062424969988,
+        "p": 0.8818552524140808,
+        "n": 50
+      },
+      "mean_gain": 0.010247381246775092
+    },
+    {
+      "variant": "split: error share from D seeds 201-208, gain vs D seeds 209-217",
+      "arm": "kd_band",
+      "structure": "all patient-structure pairs",
+      "gain_vs_near_share": {
+        "rho": 0.001434730432463665,
+        "p": 0.9860977249485191,
+        "n": 150
+      }
+    },
+    {
+      "variant": "split: error share from D seeds 201-208, gain vs D seeds 209-217",
+      "arm": "kd_full",
+      "structure": "RV",
+      "gain_vs_near_share": {
+        "rho": -0.09416566626650659,
+        "p": 0.5153962594066314,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.5873229291716686,
+        "p": 7.338144940243037e-06,
+        "n": 50
+      },
+      "mean_gain": 0.023736067949105176
+    },
+    {
+      "variant": "split: error share from D seeds 201-208, gain vs D seeds 209-217",
+      "arm": "kd_full",
+      "structure": "myocardium",
+      "gain_vs_near_share": {
+        "rho": -0.352797118847539,
+        "p": 0.011973178866233742,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.47073229291716684,
+        "p": 0.000560723908303942,
+        "n": 50
+      },
+      "mean_gain": 0.007199857055239207
+    },
+    {
+      "variant": "split: error share from D seeds 201-208, gain vs D seeds 209-217",
+      "arm": "kd_full",
+      "structure": "LV",
+      "gain_vs_near_share": {
+        "rho": -0.030876350540216087,
+        "p": 0.8314382775692927,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.2293877551020408,
+        "p": 0.10905838972532139,
+        "n": 50
+      },
+      "mean_gain": 0.005308855312285112
+    },
+    {
+      "variant": "split: error share from D seeds 201-208, gain vs D seeds 209-217",
+      "arm": "kd_full",
+      "structure": "all patient-structure pairs",
+      "gain_vs_near_share": {
+        "rho": -0.24047468776390066,
+        "p": 0.0030348353595063093,
+        "n": 150
+      }
+    },
+    {
+      "variant": "split: error share from D seeds 201-208, gain vs D seeds 209-217",
+      "arm": "kd_band_peer",
+      "structure": "RV",
+      "gain_vs_near_share": {
+        "rho": -0.21527010804321725,
+        "p": 0.1332641437158635,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.39418967587034814,
+        "p": 0.004618208245097684,
+        "n": 50
+      },
+      "mean_gain": 0.0185885364135614
+    },
+    {
+      "variant": "split: error share from D seeds 201-208, gain vs D seeds 209-217",
+      "arm": "kd_band_peer",
+      "structure": "myocardium",
+      "gain_vs_near_share": {
+        "rho": -0.20883553421368548,
+        "p": 0.14554663141453614,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.43644657863145253,
+        "p": 0.0015316472012454467,
+        "n": 50
+      },
+      "mean_gain": 0.013525433797558986
+    },
+    {
+      "variant": "split: error share from D seeds 201-208, gain vs D seeds 209-217",
+      "arm": "kd_band_peer",
+      "structure": "LV",
+      "gain_vs_near_share": {
+        "rho": -0.08177671068427371,
+        "p": 0.5723662219784478,
+        "n": 50
+      },
+      "gain_vs_d_boundary_f1": {
+        "rho": -0.25291716686674665,
+        "p": 0.07637851017130462,
+        "n": 50
+      },
+      "mean_gain": 0.013446353296552742
+    },
+    {
+      "variant": "split: error share from D seeds 201-208, gain vs D seeds 209-217",
+      "arm": "kd_band_peer",
+      "structure": "all patient-structure pairs",
+      "gain_vs_near_share": {
+        "rho": -0.11899017734121516,
+        "p": 0.1469769257639687,
+        "n": 150
+      }
+    }
+  ]
+}

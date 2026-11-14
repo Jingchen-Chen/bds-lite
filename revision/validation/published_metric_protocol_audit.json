@@ -1,0 +1,33 @@
+{
+  "sources": [
+    {
+      "key": "swin_utils_pinned",
+      "url": "https://github.com/HuCaoFighting/Swin-Unet/blob/f48f623e226e25b6e395c37207915c50aaa9c776/utils.py",
+      "sha256": "39b55d33b7531001992fca78cb395efd77757ab53a6bfb426fedac5ca086be34"
+    },
+    {
+      "key": "swin_test_pinned",
+      "url": "https://github.com/HuCaoFighting/Swin-Unet/blob/f48f623e226e25b6e395c37207915c50aaa9c776/test.py",
+      "sha256": "833625fed2d39ed23a71af55c89dada635fb070aeeede52b34bb4bbc2fd40874"
+    },
+    {
+      "key": "lb_engine",
+      "url": "https://github.com/xuxuxuxuxuxjh/LB-UNet/blob/913ee687ecc4514508ec20f01af0df5b0b5af5cc/engine.py",
+      "sha256": "64471014def12f4ccd73ac6611981d1307463d0464f69a12318b10f79057cacb"
+    },
+    {
+      "key": "lb_config",
+      "url": "https://github.com/xuxuxuxuxuxjh/LB-UNet/blob/913ee687ecc4514508ec20f01af0df5b0b5af5cc/config_setting.py",
+      "sha256": "a4c72b2bc175ab6c9b26a26fc7c48e1020e8a0a495360ff152009427798d5d50"
+    },
+    {
+      "key": "transunet_utils",
+      "url": "https://github.com/Beckschen/TransUNet/blob/02ef0010b36eb8328b5e689eadaf613602edf9b8/utils.py",
+      "sha256": "aacd17ec39abe65358dcc683ddaa7ac0cf698a8920485dd4d07b7972ed2d7668"
+    }
+  ],
+  "distance_observation": "Both released volume evaluators call medpy.metric.binary.hd95 without voxel spacing, after reconstructing each 3D volume. Swin-Unet test.py averages cases then foreground classes. These are voxel/index-grid distances, not the resized 2D pixel distances in panel A. Source empty-mask branches differ from ours.",
+  "publication_labels": "Original Synapse tables label the distance HD. Keep that source label in panel B; released code supports a 95th-percentile implementation but does not prove the exact historical run produced by current released code. TransUNet caption says mm despite omitted voxel spacing.",
+  "missing_metrics": "EGE-UNet/LB-UNet original tables: DSC and mIoU, no Boundary F1 or distance. TransUNet/Swin-Unet cited ACDC tables: DSC only. No values imported from other protocols.",
+  "isic_aggregation": "Pinned LB-UNet engine flattens all predictions/masks before computing DSC from pooled pixel counts; EGE-UNet engine does likewise. Different from our per-image DSC mean."
+}

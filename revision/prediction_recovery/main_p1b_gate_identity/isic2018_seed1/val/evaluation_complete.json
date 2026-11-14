@@ -1,0 +1,26 @@
+{
+  "entry": {
+    "run_id": "gate_identity_isic2018_seed1_val",
+    "family": "main_p1b_gate_identity",
+    "dataset": "isic2018",
+    "seed": 1,
+    "split": "val",
+    "checkpoint": "results/checkpoints/isic2018_p1b_bdslite_full_current_seed1/best.pt",
+    "checkpoint_sha256": "8707865b7daae4c49e6551dda5aa05c1694591939135049c34e716df94f8c16d",
+    "manifest": "recovered/followup/splits/isic2018/val.json",
+    "manifest_sha256": "81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e",
+    "batch": 8,
+    "classes": 2,
+    "force_gate_identity": true,
+    "output": "revision/prediction_recovery/main_p1b_gate_identity/isic2018_seed1/val"
+  },
+  "protocol_sha256": "00bb9359cf4796f533b1cc6b2ee2adc1e0dde6264fb3936d0c8a309a19265f3e",
+  "outputs": {
+    "predictions.npz": "0bf87780b200059b879d15a3a04d37abf327541d287c2100edc16a5b06e891b8",
+    "per_case.csv": "ee902eed5ba623a9a62ea94cc1c5269d131725ec7d131267eeb8c9a04c587882",
+    "provenance.json": "a9376a05e5257da2b316302e5c5c73c4a67d33c1416acd550effd93651194a4b"
+  },
+  "images": 519,
+  "class_rows": 519,
+  "seconds": 5.298342846974265
+}

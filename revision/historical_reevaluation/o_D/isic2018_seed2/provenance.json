@@ -1,0 +1,8 @@
+{
+ "checkpoint": "recovered/followup/results/boundary_specificity_20261018/isic2018_D_seed2/best.pt",
+ "checkpoint_sha256": "0606ea7c9cc089f75089e02bec18809762a339aebe9b66674aa95514ab178a69",
+ "n_samples": 1000,
+ "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
+ "per_case_sha256": "4ec44112c6ee56669cfc2abdb6e936ad0bf406720517f0ae1ffcb78274ce9ca8",
+ "protocol_sha256": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095"
+}

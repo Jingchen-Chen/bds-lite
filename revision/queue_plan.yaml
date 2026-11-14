@@ -1,0 +1,12 @@
+# Ordered queues for analysis/revision/supervise_queue_v2.py (one GPU job at a time).
+queues:
+- runner: scripts/revision/run_queue.py
+  queue: revision/queue.yaml
+- runner: scripts/comparators/run_queue_b.py
+  queue: revision/queue_b.yaml
+- runner: scripts/revision/run_queue.py
+  queue: revision/queue_tierb.yaml
+- runner: scripts/expansion/run_queue_expansion.py
+  queue: revision/queue_expansion.yaml
+- runner: scripts/confirmation/run_queue_confirmation.py
+  queue: revision/queue_confirmation_acdc_synapse.yaml

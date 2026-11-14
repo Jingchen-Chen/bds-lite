@@ -1,0 +1,32 @@
+[
+  {
+    "arm": "U",
+    "seed": 1,
+    "identical": true
+  },
+  {
+    "arm": "U",
+    "seed": 2,
+    "identical": true
+  },
+  {
+    "arm": "U",
+    "seed": 3,
+    "identical": true
+  },
+  {
+    "arm": "F",
+    "seed": 1,
+    "identical": true
+  },
+  {
+    "arm": "F",
+    "seed": 2,
+    "identical": true
+  },
+  {
+    "arm": "F",
+    "seed": 3,
+    "identical": true
+  }
+]

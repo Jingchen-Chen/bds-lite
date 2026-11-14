@@ -1,0 +1,296 @@
+{
+  "status": "post hoc main-display promotion and Holm family, author requested 2026-11-09 after all results were known",
+  "preexisting_sensitivity": "The frozen protocol already included seed-matched ISIC contrasts as descriptive sensitivities. Their promotion and new balanced-family Holm adjustment are post hoc.",
+  "estimator": "Unpaired Welch run variance plus test-unit SE; Welch df and t intervals; original estimator retained. Same seed numbers are not analyzed as paired observations.",
+  "multiplicity": "Separate three-dataset Holm families for Boundary F1. No new confirmatory decision; correction does not undo post hoc selection of this presentation.",
+  "appropriateness": "Balanced seed coverage is acceptable for exploratory presentation but is not required by Welch inference and discards seven available decoder runs. Three runs give unstable variance estimates and wide intervals. Retain the original frozen 3-vs-10 sensitivity rather than selecting the more favorable result.",
+  "frozen_source_sha256": "177aad43b1c3a683dc7702b4fee7c2e5c1f6d8e3d1ab4c7a13968a2bd58beab6",
+  "max_reconciliation_error": 1.4849232954361469e-15,
+  "balanced": [
+    {
+      "dataset": "isic2018",
+      "analysis": "post hoc balanced presentation",
+      "reference_seeds": "1-3",
+      "delta": 0.05232329716088624,
+      "low": -0.037697155439995966,
+      "high": 0.14234374976176845,
+      "p": 0.14671057464230874,
+      "se": 0.025059156808508443,
+      "df": 2.482912279303724,
+      "n_a": 3,
+      "n_b": 3,
+      "units": 1000,
+      "arm_a_mean": 0.43167578474538765,
+      "arm_b_mean": 0.3793524875845014,
+      "p_holm_over_datasets": 0.2934211492846175
+    },
+    {
+      "dataset": "acdc",
+      "analysis": "post hoc balanced presentation",
+      "reference_seeds": "1-3",
+      "delta": 0.023873198328971057,
+      "low": 0.003974484396525337,
+      "high": 0.04377191226141677,
+      "p": 0.029263289569157802,
+      "se": 0.007103504207268441,
+      "df": 3.9119915279564417,
+      "n_a": 3,
+      "n_b": 3,
+      "units": 20,
+      "arm_a_mean": 0.8256377562345341,
+      "arm_b_mean": 0.801764557905563,
+      "p_holm_over_datasets": 0.0877898687074734
+    },
+    {
+      "dataset": "synapse",
+      "analysis": "post hoc balanced presentation",
+      "reference_seeds": "1-3",
+      "delta": 0.015031419481647101,
+      "low": -0.04231405034423097,
+      "high": 0.07237688930752517,
+      "p": 0.5000588550405103,
+      "se": 0.020183886212004565,
+      "df": 3.780625230276987,
+      "n_a": 3,
+      "n_b": 3,
+      "units": 12,
+      "arm_a_mean": 0.5600500052410536,
+      "arm_b_mean": 0.5450185857594065,
+      "p_holm_over_datasets": 0.5000588550405103
+    }
+  ],
+  "original_sensitivity": [
+    {
+      "dataset": "isic2018",
+      "analysis": "original frozen reference (sensitivity in current presentation)",
+      "reference_seeds": "1-10",
+      "delta": 0.03764662717208189,
+      "low": -0.056455520074161436,
+      "high": 0.13174877441832522,
+      "p": 0.248132380825089,
+      "se": 0.024350393371615455,
+      "df": 2.257806388328781,
+      "n_a": 3,
+      "n_b": 10,
+      "units": 1000,
+      "arm_a_mean": 0.43167578474538765,
+      "arm_b_mean": 0.39402915757330575,
+      "p_holm_over_datasets": 0.496264761650178
+    },
+    {
+      "dataset": "acdc",
+      "analysis": "original frozen reference (sensitivity in current presentation)",
+      "reference_seeds": "1-3",
+      "delta": 0.023873198328971057,
+      "low": 0.003974484396525337,
+      "high": 0.04377191226141677,
+      "p": 0.029263289569157802,
+      "se": 0.007103504207268441,
+      "df": 3.9119915279564417,
+      "n_a": 3,
+      "n_b": 3,
+      "units": 20,
+      "arm_a_mean": 0.8256377562345341,
+      "arm_b_mean": 0.801764557905563,
+      "p_holm_over_datasets": 0.0877898687074734
+    },
+    {
+      "dataset": "synapse",
+      "analysis": "original frozen reference (sensitivity in current presentation)",
+      "reference_seeds": "1-3",
+      "delta": 0.015031419481647101,
+      "low": -0.04231405034423097,
+      "high": 0.07237688930752517,
+      "p": 0.5000588550405103,
+      "se": 0.020183886212004565,
+      "df": 3.780625230276987,
+      "n_a": 3,
+      "n_b": 3,
+      "units": 12,
+      "arm_a_mean": 0.5600500052410536,
+      "arm_b_mean": 0.5450185857594065,
+      "p_holm_over_datasets": 0.5000588550405103
+    }
+  ],
+  "sources": [
+    {
+      "dataset": "isic2018",
+      "arm": "D+KD-band",
+      "seed": 1,
+      "path": "results/revision_runs/isic2018_kd_band_seed1/per_case_test.csv",
+      "sha256": "bf44fff9c17674533459a2fc4fd92538c205f12a048933d08d719e612ae3a294"
+    },
+    {
+      "dataset": "isic2018",
+      "arm": "D+KD-band",
+      "seed": 2,
+      "path": "results/revision_runs/isic2018_kd_band_seed2/per_case_test.csv",
+      "sha256": "2449ee523dd1cf16b36f671cc3b9afbd00bfba27b9daa2ff9a98d37fea989f24"
+    },
+    {
+      "dataset": "isic2018",
+      "arm": "D+KD-band",
+      "seed": 3,
+      "path": "results/revision_runs/isic2018_kd_band_seed3/per_case_test.csv",
+      "sha256": "5f5d74c15fd4ea2d447c5b5d7d816724860c5727da8c82edfd705024affa0337"
+    },
+    {
+      "dataset": "isic2018",
+      "arm": "decoder-only",
+      "seed": 1,
+      "path": "results/revision_runs/isic2018_m2_aux_boundary_only_seed1/per_case_test.csv",
+      "sha256": "ee709998272d03ab3be4881e4937a5e1775b02a8fa2854a5e3d6875f99d46756"
+    },
+    {
+      "dataset": "isic2018",
+      "arm": "decoder-only",
+      "seed": 2,
+      "path": "results/revision_runs/isic2018_m2_aux_boundary_only_seed2/per_case_test.csv",
+      "sha256": "530e707e8b6bdb0a8913259e0fd01133de23c0e1441f1ac33f700bd05f784ae6"
+    },
+    {
+      "dataset": "isic2018",
+      "arm": "decoder-only",
+      "seed": 3,
+      "path": "results/revision_runs/isic2018_m2_aux_boundary_only_seed3/per_case_test.csv",
+      "sha256": "50cc7c59f2049ff4def6c0b20f6041688665df62cdaa40fe1723fd88a1c32e0d"
+    },
+    {
+      "dataset": "isic2018",
+      "arm": "decoder-only sensitivity",
+      "seed": 4,
+      "path": "results/revision_runs/isic2018_m2_aux_boundary_only_seed4/per_case_test.csv",
+      "sha256": "2e68c69279ba3504d05dab4903e44c73d557541649d90d172fce2e38233d3be1"
+    },
+    {
+      "dataset": "isic2018",
+      "arm": "decoder-only sensitivity",
+      "seed": 5,
+      "path": "results/revision_runs/isic2018_m2_aux_boundary_only_seed5/per_case_test.csv",
+      "sha256": "6159e439f486fc1ebbf70beca6c03f87d4bd8b2878d15eac500ba80786839c74"
+    },
+    {
+      "dataset": "isic2018",
+      "arm": "decoder-only sensitivity",
+      "seed": 6,
+      "path": "results/revision_runs/isic2018_m2_aux_boundary_only_seed6/per_case_test.csv",
+      "sha256": "40c27f4111885fd6c2aec43645aaee23ca3b9869df53225aba1eb59645845024"
+    },
+    {
+      "dataset": "isic2018",
+      "arm": "decoder-only sensitivity",
+      "seed": 7,
+      "path": "results/revision_runs/isic2018_m2_aux_boundary_only_seed7/per_case_test.csv",
+      "sha256": "440a3bb2267c1075c5688eed669d56d8de99b8279d172f0ac38b83713479c8a9"
+    },
+    {
+      "dataset": "isic2018",
+      "arm": "decoder-only sensitivity",
+      "seed": 8,
+      "path": "results/revision_runs/isic2018_m2_aux_boundary_only_seed8/per_case_test.csv",
+      "sha256": "5f2f5d7e033015c27d2867ac8ba40a33823b9280b63d18672a8a210e9c21501a"
+    },
+    {
+      "dataset": "isic2018",
+      "arm": "decoder-only sensitivity",
+      "seed": 9,
+      "path": "results/revision_runs/isic2018_m2_aux_boundary_only_seed9/per_case_test.csv",
+      "sha256": "cb673b35d18149bf350ff40c88c863d43b8d3275a1b36ac8dcfe69acc4a3027a"
+    },
+    {
+      "dataset": "isic2018",
+      "arm": "decoder-only sensitivity",
+      "seed": 10,
+      "path": "results/revision_runs/isic2018_m2_aux_boundary_only_seed10/per_case_test.csv",
+      "sha256": "90d242c8c7dde4371da768dfc9ab4ee24d82426f199375259c36e25b8b7bd59c"
+    },
+    {
+      "dataset": "acdc",
+      "arm": "D+KD-band",
+      "seed": 1,
+      "path": "results/revision_runs/acdc_kd_band_seed1/per_case_test.csv",
+      "sha256": "73e201ca933deabd7b43685d514aee3932f8227429f1bbc5ae63bd83305611b6"
+    },
+    {
+      "dataset": "acdc",
+      "arm": "D+KD-band",
+      "seed": 2,
+      "path": "results/revision_runs/acdc_kd_band_seed2/per_case_test.csv",
+      "sha256": "0af3132433f1aaf8ae0eccdc891959888eab5aaeaf23b214dcd5db02694663cf"
+    },
+    {
+      "dataset": "acdc",
+      "arm": "D+KD-band",
+      "seed": 3,
+      "path": "results/revision_runs/acdc_kd_band_seed3/per_case_test.csv",
+      "sha256": "d6899028cb2b71c7d70c10cf3f87f6e9d469d03ecc5dcbce2e455bed970faa8f"
+    },
+    {
+      "dataset": "acdc",
+      "arm": "decoder-only",
+      "seed": 1,
+      "path": "results/revision_runs/acdc_m2_aux_boundary_only_unweighted_seed1/per_case_test.csv",
+      "sha256": "8303b49ca47dca8c95c0a44aa9e6b5738517d5542cec3813f7e39daf05a681f1"
+    },
+    {
+      "dataset": "acdc",
+      "arm": "decoder-only",
+      "seed": 2,
+      "path": "results/revision_runs/acdc_m2_aux_boundary_only_unweighted_seed2/per_case_test.csv",
+      "sha256": "dfac64af9628f25e7763e6093651176ed06547fa2c3fa6997d642163da68f440"
+    },
+    {
+      "dataset": "acdc",
+      "arm": "decoder-only",
+      "seed": 3,
+      "path": "results/revision_runs/acdc_m2_aux_boundary_only_unweighted_seed3/per_case_test.csv",
+      "sha256": "0c2a6134260b445b6f7a6544e26c3524d7dbf7807173bef273fba0b8ce377ea4"
+    },
+    {
+      "dataset": "synapse",
+      "arm": "D+KD-band",
+      "seed": 1,
+      "path": "results/revision_runs/synapse_kd_band_seed1/per_case_test.csv",
+      "sha256": "60e1f309cacd164b6e2b33946966b421c8365afbb06baf0fac4ee8842d4b5944"
+    },
+    {
+      "dataset": "synapse",
+      "arm": "D+KD-band",
+      "seed": 2,
+      "path": "results/revision_runs/synapse_kd_band_seed2/per_case_test.csv",
+      "sha256": "1ba59487c63c9582ec9932e8c635d846bf1992f1ac37cab7f18c9ef8e88938af"
+    },
+    {
+      "dataset": "synapse",
+      "arm": "D+KD-band",
+      "seed": 3,
+      "path": "results/revision_runs/synapse_kd_band_seed3/per_case_test.csv",
+      "sha256": "31034da690ab002f4136189f33f4bfe98d870a19e9f162aecd2a1eda54d077fe"
+    },
+    {
+      "dataset": "synapse",
+      "arm": "decoder-only",
+      "seed": 1,
+      "path": "results/revision_runs/synapse_m2_aux_boundary_only_seed1/per_case_test.csv",
+      "sha256": "97108ea472860ba07d183e3badf8f0fb1d551c06915eea0e97345ffb92f6be8c"
+    },
+    {
+      "dataset": "synapse",
+      "arm": "decoder-only",
+      "seed": 2,
+      "path": "results/revision_runs/synapse_m2_aux_boundary_only_seed2/per_case_test.csv",
+      "sha256": "960bbd5979560ada34635270df49967828ef36fc88bd3b625848ab7552d49691"
+    },
+    {
+      "dataset": "synapse",
+      "arm": "decoder-only",
+      "seed": 3,
+      "path": "results/revision_runs/synapse_m2_aux_boundary_only_seed3/per_case_test.csv",
+      "sha256": "c8c2bcfd9de7dd7048b11c64affb2b997ec33101d9c32ced3e09c37c49771f50"
+    }
+  ],
+  "confirmation_hashes": {
+    "revision/acdc_confirm/results/results.json": "bccc3a40ef61d822f7e036c423da180a8e4070b6ad96eed283a04573a1556131",
+    "revision/acdc_confirm/results/contrasts.csv": "8ca6d88dca0e37e464f2beea263d7a2a6f3bc0469f29283ff16fc273d8b6696a"
+  }
+}

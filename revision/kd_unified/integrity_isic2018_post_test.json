@@ -1,0 +1,93 @@
+{
+  "dataset": "isic2018",
+  "passed": true,
+  "problems": [],
+  "gate": {
+    "status": "PASSED",
+    "rule": "teacher validation Boundary F1 >= decoder-only mean AND DSC >= decoder-only mean",
+    "teacher": {
+      "boundary_f1": 0.5921659671890172,
+      "dsc": 0.9014674442017768,
+      "images": 519
+    },
+    "thresholds": {
+      "boundary_f1_min": 0.5376352265487206,
+      "dsc_min": 0.8631866601530269
+    },
+    "source": "mean over decoder-only seeds 1-10 of final_metrics.json metrics.val.<metric>.mean"
+  },
+  "cache_check": {
+    "seed": 20261107,
+    "indices": [
+      848,
+      1416,
+      418,
+      1637,
+      1694,
+      426,
+      1058,
+      2064,
+      1953,
+      302,
+      1309,
+      1871,
+      339,
+      36,
+      1087,
+      1349,
+      582,
+      1615,
+      108,
+      1905
+    ],
+    "max_abs_difference": 0.00025141239166259766,
+    "tolerance": 0.001,
+    "passed": true
+  },
+  "feasibility": {
+    "F1_gate": true,
+    "F2_kd_decreased": true,
+    "F3_batch_size": true
+  },
+  "teacher": {
+    "run": "isic2018_kd_teacher_seed100",
+    "selected_epoch": 16,
+    "epoch1_train_total": 0.5186575460892457,
+    "cache_hash": null
+  },
+  "students": [
+    {
+      "run": "isic2018_kd_band_seed1",
+      "selected_epoch": 75,
+      "epoch1_train_total": 1.72905242397235,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "c49fd6c9ac4a32dd98484c3ff8e91dc140d9d7cf29d8b793165ee94e2298a91e"
+      },
+      "kd_epoch1": 0.7787466746110182,
+      "kd_last10_mean": 0.6263802620310049,
+      "kd_decreased": true
+    },
+    {
+      "run": "isic2018_kd_band_seed2",
+      "selected_epoch": 67,
+      "epoch1_train_total": 1.7698568642139434,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "c49fd6c9ac4a32dd98484c3ff8e91dc140d9d7cf29d8b793165ee94e2298a91e"
+      },
+      "kd_epoch1": 0.7674332921321575,
+      "kd_last10_mean": 0.6458877216394131,
+      "kd_decreased": true
+    },
+    {
+      "run": "isic2018_kd_band_seed3",
+      "selected_epoch": 107,
+      "epoch1_train_total": 1.704936011020954,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "c49fd6c9ac4a32dd98484c3ff8e91dc140d9d7cf29d8b793165ee94e2298a91e"
+      },
+      "kd_epoch1": 0.7726204821696648,
+      "kd_last10_mean": 0.6229195865300985,
+      "kd_decreased": true
+    }
+  ]
+}

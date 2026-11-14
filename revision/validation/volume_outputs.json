@@ -1,0 +1,31 @@
+{
+  "output_cohorts_verified": 20,
+  "protocol_sha256": "5a80b1e949f2d5a8ebba5f0822312304bb2164618ac763b19ed5730ac3c6370b",
+  "real_volume_edt_checks": [
+    {
+      "dataset": "acdc",
+      "volume": "patient011_01",
+      "label": 1,
+      "max_metric_error": 0.0
+    },
+    {
+      "dataset": "acdc",
+      "volume": "patient011_01",
+      "label": 2,
+      "max_metric_error": 0.0
+    },
+    {
+      "dataset": "acdc",
+      "volume": "patient011_01",
+      "label": 3,
+      "max_metric_error": 0.0
+    },
+    {
+      "dataset": "synapse",
+      "volume": "case0001",
+      "label": 1,
+      "max_metric_error": 0.0
+    }
+  ],
+  "scope": "all output hashes; fixed real-volume metric spot checks; not physical geometry validation"
+}

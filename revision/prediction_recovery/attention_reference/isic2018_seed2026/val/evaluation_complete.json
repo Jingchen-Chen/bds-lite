@@ -1,0 +1,25 @@
+{
+  "entry": {
+    "run_id": "attention_reference_isic2018_seed2026_val",
+    "family": "attention_reference",
+    "dataset": "isic2018",
+    "seed": 2026,
+    "split": "val",
+    "checkpoint": "results/checkpoints/isic2018_attention_unet_baseline/best.pt",
+    "checkpoint_sha256": "877bc3fb7d49e5152255268be9db519f8dfae4833288e4c073a079a854f7c233",
+    "manifest": "recovered/followup/splits/isic2018/val.json",
+    "manifest_sha256": "81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e",
+    "batch": 8,
+    "classes": 2,
+    "output": "revision/prediction_recovery/attention_reference/isic2018_seed2026/val"
+  },
+  "protocol_sha256": "3619ae1081487603740dea88bbc509f554705a1924ae6dc77ae33028b0e059b7",
+  "outputs": {
+    "predictions.npz": "79de885f5b19b98109b76a252045290e584ae3343e642b50b94dd1b494418f95",
+    "per_case.csv": "2e3bd8b4d7e4c3d15a9b6b1652285e9b8416ef769e25e6c7de5ce8a61a37352d",
+    "provenance.json": "4b184ad0c67d3e391c4ed2dc9dc4b752e14b2e53262ed84b31bdf1c299065520"
+  },
+  "images": 519,
+  "class_rows": 519,
+  "seconds": 4.840024670003913
+}

@@ -1,0 +1,211 @@
+% generated from revision/tables/families/collapse_by_area.csv; seed means
+\begin{tabular}{lllllll}
+\toprule
+Dataset & Method & Reference area & Instances/seed & Missed-structure rate & False-alarm rate & DSC (present) \\
+\midrule
+ISIC2018 & U-Net (submitted models) & >5\% & 922 & 0.001 & -- & 0.842 \\
+ISIC2018 & U-Net (submitted models) & 2-5\% & 62 & 0.000 & -- & 0.776 \\
+ISIC2018 & U-Net (submitted models) & <1\% & 6 & 0.000 & -- & 0.503 \\
+ISIC2018 & U-Net (submitted models) & 1-2\% & 10 & 0.000 & -- & 0.747 \\
+ISIC2018 & U-Net (submitted models) & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & BDS-Lite (submitted models) & >5\% & 922 & 0.000 & -- & 0.845 \\
+ISIC2018 & BDS-Lite (submitted models) & 2-5\% & 62 & 0.000 & -- & 0.780 \\
+ISIC2018 & BDS-Lite (submitted models) & <1\% & 6 & 0.167 & -- & 0.483 \\
+ISIC2018 & BDS-Lite (submitted models) & 1-2\% & 10 & 0.067 & -- & 0.688 \\
+ISIC2018 & BDS-Lite (submitted models) & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & BDS-Lite, gate set to identity at inference (submitted models) & >5\% & 922 & 0.000 & -- & 0.845 \\
+ISIC2018 & BDS-Lite, gate set to identity at inference (submitted models) & 2-5\% & 62 & 0.000 & -- & 0.777 \\
+ISIC2018 & BDS-Lite, gate set to identity at inference (submitted models) & <1\% & 6 & 0.167 & -- & 0.487 \\
+ISIC2018 & BDS-Lite, gate set to identity at inference (submitted models) & 1-2\% & 10 & 0.067 & -- & 0.685 \\
+ISIC2018 & BDS-Lite, gate set to identity at inference (submitted models) & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & U-Net & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & BDS-Lite (full) & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & U-Net + SDF only & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & U-Net + aux. boundary only & >5\% & 922 & 0.000 & -- & 0.846 \\
+ISIC2018 & U-Net + aux. boundary only & 2-5\% & 62 & 0.000 & -- & 0.805 \\
+ISIC2018 & U-Net + aux. boundary only & <1\% & 6 & 0.222 & -- & 0.506 \\
+ISIC2018 & U-Net + aux. boundary only & 1-2\% & 10 & 0.000 & -- & 0.742 \\
+ISIC2018 & U-Net + aux. boundary only & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & BDS-Lite - SDF & >5\% & 922 & 0.001 & -- & 0.845 \\
+ISIC2018 & BDS-Lite - SDF & 2-5\% & 62 & 0.000 & -- & 0.800 \\
+ISIC2018 & BDS-Lite - SDF & <1\% & 6 & 0.333 & -- & 0.482 \\
+ISIC2018 & BDS-Lite - SDF & 1-2\% & 10 & 0.000 & -- & 0.776 \\
+ISIC2018 & BDS-Lite - SDF & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & BDS-Lite - distillation & >5\% & 922 & 0.000 & -- & 0.846 \\
+ISIC2018 & BDS-Lite - distillation & 2-5\% & 62 & 0.000 & -- & 0.794 \\
+ISIC2018 & BDS-Lite - distillation & <1\% & 6 & 0.222 & -- & 0.498 \\
+ISIC2018 & BDS-Lite - distillation & 1-2\% & 10 & 0.000 & -- & 0.808 \\
+ISIC2018 & BDS-Lite - distillation & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & BDS-Lite - gate (alpha=0) & >5\% & 922 & 0.001 & -- & 0.845 \\
+ISIC2018 & BDS-Lite - gate (alpha=0) & 2-5\% & 62 & 0.000 & -- & 0.782 \\
+ISIC2018 & BDS-Lite - gate (alpha=0) & <1\% & 6 & 0.111 & -- & 0.479 \\
+ISIC2018 & BDS-Lite - gate (alpha=0) & 1-2\% & 10 & 0.000 & -- & 0.741 \\
+ISIC2018 & BDS-Lite - gate (alpha=0) & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & U-Net + GSL & >5\% & 922 & 0.000 & -- & 0.847 \\
+ISIC2018 & U-Net + GSL & 2-5\% & 62 & 0.000 & -- & 0.808 \\
+ISIC2018 & U-Net + GSL & <1\% & 6 & 0.056 & -- & 0.487 \\
+ISIC2018 & U-Net + GSL & 1-2\% & 10 & 0.000 & -- & 0.829 \\
+ISIC2018 & U-Net + GSL & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & U-Net + Boundary Loss & >5\% & 922 & 0.000 & -- & 0.847 \\
+ISIC2018 & U-Net + Boundary Loss & 2-5\% & 62 & 0.000 & -- & 0.797 \\
+ISIC2018 & U-Net + Boundary Loss & <1\% & 6 & 0.000 & -- & 0.498 \\
+ISIC2018 & U-Net + Boundary Loss & 1-2\% & 10 & 0.000 & -- & 0.787 \\
+ISIC2018 & U-Net + Boundary Loss & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & Attention U-Net & >5\% & 922 & 0.000 & -- & 0.850 \\
+ISIC2018 & Attention U-Net & 2-5\% & 62 & 0.000 & -- & 0.772 \\
+ISIC2018 & Attention U-Net & <1\% & 6 & 0.000 & -- & 0.499 \\
+ISIC2018 & Attention U-Net & 1-2\% & 10 & 0.067 & -- & 0.728 \\
+ISIC2018 & Attention U-Net & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & LB-UNet & >5\% & 922 & 0.002 & -- & 0.861 \\
+ISIC2018 & LB-UNet & 2-5\% & 62 & 0.005 & -- & 0.820 \\
+ISIC2018 & LB-UNet & <1\% & 6 & 0.111 & -- & 0.624 \\
+ISIC2018 & LB-UNet & 1-2\% & 10 & 0.000 & -- & 0.805 \\
+ISIC2018 & LB-UNet & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & U-Net (replication family) & empty-reference & -- & -- & -- & -- \\
+ISIC2018 & BDS-Lite (replication family) & empty-reference & -- & -- & -- & -- \\
+ACDC & U-Net (submitted models) & 1-2\% & 386 & 0.008 & -- & 0.859 \\
+ACDC & U-Net (submitted models) & 2-5\% & 257 & 0.001 & -- & 0.899 \\
+ACDC & U-Net (submitted models) & <1\% & 370 & 0.084 & -- & 0.680 \\
+ACDC & U-Net (submitted models) & empty-reference & -- & -- & 0.384 & -- \\
+ACDC & BDS-Lite (submitted models) & 1-2\% & 386 & 0.002 & -- & 0.859 \\
+ACDC & BDS-Lite (submitted models) & 2-5\% & 257 & 0.001 & -- & 0.909 \\
+ACDC & BDS-Lite (submitted models) & <1\% & 370 & 0.078 & -- & 0.672 \\
+ACDC & BDS-Lite (submitted models) & empty-reference & -- & -- & 0.439 & -- \\
+ACDC & BDS-Lite, gate set to identity at inference (submitted models) & 1-2\% & 386 & 0.002 & -- & 0.859 \\
+ACDC & BDS-Lite, gate set to identity at inference (submitted models) & 2-5\% & 257 & 0.001 & -- & 0.909 \\
+ACDC & BDS-Lite, gate set to identity at inference (submitted models) & <1\% & 370 & 0.077 & -- & 0.673 \\
+ACDC & BDS-Lite, gate set to identity at inference (submitted models) & empty-reference & -- & -- & 0.439 & -- \\
+ACDC & U-Net & 1-2\% & 386 & 0.016 & -- & 0.833 \\
+ACDC & U-Net & 2-5\% & 257 & 0.001 & -- & 0.893 \\
+ACDC & U-Net & <1\% & 370 & 0.138 & -- & 0.636 \\
+ACDC & U-Net & empty-reference & -- & -- & 0.286 & -- \\
+ACDC & BDS-Lite (full) & 1-2\% & 386 & 0.004 & -- & 0.854 \\
+ACDC & BDS-Lite (full) & 2-5\% & 257 & 0.001 & -- & 0.901 \\
+ACDC & BDS-Lite (full) & <1\% & 370 & 0.091 & -- & 0.660 \\
+ACDC & BDS-Lite (full) & empty-reference & -- & -- & 0.396 & -- \\
+ACDC & U-Net + SDF only & 1-2\% & 386 & 0.010 & -- & 0.844 \\
+ACDC & U-Net + SDF only & 2-5\% & 257 & 0.000 & -- & 0.893 \\
+ACDC & U-Net + SDF only & <1\% & 370 & 0.115 & -- & 0.651 \\
+ACDC & U-Net + SDF only & empty-reference & -- & -- & 0.322 & -- \\
+ACDC & U-Net + aux. boundary only & 1-2\% & 386 & 0.008 & -- & 0.849 \\
+ACDC & U-Net + aux. boundary only & 2-5\% & 257 & 0.000 & -- & 0.901 \\
+ACDC & U-Net + aux. boundary only & <1\% & 370 & 0.088 & -- & 0.672 \\
+ACDC & U-Net + aux. boundary only & empty-reference & -- & -- & 0.420 & -- \\
+ACDC & BDS-Lite - SDF & 1-2\% & 386 & 0.004 & -- & 0.857 \\
+ACDC & BDS-Lite - SDF & 2-5\% & 257 & 0.001 & -- & 0.904 \\
+ACDC & BDS-Lite - SDF & <1\% & 370 & 0.093 & -- & 0.674 \\
+ACDC & BDS-Lite - SDF & empty-reference & -- & -- & 0.369 & -- \\
+ACDC & BDS-Lite - distillation & 1-2\% & 386 & 0.004 & -- & 0.851 \\
+ACDC & BDS-Lite - distillation & 2-5\% & 257 & 0.003 & -- & 0.900 \\
+ACDC & BDS-Lite - distillation & <1\% & 370 & 0.109 & -- & 0.655 \\
+ACDC & BDS-Lite - distillation & empty-reference & -- & -- & 0.369 & -- \\
+ACDC & BDS-Lite - gate (alpha=0) & 1-2\% & 386 & 0.007 & -- & 0.848 \\
+ACDC & BDS-Lite - gate (alpha=0) & 2-5\% & 257 & 0.000 & -- & 0.898 \\
+ACDC & BDS-Lite - gate (alpha=0) & <1\% & 370 & 0.117 & -- & 0.656 \\
+ACDC & BDS-Lite - gate (alpha=0) & empty-reference & -- & -- & 0.392 & -- \\
+ACDC & U-Net + GSL & 1-2\% & 386 & 0.009 & -- & 0.845 \\
+ACDC & U-Net + GSL & 2-5\% & 257 & 0.001 & -- & 0.880 \\
+ACDC & U-Net + GSL & <1\% & 370 & 0.075 & -- & 0.692 \\
+ACDC & U-Net + GSL & empty-reference & -- & -- & 0.365 & -- \\
+ACDC & U-Net + Boundary Loss & 1-2\% & 386 & 0.009 & -- & 0.855 \\
+ACDC & U-Net + Boundary Loss & 2-5\% & 257 & 0.001 & -- & 0.910 \\
+ACDC & U-Net + Boundary Loss & <1\% & 370 & 0.102 & -- & 0.670 \\
+ACDC & U-Net + Boundary Loss & empty-reference & -- & -- & 0.392 & -- \\
+ACDC & Attention U-Net & 1-2\% & 386 & 0.009 & -- & 0.847 \\
+ACDC & Attention U-Net & 2-5\% & 257 & 0.000 & -- & 0.896 \\
+ACDC & Attention U-Net & <1\% & 370 & 0.099 & -- & 0.672 \\
+ACDC & Attention U-Net & empty-reference & -- & -- & 0.412 & -- \\
+ACDC & LB-UNet & 1-2\% & 386 & 0.040 & -- & 0.610 \\
+ACDC & LB-UNet & 2-5\% & 257 & 0.006 & -- & 0.729 \\
+ACDC & LB-UNet & <1\% & 370 & 0.147 & -- & 0.363 \\
+ACDC & LB-UNet & empty-reference & -- & -- & 0.757 & -- \\
+ACDC & U-Net (replication family) & 1-2\% & 386 & 0.016 & -- & 0.833 \\
+ACDC & U-Net (replication family) & 2-5\% & 257 & 0.001 & -- & 0.893 \\
+ACDC & U-Net (replication family) & <1\% & 370 & 0.138 & -- & 0.636 \\
+ACDC & U-Net (replication family) & empty-reference & -- & -- & 0.286 & -- \\
+ACDC & BDS-Lite (replication family) & 1-2\% & 386 & 0.003 & -- & 0.861 \\
+ACDC & BDS-Lite (replication family) & 2-5\% & 257 & 0.001 & -- & 0.904 \\
+ACDC & BDS-Lite (replication family) & <1\% & 370 & 0.099 & -- & 0.669 \\
+ACDC & BDS-Lite (replication family) & empty-reference & -- & -- & 0.420 & -- \\
+Synapse & U-Net (submitted models) & <1\% & 1887 & 0.156 & -- & 0.614 \\
+Synapse & U-Net (submitted models) & 1-2\% & 675 & 0.046 & -- & 0.755 \\
+Synapse & U-Net (submitted models) & 2-5\% & 431 & 0.002 & -- & 0.841 \\
+Synapse & U-Net (submitted models) & >5\% & 377 & 0.000 & -- & 0.911 \\
+Synapse & U-Net (submitted models) & empty-reference & -- & -- & 0.090 & -- \\
+Synapse & BDS-Lite (submitted models) & <1\% & 1887 & 0.144 & -- & 0.619 \\
+Synapse & BDS-Lite (submitted models) & 1-2\% & 675 & 0.028 & -- & 0.767 \\
+Synapse & BDS-Lite (submitted models) & 2-5\% & 431 & 0.004 & -- & 0.845 \\
+Synapse & BDS-Lite (submitted models) & >5\% & 377 & 0.000 & -- & 0.911 \\
+Synapse & BDS-Lite (submitted models) & empty-reference & -- & -- & 0.089 & -- \\
+Synapse & BDS-Lite, gate set to identity at inference (submitted models) & <1\% & 1887 & 0.144 & -- & 0.619 \\
+Synapse & BDS-Lite, gate set to identity at inference (submitted models) & 1-2\% & 675 & 0.028 & -- & 0.767 \\
+Synapse & BDS-Lite, gate set to identity at inference (submitted models) & 2-5\% & 431 & 0.004 & -- & 0.845 \\
+Synapse & BDS-Lite, gate set to identity at inference (submitted models) & >5\% & 377 & 0.000 & -- & 0.911 \\
+Synapse & BDS-Lite, gate set to identity at inference (submitted models) & empty-reference & -- & -- & 0.089 & -- \\
+Synapse & U-Net & <1\% & 1887 & 0.171 & -- & 0.593 \\
+Synapse & U-Net & 1-2\% & 675 & 0.046 & -- & 0.749 \\
+Synapse & U-Net & 2-5\% & 431 & 0.004 & -- & 0.819 \\
+Synapse & U-Net & >5\% & 377 & 0.000 & -- & 0.901 \\
+Synapse & U-Net & empty-reference & -- & -- & 0.102 & -- \\
+Synapse & BDS-Lite (full) & <1\% & 1887 & 0.149 & -- & 0.606 \\
+Synapse & BDS-Lite (full) & 1-2\% & 675 & 0.039 & -- & 0.762 \\
+Synapse & BDS-Lite (full) & 2-5\% & 431 & 0.000 & -- & 0.844 \\
+Synapse & BDS-Lite (full) & >5\% & 377 & 0.000 & -- & 0.912 \\
+Synapse & BDS-Lite (full) & empty-reference & -- & -- & 0.100 & -- \\
+Synapse & U-Net + SDF only & <1\% & 1887 & 0.201 & -- & 0.570 \\
+Synapse & U-Net + SDF only & 1-2\% & 675 & 0.056 & -- & 0.753 \\
+Synapse & U-Net + SDF only & 2-5\% & 431 & 0.001 & -- & 0.836 \\
+Synapse & U-Net + SDF only & >5\% & 377 & 0.000 & -- & 0.909 \\
+Synapse & U-Net + SDF only & empty-reference & -- & -- & 0.087 & -- \\
+Synapse & U-Net + aux. boundary only & <1\% & 1887 & 0.168 & -- & 0.598 \\
+Synapse & U-Net + aux. boundary only & 1-2\% & 675 & 0.043 & -- & 0.755 \\
+Synapse & U-Net + aux. boundary only & 2-5\% & 431 & 0.004 & -- & 0.830 \\
+Synapse & U-Net + aux. boundary only & >5\% & 377 & 0.000 & -- & 0.902 \\
+Synapse & U-Net + aux. boundary only & empty-reference & -- & -- & 0.093 & -- \\
+Synapse & BDS-Lite - SDF & <1\% & 1887 & 0.198 & -- & 0.578 \\
+Synapse & BDS-Lite - SDF & 1-2\% & 675 & 0.075 & -- & 0.733 \\
+Synapse & BDS-Lite - SDF & 2-5\% & 431 & 0.011 & -- & 0.794 \\
+Synapse & BDS-Lite - SDF & >5\% & 377 & 0.000 & -- & 0.896 \\
+Synapse & BDS-Lite - SDF & empty-reference & -- & -- & 0.068 & -- \\
+Synapse & BDS-Lite - distillation & <1\% & 1887 & 0.191 & -- & 0.569 \\
+Synapse & BDS-Lite - distillation & 1-2\% & 675 & 0.044 & -- & 0.747 \\
+Synapse & BDS-Lite - distillation & 2-5\% & 431 & 0.006 & -- & 0.822 \\
+Synapse & BDS-Lite - distillation & >5\% & 377 & 0.002 & -- & 0.906 \\
+Synapse & BDS-Lite - distillation & empty-reference & -- & -- & 0.087 & -- \\
+Synapse & BDS-Lite - gate (alpha=0) & <1\% & 1887 & 0.197 & -- & 0.583 \\
+Synapse & BDS-Lite - gate (alpha=0) & 1-2\% & 675 & 0.066 & -- & 0.752 \\
+Synapse & BDS-Lite - gate (alpha=0) & 2-5\% & 431 & 0.003 & -- & 0.836 \\
+Synapse & BDS-Lite - gate (alpha=0) & >5\% & 377 & 0.000 & -- & 0.906 \\
+Synapse & BDS-Lite - gate (alpha=0) & empty-reference & -- & -- & 0.100 & -- \\
+Synapse & U-Net + GSL & <1\% & 1887 & 0.170 & -- & 0.597 \\
+Synapse & U-Net + GSL & 1-2\% & 675 & 0.047 & -- & 0.754 \\
+Synapse & U-Net + GSL & 2-5\% & 431 & 0.005 & -- & 0.821 \\
+Synapse & U-Net + GSL & >5\% & 377 & 0.000 & -- & 0.902 \\
+Synapse & U-Net + GSL & empty-reference & -- & -- & 0.073 & -- \\
+Synapse & U-Net + Boundary Loss & <1\% & 1887 & 0.211 & -- & 0.562 \\
+Synapse & U-Net + Boundary Loss & 1-2\% & 675 & 0.052 & -- & 0.738 \\
+Synapse & U-Net + Boundary Loss & 2-5\% & 431 & 0.005 & -- & 0.811 \\
+Synapse & U-Net + Boundary Loss & >5\% & 377 & 0.001 & -- & 0.903 \\
+Synapse & U-Net + Boundary Loss & empty-reference & -- & -- & 0.075 & -- \\
+Synapse & Attention U-Net & <1\% & 1887 & 0.241 & -- & 0.549 \\
+Synapse & Attention U-Net & 1-2\% & 675 & 0.077 & -- & 0.738 \\
+Synapse & Attention U-Net & 2-5\% & 431 & 0.005 & -- & 0.817 \\
+Synapse & Attention U-Net & >5\% & 377 & 0.000 & -- & 0.900 \\
+Synapse & Attention U-Net & empty-reference & -- & -- & 0.065 & -- \\
+Synapse & LB-UNet & <1\% & 1887 & 0.418 & -- & 0.159 \\
+Synapse & LB-UNet & 1-2\% & 675 & 0.181 & -- & 0.401 \\
+Synapse & LB-UNet & 2-5\% & 431 & 0.055 & -- & 0.586 \\
+Synapse & LB-UNet & >5\% & 377 & 0.002 & -- & 0.807 \\
+Synapse & LB-UNet & empty-reference & -- & -- & 0.141 & -- \\
+Synapse & U-Net (replication family) & <1\% & 1887 & 0.171 & -- & 0.593 \\
+Synapse & U-Net (replication family) & 1-2\% & 675 & 0.046 & -- & 0.749 \\
+Synapse & U-Net (replication family) & 2-5\% & 431 & 0.004 & -- & 0.819 \\
+Synapse & U-Net (replication family) & >5\% & 377 & 0.000 & -- & 0.901 \\
+Synapse & U-Net (replication family) & empty-reference & -- & -- & 0.102 & -- \\
+Synapse & BDS-Lite (replication family) & <1\% & 1887 & 0.149 & -- & 0.606 \\
+Synapse & BDS-Lite (replication family) & 1-2\% & 675 & 0.039 & -- & 0.762 \\
+Synapse & BDS-Lite (replication family) & 2-5\% & 431 & 0.000 & -- & 0.844 \\
+Synapse & BDS-Lite (replication family) & >5\% & 377 & 0.000 & -- & 0.912 \\
+Synapse & BDS-Lite (replication family) & empty-reference & -- & -- & 0.100 & -- \\
+\bottomrule
+\end{tabular}

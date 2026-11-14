@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "protected_paths_checked": 643,
+  "protected_changes": [],
+  "selected_primary_files_unchanged": 1108,
+  "numeric_binding_changes": [
+    "WCR.abs.rev",
+    "WCR.pct",
+    "WCR.rev"
+  ],
+  "used_numeric_keys": 409,
+  "reviewer_quotes_and_ids_unchanged": true,
+  "pdfs": {
+    "revision/manuscript/main.pdf": {
+      "pages": 18,
+      "words": 12281
+    },
+    "revision/manuscript/supplement.pdf": {
+      "pages": 60,
+      "words": 30660
+    },
+    "revision/response_to_reviewers.pdf": {
+      "pages": 17,
+      "words": 7855
+    },
+    "revision/manuscript/tracked_changes.pdf": {
+      "pages": 28,
+      "words": 26097
+    }
+  },
+  "out_of_bounds_words": [],
+  "scope": "Editorial verification; does not establish missing experimental evidence or environment portability."
+}

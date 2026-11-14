@@ -1,0 +1,25 @@
+{
+  "entry": {
+    "run_id": "attention_reference_isic2018_seed2026_official_test",
+    "family": "attention_reference",
+    "dataset": "isic2018",
+    "seed": 2026,
+    "split": "official_test",
+    "checkpoint": "results/checkpoints/isic2018_attention_unet_baseline/best.pt",
+    "checkpoint_sha256": "877bc3fb7d49e5152255268be9db519f8dfae4833288e4c073a079a854f7c233",
+    "manifest": null,
+    "manifest_sha256": null,
+    "batch": 8,
+    "classes": 2,
+    "output": "revision/prediction_recovery/attention_reference/isic2018_seed2026/official_test"
+  },
+  "protocol_sha256": "3619ae1081487603740dea88bbc509f554705a1924ae6dc77ae33028b0e059b7",
+  "outputs": {
+    "predictions.npz": "8e731845d1c716547fb8aa3a47c73ddd915adf4f68f3c3ebf459d7a406f730b2",
+    "per_case.csv": "8890773d08ef7ba5e8e097092b93e9cbe8d03c97862ccedb3dec7ec3dd674400",
+    "provenance.json": "476bd12a684234ac851918047aedc36f9a83e16aad9d2bcd54f8daf25a60c921"
+  },
+  "images": 1000,
+  "class_rows": 1000,
+  "seconds": 65.94583076803247
+}

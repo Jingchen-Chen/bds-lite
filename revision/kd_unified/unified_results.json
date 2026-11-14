@@ -1,0 +1,5310 @@
+{
+  "status": "exploratory; three D+KD-band seeds per dataset; no confirmed effects",
+  "missing": {},
+  "results": {
+    "isic2018": {
+      "dataset": "isic2018",
+      "contrasts": [
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "dsc",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.0004932979275165117,
+          "se_run": 0.006916268687891394,
+          "se_unit": 0.0010806653631135114,
+          "df": 2.154763718233887,
+          "low": -0.027645094324940004,
+          "high": 0.028631690179973027,
+          "p": 0.9498206422121034,
+          "mann_whitney_p": 0.46853146853146854,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 0.8440466770684117,
+          "arm_b_mean": 0.8435533791408952,
+          "arm_a_sd": 0.01175722912607857,
+          "arm_b_sd": 0.004192008653859764,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "iou",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.00038682704585679684,
+          "se_run": 0.00939717710738425,
+          "se_unit": 0.001321686483417986,
+          "df": 2.1622686882217987,
+          "low": -0.03764365059388437,
+          "high": 0.03841730468559797,
+          "p": 0.9709395787288703,
+          "mann_whitney_p": 0.6923076923076923,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 0.7564461568868489,
+          "arm_b_mean": 0.7560593298409921,
+          "arm_a_sd": 0.015960614290226913,
+          "arm_b_sd": 0.0058251192380483815,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "boundary_f1",
+          "primary": true,
+          "reading": "not established",
+          "delta": 0.03764662717208189,
+          "se_run": 0.0241885548430264,
+          "se_unit": 0.0028027614879466965,
+          "df": 2.2578063883287816,
+          "low": -0.05645552007416137,
+          "high": 0.13174877441832517,
+          "p": 0.2481323808250888,
+          "mann_whitney_p": 0.1118881118881119,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 0.43167578474538765,
+          "arm_b_mean": 0.39402915757330575,
+          "arm_a_sd": 0.04063598167710094,
+          "arm_b_sd": 0.01861679790946915,
+          "classification": "undetermined",
+          "p_holm_over_datasets": 0.4962647616501776
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "hd95",
+          "primary": false,
+          "reading": "not established",
+          "delta": -1.9734362566841774,
+          "se_run": 1.062725239183672,
+          "se_unit": 0.2876419612656004,
+          "df": 2.5296872916645223,
+          "low": -5.876155887431617,
+          "high": 1.9292833740632624,
+          "p": 0.1877788328090089,
+          "mann_whitney_p": 0.07692307692307693,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 29.50118589951258,
+          "arm_b_mean": 27.527749642828404,
+          "arm_a_sd": 1.734147588254915,
+          "arm_b_sd": 1.1267755531362338,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "assd",
+          "primary": false,
+          "reading": "not established",
+          "delta": -0.09827190780572082,
+          "se_run": 0.37810922352965537,
+          "se_unit": 0.07995964733748492,
+          "df": 2.303686323192899,
+          "low": -1.5677552534810675,
+          "high": 1.3712114378696258,
+          "p": 0.820213990233726,
+          "mann_whitney_p": 0.8111888111888111,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 9.646202428509902,
+          "arm_b_mean": 9.547930520704181,
+          "arm_a_sd": 0.631972107203502,
+          "arm_b_sd": 0.31363997657272513,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "dsc",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.003811394302779658,
+          "se_run": 0.006858099880194416,
+          "se_unit": 0.0012187828750691164,
+          "df": 2.082959715909373,
+          "low": -0.025043669256825284,
+          "high": 0.032666457862384604,
+          "p": 0.637224501891921,
+          "mann_whitney_p": 0.7,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.8440466770684117,
+          "arm_b_mean": 0.8402352827656321,
+          "arm_a_sd": 0.01175722912607857,
+          "arm_b_sd": 0.0016935658171614459,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "iou",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.00511118984417136,
+          "se_run": 0.0092911699888162,
+          "se_unit": 0.0014646844784026243,
+          "df": 2.0665010509923363,
+          "low": -0.03413640157327932,
+          "high": 0.044358781261622036,
+          "p": 0.6397771832422843,
+          "mann_whitney_p": 1.0,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.7564461568868489,
+          "arm_b_mean": 0.7513349670426775,
+          "arm_a_sd": 0.015960614290226913,
+          "arm_b_sd": 0.0020582300070305388,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "boundary_f1",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.05232329716088613,
+          "se_run": 0.024857143888735056,
+          "se_unit": 0.003175490142975722,
+          "df": 2.482912279303726,
+          "low": -0.03769715543999598,
+          "high": 0.14234374976176822,
+          "p": 0.14671057464230908,
+          "mann_whitney_p": 0.2,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.43167578474538765,
+          "arm_b_mean": 0.3793524875845015,
+          "arm_a_sd": 0.04063598167710094,
+          "arm_b_sd": 0.014224971003631326,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "hd95",
+          "primary": false,
+          "reading": "not established",
+          "delta": -1.2118180910507164,
+          "se_run": 1.1305927803152207,
+          "se_unit": 0.3457891129814013,
+          "df": 3.023143214445595,
+          "low": -4.95815064678877,
+          "high": 2.5345144646873368,
+          "p": 0.3802812015257277,
+          "mann_whitney_p": 0.4,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 29.50118589951258,
+          "arm_b_mean": 28.289367808461865,
+          "arm_a_sd": 1.734147588254915,
+          "arm_b_sd": 0.9096440220505838,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "assd",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.11679972513429071,
+          "se_run": 0.38956012109799354,
+          "se_unit": 0.09142842493366586,
+          "df": 2.5489336407440453,
+          "low": -1.2941250201216792,
+          "high": 1.5277244703902606,
+          "p": 0.7924710018026857,
+          "mann_whitney_p": 1.0,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 9.646202428509902,
+          "arm_b_mean": 9.763002153644193,
+          "arm_a_sd": 0.631972107203502,
+          "arm_b_sd": 0.2363948382820899,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "dsc",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.0020547734008590224,
+          "se_run": 0.00694333961363021,
+          "se_unit": 0.001036459405228771,
+          "df": 2.188363923404908,
+          "low": -0.02579131898531221,
+          "high": 0.029900865787030256,
+          "p": 0.7952068747519451,
+          "mann_whitney_p": 0.8111888111888111,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 0.8440466770684117,
+          "arm_b_mean": 0.8419919036675527,
+          "arm_a_sd": 0.01175722912607857,
+          "arm_b_sd": 0.004617884886507124,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "iou",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.0036913163610255983,
+          "se_run": 0.00944052073576238,
+          "se_unit": 0.001281413973934497,
+          "df": 2.2020174728556645,
+          "low": -0.03389937962984202,
+          "high": 0.041282012351893216,
+          "p": 0.7327019354801246,
+          "mann_whitney_p": 0.9370629370629371,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 0.7564461568868489,
+          "arm_b_mean": 0.7527548405258233,
+          "arm_a_sd": 0.015960614290226913,
+          "arm_b_sd": 0.006488216695333911,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "boundary_f1",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.05829941618166695,
+          "se_run": 0.02443488476351303,
+          "se_unit": 0.003019561831070914,
+          "df": 2.3495160024281225,
+          "low": -0.033878340594616516,
+          "high": 0.15047717295795043,
+          "p": 0.12257825017877834,
+          "mann_whitney_p": 0.013986013986013986,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 0.43167578474538765,
+          "arm_b_mean": 0.3733763685637207,
+          "arm_a_sd": 0.04063598167710094,
+          "arm_b_sd": 0.021595352382461117,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "hd95",
+          "primary": false,
+          "reading": "not established",
+          "delta": -1.4742912111591941,
+          "se_run": 1.129698712448726,
+          "se_unit": 0.28412706146847366,
+          "df": 3.194432681117936,
+          "low": -5.05702420987836,
+          "high": 2.108441787559972,
+          "p": 0.2900800081050689,
+          "mann_whitney_p": 0.2167832167832168,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 29.462314510521,
+          "arm_b_mean": 27.988023299361807,
+          "arm_a_sd": 1.7333310666862811,
+          "arm_b_sd": 1.657529241557172,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "assd",
+          "primary": false,
+          "reading": "not established",
+          "delta": -0.003976929971733156,
+          "se_run": 0.38723284158266247,
+          "se_unit": 0.07760770463870982,
+          "df": 2.570391118882455,
+          "low": -1.3884467881442186,
+          "high": 1.3804929282007523,
+          "p": 0.992694688745428,
+          "mann_whitney_p": 1.0,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 9.623994934451149,
+          "arm_b_mean": 9.620018004479416,
+          "arm_a_sd": 0.6292818602726971,
+          "arm_b_sd": 0.4236829047463202,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "dsc",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.003009079856338137,
+          "se_run": 0.007043191789513816,
+          "se_unit": 0.0011146018939658467,
+          "df": 2.304573156527589,
+          "low": -0.024096271629916215,
+          "high": 0.03011443134259249,
+          "p": 0.7092006457366914,
+          "mann_whitney_p": 1.0,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.8440466770684117,
+          "arm_b_mean": 0.8410375972120736,
+          "arm_a_sd": 0.01175722912607857,
+          "arm_b_sd": 0.0032538000904349103,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "iou",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.0063489465165808,
+          "se_run": 0.00956315409404424,
+          "se_unit": 0.001389705026494522,
+          "df": 2.3062689645136,
+          "low": -0.030362315248867844,
+          "high": 0.043060208282029444,
+          "p": 0.5707056152601242,
+          "mann_whitney_p": 1.0,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.7564461568868489,
+          "arm_b_mean": 0.7500972103702681,
+          "arm_a_sd": 0.015960614290226913,
+          "arm_b_sd": 0.004429507891166902,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "boundary_f1",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.06832305886556839,
+          "se_run": 0.025327448451513426,
+          "se_unit": 0.003317982056095415,
+          "df": 2.644057738105596,
+          "low": -0.01952460203530318,
+          "high": 0.15617071976643995,
+          "p": 0.08628917567743019,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.43167578474538765,
+          "arm_b_mean": 0.36335272587981926,
+          "arm_a_sd": 0.04063598167710094,
+          "arm_b_sd": 0.016527429574211664,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "hd95",
+          "primary": false,
+          "reading": "not established",
+          "delta": -1.3670662703638286,
+          "se_run": 1.2846435614840197,
+          "se_unit": 0.35807828835441124,
+          "df": 3.799536698646509,
+          "low": -5.148106551637849,
+          "high": 2.413974010910192,
+          "p": 0.3660958073348427,
+          "mann_whitney_p": 0.7,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 29.61265544781465,
+          "arm_b_mean": 28.24558917745082,
+          "arm_a_sd": 1.7447251904398102,
+          "arm_b_sd": 1.3808914693167624,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "assd",
+          "primary": false,
+          "reading": "not established",
+          "delta": -0.07150613968979158,
+          "se_run": 0.4218388200204851,
+          "se_unit": 0.09139659341392675,
+          "df": 3.3028524415265164,
+          "low": -1.3765566939098113,
+          "high": 1.2335444145302281,
+          "p": 0.8780491298560767,
+          "mann_whitney_p": 1.0,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 9.70877298222993,
+          "arm_b_mean": 9.637266842540138,
+          "arm_a_sd": 0.6241422164381997,
+          "arm_b_sd": 0.3798558461948917,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "dsc",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.005362279386748936,
+          "se_run": 0.0071146052155113835,
+          "se_unit": 0.0010925240457386126,
+          "df": 2.408351273321187,
+          "low": -0.021082345601331227,
+          "high": 0.031806904374829095,
+          "p": 0.5222203143180373,
+          "mann_whitney_p": 0.6923076923076923,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 0.8440466770684117,
+          "arm_b_mean": 0.8386843976816628,
+          "arm_a_sd": 0.01175722912607857,
+          "arm_b_sd": 0.006738047539813264,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "iou",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.008039598928829661,
+          "se_run": 0.009734278463503365,
+          "se_unit": 0.0013727848943103115,
+          "df": 2.4831013373806985,
+          "low": -0.027273102112089845,
+          "high": 0.04335229996974917,
+          "p": 0.4845211869622776,
+          "mann_whitney_p": 0.6923076923076923,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 0.7564461568868489,
+          "arm_b_mean": 0.7484065579580192,
+          "arm_a_sd": 0.015960614290226913,
+          "arm_b_sd": 0.009920907736304644,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "boundary_f1",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.06970686226776168,
+          "se_run": 0.02451408626214497,
+          "se_unit": 0.003452451218459897,
+          "df": 2.379470366909469,
+          "low": -0.022078323156344837,
+          "high": 0.1614920476918682,
+          "p": 0.0874379143954021,
+          "mann_whitney_p": 0.006993006993006993,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 0.43167578474538765,
+          "arm_b_mean": 0.36196892247762597,
+          "arm_a_sd": 0.04063598167710094,
+          "arm_b_sd": 0.022475043117642788,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "hd95",
+          "primary": false,
+          "reading": "not established",
+          "delta": -1.4132740260327488,
+          "se_run": 1.2323151367366585,
+          "se_unit": 0.2852130794967803,
+          "df": 4.353425287561371,
+          "low": -4.81553908643475,
+          "high": 1.9889910343692532,
+          "p": 0.321699633662721,
+          "mann_whitney_p": 0.2167832167832168,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 29.48414381305217,
+          "arm_b_mean": 28.070869787019422,
+          "arm_a_sd": 1.7319028208540717,
+          "arm_b_sd": 2.277655525468076,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-10",
+          "seed_matched": false,
+          "metric": "assd",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.19853031212586103,
+          "se_run": 0.4184928893964181,
+          "se_unit": 0.0777245963579872,
+          "df": 3.4117134901904778,
+          "low": -1.068133765121978,
+          "high": 1.4651943893737,
+          "p": 0.669110044004027,
+          "mann_whitney_p": 0.8111888111888111,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 9.639471990775712,
+          "arm_b_mean": 9.838002302901574,
+          "arm_a_sd": 0.6306752223172478,
+          "arm_b_sd": 0.6523231800806966,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "dsc",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.0066878954350662045,
+          "se_run": 0.00740393037365943,
+          "se_unit": 0.0010894494128446024,
+          "df": 2.7324273208035077,
+          "low": -0.018503750179701815,
+          "high": 0.031879541049834224,
+          "p": 0.4431487246809228,
+          "mann_whitney_p": 1.0,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.8440466770684117,
+          "arm_b_mean": 0.8373587816333455,
+          "arm_a_sd": 0.01175722912607857,
+          "arm_b_sd": 0.005120753676059779,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "iou",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.00987825407955445,
+          "se_run": 0.010333634992545542,
+          "se_unit": 0.0013442634869978885,
+          "df": 2.9661443648121475,
+          "low": -0.023500247015442087,
+          "high": 0.043256755174550986,
+          "p": 0.4138144565019335,
+          "mann_whitney_p": 1.0,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.7564461568868489,
+          "arm_b_mean": 0.7465679028072945,
+          "arm_a_sd": 0.015960614290226913,
+          "arm_b_sd": 0.008100051108239354,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "boundary_f1",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.06471493704793485,
+          "se_run": 0.025002227664224583,
+          "se_unit": 0.003248436802980757,
+          "df": 2.5329212779678336,
+          "low": -0.02457800642907651,
+          "high": 0.1540078805249462,
+          "p": 0.09805217724548657,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.43167578474538765,
+          "arm_b_mean": 0.3669608476974528,
+          "arm_a_sd": 0.04063598167710094,
+          "arm_b_sd": 0.014968338506977576,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "hd95",
+          "primary": false,
+          "reading": "not established",
+          "delta": -1.048691058580502,
+          "se_run": 1.592141338940497,
+          "se_unit": 0.32035099328117395,
+          "df": 3.8120768833834013,
+          "low": -5.6468087581709385,
+          "high": 3.5494266410099344,
+          "p": 0.5552620894607215,
+          "mann_whitney_p": 0.4,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 29.57956582329692,
+          "arm_b_mean": 28.53087476471642,
+          "arm_a_sd": 1.7199230349781702,
+          "arm_b_sd": 2.1555989615977267,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "assd",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.15230286356047884,
+          "se_run": 0.4547907563408014,
+          "se_unit": 0.08401673736471824,
+          "df": 3.562067903692684,
+          "low": -1.1964860631645002,
+          "high": 1.501091790285458,
+          "p": 0.7603566265672973,
+          "mann_whitney_p": 1.0,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 9.69660428219093,
+          "arm_b_mean": 9.84890714575141,
+          "arm_a_sd": 0.6473302055414133,
+          "arm_b_sd": 0.4488513129676978,
+          "classification": "undetermined"
+        }
+      ],
+      "per_seed": [
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "dsc",
+          "value": 0.8381978156972
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "dsc",
+          "value": 0.8575812704397813
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "dsc",
+          "value": 0.8363609450682541
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "dsc",
+          "value": 0.8383460801221265
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "dsc",
+          "value": 0.8416173200322801
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "dsc",
+          "value": 0.8407424481424898
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 4,
+          "metric": "dsc",
+          "value": 0.8462202352503606
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 5,
+          "metric": "dsc",
+          "value": 0.8390026902953615
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 6,
+          "metric": "dsc",
+          "value": 0.8470789570850348
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 7,
+          "metric": "dsc",
+          "value": 0.8393661779097863
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 8,
+          "metric": "dsc",
+          "value": 0.8481855027380043
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 9,
+          "metric": "dsc",
+          "value": 0.8453422819888117
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 10,
+          "metric": "dsc",
+          "value": 0.8496320978446977
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "dsc",
+          "value": 0.8374398665934611
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "dsc",
+          "value": 0.8437742609141266
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "dsc",
+          "value": 0.8418986641286328
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 4,
+          "metric": "dsc",
+          "value": 0.8427012601954208
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 5,
+          "metric": "dsc",
+          "value": 0.8330282975867328
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 6,
+          "metric": "dsc",
+          "value": 0.8441731551353587
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 7,
+          "metric": "dsc",
+          "value": 0.8434627256552144
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 8,
+          "metric": "dsc",
+          "value": 0.8393847829531544
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 9,
+          "metric": "dsc",
+          "value": 0.8436571979674649
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 10,
+          "metric": "dsc",
+          "value": 0.8503988255459599
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "dsc",
+          "value": 0.8314614644715584
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "dsc",
+          "value": 0.8399354779435059
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "dsc",
+          "value": 0.8406794024849721
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 4,
+          "metric": "dsc",
+          "value": 0.8456901189876971
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 5,
+          "metric": "dsc",
+          "value": 0.8265986219937297
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 6,
+          "metric": "dsc",
+          "value": 0.8355238376595535
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 7,
+          "metric": "dsc",
+          "value": 0.8430945971415104
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 8,
+          "metric": "dsc",
+          "value": 0.8450266085157634
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 9,
+          "metric": "dsc",
+          "value": 0.8328971991044896
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 10,
+          "metric": "dsc",
+          "value": 0.8459366485138494
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "iou",
+          "value": 0.750164926593181
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "iou",
+          "value": 0.7745917984588455
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "iou",
+          "value": 0.7445817456085204
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "iou",
+          "value": 0.7490887229283049
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "iou",
+          "value": 0.7517857043172985
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "iou",
+          "value": 0.7531304738824293
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 4,
+          "metric": "iou",
+          "value": 0.759414219274915
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 5,
+          "metric": "iou",
+          "value": 0.7514968009834126
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 6,
+          "metric": "iou",
+          "value": 0.7592594736585916
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 7,
+          "metric": "iou",
+          "value": 0.7494185373984676
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 8,
+          "metric": "iou",
+          "value": 0.762944484902764
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 9,
+          "metric": "iou",
+          "value": 0.7584988681510403
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 10,
+          "metric": "iou",
+          "value": 0.7655560129126975
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "iou",
+          "value": 0.7451227907661084
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "iou",
+          "value": 0.7536149066396165
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "iou",
+          "value": 0.7515539337050795
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 4,
+          "metric": "iou",
+          "value": 0.7518379428823039
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 5,
+          "metric": "iou",
+          "value": 0.7441782457869447
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 6,
+          "metric": "iou",
+          "value": 0.7538807736964335
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 7,
+          "metric": "iou",
+          "value": 0.7561335423655645
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 8,
+          "metric": "iou",
+          "value": 0.7472752470654493
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 9,
+          "metric": "iou",
+          "value": 0.7580199442534411
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 10,
+          "metric": "iou",
+          "value": 0.7659310780972914
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "iou",
+          "value": 0.7372270799590539
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "iou",
+          "value": 0.7516537650039858
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "iou",
+          "value": 0.7508228634588436
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 4,
+          "metric": "iou",
+          "value": 0.7598285959868443
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 5,
+          "metric": "iou",
+          "value": 0.732491179875343
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 6,
+          "metric": "iou",
+          "value": 0.7440291268054222
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 7,
+          "metric": "iou",
+          "value": 0.7546507659703684
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 8,
+          "metric": "iou",
+          "value": 0.7576347455013349
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 9,
+          "metric": "iou",
+          "value": 0.7374523631761294
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 10,
+          "metric": "iou",
+          "value": 0.7582750938428668
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "boundary_f1",
+          "value": 0.42653767624446337
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "boundary_f1",
+          "value": 0.4746364580230222
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "boundary_f1",
+          "value": 0.3938532199686775
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "boundary_f1",
+          "value": 0.37168112283424387
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "boundary_f1",
+          "value": 0.3706099180061381
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "boundary_f1",
+          "value": 0.3957664219131225
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 4,
+          "metric": "boundary_f1",
+          "value": 0.38353293041612546
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 5,
+          "metric": "boundary_f1",
+          "value": 0.4086606890853627
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 6,
+          "metric": "boundary_f1",
+          "value": 0.39107510106701343
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 7,
+          "metric": "boundary_f1",
+          "value": 0.37584207565219097
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 8,
+          "metric": "boundary_f1",
+          "value": 0.420654512981708
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 9,
+          "metric": "boundary_f1",
+          "value": 0.4184334866060193
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 10,
+          "metric": "boundary_f1",
+          "value": 0.4040353171711332
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "boundary_f1",
+          "value": 0.34528080148625395
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "boundary_f1",
+          "value": 0.36707737092682896
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "boundary_f1",
+          "value": 0.37770000522637476
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 4,
+          "metric": "boundary_f1",
+          "value": 0.35483726035361063
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 5,
+          "metric": "boundary_f1",
+          "value": 0.3530603151941948
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 6,
+          "metric": "boundary_f1",
+          "value": 0.362824268112406
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 7,
+          "metric": "boundary_f1",
+          "value": 0.3903185675084851
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 8,
+          "metric": "boundary_f1",
+          "value": 0.37968996878776295
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 9,
+          "metric": "boundary_f1",
+          "value": 0.384541540128632
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 10,
+          "metric": "boundary_f1",
+          "value": 0.41843358791265783
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "boundary_f1",
+          "value": 0.3497670171563218
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "boundary_f1",
+          "value": 0.3770842953625718
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "boundary_f1",
+          "value": 0.3740312305734647
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 4,
+          "metric": "boundary_f1",
+          "value": 0.3883983547350098
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 5,
+          "metric": "boundary_f1",
+          "value": 0.35063472478235136
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 6,
+          "metric": "boundary_f1",
+          "value": 0.33913062977148833
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 7,
+          "metric": "boundary_f1",
+          "value": 0.36294729502691553
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 8,
+          "metric": "boundary_f1",
+          "value": 0.3843080069293257
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 9,
+          "metric": "boundary_f1",
+          "value": 0.3174699342846666
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 10,
+          "metric": "boundary_f1",
+          "value": 0.375917736154144
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "hd95",
+          "value": 29.21900161576271
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "hd95",
+          "value": 28.24452256667614
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "hd95",
+          "value": 31.608677975296974
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "hd95",
+          "value": 29.395909931592808
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "hd95",
+          "value": 27.757112006545068
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "hd95",
+          "value": 27.844973840230445
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 4,
+          "metric": "hd95",
+          "value": 27.841228751301767
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 5,
+          "metric": "hd95",
+          "value": 28.273559356331827
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 6,
+          "metric": "hd95",
+          "value": 26.60419332027435
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 7,
+          "metric": "hd95",
+          "value": 28.29687787425518
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 8,
+          "metric": "hd95",
+          "value": 27.851714403986932
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 9,
+          "metric": "hd95",
+          "value": 27.5854903922081
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 10,
+          "metric": "hd95",
+          "value": 25.08326908957958
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "hd95",
+          "value": 28.763435230970384
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "hd95",
+          "value": 26.76919946420193
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "hd95",
+          "value": 29.264985173761485
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 4,
+          "metric": "hd95",
+          "value": 29.364373903155325
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 5,
+          "metric": "hd95",
+          "value": 27.99748846257821
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 6,
+          "metric": "hd95",
+          "value": 28.102715444922445
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 7,
+          "metric": "hd95",
+          "value": 25.872120938740217
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 8,
+          "metric": "hd95",
+          "value": 31.45905706655979
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 9,
+          "metric": "hd95",
+          "value": 26.220930733241595
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 10,
+          "metric": "hd95",
+          "value": 28.001709076285362
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "hd95",
+          "value": 31.06090938651562
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "hd95",
+          "value": 27.10843335520159
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "hd95",
+          "value": 27.47316861665762
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 4,
+          "metric": "hd95",
+          "value": 26.124994992733
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 5,
+          "metric": "hd95",
+          "value": 31.35680515778065
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 6,
+          "metric": "hd95",
+          "value": 26.8965899964571
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 7,
+          "metric": "hd95",
+          "value": 25.908167548260934
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 8,
+          "metric": "hd95",
+          "value": 27.950050320267678
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 9,
+          "metric": "hd95",
+          "value": 31.820643419742584
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 10,
+          "metric": "hd95",
+          "value": 26.425132671195662
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "assd",
+          "value": 9.846029948085546
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "assd",
+          "value": 9.079082137793302
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "assd",
+          "value": 10.351885792970657
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "assd",
+          "value": 9.996162917069299
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "assd",
+          "value": 9.88005252945423
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "assd",
+          "value": 9.498470173974932
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 4,
+          "metric": "assd",
+          "value": 9.45314523756504
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 5,
+          "metric": "assd",
+          "value": 10.074721774339675
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 6,
+          "metric": "assd",
+          "value": 9.428842744350433
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 7,
+          "metric": "assd",
+          "value": 9.822552991122008
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 8,
+          "metric": "assd",
+          "value": 9.692866029977798
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 9,
+          "metric": "assd",
+          "value": 9.401345351338387
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "decoder-only",
+          "seed": 10,
+          "metric": "assd",
+          "value": 9.045437028348445
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "assd",
+          "value": 9.96571563833952
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "assd",
+          "value": 9.276384545207023
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "assd",
+          "value": 9.711962603555175
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 4,
+          "metric": "assd",
+          "value": 9.99882987099886
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 5,
+          "metric": "assd",
+          "value": 10.163463218102125
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 6,
+          "metric": "assd",
+          "value": 9.695236286759377
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 7,
+          "metric": "assd",
+          "value": 9.236665147859174
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 8,
+          "metric": "assd",
+          "value": 10.42573766309023
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 9,
+          "metric": "assd",
+          "value": 9.24382804416202
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "U-Net",
+          "seed": 10,
+          "metric": "assd",
+          "value": 9.653873488843441
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "assd",
+          "value": 10.396634054780007
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "assd",
+          "value": 9.580237906855029
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "assd",
+          "value": 9.599405691848025
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 4,
+          "metric": "assd",
+          "value": 9.369924493432045
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 5,
+          "metric": "assd",
+          "value": 11.154601758658886
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 6,
+          "metric": "assd",
+          "value": 9.931169714391231
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 7,
+          "metric": "assd",
+          "value": 9.359948184808255
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 8,
+          "metric": "assd",
+          "value": 9.719704123973846
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 9,
+          "metric": "assd",
+          "value": 10.899917020559311
+        },
+        {
+          "dataset": "isic2018",
+          "arm": "BDS-Lite",
+          "seed": 10,
+          "metric": "assd",
+          "value": 9.25653000907573
+        }
+      ],
+      "per_class": [],
+      "validation": [
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "dsc",
+          "reading": "no relevant effect",
+          "delta": -0.0011516146192230847,
+          "se_run": 0.001329697623814533,
+          "se_unit": 0.0016346705949668514,
+          "df": 3.011927107387868,
+          "low": -0.007842631111371044,
+          "high": 0.005539401872924873,
+          "p": 0.622595978549432,
+          "mann_whitney_p": 0.46853146853146854,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 0.8620350455338038,
+          "arm_b_mean": 0.8631866601530269,
+          "arm_a_sd": 0.0020727138545309923,
+          "arm_b_sd": 0.0018331617400630725,
+          "classification": "no relevant effect"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "iou",
+          "reading": "not established",
+          "delta": -0.0017170300881307332,
+          "se_run": 0.002007271142137724,
+          "se_unit": 0.002005342354397938,
+          "df": 2.69837263745827,
+          "low": -0.011345490710377581,
+          "high": 0.007911430534116115,
+          "p": 0.5921419651887598,
+          "mann_whitney_p": 0.46853146853146854,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 0.7848727642383936,
+          "arm_b_mean": 0.7865897943265243,
+          "arm_a_sd": 0.0032210195088599285,
+          "arm_b_sd": 0.0023891739421261597,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "boundary_f1",
+          "reading": "not established",
+          "delta": 0.007280139551132825,
+          "se_run": 0.006702083042524088,
+          "se_unit": 0.0039003878123946996,
+          "df": 2.219812714055928,
+          "low": -0.023110013806378157,
+          "high": 0.03767029290864381,
+          "p": 0.4383734831882918,
+          "mann_whitney_p": 0.3706293706293706,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 0.5449153660998535,
+          "arm_b_mean": 0.5376352265487206,
+          "arm_a_sd": 0.011307819756043903,
+          "arm_b_sd": 0.00479129895104658,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "hd95",
+          "reading": "not established",
+          "delta": -0.8055288045822344,
+          "se_run": 0.8068535929819904,
+          "se_unit": 0.4134982305405147,
+          "df": 2.3761749375766894,
+          "low": -4.170534921593747,
+          "high": 2.559477312429278,
+          "p": 0.4549446178711495,
+          "mann_whitney_p": 0.2867132867132867,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 21.100694285395246,
+          "arm_b_mean": 20.29516548081301,
+          "arm_a_sd": 1.3379616321250527,
+          "arm_b_sd": 0.7368781728461123,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "isic2018",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "assd",
+          "reading": "not established",
+          "delta": -0.09474017360480502,
+          "se_run": 0.21674812801369053,
+          "se_unit": 0.11418270995530631,
+          "df": 2.1685085923329166,
+          "low": -1.0740931011990895,
+          "high": 0.8846127539894795,
+          "p": 0.7336476736439212,
+          "mann_whitney_p": 0.46853146853146854,
+          "n_a": 3,
+          "n_b": 10,
+          "arm_a_mean": 6.875091278052423,
+          "arm_b_mean": 6.780351104447618,
+          "arm_a_sd": 0.3678677368844291,
+          "arm_b_sd": 0.13677939844686623,
+          "classification": "undetermined"
+        }
+      ],
+      "consistency": {
+        "boundary_f1": {
+          "kd_runs": [
+            0.42653767624446337,
+            0.4746364580230222,
+            0.3938532199686775
+          ],
+          "decoder_runs": [
+            0.37168112283424387,
+            0.3706099180061381,
+            0.3957664219131225,
+            0.38353293041612546,
+            0.4086606890853627,
+            0.39107510106701343,
+            0.37584207565219097,
+            0.420654512981708,
+            0.4184334866060193,
+            0.4040353171711332
+          ],
+          "kd_above_decoder_mean": 2.0,
+          "kd_min_minus_decoder_max": -0.02680129301303047,
+          "kd_max_minus_decoder_min": 0.1040265400168841
+        },
+        "dsc": {
+          "kd_runs": [
+            0.8381978156972,
+            0.8575812704397813,
+            0.8363609450682541
+          ],
+          "decoder_runs": [
+            0.8383460801221265,
+            0.8416173200322801,
+            0.8407424481424898,
+            0.8462202352503606,
+            0.8390026902953615,
+            0.8470789570850348,
+            0.8393661779097863,
+            0.8481855027380043,
+            0.8453422819888117,
+            0.8496320978446977
+          ],
+          "kd_above_decoder_mean": 1.0,
+          "kd_min_minus_decoder_max": -0.01327115277644364,
+          "kd_max_minus_decoder_min": 0.01923519031765475
+        }
+      },
+      "rates": {
+        "KD-band": {
+          "missed_structure": 0.0,
+          "false_alarm": null
+        },
+        "decoder-only": {
+          "missed_structure": 0.0005,
+          "false_alarm": null
+        },
+        "U-Net": {
+          "missed_structure": 0.0007,
+          "false_alarm": null
+        },
+        "BDS-Lite": {
+          "missed_structure": 0.0007,
+          "false_alarm": null
+        }
+      },
+      "teacher_test": {
+        "dsc": 0.8781849659954387,
+        "iou": 0.8010229208945503,
+        "boundary_f1": 0.4070052461633837,
+        "hd95": 17.682476608991625,
+        "assd": 7.019504726260901
+      },
+      "costs": [
+        {
+          "run": "isic2018_kd_teacher_seed100",
+          "epochs": 150,
+          "median_epoch_seconds": 10.52075677207904,
+          "sum_epoch_hours": 0.4477610255317025,
+          "peak_allocated_mib": 696.54833984375,
+          "max_temperature_c": 87,
+          "telemetry_hours": 0.49444444444444446
+        },
+        {
+          "run": "isic2018_kd_band_seed1",
+          "epochs": 150,
+          "median_epoch_seconds": 14.444640290457755,
+          "sum_epoch_hours": 0.6214624849405825,
+          "peak_allocated_mib": 853.00927734375,
+          "max_temperature_c": 87,
+          "telemetry_hours": 0.7166666666666667
+        },
+        {
+          "run": "isic2018_kd_band_seed2",
+          "epochs": 150,
+          "median_epoch_seconds": 14.359895714034792,
+          "sum_epoch_hours": 0.6119324089255921,
+          "peak_allocated_mib": 853.00927734375,
+          "max_temperature_c": 86,
+          "telemetry_hours": 0.6833333333333333
+        },
+        {
+          "run": "isic2018_kd_band_seed3",
+          "epochs": 150,
+          "median_epoch_seconds": 14.409189309051726,
+          "sum_epoch_hours": 0.6169729051336698,
+          "peak_allocated_mib": 853.00927734375,
+          "max_temperature_c": 87,
+          "telemetry_hours": 0.7083333333333334
+        },
+        {
+          "run": "isic2018_m2_aux_boundary_only_seed1 (existing decoder-only reference)",
+          "epochs": 150,
+          "median_epoch_seconds": 14.312606288993265,
+          "sum_epoch_hours": 0.6096943113075556,
+          "max_temperature_c": 87,
+          "telemetry_hours": 0.7083333333333334
+        }
+      ],
+      "deployed_parameters": {
+        "kd_band": 1928114,
+        "decoder_only": 1928114
+      },
+      "thermal_resumes": {
+        "isic2018_kd_teacher_seed100": 26,
+        "isic2018_kd_band_seed1": 45,
+        "isic2018_kd_band_seed2": 31,
+        "isic2018_kd_band_seed3": 37
+      }
+    },
+    "acdc": {
+      "dataset": "acdc",
+      "contrasts": [
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "dsc",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.018098072569979085,
+          "se_run": 0.0059231317409336745,
+          "se_unit": 0.0033370158285423593,
+          "df": 3.7894322719461377,
+          "low": -0.0011984333570541732,
+          "high": 0.037394578497012346,
+          "p": 0.05953789830950286,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.7766518023454219,
+          "arm_b_mean": 0.7585537297754428,
+          "arm_a_sd": 0.006341928730641164,
+          "arm_b_sd": 0.008064143403786674,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "iou",
+          "primary": false,
+          "reading": "exploratory gain, size unclear",
+          "delta": 0.021943530373114584,
+          "se_run": 0.006552938851160658,
+          "se_unit": 0.003513817297728119,
+          "df": 3.7458944133411984,
+          "low": 0.0007348299112116402,
+          "high": 0.04315223083501753,
+          "p": 0.04548746948567742,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.6982322888492308,
+          "arm_b_mean": 0.6762887584761162,
+          "arm_a_sd": 0.0069018360533199,
+          "arm_b_sd": 0.009010420736805018,
+          "classification": "gain, size unclear"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "boundary_f1",
+          "primary": true,
+          "reading": "exploratory gain, size unclear",
+          "delta": 0.023873198328970946,
+          "se_run": 0.005738767938607089,
+          "se_unit": 0.004186444143840397,
+          "df": 3.9119915279564146,
+          "low": 0.003974484396525216,
+          "high": 0.043771912261416676,
+          "p": 0.029263289569158298,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.8256377562345341,
+          "arm_b_mean": 0.8017645579055631,
+          "arm_a_sd": 0.006480018170510025,
+          "arm_b_sd": 0.007537223419098965,
+          "classification": "gain, size unclear",
+          "p_holm_over_datasets": 0.08778986870747489
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "hd95",
+          "primary": false,
+          "reading": "not established",
+          "delta": 2.267537298710411,
+          "se_run": 0.5296334133794863,
+          "se_unit": 0.5748559983928948,
+          "df": 3.597920762007287,
+          "low": -0.0017376880342139245,
+          "high": 4.536812285455036,
+          "p": 0.050103457932235466,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 6.645111746042471,
+          "arm_b_mean": 8.912649044752882,
+          "arm_a_sd": 0.5292512327901994,
+          "arm_b_sd": 0.7492848525721522,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "assd",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.7166402238052232,
+          "se_run": 0.2035588742683231,
+          "se_unit": 0.1936639777795225,
+          "df": 3.825735537770329,
+          "low": -0.07766224007416889,
+          "high": 1.5109426876846153,
+          "p": 0.0660508023844685,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 2.1097716973913774,
+          "arm_b_mean": 2.8264119211966006,
+          "arm_a_sd": 0.2211085391636331,
+          "arm_b_sd": 0.2746264003862065,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "dsc",
+          "primary": false,
+          "reading": "exploratory relevant gain",
+          "delta": 0.03399095276554187,
+          "se_run": 0.006351908202689008,
+          "se_unit": 0.00498172013246307,
+          "df": 3.5954703026816284,
+          "low": 0.010547868540692246,
+          "high": 0.0574340369903915,
+          "p": 0.016964898022016516,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.7766518023454219,
+          "arm_b_mean": 0.74266084957988,
+          "arm_a_sd": 0.006341928730641164,
+          "arm_b_sd": 0.008990002971169244,
+          "classification": "relevant gain"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "iou",
+          "primary": false,
+          "reading": "exploratory relevant gain",
+          "delta": 0.03798040356011978,
+          "se_run": 0.005857699537999036,
+          "se_unit": 0.005401978794097635,
+          "df": 3.977930851237393,
+          "low": 0.01580832863368519,
+          "high": 0.06015247848655437,
+          "p": 0.008985153701154857,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.6982322888492308,
+          "arm_b_mean": 0.660251885289111,
+          "arm_a_sd": 0.0069018360533199,
+          "arm_b_sd": 0.007436571167246095,
+          "classification": "relevant gain"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "boundary_f1",
+          "primary": false,
+          "reading": "exploratory relevant gain",
+          "delta": 0.039806138738391006,
+          "se_run": 0.0040039871759880025,
+          "se_unit": 0.005705104426860168,
+          "df": 2.5695289993812596,
+          "low": 0.015366782150066954,
+          "high": 0.06424549532671506,
+          "p": 0.01602134863872237,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.8256377562345341,
+          "arm_b_mean": 0.785831617496143,
+          "arm_a_sd": 0.006480018170510025,
+          "arm_b_sd": 0.0024708509518562745,
+          "classification": "relevant gain"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "hd95",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.8572735397056617,
+          "se_run": 0.6768424695111931,
+          "se_unit": 0.4697346206008782,
+          "df": 2.9609625553300996,
+          "low": -1.784321852911257,
+          "high": 3.4988689323225803,
+          "p": 0.37548566217609025,
+          "mann_whitney_p": 0.2,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 6.645111746042471,
+          "arm_b_mean": 7.502385285748133,
+          "arm_a_sd": 0.5292512327901994,
+          "arm_b_sd": 1.046059423834079,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "assd",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.47427388854780794,
+          "se_run": 0.26768885569084633,
+          "se_unit": 0.36322054684059835,
+          "df": 3.08356742699499,
+          "low": -0.9398976210991481,
+          "high": 1.888445398194764,
+          "p": 0.3685029535239166,
+          "mann_whitney_p": 0.2,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 2.1097716973913774,
+          "arm_b_mean": 2.5840455859391853,
+          "arm_a_sd": 0.2211085391636331,
+          "arm_b_sd": 0.40753280149228277,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "dsc",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.019057031432601845,
+          "se_run": 0.008268621692046731,
+          "se_unit": 0.00444157054330407,
+          "df": 2.9208904423888917,
+          "low": -0.011276455013114181,
+          "high": 0.04939051787831787,
+          "p": 0.13776619399892234,
+          "mann_whitney_p": 0.2,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.7766518023454219,
+          "arm_b_mean": 0.75759477091282,
+          "arm_a_sd": 0.006341928730641164,
+          "arm_b_sd": 0.012840960012165187,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "iou",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.022034675940724502,
+          "se_run": 0.008730294628588552,
+          "se_unit": 0.004670715325758636,
+          "df": 2.984434671939704,
+          "low": -0.009568514909347424,
+          "high": 0.05363786679079643,
+          "p": 0.11293530793221583,
+          "mann_whitney_p": 0.2,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.6982322888492308,
+          "arm_b_mean": 0.6761976129085063,
+          "arm_a_sd": 0.0069018360533199,
+          "arm_b_sd": 0.013454322428089046,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "boundary_f1",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.02366179162975035,
+          "se_run": 0.00659138058940612,
+          "se_unit": 0.004819858408631779,
+          "df": 3.5508176997591714,
+          "low": -0.00018671856992976202,
+          "high": 0.04751030182943046,
+          "p": 0.05106275250840521,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.8256377562345341,
+          "arm_b_mean": 0.8019759646047837,
+          "arm_a_sd": 0.006480018170510025,
+          "arm_b_sd": 0.009399375443775997,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "hd95",
+          "primary": false,
+          "reading": "not established",
+          "delta": 2.0288544400088186,
+          "se_run": 0.7188522790001725,
+          "se_unit": 0.6703931737807406,
+          "df": 2.841217600612371,
+          "low": -1.2005687125179008,
+          "high": 5.2582775925355385,
+          "p": 0.1360561236415453,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 6.645111746042471,
+          "arm_b_mean": 8.67396618605129,
+          "arm_a_sd": 0.5292512327901994,
+          "arm_b_sd": 1.1270044053424455,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "assd",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.569022904679624,
+          "se_run": 0.2204254474749537,
+          "se_unit": 0.2619623799615654,
+          "df": 3.6089053472156953,
+          "low": -0.4235626941667041,
+          "high": 1.5616085035259522,
+          "p": 0.17951193759276796,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 2.1097716973913774,
+          "arm_b_mean": 2.6787946020710014,
+          "arm_a_sd": 0.2211085391636331,
+          "arm_b_sd": 0.31124451415651466,
+          "classification": "undetermined"
+        }
+      ],
+      "per_seed": [
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "dsc",
+          "value": 0.7771444203618578
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "dsc",
+          "value": 0.7700779301694478
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "dsc",
+          "value": 0.7827330565049601
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "dsc",
+          "value": 0.751513600145997
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "dsc",
+          "value": 0.756795741924903
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "dsc",
+          "value": 0.7673518472554283
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "dsc",
+          "value": 0.7336015376035027
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "dsc",
+          "value": 0.7515799022586893
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "dsc",
+          "value": 0.7428011088774479
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "dsc",
+          "value": 0.7473440070689389
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "dsc",
+          "value": 0.7534421339461852
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "dsc",
+          "value": 0.7719981717233358
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "iou",
+          "value": 0.6999866617100629
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "iou",
+          "value": 0.6906225714826967
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "iou",
+          "value": 0.7040876333549331
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "iou",
+          "value": 0.6673922348012367
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "iou",
+          "value": 0.6760651275781677
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "iou",
+          "value": 0.6854089130489446
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "iou",
+          "value": 0.6521583679369891
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "iou",
+          "value": 0.6667833619328077
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "iou",
+          "value": 0.6618139259975363
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "iou",
+          "value": 0.6655352430807798
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "iou",
+          "value": 0.6717433906135932
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "iou",
+          "value": 0.6913142050311458
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "boundary_f1",
+          "value": 0.8269845997463852
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "boundary_f1",
+          "value": 0.8185901564997569
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "boundary_f1",
+          "value": 0.8313385124574604
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "boundary_f1",
+          "value": 0.7944699872749431
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "boundary_f1",
+          "value": 0.8013006795953791
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "boundary_f1",
+          "value": 0.8095230068463672
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "boundary_f1",
+          "value": 0.7836068078911651
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "boundary_f1",
+          "value": 0.7884908807577314
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "boundary_f1",
+          "value": 0.7853971638395325
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "boundary_f1",
+          "value": 0.7967797865690108
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "boundary_f1",
+          "value": 0.7963218988072007
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "boundary_f1",
+          "value": 0.8128262084381394
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "hd95",
+          "value": 6.308308302266458
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "hd95",
+          "value": 7.255134852835478
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "hd95",
+          "value": 6.371892083025481
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "hd95",
+          "value": 9.410254499294137
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "hd95",
+          "value": 8.050886776401308
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "hd95",
+          "value": 9.276805858563202
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "hd95",
+          "value": 6.551278334794422
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "hd95",
+          "value": 8.62275423411451
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "hd95",
+          "value": 7.333123288335466
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "hd95",
+          "value": 8.800826621723065
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "hd95",
+          "value": 7.48889932827484
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "hd95",
+          "value": 9.732172608155965
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "assd",
+          "value": 1.926369631270354
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "assd",
+          "value": 2.3552964857628966
+        },
+        {
+          "dataset": "acdc",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "assd",
+          "value": 2.047648975140882
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "assd",
+          "value": 2.957482878489331
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "assd",
+          "value": 2.510806526517018
+        },
+        {
+          "dataset": "acdc",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "assd",
+          "value": 3.0109463585834533
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "assd",
+          "value": 2.1518178796622265
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "assd",
+          "value": 2.6390154297659083
+        },
+        {
+          "dataset": "acdc",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "assd",
+          "value": 2.9613034483894216
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "assd",
+          "value": 2.5407020807759073
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "assd",
+          "value": 2.4604891805165856
+        },
+        {
+          "dataset": "acdc",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "assd",
+          "value": 3.0351925449205113
+        }
+      ],
+      "per_class": [
+        {
+          "dataset": "acdc",
+          "label": 1,
+          "comparison": "KD-band - decoder-only",
+          "metric": "dsc",
+          "delta": 0.019718701194630817,
+          "low": -0.026480729174420632,
+          "high": 0.06591813156368226,
+          "arm_a_mean": 0.6979374586604554,
+          "arm_b_mean": 0.6782187574658246
+        },
+        {
+          "dataset": "acdc",
+          "label": 1,
+          "comparison": "KD-band - decoder-only",
+          "metric": "boundary_f1",
+          "delta": 0.030693720475482023,
+          "low": -0.019577107299102635,
+          "high": 0.08096454825006669,
+          "arm_a_mean": 0.7185581275363576,
+          "arm_b_mean": 0.6878644070608756
+        },
+        {
+          "dataset": "acdc",
+          "label": 1,
+          "comparison": "KD-band - decoder-only",
+          "metric": "hd95",
+          "delta": 0.7896969247134065,
+          "low": -1.8487256420723175,
+          "high": 3.4281194914991304,
+          "arm_a_mean": 7.454217010447588,
+          "arm_b_mean": 8.243913935160995
+        },
+        {
+          "dataset": "acdc",
+          "label": 1,
+          "comparison": "KD-band - U-Net",
+          "metric": "dsc",
+          "delta": 0.0331053029177123,
+          "low": -0.021681896753231643,
+          "high": 0.08789250258865625,
+          "arm_a_mean": 0.6979374586604554,
+          "arm_b_mean": 0.6648321557427431
+        },
+        {
+          "dataset": "acdc",
+          "label": 1,
+          "comparison": "KD-band - U-Net",
+          "metric": "boundary_f1",
+          "delta": 0.04785146585041722,
+          "low": -0.003215321136722231,
+          "high": 0.09891825283755667,
+          "arm_a_mean": 0.7185581275363576,
+          "arm_b_mean": 0.6707066616859404
+        },
+        {
+          "dataset": "acdc",
+          "label": 1,
+          "comparison": "KD-band - U-Net",
+          "metric": "hd95",
+          "delta": 0.11386993680225999,
+          "low": -2.700038225296061,
+          "high": 2.927778098900581,
+          "arm_a_mean": 7.454217010447588,
+          "arm_b_mean": 7.568086947249848
+        },
+        {
+          "dataset": "acdc",
+          "label": 1,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "dsc",
+          "delta": 0.027768938140997457,
+          "low": -0.03282260247252591,
+          "high": 0.08836047875452083,
+          "arm_a_mean": 0.6979374586604554,
+          "arm_b_mean": 0.670168520519458
+        },
+        {
+          "dataset": "acdc",
+          "label": 1,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "boundary_f1",
+          "delta": 0.03737455964583114,
+          "low": -0.024386217428530976,
+          "high": 0.09913533672019326,
+          "arm_a_mean": 0.7185581275363576,
+          "arm_b_mean": 0.6811835678905265
+        },
+        {
+          "dataset": "acdc",
+          "label": 1,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "hd95",
+          "delta": 0.9917088314868794,
+          "low": -1.7408854774257114,
+          "high": 3.72430314039947,
+          "arm_a_mean": 7.454217010447588,
+          "arm_b_mean": 8.445925841934468
+        },
+        {
+          "dataset": "acdc",
+          "label": 2,
+          "comparison": "KD-band - decoder-only",
+          "metric": "dsc",
+          "delta": 0.02258777846781168,
+          "low": 0.002418448467477234,
+          "high": 0.04275710846814613,
+          "arm_a_mean": 0.7944535848709808,
+          "arm_b_mean": 0.7718658064031692
+        },
+        {
+          "dataset": "acdc",
+          "label": 2,
+          "comparison": "KD-band - decoder-only",
+          "metric": "boundary_f1",
+          "delta": 0.020273402594512824,
+          "low": 0.0021447722963301025,
+          "high": 0.038402032892695545,
+          "arm_a_mean": 0.8933122074978148,
+          "arm_b_mean": 0.873038804903302
+        },
+        {
+          "dataset": "acdc",
+          "label": 2,
+          "comparison": "KD-band - decoder-only",
+          "metric": "hd95",
+          "delta": 2.9901599412903836,
+          "low": -1.8392825833343727,
+          "high": 7.81960246591514,
+          "arm_a_mean": 6.3748365889228,
+          "arm_b_mean": 9.364996530213183
+        },
+        {
+          "dataset": "acdc",
+          "label": 2,
+          "comparison": "KD-band - U-Net",
+          "metric": "dsc",
+          "delta": 0.03415370631710424,
+          "low": -0.004481582735333979,
+          "high": 0.07278899536954245,
+          "arm_a_mean": 0.7944535848709808,
+          "arm_b_mean": 0.7602998785538766
+        },
+        {
+          "dataset": "acdc",
+          "label": 2,
+          "comparison": "KD-band - U-Net",
+          "metric": "boundary_f1",
+          "delta": 0.03135674668039412,
+          "low": 0.002242519326177521,
+          "high": 0.06047097403461072,
+          "arm_a_mean": 0.8933122074978148,
+          "arm_b_mean": 0.8619554608174207
+        },
+        {
+          "dataset": "acdc",
+          "label": 2,
+          "comparison": "KD-band - U-Net",
+          "metric": "hd95",
+          "delta": 1.356956116395029,
+          "low": -2.8682046198832616,
+          "high": 5.58211685267332,
+          "arm_a_mean": 6.3748365889228,
+          "arm_b_mean": 7.731792705317829
+        },
+        {
+          "dataset": "acdc",
+          "label": 2,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "dsc",
+          "delta": 0.019382415705711975,
+          "low": -0.001015741789972973,
+          "high": 0.03978057320139693,
+          "arm_a_mean": 0.7944535848709808,
+          "arm_b_mean": 0.7750711691652689
+        },
+        {
+          "dataset": "acdc",
+          "label": 2,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "boundary_f1",
+          "delta": 0.01900716174993089,
+          "low": 0.0007390212194174628,
+          "high": 0.03727530228044432,
+          "arm_a_mean": 0.8933122074978148,
+          "arm_b_mean": 0.8743050457478839
+        },
+        {
+          "dataset": "acdc",
+          "label": 2,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "hd95",
+          "delta": 2.711106866218425,
+          "low": -1.7999216393483666,
+          "high": 7.222135371785217,
+          "arm_a_mean": 6.3748365889228,
+          "arm_b_mean": 9.085943455141225
+        },
+        {
+          "dataset": "acdc",
+          "label": 3,
+          "comparison": "KD-band - decoder-only",
+          "metric": "dsc",
+          "delta": 0.008540191819849996,
+          "low": -0.02305392190433022,
+          "high": 0.04013430554403021,
+          "arm_a_mean": 0.8586207603471495,
+          "arm_b_mean": 0.8500805685272995
+        },
+        {
+          "dataset": "acdc",
+          "label": 3,
+          "comparison": "KD-band - decoder-only",
+          "metric": "boundary_f1",
+          "delta": 0.01664430434753217,
+          "low": -0.019077389046768575,
+          "high": 0.05236599774183291,
+          "arm_a_mean": 0.8843396290271915,
+          "arm_b_mean": 0.8676953246796594
+        },
+        {
+          "dataset": "acdc",
+          "label": 3,
+          "comparison": "KD-band - decoder-only",
+          "metric": "hd95",
+          "delta": 1.9504660280778765,
+          "low": -0.4044164598210638,
+          "high": 4.305348515976817,
+          "arm_a_mean": 5.440046573245627,
+          "arm_b_mean": 7.390512601323503
+        },
+        {
+          "dataset": "acdc",
+          "label": 3,
+          "comparison": "KD-band - U-Net",
+          "metric": "dsc",
+          "delta": 0.0270125114507469,
+          "low": 0.00019259934827994818,
+          "high": 0.053832423553213854,
+          "arm_a_mean": 0.8586207603471495,
+          "arm_b_mean": 0.8316082488964026
+        },
+        {
+          "dataset": "acdc",
+          "label": 3,
+          "comparison": "KD-band - U-Net",
+          "metric": "boundary_f1",
+          "delta": 0.0312462149210595,
+          "low": 0.008642178136234486,
+          "high": 0.05385025170588452,
+          "arm_a_mean": 0.8843396290271915,
+          "arm_b_mean": 0.853093414106132
+        },
+        {
+          "dataset": "acdc",
+          "label": 3,
+          "comparison": "KD-band - U-Net",
+          "metric": "hd95",
+          "delta": 0.41999646918971045,
+          "low": -1.9253322655808023,
+          "high": 2.765325203960223,
+          "arm_a_mean": 5.440046573245627,
+          "arm_b_mean": 5.860043042435337
+        },
+        {
+          "dataset": "acdc",
+          "label": 3,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "dsc",
+          "delta": 0.0116036093541112,
+          "low": -0.020140920038170765,
+          "high": 0.043348138746393164,
+          "arm_a_mean": 0.8586207603471495,
+          "arm_b_mean": 0.8470171509930383
+        },
+        {
+          "dataset": "acdc",
+          "label": 3,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "boundary_f1",
+          "delta": 0.016583350888260573,
+          "low": -0.009670561577105705,
+          "high": 0.04283726335362685,
+          "arm_a_mean": 0.8843396290271915,
+          "arm_b_mean": 0.867756278138931
+        },
+        {
+          "dataset": "acdc",
+          "label": 3,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "hd95",
+          "delta": 2.3524121197910297,
+          "low": -0.9529767199905668,
+          "high": 5.657800959572626,
+          "arm_a_mean": 5.440046573245627,
+          "arm_b_mean": 7.792458693036656
+        }
+      ],
+      "validation": [
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "dsc",
+          "reading": "not established",
+          "delta": 0.020545280440457114,
+          "se_run": 0.005892580872046888,
+          "se_unit": 0.0076366896589141415,
+          "df": 2.4475021013545657,
+          "low": -0.014470091001396575,
+          "high": 0.0555606518823108,
+          "p": 0.14317224408611945,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.7652080104699003,
+          "arm_b_mean": 0.7446627300294432,
+          "arm_a_sd": 0.003256084161597437,
+          "arm_b_sd": 0.009672923236200778,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "iou",
+          "reading": "not established",
+          "delta": 0.02447133305973459,
+          "se_run": 0.005504330938813039,
+          "se_unit": 0.007439849412130386,
+          "df": 2.353313564867945,
+          "low": -0.01013396025370393,
+          "high": 0.05907662637317311,
+          "p": 0.09983654311985363,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.6922389711764764,
+          "arm_b_mean": 0.6677676381167418,
+          "arm_a_sd": 0.002725900780414906,
+          "arm_b_sd": 0.009135778138027253,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "boundary_f1",
+          "reading": "not established",
+          "delta": 0.026870708467392146,
+          "se_run": 0.006202562352674967,
+          "se_unit": 0.009557820546624551,
+          "df": 2.1394507514623267,
+          "low": -0.01921542806634262,
+          "high": 0.07295684500112691,
+          "p": 0.13415042941587807,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.818796267074288,
+          "arm_b_mean": 0.7919255586068958,
+          "arm_a_sd": 0.0019729965588689367,
+          "arm_b_sd": 0.010560427254384826,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "hd95",
+          "reading": "not established",
+          "delta": 1.5145982325232197,
+          "se_run": 1.17248073546693,
+          "se_unit": 0.7691924061867859,
+          "df": 2.3853689300627963,
+          "low": -3.6746603097127544,
+          "high": 6.703856774759194,
+          "p": 0.37707961706822507,
+          "mann_whitney_p": 0.7,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 7.239563909560669,
+          "arm_b_mean": 8.754162142083889,
+          "arm_a_sd": 0.6045961736401984,
+          "arm_b_sd": 1.9387100587614565,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "acdc",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "assd",
+          "reading": "not established",
+          "delta": 0.8407962950764571,
+          "se_run": 0.32728784488004414,
+          "se_unit": 0.4006169885527173,
+          "df": 2.3765899202733007,
+          "low": -1.0789592391501432,
+          "high": 2.7605518293030578,
+          "p": 0.22568006309308467,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 2.204323897464542,
+          "arm_b_mean": 3.045120192540999,
+          "arm_a_sd": 0.1669702942952691,
+          "arm_b_sd": 0.5417314104255195,
+          "classification": "undetermined"
+        }
+      ],
+      "consistency": {
+        "boundary_f1": {
+          "kd_runs": [
+            0.8269845997463852,
+            0.8185901564997569,
+            0.8313385124574604
+          ],
+          "decoder_runs": [
+            0.7944699872749431,
+            0.8013006795953791,
+            0.8095230068463672
+          ],
+          "kd_above_decoder_mean": 3.0,
+          "kd_min_minus_decoder_max": 0.009067149653389617,
+          "kd_max_minus_decoder_min": 0.036868525182517264
+        },
+        "dsc": {
+          "kd_runs": [
+            0.7771444203618578,
+            0.7700779301694478,
+            0.7827330565049601
+          ],
+          "decoder_runs": [
+            0.751513600145997,
+            0.756795741924903,
+            0.7673518472554283
+          ],
+          "kd_above_decoder_mean": 3.0,
+          "kd_min_minus_decoder_max": 0.0027260829140195453,
+          "kd_max_minus_decoder_min": 0.03121945635896306
+        }
+      },
+      "rates": {
+        "KD-band": {
+          "missed_structure": 0.03290556103981573,
+          "false_alarm": 0.41568627450980394
+        },
+        "decoder-only": {
+          "missed_structure": 0.03520895031260283,
+          "false_alarm": 0.4196078431372549
+        },
+        "U-Net": {
+          "missed_structure": 0.056926620598881206,
+          "false_alarm": 0.2862745098039216
+        },
+        "BDS-Lite": {
+          "missed_structure": 0.03520895031260283,
+          "false_alarm": 0.396078431372549
+        }
+      },
+      "teacher_test": {
+        "dsc": 0.8230824950775864,
+        "iou": 0.7448480735772708,
+        "boundary_f1": 0.8858762779104923,
+        "hd95": 3.282419615652446,
+        "assd": 1.213139826741762
+      },
+      "costs": [
+        {
+          "run": "acdc_kd_teacher_seed100",
+          "epochs": 150,
+          "median_epoch_seconds": 5.802064852498006,
+          "sum_epoch_hours": 0.2430811847766098,
+          "peak_allocated_mib": 1043.208984375,
+          "max_temperature_c": 85,
+          "telemetry_hours": 0.25277777777777777
+        },
+        {
+          "run": "acdc_kd_band_seed1",
+          "epochs": 150,
+          "median_epoch_seconds": 9.088573905522935,
+          "sum_epoch_hours": 0.3864386236649524,
+          "peak_allocated_mib": 1722.07666015625,
+          "max_temperature_c": 86,
+          "telemetry_hours": 0.41944444444444445
+        },
+        {
+          "run": "acdc_kd_band_seed2",
+          "epochs": 150,
+          "median_epoch_seconds": 9.084198102995288,
+          "sum_epoch_hours": 0.38528214643385983,
+          "peak_allocated_mib": 1722.07666015625,
+          "max_temperature_c": 86,
+          "telemetry_hours": 0.4166666666666667
+        },
+        {
+          "run": "acdc_kd_band_seed3",
+          "epochs": 150,
+          "median_epoch_seconds": 9.095125273044687,
+          "sum_epoch_hours": 0.38610090751149173,
+          "peak_allocated_mib": 1722.07666015625,
+          "max_temperature_c": 87,
+          "telemetry_hours": 0.4111111111111111
+        },
+        {
+          "run": "acdc_m2_aux_boundary_only_unweighted_seed1 (existing decoder-only reference)",
+          "epochs": 150,
+          "median_epoch_seconds": 10.54874730098527,
+          "sum_epoch_hours": 0.4393426756676571,
+          "max_temperature_c": 84,
+          "telemetry_hours": 0.44166666666666665
+        }
+      ],
+      "deployed_parameters": {
+        "kd_band": 1927604,
+        "decoder_only": 1927604
+      },
+      "thermal_resumes": {
+        "acdc_kd_teacher_seed100": 3,
+        "acdc_kd_band_seed1": 17,
+        "acdc_kd_band_seed2": 15,
+        "acdc_kd_band_seed3": 16
+      }
+    },
+    "synapse": {
+      "dataset": "synapse",
+      "contrasts": [
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "dsc",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.0053761659776432325,
+          "se_run": 0.01795139354404488,
+          "se_unit": 0.00536825180556303,
+          "df": 3.7771820583350184,
+          "low": -0.047878665798017625,
+          "high": 0.05863099775330409,
+          "p": 0.7892119316814048,
+          "mann_whitney_p": 0.7,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.5295589263961573,
+          "arm_b_mean": 0.5241827604185141,
+          "arm_a_sd": 0.02451084791660422,
+          "arm_b_sd": 0.01913049724729149,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "iou",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.006153317741380837,
+          "se_run": 0.01622886731888577,
+          "se_unit": 0.005027650861210403,
+          "df": 3.863428949324596,
+          "low": -0.04168289637611702,
+          "high": 0.05398953185887869,
+          "p": 0.7361570739840236,
+          "mann_whitney_p": 0.4,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.47861398445078085,
+          "arm_b_mean": 0.4724606667094,
+          "arm_a_sd": 0.021664308421155604,
+          "arm_b_sd": 0.017910503733704487,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "boundary_f1",
+          "primary": true,
+          "reading": "not established",
+          "delta": 0.015031419481647101,
+          "se_run": 0.018989458468534906,
+          "se_unit": 0.0068403018713311114,
+          "df": 3.780625230276992,
+          "low": -0.04231405034423094,
+          "high": 0.07237688930752514,
+          "p": 0.5000588550405104,
+          "mann_whitney_p": 0.4,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.5600500052410536,
+          "arm_b_mean": 0.5450185857594065,
+          "arm_a_sd": 0.025907418965410503,
+          "arm_b_sd": 0.02026337191425268,
+          "classification": "undetermined",
+          "p_holm_over_datasets": 0.5000588550405104
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "hd95",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.8243401555839025,
+          "se_run": 0.5860873772532522,
+          "se_unit": 0.253125185377406,
+          "df": 3.1187039102806478,
+          "low": -1.1643191572881402,
+          "high": 2.812999468455945,
+          "p": 0.2840024666118085,
+          "mann_whitney_p": 0.4,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 7.726934881120393,
+          "arm_b_mean": 8.551275036704295,
+          "arm_a_sd": 0.4912728372883268,
+          "arm_b_sd": 0.8883390347550114,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - decoder-only",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "assd",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.4154884043835225,
+          "se_run": 0.18224243595246234,
+          "se_unit": 0.11250513622111603,
+          "df": 3.9701552810711833,
+          "low": -0.18091587461493575,
+          "high": 1.0118926833819808,
+          "p": 0.12491486680199426,
+          "mann_whitney_p": 0.2,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 2.6863929443778267,
+          "arm_b_mean": 3.1018813487613492,
+          "arm_a_sd": 0.21330515567143543,
+          "arm_b_sd": 0.23267536816269724,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "dsc",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.020998832283919966,
+          "se_run": 0.022293854674680817,
+          "se_unit": 0.009270163318613692,
+          "df": 3.8547024052426697,
+          "low": -0.04704514010645064,
+          "high": 0.08904280467429057,
+          "p": 0.4352549528536528,
+          "mann_whitney_p": 0.4,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.5295589263961573,
+          "arm_b_mean": 0.5085600941122373,
+          "arm_a_sd": 0.02451084791660422,
+          "arm_b_sd": 0.02983732902215715,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "iou",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.019889391496185294,
+          "se_run": 0.021399570296825494,
+          "se_unit": 0.008378208498708321,
+          "df": 3.6352996932405826,
+          "low": -0.04652220675757847,
+          "high": 0.08630098974994906,
+          "p": 0.44014891563829234,
+          "mann_whitney_p": 0.4,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.47861398445078085,
+          "arm_b_mean": 0.45872459295459556,
+          "arm_a_sd": 0.021664308421155604,
+          "arm_b_sd": 0.030074616660888204,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "boundary_f1",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.030001066923499464,
+          "se_run": 0.022356951529446858,
+          "se_unit": 0.011112289557804831,
+          "df": 3.9565650460994672,
+          "low": -0.039617644554883355,
+          "high": 0.09961977840188228,
+          "p": 0.2964472734155062,
+          "mann_whitney_p": 0.4,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.5600500052410536,
+          "arm_b_mean": 0.5300489383175542,
+          "arm_a_sd": 0.025907418965410503,
+          "arm_b_sd": 0.02878029686470932,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "hd95",
+          "primary": false,
+          "reading": "no relevant effect",
+          "delta": 0.7186829132032084,
+          "se_run": 0.3766748084505702,
+          "se_unit": 0.19883262257376025,
+          "df": 3.929421205442281,
+          "low": -0.47231905568854615,
+          "high": 1.909684882094963,
+          "p": 0.16809903222043684,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 7.726934881120393,
+          "arm_b_mean": 8.445617794323601,
+          "arm_a_sd": 0.4912728372883268,
+          "arm_b_sd": 0.429304942094193,
+          "classification": "no relevant effect"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - U-Net",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "assd",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.33561752416619584,
+          "se_run": 0.1752328593167878,
+          "se_unit": 0.12422222026494906,
+          "df": 3.9994072402520713,
+          "low": -0.2607891816655219,
+          "high": 0.9320242299979136,
+          "p": 0.1932171458230948,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 2.6863929443778267,
+          "arm_b_mean": 3.0220104685440226,
+          "arm_a_sd": 0.21330515567143543,
+          "arm_b_sd": 0.21591798331078432,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "dsc",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.015747855425691237,
+          "se_run": 0.015561660690491643,
+          "se_unit": 0.008072373717062566,
+          "df": 2.8018924759577053,
+          "low": -0.04234229164688483,
+          "high": 0.0738380024982673,
+          "p": 0.4394506131054343,
+          "mann_whitney_p": 0.7,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.5295589263961573,
+          "arm_b_mean": 0.5138110709704661,
+          "arm_a_sd": 0.02451084791660422,
+          "arm_b_sd": 0.011212233709082106,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "iou",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.015560056277513334,
+          "se_run": 0.013901670034213595,
+          "se_unit": 0.007783539600509687,
+          "df": 2.8917567072892476,
+          "low": -0.03623460055540238,
+          "high": 0.06735471311042905,
+          "p": 0.40320969724769784,
+          "mann_whitney_p": 0.4,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.47861398445078085,
+          "arm_b_mean": 0.4630539281732675,
+          "arm_a_sd": 0.021664308421155604,
+          "arm_b_sd": 0.010508426611700875,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "boundary_f1",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.023367321983015166,
+          "se_run": 0.016679248601958067,
+          "se_unit": 0.009361454234315728,
+          "df": 2.9192910830835785,
+          "low": -0.038465857062474476,
+          "high": 0.08520050102850481,
+          "p": 0.3112271877193869,
+          "mann_whitney_p": 0.4,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.5600500052410536,
+          "arm_b_mean": 0.5366826832580385,
+          "arm_a_sd": 0.025907418965410503,
+          "arm_b_sd": 0.012782708802458445,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "hd95",
+          "primary": false,
+          "reading": "not established",
+          "delta": 1.0669888792970497,
+          "se_run": 0.41743083604190295,
+          "se_unit": 0.22542222304599435,
+          "df": 3.9766606428529334,
+          "low": -0.2532354256772955,
+          "high": 2.3872131842713946,
+          "p": 0.0881267136176264,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 7.726934881120393,
+          "arm_b_mean": 8.793923760417442,
+          "arm_a_sd": 0.4912728372883268,
+          "arm_b_sd": 0.5304681969530344,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - BDS-Lite",
+          "reference_seeds": "1-3",
+          "seed_matched": true,
+          "metric": "assd",
+          "primary": false,
+          "reading": "not established",
+          "delta": 0.43300216839913697,
+          "se_run": 0.17355950974852682,
+          "se_unit": 0.09918590214031896,
+          "df": 3.999805933357063,
+          "low": -0.12202494390532093,
+          "high": 0.9880292807035949,
+          "p": 0.09623545010005224,
+          "mann_whitney_p": 0.1,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 2.6863929443778267,
+          "arm_b_mean": 3.1193951127769637,
+          "arm_a_sd": 0.21330515567143543,
+          "arm_b_sd": 0.21182450480629392,
+          "classification": "undetermined"
+        }
+      ],
+      "per_seed": [
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "dsc",
+          "value": 0.5414102218592394
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "dsc",
+          "value": 0.5458917997852107
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "dsc",
+          "value": 0.5013747575440218
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "dsc",
+          "value": 0.5029620882874436
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "dsc",
+          "value": 0.5294791308595997
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "dsc",
+          "value": 0.540107062108499
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "dsc",
+          "value": 0.4741584702664943
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "dsc",
+          "value": 0.5273925955761877
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "dsc",
+          "value": 0.52412921649403
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "dsc",
+          "value": 0.5259031318012254
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "dsc",
+          "value": 0.511771377210435
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "dsc",
+          "value": 0.5037587038997379
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "iou",
+          "value": 0.48963951585504084
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "iou",
+          "value": 0.49254782519572055
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "iou",
+          "value": 0.4536546123015812
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "iou",
+          "value": 0.4523293641966281
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "iou",
+          "value": 0.4784233753206239
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "iou",
+          "value": 0.4866292606109481
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "iou",
+          "value": 0.42412211369192554
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "iou",
+          "value": 0.4785721807468746
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "iou",
+          "value": 0.47347948442498655
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "iou",
+          "value": 0.4743823620451055
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "iou",
+          "value": 0.4611549428852089
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "iou",
+          "value": 0.4536244795894882
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "boundary_f1",
+          "value": 0.5721373660427634
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "boundary_f1",
+          "value": 0.577704766541844
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "boundary_f1",
+          "value": 0.5303078831385535
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "boundary_f1",
+          "value": 0.5219429971498244
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "boundary_f1",
+          "value": 0.5532034486488068
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "boundary_f1",
+          "value": 0.5599093114795886
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "boundary_f1",
+          "value": 0.49716483572099374
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "boundary_f1",
+          "value": 0.5506481923935401
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "boundary_f1",
+          "value": 0.5423337868381285
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "boundary_f1",
+          "value": 0.5505963380611089
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "boundary_f1",
+          "value": 0.5339926229985206
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "boundary_f1",
+          "value": 0.5254590887144862
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "hd95",
+          "value": 7.161808476787883
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "hd95",
+          "value": 7.966800179333656
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "hd95",
+          "value": 8.05219598723964
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "hd95",
+          "value": 9.378709909095056
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "hd95",
+          "value": 8.66259082767957
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "hd95",
+          "value": 7.612524373338263
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "hd95",
+          "value": 8.939250476614214
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "hd95",
+          "value": 8.238143727355435
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "hd95",
+          "value": 8.159459179001153
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "hd95",
+          "value": 8.525869886665486
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "hd95",
+          "value": 8.450973917404156
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "hd95",
+          "value": 9.404927477182683
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 1,
+          "metric": "assd",
+          "value": 2.4632135567302766
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 2,
+          "metric": "assd",
+          "value": 2.8882173883423525
+        },
+        {
+          "dataset": "synapse",
+          "arm": "KD-band",
+          "seed": 3,
+          "metric": "assd",
+          "value": 2.707747888060851
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 1,
+          "metric": "assd",
+          "value": 3.2635823696104826
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 2,
+          "metric": "assd",
+          "value": 3.2068463700931673
+        },
+        {
+          "dataset": "synapse",
+          "arm": "decoder-only",
+          "seed": 3,
+          "metric": "assd",
+          "value": 2.8352153065803987
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 1,
+          "metric": "assd",
+          "value": 3.2711704678724813
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 2,
+          "metric": "assd",
+          "value": 2.9051794409392238
+        },
+        {
+          "dataset": "synapse",
+          "arm": "U-Net",
+          "seed": 3,
+          "metric": "assd",
+          "value": 2.8896814968203617
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 1,
+          "metric": "assd",
+          "value": 3.139186898683413
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 2,
+          "metric": "assd",
+          "value": 2.8983693196570255
+        },
+        {
+          "dataset": "synapse",
+          "arm": "BDS-Lite",
+          "seed": 3,
+          "metric": "assd",
+          "value": 3.3206291199904534
+        }
+      ],
+      "per_class": [
+        {
+          "dataset": "synapse",
+          "label": 1,
+          "comparison": "KD-band - decoder-only",
+          "metric": "dsc",
+          "delta": 0.008396257852816835,
+          "low": -0.06675121231547905,
+          "high": 0.08354372802111272,
+          "arm_a_mean": 0.7395026438212384,
+          "arm_b_mean": 0.7311063859684216
+        },
+        {
+          "dataset": "synapse",
+          "label": 1,
+          "comparison": "KD-band - decoder-only",
+          "metric": "boundary_f1",
+          "delta": 0.015465437386440462,
+          "low": -0.07451186796074934,
+          "high": 0.10544274273363026,
+          "arm_a_mean": 0.8351613384774822,
+          "arm_b_mean": 0.8196959010910417
+        },
+        {
+          "dataset": "synapse",
+          "label": 1,
+          "comparison": "KD-band - decoder-only",
+          "metric": "hd95",
+          "delta": 1.5044842182212035,
+          "low": -4.828099751715992,
+          "high": 7.837068188158399,
+          "arm_a_mean": 2.438025381186914,
+          "arm_b_mean": 3.9425095994081176
+        },
+        {
+          "dataset": "synapse",
+          "label": 1,
+          "comparison": "KD-band - U-Net",
+          "metric": "dsc",
+          "delta": 0.03112054613012072,
+          "low": -0.06040346090143127,
+          "high": 0.1226445531616727,
+          "arm_a_mean": 0.7395026438212384,
+          "arm_b_mean": 0.7083820976911177
+        },
+        {
+          "dataset": "synapse",
+          "label": 1,
+          "comparison": "KD-band - U-Net",
+          "metric": "boundary_f1",
+          "delta": 0.03962340136947107,
+          "low": -0.04650596584538734,
+          "high": 0.1257527685843295,
+          "arm_a_mean": 0.8351613384774822,
+          "arm_b_mean": 0.7955379371080111
+        },
+        {
+          "dataset": "synapse",
+          "label": 1,
+          "comparison": "KD-band - U-Net",
+          "metric": "hd95",
+          "delta": 1.2192994477465495,
+          "low": -0.7695307463725465,
+          "high": 3.2081296418656455,
+          "arm_a_mean": 2.438025381186914,
+          "arm_b_mean": 3.6573248289334637
+        },
+        {
+          "dataset": "synapse",
+          "label": 1,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "dsc",
+          "delta": 0.02039971456484757,
+          "low": -0.06715382840306082,
+          "high": 0.10795325753275596,
+          "arm_a_mean": 0.7395026438212384,
+          "arm_b_mean": 0.7191029292563909
+        },
+        {
+          "dataset": "synapse",
+          "label": 1,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "boundary_f1",
+          "delta": 0.02563020643474534,
+          "low": -0.07003472210183959,
+          "high": 0.12129513497133027,
+          "arm_a_mean": 0.8351613384774822,
+          "arm_b_mean": 0.8095311320427369
+        },
+        {
+          "dataset": "synapse",
+          "label": 1,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "hd95",
+          "delta": 2.0772295986637537,
+          "low": -2.330185883812548,
+          "high": 6.484645081140055,
+          "arm_a_mean": 2.438025381186914,
+          "arm_b_mean": 4.515254979850668
+        },
+        {
+          "dataset": "synapse",
+          "label": 2,
+          "comparison": "KD-band - decoder-only",
+          "metric": "dsc",
+          "delta": 0.027128080848096092,
+          "low": -0.05112890235573306,
+          "high": 0.10538506405192524,
+          "arm_a_mean": 0.3524538295241353,
+          "arm_b_mean": 0.3253257486760392
+        },
+        {
+          "dataset": "synapse",
+          "label": 2,
+          "comparison": "KD-band - decoder-only",
+          "metric": "boundary_f1",
+          "delta": 0.04487710755609692,
+          "low": -0.056704927438985045,
+          "high": 0.14645914255117887,
+          "arm_a_mean": 0.4225763083348126,
+          "arm_b_mean": 0.37769920077871566
+        },
+        {
+          "dataset": "synapse",
+          "label": 2,
+          "comparison": "KD-band - decoder-only",
+          "metric": "hd95",
+          "delta": 0.1549255718688407,
+          "low": -3.3563503688009875,
+          "high": 3.666201512538669,
+          "arm_a_mean": 6.49751097577042,
+          "arm_b_mean": 6.652436547639261
+        },
+        {
+          "dataset": "synapse",
+          "label": 2,
+          "comparison": "KD-band - U-Net",
+          "metric": "dsc",
+          "delta": 0.03424028985899996,
+          "low": -0.03649545373626213,
+          "high": 0.10497603345426205,
+          "arm_a_mean": 0.3524538295241353,
+          "arm_b_mean": 0.3182135396651353
+        },
+        {
+          "dataset": "synapse",
+          "label": 2,
+          "comparison": "KD-band - U-Net",
+          "metric": "boundary_f1",
+          "delta": 0.05458713910730495,
+          "low": -0.036654227236805906,
+          "high": 0.1458285054514158,
+          "arm_a_mean": 0.4225763083348126,
+          "arm_b_mean": 0.36798916922750763
+        },
+        {
+          "dataset": "synapse",
+          "label": 2,
+          "comparison": "KD-band - U-Net",
+          "metric": "hd95",
+          "delta": 0.24690449756696342,
+          "low": -3.8518826482559287,
+          "high": 4.345691643389856,
+          "arm_a_mean": 6.506176513744694,
+          "arm_b_mean": 6.753081011311657
+        },
+        {
+          "dataset": "synapse",
+          "label": 2,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "dsc",
+          "delta": -0.0053400730984838884,
+          "low": -0.07857410637155633,
+          "high": 0.06789396017458856,
+          "arm_a_mean": 0.3524538295241353,
+          "arm_b_mean": 0.3577939026226192
+        },
+        {
+          "dataset": "synapse",
+          "label": 2,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "boundary_f1",
+          "delta": 0.005428068713067613,
+          "low": -0.08539398280920982,
+          "high": 0.09625012023534504,
+          "arm_a_mean": 0.4225763083348126,
+          "arm_b_mean": 0.41714823962174497
+        },
+        {
+          "dataset": "synapse",
+          "label": 2,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "hd95",
+          "delta": 0.0010319133095482158,
+          "low": -2.58320015294455,
+          "high": 2.5852639795636465,
+          "arm_a_mean": 6.49751097577042,
+          "arm_b_mean": 6.498542889079968
+        },
+        {
+          "dataset": "synapse",
+          "label": 3,
+          "comparison": "KD-band - decoder-only",
+          "metric": "dsc",
+          "delta": 0.00892147201072957,
+          "low": -0.06087347686629234,
+          "high": 0.07871642088775148,
+          "arm_a_mean": 0.6199950875416586,
+          "arm_b_mean": 0.611073615530929
+        },
+        {
+          "dataset": "synapse",
+          "label": 3,
+          "comparison": "KD-band - decoder-only",
+          "metric": "boundary_f1",
+          "delta": 0.015561014000027518,
+          "low": -0.05467256249327389,
+          "high": 0.08579459049332892,
+          "arm_a_mean": 0.650676427199718,
+          "arm_b_mean": 0.6351154131996904
+        },
+        {
+          "dataset": "synapse",
+          "label": 3,
+          "comparison": "KD-band - decoder-only",
+          "metric": "hd95",
+          "delta": 1.1058092818665193,
+          "low": -4.373842355110366,
+          "high": 6.585460918843404,
+          "arm_a_mean": 6.400704218123296,
+          "arm_b_mean": 7.506513499989815
+        },
+        {
+          "dataset": "synapse",
+          "label": 3,
+          "comparison": "KD-band - U-Net",
+          "metric": "dsc",
+          "delta": 0.02299714955244847,
+          "low": -0.030836998683497603,
+          "high": 0.07683129778839454,
+          "arm_a_mean": 0.6199950875416586,
+          "arm_b_mean": 0.5969979379892101
+        },
+        {
+          "dataset": "synapse",
+          "label": 3,
+          "comparison": "KD-band - U-Net",
+          "metric": "boundary_f1",
+          "delta": 0.02955558955273152,
+          "low": -0.02870350032404536,
+          "high": 0.08781467942950841,
+          "arm_a_mean": 0.650676427199718,
+          "arm_b_mean": 0.6211208376469864
+        },
+        {
+          "dataset": "synapse",
+          "label": 3,
+          "comparison": "KD-band - U-Net",
+          "metric": "hd95",
+          "delta": 0.9918120418622571,
+          "low": -1.037510513000488,
+          "high": 3.0211345967250023,
+          "arm_a_mean": 6.400704218123296,
+          "arm_b_mean": 7.392516259985553
+        },
+        {
+          "dataset": "synapse",
+          "label": 3,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "dsc",
+          "delta": 0.025665904827051333,
+          "low": -0.04448820540122901,
+          "high": 0.09582001505533168,
+          "arm_a_mean": 0.6199950875416586,
+          "arm_b_mean": 0.5943291827146072
+        },
+        {
+          "dataset": "synapse",
+          "label": 3,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "boundary_f1",
+          "delta": 0.034681930173120046,
+          "low": -0.03927223416545386,
+          "high": 0.10863609451169395,
+          "arm_a_mean": 0.650676427199718,
+          "arm_b_mean": 0.6159944970265979
+        },
+        {
+          "dataset": "synapse",
+          "label": 3,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "hd95",
+          "delta": 1.5915654160734354,
+          "low": -3.8740958541166544,
+          "high": 7.057226686263525,
+          "arm_a_mean": 6.400704218123296,
+          "arm_b_mean": 7.992269634196731
+        },
+        {
+          "dataset": "synapse",
+          "label": 4,
+          "comparison": "KD-band - decoder-only",
+          "metric": "dsc",
+          "delta": 0.031169410178370383,
+          "low": -0.07098051153076097,
+          "high": 0.13331933188750172,
+          "arm_a_mean": 0.5921444542671607,
+          "arm_b_mean": 0.5609750440887903
+        },
+        {
+          "dataset": "synapse",
+          "label": 4,
+          "comparison": "KD-band - decoder-only",
+          "metric": "boundary_f1",
+          "delta": 0.03746694533461403,
+          "low": -0.07383634255522233,
+          "high": 0.14877023322445038,
+          "arm_a_mean": 0.6192235781515634,
+          "arm_b_mean": 0.5817566328169493
+        },
+        {
+          "dataset": "synapse",
+          "label": 4,
+          "comparison": "KD-band - decoder-only",
+          "metric": "hd95",
+          "delta": -0.3619613845268077,
+          "low": -13.272099343723816,
+          "high": 12.548176574670201,
+          "arm_a_mean": 9.047397078216113,
+          "arm_b_mean": 8.685435693689305
+        },
+        {
+          "dataset": "synapse",
+          "label": 4,
+          "comparison": "KD-band - U-Net",
+          "metric": "dsc",
+          "delta": 0.05542758458904207,
+          "low": -0.1704156405822323,
+          "high": 0.28127080976031643,
+          "arm_a_mean": 0.5921444542671607,
+          "arm_b_mean": 0.5367168696781186
+        },
+        {
+          "dataset": "synapse",
+          "label": 4,
+          "comparison": "KD-band - U-Net",
+          "metric": "boundary_f1",
+          "delta": 0.06167066128497023,
+          "low": -0.172454549469933,
+          "high": 0.29579587203987345,
+          "arm_a_mean": 0.6192235781515634,
+          "arm_b_mean": 0.5575529168665931
+        },
+        {
+          "dataset": "synapse",
+          "label": 4,
+          "comparison": "KD-band - U-Net",
+          "metric": "hd95",
+          "delta": -0.4200471723820076,
+          "low": -6.094401004023018,
+          "high": 5.254306659259003,
+          "arm_a_mean": 10.168523016947873,
+          "arm_b_mean": 9.748475844565865
+        },
+        {
+          "dataset": "synapse",
+          "label": 4,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "dsc",
+          "delta": 0.01538470135085801,
+          "low": -0.0642996681638882,
+          "high": 0.09506907086560422,
+          "arm_a_mean": 0.5921444542671607,
+          "arm_b_mean": 0.5767597529163027
+        },
+        {
+          "dataset": "synapse",
+          "label": 4,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "boundary_f1",
+          "delta": 0.021490781469183706,
+          "low": -0.06261426727633675,
+          "high": 0.10559583021470416,
+          "arm_a_mean": 0.6192235781515634,
+          "arm_b_mean": 0.5977327966823797
+        },
+        {
+          "dataset": "synapse",
+          "label": 4,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "hd95",
+          "delta": -1.4375795531966542,
+          "low": -7.902114879404135,
+          "high": 5.026955773010827,
+          "arm_a_mean": 10.168523016947873,
+          "arm_b_mean": 8.730943463751219
+        },
+        {
+          "dataset": "synapse",
+          "label": 5,
+          "comparison": "KD-band - decoder-only",
+          "metric": "dsc",
+          "delta": 0.006127041713534398,
+          "low": -0.049348852453956094,
+          "high": 0.06160293588102489,
+          "arm_a_mean": 0.746093473652952,
+          "arm_b_mean": 0.7399664319394176
+        },
+        {
+          "dataset": "synapse",
+          "label": 5,
+          "comparison": "KD-band - decoder-only",
+          "metric": "boundary_f1",
+          "delta": 0.01017708369694148,
+          "low": -0.04676596465009827,
+          "high": 0.06712013204398123,
+          "arm_a_mean": 0.7200690511696175,
+          "arm_b_mean": 0.709891967472676
+        },
+        {
+          "dataset": "synapse",
+          "label": 5,
+          "comparison": "KD-band - decoder-only",
+          "metric": "hd95",
+          "delta": 1.129390403967255,
+          "low": -1.5723337086109819,
+          "high": 3.831114516545492,
+          "arm_a_mean": 9.427445207686562,
+          "arm_b_mean": 10.556835611653817
+        },
+        {
+          "dataset": "synapse",
+          "label": 5,
+          "comparison": "KD-band - U-Net",
+          "metric": "dsc",
+          "delta": 0.002634293807937782,
+          "low": -0.06040465601298953,
+          "high": 0.06567324362886509,
+          "arm_a_mean": 0.746093473652952,
+          "arm_b_mean": 0.7434591798450142
+        },
+        {
+          "dataset": "synapse",
+          "label": 5,
+          "comparison": "KD-band - U-Net",
+          "metric": "boundary_f1",
+          "delta": 0.007999333360293459,
+          "low": -0.04963871756906665,
+          "high": 0.06563738428965357,
+          "arm_a_mean": 0.7200690511696175,
+          "arm_b_mean": 0.712069717809324
+        },
+        {
+          "dataset": "synapse",
+          "label": 5,
+          "comparison": "KD-band - U-Net",
+          "metric": "hd95",
+          "delta": 0.3848602016155205,
+          "low": -1.9275569179063283,
+          "high": 2.6972773211373693,
+          "arm_a_mean": 9.427445207686562,
+          "arm_b_mean": 9.812305409302082
+        },
+        {
+          "dataset": "synapse",
+          "label": 5,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "dsc",
+          "delta": 0.02552220162449559,
+          "low": -0.06848940013494469,
+          "high": 0.11953380338393586,
+          "arm_a_mean": 0.746093473652952,
+          "arm_b_mean": 0.7205712720284564
+        },
+        {
+          "dataset": "synapse",
+          "label": 5,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "boundary_f1",
+          "delta": 0.02944837877421469,
+          "low": -0.06411340002091799,
+          "high": 0.12301015756934737,
+          "arm_a_mean": 0.7200690511696175,
+          "arm_b_mean": 0.6906206723954028
+        },
+        {
+          "dataset": "synapse",
+          "label": 5,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "hd95",
+          "delta": 1.4453286814934536,
+          "low": -2.102399526482585,
+          "high": 4.993056889469493,
+          "arm_a_mean": 9.427445207686562,
+          "arm_b_mean": 10.872773889180015
+        },
+        {
+          "dataset": "synapse",
+          "label": 6,
+          "comparison": "KD-band - decoder-only",
+          "metric": "dsc",
+          "delta": 0.04223798240528798,
+          "low": -0.07589288692481365,
+          "high": 0.16036885173538962,
+          "arm_a_mean": 0.20344107003700698,
+          "arm_b_mean": 0.161203087631719
+        },
+        {
+          "dataset": "synapse",
+          "label": 6,
+          "comparison": "KD-band - decoder-only",
+          "metric": "boundary_f1",
+          "delta": 0.06263970854151077,
+          "low": -0.09142418340621111,
+          "high": 0.21670360048923265,
+          "arm_a_mean": 0.26013840767980173,
+          "arm_b_mean": 0.19749869913829096
+        },
+        {
+          "dataset": "synapse",
+          "label": 6,
+          "comparison": "KD-band - decoder-only",
+          "metric": "hd95",
+          "delta": 3.9625596529435363,
+          "low": -10.39474719720251,
+          "high": 18.31986650308958,
+          "arm_a_mean": 20.678959823014157,
+          "arm_b_mean": 24.641519475957693
+        },
+        {
+          "dataset": "synapse",
+          "label": 6,
+          "comparison": "KD-band - U-Net",
+          "metric": "dsc",
+          "delta": 0.03978570109872159,
+          "low": -0.04574689483879042,
+          "high": 0.1253182970362336,
+          "arm_a_mean": 0.20344107003700698,
+          "arm_b_mean": 0.1636553689382854
+        },
+        {
+          "dataset": "synapse",
+          "label": 6,
+          "comparison": "KD-band - U-Net",
+          "metric": "boundary_f1",
+          "delta": 0.061086541601929806,
+          "low": -0.02576921037509322,
+          "high": 0.14794229357895283,
+          "arm_a_mean": 0.26013840767980173,
+          "arm_b_mean": 0.19905186607787193
+        },
+        {
+          "dataset": "synapse",
+          "label": 6,
+          "comparison": "KD-band - U-Net",
+          "metric": "hd95",
+          "delta": 4.51802769430077,
+          "low": -4.987690235167532,
+          "high": 14.023745623769072,
+          "arm_a_mean": 21.646823934381207,
+          "arm_b_mean": 26.164851628681976
+        },
+        {
+          "dataset": "synapse",
+          "label": 6,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "dsc",
+          "delta": 0.03660277499478107,
+          "low": -0.027868439945930204,
+          "high": 0.10107398993549234,
+          "arm_a_mean": 0.20344107003700698,
+          "arm_b_mean": 0.16683829504222591
+        },
+        {
+          "dataset": "synapse",
+          "label": 6,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "boundary_f1",
+          "delta": 0.04508258449300642,
+          "low": -0.03257369265181502,
+          "high": 0.12273886163782786,
+          "arm_a_mean": 0.26013840767980173,
+          "arm_b_mean": 0.2150558231867953
+        },
+        {
+          "dataset": "synapse",
+          "label": 6,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "hd95",
+          "delta": 2.8869207192974606,
+          "low": -9.80003692917506,
+          "high": 15.573878367769982,
+          "arm_a_mean": 21.646823934381207,
+          "arm_b_mean": 24.533744653678667
+        },
+        {
+          "dataset": "synapse",
+          "label": 7,
+          "comparison": "KD-band - decoder-only",
+          "metric": "dsc",
+          "delta": -0.019774607409931977,
+          "low": -0.09365675993271154,
+          "high": 0.054107545112847585,
+          "arm_a_mean": 0.655311216030353,
+          "arm_b_mean": 0.675085823440285
+        },
+        {
+          "dataset": "synapse",
+          "label": 7,
+          "comparison": "KD-band - decoder-only",
+          "metric": "boundary_f1",
+          "delta": -0.014289030066659936,
+          "low": -0.09910357509457156,
+          "high": 0.07052551496125169,
+          "arm_a_mean": 0.669187206417175,
+          "arm_b_mean": 0.6834762364838349
+        },
+        {
+          "dataset": "synapse",
+          "label": 7,
+          "comparison": "KD-band - decoder-only",
+          "metric": "hd95",
+          "delta": 0.4083358379155051,
+          "low": -6.813783229291759,
+          "high": 7.630454905122769,
+          "arm_a_mean": 9.051747785949258,
+          "arm_b_mean": 9.460083623864763
+        },
+        {
+          "dataset": "synapse",
+          "label": 7,
+          "comparison": "KD-band - U-Net",
+          "metric": "dsc",
+          "delta": 0.003989536892061718,
+          "low": -0.07829813157067445,
+          "high": 0.08627720535479788,
+          "arm_a_mean": 0.655311216030353,
+          "arm_b_mean": 0.6513216791382913
+        },
+        {
+          "dataset": "synapse",
+          "label": 7,
+          "comparison": "KD-band - U-Net",
+          "metric": "boundary_f1",
+          "delta": 0.009662741723424517,
+          "low": -0.06967382916405827,
+          "high": 0.08899931261090731,
+          "arm_a_mean": 0.669187206417175,
+          "arm_b_mean": 0.6595244646937505
+        },
+        {
+          "dataset": "synapse",
+          "label": 7,
+          "comparison": "KD-band - U-Net",
+          "metric": "hd95",
+          "delta": 0.10719559918327803,
+          "low": -5.004178303012168,
+          "high": 5.218569501378724,
+          "arm_a_mean": 9.051747785949258,
+          "arm_b_mean": 9.158943385132536
+        },
+        {
+          "dataset": "synapse",
+          "label": 7,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "dsc",
+          "delta": 0.005799844214638306,
+          "low": -0.06491171999903014,
+          "high": 0.07651140842830675,
+          "arm_a_mean": 0.655311216030353,
+          "arm_b_mean": 0.6495113718157147
+        },
+        {
+          "dataset": "synapse",
+          "label": 7,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "boundary_f1",
+          "delta": 0.008884590405745518,
+          "low": -0.05932248367514982,
+          "high": 0.07709166448664086,
+          "arm_a_mean": 0.669187206417175,
+          "arm_b_mean": 0.6603026160114295
+        },
+        {
+          "dataset": "synapse",
+          "label": 7,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "hd95",
+          "delta": -1.5262685116732237,
+          "low": -6.474637919135486,
+          "high": 3.422100895789039,
+          "arm_a_mean": 9.051747785949258,
+          "arm_b_mean": 7.525479274276035
+        },
+        {
+          "dataset": "synapse",
+          "label": 8,
+          "comparison": "KD-band - decoder-only",
+          "metric": "dsc",
+          "delta": 0.0046303930212592825,
+          "low": -0.07010892864635343,
+          "high": 0.079369714688872,
+          "arm_a_mean": 0.4129647618465839,
+          "arm_b_mean": 0.40833436882532465
+        },
+        {
+          "dataset": "synapse",
+          "label": 8,
+          "comparison": "KD-band - decoder-only",
+          "metric": "boundary_f1",
+          "delta": 0.03735996195724339,
+          "low": -0.010350193238991681,
+          "high": 0.08507011715347847,
+          "arm_a_mean": 0.39611761866526113,
+          "arm_b_mean": 0.35875765670801774
+        },
+        {
+          "dataset": "synapse",
+          "label": 8,
+          "comparison": "KD-band - decoder-only",
+          "metric": "hd95",
+          "delta": 1.909078991607828,
+          "low": -3.0362755467295317,
+          "high": 6.8544335299451875,
+          "arm_a_mean": 18.90425109920749,
+          "arm_b_mean": 20.813330090815317
+        },
+        {
+          "dataset": "synapse",
+          "label": 8,
+          "comparison": "KD-band - U-Net",
+          "metric": "dsc",
+          "delta": 0.006848159981978075,
+          "low": -0.1582831984481905,
+          "high": 0.17197951841214665,
+          "arm_a_mean": 0.4129647618465839,
+          "arm_b_mean": 0.40611660186460585
+        },
+        {
+          "dataset": "synapse",
+          "label": 8,
+          "comparison": "KD-band - U-Net",
+          "metric": "boundary_f1",
+          "delta": 0.03527269938962929,
+          "low": -0.08662895248651573,
+          "high": 0.1571743512657743,
+          "arm_a_mean": 0.39611761866526113,
+          "arm_b_mean": 0.36084491927563184
+        },
+        {
+          "dataset": "synapse",
+          "label": 8,
+          "comparison": "KD-band - U-Net",
+          "metric": "hd95",
+          "delta": 1.5745678329197972,
+          "low": -3.4042166380050096,
+          "high": 6.553352303844604,
+          "arm_a_mean": 18.90425109920749,
+          "arm_b_mean": 20.478818932127286
+        },
+        {
+          "dataset": "synapse",
+          "label": 8,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "dsc",
+          "delta": -0.011451157619956964,
+          "low": -0.08275630760086118,
+          "high": 0.05985399236094725,
+          "arm_a_mean": 0.4129647618465839,
+          "arm_b_mean": 0.4244159194665409
+        },
+        {
+          "dataset": "synapse",
+          "label": 8,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "boundary_f1",
+          "delta": 0.01541235455293788,
+          "low": -0.032818039748938495,
+          "high": 0.06364274885481425,
+          "arm_a_mean": 0.39611761866526113,
+          "arm_b_mean": 0.38070526411232325
+        },
+        {
+          "dataset": "synapse",
+          "label": 8,
+          "comparison": "KD-band - BDS-Lite",
+          "metric": "hd95",
+          "delta": 0.26297563186726336,
+          "low": -4.419793026774207,
+          "high": 4.945744290508734,
+          "arm_a_mean": 18.90425109920749,
+          "arm_b_mean": 19.167226731074752
+        }
+      ],
+      "validation": [
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "dsc",
+          "reading": "not established",
+          "delta": 0.01836417193402773,
+          "se_run": 0.013072654027476,
+          "se_unit": 0.01181349799541377,
+          "df": 2.693444454177229,
+          "low": -0.04149870197566599,
+          "high": 0.07822704584372145,
+          "p": 0.381678504295308,
+          "mann_whitney_p": 0.4,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.47949367022917694,
+          "arm_b_mean": 0.4611294982951492,
+          "arm_a_sd": 0.00882067028429014,
+          "arm_b_sd": 0.020853743685537482,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "iou",
+          "reading": "not established",
+          "delta": 0.019466999179547362,
+          "se_run": 0.01052164901545744,
+          "se_unit": 0.011533024908844988,
+          "df": 2.796866796137049,
+          "low": -0.032320486931179046,
+          "high": 0.07125448529027377,
+          "p": 0.3066331078985882,
+          "mann_whitney_p": 0.4,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.4318880883693228,
+          "arm_b_mean": 0.41242108918977544,
+          "arm_a_sd": 0.00755940579586792,
+          "arm_b_sd": 0.016582239837453442,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "boundary_f1",
+          "reading": "not established",
+          "delta": 0.02564744535336516,
+          "se_run": 0.012383335820773961,
+          "se_unit": 0.011478163299106097,
+          "df": 3.0804733349825986,
+          "low": -0.027301938447865118,
+          "high": 0.07859682915459544,
+          "p": 0.22376161075167422,
+          "mann_whitney_p": 0.2,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 0.49949481967275383,
+          "arm_b_mean": 0.47384737431938867,
+          "arm_a_sd": 0.01021509097105211,
+          "arm_b_sd": 0.01885982329194312,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "hd95",
+          "reading": "not established",
+          "delta": 1.3216537099229697,
+          "se_run": 0.8344162333764719,
+          "se_unit": 0.637439692509672,
+          "df": 2.536522187344809,
+          "low": -2.3934834817468724,
+          "high": 5.036790901592812,
+          "p": 0.31154693880586215,
+          "mann_whitney_p": 0.2,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 13.995390050561392,
+          "arm_b_mean": 15.317043760484362,
+          "arm_a_sd": 0.5010872207130469,
+          "arm_b_sd": 1.3556042744121939,
+          "classification": "undetermined"
+        },
+        {
+          "dataset": "synapse",
+          "comparison": "KD-band - decoder-only (validation)",
+          "metric": "assd",
+          "reading": "not established",
+          "delta": 0.5875199999784719,
+          "se_run": 0.30891399868831254,
+          "se_unit": 0.2583206565353708,
+          "df": 2.8461295079640525,
+          "low": -0.7341129973654847,
+          "high": 1.9091529973224286,
+          "p": 0.24533933268855432,
+          "mann_whitney_p": 0.2,
+          "n_a": 3,
+          "n_b": 3,
+          "arm_a_mean": 4.701845324040117,
+          "arm_b_mean": 5.289365324018589,
+          "arm_a_sd": 0.22803503975886935,
+          "arm_b_sd": 0.4840285078370686,
+          "classification": "undetermined"
+        }
+      ],
+      "consistency": {
+        "boundary_f1": {
+          "kd_runs": [
+            0.5721373660427634,
+            0.577704766541844,
+            0.5303078831385535
+          ],
+          "decoder_runs": [
+            0.5219429971498244,
+            0.5532034486488068,
+            0.5599093114795886
+          ],
+          "kd_above_decoder_mean": 2.0,
+          "kd_min_minus_decoder_max": -0.029601428341035074,
+          "kd_max_minus_decoder_min": 0.0557617693920196
+        },
+        "dsc": {
+          "kd_runs": [
+            0.5414102218592394,
+            0.5458917997852107,
+            0.5013747575440218
+          ],
+          "decoder_runs": [
+            0.5029620882874436,
+            0.5294791308595997,
+            0.540107062108499
+          ],
+          "kd_above_decoder_mean": 2.0,
+          "kd_min_minus_decoder_max": -0.03873230456447718,
+          "kd_max_minus_decoder_min": 0.04292971149776714
+        }
+      },
+      "rates": {
+        "KD-band": {
+          "missed_structure": 0.09099901088031652,
+          "false_alarm": 0.08531356732795582
+        },
+        "decoder-only": {
+          "missed_structure": 0.10326409495548962,
+          "false_alarm": 0.09337984158128043
+        },
+        "U-Net": {
+          "missed_structure": 0.10534124629080117,
+          "false_alarm": 0.10188213065910907
+        },
+        "BDS-Lite": {
+          "missed_structure": 0.09119683481701286,
+          "false_alarm": 0.1003197442046363
+        }
+      },
+      "teacher_test": {
+        "dsc": 0.654781938445382,
+        "iou": 0.5920637071790785,
+        "boundary_f1": 0.6826623277101276,
+        "hd95": 6.567285345245504,
+        "assd": 2.1216797369392104
+      },
+      "costs": [
+        {
+          "run": "synapse_kd_teacher_seed100",
+          "epochs": 150,
+          "median_epoch_seconds": 8.499800549529027,
+          "sum_epoch_hours": 0.3593484768422463,
+          "peak_allocated_mib": 1124.81298828125,
+          "max_temperature_c": 86,
+          "telemetry_hours": 0.39166666666666666
+        },
+        {
+          "run": "synapse_kd_band_seed1",
+          "epochs": 150,
+          "median_epoch_seconds": 13.470376578974538,
+          "sum_epoch_hours": 0.5698245568251392,
+          "peak_allocated_mib": 1971.16064453125,
+          "max_temperature_c": 87,
+          "telemetry_hours": 0.6138888888888889
+        },
+        {
+          "run": "synapse_kd_band_seed2",
+          "epochs": 150,
+          "median_epoch_seconds": 13.447203529532999,
+          "sum_epoch_hours": 0.5662337007626774,
+          "peak_allocated_mib": 1971.16064453125,
+          "max_temperature_c": 85,
+          "telemetry_hours": 0.6
+        },
+        {
+          "run": "synapse_kd_band_seed3",
+          "epochs": 150,
+          "median_epoch_seconds": 13.455493011977524,
+          "sum_epoch_hours": 0.5681587996664974,
+          "peak_allocated_mib": 1971.16064453125,
+          "max_temperature_c": 86,
+          "telemetry_hours": 0.6055555555555555
+        },
+        {
+          "run": "synapse_m2_aux_boundary_only_seed1 (existing decoder-only reference)",
+          "epochs": 150,
+          "median_epoch_seconds": 12.891096354520414,
+          "sum_epoch_hours": 0.5466229184427034,
+          "max_temperature_c": 86,
+          "telemetry_hours": 0.6083333333333333
+        }
+      ],
+      "deployed_parameters": {
+        "kd_band": 1927769,
+        "decoder_only": 1927769
+      },
+      "thermal_resumes": {
+        "synapse_kd_teacher_seed100": 13,
+        "synapse_kd_band_seed1": 19,
+        "synapse_kd_band_seed2": 14,
+        "synapse_kd_band_seed3": 17
+      }
+    }
+  },
+  "pooled_kd_minus_decoder": [
+    {
+      "metric": "dsc",
+      "datasets": [
+        "isic2018",
+        "acdc",
+        "synapse"
+      ],
+      "delta": 0.009287964440805124,
+      "se": 0.004719735792946112,
+      "low": 3.728228663074651e-05,
+      "high": 0.018538646594979502,
+      "cochran_q": 3.30134289801805,
+      "q_p": 0.19192100018249206,
+      "k": 3
+    },
+    {
+      "metric": "iou",
+      "datasets": [
+        "isic2018",
+        "acdc",
+        "synapse"
+      ],
+      "delta": 0.012938167240359233,
+      "se": 0.005533739419985196,
+      "low": 0.0020920379771882484,
+      "high": 0.023784296503530217,
+      "cochran_q": 3.3756394936612386,
+      "q_p": 0.18492226214602012,
+      "k": 3
+    },
+    {
+      "metric": "boundary_f1",
+      "datasets": [
+        "isic2018",
+        "acdc",
+        "synapse"
+      ],
+      "delta": 0.02393686826896769,
+      "se": 0.0064605026136735945,
+      "low": 0.011274283146167444,
+      "high": 0.036599453391767935,
+      "cochran_q": 0.5117432295426834,
+      "q_p": 0.7742413635661995,
+      "k": 3
+    },
+    {
+      "metric": "hd95",
+      "datasets": [
+        "isic2018",
+        "acdc",
+        "synapse"
+      ],
+      "delta": 0.8353210843364381,
+      "se": 0.4510503336592787,
+      "low": -0.04873756963574816,
+      "high": 1.7193797383086245,
+      "cochran_q": 9.866159166703465,
+      "q_p": 0.007204282894507829,
+      "k": 3
+    },
+    {
+      "metric": "assd",
+      "datasets": [
+        "isic2018",
+        "acdc",
+        "synapse"
+      ],
+      "delta": 0.4246010448568101,
+      "se": 0.1558630270005827,
+      "low": 0.11910951193566804,
+      "high": 0.7300925777779521,
+      "cochran_q": 2.912634142966359,
+      "q_p": 0.23309316128600352,
+      "k": 3
+    }
+  ]
+}

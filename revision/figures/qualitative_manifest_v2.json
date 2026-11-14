@@ -1,0 +1,740 @@
+{
+ "isic2018": {
+  "cases": [
+   {
+    "role": "largest BDS-Lite gain",
+    "id": "ISIC_0019320",
+    "delta_hd95_unet_minus_bds": 44.42730871836344,
+    "shown_seed": 3,
+    "per_seed_delta": [
+     67.727370262146,
+     -2.010700225830078,
+     67.56525611877441
+    ],
+    "panels": {
+     "S0": {
+      "hd95": 79.73078155517578,
+      "fp_near": 1051,
+      "fp_far": 2481,
+      "fn_near": 187,
+      "fn_far": 558,
+      "spurious": 3
+     },
+     "S6": {
+      "hd95": 12.165525436401367,
+      "fp_near": 1115,
+      "fp_far": 2799,
+      "fn_near": 37,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "M2": {
+      "hd95": 74.90788269042969,
+      "fp_near": 1197,
+      "fp_far": 2090,
+      "fn_near": 18,
+      "fn_far": 2143,
+      "spurious": 0
+     },
+     "GSL": {
+      "hd95": 84.8846206665039,
+      "fp_near": 1114,
+      "fp_far": 1844,
+      "fn_near": 94,
+      "fn_far": 1425,
+      "spurious": 0
+     },
+     "M1": {
+      "hd95": 11.045360565185547,
+      "fp_near": 1169,
+      "fp_far": 2495,
+      "fn_near": 21,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "C1": {
+      "hd95": 8.619422912597656,
+      "fp_near": 1174,
+      "fp_far": 2020,
+      "fn_near": 3,
+      "fn_far": 0,
+      "spurious": 1
+     },
+     "C3": {
+      "hd95": 9.486832618713379,
+      "fp_near": 1138,
+      "fp_far": 2105,
+      "fn_near": 10,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "C4": {
+      "hd95": 9.0,
+      "fp_near": 971,
+      "fp_far": 1566,
+      "fn_near": 55,
+      "fn_far": 1,
+      "spurious": 0
+     }
+    }
+   },
+   {
+    "role": "median",
+    "id": "ISIC_0024106",
+    "delta_hd95_unet_minus_bds": 0.28886159261067706,
+    "shown_seed": 3,
+    "per_seed_delta": [
+     -1.0,
+     1.3944487571716309,
+     0.4721360206604004
+    ],
+    "panels": {
+     "S0": {
+      "hd95": 4.4721360206604,
+      "fp_near": 450,
+      "fp_far": 339,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "S6": {
+      "hd95": 4.0,
+      "fp_near": 449,
+      "fp_far": 206,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "M2": {
+      "hd95": 4.0,
+      "fp_near": 438,
+      "fp_far": 228,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "GSL": {
+      "hd95": 4.0,
+      "fp_near": 363,
+      "fp_far": 166,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "M1": {
+      "hd95": 4.4721360206604,
+      "fp_near": 460,
+      "fp_far": 350,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "C1": {
+      "hd95": 4.4721360206604,
+      "fp_near": 446,
+      "fp_far": 237,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "C3": {
+      "hd95": 4.4721360206604,
+      "fp_near": 462,
+      "fp_far": 301,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "C4": {
+      "hd95": 5.0,
+      "fp_near": 472,
+      "fp_far": 524,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     }
+    }
+   },
+   {
+    "role": "largest BDS-Lite loss",
+    "id": "ISIC_0017385",
+    "delta_hd95_unet_minus_bds": -42.134900410970054,
+    "shown_seed": 2,
+    "per_seed_delta": [
+     -9.244880676269531,
+     -20.326019287109375,
+     -96.83380126953125
+    ],
+    "panels": {
+     "S0": {
+      "hd95": 83.77489471435547,
+      "fp_near": 337,
+      "fp_far": 658,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 4
+     },
+     "S6": {
+      "hd95": 104.10091400146484,
+      "fp_near": 263,
+      "fp_far": 520,
+      "fn_near": 3,
+      "fn_far": 0,
+      "spurious": 6
+     },
+     "M2": {
+      "hd95": 40.44068908691406,
+      "fp_near": 320,
+      "fp_far": 303,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 2
+     },
+     "GSL": {
+      "hd95": 100.73322296142578,
+      "fp_near": 303,
+      "fp_far": 325,
+      "fn_near": 2,
+      "fn_far": 0,
+      "spurious": 4
+     },
+     "M1": {
+      "hd95": 77.46575927734375,
+      "fp_near": 342,
+      "fp_far": 1337,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 9
+     },
+     "C1": {
+      "hd95": 4.0,
+      "fp_near": 293,
+      "fp_far": 191,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "C3": {
+      "hd95": 80.21842956542969,
+      "fp_near": 344,
+      "fp_far": 790,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 10
+     },
+     "C4": {
+      "hd95": 5.099019527435303,
+      "fp_near": 332,
+      "fp_far": 292,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     }
+    }
+   }
+  ],
+  "methods_shown": [
+   "S0",
+   "S6",
+   "M2",
+   "GSL",
+   "M1",
+   "C1",
+   "C3",
+   "C4"
+  ],
+  "methods_missing": []
+ },
+ "acdc": {
+  "cases": [
+   {
+    "role": "largest BDS-Lite gain",
+    "id": "patient085_frame09_slice_8",
+    "delta_hd95_unet_minus_bds": 12.133492906888327,
+    "shown_seed": 1,
+    "per_seed_delta": [
+     17.36192524433136,
+     30.760099887847897,
+     -11.721546411514282
+    ],
+    "panels": {
+     "S0": {
+      "hd95": 19.36192524433136,
+      "fp_near": 186,
+      "fp_far": 79,
+      "fn_near": 104,
+      "fn_far": 7,
+      "spurious": 2
+     },
+     "S6": {
+      "hd95": 2.0,
+      "fp_near": 195,
+      "fp_far": 1,
+      "fn_near": 115,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "M2": {
+      "hd95": 33.15805149078369,
+      "fp_near": 188,
+      "fp_far": 224,
+      "fn_near": 113,
+      "fn_far": 29,
+      "spurious": 6
+     },
+     "GSL": {
+      "hd95": 19.933074434598286,
+      "fp_near": 157,
+      "fp_far": 45,
+      "fn_near": 96,
+      "fn_far": 0,
+      "spurious": 1
+     },
+     "M1": {
+      "hd95": 20.64725724856059,
+      "fp_near": 190,
+      "fp_far": 79,
+      "fn_near": 141,
+      "fn_far": 0,
+      "spurious": 1
+     },
+     "C1": {
+      "hd95": 13.730085849761963,
+      "fp_near": 182,
+      "fp_far": 47,
+      "fn_near": 142,
+      "fn_far": 30,
+      "spurious": 3
+     },
+     "C3": {
+      "hd95": 23.952610969543457,
+      "fp_near": 158,
+      "fp_far": 175,
+      "fn_near": 151,
+      "fn_far": 124,
+      "spurious": 5
+     },
+     "C4": {
+      "hd95": 29.90882110595703,
+      "fp_near": 56,
+      "fp_far": 1035,
+      "fn_near": 853,
+      "fn_far": 853,
+      "spurious": 2
+     }
+    }
+   },
+   {
+    "role": "median",
+    "id": "patient018_frame10_slice_1",
+    "delta_hd95_unet_minus_bds": 0.037830220328436935,
+    "shown_seed": 3,
+    "per_seed_delta": [
+     -1.497427741686503,
+     0.8270944356918335,
+     0.7838239669799802
+    ],
+    "panels": {
+     "S0": {
+      "hd95": 2.667251149813334,
+      "fp_near": 234,
+      "fp_far": 56,
+      "fn_near": 293,
+      "fn_far": 6,
+      "spurious": 1
+     },
+     "S6": {
+      "hd95": 1.8834271828333538,
+      "fp_near": 192,
+      "fp_far": 45,
+      "fn_near": 216,
+      "fn_far": 2,
+      "spurious": 1
+     },
+     "M2": {
+      "hd95": 2.157378673553467,
+      "fp_near": 179,
+      "fp_far": 11,
+      "fn_near": 292,
+      "fn_far": 1,
+      "spurious": 0
+     },
+     "GSL": {
+      "hd95": 2.8240453402201333,
+      "fp_near": 237,
+      "fp_far": 65,
+      "fn_near": 305,
+      "fn_far": 8,
+      "spurious": 0
+     },
+     "M1": {
+      "hd95": 2.8240453402201333,
+      "fp_near": 238,
+      "fp_far": 63,
+      "fn_near": 307,
+      "fn_far": 2,
+      "spurious": 0
+     },
+     "C1": {
+      "hd95": 2.7015465100606284,
+      "fp_near": 194,
+      "fp_far": 47,
+      "fn_near": 254,
+      "fn_far": 2,
+      "spurious": 0
+     },
+     "C3": {
+      "hd95": 38.401477893193565,
+      "fp_near": 229,
+      "fp_far": 655,
+      "fn_near": 259,
+      "fn_far": 0,
+      "spurious": 6
+     },
+     "C4": {
+      "hd95": 15.108951568603516,
+      "fp_near": 245,
+      "fp_far": 282,
+      "fn_near": 869,
+      "fn_far": 576,
+      "spurious": 3
+     }
+    }
+   },
+   {
+    "role": "largest BDS-Lite loss",
+    "id": "patient056_frame12_slice_7",
+    "delta_hd95_unet_minus_bds": -31.08476646741231,
+    "shown_seed": 1,
+    "per_seed_delta": [
+     0.0,
+     -95.22183227539062,
+     1.9675328731536865
+    ],
+    "panels": {
+     "S0": {
+      "hd95": 1.4142135381698608,
+      "fp_near": 77,
+      "fp_far": 2,
+      "fn_near": 80,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "S6": {
+      "hd95": 1.4142135381698608,
+      "fp_near": 91,
+      "fp_far": 1,
+      "fn_near": 77,
+      "fn_far": 0,
+      "spurious": 1
+     },
+     "M2": {
+      "hd95": 36.6308479309082,
+      "fp_near": 85,
+      "fp_far": 155,
+      "fn_near": 77,
+      "fn_far": 0,
+      "spurious": 3
+     },
+     "GSL": {
+      "hd95": 3.070934255917867,
+      "fp_near": 102,
+      "fp_far": 8,
+      "fn_near": 76,
+      "fn_far": 0,
+      "spurious": 1
+     },
+     "M1": {
+      "hd95": 50.75905913114548,
+      "fp_near": 102,
+      "fp_far": 83,
+      "fn_near": 90,
+      "fn_far": 0,
+      "spurious": 2
+     },
+     "C1": {
+      "hd95": 1.4142135381698608,
+      "fp_near": 59,
+      "fp_far": 0,
+      "fn_near": 86,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "C3": {
+      "hd95": 51.19741362333298,
+      "fp_near": 72,
+      "fp_far": 44,
+      "fn_near": 89,
+      "fn_far": 0,
+      "spurious": 1
+     },
+     "C4": {
+      "hd95": 14.092722256978353,
+      "fp_near": 203,
+      "fp_far": 776,
+      "fn_near": 212,
+      "fn_far": 12,
+      "spurious": 5
+     }
+    }
+   }
+  ],
+  "methods_shown": [
+   "S0",
+   "S6",
+   "M2",
+   "GSL",
+   "M1",
+   "C1",
+   "C3",
+   "C4"
+  ],
+  "methods_missing": []
+ },
+ "synapse": {
+  "cases": [
+   {
+    "role": "largest BDS-Lite gain",
+    "id": "case0008_slice083",
+    "delta_hd95_unet_minus_bds": 27.332176844278973,
+    "shown_seed": 3,
+    "per_seed_delta": [
+     55.88584899902344,
+     1.0944271087646484,
+     25.016254425048828
+    ],
+    "panels": {
+     "S0": {
+      "hd95": 26.016254425048828,
+      "fp_near": 6,
+      "fp_far": 13,
+      "fn_near": 7,
+      "fn_far": 0,
+      "spurious": 1
+     },
+     "S6": {
+      "hd95": 1.0,
+      "fp_near": 7,
+      "fp_far": 42,
+      "fn_near": 3,
+      "fn_far": 0,
+      "spurious": 4
+     },
+     "M2": {
+      "hd95": 1.0,
+      "fp_near": 7,
+      "fp_far": 28,
+      "fn_near": 1,
+      "fn_far": 0,
+      "spurious": 2
+     },
+     "GSL": {
+      "hd95": 1.0,
+      "fp_near": 16,
+      "fp_far": 247,
+      "fn_near": 1,
+      "fn_far": 0,
+      "spurious": 3
+     },
+     "M1": {
+      "hd95": 1.4435029029846191,
+      "fp_near": 9,
+      "fp_far": 0,
+      "fn_near": 5,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "C1": {
+      "hd95": 1.0,
+      "fp_near": 8,
+      "fp_far": 0,
+      "fn_near": 0,
+      "fn_far": 0,
+      "spurious": 0
+     },
+     "C3": {
+      "hd95": 4.8680338859558105,
+      "fp_near": 0,
+      "fp_far": 0,
+      "fn_near": 37,
+      "fn_far": 2,
+      "spurious": 0
+     },
+     "C4": {
+      "hd95": NaN,
+      "fp_near": 0,
+      "fp_far": 0,
+      "fn_near": 43,
+      "fn_far": 2,
+      "spurious": 0
+     }
+    }
+   },
+   {
+    "role": "median",
+    "id": "case0032_slice082",
+    "delta_hd95_unet_minus_bds": -0.045336137215296425,
+    "shown_seed": 1,
+    "per_seed_delta": [
+     0.06423354148864746,
+     0.14482077956199646,
+     -0.3450627326965332
+    ],
+    "panels": {
+     "S0": {
+      "hd95": 8.239985078573227,
+      "fp_near": 75,
+      "fp_far": 732,
+      "fn_near": 86,
+      "fn_far": 1,
+      "spurious": 3
+     },
+     "S6": {
+      "hd95": 8.17575153708458,
+      "fp_near": 77,
+      "fp_far": 754,
+      "fn_near": 128,
+      "fn_far": 15,
+      "spurious": 0
+     },
+     "M2": {
+      "hd95": 10.853681564331055,
+      "fp_near": 113,
+      "fp_far": 652,
+      "fn_near": 110,
+      "fn_far": 5,
+      "spurious": 3
+     },
+     "GSL": {
+      "hd95": 7.679056257009506,
+      "fp_near": 106,
+      "fp_far": 407,
+      "fn_near": 62,
+      "fn_far": 0,
+      "spurious": 3
+     },
+     "M1": {
+      "hd95": 9.358455866575241,
+      "fp_near": 130,
+      "fp_far": 543,
+      "fn_near": 88,
+      "fn_far": 8,
+      "spurious": 1
+     },
+     "C1": {
+      "hd95": 9.468395471572876,
+      "fp_near": 78,
+      "fp_far": 670,
+      "fn_near": 217,
+      "fn_far": 52,
+      "spurious": 4
+     },
+     "C3": {
+      "hd95": 8.877966403961182,
+      "fp_near": 88,
+      "fp_far": 864,
+      "fn_near": 86,
+      "fn_far": 0,
+      "spurious": 3
+     },
+     "C4": {
+      "hd95": 50.76199674606323,
+      "fp_near": 0,
+      "fp_far": 6,
+      "fn_near": 689,
+      "fn_far": 325,
+      "spurious": 2
+     }
+    }
+   },
+   {
+    "role": "largest BDS-Lite loss",
+    "id": "case0025_slice078",
+    "delta_hd95_unet_minus_bds": -22.894184827804565,
+    "shown_seed": 3,
+    "per_seed_delta": [
+     -11.489730834960938,
+     -34.104307413101196,
+     -23.088516235351562
+    ],
+    "panels": {
+     "S0": {
+      "hd95": 28.843856811523438,
+      "fp_near": 11,
+      "fp_far": 202,
+      "fn_near": 81,
+      "fn_far": 11,
+      "spurious": 2
+     },
+     "S6": {
+      "hd95": 51.932373046875,
+      "fp_near": 0,
+      "fp_far": 392,
+      "fn_near": 169,
+      "fn_far": 48,
+      "spurious": 1
+     },
+     "M2": {
+      "hd95": 27.179269790649414,
+      "fp_near": 1,
+      "fp_far": 295,
+      "fn_near": 59,
+      "fn_far": 0,
+      "spurious": 4
+     },
+     "GSL": {
+      "hd95": 2.8284270763397217,
+      "fp_near": 3,
+      "fp_far": 0,
+      "fn_near": 116,
+      "fn_far": 31,
+      "spurious": 0
+     },
+     "M1": {
+      "hd95": 29.38474750518799,
+      "fp_near": 0,
+      "fp_far": 250,
+      "fn_near": 170,
+      "fn_far": 48,
+      "spurious": 2
+     },
+     "C1": {
+      "hd95": 27.404972553253174,
+      "fp_near": 0,
+      "fp_far": 259,
+      "fn_near": 161,
+      "fn_far": 47,
+      "spurious": 2
+     },
+     "C3": {
+      "hd95": 61.27913284301758,
+      "fp_near": 0,
+      "fp_far": 309,
+      "fn_near": 135,
+      "fn_far": 31,
+      "spurious": 3
+     },
+     "C4": {
+      "hd95": NaN,
+      "fp_near": 0,
+      "fp_far": 0,
+      "fn_near": 171,
+      "fn_far": 48,
+      "spurious": 0
+     }
+    }
+   }
+  ],
+  "methods_shown": [
+   "S0",
+   "S6",
+   "M2",
+   "GSL",
+   "M1",
+   "C1",
+   "C3",
+   "C4"
+  ],
+  "methods_missing": []
+ }
+}

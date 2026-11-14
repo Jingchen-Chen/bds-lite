@@ -1,0 +1,124 @@
+{
+  "entry": {
+    "run_id": "main_p1b_unet_acdc_seed1_test",
+    "family": "main_p1b_unet",
+    "dataset": "acdc",
+    "seed": 1,
+    "split": "test",
+    "checkpoint": "results/checkpoints/acdc_p1b_unet_seed1/best.pt",
+    "checkpoint_sha256": "1c423286f3ac62caba875b38248ef47ef8a0d9abc926e80d0dc71e9efc3283fc",
+    "manifest": "recovered/followup/splits/acdc/test.json",
+    "manifest_sha256": "546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638",
+    "batch": 16,
+    "classes": 4,
+    "output": "revision/prediction_recovery/main_p1b_unet/acdc_seed1/test"
+  },
+  "embedded_config": {
+    "project": {
+      "name": "bds-lite",
+      "output_dir": "results",
+      "seed": 1
+    },
+    "data": {
+      "processed_root": "data/processed",
+      "num_workers": 4,
+      "image_size": [
+        224,
+        224
+      ],
+      "normalize": "zscore"
+    },
+    "model": {
+      "name": "unet",
+      "base_channels": 32
+    },
+    "loss": {
+      "dice_weight": 1.0,
+      "ce_weight": 1.0,
+      "boundary_weight": 0.0,
+      "distill_weight": 0.0,
+      "surface_weight": 0.0,
+      "distance_weight": 0.0,
+      "foreground_class_weights": null
+    },
+    "trainer": {
+      "device": "cuda",
+      "epochs": 150,
+      "batch_size": 16,
+      "lr": 0.0001,
+      "weight_decay": 1e-05,
+      "amp": true,
+      "save_every": 25,
+      "scheduler": "cosine",
+      "grad_clip": 1.0,
+      "init_from_checkpoint": null,
+      "freeze_encoder_epochs": 0
+    },
+    "metrics": [
+      "dsc",
+      "iou",
+      "hd95",
+      "assd",
+      "boundary_f1"
+    ],
+    "dataset": {
+      "name": "acdc",
+      "modality": "mri",
+      "task": "cardiac_segmentation",
+      "num_classes": 4,
+      "in_channels": 1,
+      "processed_dir": "data/processed/acdc",
+      "image_dir": ".",
+      "mask_dir": ".",
+      "split_file": "splits/acdc_split.json",
+      "class_names": [
+        "background",
+        "right_ventricle",
+        "myocardium",
+        "left_ventricle"
+      ],
+      "input_size": [
+        224,
+        224
+      ],
+      "spacing_policy": "use_sample_spacing_if_available_else_unit",
+      "ignore_index": null,
+      "train_split": "train",
+      "val_split": "val",
+      "test_split": "test",
+      "metrics": {
+        "primary": "dsc",
+        "boundary": "hd95"
+      },
+      "root": "data/processed/acdc"
+    },
+    "name": "acdc",
+    "root": "data/processed/acdc",
+    "image_dir": ".",
+    "mask_dir": ".",
+    "num_classes": 4,
+    "class_names": [
+      "background",
+      "right_ventricle",
+      "myocardium",
+      "left_ventricle"
+    ],
+    "split_file": "splits/acdc_split.json",
+    "input_size": [
+      224,
+      224
+    ],
+    "spacing_policy": "use_sample_spacing_if_available_else_unit",
+    "ignore_index": null,
+    "experiment": {
+      "name": "acdc_p1b_unet_seed1",
+      "group": "next_stage_p1b_gatefree_multiseed",
+      "dataset": "acdc",
+      "model": "unet"
+    }
+  },
+  "epoch": 16,
+  "protocol_sha256": "b767017c1bf03de97f31667795998da67ff6779505441a8ca8198875b6a6bcef",
+  "inference": "FP32 contiguous NCHW; argmax; no postprocessing",
+  "distance_units": "processed index grid; not verified mm"
+}

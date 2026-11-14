@@ -1,0 +1,14 @@
+dataset:
+  name: isic2018
+  modality: dermoscopy
+  task: skin_lesion_segmentation
+  num_classes: 2
+  in_channels: 3
+  processed_dir: data/processed/isic2018
+  train_split: train
+  val_split: val
+  test_split: test
+  metrics:
+    primary: dice
+    boundary: boundary_f1
+

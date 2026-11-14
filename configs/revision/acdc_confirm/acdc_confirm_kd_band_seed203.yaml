@@ -1,0 +1,94 @@
+project:
+  name: bds-lite
+  output_dir: results/revision_runs
+  seed: 203
+data:
+  processed_root: data/processed
+  num_workers: 4
+  image_size:
+  - 224
+  - 224
+  normalize: none_stored
+dataset:
+  name: acdc
+  modality: mri
+  task: cardiac_segmentation
+  num_classes: 4
+  in_channels: 1
+  processed_dir: data/processed/acdc
+  image_dir: .
+  mask_dir: .
+  class_names:
+  - background
+  - class_1
+  - class_2
+  - class_3
+  input_size:
+  - 224
+  - 224
+  spacing_policy: use_sample_spacing_if_available_else_unit
+  ignore_index: null
+  train_split: train
+  val_split: val
+  test_split: test
+  metrics:
+    primary: dsc
+    boundary: hd95
+  root: data/processed/acdc
+model:
+  name: bdslite_unet
+  base_channels: 32
+  boundary_classes: 1
+  boundary_gate: true
+  boundary_gate_scale: 0.0
+  detach_boundary_features: false
+loss:
+  dice_weight: 1.0
+  ce_weight: 1.0
+  boundary_weight: 0.05
+  distill_weight: 0.0
+  surface_weight: 0.0
+  distance_weight: 0.0
+  foreground_class_weights: null
+trainer:
+  device: cuda
+  epochs: 150
+  batch_size: 16
+  lr: 0.0001
+  weight_decay: 1.0e-05
+  amp: true
+  save_every: 25
+  scheduler: cosine
+  grad_clip: 1.0
+  init_from_checkpoint: null
+  freeze_encoder_epochs: 0
+revision:
+  purpose: ACDC replication kd_band; see preregistration/acdc_confirmation.md
+  protocol: preregistration/acdc_confirmation.md
+  protocol_sha256: 8ff4509d0f35cc83f9ab38f12bb9ab593b1a2f12847e34786bdf6db78db9c768
+  gradient_probe: false
+  manifests:
+    train:
+      path: recovered/followup/splits/acdc/train.json
+      sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+    val:
+      path: recovered/followup/splits/acdc/val.json
+      sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+    test:
+      path: recovered/followup/splits/acdc/test.json
+      sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  arm: acdc_confirm_kd_band
+kd:
+  role: student
+  mode: band
+  cache_run: acdc_kd_teacher_cache
+  lambda_kd: 1.0
+  target: teacher_softmax
+  loss: soft_cross_entropy
+  band_labels: union_of_foreground_classes_of_teacher_argmax
+  band_kernel: 3
+  structuring_element: square
+  border_value: 0
+  normalization: batch
+  eps: 1.0e-06
+  clamp: 1.0e-06

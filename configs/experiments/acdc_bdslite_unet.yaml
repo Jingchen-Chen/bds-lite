@@ -1,0 +1,30 @@
+extends:
+  - configs/base.yaml
+  - configs/datasets/acdc.yaml
+
+experiment:
+  name: acdc_bdslite_unet
+  group: bds_lite
+
+model:
+  name: bdslite_unet
+  base_channels: 32
+  boundary_classes: 1
+  disable_boundary_at_inference: true
+
+loss:
+  dice_weight: 1.0
+  ce_weight: 1.0
+  boundary_weight: 0.4
+  distill_weight: 0.05
+  surface_weight: 0.0
+
+trainer:
+  epochs: 150
+  batch_size: 16
+  lr: 0.0001
+  weight_decay: 0.00001
+  amp: true
+  save_every: 25
+  scheduler: cosine
+  grad_clip: 1.0

@@ -1,0 +1,31 @@
+extends:
+  - configs/base.yaml
+  - configs/datasets/synapse.yaml
+
+experiment:
+  name: synapse_bdslite_boundary_surface_strong_tiny_boundary
+  group: bds_lite_ablation
+
+model:
+  name: bdslite_unet
+  base_channels: 32
+  boundary_classes: 1
+  disable_boundary_at_inference: true
+
+loss:
+  dice_weight: 1.0
+  ce_weight: 1.0
+  boundary_weight: 0.05
+  distill_weight: 0.0
+  surface_weight: 1.0
+
+trainer:
+  epochs: 150
+  batch_size: 16
+  lr: 0.0001
+  weight_decay: 0.00001
+  amp: true
+  save_every: 25
+  scheduler: cosine
+  grad_clip: 1.0
+  device: cuda

@@ -1,0 +1,7 @@
+{
+ "checkpoint": "outputs/runs/acdc_unet_seed2/best.pt",
+ "checkpoint_sha256": "0150b95a2507e064ccfdf03fc54c3915acf0a22200bd75a5102ece9a92934fa3",
+ "n_samples": 366,
+ "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
+ "per_case_sha256": "40d43b7272b24fd4439f0cd852d0b2f3281e896daad79cd3feb0d448a2f071e9"
+}

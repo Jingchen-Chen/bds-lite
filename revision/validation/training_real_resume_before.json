@@ -1,0 +1,27 @@
+{
+  "scope": "intentional real queue epoch-boundary stop, before resume",
+  "epoch": 2,
+  "step": 520,
+  "history_epochs": [
+    1,
+    2
+  ],
+  "probe_steps": [
+    50,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400,
+    450,
+    500
+  ],
+  "last_sha256": "deaee908f963993fe232fb6514a176d2caaff94cbcdffc22e60fc4aab2a8a9de",
+  "has_optimizer": true,
+  "has_scheduler": true,
+  "has_all_rng": true,
+  "has_loader_rng": true,
+  "has_best_state": true
+}

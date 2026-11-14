@@ -1,0 +1,14 @@
+{
+ "frozen_utc": "2026-11-07T08:24:14+00:00",
+ "sha256": {
+  "revision/HISTORICAL_REEVALUATION_PROTOCOL.md": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095",
+  "analysis/revision/historical_reevaluation.py": "4db910b3469d7c2ce29c1b217fc0381f08f28ecb9d547dbc1032c5e5adce8b36",
+  "analysis/revision/historical_statistics.py": "cef728a82013daa23af8137bb24536c017f57c79dc54f06321474ed6bc7323a4"
+ },
+ "baseline_epochs_per_hour": {
+  "isic_unet": 260,
+  "acdc": 280,
+  "synapse": "200-270"
+ },
+ "note": "no official-test metric of April ablation arms or October G, C, D existed at this time"
+}

@@ -1,0 +1,105 @@
+key,page,first_line,last_line,anchor
+abstract,1,10,21,"Retraining each arm several times on ISIC2018, ACDC and Synapse"
+abstract_answer,1,10,12,"Retraining each arm several times on ISIC2018, ACDC and Synapse"
+intro_contour,1,23,34,Segmentation is used to measure the outline
+intro_compact,1,35,42,Segmentation networks have grown through attention gates
+intro_gap,1,43,49,Three gaps limit what is known about boundary distillation.
+intro_approach,2,50,55,We take the network trained with a training-only boundary decoder (D) as the reference
+intro_contrib,2,56,68,Our contributions answer three questions:
+related,2,70,94,Boundary losses. Boundary loss integrates
+design,3,97,105,"We compared training recipes, not single trained models"
+arms,3,107,120,Every arm is a four-level 2D U-Net
+why_d,3,110,112,The decoder-only arm D is the reference for every distillation design
+datasets,4,122,141,provides dermoscopic images with one lesion class
+liver_brain,4,127,128,We chose three public tasks with contrasting structure
+isic_withdraw,4,129,130,and is evaluated on the
+focal,4,146,148,Losses that reweight small or hard structures
+boundary_target,4,150,153,is the union over foreground classes of the exclusive-or of binary dilation
+alpha,5,157,160,bounds how much the gate can rescale a feature
+stopgrad,5,162,164,where the stop-gradient operator
+sdf,6,165,170,Surface loss (S).
+routes,6,171,175,A boundary signal can reach the deployed output by three routes
+kd_method,6,177,187,keeps D and its losses and adds a loss from a separate teacher
+selection,6,200,202,Checkpoints were selected by the first maximum
+metrics,6,205,215,Predictions are the argmax over classes
+small_targets,7,211,214,A missed structure or false alarm scores approximately zero
+stats,7,217,218,The unit of replication is the training run;
+sesoi,7,230,241,The smallest effect size of interest (SESOI) is 0.01
+res_variation,7,244,252,The between-run standard deviation of Boundary F1 was
+res_kd_explo,8,271,272,ACDC was chosen for this replication because of an exploratory study
+lim_se,14,391,394,The standard error counts a run-by-unit residual
+res_innetwork,7,253,257,Adding in-network transfer (feature distillation and gate) to D did not improve
+res_full,8,259,262,"On ISIC2018, the complete BDS-Lite recipe scored"
+res_gsl,8,263,267,U-Net+GSL also scored below D on ISIC2018
+res_replication,8,273,278,In the replication on ACDC without augmentation
+res_controls,10,283,292,analysed after the replication and reusing its runs
+res_aug,11,298,306,In an exploratory comparison on the same 50 ACDC patients
+cost,13,349,350,External-teacher distillation adds cost only in training
+disc_answer,11,315,319,The one gain that replicated on held-out patients
+limitations,13,381,389,The conclusions concern one compact 2D U-Net
+lim_controls,14,399,402,The controls reuse the replication's reference runs
+lim_interaction,14,404,405,No interaction between augmentation and distillation was tested
+nnunet,14,383,385,"We did not train nnU-Net, transformer-based or natively 3D models"
+slices,14,385,386,Slices were processed and scored independently
+tumour,14,386,386,Tumour segmentation was not studied.
+units,14,386,387,Distances are in pixels of the
+conclusions,14,408,415,In-network feature distillation with a gate was not shown to add to the network's own
+data_avail,14,425,441,"The per-case results, analysis scripts, protocols and analysis-plan records that support every reported contrast"
+tab:studies,3,,,Table 1
+tab:arms,4,,,Table 2
+fig:architecture,5,,,Figure 1
+tab:matched,8,,,Table 3
+tab:innetwork,10,,,Table 4
+fig:central,9,,,Figure 2
+tab:official,11,,,Table 5
+fig:kd,12,,,Figure 3
+tab:datasets,3,,,Table S2
+fig:datasets,4,,,Figure S1
+tab:membership,6,,,Table S5
+tab:s-arms,14,,,Table S17
+tab:s-lit,21,,,Table S25
+fig:qualitative,36,,,Figure S5
+tab:tencontrasts,38,,,Table S35
+tab:ledger,43,,,Table S44
+tab:s-hist-april,45,,,Table S47
+tab:s-hist-october,45,,,Table S48
+tab:s-tolerance,46,,,Table S49
+tab:kd,51,,,Table S53
+tab:s-resource,53,,,Table S56
+tab:s20,56,,,Table S58
+tab:s20pooled,57,,,Table S59
+tab:s20cov,57,,,Table S60
+tab:labels,58,,,Table S61
+tab:s-followup-all,59,,,Table S62
+tab:s-followup-perclass,60,,,Table S63
+tab:s-e3-all,61,,,Table S64
+tab:s-e3-seed,61,,,Table S65
+tab:s-e3-class,61,,,Table S66
+tab:s-ref,62,,,Table S67
+tab:s-errloc,62,,,Table S68
+tab:s-shift,63,,,Table S69
+tab:s-teacher-scores,64,,,Table S70
+tab:s-teacher-groups,64,,,Table S71
+S1,1,,,Supplementary S1
+S2,1,,,Supplementary S2
+S3,3,,,Supplementary S3
+S4,6,,,Supplementary S4
+S5,8,,,Supplementary S5
+S6,13,,,Supplementary S6
+S7,14,,,Supplementary S7
+S8,23,,,Supplementary S8
+S9,31,,,Supplementary S9
+S10,32,,,Supplementary S10
+S11,34,,,Supplementary S11
+S12,36,,,Supplementary S12
+S13,38,,,Supplementary S13
+S14,42,,,Supplementary S14
+S15,43,,,Supplementary S15
+S16,47,,,Supplementary S16
+S17,49,,,Supplementary S17
+S18,51,,,Supplementary S18
+S19,53,,,Supplementary S19
+S20,54,,,Supplementary S20
+S21,58,,,Supplementary S21
+S22,62,,,Supplementary S22
+S23,64,,,Supplementary S23

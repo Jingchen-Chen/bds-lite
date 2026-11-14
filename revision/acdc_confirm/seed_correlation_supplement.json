@@ -1,0 +1,110 @@
+{
+  "source": "analyze.paired (unchanged)",
+  "rows": [
+    {
+      "split": "official_test",
+      "metric": "dsc",
+      "n_pairs": 17,
+      "seed_correlation": 0.5727855389505743,
+      "delta": 0.013583146387521875
+    },
+    {
+      "split": "official_test",
+      "metric": "iou",
+      "n_pairs": 17,
+      "seed_correlation": 0.6290619022840637,
+      "delta": 0.018329471379628415
+    },
+    {
+      "split": "official_test",
+      "metric": "boundary_f1",
+      "n_pairs": 17,
+      "seed_correlation": 0.5803658488539837,
+      "delta": 0.017820382774431744
+    },
+    {
+      "split": "official_test",
+      "metric": "hd95",
+      "n_pairs": 17,
+      "seed_correlation": -0.008887436046741408,
+      "delta": 1.2244450107283564
+    },
+    {
+      "split": "official_test",
+      "metric": "assd",
+      "n_pairs": 17,
+      "seed_correlation": 0.031209023762965846,
+      "delta": 0.38574207184670295
+    },
+    {
+      "split": "internal_test",
+      "metric": "dsc",
+      "n_pairs": 17,
+      "seed_correlation": 0.5695464677785006,
+      "delta": 0.014107716549318952
+    },
+    {
+      "split": "internal_test",
+      "metric": "iou",
+      "n_pairs": 17,
+      "seed_correlation": 0.6070120821257889,
+      "delta": 0.017148538818107555
+    },
+    {
+      "split": "internal_test",
+      "metric": "boundary_f1",
+      "n_pairs": 17,
+      "seed_correlation": 0.6173203343532795,
+      "delta": 0.02087840411433987
+    },
+    {
+      "split": "internal_test",
+      "metric": "hd95",
+      "n_pairs": 17,
+      "seed_correlation": -0.056318119849506645,
+      "delta": 1.422223873815567
+    },
+    {
+      "split": "internal_test",
+      "metric": "assd",
+      "n_pairs": 17,
+      "seed_correlation": 0.0847778028150457,
+      "delta": 0.42933986176106426
+    },
+    {
+      "split": "val",
+      "metric": "dsc",
+      "n_pairs": 17,
+      "seed_correlation": -0.33751574682733554,
+      "delta": 0.027021503363009028
+    },
+    {
+      "split": "val",
+      "metric": "iou",
+      "n_pairs": 17,
+      "seed_correlation": -0.24733659340761385,
+      "delta": 0.029745669007886208
+    },
+    {
+      "split": "val",
+      "metric": "boundary_f1",
+      "n_pairs": 17,
+      "seed_correlation": -0.27335506065518633,
+      "delta": 0.03290800232531174
+    },
+    {
+      "split": "val",
+      "metric": "hd95",
+      "n_pairs": 17,
+      "seed_correlation": 0.25478680299090495,
+      "delta": 1.0011636056525703
+    },
+    {
+      "split": "val",
+      "metric": "assd",
+      "n_pairs": 17,
+      "seed_correlation": 0.11192575594620348,
+      "delta": 0.515413477718445
+    }
+  ]
+}

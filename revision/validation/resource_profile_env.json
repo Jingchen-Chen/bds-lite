@@ -1,0 +1,9 @@
+{
+ "torch": "2.11.0+cu130",
+ "cuda": "13.0",
+ "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+ "cpu": "x86_64",
+ "cpu_model": "Model name:                              Intel(R) Core(TM) Ultra 7 356H",
+ "threads_all": 16,
+ "nvidia_smi": "driver_version, temperature.gpu, clocks.current.sm [MHz], power.limit [W]\n595.99.02, 70, 2760 MHz, [N/A]\n"
+}

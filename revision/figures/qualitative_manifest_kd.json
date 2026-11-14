@@ -1,0 +1,103 @@
+{
+ "rule": "Selection (independent of every model): the 1,000 official test images are sorted by the area of their reference mask on the 224 x 224 grid, ties broken by image ID, and the images at the 10th, 30th, 50th, 70th and 90th percentile ranks (index round(q * 999)) are shown. One run per arm, the lowest seed (seed 1), is drawn for every image. No score of any model enters the selection.",
+ "licensing": "revision/LICENSING_AUDIT.md: ISIC2018 Task 1 test reference masks (CC-0) and this study's predictions only; no photograph is read",
+ "reference_archive": "data/revision/isic2018_official/archives/ISIC2018_Task1_Test_GroundTruth.zip",
+ "reference_archive_sha256": "2e8f6edce454a5bdee52485e39f92bd6eddf357e81f39018d05512175238ef82",
+ "seed": 1,
+ "runs": {
+  "U": {
+   "path": "revision/official_isic/test/U_seed1",
+   "preds_test_sha256": "1cb4ffffb0d30057ed431a9d5e9ea9ed23c5b63c84efcc29950c40cf44d0e36a"
+  },
+  "D": {
+   "path": "results/revision_runs/isic2018_m2_aux_boundary_only_seed1",
+   "preds_test_sha256": "7f18bb37362aec18554c36bf828a6fb9a56cccc08df7db600f4cd9b88bc26edd"
+  },
+  "D+KD-band": {
+   "path": "results/revision_runs/isic2018_kd_band_seed1",
+   "preds_test_sha256": "3a72ba9ee63ec1809b193cbd418b9db5337ce610299ca771116dad6c3a236e3c"
+  }
+ },
+ "cases": [
+  {
+   "id": "ISIC_0018593",
+   "area_quantile": 0.1,
+   "area_rank_index": 100,
+   "reference_area_px": 2892,
+   "boundary_f1": {
+    "U": 0.1316823429137403,
+    "D": 0.002219755821931729,
+    "D+KD-band": 0.01734104042901534
+   },
+   "dsc": {
+    "U": 0.7472868217380767,
+    "D": 0.7957078002757315,
+    "D+KD-band": 0.7801456703830394
+   }
+  },
+  {
+   "id": "ISIC_0021940",
+   "area_quantile": 0.3,
+   "area_rank_index": 300,
+   "reference_area_px": 6762,
+   "boundary_f1": {
+    "U": 0.7148038243788482,
+    "D": 0.7062683722570204,
+    "D+KD-band": 0.5896702814710709
+   },
+   "dsc": {
+    "U": 0.9349205217809594,
+    "D": 0.9346039135859021,
+    "D+KD-band": 0.8957223102480396
+   }
+  },
+  {
+   "id": "ISIC_0036224",
+   "area_quantile": 0.5,
+   "area_rank_index": 500,
+   "reference_area_px": 10580,
+   "boundary_f1": {
+    "U": 0.4210797793509372,
+    "D": 0.4619629555683731,
+    "D+KD-band": 0.6422456381124592
+   },
+   "dsc": {
+    "U": 0.9402355032241619,
+    "D": 0.9448115734977313,
+    "D+KD-band": 0.9579200072492675
+   }
+  },
+  {
+   "id": "ISIC_0015521",
+   "area_quantile": 0.7,
+   "area_rank_index": 699,
+   "reference_area_px": 17302,
+   "boundary_f1": {
+    "U": 0.6412798824406595,
+    "D": 0.5648589852669388,
+    "D+KD-band": 0.6480860240800222
+   },
+   "dsc": {
+    "U": 0.9584035975278695,
+    "D": 0.9474628036664668,
+    "D+KD-band": 0.9603671011878071
+   }
+  },
+  {
+   "id": "ISIC_0036253",
+   "area_quantile": 0.9,
+   "area_rank_index": 899,
+   "reference_area_px": 30136,
+   "boundary_f1": {
+    "U": 0.28048009330154705,
+    "D": 0.2215625397449878,
+    "D+KD-band": 0.25739511782905994
+   },
+   "dsc": {
+    "U": 0.923419079910364,
+    "D": 0.9268361938426484,
+    "D+KD-band": 0.9328961199941495
+   }
+  }
+ ]
+}

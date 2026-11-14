@@ -1,0 +1,34 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+data/
+!src/bds_lite/data/
+outputs/
+recovered/
+results/
+revision/audit/*.bundle
+revision/.gpu.lock
+*.pt
+*.npy
+*.npz
+
+# Mutable live control state; frozen milestone snapshots are tracked.
+revision/training_supervision/
+revision/audit/thermal_supervisor.log
+revision/STOP_TRAINING
+
+# Unlicensed upstream comparator code, fetched at a pinned commit; never redistributed.
+third_party/
+
+# Third-party papers fetched for number verification (hashes in revision/lit_numbers.csv)
+revision/sources/literature/
+revision/auto_refresh.log
+
+# Files that show dataset photographs or ACDC/Synapse annotations: local only, never committed
+# (revision/LICENSING_AUDIT.md).
+revision/restricted_local/
+
+# Process-ID files written by the training supervisors (runtime state, not records).
+*.pid

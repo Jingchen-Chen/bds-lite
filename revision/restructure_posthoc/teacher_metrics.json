@@ -1,0 +1,43 @@
+{
+ "label": "post hoc, descriptive; ACDC teacher (seed 100); unit = patient; class macro per slice, mean per patient, mean over patients (expansion_statistics.unit_values)",
+ "official_101_150": {
+  "dsc": {
+   "mean_all_units": 0.8146031434235481,
+   "units_all": 50,
+   "mean_stage3_common_units": 0.8146031434235481,
+   "units_common": 50
+  },
+  "iou": {
+   "mean_all_units": 0.7426313642516615,
+   "units_all": 50,
+   "mean_stage3_common_units": 0.7426313642516615,
+   "units_common": 50
+  },
+  "boundary_f1": {
+   "mean_all_units": 0.8777880240185002,
+   "units_all": 50,
+   "mean_stage3_common_units": 0.8777880240185002,
+   "units_common": 50
+  },
+  "hd95": {
+   "mean_all_units": 2.6084899917920414,
+   "units_all": 50,
+   "mean_stage3_common_units": 2.6084899917920414,
+   "units_common": 50
+  },
+  "assd": {
+   "mean_all_units": 1.017916212525464,
+   "units_all": 50,
+   "mean_stage3_common_units": 1.017916212525464,
+   "units_common": 50
+  }
+ },
+ "internal_20_patients_recorded": {
+  "source": "revision/kd_unified/unified_results.json results.acdc.teacher_test",
+  "dsc": 0.8230824950775864,
+  "iou": 0.7448480735772708,
+  "boundary_f1": 0.8858762779104923,
+  "hd95": 3.282419615652446,
+  "assd": 1.213139826741762
+ }
+}

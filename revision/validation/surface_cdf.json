@@ -1,0 +1,79 @@
+{
+  "image_class_rows": 149420,
+  "valid_surfaces": 52981,
+  "max_saved_hd95_delta": 7.62939453125e-06,
+  "cdf_cohorts": 33,
+  "independent_kdtree_checks": [
+    {
+      "dataset": "acdc",
+      "family": "main_p1b_unet",
+      "id": "patient011_frame01_slice_0",
+      "label": "2",
+      "max_quantile_delta": 5.46049747640609e-07
+    },
+    {
+      "dataset": "synapse",
+      "family": "main_p1b_unet",
+      "id": "case0001_slice065",
+      "label": "5",
+      "max_quantile_delta": 1.6870032482074748e-07
+    },
+    {
+      "dataset": "acdc",
+      "family": "main_p1b_full",
+      "id": "patient011_frame01_slice_0",
+      "label": "2",
+      "max_quantile_delta": 2.4291590960956455e-07
+    },
+    {
+      "dataset": "synapse",
+      "family": "main_p1b_full",
+      "id": "case0001_slice062",
+      "label": "5",
+      "max_quantile_delta": 5.316541304978273e-07
+    },
+    {
+      "dataset": "isic2018",
+      "family": "legacy_gsl",
+      "id": "ISIC_0012169",
+      "label": "1",
+      "max_quantile_delta": 8.081892204359065e-07
+    },
+    {
+      "dataset": "acdc",
+      "family": "legacy_gsl",
+      "id": "patient011_frame01_slice_0",
+      "label": "2",
+      "max_quantile_delta": 1.6000381464209568e-07
+    },
+    {
+      "dataset": "synapse",
+      "family": "legacy_gsl",
+      "id": "case0001_slice065",
+      "label": "5",
+      "max_quantile_delta": 3.26356199842337e-08
+    },
+    {
+      "dataset": "isic2018",
+      "family": "U",
+      "id": "ISIC_0012169",
+      "label": "1",
+      "max_quantile_delta": 1.5225053928702437e-06
+    },
+    {
+      "dataset": "isic2018",
+      "family": "S",
+      "id": "ISIC_0012169",
+      "label": "1",
+      "max_quantile_delta": 2.7564563964688205e-06
+    },
+    {
+      "dataset": "isic2018",
+      "family": "F",
+      "id": "ISIC_0012169",
+      "label": "1",
+      "max_quantile_delta": 4.724170885594958e-07
+    }
+  ],
+  "checks": "all savedHD95/missingness, count-based pooledCDF, monotonic/endpoints/thresholds"
+}

@@ -1,0 +1,137 @@
+{
+  "validation_patients": 10,
+  "rebuild": {
+    "slices": 186,
+    "image_max_abs_diff": 0.008865594863891602,
+    "masks_identical": true
+  },
+  "models": [
+    {
+      "run": "acdc_kd_band_seed1",
+      "stored_reproduces_recorded_per_case_val": true,
+      "changed_prediction_pixels": 66,
+      "total_prediction_pixels": 9332736,
+      "boundary_f1": {
+        "stored": 0.8206433325752684,
+        "reconstructed": 0.82072316028245,
+        "difference": 7.982770718151233e-05,
+        "max_abs_row_difference": 0.011657771453635446
+      },
+      "dsc": {
+        "stored": 0.7682968872522455,
+        "reconstructed": 0.7682446878413938,
+        "difference": -5.2199410851772043e-05,
+        "max_abs_row_difference": 0.018988789458830535
+      }
+    },
+    {
+      "run": "acdc_kd_band_seed2",
+      "stored_reproduces_recorded_per_case_val": true,
+      "changed_prediction_pixels": 52,
+      "total_prediction_pixels": 9332736,
+      "boundary_f1": {
+        "stored": 0.8190277136299435,
+        "reconstructed": 0.8189890250565559,
+        "difference": -3.86885733876241e-05,
+        "max_abs_row_difference": 0.008001332558811969
+      },
+      "dsc": {
+        "stored": 0.7618071738900241,
+        "reconstructed": 0.7618422307082119,
+        "difference": 3.5056818187828576e-05,
+        "max_abs_row_difference": 0.012698412776518009
+      }
+    },
+    {
+      "run": "acdc_kd_band_seed3",
+      "stored_reproduces_recorded_per_case_val": true,
+      "changed_prediction_pixels": 66,
+      "total_prediction_pixels": 9332736,
+      "boundary_f1": {
+        "stored": 0.8167177550176522,
+        "reconstructed": 0.8166119692565303,
+        "difference": -0.00010578576112185711,
+        "max_abs_row_difference": 0.041271890535025946
+      },
+      "dsc": {
+        "stored": 0.7655199702674312,
+        "reconstructed": 0.7655370452299861,
+        "difference": 1.707496255487495e-05,
+        "max_abs_row_difference": 0.0030261133912319327
+      }
+    },
+    {
+      "run": "acdc_m2_aux_boundary_only_unweighted_seed1",
+      "stored_reproduces_recorded_per_case_val": true,
+      "changed_prediction_pixels": 64,
+      "total_prediction_pixels": 9332736,
+      "boundary_f1": {
+        "stored": 0.792522421424585,
+        "reconstructed": 0.7926066090645609,
+        "difference": 8.418763997597445e-05,
+        "max_abs_row_difference": 0.016420646331996483
+      },
+      "dsc": {
+        "stored": 0.7490563387649359,
+        "reconstructed": 0.7490945014420853,
+        "difference": 3.816267714940036e-05,
+        "max_abs_row_difference": 0.00793568462295069
+      }
+    },
+    {
+      "run": "acdc_m2_aux_boundary_only_unweighted_seed2",
+      "stored_reproduces_recorded_per_case_val": true,
+      "changed_prediction_pixels": 51,
+      "total_prediction_pixels": 9332736,
+      "boundary_f1": {
+        "stored": 0.8021748966247024,
+        "reconstructed": 0.8022497496301257,
+        "difference": 7.48530054233143e-05,
+        "max_abs_row_difference": 0.017543491926452992
+      },
+      "dsc": {
+        "stored": 0.7513590463537254,
+        "reconstructed": 0.751397707740472,
+        "difference": 3.86613867465746e-05,
+        "max_abs_row_difference": 0.008352758284904782
+      }
+    },
+    {
+      "run": "acdc_m2_aux_boundary_only_unweighted_seed3",
+      "stored_reproduces_recorded_per_case_val": true,
+      "changed_prediction_pixels": 91,
+      "total_prediction_pixels": 9332736,
+      "boundary_f1": {
+        "stored": 0.7810793577713999,
+        "reconstructed": 0.7811914170680603,
+        "difference": 0.00011205929666036063,
+        "max_abs_row_difference": 0.019610900839680534
+      },
+      "dsc": {
+        "stored": 0.7335728049696685,
+        "reconstructed": 0.7335991051945874,
+        "difference": 2.6300224918895942e-05,
+        "max_abs_row_difference": 0.007365399900709613
+      }
+    }
+  ],
+  "max_abs_run_level_difference": {
+    "boundary_f1": 0.00011205929666036063,
+    "dsc": 5.2199410851772043e-05
+  },
+  "all_stored_reproduce_recorded": true,
+  "test_data_used": false,
+  "kd_minus_decoder_validation_contrast": {
+    "boundary_f1": {
+      "stored": 0.026870708467392146,
+      "reconstructed": 0.026758792944262977,
+      "shift": -0.00011191552312916908
+    },
+    "dsc": {
+      "stored": 0.020545280440457114,
+      "reconstructed": 0.02051088313414884,
+      "shift": -3.4397306308275866e-05
+    },
+    "note": "computed after preprocessing_impact.py from its per_case_val.csv outputs with the frozen expansion_statistics.contrast (inline command, 2026-11-07)"
+  }
+}

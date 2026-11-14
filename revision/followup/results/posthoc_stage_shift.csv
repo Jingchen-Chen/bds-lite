@@ -1,0 +1,49 @@
+kind,metric,arm,seeds,patients,runs,mean,sd,delta,low,high,p
+"cell, slice-level aggregation (as Table 4)",boundary_f1,decoder,early,internal_test,3,0.7993218284469213,0.008010126374341772,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",boundary_f1,decoder,early,internal_test,3,0.8017645579055631,0.007537223419098965,,,,
+"cell, slice-level aggregation (as Table 4)",boundary_f1,decoder,early,official_test,3,0.7760415346541825,0.0010360925894366013,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",boundary_f1,decoder,early,official_test,3,0.7807956161059558,0.0021937638019548147,,,,
+"cell, slice-level aggregation (as Table 4)",boundary_f1,decoder,stage3,internal_test,17,0.7977385563885647,0.010292980733842163,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",boundary_f1,decoder,stage3,internal_test,17,0.7996933730787843,0.010331983651053244,,,,
+"cell, slice-level aggregation (as Table 4)",boundary_f1,decoder,stage3,official_test,17,0.7749856577309044,0.008910927540998365,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",boundary_f1,decoder,stage3,official_test,17,0.7796910271473292,0.008287455088963577,,,,
+"cell, slice-level aggregation (as Table 4)",boundary_f1,kd_band,early,internal_test,3,0.8242482705572272,0.006347910128986966,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",boundary_f1,kd_band,early,internal_test,3,0.8256377562345341,0.006480018170510025,,,,
+"cell, slice-level aggregation (as Table 4)",boundary_f1,kd_band,early,official_test,3,0.7925667070105797,0.003921708959276521,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",boundary_f1,kd_band,early,official_test,3,0.796154948912074,0.004575578794744036,,,,
+"cell, slice-level aggregation (as Table 4)",boundary_f1,kd_band,stage3,internal_test,17,0.8185681157322644,0.012886205761492603,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",boundary_f1,kd_band,stage3,internal_test,17,0.8205717771931242,0.01230694499194608,,,,
+"cell, slice-level aggregation (as Table 4)",boundary_f1,kd_band,stage3,official_test,17,0.7929471429019546,0.007184644358310315,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",boundary_f1,kd_band,stage3,official_test,17,0.7975114099217608,0.006863387210799563,,,,
+"seed set (stage3 - early), same patients",boundary_f1,decoder,,internal_test,,,,-0.0020711848267788158,-0.02076110246495455,0.01661873281139692,0.7630500446929112
+"seed set (stage3 - early), same patients",boundary_f1,decoder,,official_test,,,,-0.00110458895862664,-0.00861337782839859,0.0064041999111453096,0.756788106471922
+"patient set (official - internal), same runs",boundary_f1,decoder,early,,3,,,-0.02096894179960736,-0.03822004755807292,-0.0037178360411418004,
+"patient set (official - internal), same runs",boundary_f1,decoder,stage3,,17,,,-0.02000234593145523,-0.023120763344059433,-0.016883928518851028,
+"seed set (stage3 - early), same patients",boundary_f1,kd_band,,internal_test,,,,-0.005065979041409818,-0.01871471506519773,0.008582756982378092,0.3855823507608145
+"seed set (stage3 - early), same patients",boundary_f1,kd_band,,official_test,,,,0.0013564610096868934,-0.010510238647250633,0.01322316066662442,0.7635143232141677
+"patient set (official - internal), same runs",boundary_f1,kd_band,early,,3,,,-0.029482807322460152,-0.040532715171904175,-0.01843289947301613,
+"patient set (official - internal), same runs",boundary_f1,kd_band,stage3,,17,,,-0.023060367271363357,-0.0276203952253956,-0.018500339317331114,
+"cell, slice-level aggregation (as Table 4)",dsc,decoder,early,internal_test,3,0.758278303365414,0.007989381798933621,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",dsc,decoder,early,internal_test,3,0.7585537297754428,0.008064143403786674,,,,
+"cell, slice-level aggregation (as Table 4)",dsc,decoder,early,official_test,3,0.7323948569278379,0.0022992550851217,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",dsc,decoder,early,official_test,3,0.736394159906542,0.0036340058656587834,,,,
+"cell, slice-level aggregation (as Table 4)",dsc,decoder,stage3,internal_test,17,0.7579801969550619,0.00952602007982244,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",dsc,decoder,stage3,internal_test,17,0.7575462629298076,0.009734283242727034,,,,
+"cell, slice-level aggregation (as Table 4)",dsc,decoder,stage3,official_test,17,0.7307079827700256,0.008367232644347312,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",dsc,decoder,stage3,official_test,17,0.7349055407828304,0.008116143130395556,,,,
+"cell, slice-level aggregation (as Table 4)",dsc,kd_band,early,internal_test,3,0.7772607290253726,0.005828462410617954,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",dsc,kd_band,early,internal_test,3,0.7766518023454219,0.006341928730641164,,,,
+"cell, slice-level aggregation (as Table 4)",dsc,kd_band,early,official_test,3,0.743172151287363,0.0024912666906314294,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",dsc,kd_band,early,official_test,3,0.7465116995402482,0.003032402147390226,,,,
+"cell, slice-level aggregation (as Table 4)",dsc,kd_band,stage3,internal_test,17,0.7715231639186632,0.013044309118048917,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",dsc,kd_band,stage3,internal_test,17,0.7716539794791266,0.012464551147387494,,,,
+"cell, slice-level aggregation (as Table 4)",dsc,kd_band,stage3,official_test,17,0.7445683806894269,0.007431742987373272,,,,
+"cell, patient-level aggregation (Stage 3 estimator)",dsc,kd_band,stage3,official_test,17,0.7484886871703521,0.0070210082110650236,,,,
+"seed set (stage3 - early), same patients",dsc,decoder,,internal_test,,,,-0.00100746684563513,-0.019207141268413785,0.017192207577143525,0.8739771563255937
+"seed set (stage3 - early), same patients",dsc,decoder,,official_test,,,,-0.0014886191237115654,-0.010405225774868786,0.007427987527445655,0.7008503033094929
+"patient set (official - internal), same runs",dsc,decoder,early,,3,,,-0.022159569868900664,-0.038442868947102124,-0.0058762707906992034,
+"patient set (official - internal), same runs",dsc,decoder,stage3,,17,,,-0.022640722146977203,-0.02569472233926828,-0.019586721954686127,
+"seed set (stage3 - early), same patients",dsc,kd_band,,internal_test,,,,-0.004997822866295243,-0.01922640111199552,0.009230755379405037,0.41386953509483126
+"seed set (stage3 - early), same patients",dsc,kd_band,,official_test,,,,0.001976987630103899,-0.0063282971416210275,0.010282272401828826,0.5895173607704667
+"patient set (official - internal), same runs",dsc,kd_band,early,,3,,,-0.030140102805173725,-0.04170917617518022,-0.01857102943516723,
+"patient set (official - internal), same runs",dsc,kd_band,stage3,,17,,,-0.02316529230877428,-0.02746336754396034,-0.01886721707358822,

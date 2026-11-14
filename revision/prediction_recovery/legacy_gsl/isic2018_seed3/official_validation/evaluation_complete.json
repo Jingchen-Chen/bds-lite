@@ -1,0 +1,25 @@
+{
+  "entry": {
+    "run_id": "legacy_gsl_isic2018_seed3_official_validation",
+    "family": "legacy_gsl",
+    "dataset": "isic2018",
+    "seed": 3,
+    "split": "official_validation",
+    "checkpoint": "results/checkpoints/isic2018_p2_unet_gsl_seed3/best.pt",
+    "checkpoint_sha256": "20da9cd09e361fa1f39949887f1accfaf745c02bfdfe03618515140bb42f4459",
+    "manifest": null,
+    "manifest_sha256": null,
+    "batch": 8,
+    "classes": 2,
+    "output": "revision/prediction_recovery/legacy_gsl/isic2018_seed3/official_validation"
+  },
+  "protocol_sha256": "3619ae1081487603740dea88bbc509f554705a1924ae6dc77ae33028b0e059b7",
+  "outputs": {
+    "predictions.npz": "912d45e7d68e7f5fa2ba08edb6535d68e37f70746b419f8f4ff566be93630e18",
+    "per_case.csv": "318f1e3cd252106bd0abdc63bd4d4b622718987a9201b7e496937a6f14ba5493",
+    "provenance.json": "86cb144125093be06cd35257ff4a2b6de6452a9abe0bead90266a36ee59a57ac"
+  },
+  "images": 100,
+  "class_rows": 100,
+  "seconds": 7.39200583496131
+}

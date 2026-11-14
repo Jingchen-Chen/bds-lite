@@ -1,0 +1,2672 @@
+{
+  "started_utc": "2026-11-08T13:58:47.402190+00:00",
+  "primary_set": "official_test",
+  "failed_runs_not_evaluated": [],
+  "runs": [
+    {
+      "run": "acdc_confirm_decoder_seed201",
+      "split": "official_test",
+      "best_sha256": "32b07b01f7972b6ceb3a78f232f2882bc1bb3c8a14aff937480b9279beb27038",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7766039115306611,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7047042185007208,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.819347165351669,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 8.941009541788297,
+          "valid": 2736,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.652242533503133,
+          "valid": 2736,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "5a6b2051c193607b2dd3cb9db049d08bc85d28147d6881c01c72a7985e8c7641",
+        "per_case_official_test.csv": "2b66475a574392eac6c283db30ad77fa1c66eb6d28701420e9c2d5aa3222fe3a"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed201",
+      "split": "official_test",
+      "best_sha256": "30d6fb12f893186bec323649f3dfd86e35024fef657ea2b77d9f9f797f690d65",
+      "metrics": {
+        "dsc": {
+          "mean": 0.785419990015446,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7166932510222567,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.830149053809824,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.648053538167771,
+          "valid": 2756,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.134972789869556,
+          "valid": 2756,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "ce64249b12462c4eed22a0aa59a20c3a68e7edeed450608f54a34009f94bf528",
+        "per_case_official_test.csv": "3a5281ea7c4f984590262a029067737596a37cdf32db6a4ea2965120de33a9ae"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed202",
+      "split": "official_test",
+      "best_sha256": "4c124da0fa461176d06a276dc81436acd4266592876885d8b22f4f59e01c372a",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7713135324632988,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7004000432622731,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.811688413479292,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.263792387250175,
+          "valid": 2701,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.2963216039388326,
+          "valid": 2701,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "661deb956db3c72ed3f611182497637ba8dc4ae517a296bc8a6a70533687435e",
+        "per_case_official_test.csv": "425a687b3ac840b8c4a4d32ee2339be7fcb4599a1a9d319edd9baf5a0aaa5719"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed202",
+      "split": "official_test",
+      "best_sha256": "8f91de82f4dbe88d936182236ff1eaff9f575055cb5bf471d0421636e350fc13",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7787760028642269,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7122577166156566,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8260949529594294,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.12638824331651,
+          "valid": 2725,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.1690699236983555,
+          "valid": 2725,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "ef0b1498af7ff2de8e858c78121386fcf284e36d486e1239b90d86929558fd9e",
+        "per_case_official_test.csv": "2e276c28dfaf27828717085ccdc634bbd4de1cd9dfe670c688ad098f114c1bf1"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed203",
+      "split": "official_test",
+      "best_sha256": "742c6f4049d07021779de73c3846b72fa86aaf8a1fc24a11ab8d6a74af4768ab",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7683775017777077,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6966678842261301,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8083292939132459,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.050897108836599,
+          "valid": 2679,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.2918829524770694,
+          "valid": 2679,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "b436b855773108b3f185baafa813b065ff0a3e4c2cf81c9d73f2380454c46b29",
+        "per_case_official_test.csv": "19249a17b7790dad36ab395a6b861e807b56233ebaadd3f059dc3519ce14faed"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed203",
+      "split": "official_test",
+      "best_sha256": "b79a7a53af91b80282ea59fad4163238d0f18c70d0a6930272ec7bb90fc5b8fe",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7768235540516147,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7070117784525284,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8214017971347352,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 8.978548409912612,
+          "valid": 2730,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.67449770429523,
+          "valid": 2730,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "78938c0de343bed81d2f7b5631273e65b1f156e1494f304396f447885c172bc1",
+        "per_case_official_test.csv": "6aa434bc7bf6c365b857e601f8abef874142090ad0b53338f89a65759f0f9cc7"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed204",
+      "split": "official_test",
+      "best_sha256": "a583c7f24574cf453767f95ae3f2968f27e7eadeae93f93bd25ba7734b4f8cba",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7670636262373272,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.693865238569698,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8050102141707232,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 10.829488345804053,
+          "valid": 2734,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.9652020080122705,
+          "valid": 2734,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "ef83cd135d4f401619e7cb32fa6a1979e43ffe2d4d5aa951858e23f8e72bb79b",
+        "per_case_official_test.csv": "b9093f164ff2b66989d74c2526551e469b2e3a85ce5a151610833262ae0ae485"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed204",
+      "split": "official_test",
+      "best_sha256": "0ab2367b48a9ab1684d2a0fd829fbce8390072c00b79a125b08af214425649ae",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7735086583377417,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7049904742919468,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8210406821890901,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.559042283836691,
+          "valid": 2717,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.323313707726424,
+          "valid": 2717,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "e636a8745be3095c34cf728acd762d06098d69adabafdfdc0bd5df0f08afae1e",
+        "per_case_official_test.csv": "38575c1751d48353ee516458fdf4ce0b35e183946b2f7dbfb28055b10c5f3950"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed205",
+      "split": "official_test",
+      "best_sha256": "587fed19e8837e98f6b6598f6c05e2268751738d8a08bca19eb3037080e686ba",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7557504552445133,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6823961793333584,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.80063049611951,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 6.72529331487475,
+          "valid": 2682,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.317609644237292,
+          "valid": 2682,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "b5b832995aa6038859aa5349b36465c67c46a04129f9e08a7289506a2dd67393",
+        "per_case_official_test.csv": "f133f49b2b2afd94e3f1af884201e29a001f5fd7190bec03d9888a534c0ea29a"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed205",
+      "split": "official_test",
+      "best_sha256": "9929551f00f90a7013ee9c4f4869be0f73e832c3b745ba323fae911b660470b5",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7707705245904894,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7011335570172633,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8179954343868702,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.136934558579843,
+          "valid": 2710,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.2063605595393816,
+          "valid": 2710,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "77a688fa31b492061db5bb0e8820a38753f877b20f91f2d058ca7a6fe8cf89fb",
+        "per_case_official_test.csv": "6484d01a6dd96ccc08d8599896d01f8789df9bf1a250d7db3b3715188b346d2f"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed206",
+      "split": "official_test",
+      "best_sha256": "1f3966934bb4592dca6b643da61298e2048e825e20d6501012a84c0f5231c296",
+      "metrics": {
+        "dsc": {
+          "mean": 0.769785480197843,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6961783596015951,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8131492182008234,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 8.709261878549833,
+          "valid": 2730,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.3956385482034404,
+          "valid": 2730,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "4ed770651e4e0a2fb06705109aff068ba1dcde4350ca68ccef3f03034e0fa8bd",
+        "per_case_official_test.csv": "45397ab5fbb96a3794b78f55951adb12bab6cb3d05be8a6acbe547f1536d3043"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed206",
+      "split": "official_test",
+      "best_sha256": "af75919d53820c777fad62860c5802511023b33cbe51ed781ef0fc0129b859db",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7797136413534963,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7102254677321116,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8250042005701412,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.780780023329868,
+          "valid": 2733,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.3166080192958223,
+          "valid": 2733,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "5afd091f06c71ebea85d6aa722080d6ad82ac293e23dd5eb224b13aba4be6c4b",
+        "per_case_official_test.csv": "22d3459d735913c408931f3062bdc20fd83e0c923f33bed492d2b843fb97d13a"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed207",
+      "split": "official_test",
+      "best_sha256": "f48fdb3ff75baf917f90d04fe7641d859cee03afa7b8730e6931ab6af0daedc5",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7647456416935304,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6906517054152209,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8080377379140304,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 8.976776586692301,
+          "valid": 2711,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.6249066188969943,
+          "valid": 2711,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "b5fdd86b864e5b6fdb3856f4d4ff3430e6575c65c5a4299f84ea40eae5724a26",
+        "per_case_official_test.csv": "ba4ef98e9fbbbb3d18dfb282a955c320f5f83cc00b9049a36cd1bf516e9fd3d6"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed207",
+      "split": "official_test",
+      "best_sha256": "7cdecf375873874a740e1e68ee9106fa5b0f69c2da54edb40f44502e94caf5a7",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7772082467512977,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7073111144873643,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8212642718879014,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 10.03410438937414,
+          "valid": 2755,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.7202231037097486,
+          "valid": 2755,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "20be029e5f9780181945628f2a9ec23835cbc0bcc6acb7c7156e71063825d78e",
+        "per_case_official_test.csv": "a6ef5a023b9b2718faa84eb286cd25feedcb8d1fb257f0c672e1ef8d7e158491"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed208",
+      "split": "official_test",
+      "best_sha256": "e8325e2a6b08cd49e9aecf50dd9717670f45fc0733393905d7e1818b388eb676",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7774770533848873,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7044972065703128,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8230335266877957,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 6.80510376566151,
+          "valid": 2732,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.1877435192596684,
+          "valid": 2732,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "47dc75f53c9c162ed222d70191c9eda86df7f544e59016a7db43f2aaa3b56b19",
+        "per_case_official_test.csv": "58db58e403b1564ec1650020df0dc1be723f33790f1d0a27dcc657e1d83f968a"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed208",
+      "split": "official_test",
+      "best_sha256": "091a9c7840e0b6804b45ab97ca1dff68d30fe3e99e48f09d3ff5058f9ca16117",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7808006975728626,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7122705495828462,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8230986290949991,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.967252959734883,
+          "valid": 2728,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.3522989038771285,
+          "valid": 2728,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "4cfd2f6baadf79e03fd03bb344a9347cd33d3bc13a4e707c2a46e7c1d28723f2",
+        "per_case_official_test.csv": "d86d1ff03b20f09c44021b7374926443dbfc10d2dc4d1bddffe0323c97320b67"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed209",
+      "split": "official_test",
+      "best_sha256": "1189c85dd374ca03ab1f8e26316494a88329106b6b7215335e974cac40b2fe88",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7773025636809318,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7054899854687265,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8167537861116814,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.362936819665943,
+          "valid": 2728,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.1910939841555797,
+          "valid": 2728,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "b3e84afc68c4eb33b2c1e4f1b22c412991fa61d23b2624a072ebceed67c0c122",
+        "per_case_official_test.csv": "182e180c9f1b0834522bbbc96c2bfabc4c1e14fd79c8b239773ea1c59b030822"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed209",
+      "split": "official_test",
+      "best_sha256": "8f90d96e5b0a3674b95dc2b307f6c52edc2fc93684c99f0d079a55216a340781",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7895878421337913,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7221740458831105,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8355836396691847,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 5.9071390189391995,
+          "valid": 2721,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 1.9084806085202415,
+          "valid": 2721,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "221be4f8e99adc5b739ac85d4348677b6ab27e6422323ee7ab0fcf4e03f97bcc",
+        "per_case_official_test.csv": "a44b05f09da518697736d13bbfa32e969d7ac71a6650f512f8e4190ed3373e72"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed210",
+      "split": "official_test",
+      "best_sha256": "9a3803b2696f9e2f9609aa73cf175fb62785953c6c57c5f23332045b9449822d",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7667209000043195,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6917419750764446,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8013844072640359,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 12.086390825754501,
+          "valid": 2755,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 3.3822917159045023,
+          "valid": 2755,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "abaf90f6eaee55c653d0728b034e91058863eee98704ef6188eb7596200d62bf",
+        "per_case_official_test.csv": "712e0fcfc2e0cff6ce039ebe5c8ad4cc56d44c5ccc876e606df22d667aea8a75"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed210",
+      "split": "official_test",
+      "best_sha256": "bc30efa7f334e51ba27548af753638dd52eef5aed62ae33e7007d2e77549300e",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7736545412111043,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7040359286766239,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8194128787666721,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 6.948642934617791,
+          "valid": 2739,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.3647851877923687,
+          "valid": 2739,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "e2cdf808c7972006084ba3f6ca85efc724e77df0e5d7f3ff2070b9f9e9b6c3d8",
+        "per_case_official_test.csv": "da40c3dc9d401c09aeaec071fc3e6692d815a161dcb89972cd2616482929d0fa"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed211",
+      "split": "official_test",
+      "best_sha256": "246c80610145d8b4b8bbf3d3671211d81356490ccd0a901f74dac40356340c75",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7677214424874876,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6958976024973496,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8106351673356829,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 8.835896136239171,
+          "valid": 2752,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.750209271734537,
+          "valid": 2752,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "984e30a13c6f3011818c296b92a5d343c2fd4ad5a9d5399988610b19cc8b85ee",
+        "per_case_official_test.csv": "66ca127a31161e153529a70d5685f361f3c7e872ccf7314d314c2200a2b83dd0"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed211",
+      "split": "official_test",
+      "best_sha256": "cad788676cdf0ccc9e4f1c30444d3b911f588e4063c292526c5a01121c0c9dd0",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7842391768995273,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7173758517860043,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8308155391841248,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 6.189775179798214,
+          "valid": 2739,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 1.967058220411052,
+          "valid": 2739,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "159bb896b172c8bb0a42f58be5a0c982690db234a03235dea882032d5e390373",
+        "per_case_official_test.csv": "81795032636c100a4ea84e0e5d094276f206b37f8742421c10fa20d280ba0f29"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed212",
+      "split": "official_test",
+      "best_sha256": "4c4a5b919ecbdf4881a2fde98196b0f1dab2b44147412c3c03f382312fda9ec4",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7557893081474435,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6823036785617943,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.796035469637027,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.678223103127864,
+          "valid": 2658,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.4451143255049432,
+          "valid": 2658,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "5b580b9553fadadfbc1e27fbab87890a6300bc346fd93e02c5c8f17d5a9ab733",
+        "per_case_official_test.csv": "cee416093defc1347f21c59cb8ca8191e80f725c68504c86aeb87fcb3abc8cee"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed212",
+      "split": "official_test",
+      "best_sha256": "2f52b42163c4893bc0b3e6de622668164a6d00904a3bea39ebde34b5e911a3f2",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7693845380285516,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6987731519291729,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8145947043877227,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 6.016824739667357,
+          "valid": 2696,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 1.9232866853387136,
+          "valid": 2696,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "ebceb7dea10f4e60c7eb81d105dc5dec6ee0eb19b191f4d24c573eb70297bcf6",
+        "per_case_official_test.csv": "5b7e70b1861e7a7552444ab015517786ff31b9e53dc75471fb60fb1c6723ab3b"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed213",
+      "split": "official_test",
+      "best_sha256": "505f3e96f0071b639f8cf28007004c2d1d8cf7d651e7dabbd8ef33617d59978e",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7590361313525095,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6839534897073326,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.79654734472108,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 13.917014444288432,
+          "valid": 2735,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 3.617384978513177,
+          "valid": 2735,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "2f914ed3ae81ae92264064eb3ba8038f887378afbc01a143c7264628fa532a2f",
+        "per_case_official_test.csv": "99df5c3e9b7c1349d6a091edf10f583c6f19a3cf7734d810d7e5a28c119fd0bc"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed213",
+      "split": "official_test",
+      "best_sha256": "9b33ceee85d2b43acb582db786572556bebab5c156cabf584d7212a9a87cc1ae",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7787172519182578,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7106085892796242,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.824973525833789,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 6.932545530879048,
+          "valid": 2729,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.0275653958451665,
+          "valid": 2729,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "b593cec2e7cc1acca539dcc01d69251781cbf7507b40f9fd7539c7099e9b8834",
+        "per_case_official_test.csv": "15a464296a4fdfafe6fea217c2e282737a0e5b921f001a2f148afc7d10505e4d"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed214",
+      "split": "official_test",
+      "best_sha256": "3fcf1bdf3cb0cb96f9d983dd444d25ca083590372a771beba503f2429857bc1a",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7693218146314151,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6972208317795384,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8129287929807318,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.949323996257465,
+          "valid": 2707,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.5189085193487566,
+          "valid": 2707,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "9931596ad8083065047813b8cc5b11114bf4f7fea9d1c34c55a87eb8237d75ac",
+        "per_case_official_test.csv": "842ff257ca43050ae6d02d87844446837b7fb4e3820ae3c38a52a600e1a4fd2e"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed214",
+      "split": "official_test",
+      "best_sha256": "6f9a2527a625b09fcf1f245d9c50abd53ae947bfe6acd88e351cd952cdb28c1e",
+      "metrics": {
+        "dsc": {
+          "mean": 0.780079395560904,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7115179073080141,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8236938098857443,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 9.101988931300223,
+          "valid": 2727,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.6106293569412866,
+          "valid": 2727,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "8a0011e8157c52775b7bb96cf222ef29a7cdbad35a478ccc983c9d00958a7da1",
+        "per_case_official_test.csv": "ec0246d39af729b5fc6c28cce8c90f4e4267f585358417c5e17a580d61bd3103"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed215",
+      "split": "official_test",
+      "best_sha256": "c8f3607957a0afc9eaf84aa30a87f2e0e1a0f56ec67327889f9f188a6c04e6ad",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7665886889053615,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6959882584406837,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8101252781388907,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 8.785565691630627,
+          "valid": 2735,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.6274350926688648,
+          "valid": 2735,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "f0edb9c402395b092e24cc694db8b0dbb21914b2b208ba9c362ee031e0ac1e81",
+        "per_case_official_test.csv": "cf55d20298f1710e9197d0e178cb4f3206be985cc0ed469dc332081177f61ca1"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed215",
+      "split": "official_test",
+      "best_sha256": "b565c5291cfd11e9526e2524fb10db6f6e2db4ff7635b60a1153d3ecf0a3d57b",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7823666365699595,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7130102006322175,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8278276542257771,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.1161342753042085,
+          "valid": 2727,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.097959087413661,
+          "valid": 2727,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "d7719eafa290b33d90bbb5c85345b5bc464c10e0178d8dd0be4afe3a6df11ac4",
+        "per_case_official_test.csv": "9f518d0b4df4baa0690c4ec7e6692e230d4992e51f52fa15bac41c31cf63169a"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed216",
+      "split": "official_test",
+      "best_sha256": "5ac542baca7b3f6d473be8649db1d05189d1d9938d8fb15fb941d950e859e2a7",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7694962832312586,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6989520521941218,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8123681036837278,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 6.832887877033432,
+          "valid": 2707,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.397308089513377,
+          "valid": 2707,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "49529d12c75447d62168c559efcbeaa5828a5561827b36e04736dedcb3f0cfb3",
+        "per_case_official_test.csv": "9b27f6f6c4754c17c9b59319f50dfed0cff21f3bd587b2cd69cad7b34adb54fb"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed216",
+      "split": "official_test",
+      "best_sha256": "8d0e13e69dba940f71f7d8af65e4e08255775b10a31bda3b8309e86ffbe01264",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7853205447041773,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7169880968481517,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8301340582654603,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.32954311689848,
+          "valid": 2728,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.0639266103473313,
+          "valid": 2728,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "2dd6966d418ed6b084f28077b925d528c6cdbe5bc442bf95a22cb76bd187522c",
+        "per_case_official_test.csv": "93be3c904583060959f43ed65e223657fafc9243ff2ecf5b4d56fb6381af353e"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed217",
+      "split": "official_test",
+      "best_sha256": "6f6fb78e50dbc4e864ffd80b4615f0e5dbfdfcf1700c90151e6ea0b49301c7c2",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7633871173817215,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6919523436711199,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8072555500664269,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 6.373672649448026,
+          "valid": 2677,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.2159197104981376,
+          "valid": 2677,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "3f834ae512baefb0a1923bffdcc472592a5ed661bf143a95f6dc72faab5ee8ea",
+        "per_case_official_test.csv": "e87b44bbe9b0cf0a208069dab99a469ad302b1d0d0346f46de75880c18253b7f"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed217",
+      "split": "official_test",
+      "best_sha256": "d98209dfa092e1c8a3b17f379b7e65246d94ceb3867c99b40f67da78a870b537",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7870493000587928,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7201974066935292,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8342039257268066,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 5.85050289805876,
+          "valid": 2725,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 1.912315649532397,
+          "valid": 2725,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "aba85addcdec595a450ce26a3f305a402839db1718aae8377de121e1e777a416",
+        "per_case_official_test.csv": "b22a6de1bf07cc681909fa0cf560006576a572f811d76151b1cff38353dadff6"
+      }
+    },
+    {
+      "run": "acdc_m2_aux_boundary_only_unweighted_seed1",
+      "split": "official_test",
+      "best_sha256": "96d21b73e5ab22c6fbb9ab7f4141c478f19024d4b924ca5a407fd300dd36e56b",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7645319795624574,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6910313166050092,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8056173017851781,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 8.432656869828746,
+          "valid": 2722,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.483091359576217,
+          "valid": 2722,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "d8082eb492a8d2750861e6fb39edfd2c74e331ba3904a42de825f58f4c8d79ca",
+        "per_case_official_test.csv": "aa79177308cd8fe86a45647ceb513ed65e3145f4b14327a789735d9db0775b5f"
+      }
+    },
+    {
+      "run": "acdc_m2_aux_boundary_only_unweighted_seed2",
+      "split": "official_test",
+      "best_sha256": "5d66a6faa5e154f6fd22853c6ea1991a9fe6cd42b9ce3e6df87bf9503510caa2",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7695723917470805,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6985228665629388,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8115193492476707,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.613241622852663,
+          "valid": 2710,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.5061176607254687,
+          "valid": 2710,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "2f8884688b5e8f8ba2bd786c51ef0916aa857bfabc703f626388740aa6b36001",
+        "per_case_official_test.csv": "bad41d90d87a59787d8ac14d806124d92eaba49a01623cf891fca04eba5e7db5"
+      }
+    },
+    {
+      "run": "acdc_m2_aux_boundary_only_unweighted_seed3",
+      "split": "official_test",
+      "best_sha256": "ba888f9fab0c78e8ccdca955c234e8ff47d2f051f95e4c859c6aa9219217faf2",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7701274865374265,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6987067631670619,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8102517838697996,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 8.439927459112198,
+          "valid": 2732,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.513884263759476,
+          "valid": 2732,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "b1b3e9e42585e0c3116d6f0db9af5eb0ec487744b9d993fa6038da1cedf6f2f5",
+        "per_case_official_test.csv": "3fb5022d1f5396af232a79e6a80ab45f8d8e8d6d9c1977f8409b62f2160da0fc"
+      }
+    },
+    {
+      "run": "acdc_kd_band_seed1",
+      "split": "official_test",
+      "best_sha256": "d3d704e439a188bf46440dc700a95f9ccb403848c6166b87dfcae962e14ab038",
+      "metrics": {
+        "dsc": {
+          "mean": 0.779964379667636,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7114146059446731,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8267461246853945,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.547773667394897,
+          "valid": 2730,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.2425323016532173,
+          "valid": 2730,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "4c800178737cf028f7a9852c2a33f89119e6b6bfcd68e1b5590e858270719651",
+        "per_case_official_test.csv": "eae04dfd12cf7b04bf039fee1efd0c604166d2d5daad66e31bd32154ed674560"
+      }
+    },
+    {
+      "run": "acdc_kd_band_seed2",
+      "split": "official_test",
+      "best_sha256": "4b2fe9a1f82a2861bf79e68e826908ceec7e028c65b12e1e7f74f1398359364a",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7764240714047664,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7068892290775962,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8218217600657782,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.596816753380464,
+          "valid": 2730,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.109719680686355,
+          "valid": 2730,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "6d51cc502727987b9801a03bedb2d9355da4b76b29f5b448c1b3e45bae549162",
+        "per_case_official_test.csv": "546cc8bc9812490043e159bd1eae68f6446401796c3cad446335c26025880fde"
+      }
+    },
+    {
+      "run": "acdc_kd_band_seed3",
+      "split": "official_test",
+      "best_sha256": "2c376074a64d2797b4f956d6f5db913b23c4d55b6588fd76112be8ca4b7c3920",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7791245559193164,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.7114407977948324,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8277111729082025,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 6.9223740130369995,
+          "valid": 2747,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.1344275959988788,
+          "valid": 2747,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "47e20cc857d32c4d8aaac2a1524b04d547a1e19a3805ad24d4f5a970afd0a6ab",
+        "per_case_official_test.csv": "19ad0d7b6b6ad1cd200e4e35aca475ef3e21463fdc9388f572d2e5df7aa69863"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed201",
+      "split": "internal_test",
+      "best_sha256": "32b07b01f7972b6ceb3a78f232f2882bc1bb3c8a14aff937480b9279beb27038",
+      "metrics": {
+        "dsc": {
+          "mean": 0.788083934489563,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7098262842137133,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8291177953368865,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 8.633018684411585,
+          "valid": 978,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.635084219368323,
+          "valid": 978,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "5c6e9b87072f64f06a3ee28114c579f1dbd5e821ded64680a420aab4b98d0d01",
+        "per_case_internal_test.csv": "ad4ca72af7f4a7da6614da9275a6ba43c4d91540469eb45a21e9d877c22027c2"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed201",
+      "split": "internal_test",
+      "best_sha256": "30d6fb12f893186bec323649f3dfd86e35024fef657ea2b77d9f9f797f690d65",
+      "metrics": {
+        "dsc": {
+          "mean": 0.8130564355693569,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7386357393708632,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8558339386137205,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 7.434000760045644,
+          "valid": 989,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.167299341745637,
+          "valid": 989,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "1d7120edbab64f5d7662542506a72e00cfff03631d645dcee1d335297a71ca31",
+        "per_case_internal_test.csv": "2e632d5fea6d6591b66e25395e2b46ab6fa75a5c5a80bf01bff54ae9e74a9b3e"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed202",
+      "split": "internal_test",
+      "best_sha256": "4c124da0fa461176d06a276dc81436acd4266592876885d8b22f4f59e01c372a",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7853593041115882,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7086300864796131,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8268667176720897,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.311566081735276,
+          "valid": 970,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.096650190712865,
+          "valid": 970,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "44675d15ad1f6b4c2d269175ec559848dec47a42b56ab11bcf077288e18dd257",
+        "per_case_internal_test.csv": "2184eed714f64b44cd229dfba6ebcce556bcd013655898e6b5bdc40e30c6b5ac"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed202",
+      "split": "internal_test",
+      "best_sha256": "8f91de82f4dbe88d936182236ff1eaff9f575055cb5bf471d0421636e350fc13",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7977006317867675,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7228063984811709,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8462647944179399,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 7.575229220665419,
+          "valid": 988,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.2699618041213707,
+          "valid": 988,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "4b047ebefc324b06a3e1fa8ea061695f65eaa466935f3db5db729c41c624aa42",
+        "per_case_internal_test.csv": "9bce825e86eff3ca545e8dc96bec82d33604fbab7717877bc88bad9c8de08c45"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed203",
+      "split": "internal_test",
+      "best_sha256": "742c6f4049d07021779de73c3846b72fa86aaf8a1fc24a11ab8d6a74af4768ab",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7756142331200817,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.6967975353356224,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8113116636590891,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 7.853735507831672,
+          "valid": 965,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.3869077112236172,
+          "valid": 965,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "bf8b21920f037a5ca0515c6a8340f40c8a7e1e62c9b3eada5189cc06a58b42c8",
+        "per_case_internal_test.csv": "89be40b41f71967ac47db951510c14d4291cc7b203d119fceb60f6ca7e414467"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed203",
+      "split": "internal_test",
+      "best_sha256": "b79a7a53af91b80282ea59fad4163238d0f18c70d0a6930272ec7bb90fc5b8fe",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7929727917331648,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7169359588083878,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8351756964302798,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.676533371942942,
+          "valid": 976,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.202644237301877,
+          "valid": 976,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "e6e1ff17afa05b3c758985b3556541ebadbee8d46a587eec7fb883f213896997",
+        "per_case_internal_test.csv": "da04e533b15d544ae965a7df223e2bf4a30173cfb1d6746480b6de08f823d56b"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed204",
+      "split": "internal_test",
+      "best_sha256": "a583c7f24574cf453767f95ae3f2968f27e7eadeae93f93bd25ba7734b4f8cba",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7860265503830569,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.704783143739702,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8190270990348838,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 10.12801210320008,
+          "valid": 983,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.750358513904127,
+          "valid": 983,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "e02005c0309c8cdca08427158ffc0ec210a3a1d3c59752d63746807fa08d2881",
+        "per_case_internal_test.csv": "d49ff8bcfe4f07693e28900e9dbd78f16d9d28caab886a2e5fa639b01a2d3619"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed204",
+      "split": "internal_test",
+      "best_sha256": "0ab2367b48a9ab1684d2a0fd829fbce8390072c00b79a125b08af214425649ae",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7911584978516444,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7149555510643631,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8374251671709081,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.4589001634081855,
+          "valid": 976,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.1029288513494317,
+          "valid": 976,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "95b78ed17697ec396f28a8f33e4e2c7f9d1eeaa5bf481dfe499aa24b4b00600c",
+        "per_case_internal_test.csv": "0926264c06a5c3adb031c5d87f77b008a676f84278649bd786747061949b4c23"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed205",
+      "split": "internal_test",
+      "best_sha256": "587fed19e8837e98f6b6598f6c05e2268751738d8a08bca19eb3037080e686ba",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7690370120304031,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.6884249955264677,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8093349193314474,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.840880220920398,
+          "valid": 974,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.466565752268082,
+          "valid": 974,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "07a3fc59c09a6038a67b8d17d07637426dab1cbfb80367541c33c0e1beaf7e80",
+        "per_case_internal_test.csv": "4f045f4da814ee28e163bc4805c345b191cead90d02514fafb96377692dc295b"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed205",
+      "split": "internal_test",
+      "best_sha256": "9929551f00f90a7013ee9c4f4869be0f73e832c3b745ba323fae911b660470b5",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7795317355019563,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7023708171204877,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8270807773264552,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.895823229855471,
+          "valid": 972,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.3578564429755318,
+          "valid": 972,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "2fe62530759f0cff6dac29c786e81dafbfb82b5dda6188e31efb93d9f73e3cac",
+        "per_case_internal_test.csv": "344f54f628e61ae0b5bab4783ebf08f910f298e9eb2406f6f490330c582eede9"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed206",
+      "split": "internal_test",
+      "best_sha256": "1f3966934bb4592dca6b643da61298e2048e825e20d6501012a84c0f5231c296",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7829820299053927,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.70318969102317,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.825988787353983,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 7.322042881046439,
+          "valid": 982,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.315476282035018,
+          "valid": 982,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "789f02aa5dc4d294014663e5ea3c73feaecb5d4d57dc693f22b7342b4e21ea21",
+        "per_case_internal_test.csv": "94150f5356fec00a36236e43af11cfa009427bdf4aabd4f2df03a3050bae08c1"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed206",
+      "split": "internal_test",
+      "best_sha256": "af75919d53820c777fad62860c5802511023b33cbe51ed781ef0fc0129b859db",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7984518437455062,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7227770776813262,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8415032095090546,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 7.119791019857236,
+          "valid": 973,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 1.9514678997224062,
+          "valid": 973,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "0c030eb1e9dd8281ada50d88a8c9c1736b4288ca5f2e58b18384835370e2b1a4",
+        "per_case_internal_test.csv": "ebf7a6b94839ac368467079e607e0d22f284f80dffeb93d685e209a146a8d9e1"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed207",
+      "split": "internal_test",
+      "best_sha256": "f48fdb3ff75baf917f90d04fe7641d859cee03afa7b8730e6931ab6af0daedc5",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7776907198049019,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.6988682450380633,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8162687932650317,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.999085927972142,
+          "valid": 966,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.287110244820577,
+          "valid": 966,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "a35e979ae62db3f0835cee836cc081e56143d94fe2656fd77a10f14a7bef1431",
+        "per_case_internal_test.csv": "e30ee39d8b1fce147aeceadfbb6b479545ada97a50fd10770960c40ee23ec12c"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed207",
+      "split": "internal_test",
+      "best_sha256": "7cdecf375873874a740e1e68ee9106fa5b0f69c2da54edb40f44502e94caf5a7",
+      "metrics": {
+        "dsc": {
+          "mean": 0.8033813956833867,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7269516870754911,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8459057219983113,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 7.547286546073937,
+          "valid": 991,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.110473487965996,
+          "valid": 991,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "64ac9a6b6b2d90479d9aede0d218446deef2fb8e9d4bb24c0aa2f5151bca3ae1",
+        "per_case_internal_test.csv": "5d8163d298480bb5e6e577415b04731cc9a28c55fc4a4a75464c2c838dedf58f"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed208",
+      "split": "internal_test",
+      "best_sha256": "e8325e2a6b08cd49e9aecf50dd9717670f45fc0733393905d7e1818b388eb676",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7914917836128306,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7106069917264652,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8320698114193443,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.897696710993877,
+          "valid": 981,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 1.9655511618632668,
+          "valid": 981,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "21dccffe406d973f8047f641c14e00c9173cb5f2c3a4b36e26024d6534e013cb",
+        "per_case_internal_test.csv": "16aada72fd6d7875c9196e308458a126170fc7a0764cb9a80d02efb69109636b"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed208",
+      "split": "internal_test",
+      "best_sha256": "091a9c7840e0b6804b45ab97ca1dff68d30fe3e99e48f09d3ff5058f9ca16117",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7958762670008481,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7192683394496767,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8389733579004705,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 7.1409996192549885,
+          "valid": 983,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.0120392006690238,
+          "valid": 983,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "34ae96803791c9380eef66723bc0f05091b58ec0529fb02861c623935992caa1",
+        "per_case_internal_test.csv": "f6e436de69f7f461ba58c70ca2c41b99f80dc779e321768ab40c53e6857a73fb"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed209",
+      "split": "internal_test",
+      "best_sha256": "1189c85dd374ca03ab1f8e26316494a88329106b6b7215335e974cac40b2fe88",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7949650928075266,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7169442688275218,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.83335038822785,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.647918551246081,
+          "valid": 978,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 1.9968372340826412,
+          "valid": 978,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "ddcc6f648c3900803e233f6573dce3fc364350402fc7d4c3f4a110e2effc6cda",
+        "per_case_internal_test.csv": "4002a0036a9d547e9a6de631bd37241f3431f057c1208979cf06b47387905016"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed209",
+      "split": "internal_test",
+      "best_sha256": "8f90d96e5b0a3674b95dc2b307f6c52edc2fc93684c99f0d079a55216a340781",
+      "metrics": {
+        "dsc": {
+          "mean": 0.8015216675733471,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7256992596234662,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8464015543168518,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 5.330026518014761,
+          "valid": 975,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 1.712411304421914,
+          "valid": 975,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "70ccc9241f2dd832a45d2a21aec3ce93e734c024676b9e87c8fa5b1eec8a3909",
+        "per_case_internal_test.csv": "40875def183abeea23b5e3d4cba31fa50049c1453dd15e543bbc07ca5e1a9885"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed210",
+      "split": "internal_test",
+      "best_sha256": "9a3803b2696f9e2f9609aa73cf175fb62785953c6c57c5f23332045b9449822d",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7708210593146395,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.6878938878547859,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8037580179511721,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 12.540322628151815,
+          "valid": 986,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 3.4555780993392937,
+          "valid": 986,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "27cde6a61d1f046a2f4ecea373862315ae91a0160c37f828967965e4b2c1cebe",
+        "per_case_internal_test.csv": "e155f104a23a59432788a1467daa45d83b64989e91b8663a6d0aaa1f32057014"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed210",
+      "split": "internal_test",
+      "best_sha256": "bc30efa7f334e51ba27548af753638dd52eef5aed62ae33e7007d2e77549300e",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7740055315071447,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.6964520027101098,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8168898110032153,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 7.257191858469145,
+          "valid": 967,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.2103166814273245,
+          "valid": 967,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "e16c454cea6e9fb033bbaad0aa53b8a11058691df5c71210a153bf84215b5e8c",
+        "per_case_internal_test.csv": "672cc7d96fccc5349a9267b2af6359c2805ac0fae7ca1b33caaef057f2a14550"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed211",
+      "split": "internal_test",
+      "best_sha256": "246c80610145d8b4b8bbf3d3671211d81356490ccd0a901f74dac40356340c75",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7878576777183458,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7111033325660767,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8276623973972826,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 8.422129269894175,
+          "valid": 982,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.4870527840983843,
+          "valid": 982,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "3a3696ac30701083e8e6648539875b4aa530abb8c47b643f5e9ff2a57a23b73a",
+        "per_case_internal_test.csv": "6b9c4e05fd308f15c8f44dd3ebc41ed4954153777503e89ce632ef9108ff90d5"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed211",
+      "split": "internal_test",
+      "best_sha256": "cad788676cdf0ccc9e4f1c30444d3b911f588e4063c292526c5a01121c0c9dd0",
+      "metrics": {
+        "dsc": {
+          "mean": 0.8032029228470949,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7274902195402578,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8474491047962129,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.250088719146557,
+          "valid": 982,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.0262059936880337,
+          "valid": 982,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "9309959a87c830ca9dd57f5b1cb772ff363019dd43af08cd89dc2f8b1dd11cf5",
+        "per_case_internal_test.csv": "6265e6b76d816cae4d040a926fbba78b29cf43d8bcdca356aace16675783e379"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed212",
+      "split": "internal_test",
+      "best_sha256": "4c4a5b919ecbdf4881a2fde98196b0f1dab2b44147412c3c03f382312fda9ec4",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7636743868268668,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.6821902162272891,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8003851939504893,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 7.339260279945835,
+          "valid": 959,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.3492899320794347,
+          "valid": 959,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "34137a0eff4cc0af8bcef0cf249157421b82fe4ca643ee7a19214ffd920d416e",
+        "per_case_internal_test.csv": "1b24d1d3a92395c4eb21d9a53c02b03b07c996468ae2ddc1639ecfa69768f880"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed212",
+      "split": "internal_test",
+      "best_sha256": "2f52b42163c4893bc0b3e6de622668164a6d00904a3bea39ebde34b5e911a3f2",
+      "metrics": {
+        "dsc": {
+          "mean": 0.767892884977256,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.6872739663693676,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8129534905456783,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 7.245848763726421,
+          "valid": 970,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.151925881606402,
+          "valid": 970,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "e58109e86b4077d86a33b45b5c233bca51b48a0bb72dc46e56d0865e1eaa342b",
+        "per_case_internal_test.csv": "043dd17d9209548b665b35d3458bde6c8cea0e6b2859bc896bd1e3a0ed436d21"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed213",
+      "split": "internal_test",
+      "best_sha256": "505f3e96f0071b639f8cf28007004c2d1d8cf7d651e7dabbd8ef33617d59978e",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7819356795843694,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.6983067337955962,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8177091800479499,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 13.397823538064717,
+          "valid": 993,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 3.5260460436764323,
+          "valid": 993,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "5fd418d923e36e18d3b5a3a41778d3b2c406e153469b0ad02ed6e488457aafc5",
+        "per_case_internal_test.csv": "29200afa3af72b31a58257175992e56f6e5c6e37a5394ce5f318676678aa9bd2"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed213",
+      "split": "internal_test",
+      "best_sha256": "9b33ceee85d2b43acb582db786572556bebab5c156cabf584d7212a9a87cc1ae",
+      "metrics": {
+        "dsc": {
+          "mean": 0.8059427014464996,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7299785364176246,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8534848967813705,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 5.741563093129212,
+          "valid": 984,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 1.6253704874647585,
+          "valid": 984,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "0d4b36f4fdd21d52dd4d084c8f67925c60bc7369fca87a4ce7325efcae24f416",
+        "per_case_internal_test.csv": "27cbdbdcb778d1b5eae7643a80d57490f3438db76c89583929769efd9094e8f6"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed214",
+      "split": "internal_test",
+      "best_sha256": "3fcf1bdf3cb0cb96f9d983dd444d25ca083590372a771beba503f2429857bc1a",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7935292866419112,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7164448127372697,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8297044806883785,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.459163489919272,
+          "valid": 966,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 1.829057762495726,
+          "valid": 966,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "037f98d4aa97e08abe7b0d3084db59de861a02db7f53e96a00c30dd58cb029cf",
+        "per_case_internal_test.csv": "7fda5f937f7f3c9f5500ca154783cd5c71e536d6c7e8137cafd6b11e843d383d"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed214",
+      "split": "internal_test",
+      "best_sha256": "6f9a2527a625b09fcf1f245d9c50abd53ae947bfe6acd88e351cd952cdb28c1e",
+      "metrics": {
+        "dsc": {
+          "mean": 0.8010151749757365,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7259180823935498,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8451898094860073,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.2714540854428895,
+          "valid": 986,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 1.9349397852200765,
+          "valid": 986,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "8bf51259271cc83f6197cbc193910ba82109545654a741634b8f86b0554d1858",
+        "per_case_internal_test.csv": "752bcff29e6f37a7a319ee938a08d2c8be191366e6019fc8b11ebf02cad70278"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed215",
+      "split": "internal_test",
+      "best_sha256": "c8f3607957a0afc9eaf84aa30a87f2e0e1a0f56ec67327889f9f188a6c04e6ad",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7824666545886044,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7046601886395891,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.820588629007201,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 9.247318387031555,
+          "valid": 982,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.581537871096139,
+          "valid": 982,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "42bd1cb536bb2212c953fe540e19fdf6c1b26ccd379faf3cba965caee856894e",
+        "per_case_internal_test.csv": "e70387bb68c9605d98b8e8f2a67ddfecaf0d3b17b08550689e88f57ab11b744d"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed215",
+      "split": "internal_test",
+      "best_sha256": "b565c5291cfd11e9526e2524fb10db6f6e2db4ff7635b60a1153d3ecf0a3d57b",
+      "metrics": {
+        "dsc": {
+          "mean": 0.790083554185514,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7122327995950646,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.833117051563532,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.689151942912973,
+          "valid": 977,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.1950300550021558,
+          "valid": 977,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "d649d8223e41f8390e4e47eed9c757eb311d83af354deeec0724026f37e41b82",
+        "per_case_internal_test.csv": "969ee5ffce0fb04c656607dbb27ab4b906ebb18faebb03bd4d424f159d573b5c"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed216",
+      "split": "internal_test",
+      "best_sha256": "5ac542baca7b3f6d473be8649db1d05189d1d9938d8fb15fb941d950e859e2a7",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7799179894894713,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7020877564564025,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8173612450987137,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 7.454048466238176,
+          "valid": 966,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.2570012384258193,
+          "valid": 966,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "382aed376ba05fc0badf2df45c103a48b834b4c5b5ff380710c4cee6aa933aee",
+        "per_case_internal_test.csv": "16818c85eff79986f557a399b7fec0be60b828d8c933db3fba3db0cb9f984fff"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed216",
+      "split": "internal_test",
+      "best_sha256": "8d0e13e69dba940f71f7d8af65e4e08255775b10a31bda3b8309e86ffbe01264",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7923587401980446,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7153967147694661,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8356086214693222,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 7.263719248383601,
+          "valid": 983,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 2.071762715599908,
+          "valid": 983,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "3dc16aebe6e26aa86122ead46132ec7b8d01e3925d0981bad74c754860c8a688",
+        "per_case_internal_test.csv": "cdfc4e248240f8f9a2fdab3e6aa226d5002940a80ba845bf1cc3a59554167557"
+      }
+    },
+    {
+      "run": "acdc_confirm_decoder_seed217",
+      "split": "internal_test",
+      "best_sha256": "6f6fb78e50dbc4e864ffd80b4615f0e5dbfdfcf1700c90151e6ea0b49301c7c2",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7742453544814366,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.695875607326956,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8149545735621909,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 6.431646773294241,
+          "valid": 952,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 1.9749338952433162,
+          "valid": 952,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "516630be9fd0df9d21b9e82f78268d2dcb3ac3514251fdc25339a919b79c93f4",
+        "per_case_internal_test.csv": "c022b08527d32410a8234d92c85c9fc200982e5ac2248984bd135e147ee2fdad"
+      }
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed217",
+      "split": "internal_test",
+      "best_sha256": "d98209dfa092e1c8a3b17f379b7e65246d94ceb3867c99b40f67da78a870b537",
+      "metrics": {
+        "dsc": {
+          "mean": 0.7983454433142384,
+          "valid": 1098,
+          "total": 1098
+        },
+        "iou": {
+          "mean": 0.7250019243076014,
+          "valid": 1098,
+          "total": 1098
+        },
+        "boundary_f1": {
+          "mean": 0.8475668630738038,
+          "valid": 1098,
+          "total": 1098
+        },
+        "hd95": {
+          "mean": 5.547958685414781,
+          "valid": 972,
+          "total": 1098
+        },
+        "assd": {
+          "mean": 1.617198662410793,
+          "valid": 972,
+          "total": 1098
+        }
+      },
+      "artifacts": {
+        "preds_internal_test.npz": "5bd56c3a707a89bac284b5410deaadb9af74fe6a40fc4656eb336b33a23d5018",
+        "per_case_internal_test.csv": "e6f1f7524ac04d6b2fa4ed253994f89a00557d9d3b01ee18eb3fc0eca523a05a"
+      }
+    }
+  ],
+  "finished_utc": "2026-11-08T14:12:44.601684+00:00"
+}

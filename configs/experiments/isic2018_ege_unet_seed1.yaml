@@ -1,0 +1,31 @@
+extends:
+  - configs/base.yaml
+  - configs/datasets/isic2018.yaml
+
+project:
+  seed: 1
+  output_dir: outputs
+
+experiment:
+  name: isic2018_ege_unet_seed1
+  group: baselines_ege_unet
+  dataset: isic2018
+  model: ege_unet
+
+model:
+  name: ege_unet
+
+loss:
+  dice_weight: 1.0
+  ce_weight: 1.0
+
+trainer:
+  device: cuda
+  epochs: 150
+  batch_size: 8
+  lr: 0.0003
+  weight_decay: 0.00001
+  amp: true
+  save_every: 25
+  scheduler: cosine
+  grad_clip: 1.0

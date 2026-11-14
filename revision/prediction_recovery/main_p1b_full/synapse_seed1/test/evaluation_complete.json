@@ -1,0 +1,25 @@
+{
+  "entry": {
+    "run_id": "main_p1b_full_synapse_seed1_test",
+    "family": "main_p1b_full",
+    "dataset": "synapse",
+    "seed": 1,
+    "split": "test",
+    "checkpoint": "results/checkpoints/synapse_p1b_bdslite_full_current_seed1/best.pt",
+    "checkpoint_sha256": "bea44454c5b3a8c31b2c2469d7431d69075ef4a6b42e25138fcf9df9c9eacf0c",
+    "manifest": "recovered/followup/splits/synapse/test.json",
+    "manifest_sha256": "bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d",
+    "batch": 16,
+    "classes": 9,
+    "output": "revision/prediction_recovery/main_p1b_full/synapse_seed1/test"
+  },
+  "protocol_sha256": "b767017c1bf03de97f31667795998da67ff6779505441a8ca8198875b6a6bcef",
+  "outputs": {
+    "predictions.npz": "c1dc6e64777aa782964601da0a6f2f9b5fd65076da28567c4b024986ab571c1f",
+    "per_case.csv": "47fdf3d9550c351bfa5aba47999e202e7ca20663b40f662959e8a64e4e42b6a1",
+    "provenance.json": "cfcc79d4ed5d509eb38e84a3dc0818dbb43f39438acf35dd120cec11180e8a0a"
+  },
+  "images": 1568,
+  "class_rows": 12544,
+  "seconds": 23.349291429040022
+}

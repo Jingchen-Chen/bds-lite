@@ -1,0 +1,255 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-10T20:33:07.465899+00:00",
+  "scope": "Independent NumPy/SciPy recalculation; no model execution or inference.",
+  "runs_checked_for_identity_shape_dtype_labels": 20,
+  "sampled_slices_per_run": 4,
+  "sampled_class_rows": 240,
+  "metric_comparisons": 1200,
+  "tolerance": 1e-10,
+  "maximum_absolute_error": {
+    "dsc": 0.0,
+    "iou": 0.0,
+    "boundary_f1": 0.0,
+    "hd95": 0.0,
+    "assd": 0.0
+  },
+  "undefined_agreements": {
+    "dsc": 0,
+    "iou": 0,
+    "boundary_f1": 0,
+    "hd95": 96,
+    "assd": 96
+  },
+  "runs": [
+    {
+      "run": "acdc_followup_decoder_aug_seed201",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed201",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed202",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed202",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed203",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed203",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed204",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed204",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed205",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed205",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed206",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed206",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed207",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed207",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed208",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed208",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed209",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed209",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_decoder_aug_seed210",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    },
+    {
+      "run": "acdc_followup_kd_band_aug_seed210",
+      "sample_indices": [
+        0,
+        358,
+        716,
+        1075
+      ]
+    }
+  ],
+  "source_sha256": {
+    "data/processed/acdc_official_test/test/patient101_frame01_slice_0.npz": "e07290b7c6e87c782646aee19850c1ace8c2f695e834f3ed190989a65e9c7632",
+    "data/processed/acdc_official_test/test/patient119_frame09_slice_15.npz": "ac768e0484acfd17810bf8d1685a0fc00c7261396956c7e7b94a198f5c1560ab",
+    "data/processed/acdc_official_test/test/patient134_frame01_slice_10.npz": "5861b7fbbaf863f13e461b132a3c9de85045fc5e0b8a8e7d4902eda32d11e52e",
+    "data/processed/acdc_official_test/test/patient150_frame12_slice_7.npz": "3c07888ab102b40d6f85f76307115b88a7da6f12971ac7dbf2cda30d83f3ce7b",
+    "results/followup_eval/acdc_followup_decoder_aug_seed201/per_case_official_test.csv": "86f8dc3edf73643e07f5bbf49b3426e84df98cb845a92ec16419953e2637f089",
+    "results/followup_eval/acdc_followup_decoder_aug_seed201/preds_official_test.npz": "15ac04b35759c6326e3d312b286f2c0c60c5b187d2219aeef74c25192feea5ff",
+    "results/followup_eval/acdc_followup_decoder_aug_seed202/per_case_official_test.csv": "8d4d52a15a8c1ccaedce04303340bb426fcabde6b0c6fc1c0165b89de6ebc022",
+    "results/followup_eval/acdc_followup_decoder_aug_seed202/preds_official_test.npz": "313f0cce9685b74b3f428db4c0c5a28c06b91cb2ff3d2f7ac46db4a62dcd7130",
+    "results/followup_eval/acdc_followup_decoder_aug_seed203/per_case_official_test.csv": "04a2be4ff5f2112730208777b972eedd4e1dc0f1d97be6cd3daa4bcb85453ec5",
+    "results/followup_eval/acdc_followup_decoder_aug_seed203/preds_official_test.npz": "a51797b7a2d02f0df06f34cd22e656b7acf4a6c1ac59a39695bd1fdfe0fc6e7a",
+    "results/followup_eval/acdc_followup_decoder_aug_seed204/per_case_official_test.csv": "f9627dc2f480cd55a6793aeced849a6ad0724eb127092f6a9296725474d39eb4",
+    "results/followup_eval/acdc_followup_decoder_aug_seed204/preds_official_test.npz": "130b89fc7b1e4a50d6a216688ec90fbdc3e655d483a81870aabf14d370434a35",
+    "results/followup_eval/acdc_followup_decoder_aug_seed205/per_case_official_test.csv": "46d7c48d57eceb849298b2fd989c9103a213d64e94ff9ba05e4c8010d035eaf7",
+    "results/followup_eval/acdc_followup_decoder_aug_seed205/preds_official_test.npz": "c09abb1f133da5dd16ade4b0da0ae534904783b34b6869ffa018df9453db0f50",
+    "results/followup_eval/acdc_followup_decoder_aug_seed206/per_case_official_test.csv": "9272450b8c3bfd8cc0a0999fe30da782c40501c0db96ff629c533470a8581bbd",
+    "results/followup_eval/acdc_followup_decoder_aug_seed206/preds_official_test.npz": "891f106ab2f36bff1fb0d653c99b21e8b419dbebfc196c10dad156385592f440",
+    "results/followup_eval/acdc_followup_decoder_aug_seed207/per_case_official_test.csv": "2175cfd994c9b75a8c2d1e6ed0e93113bdc5aab6638f875938095f64761a5c66",
+    "results/followup_eval/acdc_followup_decoder_aug_seed207/preds_official_test.npz": "7359db6f8410d0c30338eb8ff3b3dbcea86b0b702bd8237f351d7717647bd239",
+    "results/followup_eval/acdc_followup_decoder_aug_seed208/per_case_official_test.csv": "6bb6ff3481da7530064f62d7951a6593914b6321c828b1bf1b4ed4cae2394258",
+    "results/followup_eval/acdc_followup_decoder_aug_seed208/preds_official_test.npz": "239e7dda494c32dd91f10e3da28f2da77bbf41d03d95d634b3154e4763acc483",
+    "results/followup_eval/acdc_followup_decoder_aug_seed209/per_case_official_test.csv": "5e25ef41c578eb2407f0de24a53d7e9b91f5bce932b4fb08d387bc10da69f720",
+    "results/followup_eval/acdc_followup_decoder_aug_seed209/preds_official_test.npz": "6ad10147ed0415654f13f1a5ec89679c875103a1b46ad3697438c28a9bca87b5",
+    "results/followup_eval/acdc_followup_decoder_aug_seed210/per_case_official_test.csv": "2cad3c4d4e50ab61a90c2c742035eff8e690a8e06b5474290a006574dc1fad5c",
+    "results/followup_eval/acdc_followup_decoder_aug_seed210/preds_official_test.npz": "315e988045e023410f7b78f958a585e287f6643b018ccb0308303797f78788a2",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed201/per_case_official_test.csv": "9586cb8ef44be4e296b73b1c8b2c86cfee825c3d768d8d1fe16506c183e8ff2d",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed201/preds_official_test.npz": "dafb765c39c5741dc594e10495a7fb4b7b1e855c8366da9c3907ed37bfda7eee",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed202/per_case_official_test.csv": "7b881fafc72c52e1c81cfb82b3670793eb60260c2244f053080bbafef8854328",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed202/preds_official_test.npz": "d2ee6803f8e264a6c8a5144f0aaf6f7b3a1a24e785101004f3ff3636f4cfe2b8",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed203/per_case_official_test.csv": "6b2e58ffe0f0036fd8af0540bfb1cb64811132359fe81eaee5f8da981ae00231",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed203/preds_official_test.npz": "0bc7612a278831511fa212142b18ca396bb4a4a13b019cf48b2d20b7a460e8c7",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed204/per_case_official_test.csv": "852998d4805433e19c74f41548cb8278ebebf4d2cf53c4d7e3015748fd5fe65a",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed204/preds_official_test.npz": "0772c68c9d93a72a5de955df73ae5ca7ac5a843bc2ad86920984c62d5e35f2c4",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed205/per_case_official_test.csv": "1829b181dbd0be77de0d8abe453d9e37e3a5a617d2618a50c22a35e8bd6ce4a2",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed205/preds_official_test.npz": "300fca76e8457dc4012059b7a0e3a7a0d763e3dca21624b9846064f92915a187",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed206/per_case_official_test.csv": "f4a58ead0eecedcb484ae666edc1aeccfaeceda2d36f4b68aae76dfb366f30f1",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed206/preds_official_test.npz": "90d48e1573546e90ae6b9f7c7f59989887c2b1e5ba7795ca724e01d9cbf6bfef",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed207/per_case_official_test.csv": "8fc2ee7db70e9e90f5f224405625e4e98fb5cfe40781b94bfd196749a46ec552",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed207/preds_official_test.npz": "e720df052e47d4dd8eb8fb76f35e81fc115e18cdf0666c322b7e845c1e8025f4",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed208/per_case_official_test.csv": "edb801eccd0e8dce0cabe0e2c1838fd6683e7598d56d01fc19141e4ab85239b4",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed208/preds_official_test.npz": "5c1e5f80aa306a01225a4d0109c219beda18fb5a928c9f72e6e09d57d7edbaf0",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed209/per_case_official_test.csv": "43d9492efe9287a813ada1492885a2e3ded4fe48aeb14689cb6276dfc558fb10",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed209/preds_official_test.npz": "4dfc314085d8a5e7df30b2bb7361c9b6d6a58f3904aa3c97f32fec9dca7ea176",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed210/per_case_official_test.csv": "6313cd631856cfd8b96d4fa96a2532ac97557c648493e249a763b233476a207f",
+    "results/followup_eval/acdc_followup_kd_band_aug_seed210/preds_official_test.npz": "1d71e5c2f491d0de6905826927425010799d0155a8e21c37521a896c0fe0ffca",
+    "results/followup_eval/evaluation_record_e3.json": "4ddc605935e8481a686ae046cad2784bf56564bfcc02c7f9828b04b90bf6649f",
+    "revision/acdc_confirm/official_test_manifest.json": "add0459b8efc038da22c4acf5eabd64eee6ba203b0cd18847bc7ee92a003d609"
+  },
+  "limits": "Samples four slices per run; not exhaustive recalculation of all E3 pixels."
+}

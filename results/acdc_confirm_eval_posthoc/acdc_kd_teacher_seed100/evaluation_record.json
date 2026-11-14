@@ -1,0 +1,48 @@
+{
+  "label": "post hoc, descriptive (author authorization 2026-11-09, decision 7)",
+  "started_utc": "2026-11-09T15:19:22.617211+00:00",
+  "finished_utc": "2026-11-09T15:19:40.207557+00:00",
+  "checkpoint": "results/revision_runs/acdc_kd_teacher_seed100/best.pt",
+  "checkpoint_sha256": "735747303c444e13dd57457e3540ee410b5de43421b68fd92e2eda69c88dafa0",
+  "recorded_sha256": {
+    "test_metrics.json": "735747303c444e13dd57457e3540ee410b5de43421b68fd92e2eda69c88dafa0",
+    "cache_complete.json": "735747303c444e13dd57457e3540ee410b5de43421b68fd92e2eda69c88dafa0"
+  },
+  "selected_epoch": 13,
+  "split": "official_test (patients 101-150)",
+  "evaluator": "scripts/revision/train_run.py::evaluate (unchanged)",
+  "loader": "scripts/acdc_confirm/evaluate_test.py::official_loader (hash-checked)",
+  "torch": "2.11.0+cu130",
+  "cuda": "13.0",
+  "metrics": {
+    "dsc": {
+      "mean": 0.842240413933746,
+      "valid": 3228,
+      "total": 3228
+    },
+    "iou": {
+      "mean": 0.77539463676653,
+      "valid": 3228,
+      "total": 3228
+    },
+    "boundary_f1": {
+      "mean": 0.9000258136460584,
+      "valid": 3228,
+      "total": 3228
+    },
+    "hd95": {
+      "mean": 2.5718621161794935,
+      "valid": 2802,
+      "total": 3228
+    },
+    "assd": {
+      "mean": 0.9896249630096914,
+      "valid": 2802,
+      "total": 3228
+    }
+  },
+  "artifacts": {
+    "preds_official_test.npz": "f75ea6bd152fbc45fc7123fbae6bf0d40071beceebe6a7ec408c5174a3065ba3",
+    "per_case_official_test.csv": "75fc6dae59f7556b690a4a7f9619161e4572aca09dc77e7ea6d79077279c62e2"
+  }
+}

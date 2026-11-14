@@ -1,0 +1,126 @@
+{
+  "label": "post hoc, descriptive, inference only (author request 2026-11-11)",
+  "started_utc": "2026-11-11T11:55:48.954092+00:00",
+  "split": "official_test (ACDC patients 101-150)",
+  "loader": "scripts/acdc_confirm/evaluate_test.py::official_loader (hash-checked)",
+  "evaluator": "scripts/revision/train_run.py::evaluate (unchanged; argmax only)",
+  "torch": "2.11.0+cu130",
+  "cuda": "13.0",
+  "cudnn_allow_tf32": true,
+  "matmul_allow_tf32": false,
+  "teachers": {
+    "external": {
+      "run": "acdc_kd_teacher_seed100",
+      "identity": {
+        "best_sha256": "735747303c444e13dd57457e3540ee410b5de43421b68fd92e2eda69c88dafa0",
+        "equals_registered": true,
+        "equals_final_metrics": true,
+        "equals_cache_record": true,
+        "cache_sha256": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e",
+        "cache_equals_record": true,
+        "students_reading_cache": 44,
+        "all_students_recorded_this_cache": true,
+        "selected_epoch": 13,
+        "epochs": 150,
+        "test_evaluated_during_training": false
+      },
+      "parameters": 24436804,
+      "input_processing": "ManifestDataset 1x224x224 per-volume z-scored image; TeacherNetMC.forward expands to 3 identical channels (in_channels=3 pretrained ResNet-34 stem); input_norm 'none' (no ImageNet mean/std) -- identical to scripts/kd_mc/train_mc.py training and cache",
+      "row_level_metrics_from_evaluate": {
+        "dsc": {
+          "mean": 0.842240413933746,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.77539463676653,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.9000258136460584,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 2.5718621161794935,
+          "valid": 2802,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 0.9896249630096914,
+          "valid": 2802,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "f75ea6bd152fbc45fc7123fbae6bf0d40071beceebe6a7ec408c5174a3065ba3",
+        "per_case_official_test.csv": "75fc6dae59f7556b690a4a7f9619161e4572aca09dc77e7ea6d79077279c62e2"
+      },
+      "reproduction_of_prior_evaluation": {
+        "prior_evaluation": "results/acdc_confirm_eval_posthoc/acdc_kd_teacher_seed100",
+        "same_ids": true,
+        "differing_pixels": 0,
+        "predictions_identical": true,
+        "per_case_csv_identical": true
+      }
+    },
+    "compact": {
+      "run": "acdc_followup_e2_teacher_seed100",
+      "identity": {
+        "best_sha256": "0bf28bcc7bce3ca75cc8fb3fbba277120c92702b78edb7979c147893df1f7c1e",
+        "equals_registered": true,
+        "equals_final_metrics": true,
+        "equals_cache_record": true,
+        "cache_sha256": "fdbcc62425757b95343b0c5034e747bc6957fa8b056ccd4d14681d84348bbed7",
+        "cache_equals_record": true,
+        "students_reading_cache": 17,
+        "all_students_recorded_this_cache": true,
+        "selected_epoch": 20,
+        "epochs": 150,
+        "test_evaluated_during_training": false
+      },
+      "parameters": 2197493,
+      "input_processing": "ManifestDataset 1x224x224 per-volume z-scored image passed unchanged to the student architecture (in_channels=1), identical to the D-recipe training",
+      "row_level_metrics_from_evaluate": {
+        "dsc": {
+          "mean": 0.7657592938729922,
+          "valid": 3228,
+          "total": 3228
+        },
+        "iou": {
+          "mean": 0.6927962827920775,
+          "valid": 3228,
+          "total": 3228
+        },
+        "boundary_f1": {
+          "mean": 0.8050150549805917,
+          "valid": 3228,
+          "total": 3228
+        },
+        "hd95": {
+          "mean": 7.687660789878424,
+          "valid": 2699,
+          "total": 3228
+        },
+        "assd": {
+          "mean": 2.3642577456462908,
+          "valid": 2699,
+          "total": 3228
+        }
+      },
+      "artifacts": {
+        "preds_official_test.npz": "c91fab7c769fd8aea8f076a1da3ac062d01c873d77eecaee6e5cab3a07acde1c",
+        "per_case_official_test.csv": "17921e6a9d42523740360545ce2737533eaeac72ac35ab06d1aa2bdeab01b97f"
+      },
+      "reproduction_of_prior_evaluation": {
+        "prior_evaluation": "results/followup_eval/acdc_followup_e2_teacher_seed100",
+        "same_ids": true,
+        "differing_pixels": 0,
+        "predictions_identical": true,
+        "per_case_csv_identical": true
+      }
+    }
+  },
+  "finished_utc": "2026-11-11T11:56:21.662845+00:00"
+}

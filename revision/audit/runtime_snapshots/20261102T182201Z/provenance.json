@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-02T18:22:01.498651+00:00",
+  "files": [
+    {
+      "source": "revision/training_supervision/events.jsonl",
+      "snapshot": "revision/audit/runtime_snapshots/20261102T182201Z/revision__training_supervision__events.jsonl",
+      "sha256": "6ccb6f92da1b85f89ebb99c1b252fe2c560a8e91d6a64c013c8c25b4cc2647cb"
+    },
+    {
+      "source": "revision/training_supervision/queue_attempt_1793643284379070931.log",
+      "snapshot": "revision/audit/runtime_snapshots/20261102T182201Z/revision__training_supervision__queue_attempt_1793643284379070931.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "results/revision_runs/isic2018_wp5_full_seed1/progress.json",
+      "snapshot": "revision/audit/runtime_snapshots/20261102T182201Z/results__revision_runs__isic2018_wp5_full_seed1__progress.json",
+      "sha256": "7fd8776a7433e6ba682f6d1e20475b7b5fddc7d0ae193d59b9a6fb27196ef245"
+    }
+  ],
+  "interpretation": "point-in-time runtime snapshots"
+}

@@ -1,0 +1,276 @@
+path,dataset,seed,signature_candidate,surface_weight,boundary_weight,distill_weight,enabled_gate,effective_gate,gate_scale,gate_tensor_keys,stored_model_name,protocol_mismatches,status
+results/checkpoints/acdc_attention_unet_baseline/best.pt,acdc,2026,M0,0.0,0.0,0.0,False,False,0.5,0,attention_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_boundary_gate_damped_distance/best.pt,acdc,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,extra objective;training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_boundary_gate_damped_surface/best.pt,acdc,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_boundary_gate_damped_surface_class1/best.pt,acdc,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting;training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_boundary_gate_damped_surface_class13_mild/best.pt,acdc,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting;training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_boundary_gate_damped_surface_class13_mild_seed2027/best.pt,acdc,2027,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting;training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_boundary_gate_damped_surface_class13_mild_seed2028/best.pt,acdc,2028,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting;training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_boundary_gate_damped_surface_class1_mild/best.pt,acdc,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting;training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_p1_full_current/best.pt,acdc,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting;training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_p1_gate_identity_inference/best.pt,acdc,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting;training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_p1_gate_removed/best.pt,acdc,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting;training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_p1_stop_gradient/best.pt,acdc,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting;training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_p1_stop_gradient_gate_removed/best.pt,acdc,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting;training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_bdslite_unet/best.pt,acdc,2026,other,0.0,0.4,0.05,False,False,0.5,0,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p1b_bdslite_full_current_seed1/best.pt,acdc,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p1b_bdslite_full_current_seed2/best.pt,acdc,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p1b_bdslite_full_current_seed3/best.pt,acdc,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p1b_bdslite_gate_identity_seed1/best.pt,acdc,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p1b_bdslite_gate_identity_seed2/best.pt,acdc,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p1b_bdslite_gate_identity_seed3/best.pt,acdc,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p1b_bdslite_gate_removed_seed1/best.pt,acdc,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p1b_bdslite_gate_removed_seed2/best.pt,acdc,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p1b_bdslite_gate_removed_seed3/best.pt,acdc,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p1b_unet_seed1/best.pt,acdc,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p1b_unet_seed2/best.pt,acdc,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p1b_unet_seed3/best.pt,acdc,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p2_unet_boundary_dou_seed1/best.pt,acdc,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p2_unet_boundary_dou_seed2/best.pt,acdc,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p2_unet_boundary_dou_seed3/best.pt,acdc,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p2_unet_gsl_seed1/best.pt,acdc,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p2_unet_gsl_seed2/best.pt,acdc,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p2_unet_gsl_seed3/best.pt,acdc,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p2b_bdslite_gate_removed_gsl_seed1/best.pt,acdc,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,different geometry-loss objective;class weighting,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p2b_bdslite_gate_removed_gsl_seed2/best.pt,acdc,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,different geometry-loss objective;class weighting,candidate only: source/objective/split verification required
+results/checkpoints/acdc_p2b_bdslite_gate_removed_gsl_seed3/best.pt,acdc,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,different geometry-loss objective;class weighting,candidate only: source/objective/split verification required
+results/checkpoints/acdc_unet_baseline/best.pt,acdc,2026,M0,0.0,0.0,0.0,False,False,0.5,0,unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_attention_unet_baseline/best.pt,isic2018,2026,M0,0.0,0.0,0.0,False,False,0.5,0,attention_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_bdslite_boundary_gate_damped_distance/best.pt,isic2018,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,extra objective;training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_bdslite_boundary_gate_damped_surface/best.pt,isic2018,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_bdslite_boundary_gate_damped_surface_seed2027/best.pt,isic2018,2027,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_bdslite_boundary_gate_damped_surface_seed2028/best.pt,isic2018,2028,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_bdslite_p1_full_current/best.pt,isic2018,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_bdslite_p1_gate_identity_inference/best.pt,isic2018,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_bdslite_p1_gate_removed/best.pt,isic2018,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_bdslite_p1_stop_gradient/best.pt,isic2018,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_bdslite_p1_stop_gradient_gate_removed/best.pt,isic2018,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_bdslite_unet/best.pt,isic2018,2026,other,0.0,0.4,0.05,False,False,0.5,0,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_e1_unet_gsl_long_seed1/best.pt,isic2018,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective;trainer.epochs,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_mobilevit_unet/best.pt,isic2018,2026,M0,0.0,0.0,0.0,False,False,0.5,0,mobilevit_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p1b_bdslite_full_current_seed1/best.pt,isic2018,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p1b_bdslite_full_current_seed2/best.pt,isic2018,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p1b_bdslite_full_current_seed3/best.pt,isic2018,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p1b_bdslite_gate_identity_seed1/best.pt,isic2018,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p1b_bdslite_gate_identity_seed2/best.pt,isic2018,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p1b_bdslite_gate_identity_seed3/best.pt,isic2018,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p1b_bdslite_gate_removed_seed1/best.pt,isic2018,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p1b_bdslite_gate_removed_seed2/best.pt,isic2018,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p1b_bdslite_gate_removed_seed3/best.pt,isic2018,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p1b_unet_seed1/best.pt,isic2018,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p1b_unet_seed2/best.pt,isic2018,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p1b_unet_seed3/best.pt,isic2018,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p2_unet_boundary_dou_seed1/best.pt,isic2018,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p2_unet_boundary_dou_seed2/best.pt,isic2018,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p2_unet_boundary_dou_seed3/best.pt,isic2018,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p2_unet_gsl_seed1/best.pt,isic2018,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p2_unet_gsl_seed1__rerun_step3/best.pt,isic2018,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p2_unet_gsl_seed2/best.pt,isic2018,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p2_unet_gsl_seed3/best.pt,isic2018,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p2b_bdslite_gate_removed_gsl_seed1/best.pt,isic2018,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p2b_bdslite_gate_removed_gsl_seed2/best.pt,isic2018,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_p2b_bdslite_gate_removed_gsl_seed3/best.pt,isic2018,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/isic2018_unet_baseline/best.pt,isic2018,2026,M0,0.0,0.0,0.0,False,False,0.5,0,unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_attention_unet_baseline/best.pt,synapse,2026,M0,0.0,0.0,0.0,False,False,0.5,0,attention_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_boundary_gate_damped_distance/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,extra objective;training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_boundary_gate_damped_surface/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_boundary_gate_damped_surface_far_fp/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,extra objective;class weighting;training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_boundary_gate_damped_surface_hardclass/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,class weighting;training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_boundary_gate_surface/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.5,2,bdslite_unet,nonlocked gate scale;training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_boundary_low/best.pt,synapse,2026,other,0.0,0.1,0.0,False,False,0.5,0,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_boundary_surface_low/best.pt,synapse,2026,other,0.01,0.1,0.0,False,False,0.5,0,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_boundary_surface_signed/best.pt,synapse,2026,other,0.05,0.1,0.0,False,False,0.5,0,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_boundary_surface_strong/best.pt,synapse,2026,other,1.0,0.1,0.0,False,False,0.5,0,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_boundary_surface_strong_tiny_boundary/best.pt,synapse,2026,other,1.0,0.05,0.0,False,False,0.5,0,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_detached_boundary/best.pt,synapse,2026,other,0.0,0.05,0.0,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_hr_rescue/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet_hr,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_init_from_unet/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,trainer.lr;training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_no_surface/best.pt,synapse,2026,other,0.0,0.05,0.0,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_p1_full_current/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_p1_gate_identity_inference/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_p1_gate_removed/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_p1_stop_gradient/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_p1_stop_gradient_gate_removed/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_two_stage/best.pt,synapse,2026,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_unet/best.pt,synapse,2026,other,0.0,0.4,0.05,False,False,0.5,0,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_bdslite_weak_boundary/best.pt,synapse,2026,M2,0.0,0.05,0.0,False,False,0.5,0,bdslite_unet,training seed,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p1b_bdslite_full_current_seed1/best.pt,synapse,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p1b_bdslite_full_current_seed2/best.pt,synapse,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p1b_bdslite_full_current_seed3/best.pt,synapse,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p1b_bdslite_gate_identity_seed1/best.pt,synapse,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p1b_bdslite_gate_identity_seed2/best.pt,synapse,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p1b_bdslite_gate_identity_seed3/best.pt,synapse,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p1b_bdslite_gate_removed_seed1/best.pt,synapse,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p1b_bdslite_gate_removed_seed2/best.pt,synapse,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p1b_bdslite_gate_removed_seed3/best.pt,synapse,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p1b_unet_seed1/best.pt,synapse,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p1b_unet_seed2/best.pt,synapse,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p1b_unet_seed3/best.pt,synapse,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p2_unet_boundary_dou_seed1/best.pt,synapse,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p2_unet_boundary_dou_seed2/best.pt,synapse,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p2_unet_boundary_dou_seed3/best.pt,synapse,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p2_unet_gsl_seed1/best.pt,synapse,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p2_unet_gsl_seed2/best.pt,synapse,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p2_unet_gsl_seed3/best.pt,synapse,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p2b_bdslite_gate_removed_gsl_seed1/best.pt,synapse,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p2b_bdslite_gate_removed_gsl_seed2/best.pt,synapse,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/synapse_p2b_bdslite_gate_removed_gsl_seed3/best.pt,synapse,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,different geometry-loss objective,candidate only: source/objective/split verification required
+results/checkpoints/synapse_unet_baseline/best.pt,synapse,2026,M0,0.0,0.0,0.0,False,False,0.5,0,unet,training seed,candidate only: source/objective/split verification required
+outputs/checkpoints/acdc_ege_unet_seed1/best.pt,acdc,1,M0,0.0,0.0,0.0,False,False,0.5,0,ege_unet,,candidate only: source/objective/split verification required
+outputs/checkpoints/acdc_ege_unet_seed2/best.pt,acdc,2,M0,0.0,0.0,0.0,False,False,0.5,0,ege_unet,,candidate only: source/objective/split verification required
+outputs/checkpoints/acdc_ege_unet_seed3/best.pt,acdc,3,M0,0.0,0.0,0.0,False,False,0.5,0,ege_unet,,candidate only: source/objective/split verification required
+outputs/checkpoints/isic2018_ege_unet_seed1/best.pt,isic2018,1,M0,0.0,0.0,0.0,False,False,0.5,0,ege_unet,,candidate only: source/objective/split verification required
+outputs/checkpoints/isic2018_ege_unet_seed2/best.pt,isic2018,2,M0,0.0,0.0,0.0,False,False,0.5,0,ege_unet,,candidate only: source/objective/split verification required
+outputs/checkpoints/isic2018_ege_unet_seed3/best.pt,isic2018,3,M0,0.0,0.0,0.0,False,False,0.5,0,ege_unet,,candidate only: source/objective/split verification required
+outputs/checkpoints/synapse_ege_unet_seed1/best.pt,synapse,1,M0,0.0,0.0,0.0,False,False,0.5,0,ege_unet,,candidate only: source/objective/split verification required
+outputs/checkpoints/synapse_ege_unet_seed2/best.pt,synapse,2,M0,0.0,0.0,0.0,False,False,0.5,0,ege_unet,,candidate only: source/objective/split verification required
+outputs/checkpoints/synapse_ege_unet_seed3/best.pt,synapse,3,M0,0.0,0.0,0.0,False,False,0.5,0,ege_unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_boundary_distill_seed1/best.pt,acdc,1,other,0.0,0.05,0.05,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_boundary_distill_seed2/best.pt,acdc,2,other,0.0,0.05,0.05,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_boundary_distill_seed3/best.pt,acdc,3,other,0.0,0.05,0.05,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_boundary_gate_seed1/best.pt,acdc,1,other,0.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_boundary_gate_seed2/best.pt,acdc,2,other,0.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_boundary_gate_seed3/best.pt,acdc,3,other,0.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_boundary_only_seed1/best.pt,acdc,1,M2,0.0,0.05,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_boundary_only_seed2/best.pt,acdc,2,M2,0.0,0.05,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_boundary_only_seed3/best.pt,acdc,3,M2,0.0,0.05,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_full_seed1/best.pt,acdc,1,M6,1.0,0.05,0.05,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_full_seed2/best.pt,acdc,2,M6,1.0,0.05,0.05,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_full_seed3/best.pt,acdc,3,M6,1.0,0.05,0.05,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_gate_surface_class_weighted_seed1/best.pt,acdc,1,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,class weighting,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_gate_surface_class_weighted_seed2/best.pt,acdc,2,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,class weighting,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_gate_surface_class_weighted_seed3/best.pt,acdc,3,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,class weighting,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_gate_surface_seed1/best.pt,acdc,1,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_gate_surface_seed2/best.pt,acdc,2,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_gate_surface_seed3/best.pt,acdc,3,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_surface_only_seed1/best.pt,acdc,1,M1,1.0,0.0,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_surface_only_seed2/best.pt,acdc,2,M1,1.0,0.0,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_bds_lite_surface_only_seed3/best.pt,acdc,3,M1,1.0,0.0,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/acdc_mobilevit_unet_seed1/best.pt,acdc,1,M0,0.0,0.0,0.0,False,False,0.5,0,mobilevit_unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_mobilevit_unet_seed2/best.pt,acdc,2,M0,0.0,0.0,0.0,False,False,0.5,0,mobilevit_unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_mobilevit_unet_seed3/best.pt,acdc,3,M0,0.0,0.0,0.0,False,False,0.5,0,mobilevit_unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_unet_boundary_loss_seed1/best.pt,acdc,1,M2,0.0,0.05,0.0,False,False,0.0,0,bdslite_unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_unet_boundary_loss_seed2/best.pt,acdc,2,M2,0.0,0.05,0.0,False,False,0.0,0,bdslite_unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_unet_boundary_loss_seed3/best.pt,acdc,3,M2,0.0,0.05,0.0,False,False,0.0,0,bdslite_unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_unet_deep_supervision_seed1/best.pt,acdc,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_unet_deep_supervision_seed2/best.pt,acdc,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_unet_deep_supervision_seed3/best.pt,acdc,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_unet_seed1/best.pt,acdc,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_unet_seed2/best.pt,acdc,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_unet_seed3/best.pt,acdc,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_unet_surface_loss_seed1/best.pt,acdc,1,M1,1.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_unet_surface_loss_seed2/best.pt,acdc,2,M1,1.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/acdc_unet_surface_loss_seed3/best.pt,acdc,3,M1,1.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_boundary_distill_seed1/best.pt,isic2018,1,other,0.0,0.05,0.05,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_boundary_distill_seed2/best.pt,isic2018,2,other,0.0,0.05,0.05,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_boundary_distill_seed3/best.pt,isic2018,3,other,0.0,0.05,0.05,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_boundary_gate_seed1/best.pt,isic2018,1,other,0.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_boundary_gate_seed2/best.pt,isic2018,2,other,0.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_boundary_gate_seed3/best.pt,isic2018,3,other,0.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_boundary_only_seed1/best.pt,isic2018,1,M2,0.0,0.05,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_boundary_only_seed2/best.pt,isic2018,2,M2,0.0,0.05,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_boundary_only_seed3/best.pt,isic2018,3,M2,0.0,0.05,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_full_seed1/best.pt,isic2018,1,M6,1.0,0.05,0.05,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_full_seed2/best.pt,isic2018,2,M6,1.0,0.05,0.05,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_full_seed3/best.pt,isic2018,3,M6,1.0,0.05,0.05,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_gate_surface_class_weighted_seed1/best.pt,isic2018,1,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,class weighting,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_gate_surface_class_weighted_seed2/best.pt,isic2018,2,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,class weighting,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_gate_surface_class_weighted_seed3/best.pt,isic2018,3,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,class weighting,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_gate_surface_seed1/best.pt,isic2018,1,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_gate_surface_seed2/best.pt,isic2018,2,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_gate_surface_seed3/best.pt,isic2018,3,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_surface_only_seed1/best.pt,isic2018,1,M1,1.0,0.0,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_surface_only_seed2/best.pt,isic2018,2,M1,1.0,0.0,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_bds_lite_surface_only_seed3/best.pt,isic2018,3,M1,1.0,0.0,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_mobilevit_unet_seed1/best.pt,isic2018,1,M0,0.0,0.0,0.0,False,False,0.5,0,mobilevit_unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_mobilevit_unet_seed2/best.pt,isic2018,2,M0,0.0,0.0,0.0,False,False,0.5,0,mobilevit_unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_mobilevit_unet_seed3/best.pt,isic2018,3,M0,0.0,0.0,0.0,False,False,0.5,0,mobilevit_unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_unet_boundary_loss_seed1/best.pt,isic2018,1,M2,0.0,0.05,0.0,False,False,0.0,0,bdslite_unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_unet_boundary_loss_seed2/best.pt,isic2018,2,M2,0.0,0.05,0.0,False,False,0.0,0,bdslite_unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_unet_boundary_loss_seed3/best.pt,isic2018,3,M2,0.0,0.05,0.0,False,False,0.0,0,bdslite_unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_unet_deep_supervision_seed1/best.pt,isic2018,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_unet_deep_supervision_seed2/best.pt,isic2018,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_unet_deep_supervision_seed3/best.pt,isic2018,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_unet_seed1/best.pt,isic2018,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_unet_seed2/best.pt,isic2018,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_unet_seed3/best.pt,isic2018,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_unet_surface_loss_seed1/best.pt,isic2018,1,M1,1.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_unet_surface_loss_seed2/best.pt,isic2018,2,M1,1.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/isic2018_unet_surface_loss_seed3/best.pt,isic2018,3,M1,1.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_boundary_distill_seed1/best.pt,synapse,1,other,0.0,0.05,0.05,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_boundary_distill_seed2/best.pt,synapse,2,other,0.0,0.05,0.05,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_boundary_distill_seed3/best.pt,synapse,3,other,0.0,0.05,0.05,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_boundary_gate_seed1/best.pt,synapse,1,other,0.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_boundary_gate_seed2/best.pt,synapse,2,other,0.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_boundary_gate_seed3/best.pt,synapse,3,other,0.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_boundary_only_seed1/best.pt,synapse,1,M2,0.0,0.05,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_boundary_only_seed2/best.pt,synapse,2,M2,0.0,0.05,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_boundary_only_seed3/best.pt,synapse,3,M2,0.0,0.05,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_full_seed1/best.pt,synapse,1,M6,1.0,0.05,0.05,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_full_seed2/best.pt,synapse,2,M6,1.0,0.05,0.05,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_full_seed3/best.pt,synapse,3,M6,1.0,0.05,0.05,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_gate_surface_class_weighted_seed1/best.pt,synapse,1,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,class weighting,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_gate_surface_class_weighted_seed2/best.pt,synapse,2,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,class weighting,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_gate_surface_class_weighted_seed3/best.pt,synapse,3,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,class weighting,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_gate_surface_seed1/best.pt,synapse,1,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_gate_surface_seed2/best.pt,synapse,2,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_gate_surface_seed3/best.pt,synapse,3,M4,1.0,0.05,0.0,True,True,0.25,2,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_surface_only_seed1/best.pt,synapse,1,M1,1.0,0.0,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_surface_only_seed2/best.pt,synapse,2,M1,1.0,0.0,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_bds_lite_surface_only_seed3/best.pt,synapse,3,M1,1.0,0.0,0.0,False,False,0.25,0,bds_lite,,candidate only: source/objective/split verification required
+outputs/runs/synapse_mobilevit_unet_seed1/best.pt,synapse,1,M0,0.0,0.0,0.0,False,False,0.5,0,mobilevit_unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_mobilevit_unet_seed2/best.pt,synapse,2,M0,0.0,0.0,0.0,False,False,0.5,0,mobilevit_unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_mobilevit_unet_seed3/best.pt,synapse,3,M0,0.0,0.0,0.0,False,False,0.5,0,mobilevit_unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_unet_boundary_loss_seed1/best.pt,synapse,1,M2,0.0,0.05,0.0,False,False,0.0,0,bdslite_unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_unet_boundary_loss_seed2/best.pt,synapse,2,M2,0.0,0.05,0.0,False,False,0.0,0,bdslite_unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_unet_boundary_loss_seed3/best.pt,synapse,3,M2,0.0,0.05,0.0,False,False,0.0,0,bdslite_unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_unet_deep_supervision_seed1/best.pt,synapse,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_unet_deep_supervision_seed2/best.pt,synapse,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_unet_deep_supervision_seed3/best.pt,synapse,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_unet_seed1/best.pt,synapse,1,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_unet_seed2/best.pt,synapse,2,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_unet_seed3/best.pt,synapse,3,M0,0.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_unet_surface_loss_seed1/best.pt,synapse,1,M1,1.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_unet_surface_loss_seed2/best.pt,synapse,2,M1,1.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/synapse_unet_surface_loss_seed3/best.pt,synapse,3,M1,1.0,0.0,0.0,False,False,0.5,0,unet,,candidate only: source/objective/split verification required
+outputs/runs/t07_smoke_unet_seed7/best.pt,smoke,7,M0,0.0,0.0,0.0,False,False,0.5,0,unet,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+outputs/runs/t10_smoke_deep_supervision_seed7/best.pt,smoke,7,M0,0.0,0.0,0.0,False,False,0.5,0,unet_deep_supervision,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_context_baseline_20261019/acdc_context_seed1/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_context_baseline_20261019/acdc_context_seed2/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_context_baseline_20261019/acdc_context_seed3/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_index_baseline_20261019/acdc_paper_gsl_2d_seed1/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_index_baseline_20261019/acdc_paper_gsl_2d_seed2/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_index_baseline_20261019/acdc_paper_gsl_2d_seed3/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_index_baseline_20261019/acdc_region_seed1/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_index_baseline_20261019/acdc_region_seed2/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_index_baseline_20261019/acdc_region_seed3/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_phase_reduction_baseline_20261019/acdc_full_phase_seed1/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_phase_reduction_baseline_20261019/acdc_full_phase_seed2/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_phase_reduction_baseline_20261019/acdc_full_phase_seed3/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_phase_reduction_baseline_20261019/acdc_mean_slice_seed1/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_phase_reduction_baseline_20261019/acdc_mean_slice_seed2/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/acdc_phase_reduction_baseline_20261019/acdc_mean_slice_seed3/best.pt,,,M0,0.0,0.0,0.0,False,False,0.5,0,,trainer.epochs;trainer.batch_size;trainer.lr;trainer.weight_decay;trainer.amp;trainer.scheduler;trainer.grad_clip;training seed,candidate only: source/objective/split verification required
+recovered/followup/results/boundary_specificity_20261018/isic2018_D_seed1/best.pt,isic2018,1,other,0.0,0.0,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/boundary_specificity_20261018/isic2018_D_seed2/best.pt,isic2018,2,other,0.0,0.0,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/boundary_specificity_20261018/isic2018_D_seed3/best.pt,isic2018,3,other,0.0,0.0,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/followup_20261018_v2/isic2018_B_seed1/best.pt,isic2018,1,M3,0.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/followup_20261018_v2/isic2018_B_seed2/best.pt,isic2018,2,M3,0.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/followup_20261018_v2/isic2018_B_seed3/best.pt,isic2018,3,M3,0.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/followup_20261018_v2/isic2018_F_seed1/best.pt,isic2018,1,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/followup_20261018_v2/isic2018_F_seed2/best.pt,isic2018,2,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/followup_20261018_v2/isic2018_F_seed3/best.pt,isic2018,3,M6,1.0,0.05,0.05,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/followup_20261018_v2/isic2018_S_seed1/best.pt,isic2018,1,M1,1.0,0.0,0.0,False,False,0.25,0,unet,,candidate only: source/objective/split verification required
+recovered/followup/results/followup_20261018_v2/isic2018_S_seed2/best.pt,isic2018,2,M1,1.0,0.0,0.0,False,False,0.25,0,unet,,candidate only: source/objective/split verification required
+recovered/followup/results/followup_20261018_v2/isic2018_S_seed3/best.pt,isic2018,3,M1,1.0,0.0,0.0,False,False,0.25,0,unet,,candidate only: source/objective/split verification required
+recovered/followup/results/followup_20261018_v2/isic2018_U_seed1/best.pt,isic2018,1,M0,0.0,0.0,0.0,False,False,0.25,0,unet,,candidate only: source/objective/split verification required
+recovered/followup/results/followup_20261018_v2/isic2018_U_seed2/best.pt,isic2018,2,M0,0.0,0.0,0.0,False,False,0.25,0,unet,,candidate only: source/objective/split verification required
+recovered/followup/results/followup_20261018_v2/isic2018_U_seed3/best.pt,isic2018,3,M0,0.0,0.0,0.0,False,False,0.25,0,unet,,candidate only: source/objective/split verification required
+recovered/followup/results/pathway_controls_20261018/isic2018_C_seed1/best.pt,isic2018,1,other,0.0,0.05,0.0,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/pathway_controls_20261018/isic2018_C_seed2/best.pt,isic2018,2,other,0.0,0.05,0.0,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/pathway_controls_20261018/isic2018_C_seed3/best.pt,isic2018,3,other,0.0,0.05,0.0,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/pathway_controls_20261018/isic2018_G_seed1/best.pt,isic2018,1,other,0.0,0.0,0.0,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/pathway_controls_20261018/isic2018_G_seed2/best.pt,isic2018,2,other,0.0,0.0,0.0,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/pathway_controls_20261018/isic2018_G_seed3/best.pt,isic2018,3,other,0.0,0.0,0.0,True,True,0.25,2,bdslite_unet,,candidate only: source/objective/split verification required
+recovered/followup/results/region_baseline_20261018/isic2018_UA_seed1/best.pt,isic2018,1,M0,0.0,0.0,0.0,False,False,0.25,0,unet,,candidate only: source/objective/split verification required
+recovered/followup/results/region_baseline_20261018/isic2018_UA_seed2/best.pt,isic2018,2,M0,0.0,0.0,0.0,False,False,0.25,0,unet,,candidate only: source/objective/split verification required
+recovered/followup/results/region_baseline_20261018/isic2018_UA_seed3/best.pt,isic2018,3,M0,0.0,0.0,0.0,False,False,0.25,0,unet,,candidate only: source/objective/split verification required

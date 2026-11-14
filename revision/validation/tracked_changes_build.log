@@ -1,0 +1,175 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+note: Running BibTeX on tracked_changes.aux ...
+note: Rerunning TeX because bibtex was run ...
+note: Rerunning TeX because "tracked_changes.aux" changed ...
+note: Rerunning TeX because "tracked_changes.aux" changed ...
+note: Rerunning TeX because "tracked_changes.bbl" changed ...
+note: Rerunning TeX because "tracked_changes.bbl" changed ...
+note: Rerunning TeX because "tracked_changes.bbl" changed ...
+note: Running xdvipdfmx ...
+note: Writing `tracked_changes.pdf` (573.43 KiB)
+note: Skipped writing 2 intermediate files (use --keep-intermediates to keep them)
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: tracked_changes.tex:9893: Underfull \hbox (badness 1701) in paragraph at lines 9886--9893
+warning: tracked_changes.tex:9906: Underfull \vbox (badness 1112) has occurred while \output is active
+warning: tracked_changes.tex:9929: Underfull \hbox (badness 1721) in paragraph at lines 9928--9929
+warning: tracked_changes.tex:10045: Underfull \hbox (badness 1158) in paragraph at lines 10044--10045
+warning: tracked_changes.tex:10082: Overfull \hbox (7.5pt too wide) in paragraph at lines 10081--10082
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 2181) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 1418) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10234: Underfull \hbox (badness 1163) in paragraph at lines 10230--10234
+warning: tracked_changes.tex:10248: Overfull \hbox (0.27979pt too wide) in paragraph at lines 10247--10248
+warning: tracked_changes.tex:10300: Overfull \hbox (96.51085pt too wide) in paragraph at lines 10267--10300
+warning: tracked_changes.tex:10428: Overfull \hbox (7.5pt too wide) in paragraph at lines 10427--10428
+warning: tracked_changes.tex:10474: Overfull \hbox (7.5pt too wide) in paragraph at lines 10473--10474
+warning: tracked_changes.tex:10483: Underfull \hbox (badness 2158) in paragraph at lines 10483--10483
+warning: tracked_changes.tex:10505: Overfull \hbox (1.64975pt too wide) in paragraph at lines 10501--10505
+warning: tracked_changes.tex:10510: Overfull \hbox (7.5pt too wide) in paragraph at lines 10509--10510
+warning: tracked_changes.tex:10624: Underfull \hbox (badness 1112) in paragraph at lines 10623--10624
+warning: tracked_changes.tex:10630: Underfull \hbox (badness 1173) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10630: Overfull \hbox (1.95055pt too wide) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10637: Underfull \hbox (badness 1019) in paragraph at lines 10636--10637
+warning: tracked_changes.tex:10670: Overfull \hbox (13.08104pt too wide) in paragraph at lines 10670--10670
+warning: tracked_changes.tex:10690: Underfull \hbox (badness 1845) in paragraph at lines 10689--10690
+warning: tracked_changes.tex:10690: Underfull \hbox (badness 3088) in paragraph at lines 10689--10690
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: tracked_changes.tex:9893: Underfull \hbox (badness 1701) in paragraph at lines 9886--9893
+warning: tracked_changes.tex:9906: Underfull \vbox (badness 1112) has occurred while \output is active
+warning: tracked_changes.tex:9929: Underfull \hbox (badness 1721) in paragraph at lines 9928--9929
+warning: tracked_changes.tex:10045: Underfull \hbox (badness 1158) in paragraph at lines 10044--10045
+warning: tracked_changes.tex:10082: Overfull \hbox (7.5pt too wide) in paragraph at lines 10081--10082
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 2181) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 1418) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10234: Underfull \hbox (badness 1163) in paragraph at lines 10230--10234
+warning: tracked_changes.tex:10248: Overfull \hbox (0.27979pt too wide) in paragraph at lines 10247--10248
+warning: tracked_changes.tex:10300: Overfull \hbox (96.51085pt too wide) in paragraph at lines 10267--10300
+warning: tracked_changes.tex:10428: Overfull \hbox (7.5pt too wide) in paragraph at lines 10427--10428
+warning: tracked_changes.tex:10474: Overfull \hbox (7.5pt too wide) in paragraph at lines 10473--10474
+warning: tracked_changes.tex:10483: Underfull \hbox (badness 2158) in paragraph at lines 10483--10483
+warning: tracked_changes.tex:10505: Overfull \hbox (1.64975pt too wide) in paragraph at lines 10501--10505
+warning: tracked_changes.tex:10510: Overfull \hbox (7.5pt too wide) in paragraph at lines 10509--10510
+warning: tracked_changes.tex:10624: Underfull \hbox (badness 1112) in paragraph at lines 10623--10624
+warning: tracked_changes.tex:10630: Underfull \hbox (badness 1173) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10630: Overfull \hbox (1.95055pt too wide) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10637: Underfull \hbox (badness 1019) in paragraph at lines 10636--10637
+warning: tracked_changes.tex:10670: Overfull \hbox (13.08104pt too wide) in paragraph at lines 10670--10670
+warning: tracked_changes.tex:10690: Underfull \hbox (badness 1845) in paragraph at lines 10689--10690
+warning: tracked_changes.tex:10690: Underfull \hbox (badness 3088) in paragraph at lines 10689--10690
+warning: tracked_changes.bbl:178: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: tracked_changes.tex:9893: Underfull \hbox (badness 1701) in paragraph at lines 9886--9893
+warning: tracked_changes.tex:9902: Underfull \vbox (badness 1112) has occurred while \output is active
+warning: tracked_changes.tex:9929: Underfull \hbox (badness 1721) in paragraph at lines 9928--9929
+warning: tracked_changes.tex:10045: Underfull \hbox (badness 1158) in paragraph at lines 10044--10045
+warning: tracked_changes.tex:10082: Overfull \hbox (7.5pt too wide) in paragraph at lines 10081--10082
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 2181) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 1418) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10234: Underfull \hbox (badness 1163) in paragraph at lines 10230--10234
+warning: tracked_changes.tex:10248: Overfull \hbox (0.27979pt too wide) in paragraph at lines 10247--10248
+warning: tracked_changes.tex:10300: Overfull \hbox (96.51085pt too wide) in paragraph at lines 10267--10300
+warning: tracked_changes.tex:10428: Overfull \hbox (7.5pt too wide) in paragraph at lines 10427--10428
+warning: tracked_changes.tex:10474: Overfull \hbox (7.5pt too wide) in paragraph at lines 10473--10474
+warning: tracked_changes.tex:10483: Underfull \hbox (badness 2158) in paragraph at lines 10483--10483
+warning: tracked_changes.tex:10505: Overfull \hbox (1.64975pt too wide) in paragraph at lines 10501--10505
+warning: tracked_changes.tex:10510: Overfull \hbox (7.5pt too wide) in paragraph at lines 10509--10510
+warning: tracked_changes.tex:10624: Underfull \hbox (badness 1112) in paragraph at lines 10623--10624
+warning: tracked_changes.tex:10630: Underfull \hbox (badness 1173) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10630: Overfull \hbox (1.95055pt too wide) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10637: Underfull \hbox (badness 1019) in paragraph at lines 10636--10637
+warning: tracked_changes.tex:10670: Overfull \hbox (13.08104pt too wide) in paragraph at lines 10670--10670
+warning: tracked_changes.bbl:178: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: tracked_changes.tex:9893: Underfull \hbox (badness 1701) in paragraph at lines 9886--9893
+warning: tracked_changes.tex:9902: Underfull \vbox (badness 1112) has occurred while \output is active
+warning: tracked_changes.tex:9929: Underfull \hbox (badness 1721) in paragraph at lines 9928--9929
+warning: tracked_changes.tex:10045: Underfull \hbox (badness 1158) in paragraph at lines 10044--10045
+warning: tracked_changes.tex:10082: Overfull \hbox (7.5pt too wide) in paragraph at lines 10081--10082
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 2181) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 1418) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10234: Underfull \hbox (badness 1163) in paragraph at lines 10230--10234
+warning: tracked_changes.tex:10248: Overfull \hbox (0.27979pt too wide) in paragraph at lines 10247--10248
+warning: tracked_changes.tex:10300: Overfull \hbox (96.51085pt too wide) in paragraph at lines 10267--10300
+warning: tracked_changes.tex:10428: Overfull \hbox (7.5pt too wide) in paragraph at lines 10427--10428
+warning: tracked_changes.tex:10474: Overfull \hbox (7.5pt too wide) in paragraph at lines 10473--10474
+warning: tracked_changes.tex:10483: Underfull \hbox (badness 2158) in paragraph at lines 10483--10483
+warning: tracked_changes.tex:10505: Overfull \hbox (1.64975pt too wide) in paragraph at lines 10501--10505
+warning: tracked_changes.tex:10510: Overfull \hbox (7.5pt too wide) in paragraph at lines 10509--10510
+warning: tracked_changes.tex:10624: Underfull \hbox (badness 1112) in paragraph at lines 10623--10624
+warning: tracked_changes.tex:10630: Underfull \hbox (badness 1173) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10630: Overfull \hbox (1.95055pt too wide) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10637: Underfull \hbox (badness 1019) in paragraph at lines 10636--10637
+warning: tracked_changes.tex:10670: Overfull \hbox (13.08104pt too wide) in paragraph at lines 10670--10670
+warning: tracked_changes.bbl:178: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: internal consistency problem when checking if tracked_changes.bbl changed
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: tracked_changes.tex:9893: Underfull \hbox (badness 1701) in paragraph at lines 9886--9893
+warning: tracked_changes.tex:9902: Underfull \vbox (badness 1112) has occurred while \output is active
+warning: tracked_changes.tex:9929: Underfull \hbox (badness 1721) in paragraph at lines 9928--9929
+warning: tracked_changes.tex:10045: Underfull \hbox (badness 1158) in paragraph at lines 10044--10045
+warning: tracked_changes.tex:10082: Overfull \hbox (7.5pt too wide) in paragraph at lines 10081--10082
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 2181) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 1418) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10234: Underfull \hbox (badness 1163) in paragraph at lines 10230--10234
+warning: tracked_changes.tex:10248: Overfull \hbox (0.27979pt too wide) in paragraph at lines 10247--10248
+warning: tracked_changes.tex:10300: Overfull \hbox (96.51085pt too wide) in paragraph at lines 10267--10300
+warning: tracked_changes.tex:10428: Overfull \hbox (7.5pt too wide) in paragraph at lines 10427--10428
+warning: tracked_changes.tex:10474: Overfull \hbox (7.5pt too wide) in paragraph at lines 10473--10474
+warning: tracked_changes.tex:10483: Underfull \hbox (badness 2158) in paragraph at lines 10483--10483
+warning: tracked_changes.tex:10505: Overfull \hbox (1.64975pt too wide) in paragraph at lines 10501--10505
+warning: tracked_changes.tex:10510: Overfull \hbox (7.5pt too wide) in paragraph at lines 10509--10510
+warning: tracked_changes.tex:10624: Underfull \hbox (badness 1112) in paragraph at lines 10623--10624
+warning: tracked_changes.tex:10630: Underfull \hbox (badness 1173) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10630: Overfull \hbox (1.95055pt too wide) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10637: Underfull \hbox (badness 1019) in paragraph at lines 10636--10637
+warning: tracked_changes.tex:10670: Overfull \hbox (13.08104pt too wide) in paragraph at lines 10670--10670
+warning: tracked_changes.bbl:178: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: internal consistency problem when checking if tracked_changes.bbl changed
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: tracked_changes.tex:9893: Underfull \hbox (badness 1701) in paragraph at lines 9886--9893
+warning: tracked_changes.tex:9902: Underfull \vbox (badness 1112) has occurred while \output is active
+warning: tracked_changes.tex:9929: Underfull \hbox (badness 1721) in paragraph at lines 9928--9929
+warning: tracked_changes.tex:10045: Underfull \hbox (badness 1158) in paragraph at lines 10044--10045
+warning: tracked_changes.tex:10082: Overfull \hbox (7.5pt too wide) in paragraph at lines 10081--10082
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 2181) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 1418) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10234: Underfull \hbox (badness 1163) in paragraph at lines 10230--10234
+warning: tracked_changes.tex:10248: Overfull \hbox (0.27979pt too wide) in paragraph at lines 10247--10248
+warning: tracked_changes.tex:10300: Overfull \hbox (96.51085pt too wide) in paragraph at lines 10267--10300
+warning: tracked_changes.tex:10428: Overfull \hbox (7.5pt too wide) in paragraph at lines 10427--10428
+warning: tracked_changes.tex:10474: Overfull \hbox (7.5pt too wide) in paragraph at lines 10473--10474
+warning: tracked_changes.tex:10483: Underfull \hbox (badness 2158) in paragraph at lines 10483--10483
+warning: tracked_changes.tex:10505: Overfull \hbox (1.64975pt too wide) in paragraph at lines 10501--10505
+warning: tracked_changes.tex:10510: Overfull \hbox (7.5pt too wide) in paragraph at lines 10509--10510
+warning: tracked_changes.tex:10624: Underfull \hbox (badness 1112) in paragraph at lines 10623--10624
+warning: tracked_changes.tex:10630: Underfull \hbox (badness 1173) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10630: Overfull \hbox (1.95055pt too wide) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10637: Underfull \hbox (badness 1019) in paragraph at lines 10636--10637
+warning: tracked_changes.tex:10670: Overfull \hbox (13.08104pt too wide) in paragraph at lines 10670--10670
+warning: tracked_changes.bbl:178: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: internal consistency problem when checking if tracked_changes.bbl changed
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: tracked_changes.tex:9893: Underfull \hbox (badness 1701) in paragraph at lines 9886--9893
+warning: tracked_changes.tex:9902: Underfull \vbox (badness 1112) has occurred while \output is active
+warning: tracked_changes.tex:9929: Underfull \hbox (badness 1721) in paragraph at lines 9928--9929
+warning: tracked_changes.tex:10045: Underfull \hbox (badness 1158) in paragraph at lines 10044--10045
+warning: tracked_changes.tex:10082: Overfull \hbox (7.5pt too wide) in paragraph at lines 10081--10082
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 2181) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10112: Underfull \hbox (badness 1418) in paragraph at lines 10108--10112
+warning: tracked_changes.tex:10234: Underfull \hbox (badness 1163) in paragraph at lines 10230--10234
+warning: tracked_changes.tex:10248: Overfull \hbox (0.27979pt too wide) in paragraph at lines 10247--10248
+warning: tracked_changes.tex:10300: Overfull \hbox (96.51085pt too wide) in paragraph at lines 10267--10300
+warning: tracked_changes.tex:10428: Overfull \hbox (7.5pt too wide) in paragraph at lines 10427--10428
+warning: tracked_changes.tex:10474: Overfull \hbox (7.5pt too wide) in paragraph at lines 10473--10474
+warning: tracked_changes.tex:10483: Underfull \hbox (badness 2158) in paragraph at lines 10483--10483
+warning: tracked_changes.tex:10505: Overfull \hbox (1.64975pt too wide) in paragraph at lines 10501--10505
+warning: tracked_changes.tex:10510: Overfull \hbox (7.5pt too wide) in paragraph at lines 10509--10510
+warning: tracked_changes.tex:10624: Underfull \hbox (badness 1112) in paragraph at lines 10623--10624
+warning: tracked_changes.tex:10630: Underfull \hbox (badness 1173) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10630: Overfull \hbox (1.95055pt too wide) in paragraph at lines 10630--10630
+warning: tracked_changes.tex:10637: Underfull \hbox (badness 1019) in paragraph at lines 10636--10637
+warning: tracked_changes.tex:10670: Overfull \hbox (13.08104pt too wide) in paragraph at lines 10670--10670
+warning: tracked_changes.bbl:178: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: internal consistency problem when checking if tracked_changes.bbl changed
+warning: TeX rerun seems needed, but stopping at 6 passes
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

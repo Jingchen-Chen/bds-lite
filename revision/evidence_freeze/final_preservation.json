@@ -1,0 +1,22 @@
+{
+  "scope": "Final layered statistical-evidence preservation; not complete training/inference reproduction",
+  "base_members": 1108,
+  "supplement_members": 1724,
+  "total_unique_members": 2832,
+  "archives": {
+    "primary-evidence-20261110.tar.gz": {
+      "bytes": 48720203,
+      "sha256": "5fc0d861d8fc1e02446a4dbf97914ed63e5e0b7b6a2231f3c9ad0632903c7f5e"
+    },
+    "final-supplement-20261110.tar.gz": {
+      "bytes": 27892992,
+      "sha256": "570f26fd916afa9b241729d71c07253e7e90f742b483c20c4aa280a7b657906e"
+    }
+  },
+  "content_manifests": {
+    "primary-evidence-20261110.sha256": "21a9d06818f6f63462a94c7088090ed314293193f32c8c288a236018868970ae",
+    "final-supplement-20261110.sha256": "b1e80161c99423d30fc48f613511d6518738b42ba1fcb54abace68d66323a64e"
+  },
+  "excluded_large_dependencies": "final_dependency_manifest.csv; local-only, not independently backed up by this Git freeze",
+  "blinded_exclusion": "No Experiment C outcomes selected"
+}

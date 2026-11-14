@@ -1,0 +1,12 @@
+\begin{tabular}{llccccl}
+\toprule
+Metric & Contrast & Fresh $\Delta$ (seeds 4--10) & Holm $p$ & All-seed $\Delta$ [95\% interval] (seeds 1--10) & Effect label & Status \\
+\midrule
+Boundary F1 & U-Net + decoder vs U-Net & +0.023 & 0.260 & +0.021 [+0.001, +0.040] & gain, size unclear & supported, not confirmed \\
+Boundary F1 & BDS-Lite vs U-Net & $-$0.018 & 0.404 & $-$0.011 [$-$0.032, +0.009] & undetermined & not established \\
+Boundary F1 & BDS-Lite vs U-Net + decoder & $-$0.040 & 0.031 & $-$0.032 [$-$0.052, $-$0.012] & relevant harm & confirmed \\
+Boundary F1 & U-Net + GSL vs U-Net & $-$0.023 & 0.288 & $-$0.010 [$-$0.033, +0.012] & undetermined & not established \\
+Boundary F1 & U-Net + GSL vs BDS-Lite & $-$0.005 & 0.698 & +0.001 [$-$0.022, +0.024] & undetermined & not established \\
+Boundary F1 & U-Net + GSL vs U-Net + decoder & $-$0.046 & 0.014 & $-$0.031 [$-$0.052, $-$0.009] & harm, size unclear & confirmed \\
+\bottomrule
+\end{tabular}

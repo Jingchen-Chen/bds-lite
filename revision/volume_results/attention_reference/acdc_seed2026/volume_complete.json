@@ -1,0 +1,22 @@
+{
+  "entry": {
+    "run_id": "attention_reference_acdc_seed2026_test",
+    "family": "attention_reference",
+    "dataset": "acdc",
+    "seed": 2026,
+    "split": "test",
+    "checkpoint": "results/checkpoints/acdc_attention_unet_baseline/best.pt",
+    "checkpoint_sha256": "79b48f55c0b264c9f8dcda4ff751de228e12ed4d40536a6aabb74035d20bd7df",
+    "manifest": "recovered/followup/splits/acdc/test.json",
+    "manifest_sha256": "546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638",
+    "batch": 16,
+    "classes": 4,
+    "output": "revision/prediction_recovery/attention_reference/acdc_seed2026/test"
+  },
+  "protocol_sha256": "5a80b1e949f2d5a8ebba5f0822312304bb2164618ac763b19ed5730ac3c6370b",
+  "prediction_sha256": "a59a5e50e9f1b4f874a2dea847daa34885fd107c3c03fe972074882f583f57fc",
+  "per_volume_sha256": "7b9d9220f454afeb4dad968ed7a133db4648f09cdae53e310ad6977528fbc616",
+  "volumes": 40,
+  "class_rows": 120,
+  "physical_units": false
+}

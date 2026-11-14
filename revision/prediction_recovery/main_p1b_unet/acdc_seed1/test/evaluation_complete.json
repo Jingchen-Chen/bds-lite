@@ -1,0 +1,25 @@
+{
+  "entry": {
+    "run_id": "main_p1b_unet_acdc_seed1_test",
+    "family": "main_p1b_unet",
+    "dataset": "acdc",
+    "seed": 1,
+    "split": "test",
+    "checkpoint": "results/checkpoints/acdc_p1b_unet_seed1/best.pt",
+    "checkpoint_sha256": "1c423286f3ac62caba875b38248ef47ef8a0d9abc926e80d0dc71e9efc3283fc",
+    "manifest": "recovered/followup/splits/acdc/test.json",
+    "manifest_sha256": "546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638",
+    "batch": 16,
+    "classes": 4,
+    "output": "revision/prediction_recovery/main_p1b_unet/acdc_seed1/test"
+  },
+  "protocol_sha256": "b767017c1bf03de97f31667795998da67ff6779505441a8ca8198875b6a6bcef",
+  "outputs": {
+    "predictions.npz": "19aaa25b7214e25de0e8ee0500f540e5ebb51e3ebb77a3f2e9aabd25273c1941",
+    "per_case.csv": "59a3c3289c73a73bb3ad22383850bb6f139b8133612c0f2d2a1c39a34074abf2",
+    "provenance.json": "c099d046c48f5b6833959307bfd2fdb55e22ac8782defe34f4c336bef478ebbe"
+  },
+  "images": 366,
+  "class_rows": 1098,
+  "seconds": 5.523489932005759
+}

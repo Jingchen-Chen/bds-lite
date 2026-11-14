@@ -1,0 +1,826 @@
+# Queue B comparators; see revision/COMPARATOR_PROTOCOL.md
+runs:
+- run_id: isic2018_gsl_seed1
+  approved: true
+  config: configs/revision/isic2018_gsl_seed1.yaml
+  config_sha256: 9ea8993191c58798e8bb7ad371990618a8b80df469659e878dc9bc8b6d61ee77
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: &id001
+  - path: scripts/comparators/__init__.py
+    sha256: c2e04a6052ef5a37ca7ca3a362a46a5b097a5ee54da564724519273612335f01
+  - path: scripts/comparators/components.py
+    sha256: 96471163895ffe9b068b783609507e19e484b2d3e6bdecd5e4f3f3ea94d28ba9
+  - path: scripts/comparators/fetch_lbunet.py
+    sha256: 31581b69c5ba26d6171cea7415f753f5313cff3595110ce0fed00d7581ea5aec
+  - path: scripts/comparators/run_queue_b.py
+    sha256: 1b8eaa1f87a8ca66e384e177799fef2bed380de115a5718903d6dfbd70aa62fb
+  - path: scripts/comparators/train_comparator.py
+    sha256: 99d500cac85f0602d6ba87ce54b5bcb82cf055617daf83914df712350b223109
+  - path: scripts/revision/acquire_official_isic.py
+    sha256: 79b601e92039ea44109aaddc856b975e4d8f378843eab45790691a5ff4eb7551
+  - path: scripts/revision/build_status.py
+    sha256: a8a36de1dff7cff8783780143e6196eeadfc644cac686b46978cc57a52037d93
+  - path: scripts/revision/catalog_checkpoints.py
+    sha256: a6bb1531f0984c0615bfd571c1d9000785b5c6e886cffc6f89a602f32a8240f1
+  - path: scripts/revision/finalize_reports.py
+    sha256: 57e4634ad80dfb05c0b550620026e5b0d5fbfe50e32a7ebb256a715c1e77d56d
+  - path: scripts/revision/inventory_sources.py
+    sha256: 825e58f45457b5aba1c1e45cc815160bad49796cf4a205b4de87eab9d04d8069
+  - path: scripts/revision/migrate_sources.py
+    sha256: 2f8dee73338783681589fbedbef87da115fb7936234f1fe9654d9861f37bd2af
+  - path: scripts/revision/run_queue.py
+    sha256: 392379e364413609f28f3105d3f8af96a590bdb2c82e0a194b2d1132e774d203
+  - path: scripts/revision/train_run.py
+    sha256: 10c0f722beb4bb4d8cea9e07fd0b30e594df9d69d140f3973d171e6dd6186cc5
+  - path: scripts/revision/training_support.py
+    sha256: a90945ceca92ba158df21ce3334dc6f661376cb92aa2eac5684b85d2ed016cfc
+  - path: scripts/revision/verify_migration.py
+    sha256: eec1b04ac5a6bdc60fbde2474bfbdc395c1f575ef76b240dec50a9b320cceee6
+  - path: scripts/revision/verify_preservation_final.py
+    sha256: 38b92f95c852b0ba872ca6a7ef538c05c19ab278396a5fe14b1df6ee6b7ea9d4
+  - path: src/bds_lite/__init__.py
+    sha256: 4a1b1fdfa6e2653e73b57415cda03bf4ef61b0353fe3eb8ee953d13f5bb8042d
+  - path: src/bds_lite/data/__init__.py
+    sha256: ce3b2fca30b9e224c09b8b2e60054d92b3e790389a347ef98ec65ae3179713e0
+  - path: src/bds_lite/data/boundary.py
+    sha256: 9fbfcd96ab2ded0b4570276382fb279a8186c95e47089c219e4b35139c92e00b
+  - path: src/bds_lite/data/converters.py
+    sha256: 163690f125c3e90468932868e622087e0f695046d74d1820655a319950548172
+  - path: src/bds_lite/data/datasets.py
+    sha256: 271fbe49c11f20fb96b0f4ce9dec33a3296087af2e6620d193b4321597d83fe4
+  - path: src/bds_lite/data/schema.py
+    sha256: cdb2a15844f13dad43d198b50d0dae0a4e028f0833b10dac019ee537dbd02347
+  - path: src/bds_lite/evaluation/__init__.py
+    sha256: 6cdf7590e6643931831f285d86a48175c78f6ecb061fafa8c154a1a8d72ace9a
+  - path: src/bds_lite/evaluation/metrics.py
+    sha256: 7332676cb92d31111654b805265fcca2741569de71d6bbfbe8af64a428f22f1c
+  - path: src/bds_lite/evaluation/profiling.py
+    sha256: 2c5050644afe3a1b22994d586e45c6a4c6c84c1295b2cf8f7ae7a97322786d5e
+  - path: src/bds_lite/losses/__init__.py
+    sha256: dd342eb439bf1922c0ee125ef8736382acf6dc97b7316ec5c38c0597bb446d43
+  - path: src/bds_lite/losses/boundary_dou.py
+    sha256: aa18141625c41ee13770470507881406e8879b6afce5154cfbc3c838d069f33a
+  - path: src/bds_lite/losses/gsl.py
+    sha256: d33395038de74305e6b94e13a9c72daffa1980a82eb4fc702e2658c261e69e4f
+  - path: src/bds_lite/models/__init__.py
+    sha256: 3adf7a8d8d57c31a661349d84bcac9f6b6e6af0a49b0355179800fe3e45bc7a7
+  - path: src/bds_lite/models/bds_lite.py
+    sha256: 38f29fb103238c7e021d843d7a698bd86cb328c582febb2a4f52f67af36611cd
+  - path: src/bds_lite/models/blocks.py
+    sha256: 1706bbc6005658d0d83a2744a0f28a5de2664c63559d1283f57b6d9b64297853
+  - path: src/bds_lite/models/ege_unet.py
+    sha256: 54a226682610ef6e43d1b61b36768a0ccf08b3a387a770dc081648c636289c20
+  - path: src/bds_lite/models/mobilevit_unet.py
+    sha256: be85324ae710de53749be87b06cfbb8b4a0c8e061605935282a7b2c4bf0c4b02
+  - path: src/bds_lite/models/unet.py
+    sha256: e6662bba98018ee06cacf2608a93085cc0670892ec5057e5a06e6eaa56541f71
+  - path: src/bds_lite/training/__init__.py
+    sha256: 094bb1725286711ebd27fd579e22c6028c80909919eec875c1ee0f4ddf1c04c5
+  - path: src/bds_lite/training/builders.py
+    sha256: 66ac1f684757a7e2da736472674caa51be640d061495794d80a32262fa0e5b46
+  - path: src/bds_lite/training/losses.py
+    sha256: 67aaa72ac6beb8fe520347e70d82a74b6fcb30b64ba1d8afd635973dd91e0407
+  - path: src/bds_lite/training/runner.py
+    sha256: 1c99d29af7cf7acbb7d1da370d4646a090a99e0f868c70162cce86a11a54d812
+  - path: src/bds_lite/utils/__init__.py
+    sha256: 82a4a11ad0deb2075ee67b71ccac18b6935def6228bdd5fcd8308806a523dfc4
+  - path: src/bds_lite/utils/config.py
+    sha256: 1f206a9034abb442d053e24075ff4767870cd6dc61873d2a276cc452a1512cfc
+  - path: src/bds_lite/utils/seed.py
+    sha256: a753ef1e19bc99266365590b3452ef9e99c0250b9edec5415b6d1db67c37262c
+  - path: analysis/revision/recover_predictions.py
+    sha256: 29700c6421d909bc687e528a7dbbe60e2aba93a882d92facb5c9b4163c56282d
+  - path: revision/COMPARATOR_PROTOCOL.md
+    sha256: da5cdc37c3aa56385c54fd744f46c308240628c7d54a729c868b7e0e690da788
+  output: results/revision_runs/isic2018_gsl_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_gsl_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_gsl_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_gsl_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_gsl_seed1
+  - --resume
+- run_id: isic2018_gsl_seed2
+  approved: true
+  config: configs/revision/isic2018_gsl_seed2.yaml
+  config_sha256: ee65f4d151956815a2160ed98533e49d28e8c70e845e669aaa9bd667fa2ea88f
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_gsl_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_gsl_seed2.yaml
+  - --output
+  - results/revision_runs/isic2018_gsl_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_gsl_seed2.yaml
+  - --output
+  - results/revision_runs/isic2018_gsl_seed2
+  - --resume
+- run_id: isic2018_gsl_seed3
+  approved: true
+  config: configs/revision/isic2018_gsl_seed3.yaml
+  config_sha256: 6febb4f9869381c54bee88848c23af1cfbc2bf5b8903801305e9c39933b4fd73
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_gsl_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_gsl_seed3.yaml
+  - --output
+  - results/revision_runs/isic2018_gsl_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_gsl_seed3.yaml
+  - --output
+  - results/revision_runs/isic2018_gsl_seed3
+  - --resume
+- run_id: acdc_gsl_seed1
+  approved: true
+  config: configs/revision/acdc_gsl_seed1.yaml
+  config_sha256: 2200282d7a102ca84e2e04fc4d904ce03ee76dc3a27c9c79693a73939dff72ea
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_gsl_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_gsl_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_gsl_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_gsl_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_gsl_seed1
+  - --resume
+- run_id: acdc_gsl_seed2
+  approved: true
+  config: configs/revision/acdc_gsl_seed2.yaml
+  config_sha256: 9996f8c1f6a359332e2224e76e4f1b3ade4f4e889df83b1d5bfaa86b964a1ee9
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_gsl_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_gsl_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_gsl_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_gsl_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_gsl_seed2
+  - --resume
+- run_id: acdc_gsl_seed3
+  approved: true
+  config: configs/revision/acdc_gsl_seed3.yaml
+  config_sha256: 54e10302cdd78c2fb810192f6af78b603c4dc401d96643cfa1a3f7278c93c846
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_gsl_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_gsl_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_gsl_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_gsl_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_gsl_seed3
+  - --resume
+- run_id: synapse_gsl_seed1
+  approved: true
+  config: configs/revision/synapse_gsl_seed1.yaml
+  config_sha256: 63faf77b30aa1322ae21eebb7028c9015615801208258b8620d46f34bc9629fc
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_gsl_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_gsl_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_gsl_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_gsl_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_gsl_seed1
+  - --resume
+- run_id: synapse_gsl_seed2
+  approved: true
+  config: configs/revision/synapse_gsl_seed2.yaml
+  config_sha256: cdc33e8a49f1991da2bf8b528e5463f9f3030d5c2f7436cbfc58efeb9d219bc6
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_gsl_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_gsl_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_gsl_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_gsl_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_gsl_seed2
+  - --resume
+- run_id: synapse_gsl_seed3
+  approved: true
+  config: configs/revision/synapse_gsl_seed3.yaml
+  config_sha256: 9ba8279e8caf01d3cdeb985e9ed943dfe3d1b742d88a7708265488c399c5b5ee
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_gsl_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_gsl_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_gsl_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_gsl_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_gsl_seed3
+  - --resume
+- run_id: isic2018_c1_boundary_loss_seed1
+  approved: true
+  config: configs/revision/isic2018_c1_boundary_loss_seed1.yaml
+  config_sha256: 3d6e4936735bfde78e1d45d35d1b79fe8887f65b00f082f110e774e414d2e457
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_c1_boundary_loss_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_c1_boundary_loss_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_c1_boundary_loss_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_c1_boundary_loss_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_c1_boundary_loss_seed1
+  - --resume
+- run_id: isic2018_c1_boundary_loss_seed2
+  approved: true
+  config: configs/revision/isic2018_c1_boundary_loss_seed2.yaml
+  config_sha256: d6795e884132f50324c94a847ec22541d368cd52ed18b77171f99f7d440d1b6f
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_c1_boundary_loss_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_c1_boundary_loss_seed2.yaml
+  - --output
+  - results/revision_runs/isic2018_c1_boundary_loss_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_c1_boundary_loss_seed2.yaml
+  - --output
+  - results/revision_runs/isic2018_c1_boundary_loss_seed2
+  - --resume
+- run_id: isic2018_c1_boundary_loss_seed3
+  approved: true
+  config: configs/revision/isic2018_c1_boundary_loss_seed3.yaml
+  config_sha256: 9b24dba4a8f4da032feb3cdffcb31b51ea6d07fe7a5e2d8c56645a160440648a
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_c1_boundary_loss_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_c1_boundary_loss_seed3.yaml
+  - --output
+  - results/revision_runs/isic2018_c1_boundary_loss_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_c1_boundary_loss_seed3.yaml
+  - --output
+  - results/revision_runs/isic2018_c1_boundary_loss_seed3
+  - --resume
+- run_id: acdc_c1_boundary_loss_seed1
+  approved: true
+  config: configs/revision/acdc_c1_boundary_loss_seed1.yaml
+  config_sha256: b4bc0f563dc043821baa8473702bc8d83ddbaec343d5c6d34ba745703fa2c023
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_c1_boundary_loss_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_c1_boundary_loss_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_c1_boundary_loss_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_c1_boundary_loss_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_c1_boundary_loss_seed1
+  - --resume
+- run_id: acdc_c1_boundary_loss_seed2
+  approved: true
+  config: configs/revision/acdc_c1_boundary_loss_seed2.yaml
+  config_sha256: 7507d995474f34a29b2695adb4bad364d38c1425c573b66e8c7631f513c05163
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_c1_boundary_loss_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_c1_boundary_loss_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_c1_boundary_loss_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_c1_boundary_loss_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_c1_boundary_loss_seed2
+  - --resume
+- run_id: acdc_c1_boundary_loss_seed3
+  approved: true
+  config: configs/revision/acdc_c1_boundary_loss_seed3.yaml
+  config_sha256: 13198c374d16ac6ff688fad667c4dc35c8aecd62be0ff04cd5ec6840407b9a9f
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_c1_boundary_loss_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_c1_boundary_loss_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_c1_boundary_loss_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_c1_boundary_loss_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_c1_boundary_loss_seed3
+  - --resume
+- run_id: synapse_c1_boundary_loss_seed1
+  approved: true
+  config: configs/revision/synapse_c1_boundary_loss_seed1.yaml
+  config_sha256: fade85d2a3bafb663612f0999b8cbf7a12590198c583dd8d945945e5c407121e
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_c1_boundary_loss_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_c1_boundary_loss_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_c1_boundary_loss_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_c1_boundary_loss_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_c1_boundary_loss_seed1
+  - --resume
+- run_id: synapse_c1_boundary_loss_seed2
+  approved: true
+  config: configs/revision/synapse_c1_boundary_loss_seed2.yaml
+  config_sha256: d429a25ce87175e2a26e3f95d15752abd00db0d6fff235cfeaa4df7e51fe4523
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_c1_boundary_loss_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_c1_boundary_loss_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_c1_boundary_loss_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_c1_boundary_loss_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_c1_boundary_loss_seed2
+  - --resume
+- run_id: synapse_c1_boundary_loss_seed3
+  approved: true
+  config: configs/revision/synapse_c1_boundary_loss_seed3.yaml
+  config_sha256: 024f09c228df4e8f6b7c789e9335ec32555ac2486c51686c896623bde64fd934
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_c1_boundary_loss_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_c1_boundary_loss_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_c1_boundary_loss_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_c1_boundary_loss_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_c1_boundary_loss_seed3
+  - --resume
+- run_id: isic2018_c4_lbunet_seed1
+  approved: true
+  config: configs/revision/isic2018_c4_lbunet_seed1.yaml
+  config_sha256: b4e1ea3e59634f5a8f106743e757b7dc2d6f997f1333516a490a00d1386e0100
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_c4_lbunet_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_c4_lbunet_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_c4_lbunet_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_c4_lbunet_seed1.yaml
+  - --output
+  - results/revision_runs/isic2018_c4_lbunet_seed1
+  - --resume
+- run_id: isic2018_c4_lbunet_seed2
+  approved: true
+  config: configs/revision/isic2018_c4_lbunet_seed2.yaml
+  config_sha256: 8077649e1ba222eacfc1fe6eaacf794c5d1c76cc7495be8d82b2cadaf86b9d24
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_c4_lbunet_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_c4_lbunet_seed2.yaml
+  - --output
+  - results/revision_runs/isic2018_c4_lbunet_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_c4_lbunet_seed2.yaml
+  - --output
+  - results/revision_runs/isic2018_c4_lbunet_seed2
+  - --resume
+- run_id: isic2018_c4_lbunet_seed3
+  approved: true
+  config: configs/revision/isic2018_c4_lbunet_seed3.yaml
+  config_sha256: 4ed180a98ed8f151e280d0486d824aac2294faaf0b364b1c604f10a359f51f60
+  manifests:
+  - path: recovered/followup/splits/isic2018/train.json
+    sha256: 393527ba797be787c31a6b87bc58e4db2144c1e2a649efc2babacd0e66fd12da
+  - path: recovered/followup/splits/isic2018/val.json
+    sha256: 81329e5e8a2ac3bbe70c9a865c48174453ab7bc59d8f5abeecd071651ac0c43e
+  sources: *id001
+  output: results/revision_runs/isic2018_c4_lbunet_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_c4_lbunet_seed3.yaml
+  - --output
+  - results/revision_runs/isic2018_c4_lbunet_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/isic2018_c4_lbunet_seed3.yaml
+  - --output
+  - results/revision_runs/isic2018_c4_lbunet_seed3
+  - --resume
+- run_id: acdc_c4_lbunet_seed1
+  approved: true
+  config: configs/revision/acdc_c4_lbunet_seed1.yaml
+  config_sha256: 31b833dc73d4fc4564081d13084ac0bc04fea6db4d7460776a83d8fcc61add72
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_c4_lbunet_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_c4_lbunet_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_c4_lbunet_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_c4_lbunet_seed1.yaml
+  - --output
+  - results/revision_runs/acdc_c4_lbunet_seed1
+  - --resume
+- run_id: acdc_c4_lbunet_seed2
+  approved: true
+  config: configs/revision/acdc_c4_lbunet_seed2.yaml
+  config_sha256: bb58cb382bbe00d008f8b8515b3c6b6931aeeba4d1cec17de9ab20fbcc091c40
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_c4_lbunet_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_c4_lbunet_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_c4_lbunet_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_c4_lbunet_seed2.yaml
+  - --output
+  - results/revision_runs/acdc_c4_lbunet_seed2
+  - --resume
+- run_id: acdc_c4_lbunet_seed3
+  approved: true
+  config: configs/revision/acdc_c4_lbunet_seed3.yaml
+  config_sha256: bea594df620153765b2e00aa460f424e771fada3b9cb2a0a86a37a51517e74ad
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+  output: results/revision_runs/acdc_c4_lbunet_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_c4_lbunet_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_c4_lbunet_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/acdc_c4_lbunet_seed3.yaml
+  - --output
+  - results/revision_runs/acdc_c4_lbunet_seed3
+  - --resume
+- run_id: synapse_c4_lbunet_seed1
+  approved: true
+  config: configs/revision/synapse_c4_lbunet_seed1.yaml
+  config_sha256: 35ca8d7f67fd47908ddc5a51f0410fb1ff90fe9ef168b459cea983ec3b256452
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_c4_lbunet_seed1
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_c4_lbunet_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_c4_lbunet_seed1
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_c4_lbunet_seed1.yaml
+  - --output
+  - results/revision_runs/synapse_c4_lbunet_seed1
+  - --resume
+- run_id: synapse_c4_lbunet_seed2
+  approved: true
+  config: configs/revision/synapse_c4_lbunet_seed2.yaml
+  config_sha256: e24cfa7081e931ed8cc0a997c518056944969c2dc2fc707694a7e23f77810386
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_c4_lbunet_seed2
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_c4_lbunet_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_c4_lbunet_seed2
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_c4_lbunet_seed2.yaml
+  - --output
+  - results/revision_runs/synapse_c4_lbunet_seed2
+  - --resume
+- run_id: synapse_c4_lbunet_seed3
+  approved: true
+  config: configs/revision/synapse_c4_lbunet_seed3.yaml
+  config_sha256: db5733fb8e069da3501a373d1c76585ca3cb08187ccfe8a797d6563482104bc2
+  manifests:
+  - path: recovered/followup/splits/synapse/train.json
+    sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+  - path: recovered/followup/splits/synapse/val.json
+    sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+  - path: recovered/followup/splits/synapse/test.json
+    sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  sources: *id001
+  output: results/revision_runs/synapse_c4_lbunet_seed3
+  argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_c4_lbunet_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_c4_lbunet_seed3
+  resume_argv:
+  - /home/jc/bds-followup/.venv/bin/python
+  - scripts/comparators/train_comparator.py
+  - --config
+  - configs/revision/synapse_c4_lbunet_seed3.yaml
+  - --output
+  - results/revision_runs/synapse_c4_lbunet_seed3
+  - --resume

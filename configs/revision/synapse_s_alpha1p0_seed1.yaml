@@ -1,0 +1,85 @@
+project:
+  name: bds-lite
+  output_dir: results/revision_runs
+  seed: 1
+data:
+  processed_root: data/processed
+  num_workers: 4
+  image_size:
+  - 224
+  - 224
+  normalize: none_stored
+dataset:
+  name: synapse
+  modality: ct
+  task: abdominal_multi_organ
+  num_classes: 9
+  in_channels: 1
+  processed_dir: data/processed/synapse
+  image_dir: .
+  mask_dir: .
+  class_names:
+  - background
+  - class_1
+  - class_2
+  - class_3
+  - class_4
+  - class_5
+  - class_6
+  - class_7
+  - class_8
+  input_size:
+  - 224
+  - 224
+  spacing_policy: use_sample_spacing_if_available_else_unit
+  ignore_index: null
+  train_split: train
+  val_split: val
+  test_split: test
+  metrics:
+    primary: dsc
+    boundary: hd95
+  root: data/processed/synapse
+model:
+  name: bdslite_unet
+  base_channels: 32
+  boundary_classes: 1
+  boundary_gate: true
+  boundary_gate_scale: 1.0
+  detach_boundary_features: false
+loss:
+  dice_weight: 1.0
+  ce_weight: 1.0
+  boundary_weight: 0.05
+  distill_weight: 0.05
+  surface_weight: 1.0
+  distance_weight: 0.0
+  foreground_class_weights: null
+trainer:
+  device: cuda
+  epochs: 150
+  batch_size: 16
+  lr: 0.0001
+  weight_decay: 1.0e-05
+  amp: true
+  save_every: 25
+  scheduler: cosine
+  grad_clip: 1.0
+  init_from_checkpoint: null
+  freeze_encoder_epochs: 0
+revision:
+  purpose: WP3 sensitivity alpha=1.0; see revision/SENSITIVITY_PROTOCOL.md
+  protocol: revision/SENSITIVITY_PROTOCOL.md
+  protocol_sha256: 1d3e1c077fa4575a300e05374e12becc861c9bbc5bfe9a701c19a1b7095b5ace
+  gradient_probe: false
+  manifests:
+    train:
+      path: recovered/followup/splits/synapse/train.json
+      sha256: 2731e08b45d6f7589137bb470b7a1fa8f2a435b6693aa90e5c1b9d6dd7013732
+    val:
+      path: recovered/followup/splits/synapse/val.json
+      sha256: f5b608d43f590f905364e88898dcc0387174b6a6443b6953bbc9319a55aa9ecb
+    test:
+      path: recovered/followup/splits/synapse/test.json
+      sha256: bae6f6925a403052c44542c5cd09688df315cefa7d6ac7f9497e7a593d43798d
+  arm: s_alpha1p0

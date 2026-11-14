@@ -1,0 +1,436 @@
+{
+  "passed": false,
+  "problems": [
+    "acdc_confirm_decoder_seed201: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed201: source hashes differ from registration",
+    "acdc_confirm_decoder_seed202: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed202: source hashes differ from registration",
+    "acdc_confirm_decoder_seed203: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed203: source hashes differ from registration",
+    "acdc_confirm_decoder_seed204: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed204: source hashes differ from registration",
+    "acdc_confirm_decoder_seed205: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed205: source hashes differ from registration",
+    "acdc_confirm_decoder_seed206: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed206: source hashes differ from registration",
+    "acdc_confirm_decoder_seed207: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed207: source hashes differ from registration",
+    "acdc_confirm_decoder_seed208: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed208: source hashes differ from registration",
+    "acdc_confirm_decoder_seed209: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed209: source hashes differ from registration",
+    "acdc_confirm_decoder_seed210: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed210: source hashes differ from registration",
+    "acdc_confirm_decoder_seed211: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed211: source hashes differ from registration",
+    "acdc_confirm_decoder_seed212: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed212: source hashes differ from registration",
+    "acdc_confirm_decoder_seed213: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed213: source hashes differ from registration",
+    "acdc_confirm_decoder_seed214: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed214: source hashes differ from registration",
+    "acdc_confirm_decoder_seed215: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed215: source hashes differ from registration",
+    "acdc_confirm_decoder_seed216: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed216: source hashes differ from registration",
+    "acdc_confirm_decoder_seed217: source hashes differ from registration",
+    "acdc_confirm_kd_band_seed217: source hashes differ from registration"
+  ],
+  "feasibility": {
+    "kd_decreased_all": true
+  },
+  "failed_runs": [],
+  "runs": [
+    {
+      "run": "acdc_confirm_decoder_seed201",
+      "selected_epoch": 48,
+      "epoch1_train_total": 1.9845418214797974,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 201
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed201",
+      "selected_epoch": 75,
+      "epoch1_train_total": 3.174259000666001,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.1118705896770253,
+      "kd_last10_mean": 0.2600512297714458,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 201
+    },
+    {
+      "run": "acdc_confirm_decoder_seed202",
+      "selected_epoch": 28,
+      "epoch1_train_total": 2.0934293564628152,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 202
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed202",
+      "selected_epoch": 55,
+      "epoch1_train_total": 3.2946324320400464,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.079607770723455,
+      "kd_last10_mean": 0.25992847120060636,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 202
+    },
+    {
+      "run": "acdc_confirm_decoder_seed203",
+      "selected_epoch": 36,
+      "epoch1_train_total": 2.1449649235781503,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 203
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed203",
+      "selected_epoch": 51,
+      "epoch1_train_total": 3.383751667247099,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.1057741438641269,
+      "kd_last10_mean": 0.2599541562094408,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 203
+    },
+    {
+      "run": "acdc_confirm_decoder_seed204",
+      "selected_epoch": 44,
+      "epoch1_train_total": 2.074683941111845,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 204
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed204",
+      "selected_epoch": 49,
+      "epoch1_train_total": 3.267982676449944,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.0884987704894122,
+      "kd_last10_mean": 0.2595511345828281,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 204
+    },
+    {
+      "run": "acdc_confirm_decoder_seed205",
+      "selected_epoch": 11,
+      "epoch1_train_total": 1.9785597268272848,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 205
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed205",
+      "selected_epoch": 51,
+      "epoch1_train_total": 3.168533911424525,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.1027923703193665,
+      "kd_last10_mean": 0.25978856204187173,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 205
+    },
+    {
+      "run": "acdc_confirm_decoder_seed206",
+      "selected_epoch": 49,
+      "epoch1_train_total": 2.019375773037181,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 206
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed206",
+      "selected_epoch": 72,
+      "epoch1_train_total": 3.2554649465224323,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.1133574661086587,
+      "kd_last10_mean": 0.25999547684893887,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 206
+    },
+    {
+      "run": "acdc_confirm_decoder_seed207",
+      "selected_epoch": 16,
+      "epoch1_train_total": 2.191968469058766,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 207
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed207",
+      "selected_epoch": 68,
+      "epoch1_train_total": 3.4103843520669375,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.1438652192845065,
+      "kd_last10_mean": 0.2601456763463862,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 207
+    },
+    {
+      "run": "acdc_confirm_decoder_seed208",
+      "selected_epoch": 38,
+      "epoch1_train_total": 2.195444118275362,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 208
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed208",
+      "selected_epoch": 54,
+      "epoch1_train_total": 3.4380171018488266,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.1408699386260088,
+      "kd_last10_mean": 0.2604001507163048,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 208
+    },
+    {
+      "run": "acdc_confirm_decoder_seed209",
+      "selected_epoch": 35,
+      "epoch1_train_total": 2.0601636858547434,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 209
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed209",
+      "selected_epoch": 64,
+      "epoch1_train_total": 3.2842502734240364,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.0981944834484774,
+      "kd_last10_mean": 0.25930913618382284,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 209
+    },
+    {
+      "run": "acdc_confirm_decoder_seed210",
+      "selected_epoch": 25,
+      "epoch1_train_total": 2.186293217715095,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 210
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed210",
+      "selected_epoch": 43,
+      "epoch1_train_total": 3.3826459884643554,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.066433475999271,
+      "kd_last10_mean": 0.25963776513057596,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 210
+    },
+    {
+      "run": "acdc_confirm_decoder_seed211",
+      "selected_epoch": 46,
+      "epoch1_train_total": 2.1704683037365182,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 211
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed211",
+      "selected_epoch": 33,
+      "epoch1_train_total": 3.418207390168134,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.1520380574114182,
+      "kd_last10_mean": 0.25978893425534755,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 211
+    },
+    {
+      "run": "acdc_confirm_decoder_seed212",
+      "selected_epoch": 23,
+      "epoch1_train_total": 2.186807828791001,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 212
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed212",
+      "selected_epoch": 36,
+      "epoch1_train_total": 3.435612580355476,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.1501908709021176,
+      "kd_last10_mean": 0.26009511353338466,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 212
+    },
+    {
+      "run": "acdc_confirm_decoder_seed213",
+      "selected_epoch": 22,
+      "epoch1_train_total": 2.071877196255852,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 213
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed213",
+      "selected_epoch": 32,
+      "epoch1_train_total": 3.3017836009754853,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.1181057565352497,
+      "kd_last10_mean": 0.2599773729022811,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 213
+    },
+    {
+      "run": "acdc_confirm_decoder_seed214",
+      "selected_epoch": 23,
+      "epoch1_train_total": 2.121861282516928,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 214
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed214",
+      "selected_epoch": 58,
+      "epoch1_train_total": 3.320335963193108,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.090040044223561,
+      "kd_last10_mean": 0.2599145993064432,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 214
+    },
+    {
+      "run": "acdc_confirm_decoder_seed215",
+      "selected_epoch": 37,
+      "epoch1_train_total": 2.0618475367041196,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 215
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed215",
+      "selected_epoch": 54,
+      "epoch1_train_total": 3.318077668021707,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.1594295431585873,
+      "kd_last10_mean": 0.2599460182119818,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 215
+    },
+    {
+      "run": "acdc_confirm_decoder_seed216",
+      "selected_epoch": 26,
+      "epoch1_train_total": 1.9957876752404606,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 216
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed216",
+      "selected_epoch": 85,
+      "epoch1_train_total": 3.32992101837607,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.2128777020117816,
+      "kd_last10_mean": 0.2599954299365773,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 216
+    },
+    {
+      "run": "acdc_confirm_decoder_seed217",
+      "selected_epoch": 17,
+      "epoch1_train_total": 1.9667956786997178,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "arm": "decoder",
+      "seed": 217
+    },
+    {
+      "run": "acdc_confirm_kd_band_seed217",
+      "selected_epoch": 63,
+      "epoch1_train_total": 3.1798534645753747,
+      "cache_hash": {
+        "train_teacher_prob_fp16.npy": "42266ea089e495d651cf654ae7c5c287a2b40d77cc1131ea78f3a0d059a6077e"
+      },
+      "kd_epoch1": 1.1045210852342493,
+      "kd_last10_mean": 0.2598250820180949,
+      "kd_decreased": true,
+      "arm": "kd_band",
+      "seed": 217
+    }
+  ]
+}

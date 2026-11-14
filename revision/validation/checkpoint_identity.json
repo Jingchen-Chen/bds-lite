@@ -1,0 +1,182 @@
+[
+ {
+  "run": "isic2018_unet_seed1",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "edc0a931b7526d8c",
+  "epoch": 44,
+  "predictions_in_manifest": 519,
+  "regenerated_hash_matches": 336,
+  "match_fraction": 0.6473988439306358
+ },
+ {
+  "run": "isic2018_unet_seed2",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "8bfc2ea598602565",
+  "epoch": 45,
+  "predictions_in_manifest": 519,
+  "regenerated_hash_matches": 362,
+  "match_fraction": 0.697495183044316
+ },
+ {
+  "run": "isic2018_unet_seed3",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "e1d8ba950af1fc18",
+  "epoch": 47,
+  "predictions_in_manifest": 519,
+  "regenerated_hash_matches": 320,
+  "match_fraction": 0.6165703275529865
+ },
+ {
+  "run": "isic2018_bds_lite_full_seed1",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "0f4881c8c086d15c",
+  "epoch": 44,
+  "predictions_in_manifest": 519,
+  "regenerated_hash_matches": 348,
+  "match_fraction": 0.6705202312138728
+ },
+ {
+  "run": "isic2018_bds_lite_full_seed2",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "bb341b222c0bb8fe",
+  "epoch": 43,
+  "predictions_in_manifest": 519,
+  "regenerated_hash_matches": 379,
+  "match_fraction": 0.7302504816955684
+ },
+ {
+  "run": "isic2018_bds_lite_full_seed3",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "ab8c50b5eab9a370",
+  "epoch": 63,
+  "predictions_in_manifest": 519,
+  "regenerated_hash_matches": 330,
+  "match_fraction": 0.6358381502890174
+ },
+ {
+  "run": "acdc_unet_seed1",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "f228823db5ddb421",
+  "epoch": 105,
+  "predictions_in_manifest": 366,
+  "regenerated_hash_matches": 261,
+  "match_fraction": 0.7131147540983607
+ },
+ {
+  "run": "acdc_unet_seed2",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "5e8c94b7ddd06e64",
+  "epoch": 46,
+  "predictions_in_manifest": 366,
+  "regenerated_hash_matches": 257,
+  "match_fraction": 0.7021857923497268
+ },
+ {
+  "run": "acdc_unet_seed3",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "367224ca0eb6cb03",
+  "epoch": 45,
+  "predictions_in_manifest": 366,
+  "regenerated_hash_matches": 265,
+  "match_fraction": 0.7240437158469946
+ },
+ {
+  "run": "acdc_bds_lite_full_seed1",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "f5c103d00c64f1ae",
+  "epoch": 24,
+  "predictions_in_manifest": 366,
+  "regenerated_hash_matches": 246,
+  "match_fraction": 0.6721311475409836
+ },
+ {
+  "run": "acdc_bds_lite_full_seed2",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "e8a721788f52d9c4",
+  "epoch": 41,
+  "predictions_in_manifest": 366,
+  "regenerated_hash_matches": 244,
+  "match_fraction": 0.6666666666666666
+ },
+ {
+  "run": "acdc_bds_lite_full_seed3",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "6cb801672ccf6736",
+  "epoch": 71,
+  "predictions_in_manifest": 366,
+  "regenerated_hash_matches": 262,
+  "match_fraction": 0.7158469945355191
+ },
+ {
+  "run": "synapse_unet_seed1",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "b00c14d908a28ab3",
+  "epoch": 61,
+  "predictions_in_manifest": 1568,
+  "regenerated_hash_matches": 1202,
+  "match_fraction": 0.7665816326530612
+ },
+ {
+  "run": "synapse_unet_seed2",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "74b101898b82d6e4",
+  "epoch": 51,
+  "predictions_in_manifest": 1568,
+  "regenerated_hash_matches": 1218,
+  "match_fraction": 0.7767857142857143
+ },
+ {
+  "run": "synapse_unet_seed3",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "f8b31cf47aedd126",
+  "epoch": 89,
+  "predictions_in_manifest": 1568,
+  "regenerated_hash_matches": 1226,
+  "match_fraction": 0.7818877551020408
+ },
+ {
+  "run": "synapse_bds_lite_full_seed1",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "a27dcd5c9e4c3080",
+  "epoch": 88,
+  "predictions_in_manifest": 1568,
+  "regenerated_hash_matches": 1239,
+  "match_fraction": 0.7901785714285714
+ },
+ {
+  "run": "synapse_bds_lite_full_seed2",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "fcf21128713a8879",
+  "epoch": 99,
+  "predictions_in_manifest": 1568,
+  "regenerated_hash_matches": 1230,
+  "match_fraction": 0.7844387755102041
+ },
+ {
+  "run": "synapse_bds_lite_full_seed3",
+  "file_sha256_matches_manifest": true,
+  "file_bytes_match": true,
+  "tensor_state_sha256": "850670fc83e0ae84",
+  "epoch": 113,
+  "predictions_in_manifest": 1568,
+  "regenerated_hash_matches": 1240,
+  "match_fraction": 0.7908163265306123
+ }
+]

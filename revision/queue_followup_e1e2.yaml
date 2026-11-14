@@ -1,0 +1,705 @@
+protocol: revision/followup_registration.md
+protocol_sha256: 30f771eb0c97c6fb9460c505989a1a0c97c99838553b748f9c565d1fa366a5c3
+runs:
+- run_id: acdc_followup_kd_full_seed201
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed201.yaml
+  config_sha256: cb181c3c4ae497e5d7b7682099c02edb736f1e5a9bc43df3929549489d57d5dc
+  output: results/revision_runs/acdc_followup_kd_full_seed201
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: &id001
+  - path: analysis/revision/expansion_statistics.py
+    sha256: 17099233fb6d2b67d769687109b3cc29a7b9a2f6e432006cad38e7e1d3c6b120
+  - path: analysis/revision/family_statistics.py
+    sha256: 31e94c002241bdae567755094f264023af3954bbf3a6ff43b5c4cb19b13d2daa
+  - path: analysis/revision/recover_predictions.py
+    sha256: 29700c6421d909bc687e528a7dbbe60e2aba93a882d92facb5c9b4163c56282d
+  - path: scripts/acdc_confirm/__init__.py
+    sha256: 89cff82545914368f3b58a3c51c4e8c5da2dcc9c23177c3af3d2ee25cdb52d41
+  - path: scripts/acdc_confirm/analyze.py
+    sha256: 81dd14f9737707de9b3157ad3a2bac12bf60a0eb34a8756e17bf62eb2c5fe938
+  - path: scripts/acdc_confirm/common.py
+    sha256: 3850cda78d5bfc8257ab3678344149045a180c3cb0f571e78de19773e477974e
+  - path: scripts/acdc_confirm/declare_failed.py
+    sha256: bc0ea0b0cbd9afabd90b08ea9e72dfcba6a2515c926bd039a64664b59e9e950f
+  - path: scripts/acdc_confirm/equivalence_check.py
+    sha256: c636a3ec841252e8e0fbc7fd1e1446ee4642284ebecdf37f4244c4e9dff994bc
+  - path: scripts/acdc_confirm/evaluate_test.py
+    sha256: e4f1b34cf432d94250129adddc37137fd368c561943fe2762fda2081aa5baa19
+  - path: scripts/acdc_confirm/integrity.py
+    sha256: be92596fd11fceb10c01951a68605d2896167e7629722ecece08c3e7dfec191a
+  - path: scripts/acdc_confirm/launch.py
+    sha256: 2e72990ce572b836686d652bba0176346278ce5ae354673b0f9f1847110bf56c
+  - path: scripts/acdc_confirm/official_test.py
+    sha256: 83852ab23d25a776d453b9805605962e0fc137c8159f5a5ac42deb12f0e12f9e
+  - path: scripts/acdc_confirm/preprocessing_impact.py
+    sha256: 40452fb92c086501d700b714ab538d7a93f152ddda944c777caf5ebfac5191af
+  - path: scripts/acdc_confirm/register.py
+    sha256: dbef67273e02c68be0ecec5973c221eb4a4bfe28846704b0ed8ff9ebcbf9c8f6
+  - path: scripts/acdc_confirm/run_queue.py
+    sha256: 728b2702107634f7e80889e3db1d4372378dfd7cc67ba77b7271b58bad1e1bcd
+  - path: scripts/acdc_confirm/supervise.py
+    sha256: 798dc31cffd7dc58c49a5e6f65b80a448e24e382f5c2a8b97f2841f4af78445f
+  - path: scripts/kd/__init__.py
+    sha256: ae87c9256133cf733925131431077d70816ddb014ae594e8b08541d07ca3c62d
+  - path: scripts/kd/benchmark_kd.py
+    sha256: 018fedc135eeef9addfda963bf393e6cef182309556aef7945c7dd6bcb66303f
+  - path: scripts/kd/cache_teacher.py
+    sha256: cb4349f182368fc5c23065eb708cbe362253c398f8efe4b5a48b232937482029
+  - path: scripts/kd/common.py
+    sha256: 08100b25c0063089f81cb1093c89c1b7e7c8fcc3e8e2c72b31d328fb71f5a440
+  - path: scripts/kd/data.py
+    sha256: 97d74e4c4876b182540df9cb5edafcc756ee2d715f35f18591999d53537121be
+  - path: scripts/kd/kd_loss.py
+    sha256: 0bf3271f62abe962f6cb26430cac1d82f75023891657315d169355d1521a2ec4
+  - path: scripts/kd/register_kd.py
+    sha256: d8baf8e81614bd4577242eaa868f5fca683ee1d673fc471ee2eb755c2d28faae
+  - path: scripts/kd/run_queue_kd.py
+    sha256: b44c940819283de1b616fb4992e6d80d3b0ffe578b73b9a62bd242a1357eda2a
+  - path: scripts/kd/supervise_kd.py
+    sha256: 05ad84bc0ed2716eefb0ab2c8139b5f9b70a836e5da10af34b8e1f71ead9b384
+  - path: scripts/kd/teacher.py
+    sha256: fce53ad67885576300e61568f29c6a43ef5e001ca6b6061717c75e2bf5d12c90
+  - path: scripts/kd/train_kd.py
+    sha256: 6d11ddb3bd5d8d2148ae804089fdf8a8193b441044e38be9d325126b84e362ac
+  - path: scripts/kd_followup/__init__.py
+    sha256: fd76f55c9a146a54ecaaa2d17e6e1956bb144a306f39fb341c99814279d2ab95
+  - path: scripts/kd_followup/cache_peer.py
+    sha256: 377959227adc94ec5bb82ffefa73d18741d876ffdb1c4fd635f44cb9ce65d7c2
+  - path: scripts/kd_followup/common.py
+    sha256: 56de5f17407513094e072715cfdc6af46835dab341b2283e5a35fd577959a089
+  - path: scripts/kd_followup/launch.py
+    sha256: 487bf35694d01705f281ac775e0cdb220637a69879b62604a888bea0b6170736
+  - path: scripts/kd_followup/register.py
+    sha256: 631de66afc8bcfaa98b96d566476662c308574c873aa591a0c2d0c2fa4bbdb93
+  - path: scripts/kd_followup/run_queue.py
+    sha256: 7d13a7cb3f6a81b41e1a06a51b6c16577524f7c13a471462c291f8e377d76e84
+  - path: scripts/kd_followup/supervise.py
+    sha256: 30b4726e8ca77362a98e1657cc83eb80fe4d168ad4287e38137b8dee8ec111de
+  - path: scripts/kd_mc/__init__.py
+    sha256: ca28539f3859e22c186c4061d3577a72b4aeb0d10f16abcb425eb36b6bae83e9
+  - path: scripts/kd_mc/benchmark_mc.py
+    sha256: 57c7c6b3e69012d032c51c46e54348a92cd30edb685d49a1e937e85673f431bd
+  - path: scripts/kd_mc/cache_mc.py
+    sha256: 76196bc1eb26708fa971ffee76774c1412b82d5962cc7aa27fac8396222f669b
+  - path: scripts/kd_mc/common.py
+    sha256: 2a02fa2c605d9b14e44083bc5d1fa9e68f2e243a237f6b99a1c902a41fe1cfc5
+  - path: scripts/kd_mc/data.py
+    sha256: 6fa73a250ca906e208ea306964cea15fcfcafbfd6a69622fa8a8af89ca8c2f39
+  - path: scripts/kd_mc/loss.py
+    sha256: 1b6d572b4f56ad21d8070043f888998b018b3894995f95ba4249862d52ebe309
+  - path: scripts/kd_mc/register_mc.py
+    sha256: 6dc24f3916ee1803eb0e03e79b27dd828dffd1e5c41d68988d7c82115032018c
+  - path: scripts/kd_mc/run_queue_mc.py
+    sha256: e63da7faa0ddb5d2665786c4222181d484cf75fbe0cbaa7022c6f1637915e404
+  - path: scripts/kd_mc/supervise_mc.py
+    sha256: 4a0de33f0479955d1b042bd294f8af29d0869715c37a5d2694a435a2bd8366c6
+  - path: scripts/kd_mc/teacher.py
+    sha256: ad991dffae908e69bd97f243947b93ee5742330e700733b984fdb3e47466a686
+  - path: scripts/kd_mc/train_mc.py
+    sha256: e137df0c790e53bedf7cd44dfe53da9a319b36d7d067c0c4774b0dc911f56634
+  - path: scripts/revision/acquire_official_isic.py
+    sha256: 79b601e92039ea44109aaddc856b975e4d8f378843eab45790691a5ff4eb7551
+  - path: scripts/revision/build_status.py
+    sha256: a8a36de1dff7cff8783780143e6196eeadfc644cac686b46978cc57a52037d93
+  - path: scripts/revision/catalog_checkpoints.py
+    sha256: a6bb1531f0984c0615bfd571c1d9000785b5c6e886cffc6f89a602f32a8240f1
+  - path: scripts/revision/finalize_reports.py
+    sha256: 57e4634ad80dfb05c0b550620026e5b0d5fbfe50e32a7ebb256a715c1e77d56d
+  - path: scripts/revision/inventory_sources.py
+    sha256: 825e58f45457b5aba1c1e45cc815160bad49796cf4a205b4de87eab9d04d8069
+  - path: scripts/revision/migrate_sources.py
+    sha256: 2f8dee73338783681589fbedbef87da115fb7936234f1fe9654d9861f37bd2af
+  - path: scripts/revision/run_queue.py
+    sha256: 392379e364413609f28f3105d3f8af96a590bdb2c82e0a194b2d1132e774d203
+  - path: scripts/revision/train_run.py
+    sha256: 10c0f722beb4bb4d8cea9e07fd0b30e594df9d69d140f3973d171e6dd6186cc5
+  - path: scripts/revision/training_support.py
+    sha256: a90945ceca92ba158df21ce3334dc6f661376cb92aa2eac5684b85d2ed016cfc
+  - path: scripts/revision/verify_migration.py
+    sha256: eec1b04ac5a6bdc60fbde2474bfbdc395c1f575ef76b240dec50a9b320cceee6
+  - path: scripts/revision/verify_preservation_final.py
+    sha256: 38b92f95c852b0ba872ca6a7ef538c05c19ab278396a5fe14b1df6ee6b7ea9d4
+  - path: src/bds_lite/__init__.py
+    sha256: 4a1b1fdfa6e2653e73b57415cda03bf4ef61b0353fe3eb8ee953d13f5bb8042d
+  - path: src/bds_lite/data/__init__.py
+    sha256: ce3b2fca30b9e224c09b8b2e60054d92b3e790389a347ef98ec65ae3179713e0
+  - path: src/bds_lite/data/boundary.py
+    sha256: 9fbfcd96ab2ded0b4570276382fb279a8186c95e47089c219e4b35139c92e00b
+  - path: src/bds_lite/data/converters.py
+    sha256: 163690f125c3e90468932868e622087e0f695046d74d1820655a319950548172
+  - path: src/bds_lite/data/datasets.py
+    sha256: 271fbe49c11f20fb96b0f4ce9dec33a3296087af2e6620d193b4321597d83fe4
+  - path: src/bds_lite/data/schema.py
+    sha256: cdb2a15844f13dad43d198b50d0dae0a4e028f0833b10dac019ee537dbd02347
+  - path: src/bds_lite/evaluation/__init__.py
+    sha256: 6cdf7590e6643931831f285d86a48175c78f6ecb061fafa8c154a1a8d72ace9a
+  - path: src/bds_lite/evaluation/metrics.py
+    sha256: 7332676cb92d31111654b805265fcca2741569de71d6bbfbe8af64a428f22f1c
+  - path: src/bds_lite/evaluation/profiling.py
+    sha256: 2c5050644afe3a1b22994d586e45c6a4c6c84c1295b2cf8f7ae7a97322786d5e
+  - path: src/bds_lite/losses/__init__.py
+    sha256: dd342eb439bf1922c0ee125ef8736382acf6dc97b7316ec5c38c0597bb446d43
+  - path: src/bds_lite/losses/boundary_dou.py
+    sha256: aa18141625c41ee13770470507881406e8879b6afce5154cfbc3c838d069f33a
+  - path: src/bds_lite/losses/gsl.py
+    sha256: d33395038de74305e6b94e13a9c72daffa1980a82eb4fc702e2658c261e69e4f
+  - path: src/bds_lite/models/__init__.py
+    sha256: 3adf7a8d8d57c31a661349d84bcac9f6b6e6af0a49b0355179800fe3e45bc7a7
+  - path: src/bds_lite/models/bds_lite.py
+    sha256: 38f29fb103238c7e021d843d7a698bd86cb328c582febb2a4f52f67af36611cd
+  - path: src/bds_lite/models/blocks.py
+    sha256: 1706bbc6005658d0d83a2744a0f28a5de2664c63559d1283f57b6d9b64297853
+  - path: src/bds_lite/models/ege_unet.py
+    sha256: 54a226682610ef6e43d1b61b36768a0ccf08b3a387a770dc081648c636289c20
+  - path: src/bds_lite/models/mobilevit_unet.py
+    sha256: be85324ae710de53749be87b06cfbb8b4a0c8e061605935282a7b2c4bf0c4b02
+  - path: src/bds_lite/models/unet.py
+    sha256: e6662bba98018ee06cacf2608a93085cc0670892ec5057e5a06e6eaa56541f71
+  - path: src/bds_lite/training/__init__.py
+    sha256: 094bb1725286711ebd27fd579e22c6028c80909919eec875c1ee0f4ddf1c04c5
+  - path: src/bds_lite/training/builders.py
+    sha256: 66ac1f684757a7e2da736472674caa51be640d061495794d80a32262fa0e5b46
+  - path: src/bds_lite/training/losses.py
+    sha256: 67aaa72ac6beb8fe520347e70d82a74b6fcb30b64ba1d8afd635973dd91e0407
+  - path: src/bds_lite/training/runner.py
+    sha256: 1c99d29af7cf7acbb7d1da370d4646a090a99e0f868c70162cce86a11a54d812
+  - path: src/bds_lite/utils/__init__.py
+    sha256: 82a4a11ad0deb2075ee67b71ccac18b6935def6228bdd5fcd8308806a523dfc4
+  - path: src/bds_lite/utils/config.py
+    sha256: 1f206a9034abb442d053e24075ff4767870cd6dc61873d2a276cc452a1512cfc
+  - path: src/bds_lite/utils/seed.py
+    sha256: a753ef1e19bc99266365590b3452ef9e99c0250b9edec5415b6d1db67c37262c
+- run_id: acdc_followup_kd_full_seed202
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed202.yaml
+  config_sha256: 6cf570dfc95ba67c237710d83deaad380a9c91b0b69a32c8f9f596fe715a6c5d
+  output: results/revision_runs/acdc_followup_kd_full_seed202
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed203
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed203.yaml
+  config_sha256: f03005ed60b828a5d0785a0faf11a31c7c7d04417a9b99a768d5be7d67fbeee0
+  output: results/revision_runs/acdc_followup_kd_full_seed203
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed204
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed204.yaml
+  config_sha256: 7343927e6d0101626e8483f3b9dfb1af02b5143e86a3bcfa972341fdb0943bfc
+  output: results/revision_runs/acdc_followup_kd_full_seed204
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed205
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed205.yaml
+  config_sha256: 7ebd1389329666019f7502a6d56778ff08f0d7ad1610d2c3fbc13b316907b8bc
+  output: results/revision_runs/acdc_followup_kd_full_seed205
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed206
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed206.yaml
+  config_sha256: 6c8923df89664a7d79934651cb7e75fdf59ae0480e00e5db29bf97d55a87a321
+  output: results/revision_runs/acdc_followup_kd_full_seed206
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed207
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed207.yaml
+  config_sha256: 6b9779ffafc3bdd28e991707e959cea280c7299ddaa9de3c818cee13809d3a6f
+  output: results/revision_runs/acdc_followup_kd_full_seed207
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed208
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed208.yaml
+  config_sha256: 4014b323e9c9935a9a6ec9849694677a026416a7b25656ed1746aee274c765a3
+  output: results/revision_runs/acdc_followup_kd_full_seed208
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed209
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed209.yaml
+  config_sha256: 3ebc4ee39a6a96cfc8813c6a4b622d7ef88a992df67212a4c43c025a8f5137ae
+  output: results/revision_runs/acdc_followup_kd_full_seed209
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed210
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed210.yaml
+  config_sha256: 19df3c6d57b8ee42c7b31194380023e83197de61e3952a4b5e923c9108b08fcc
+  output: results/revision_runs/acdc_followup_kd_full_seed210
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed211
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed211.yaml
+  config_sha256: 7ba1c6a5edb3160f35cfa713ead77a19f9174bd52cf23adba22b2f77086d88bf
+  output: results/revision_runs/acdc_followup_kd_full_seed211
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed212
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed212.yaml
+  config_sha256: 56c04d609de31b64024f415c2034cedd7a7738c4d5984a548adbdf38f0471dd0
+  output: results/revision_runs/acdc_followup_kd_full_seed212
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed213
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed213.yaml
+  config_sha256: 8cb7b34e0c2c612f083329611a13550c7c086847e9c08290f7813960ea69cef6
+  output: results/revision_runs/acdc_followup_kd_full_seed213
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed214
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed214.yaml
+  config_sha256: f932485a60c22df9b30c8e8c2514c2c4bdec0dbdb10abc6c3df54429805b9e7f
+  output: results/revision_runs/acdc_followup_kd_full_seed214
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed215
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed215.yaml
+  config_sha256: f58e7cfcb64ccd537f752f96a5e43ff78bf86c88e143efd97ae91bee437967aa
+  output: results/revision_runs/acdc_followup_kd_full_seed215
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed216
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed216.yaml
+  config_sha256: 14a56b79469092fbc6e956ba7405131103c42df9e64c682d296579971e9a3a49
+  output: results/revision_runs/acdc_followup_kd_full_seed216
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_full_seed217
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_full_seed217.yaml
+  config_sha256: 680e81ac3db4f2b6cd915dbfbbc509ca5a4bb98823f172b4bdd2465afe0a3217
+  output: results/revision_runs/acdc_followup_kd_full_seed217
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_e2_teacher_seed100
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_e2_teacher_seed100.yaml
+  config_sha256: d6a3a5e2a87dccfd651e31fc13c8b8fdd7df2e765c715168be5317b8b2a05c27
+  output: results/revision_runs/acdc_followup_e2_teacher_seed100
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_e2_teacher_cache
+  kind: cache
+  approved: true
+  config: configs/revision/followup/acdc_followup_e2_teacher_seed100.yaml
+  config_sha256: d6a3a5e2a87dccfd651e31fc13c8b8fdd7df2e765c715168be5317b8b2a05c27
+  output: results/revision_runs/acdc_followup_e2_teacher_cache
+  marker: cache_complete.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed201
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed201.yaml
+  config_sha256: 6c0cdf1c11ae1db30592b91650e4fc5897471ab32db05786993daa3136b1fced
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed201
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed202
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed202.yaml
+  config_sha256: ef32284b2efd97cc027cadec98e93c77384f8274b7db820cd94da37965daf320
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed202
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed203
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed203.yaml
+  config_sha256: be033f691d202938cb701f645687489fab71543c564f34635a2037ca9e09d87c
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed203
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed204
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed204.yaml
+  config_sha256: 110146dda9d3245c5c36d0158474eaa0a6f6958bf6c6459e53b951fc2759baa8
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed204
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed205
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed205.yaml
+  config_sha256: 931ad1eb35c64b02e552856cf5751d66a31a972516c6022139a119bc2a35204d
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed205
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed206
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed206.yaml
+  config_sha256: 0f31c12a197b20d63ab173dc78cc24d543699dce9fc693ea2dd7ddd30a2fe3a9
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed206
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed207
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed207.yaml
+  config_sha256: c14a96f2e4973086fd09482f6a0c326dac41cf9b1c3f4faa6a7ed1882debf638
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed207
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed208
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed208.yaml
+  config_sha256: e8af0859b823c93d2564d67a50953a84d73c85789ce9e5874e408a8a2f1e40da
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed208
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed209
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed209.yaml
+  config_sha256: 3a905106e4d8d35cd2a148abfc102359917f17f153efc633fe4e06fec7b696c5
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed209
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed210
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed210.yaml
+  config_sha256: 136449a133944f96e43e781fb75f015dacebdf2d754fbc5259def8c5219e6c6d
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed210
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed211
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed211.yaml
+  config_sha256: d164dcd445f06ebb3531f0ba0da1643dae4e4e60ff90c80a8c4c2d613f16c639
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed211
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed212
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed212.yaml
+  config_sha256: e2d9f7435c31fdd22bf37739ee8a41f8e319c9c587ddea713d6d6553be4e9ce7
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed212
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed213
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed213.yaml
+  config_sha256: 92a052150d740cf77cecf63887830e77edb6b187e6a48eb711a1c4e7ece014c0
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed213
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed214
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed214.yaml
+  config_sha256: 8d46a1b03d68616a13d7ed418b7a109a9e2e225886a29543b05e7a00b7e10684
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed214
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed215
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed215.yaml
+  config_sha256: 60d542966d0f33c8c95cfbad0e8c674064cb91645b7ee2f69ed4fa513808c77f
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed215
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed216
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed216.yaml
+  config_sha256: 9c8f3c5398701705906e6a0d2dc894c5b6663527c8e8107a8242b5cb0e6d7ea5
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed216
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001
+- run_id: acdc_followup_kd_band_peer_seed217
+  kind: train
+  approved: true
+  config: configs/revision/followup/acdc_followup_kd_band_peer_seed217.yaml
+  config_sha256: 2e602ebfb8782967a188ea857de343d24f73ebdcf98cc0c10a0712c1b36c9143
+  output: results/revision_runs/acdc_followup_kd_band_peer_seed217
+  marker: final_metrics.json
+  manifests:
+  - path: recovered/followup/splits/acdc/train.json
+    sha256: 591a6cd0be50b9451b778621f83d5057d1d132a14517cac346d2b069e63afe9d
+  - path: recovered/followup/splits/acdc/val.json
+    sha256: 4bf60eb7def463251e261aae011c15fb845c7ed80fceb60852a265fc32c6dc90
+  - path: recovered/followup/splits/acdc/test.json
+    sha256: 546493cb103b63267285a66e35f6d5ece482548f9a5c945bc48630afdf4b6638
+  sources: *id001

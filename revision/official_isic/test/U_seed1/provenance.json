@@ -1,0 +1,95 @@
+{
+  "checkpoint": "recovered/followup/results/followup_20261018_v2/isic2018_U_seed1/best.pt",
+  "sha256": "c222c28d444cdbf25adcc47648915436ab17089e1c5fddd11f0ef16abc9bf8f3",
+  "epoch": 52,
+  "preregistration_commit": "a6dc26c",
+  "fp32": true,
+  "batch": 8,
+  "split": "Test",
+  "n": 1000,
+  "config": {
+    "project": {
+      "name": "bds-lite",
+      "output_dir": "results/followup_20261017",
+      "seed": 1
+    },
+    "data": {
+      "processed_root": "data/processed",
+      "num_workers": 0,
+      "image_size": [
+        224,
+        224
+      ],
+      "normalize": "zscore"
+    },
+    "trainer": {
+      "device": "cuda",
+      "epochs": 150,
+      "batch_size": 8,
+      "lr": 0.0003,
+      "weight_decay": 1e-05,
+      "amp": true,
+      "save_every": 25,
+      "scheduler": "cosine",
+      "grad_clip": 1.0,
+      "init_from_checkpoint": null,
+      "freeze_encoder_epochs": 0
+    },
+    "dataset": {
+      "name": "isic2018",
+      "modality": "dermoscopy",
+      "task": "skin_lesion_segmentation",
+      "num_classes": 2,
+      "in_channels": 3,
+      "processed_dir": "data/followup/isic2018",
+      "image_dir": ".",
+      "mask_dir": ".",
+      "class_names": [
+        "background",
+        "lesion"
+      ],
+      "input_size": [
+        224,
+        224
+      ],
+      "spacing_policy": "unit_spacing_2d",
+      "ignore_index": null,
+      "train_split": "train",
+      "val_split": "val",
+      "test_split": "test",
+      "metrics": {
+        "primary": "dice",
+        "boundary": "boundary_f1"
+      },
+      "root": "data/processed/isic2018"
+    },
+    "loss": {
+      "dice_weight": 1.0,
+      "ce_weight": 1.0,
+      "boundary_weight": 0.0,
+      "distill_weight": 0.0,
+      "surface_weight": 0.0,
+      "distance_weight": 0.0,
+      "foreground_class_weights": null
+    },
+    "model": {
+      "name": "unet",
+      "base_channels": 32,
+      "boundary_classes": 1,
+      "boundary_gate": false,
+      "boundary_gate_scale": 0.25
+    },
+    "experiment": {
+      "name": "isic2018_U_seed1"
+    },
+    "followup": {
+      "arm": "U",
+      "train_manifest": "splits/isic2018/train.json",
+      "val_manifest": "splits/isic2018/val.json",
+      "reference_config": "configs/run_resolved/isic2018_unet_seed1.yaml",
+      "reference_sha256": "e54c293a4a349259a1ef8e5ad8bc676e6ef6f29a39ad9a5db6766de8b2c7a0b1",
+      "protocol_sha256": "fa32dc6efaf8388d40ea47c00468c3f6a70bd782eb7d5acce6c31973b55b24a8",
+      "cache_data": true
+    }
+  }
+}

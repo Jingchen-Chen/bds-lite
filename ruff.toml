@@ -1,0 +1,10 @@
+extend = "pyproject.toml"
+# Byte-preserved provenance snapshots are audited by hashes, not reformatted.
+# Active src/, scripts/, analysis/, results/ scripts and tests remain checked.
+# The author's qualitative-figure scripts (ACDC Figure 3) are excluded at the author's request
+# (2026-11-13); they are not part of the statistical pipeline.
+extend-exclude = [
+  "recovered",
+  "analysis/qualitative_acdc",
+  "revision/figures/make_qualitative_figure.py",
+]
