@@ -25,7 +25,7 @@ FAMILIES = {
 
 
 def main():
-    directory = ROOT / "revision/surface_cdf"
+    directory = ROOT / "results/surface_cdf"
     curves = defaultdict(list)
     source = directory / "full_cdf.csv"
     for row in csv.DictReader(source.open()):

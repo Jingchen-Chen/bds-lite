@@ -11,7 +11,7 @@ prediction maps with code independent of the training evaluator.
 Usage: validate_confirmation.py [--partial] [--self-test RUN_DIR DATASET]
 --partial checks finished runs only and writes nothing, so it can run during training.
 --self-test exercises the recomputation on an already reported run.
-Output: revision/validation/confirmation_validation.json. Exit code 1 on any failure.
+Output: results/validation/confirmation_validation.json. Exit code 1 on any failure.
 """
 
 from __future__ import annotations
@@ -95,7 +95,7 @@ def main() -> int:
         print("PASSED" if not problems else f"FAILED {problems}")
         return 1 if problems else 0
 
-    queue = yaml.safe_load((ROOT / "revision/queue_confirmation.yaml").read_text())
+    queue = yaml.safe_load((ROOT / "protocols/confirmation/queue_confirmation.yaml").read_text())
     runs = queue["runs"]
     report: dict = dict(registered=len(runs), finished=0, failures={})
     if len(runs) != EXPECTED:
@@ -133,7 +133,7 @@ def main() -> int:
     )
     report["status"] = "FAILED" if failed else "PASSED"
     if not args.partial:
-        (ROOT / "revision/validation/confirmation_validation.json").write_text(
+        (ROOT / "results/validation/confirmation_validation.json").write_text(
             json.dumps(report, indent=1) + "\n"
         )
     print(json.dumps(report, indent=1)[:2500])

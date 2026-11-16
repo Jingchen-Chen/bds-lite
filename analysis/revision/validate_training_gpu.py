@@ -87,7 +87,7 @@ def main():
                 raise AssertionError("observational probe altered full-batch next update")
             del model, optimizer, scheduler, initial, states, batch
             torch.cuda.empty_cache()
-        path = ROOT / "revision/validation/training_gpu_engineering.json"
+        path = ROOT / "results/validation/training_gpu_engineering.json"
         path.write_text(
             json.dumps(
                 dict(scope="engineering smoke, not scientific training", rows=rows), indent=2

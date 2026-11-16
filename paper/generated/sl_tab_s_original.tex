@@ -1,0 +1,17 @@
+% labels of the main text applied by analysis/revision/make_supplement_labels.py to tab_s_original.tex
+% generated from revision/sources/github_release/{main_test_means,matched_gsl_summary}.csv
+\begin{tabular}{llcccccl}
+\toprule
+Dataset & Method & DSC & IoU & BF1 & HD95 & ASSD & Status in revision \\
+\midrule
+ISIC2018 & U & 0.883 & 0.809 & 0.552 & 18.51 & 5.92 & withdrawn: 358/519 images were training images \\
+ISIC2018 & BDS-Lite & 0.883 & 0.811 & 0.560 & 17.44 & 5.68 & withdrawn: 358/519 images were training images \\
+ISIC2018 & U-Net+GSL & 0.866 & 0.790 & 0.540 & 19.80 & 6.66 & value valid on its selection set; contrast withdrawn \\
+ACDC & U & 0.789 & 0.711 & 0.831 & 6.88 & 2.21 & reproduced from the same checkpoints (S9) \\
+ACDC & BDS-Lite & 0.785 & 0.707 & 0.827 & 7.62 & 2.49 & reproduced from the same checkpoints (S9) \\
+ACDC & U-Net+GSL & 0.786 & 0.704 & 0.828 & 7.01 & 2.09 & original value; checkpoints unavailable \\
+Synapse & U & 0.854 & 0.836 & 0.861 & 10.20 & 3.75 & reproduced from the same checkpoints (S9) \\
+Synapse & BDS-Lite & 0.857 & 0.839 & 0.863 & 10.34 & 3.83 & reproduced from the same checkpoints (S9) \\
+Synapse & U-Net+GSL & 0.864 & 0.845 & 0.870 & 10.13 & 3.86 & original value; checkpoints unavailable \\
+\bottomrule
+\end{tabular}

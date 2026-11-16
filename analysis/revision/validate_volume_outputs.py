@@ -19,8 +19,8 @@ def sha(path):
 
 
 def main():
-    completions = list((ROOT / "revision/volume_results").rglob("volume_complete.json"))
-    protocol = sha(ROOT / "revision/volume_evaluation_protocol.md")
+    completions = list((ROOT / "results/volume").rglob("volume_complete.json"))
+    protocol = sha(ROOT / "protocols/volume/volume_evaluation_protocol.md")
     for path in completions:
         marker = json.loads(path.read_text())
         if marker["protocol_sha256"] != protocol or marker["per_volume_sha256"] != sha(
@@ -36,7 +36,7 @@ def main():
         ("acdc", "patient011_01", [1, 2, 3]),
         ("synapse", "case0001", [1]),
     ]:
-        folder = ROOT / f"revision/prediction_recovery/main_p1b_unet/{dataset}_seed1/test"
+        folder = ROOT / f"results/prediction_recovery/main_p1b_unet/{dataset}_seed1/test"
         with np.load(folder / "predictions.npz") as z:
             available = dict(zip(z["ids"], z["predictions"], strict=True))
         ids = []
@@ -63,10 +63,7 @@ def main():
             pred = ndi.zoom(pred, (1, target.shape[1] / 224, target.shape[2] / 224), order=0)
         rows = list(
             csv.DictReader(
-                (
-                    ROOT
-                    / f"revision/volume_results/main_p1b_unet/{dataset}_seed1/per_volume_class.csv"
-                ).open()
+                (ROOT / f"results/volume/main_p1b_unet/{dataset}_seed1/per_volume_class.csv").open()
             )
         )
         for label in labels:
@@ -101,7 +98,7 @@ def main():
         real_volume_edt_checks=checks,
         scope="Output hashes and fixed EDT checks; not geometry validation",
     )
-    (ROOT / "revision/validation/volume_outputs.json").write_text(
+    (ROOT / "results/validation/volume_outputs.json").write_text(
         json.dumps(result, indent=2) + "\n"
     )
     print(

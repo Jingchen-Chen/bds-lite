@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def main():
-    base = ROOT / "revision/official_isic/test"
+    base = ROOT / "results/official_isic/test"
     metrics = {}
     for arm in "UF":
         metrics[arm] = []
@@ -43,7 +43,7 @@ def main():
     for arm in "USF":
         with np.load(base / f"{arm}_seed1/preds_test.npz") as z:
             predictions[arm] = dict(zip(z["ids"], z["predictions"], strict=True))
-    directory = ROOT / "revision/figures"
+    directory = ROOT / "paper/figures"
     directory.mkdir(exist_ok=True)
     archives = ROOT / "data/revision/isic2018_official/archives"
     manifest = []

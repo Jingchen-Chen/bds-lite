@@ -1,4 +1,4 @@
-"""Configuration builders for Experiment C (revision/CONFIRMATION_PROTOCOL.md)."""
+"""Configuration builders for Experiment C (protocols/confirmation/CONFIRMATION_PROTOCOL.md)."""
 
 from __future__ import annotations
 

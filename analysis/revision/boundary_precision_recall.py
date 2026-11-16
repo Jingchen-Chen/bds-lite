@@ -4,7 +4,7 @@
 Boundary precision (predicted contour within 2 px of the reference) and recall (reference contour
 within 2 px of the prediction), with the training evaluator's definition, plus the number of
 connected components not overlapping the reference. Averaged per image, then per run.
-Output: revision/tables/families/boundary_precision_recall.csv
+Output: results/tables/families/boundary_precision_recall.csv
 """
 
 from __future__ import annotations
@@ -23,7 +23,7 @@ from analysis.revision.recover_predictions import Cohort  # noqa: E402
 from bds_lite.data.boundary import mask_to_boundary  # noqa: E402
 
 RUNS = "results/revision_runs/isic2018_{}_seed{}/preds_test.npz"
-OFFICIAL = "revision/official_isic/test/{}_seed{}/preds_test.npz"
+OFFICIAL = "results/official_isic/test/{}_seed{}/preds_test.npz"
 TEN = range(1, 11)
 ARMS = {
     "M0": lambda s: OFFICIAL.format("U", s) if s <= 3 else RUNS.format("m0_unet", s),
@@ -32,7 +32,7 @@ ARMS = {
     "GSL": lambda s: RUNS.format("gsl", s),
 }
 THREE = {"M7": "m7_decoder_surface"}
-OUT = ROOT / "revision/tables/families/boundary_precision_recall.csv"
+OUT = ROOT / "results/tables/families/boundary_precision_recall.csv"
 
 
 def measures(pred: np.ndarray, target: np.ndarray) -> tuple[float, float, int]:

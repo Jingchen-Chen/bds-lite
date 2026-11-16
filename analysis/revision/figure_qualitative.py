@@ -9,7 +9,7 @@ either method are excluded. Shown prediction per method = the
 representative seed (per-seed delta closest to the seed mean); cases need defined
 HD95 in every seed for both methods (empty-prediction cases are excluded, prereg).
 
-Licensing (revision/LICENSING_AUDIT.md): the figure uses ISIC2018 Task 1 reference masks (CC-0) and our
+Licensing (docs/LICENSING_AUDIT.md): the figure uses ISIC2018 Task 1 reference masks (CC-0) and our
 own predictions on a white background. No dataset photograph is read or drawn. ACDC and Synapse
 reference labels have no readable licence, so they feed statistics only and are never drawn.
 Methods without complete predictions are omitted and listed in the manifest.
@@ -181,8 +181,8 @@ def render_isic(cases: list, preds: dict, masks: dict, methods: list[str]) -> No
     ]
     fig.legend(handles=legend, loc="lower center", ncol=4, frameon=False, fontsize=6.5)
     fig.tight_layout(rect=(0, 0.06, 1, 1), h_pad=0.2, w_pad=0.2)
-    fig.savefig(ROOT / "revision/figures/contours_isic2018.pdf")
-    fig.savefig(ROOT / "revision/figures/contours_isic2018.png", dpi=250)
+    fig.savefig(ROOT / "paper/figures/contours_isic2018.pdf")
+    fig.savefig(ROOT / "paper/figures/contours_isic2018.png", dpi=250)
     plt.close(fig)
 
 
@@ -219,7 +219,7 @@ def main() -> None:
             methods_shown=methods,
             methods_missing=[m for m in ORDER if m not in methods],
         )
-    (ROOT / "revision/figures/qualitative_manifest_v2.json").write_text(
+    (ROOT / "paper/figures/qualitative_manifest_v2.json").write_text(
         json.dumps(manifest, indent=1) + "\n"
     )
     print(json.dumps({k: v["methods_shown"] for k, v in manifest.items()}))

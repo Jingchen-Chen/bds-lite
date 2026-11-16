@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def main():
-    directory = ROOT / "revision/surface_cdf"
+    directory = ROOT / "results/surface_cdf"
     summaries = defaultdict(list)
     for row in csv.DictReader((directory / "summary.csv").open()):
         summaries[row["dataset"], row["family"]].append(row)
@@ -51,8 +51,8 @@ def main():
         writer = csv.DictWriter(stream, fieldnames=list(table[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(table)
-    (ROOT / "revision/tables/surface_cdf_summary.tex").write_text("\n".join(tex) + "\n")
-    validation = json.loads((ROOT / "revision/validation/surface_cdf.json").read_text())
+    (ROOT / "results/tables/surface_cdf_summary.tex").write_text("\n".join(tex) + "\n")
+    validation = json.loads((ROOT / "results/validation/surface_cdf.json").read_text())
     observed = {(r["dataset"], r["family"]): r for r in table}
     pairs = [
         ("isic2018", "U", "F"),
@@ -106,7 +106,7 @@ def main():
         "Numeric Synapse classes remain unrelabelled. No physical or clinical conclusion "
         "is inferred. Sources: surface_cdf/*.csv and validation/surface_cdf.json.",
     ]
-    (ROOT / "revision/SURFACE_ERROR_FINDINGS.md").write_text("\n".join(text) + "\n")
+    (ROOT / "results/surface_cdf/FINDINGS.md").write_text("\n".join(text) + "\n")
     (directory / "README.md").write_text(
         "Reproduce with surface_distance_cdf.py (refuses existing output), then "
         "plot_surface_cdf.py and validate_surface_cdf.py. Table/prose generation "
@@ -118,7 +118,7 @@ def main():
         "Original GT provenance is in audit/inventory.csv and sources/isic_acquisition.json.\n"
     )
     (
-        ROOT / "revision/manuscript/surface_errors_draft.tex"
+        ROOT / "paper/surface_errors_draft.tex"
     ).write_text(r"""% Generated evidence fragment; author integration and compilation pending.
 \paragraph{Surface-distance distributions.}
 The descriptive processed-grid CDFs show a mixture of near-contour and distant

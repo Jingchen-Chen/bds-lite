@@ -1,1 +1,4 @@
-"""External-teacher boundary-band distillation comparator (revision/KD_COMPARATOR_PROTOCOL.md)."""
+"""External-teacher boundary-band distillation comparator.
+
+Protocol: protocols/kd_isic2018/KD_COMPARATOR_PROTOCOL.md.
+"""

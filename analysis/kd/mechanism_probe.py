@@ -3,7 +3,7 @@
 Uses analysis/revision/boundary_transfer_probe.py unchanged (subset, collect, ridge_ap,
 average_precision; same image subsets, pixel sampling seeds 1000+seed / 2000+seed, and ridge
 settings). Seeds are aligned with the recorded decoder-only probe: D+KD-band seeds 1-3 against the
-decoder-only rows (arm M2, seeds 1-3) of revision/tables/families/boundary_transfer_probe.csv.
+decoder-only rows (arm M2, seeds 1-3) of results/tables/families/boundary_transfer_probe.csv.
 Refuses to run before the step-8 test evaluation of D+KD-band exists.
 """
 
@@ -23,7 +23,7 @@ from analysis.revision import boundary_transfer_probe as btp  # noqa: E402
 from bds_lite.models import BDSLiteUNet  # noqa: E402
 
 RUNS = ROOT / "results/revision_runs"
-OUT = ROOT / "revision/kd_comparator/phase2/mechanism.csv"
+OUT = ROOT / "results/kd_isic2018/phase2/mechanism.csv"
 SEEDS = (1, 2, 3)
 
 

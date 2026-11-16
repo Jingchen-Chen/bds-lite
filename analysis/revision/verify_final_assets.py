@@ -1,8 +1,8 @@
 # ruff: noqa: E501
 """Check the final-revision keys, tables and figure inputs against the evidence freeze.
 
-The expected values below are typed from revision/BDS_LITE_EVIDENCE_FREEZE.md v1.0.0 (sections
-named in each entry) and revision/plan/claim_ledger.md, not read from the generator, so that a
+The expected values below are typed from evidence/BDS_LITE_EVIDENCE_FREEZE.md v1.0.0 (sections
+named in each entry), not read from the generator, so that a
 generator error cannot pass. Also checks that the per-seed values plotted in Fig. 3 reproduce the
 arm means of the contrast files and that every generated table contains its ledger cells.
 Exits 1 on any mismatch.
@@ -20,7 +20,7 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
-GEN = ROOT / "revision/manuscript/generated"
+GEN = ROOT / "paper/generated"
 M = "$-$"
 
 # key -> expected printed value (freeze section)
@@ -224,12 +224,20 @@ EXPECTED_CELLS = {
     # main-text resource and published-result tables (values of resource_profile.csv and of
     # panel B of tab_lit_main.tex, unchanged)
     "tab_resource_text.tex": [
-        "U-Net & 1,927,042 & 15.970 & 1.66 & 36.75 & 129.9",
-        "& 1,928,114 & 16.079 & 1.79 & 42.26 & 134.8",
-        "& 1,927,042 & 15.970 & 1.66 & 36.84 & 131.1",
+        # GFLOPs: FlopCounterMode column of resource_profile.csv (2026-11-16; the hook counter
+        # gave 15.970 / 16.079); GPU b1 with three decimals
+        "U-Net & 1,927,042 & 14.120 & 1.656 & 36.75 & 129.9",
+        "& 1,928,114 & 14.229 & 1.794 & 42.26 & 134.8",
+        "& 1,927,042 & 14.120 & 1.661 & 36.84 & 131.1",
+    ],
+    "tab_resource_supp.tex": [
+        "U-Net & 1,927,042 & 14.120 & 1.656 & 17.41 & 36.75 & 129.9 & 17.3 & 104",
+        "BDS-Lite (deployed) & 1,928,114 & 14.229 & 1.794 & 20.19 & 42.26 & 134.8 & 18.7 & 115",
+        "Attention U-Net & 1,948,773 & 14.431 & 1.861 & 19.46 & 41.05 & 136.0 & 19.4 & 131",
+        "LB-UNet & 55,874 & 0.144 & 3.560 & 3.58 & 3.91 & 6.5 & 5.4 & 462",
     ],
     "tab_published_text.tex": ["& 0.8946 &", "& 0.8954 &", "& 0.7748 & 31.69", "& 0.7913 & 21.55"],
-    "tab_resource_final.tex": ["1,928,114", "1.66 & 36.75", "1.79 & 42.26", "129.9", "134.8"],
+    "tab_resource_final.tex": ["1,928,114", "1.656 & 36.75", "1.794 & 42.26", "129.9", "134.8"],
     # siunitx S-column input since the Table 3 relayout; the three ACDC SDs of 0.0080 were
     # recomputed from the per-run files (0.008009, 0.007989, 0.008010) and are distinct values.
     "tab_matched_main.tex": [
@@ -297,10 +305,10 @@ def main() -> int:
             if cell not in text:
                 errors.append(f"{name}: missing {cell!r}")
     # Fig. 3 inputs: per-seed run means reproduce the contrast-file arm means
-    fu = read_csv(ROOT / "revision/followup/results/contrasts.csv")
-    seeds_fu = read_csv(ROOT / "revision/followup/results/per_seed.csv")
-    e3 = read_csv(ROOT / "revision/evidence_freeze/final_e3_analysis.csv")
-    seeds_e3 = read_csv(ROOT / "revision/evidence_freeze/final_e3_per_seed.csv")
+    fu = read_csv(ROOT / "results/followup/results/contrasts.csv")
+    seeds_fu = read_csv(ROOT / "results/followup/results/per_seed.csv")
+    e3 = read_csv(ROOT / "evidence/final_e3_analysis.csv")
+    seeds_e3 = read_csv(ROOT / "evidence/final_e3_per_seed.csv")
     arm_rows = {
         "decoder": ("C2", "arm_b_mean", fu),
         "kd_full": ("C2", "arm_a_mean", fu),

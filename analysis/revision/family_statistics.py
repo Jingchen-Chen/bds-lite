@@ -11,7 +11,7 @@ percentile bootstrap 10,000 draws (RNG 20261102, prereg_revision.md), sign effec
 leave-one-cluster-out range and revision-stage SESOI classification.
 ISIC test = official 1,000-image Task-1 test; ACDC/Synapse = locked test split.
 
-Families (analysis/revision/prereg_revision.md):
+Families (protocols/ablation/revision_analysis_plan.md):
 P  M6 vs M0, Holm over 5 metrics within dataset.
 A  each ablation vs M6, Holm over all ablation x metric within dataset.
 A0 addition path vs M0 (M1, M2, M3, M4, M5 vs U-Net), Holm over arm x metric.
@@ -45,10 +45,10 @@ SEEDS = [1, 2, 3]
 DRAWS, RNG_SEED = 10_000, 20261102
 FOLLOWUP = ROOT / "recovered/followup/results/followup_20261018_v2"
 RUNS = ROOT / "results/revision_runs"
-OFFICIAL = ROOT / "revision/official_isic/test"
-RECOVERY = ROOT / "revision/prediction_recovery"
+OFFICIAL = ROOT / "results/official_isic/test"
+RECOVERY = ROOT / "results/prediction_recovery"
 
-# method -> (label, family role). Design (revision/GITHUB_AUDIT.md):
+# method -> (label, family role). Design (docs/provenance/GITHUB_AUDIT.md):
 #   S0/S6  submitted models (family O): primary family P. ISIC evaluated on the official test
 #          (the submitted 519-image numbers are contaminated, audit C1).
 #   M0/M6  pipeline-matched references for ablations/comparators (adapter = p1b pipeline,
@@ -72,7 +72,7 @@ METHODS = {
     "R0": ("U-Net (replication family)", "replication"),
     "R6": ("BDS-Lite (replication family)", "replication"),
 }
-EXTRA = ROOT / "revision/extra_cohorts"
+EXTRA = ROOT / "results/extra_cohorts"
 EXTRA_COHORT = {"S0": "famO_unet", "S6": "famO_full", "S6g": "famO_full_gateid"}
 RUN_ARM = {
     "M1": "m1_sdf_only",
@@ -467,7 +467,7 @@ def collapse_summary() -> tuple[list[dict], list[dict]]:
 
 
 def main() -> None:
-    out = ROOT / "revision/tables/families"
+    out = ROOT / "results/tables/families"
     ablations = ["M1", "M2", "M3", "M4", "M5"]
     comparators = ["GSL", "C1", "C3", "C4"]
     all_rows, omni, post = [], [], []

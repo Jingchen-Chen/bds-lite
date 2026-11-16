@@ -5,11 +5,11 @@ Reads completed runs only. Experiment C runs are excluded by name and by seed; n
 opened. All contrasts use the frozen estimator of analysis/revision/expansion_statistics.py.
 
 Writes:
-  revision/tables/families/audit_validation_contrasts.csv, audit_development_controls.csv,
+  results/tables/families/audit_validation_contrasts.csv, audit_development_controls.csv,
   audit_isic_membership.csv
-  revision/manuscript/generated/numbers_audit.tex and tab_s_membership.tex, tab_s_validation.tex,
+  paper/generated/numbers_audit.tex and tab_s_membership.tex, tab_s_validation.tex,
   tab_s_development.tex, tab_s_ledger.tex
-  revision/figures/transfer_mechanism.pdf
+  paper/figures/transfer_mechanism.pdf
 """
 
 from __future__ import annotations
@@ -31,7 +31,7 @@ import yaml  # noqa: E402
 from matplotlib.lines import Line2D  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-_VALIDATION = ROOT / "revision/historical_reevaluation/validation.json"
+_VALIDATION = ROOT / "results/historical_reevaluation/validation.json"
 # Evidence classes change only once the frozen historical re-evaluation has passed validation.
 REEVALUATED = _VALIDATION.exists() and json.loads(_VALIDATION.read_text()).get("status") == "PASSED"
 EXPLORATORY_RETESTED = (
@@ -42,15 +42,17 @@ EXPLORATORY_RETESTED = (
 sys.path.insert(0, str(ROOT / "analysis/revision"))
 import expansion_statistics as ex  # noqa: E402
 
-FAM = ROOT / "revision/tables/families"
-GEN = ROOT / "revision/manuscript/generated"
-FIG = ROOT / "revision/figures"
+FAM = ROOT / "results/tables/families"
+GEN = ROOT / "paper/generated"
+FIG = ROOT / "paper/figures"
 RUNS = ROOT / "results/revision_runs"
 FOLLOW = ROOT / "recovered/followup/results"
-AUDIT = ROOT / "revision/audit/project_audit_20261107"
+AUDIT = ROOT / "results/audit/project_audit_20261107"
 STAGE2 = {
     r["run_id"]
-    for r in yaml.safe_load((ROOT / "revision/queue_confirmation.yaml").read_text())["runs"]
+    for r in yaml.safe_load((ROOT / "protocols/confirmation/queue_confirmation.yaml").read_text())[
+        "runs"
+    ]
 }
 KEYS: dict[str, str] = {}
 METRIC_DIGITS = {"boundary_f1": 3, "dsc": 3, "iou": 3, "hd95": 2, "assd": 2}
@@ -282,7 +284,7 @@ def legacy_bf1_keys() -> None:
                 old = pd.read_csv(ROOT / f"outputs/evaluations/{dataset}_{arm}_seed{seed}_test.csv")
                 old = old[old.class_id > 0]
                 new = pd.read_csv(
-                    ROOT / f"revision/extra_cohorts/{cohort}/{dataset}_seed{seed}/test/per_case.csv"
+                    ROOT / f"results/extra_cohorts/{cohort}/{dataset}_seed{seed}/test/per_case.csv"
                 )
                 both = old.merge(
                     new,
@@ -695,7 +697,7 @@ def historical() -> None:
     if not all(f.exists() for f in files):
         return
     april, october, tolerance = (pd.read_csv(f) for f in files)
-    folder = ROOT / "revision/historical_reevaluation"
+    folder = ROOT / "results/historical_reevaluation"
     validation = json.loads((folder / "validation.json").read_text())
     parity = json.loads((folder / "parity.json").read_text())
     KEYS["HR.status"] = validation["status"]

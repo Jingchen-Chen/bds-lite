@@ -33,7 +33,7 @@ for base in [r / "results", r / "outputs", r / "recovered/followup/results"]:
                 verification="loadable; no training-reproduction claim",
             )
         )
-with (r / "revision/audit/checkpoints.csv").open("w") as f:
+with (r / "results/audit/checkpoints.csv").open("w") as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0]), lineterminator="\n")
     w.writeheader()
     w.writerows(rows)

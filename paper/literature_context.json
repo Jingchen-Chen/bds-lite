@@ -1,0 +1,19 @@
+{
+  "CTO": {
+    "citation": "Lin2025Rethinking",
+    "source_url": "https://arxiv.org/abs/2505.04652v1",
+    "values": {
+      "ISIC2018": {
+        "DSC": 0.9063,
+        "location": "Section 4.4 and Table 3; Table 4 rounds to 90.6"
+      },
+      "Synapse": {
+        "DSC": 0.8094,
+        "HD": 19.45,
+        "location": "Table 6"
+      }
+    },
+    "protocol": "ISIC2018: five-fold cross-validation, 2594 images, 256x256, ImageNet-pretrained Res2Net-50; Synapse: 18 train/12 test cases, 2D predictions stacked into volumes. HD has no reported unit.",
+    "verification": "Source values transcribed in the validated manuscript presentation generator, 2026-11-15."
+  }
+}

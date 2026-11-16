@@ -11,7 +11,7 @@ THRESHOLDS = {"dsc": 0.01, "iou": 0.01, "boundary_f1": 0.01, "hd95": 2.0, "assd"
 
 
 def main():
-    base = ROOT / "revision/official_isic/test"
+    base = ROOT / "results/official_isic/test"
     paired = {}
     for arm in "UF":
         paired[arm] = []
@@ -88,7 +88,7 @@ def main():
     for rank, index in enumerate(ordered):
         previous = max(previous, min(1.0, (len(ordered) - rank) * results[index]["p_raw"]))
         results[index]["p_holm"] = previous
-    path = ROOT / "revision/tables/official_isic_primary_statistics.csv"
+    path = ROOT / "results/tables/official_isic_primary_statistics.csv"
     with path.open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(results[0]), lineterminator="\n")
         writer.writeheader()

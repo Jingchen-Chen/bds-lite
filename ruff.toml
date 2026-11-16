@@ -6,5 +6,5 @@ extend = "pyproject.toml"
 extend-exclude = [
   "recovered",
   "analysis/qualitative_acdc",
-  "revision/figures/make_qualitative_figure.py",
+  "paper/figures/make_qualitative_figure.py",
 ]

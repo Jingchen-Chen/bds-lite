@@ -1,0 +1,15 @@
+% labels of the main text applied by analysis/revision/make_supplement_labels.py to tab_s_hist_october.tex
+\begin{tabular}{lccc}
+\toprule
+Contrast & Boundary F1 & DSC & Holm $p$ (BF1) \\
+\midrule
+D+F+G $-$ D+G: distillation given decoder and gate & +0.049 [+0.003, +0.094] & +0.007 [$-$0.003, +0.016] & 0.290 \\
+D+G $-$ U+G: decoder given gate & $-$0.049 [$-$0.120, +0.022] & $-$0.009 [$-$0.022, +0.004] & 0.531 \\
+U+G $-$ U: gate and projection & +0.012 [$-$0.055, +0.078] & +0.001 [$-$0.012, +0.013] & 1.000 \\
+D$_0$+F+G $-$ U+G: matching without boundary supervision & $-$0.016 [$-$0.099, +0.068] & $-$0.005 [$-$0.018, +0.008] & 1.000 \\
+D+F+G $-$ D$_0$+F+G: boundary supervision given matching & +0.015 [$-$0.066, +0.097] & +0.003 [$-$0.008, +0.014] & 1.000 \\
+D+G $-$ D: gate without distillation & $-$0.054 [$-$0.085, $-$0.023] & $-$0.007 [$-$0.014, $-$0.001] & 0.070 \\
+D+F+G $-$ D: gate with distillation & $-$0.005 [$-$0.050, +0.040] & $-$0.001 [$-$0.011, +0.010] & 1.000 \\
+Interaction (D+F+G $-$ D+G) $-$ (D$_0$+F+G $-$ U+G) & +0.065 [$-$0.012, +0.141] & +0.012 [$-$0.001, +0.025] & 0.517 \\
+\bottomrule
+\end{tabular}

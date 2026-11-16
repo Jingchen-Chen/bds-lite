@@ -1,0 +1,39 @@
+{
+  "rule": "(the rule of the D / D+KD-band figure, fixed here before rendering):\n  1. Run value: slice DSC is the mean over RV, MYO and LV (a class absent from prediction and\n     reference is left out); slices are averaged within patients, then patients are averaged.\n  2. Seed: among seeds 1-3, the seed whose paired run-level DSC difference, BDS-Lite minus D,\n     is closest to the median of the three differences.\n  3. Slices: among slices whose reference contains RV, MYO and LV, the slices nearest the 90th,\n     50th and 10th percentiles of the paired slice-level DSC difference (BDS-Lite minus D) of\n     that seed, with at most one slice per patient.\n  4. Columns: image, GT, U, D, BDS-Lite, change against D (BDS-Lite versus D).",
+  "test_set": "20 internal ACDC test patients, 366 slices",
+  "manifest": "recovered/followup/splits/acdc/test.json",
+  "run_level_dsc": {
+    "U_seed1": 0.7336006709214692,
+    "U_seed2": 0.7515809756009614,
+    "U_seed3": 0.7428274877633537,
+    "D_seed1": 0.7514829416602414,
+    "D_seed2": 0.7567658416016434,
+    "D_seed3": 0.7673435833008984,
+    "BDS-Lite_seed1": 0.747331590259569,
+    "BDS-Lite_seed2": 0.753417707031785,
+    "BDS-Lite_seed3": 0.7719593411540755
+  },
+  "seed_delta_bdslite_minus_d": {
+    "1": -0.004151351400672465,
+    "2": -0.0033481345698583853,
+    "3": 0.004615757853177138
+  },
+  "median_delta": -0.0033481345698583853,
+  "selected_seed": 2,
+  "eligible_slices": 310,
+  "percentiles": [
+    90,
+    50,
+    10
+  ],
+  "selected_slices": [
+    "patient071_frame01_slice_6",
+    "patient065_frame14_slice_3",
+    "patient013_frame14_slice_5"
+  ],
+  "display": {
+    "palette": "B",
+    "config": "paper/figures/config.yaml",
+    "fov_mm": 140
+  }
+}

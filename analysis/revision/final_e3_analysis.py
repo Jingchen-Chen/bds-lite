@@ -2,7 +2,7 @@
 
 Requires the completed one-time E3 evaluation record. Reads completed E3 and
 stage-3 case files only. Writes final-audit derived files under evidence_freeze,
-never the original revision/followup/results outputs. Does not execute a model.
+never the original results/followup/results outputs. Does not execute a model.
 """
 
 from __future__ import annotations
@@ -30,7 +30,7 @@ PAIRS = (
     ("E3a", "decoder_aug", "decoder"),
     ("E3b", "kd_band_aug", "kd_band"),
 )
-OUT = ROOT / "revision/evidence_freeze"
+OUT = ROOT / "evidence"
 TOLERANCE = 1e-10
 
 
@@ -124,8 +124,8 @@ def main() -> None:
         "analysis/revision/final_e3_analysis.py",
         "analysis/revision/expansion_statistics.py",
         "analysis/revision/family_statistics.py",
-        "revision/followup_registration.md",
-        "revision/queue_followup_e3.yaml",
+        "protocols/followup/followup_registration.md",
+        "protocols/followup/queue_followup_e3.yaml",
         "results/acdc_confirm_eval/evaluation_record.json",
     ):
         hashes[source] = sha(ROOT / source)

@@ -31,7 +31,7 @@ def main():
         rows.append(dict(case=case, slices=checked, pixel_mismatches=mismatch))
         if mismatch:
             raise ValueError(f"native/processed label conversion mismatch: {case}")
-    with (ROOT / "revision/validation/native_synapse_labels.csv").open("w") as stream:
+    with (ROOT / "results/validation/native_synapse_labels.csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)

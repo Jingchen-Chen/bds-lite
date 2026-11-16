@@ -8,7 +8,7 @@
 4. Claim-discipline scan of main.tex (AGENTS.md phrase list), reported for manual review.
 5. Figures referenced by the sources exist.
 
-Output: revision/validation/rewrite_validation.json. Exit code 1 on any failed check.
+Output: results/validation/rewrite_validation.json. Exit code 1 on any failed check.
 """
 
 from __future__ import annotations
@@ -24,7 +24,7 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
-MS = ROOT / "revision/manuscript"
+MS = ROOT / "paper"
 LETTER = ROOT / "revision/response_letter_v2.tex"
 RELEASE_SPLITS = Path("/home/jc/bds-lite-release-v2/splits/isic2018")
 
@@ -71,11 +71,11 @@ def delta(a: str, b: str, metric: str, cluster: str | None = None) -> float:
 
 def numeric_checks(k: dict[str, str]) -> list[dict]:
     so, sn = (
-        "revision/extra_cohorts/famO_full/{ds}_seed{{seed}}/test/per_case.csv",
-        "revision/extra_cohorts/famO_unet/{ds}_seed{{seed}}/test/per_case.csv",
+        "results/extra_cohorts/famO_full/{ds}_seed{{seed}}/test/per_case.csv",
+        "results/extra_cohorts/famO_unet/{ds}_seed{{seed}}/test/per_case.csv",
     )
-    m0 = "revision/official_isic/test/U_seed{seed}/per_case.csv"
-    m6 = "revision/official_isic/test/F_seed{seed}/per_case.csv"
+    m0 = "results/official_isic/test/U_seed{seed}/per_case.csv"
+    m6 = "results/official_isic/test/F_seed{seed}/per_case.csv"
     run = "results/revision_runs/{arm}_seed{{seed}}/per_case_test.csv"
     syn = r"^(case\d+)"
     acdc = r"^(patient\d+)"
@@ -281,7 +281,7 @@ def main() -> int:
         or not all(r["ok"] for r in report["numeric_recomputation"])
     )
     report["status"] = "FAILED" if failed else "PASSED"
-    out = ROOT / "revision/validation/rewrite_validation.json"
+    out = ROOT / "results/validation/rewrite_validation.json"
     out.write_text(json.dumps(report, indent=1) + "\n")
     print(json.dumps({x: report[x] for x in report if x != "numeric_recomputation"}, indent=1))
     for row in report["numeric_recomputation"]:

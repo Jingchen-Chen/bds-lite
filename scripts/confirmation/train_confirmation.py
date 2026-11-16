@@ -1,4 +1,4 @@
-"""Entry point for Experiment C (revision/CONFIRMATION_PROTOCOL.md).
+"""Entry point for Experiment C (protocols/confirmation/CONFIRMATION_PROTOCOL.md).
 
 Same as scripts/expansion/train_expansion.py except that seeds up to 17 are accepted. Every other
 locked protocol check is applied by the original require_protocol, and no adapter file is edited.

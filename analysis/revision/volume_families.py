@@ -2,15 +2,15 @@
 """Stacked-volume evaluation and statistics for every method in the family registry.
 
 Reuses the frozen evaluator functions of evaluate_volumes.py (metrics, distances, protocol
-revision/volume_evaluation_protocol.md) unchanged; only cohort discovery differs: any
+protocols/volume/volume_evaluation_protocol.md) unchanged; only cohort discovery differs: any
 method/seed with a complete per-case CSV in family_statistics.per_case_path and a
 prediction archive next to it (submitted models S0/S6, replication R0/R6, new runs).
-Outputs revision/volume_results/registry_<method>/<dataset>_seed<s>/per_volume_class.csv.
+Outputs results/volume/registry_<method>/<dataset>_seed<s>/per_volume_class.csv.
 Statistics (registered conventions, prereg_revision.md): per patient (ACDC, frames averaged)
 or case (Synapse), classes averaged over volumes with a defined value, seeds averaged; paired
 Wilcoxon, 10,000-draw bootstrap; Holm over {dsc, hd95, assd_pooled} within dataset and family.
 Index-grid units (ACDC 224 grid; Synapse original H5 grid); no millimetre claim.
-Output: revision/tables/families/volume_family_statistics.csv and volume_method_summary.csv
+Output: results/tables/families/volume_family_statistics.csv and volume_method_summary.csv
 """
 
 from __future__ import annotations
@@ -33,7 +33,7 @@ from analysis.revision.family_statistics import METHODS, SEEDS, bootstrap, holm
 from analysis.revision.figure_qualitative import prediction_file
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "revision/volume_results"
+OUT = ROOT / "results/volume"
 CLASSES = {"acdc": 4, "synapse": 9}
 ENDPOINTS = ["dsc", "hd95", "assd_pooled"]
 
@@ -93,7 +93,7 @@ def evaluate(method: str, dataset: str, seed: int) -> Path | None:
             dict(
                 prediction=str(archive.relative_to(ROOT)),
                 prediction_sha256=sha(archive),
-                protocol_sha256=sha(ROOT / "revision/volume_evaluation_protocol.md"),
+                protocol_sha256=sha(ROOT / "protocols/volume/volume_evaluation_protocol.md"),
             ),
             indent=1,
         )
@@ -163,7 +163,7 @@ def compare(a: str, b: str, dataset: str) -> list[dict]:
 
 
 def main() -> None:
-    (ROOT / "revision/validation/volume_distance_backend_registry.json").write_text(
+    (ROOT / "results/validation/volume_distance_backend_registry.json").write_text(
         json.dumps(validate_backend(), indent=1) + "\n"
     )
     out, summary = [], []
@@ -190,7 +190,7 @@ def main() -> None:
         ("volume_family_statistics.csv", out),
         ("volume_method_summary.csv", summary),
     ]:
-        with (ROOT / "revision/tables/families" / name).open("w") as stream:
+        with (ROOT / "results/tables/families" / name).open("w") as stream:
             writer = csv.DictWriter(
                 stream,
                 fieldnames=list(dict.fromkeys(k for r in data for k in r)),

@@ -69,24 +69,30 @@ def contrast(a: list, b: list, metric: str) -> dict:
 def main() -> None:
     arms = defaultdict(dict)
     tables = {}
+    # Archives retain their frozen paths; the public layout moved the summary tables.
+    with (ROOT / "evidence/path_map.csv").open(newline="") as stream:
+        current_paths = {
+            row["original_path"]: row["current_path"] for row in csv.DictReader(stream)
+        }
     pattern = re.compile(
         r"results/(?:acdc_confirm_eval/acdc_confirm|followup_eval/acdc_followup)_"
         r"(decoder|kd_band|kd_full|kd_band_peer|decoder_aug|kd_band_aug)_seed(2\d\d)/"
         r"per_case_official_test\.csv"
     )
     targets = {
-        "revision/followup/results/contrasts.csv",
-        "revision/evidence_freeze/final_e3_analysis.csv",
+        "results/followup/results/contrasts.csv",
+        "evidence/final_e3_analysis.csv",
     }
     for name in ("primary-evidence-20261110.tar.gz", "final-supplement-20261110.tar.gz"):
-        with tarfile.open(ROOT / "revision/evidence_freeze" / name, "r:gz") as archive:
+        with tarfile.open(ROOT / "evidence" / name, "r:gz") as archive:
             for member in archive:
+                current_name = current_paths.get(member.name, member.name)
                 match = pattern.fullmatch(member.name)
                 if match:
                     arm, seed = match.group(1), int(match.group(2))
                     arms[arm][seed] = aggregate(archive.extractfile(member).read())
-                elif member.name in targets:
-                    tables[member.name] = list(
+                elif current_name in targets:
+                    tables[current_name] = list(
                         csv.DictReader(io.StringIO(archive.extractfile(member).read().decode()))
                     )
     for arm, runs in arms.items():
@@ -111,7 +117,7 @@ def main() -> None:
             errors.append(abs(running - float(expected["p_holm"])))
     if len(rows) != 40 or max(errors) > 1e-10:
         raise ValueError(f"Archive-only numeric verification failed: {max(errors)}")
-    print(f"Archive-only: 40 contrasts and20 Holm values matched; max error {max(errors):.3g}")
+    print(f"Archive-only: 40 contrasts and 20 Holm values matched; max error {max(errors):.3g}")
     print("No datasets, checkpoints, prediction maps, teacher caches or torch required.")
 
 

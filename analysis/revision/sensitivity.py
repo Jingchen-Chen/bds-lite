@@ -1,6 +1,6 @@
 # ruff: noqa: E501
 """WP3 sensitivity of BDS-Lite to the gate scale alpha and the auxiliary weights lambda
-(revision/SENSITIVITY_PROTOCOL.md; trimmed by ABLATION_PROTOCOL_AMENDMENT_2 / REVISION_STRATEGY.md).
+(protocols/sensitivity/SENSITIVITY_PROTOCOL.md; trimmed by ABLATION_PROTOCOL_AMENDMENT_2 / REVISION_STRATEGY.md).
 
 Arms (pipeline-matched, same adapter, partitions, schedule and selection rule as M6):
   alpha  in {0 (= M5), 0.1, 0.25 (= M6), 0.5, 1.0}; ISIC2018 seeds 1-3, Synapse seed 1 only.
@@ -15,7 +15,7 @@ to show whether the main ISIC2018/Synapse conclusions depend on alpha or lambda.
 Validation DSC (selection set; ISIC2018 locked 519 images) is reported because the protocol
 allows statements about a "better" value only on validation data (labelled post hoc).
 
-Outputs: revision/tables/families/sensitivity.csv, revision/tables/families/sensitivity_means.csv
+Outputs: results/tables/families/sensitivity.csv, results/tables/families/sensitivity_means.csv
 """
 
 from __future__ import annotations
@@ -32,7 +32,7 @@ from scipy.stats import wilcoxon
 from analysis.revision import family_statistics as fs
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "revision/tables/families"
+OUT = ROOT / "results/tables/families"
 FOLLOWUP = ROOT / "recovered/followup/results/followup_20261018_v2"
 
 # (dataset, parameter, value label, numeric value, arm code or run stem, seeds)

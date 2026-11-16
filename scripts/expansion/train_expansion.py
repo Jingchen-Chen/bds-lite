@@ -1,4 +1,4 @@
-"""Entry point for the expansion runs (revision/EXPANSION_PROTOCOL.md).
+"""Entry point for the expansion runs (protocols/expansion/EXPANSION_PROTOCOL.md).
 
 Runs the validated adapters unchanged. The only difference from scripts/revision/train_run.py and
 scripts/comparators/train_comparator.py is that training seeds 4-10 are accepted; every other locked

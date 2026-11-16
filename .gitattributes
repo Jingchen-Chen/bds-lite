@@ -1,6 +1,2 @@
-# Raw audit logs and captured source snapshots preserve exact original bytes.
-# Whitespace checking remains enabled for active code and generated result tables.
-revision/audit/*.log -whitespace
-revision/audit/final_checks/*.log -whitespace
-revision/audit/prior_final_reports/** -whitespace
-revision/sources/*.html -whitespace
+# Captured source snapshots preserve exact original bytes.
+docs/provenance/sources/** -whitespace

@@ -11,7 +11,7 @@ metric function (recover_predictions.case_metrics). Family-O BDS-Lite keys
 projection_head.* are renamed to seg_to_boundary_feature.* (pure key rename,
 scripts/adapt_legacy_bdslite_for_eval.py); a parity check against family O's own
 saved development-split evaluations guards the graph semantics before use.
-Outputs: revision/extra_cohorts/<cohort>/<dataset>_seed<s>/test/{per_case.csv,
+Outputs: results/extra_cohorts/<cohort>/<dataset>_seed<s>/test/{per_case.csv,
 predictions.npz, provenance.json}.
 """
 
@@ -35,7 +35,7 @@ from scripts.revision.train_run import OfficialTestDataset
 from scripts.revision.training_support import ManifestDataset
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "revision/extra_cohorts"
+OUT = ROOT / "results/extra_cohorts"
 CLASSES = {"isic2018": 2, "acdc": 4, "synapse": 9}
 CHANNELS = {"isic2018": 3, "acdc": 1, "synapse": 1}
 FOLLOWUP = ROOT / "recovered/followup/results/followup_20261018_v2"

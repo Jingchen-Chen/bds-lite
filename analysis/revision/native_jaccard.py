@@ -4,7 +4,7 @@ Same procedure as analysis/revision/evaluate_official_isic.py: the 224x224 argma
 resized to the original image size with PIL nearest neighbour and compared with the
 original binary mask (>0); thresholded Jaccard sets values below 0.65 to zero (ISIC 2018
 challenge rule). Methods/seeds are located through family_statistics.per_case_path.
-Output: revision/tables/families/native_jaccard.csv (per method: seed means).
+Output: results/tables/families/native_jaccard.csv (per method: seed means).
 """
 
 from __future__ import annotations
@@ -71,7 +71,7 @@ def main() -> None:
             )
         )
         print(rows[-1], flush=True)
-    out = ROOT / "revision/tables/families/native_jaccard.csv"
+    out = ROOT / "results/tables/families/native_jaccard.csv"
     with out.open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()

@@ -1,0 +1,21 @@
+% existing adapted LB-UNet measurements from results/tables/resource_profile.csv
+\begin{tabular}{lrr}
+\toprule
+Measurement & ISIC2018 & Synapse \\
+\midrule
+Total parameters & 55,874 & 55,793 \\
+Deployed parameters & 55,874 & 55,793 \\
+GFLOPs (FlopCounterMode) & 0.143640 & 0.130594 \\
+GFLOPs (released-graph hooks) & 0.143640 & 0.130594 \\
+CPU batch 1, one thread (ms) & 6.4895 & 7.5623 \\
+CPU batch 1, all threads (ms) & 5.3638 & 5.3473 \\
+GPU fp32, batch 1 (ms) & $3.5603 \pm 0.1790$ & $3.6320 \pm 0.1617$ \\
+GPU fp32, batch 8 (ms) & $3.5775 \pm 0.1171$ & $3.7959 \pm 0.0663$ \\
+GPU fp32, batch 16 (ms) & $3.9101 \pm 0.0563$ & $4.3416 \pm 0.1590$ \\
+GPU amp, batch 1 (ms) & $5.1249 \pm 0.1575$ & $5.2291 \pm 0.1576$ \\
+GPU amp, batch 8 (ms) & $5.1595 \pm 0.1680$ & $5.2579 \pm 0.1452$ \\
+GPU amp, batch 16 (ms) & $5.4086 \pm 0.0740$ & $5.7995 \pm 0.1204$ \\
+CUDA kernels, batch 1 & 462 & 462 \\
+CUDA kernel time, batch 1 (ms) & 0.8531 & 0.8513 \\
+\bottomrule
+\end{tabular}

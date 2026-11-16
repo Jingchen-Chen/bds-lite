@@ -1,12 +1,12 @@
 # ruff: noqa: E501
-"""Section 10 checks of revision/EXPANSION_PROTOCOL.md. Prints pass or fail only, never a test mean.
+"""Section 10 checks of protocols/expansion/EXPANSION_PROTOCOL.md. Prints pass or fail only, never a test mean.
 
 Per run: 150 contiguous epochs; hashes; registered config and sources; seed; selected epoch equals
 the first maximum of the validation curve; the stored checkpoint is the selected one; no nonfinite
 training loss; expected per-case row counts. Across runs: distinct trajectories across seeds.
 For one run per arm: every per-image DSC and IoU, and HD95 and ASSD on 40 images, recomputed from the
 saved prediction maps with code independent of the training evaluator.
-Output: revision/validation/expansion_validation.json. Exit code 1 on any failure.
+Output: results/validation/expansion_validation.json. Exit code 1 on any failure.
 """
 
 from __future__ import annotations
@@ -119,7 +119,7 @@ def recompute(entry: dict, dataset: str) -> list[str]:
 
 
 def main() -> int:
-    queue = yaml.safe_load((ROOT / "revision/queue_expansion.yaml").read_text())
+    queue = yaml.safe_load((ROOT / "protocols/expansion/queue_expansion.yaml").read_text())
     report: dict = dict(runs=len(queue["runs"]), failures={})
     meta = {}
     for entry in queue["runs"]:
@@ -145,7 +145,7 @@ def main() -> int:
         or len(samples) < 4
     )
     report["status"] = "FAILED" if failed else "PASSED"
-    (ROOT / "revision/validation/expansion_validation.json").write_text(
+    (ROOT / "results/validation/expansion_validation.json").write_text(
         json.dumps(report, indent=1) + "\n"
     )
     print(json.dumps(report, indent=1)[:2500])

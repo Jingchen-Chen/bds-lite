@@ -1,24 +1,24 @@
 # ruff: noqa: E501
-"""Keys, main-text tables and Fig. 3 for the final revision (plan: revision/plan/figures_tables.md).
+"""Keys, main-text tables and Fig. 3 for the final revision.
 
 Reads frozen analysis outputs only; computes no new statistic except arm means of saved per-case
 scores for the ISIC2018 ten-run table (each run's own defined images, as in the evidence freeze
 section 8.2) and the percentage changes of the saved resource profile.
 
 Inputs (read-only):
-  revision/tables/families/{method_summary,expansion_interaction,expansion_contrasts}.csv
-  revision/kd_unified/contrasts.csv                      (original exploratory analysis, freeze 10.1)
-  revision/acdc_confirm/results/{results.json,per_seed.csv}
-  revision/followup/results/{contrasts.csv,per_seed.csv}  (freeze 10.2-10.3)
-  revision/evidence_freeze/final_e3_{analysis,per_seed,per_class}.csv  (freeze 10.4)
-  revision/tables/{resource_profile,gate_identity_effects}.csv; revision/kd_unified/costs.csv
+  results/tables/families/{method_summary,expansion_interaction,expansion_contrasts}.csv
+  results/kd_unified/contrasts.csv                      (original exploratory analysis, freeze 10.1)
+  results/acdc_confirm/results/{results.json,per_seed.csv}
+  results/followup/results/{contrasts.csv,per_seed.csv}  (freeze 10.2-10.3)
+  evidence/final_e3_{analysis,per_seed,per_class}.csv  (freeze 10.4)
+  results/tables/{resource_profile,gate_identity_effects}.csv; results/kd_unified/costs.csv
   results/acdc_confirm_eval_posthoc/teacher_cache_timing.json
-  revision/manuscript/generated/tab_lit_main.tex          (only to drop its boldface)
+  paper/generated/tab_lit_main.tex          (only to drop its boldface)
   per-case ISIC2018 files through analysis/revision/expansion_statistics.isic_path
-Writes revision/manuscript/generated/{numbers_final.tex,keys_final.json,tab_matched_main.tex,
+Writes paper/generated/{numbers_final.tex,keys_final.json,tab_matched_main.tex,
 tab_innetwork_main.tex,tab_acdc_official_main.tex,tab_resource_final.tex,tab_s_e3_all.tex,
 tab_s_e3_perseed.tex,tab_s_e3_perclass.tex,tab_ten_seed_final.tex,tab_lit_main_plain.tex}
-and revision/figures/kd_acdc.{pdf,png}.
+and paper/figures/kd_acdc.{pdf,png}.
 
     PYTHONPATH=src:. .venv/bin/python analysis/revision/make_final_assets.py
 """
@@ -32,6 +32,8 @@ import sys
 from pathlib import Path
 
 import matplotlib
+
+from analysis.revision.paper_archive_inputs import logical, resolve
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
@@ -47,11 +49,11 @@ from matplotlib.lines import Line2D  # noqa: E402
 from matplotlib.patches import Patch  # noqa: E402
 from matplotlib.transforms import blended_transform_factory  # noqa: E402
 
-GEN = ROOT / "revision/manuscript/generated"
-FIG = ROOT / "revision/figures"
-FAM = ROOT / "revision/tables/families"
-FU = ROOT / "revision/followup/results"
-E3 = ROOT / "revision/evidence_freeze"
+GEN = ROOT / "paper/generated"
+FIG = ROOT / "paper/figures"
+FAM = ROOT / "results/tables/families"
+FU = ROOT / "results/followup/results"
+E3 = ROOT / "evidence"
 KEYS: dict[str, str] = {}
 METRICS = ("boundary_f1", "dsc", "iou", "hd95", "assd")
 MLABEL = {
@@ -167,6 +169,34 @@ def matched_table() -> None:
                 lines.append(f"{shade}\\quad {label} & " + " & ".join(cells) + r" \\")
     lines += [r"\bottomrule", r"\end{tabular}"]
     write("tab_matched_main.tex", lines)
+    # Table 4 averages over slices; the contrasts of Table 5A average within patients or cases
+    # first. The Synapse D - U pair is quoted in the caption of Table 4.
+    contrasts = read_csv(FAM / "expansion_interaction.csv")
+    syn = {
+        m: float(one(rows, dataset="synapse", method=m)["boundary_f1_mean"]) for m in ("M0", "M2")
+    }
+    put("T45.synapse.rows", f"{syn['M2'] - syn['M0']:.4f}")
+    r = one(
+        contrasts,
+        set="2x2",
+        effect="decoder without surface",
+        metric="boundary_f1",
+        dataset="synapse",
+        seeds="1-3",
+    )
+    put("T45.synapse.contrast", s_in(r["estimate"]))
+    # Mean contour offset implied by the DSC of arm D under Eq. 1: (1 - DSC) / (L / 2A), with the
+    # mean first-order DSC drop per pixel of the training masks (class mean on ACDC).
+    drops = read_csv(ROOT / "results/structural_descriptors/summary.csv")
+    for ds in ("isic2018", "acdc"):
+        drop = np.mean(
+            [float(x["first_order_dsc_drop_per_1px"]) for x in drops if x["dataset"] == ds]
+        )
+        ref = one(rows, dataset=ds, method="M2")
+        put(f"BFX.{ds}.px", f"{(1 - float(ref['dsc_mean'])) / drop:.0f}")
+        put(f"BFX.{ds}.px1", f"{(1 - float(ref['dsc_mean'])) / drop:.1f}")
+        put(f"BFX.{ds}.dsc", f"{float(ref['dsc_mean']):.2f}")
+        put(f"BFX.{ds}.bf1", f"{float(ref['boundary_f1_mean']):.2f}")
 
 
 # ---------------------------------------------------------------- T4 in-network contrasts
@@ -341,7 +371,7 @@ def innetwork_table() -> None:
 
 # ---------------------------------------------------------------- original exploratory KD (10.1)
 def exploratory_kd() -> list[dict]:
-    rows = read_csv(ROOT / "revision/kd_unified/contrasts.csv")
+    rows = read_csv(ROOT / "results/kd_unified/contrasts.csv")
     picked = []
     for ds, _ in DATASETS:
         ref = "1-10" if ds == "isic2018" else "1-3"
@@ -397,7 +427,7 @@ def acdc_official() -> dict:
     put("FIN.cf.abs", f"{abs(float(s3['delta'])):.4f}")
     put("FIN.cf.text", ndash(float(s3["low"]), float(s3["high"])))
     put("FIN.cf.low", f"{float(s3['low']):.4f}")
-    per_seed = read_csv(ROOT / "revision/acdc_confirm/results/per_seed.csv")
+    per_seed = read_csv(ROOT / "results/acdc_confirm/results/per_seed.csv")
 
     def runs(arm):
         return [
@@ -586,7 +616,7 @@ def e3_supplement() -> None:
 def resource_table() -> None:
     rows = [
         r
-        for r in read_csv(ROOT / "revision/tables/resource_profile.csv")
+        for r in read_csv(ROOT / "results/tables/resource_profile.csv")
         if r["dataset"] == "isic2018"
     ]
     order = [
@@ -606,28 +636,36 @@ def resource_table() -> None:
         r = one(rows, model=model)
         training = f"{int(r['params_total']):,}" if model != "BDS-Lite (gate-collapsed)" else "--"
         lines.append(
-            f"{label} & {training} & {int(r['params_deployed']):,} & {float(r['gflops_b1_released_hook']):.3f} & "
-            f"{float(r['gpu_fp32_b1_ms_median']):.2f} & {float(r['gpu_fp32_b16_ms_median']):.2f} & "
+            f"{label} & {training} & {int(r['params_deployed']):,} & {float(r['gflops_b1']):.3f} & "
+            f"{float(r['gpu_fp32_b1_ms_median']):.3f} & {float(r['gpu_fp32_b16_ms_median']):.2f} & "
             f"{float(r['cpu_ms_b1_1thread']):.1f} \\\\"
         )
     lines += [r"\bottomrule", r"\end{tabular}"]
     write("tab_resource_final.tex", lines)
     u, g = one(rows, model="U-Net"), one(rows, model="BDS-Lite (deployed)")
     put("RF.params.extra", f"{int(g['params_deployed']) - int(u['params_deployed']):,}")
+    # GFLOPs are the FlopCounterMode column of the saved profile (gflops_b1). The hook counter of
+    # the submitted version (gflops_b1_released_hook) charges a ConvTranspose2d(k=2, s=2) per
+    # output element, four times its cost; its values are kept as historical comparison keys.
+    put("RF.gflops.pct", f"{100 * (float(g['gflops_b1']) / float(u['gflops_b1']) - 1):.2f}")
+    for tag, row in (("u", u), ("g", g)):
+        put(f"RF.gflops.{tag}", f"{float(row['gflops_b1']):.3f}")
+        put(f"RF.gflops.{tag}.hook", f"{float(row['gflops_b1_released_hook']):.3f}")
     put(
-        "RF.gflops.pct",
-        f"{100 * (float(g['gflops_b1_released_hook']) / float(u['gflops_b1_released_hook']) - 1):.2f}",
+        "RF.gflops.hook.excess",
+        f"{float(u['gflops_b1_released_hook']) - float(u['gflops_b1']):.3f}",
     )
     for b in ("1", "16"):
         pct = 100 * (
             float(g[f"gpu_fp32_b{b}_ms_median"]) / float(u[f"gpu_fp32_b{b}_ms_median"]) - 1
         )
         put(f"RF.gpu.b{b}.pct", f"{pct:.1f}")
-        put(f"RF.gpu.b{b}.u", f"{float(u[f'gpu_fp32_b{b}_ms_median']):.2f}")
-        put(f"RF.gpu.b{b}.g", f"{float(g[f'gpu_fp32_b{b}_ms_median']):.2f}")
+        digits = 3 if b == "1" else 2  # b1 with three decimals, so that the table gives the share
+        put(f"RF.gpu.b{b}.u", f"{float(u[f'gpu_fp32_b{b}_ms_median']):.{digits}f}")
+        put(f"RF.gpu.b{b}.g", f"{float(g[f'gpu_fp32_b{b}_ms_median']):.{digits}f}")
     put("RF.kernels.u", u["cuda_kernels_b1"])
     put("RF.kernels.g", g["cuda_kernels_b1"])
-    gate = read_csv(ROOT / "revision/tables/gate_identity_effects.csv")
+    gate = read_csv(ROOT / "results/tables/gate_identity_effects.csv")
     split = {"isic2018": "official_test", "acdc": "test", "synapse": "test"}
     worst = 0.0
     for ds, _ in DATASETS:
@@ -641,12 +679,12 @@ def resource_table() -> None:
         (ROOT / "results/acdc_confirm_eval_posthoc/teacher_cache_timing.json").read_text()
     )
     put("RF.cache.sec", f"{timing['median_seconds']:.1f}")
-    costs = read_csv(ROOT / "revision/kd_unified/costs.csv")
+    costs = read_csv(ROOT / "results/kd_unified/costs.csv")
     put(
         "RF.teacher.hours",
         f"{float(one(costs, run='acdc_kd_teacher_seed100')['sum_epoch_hours']):.3f}",
     )
-    conf = json.loads((ROOT / "revision/acdc_confirm/results/results.json").read_text())
+    conf = json.loads((ROOT / "results/acdc_confirm/results/results.json").read_text())
     put("RF.s3.hours.kd", f"{conf['training_epoch_hours']['kd_band']:.2f}")
     put("RF.s3.hours.dec", f"{conf['training_epoch_hours']['decoder']:.2f}")
     put("CF.power.15", f"{conf['achieved_power']['delta_0.015_sd_bound_90']:.2f}")
@@ -683,7 +721,7 @@ def resource_main_table() -> None:
     """Main-text resource table: the four U-Net-family graphs of the saved ISIC2018 profile."""
     rows = [
         r
-        for r in read_csv(ROOT / "revision/tables/resource_profile.csv")
+        for r in read_csv(ROOT / "results/tables/resource_profile.csv")
         if r["dataset"] == "isic2018"
     ]
     order = [
@@ -704,12 +742,30 @@ def resource_main_table() -> None:
     for model, label in order:
         r = one(rows, model=model)
         lines.append(
-            f"{label} & {int(r['params_deployed']):,} & {float(r['gflops_b1_released_hook']):.3f} & "
-            f"{float(r['gpu_fp32_b1_ms_median']):.2f} & {float(r['gpu_fp32_b16_ms_median']):.2f} & "
+            f"{label} & {int(r['params_deployed']):,} & {float(r['gflops_b1']):.3f} & "
+            f"{float(r['gpu_fp32_b1_ms_median']):.3f} & {float(r['gpu_fp32_b16_ms_median']):.2f} & "
             f"{float(r['cpu_ms_b1_1thread']):.1f} \\\\"
         )
     lines += [r"\bottomrule", r"\end{tabular}"]
     write("tab_resource_text.tex", lines)
+    # Full profile of Supplementary S19 (replaces the frozen tab_resource.tex, which prints the
+    # hook counter): same rows and columns, GFLOPs from FlopCounterMode, b1 with three decimals.
+    lines = [
+        "% generated by analysis/revision/make_final_assets.py::resource_main_table; do not edit",
+        r"\begin{tabular}{lrrrrrrrr}",
+        r"\toprule",
+        r"Model & Deploy params & GFLOPs$^a$ & GPU b1 & GPU b8 & GPU b16 & CPU 1 thr. & CPU all & CUDA kernels \\",
+        r"\midrule",
+    ]
+    for r in rows:
+        lines.append(
+            f"{r['model']} & {int(r['params_deployed']):,} & {float(r['gflops_b1']):.3f} & "
+            f"{float(r['gpu_fp32_b1_ms_median']):.3f} & {float(r['gpu_fp32_b8_ms_median']):.2f} & "
+            f"{float(r['gpu_fp32_b16_ms_median']):.2f} & {float(r['cpu_ms_b1_1thread']):.1f} & "
+            f"{float(r['cpu_ms_b1_allthreads']):.1f} & {r['cuda_kernels_b1']} \\\\"
+        )
+    lines += [r"\bottomrule", r"\end{tabular}"]
+    write("tab_resource_supp.tex", lines)
     full = one(rows, model="BDS-Lite (deployed)")
     put("RF.params.train.full", f"{int(full['params_total']):,}")
 
@@ -725,31 +781,86 @@ def published_table() -> None:
     ]
     if len(rows) != 6:
         raise ValueError(f"expected six published rows, found {len(rows)}")
+    rows = add_cto(rows)
     protocol = {
         "EGE-UNet": "random 7:3 split, $256\\times256$, augmentation",
         "LB-UNet": "random 7:3 split, $256\\times256$, augmentation",
         "TransUNet": "ImageNet-pretrained, volume-level score",
         "Swin-Unet": "ImageNet-pretrained, volume-level score",
+        "CTO": "",
+    }
+    protocol_cto = {
+        "ISIC2018": "5-fold cross-validation on 2,594 images, $256\\times256$, ImageNet-pretrained Res2Net-50 encoder",
+        "Synapse": "18 training / 12 test cases, ImageNet-pretrained encoder, 2D predictions stacked into volumes",
     }
     lines = [
         "% generated by analysis/revision/make_final_assets.py::published_table from tab_lit_main.tex",
-        r"\begin{tabular}{@{}llrrl@{}}",
+        r"\begin{tabular}{@{}llrr>{\raggedright\arraybackslash}p{5.6cm}@{}}",
         r"\toprule",
         r"Dataset & Model & DSC & HD\tnote{a} & Protocol of the source \\",
         r"\midrule",
     ]
+    dataset = ""
     for ln in rows:
         cells = [c.strip() for c in ln.rstrip("\\").split("&")]
-        dataset, model, dsc, _bf1, hd = cells
+        dataset = cells[0] or dataset
+        _, model, dsc, _bf1, hd = cells
         name = model.split(r" \citep")[0]
-        lines.append(f"{dataset} & {model} & {dsc} & {hd} & {protocol[name]} \\\\")
+        source = protocol_cto[dataset] if name == "CTO" else protocol[name]
+        lines.append(f"{cells[0]} & {model} & {dsc} & {hd} & {source} \\\\")
     lines += [r"\bottomrule", r"\end{tabular}"]
     write("tab_published_text.tex", lines)
+
+
+# CTO (Lin et al., 2025; arXiv:2505.04652v1): ISIC2018 Dice 90.63 (Section 4.4 and Table 3; Table 4
+# prints 90.6) under 5-fold cross-validation; BTCV (Synapse) mDice 80.94 and HD 19.45 (Table 6,
+# 18 training / 12 test cases). Added 2026-11-15 at the author's request, checked against the PDF.
+def cto_rows() -> dict[str, str]:
+    receipt = json.loads((ROOT / "paper/literature_context.json").read_text())["CTO"]
+    values = receipt["values"]
+    return {
+        "ISIC2018": rf" & CTO \citep{{Lin2025Rethinking}} & {values['ISIC2018']['DSC']:.4f} & -- & -- \\",
+        "Synapse": rf" & CTO \citep{{Lin2025Rethinking}} & {values['Synapse']['DSC']:.4f} & -- & {values['Synapse']['HD']:.2f} \\",
+    }
+
+
+CTO_ROWS = cto_rows()
+
+
+def add_cto(rows: list[str]) -> list[str]:
+    """Insert the CTO row after the last published row of ISIC2018 and of Synapse."""
+    out, dataset = [], ""
+    for i, ln in enumerate(rows):
+        first = ln.split("&")[0].strip()
+        dataset = first or dataset
+        out.append(ln)
+        following = rows[i + 1].split("&")[0].strip() if i + 1 < len(rows) else "end"
+        if dataset in CTO_ROWS and following:
+            out.append(CTO_ROWS[dataset])
+    if sum("Lin2025Rethinking" in ln for ln in out) != 2:
+        raise ValueError("published rows changed")
+    return out
 
 
 def plain_lit_table() -> None:
     text = (GEN / "tab_lit_main.tex").read_text()
     text = re.sub(r"\\mathbf\{([^{}]*)\}", r"\1", text)
+    head, sep, body = text.partition(r"\textbf{B. Published references: different protocols}")
+    lines = body.splitlines()
+    published = [
+        ln
+        for ln in lines
+        if ln.strip().endswith(r"\\") and "&" in ln and "Dataset & Model" not in ln
+    ]
+    if len(published) != 6:
+        raise ValueError("panel B layout changed")
+    isic_u = re.search(r"^ISIC2018 & U-Net & \$(0\.\d{4}) \\pm", head, re.M).group(1)
+    added = add_cto(published)
+    i = added.index(CTO_ROWS["ISIC2018"])
+    added.insert(i + 1, rf" & U (this study, seeds 1--3)$^{{\ddagger}}$ & {isic_u} & -- & -- \\")
+    start = lines.index(published[0])
+    lines = lines[:start] + added + lines[start + len(published) :]
+    text = head + sep + "\n".join(lines) + ("\n" if text.endswith("\n") else "")
     text = text.replace(
         "generated by analysis/revision/make_comparison_table.py",
         "boldface removed by analysis/revision/make_final_assets.py from tab_lit_main.tex",
@@ -819,9 +930,9 @@ def figure(data: dict) -> None:
     x_title, x_row, x_id = 0.5, 9.0, 22.0
     ax_left, ax_right = 116.0, width - 130.0
     x_delta, x_p = width - 42.0, width - 0.5
-    patients = json.loads(
-        (ROOT / "revision/acdc_confirm/official_test_integrity.json").read_text()
-    )["patients"]
+    patients = json.loads((ROOT / "results/acdc_confirm/official_test_integrity.json").read_text())[
+        "patients"
+    ]
 
     def colour(arm: str) -> str:
         return oi[FIG3_ARMS[arm][1]]
@@ -1105,27 +1216,311 @@ def figure(data: dict) -> None:
 
 
 # ---------------------------------------------------------------- S15 all training records
-INVENTORY = ROOT / "revision/evidence_freeze/final_experiment_inventory.csv"
-# Families whose inventory rows leave era/use blank; the article uses all of them (S17, S18, S21).
-USED_BLANK = {
-    "exploratory external KD students": "yes (S17)",
-    "exploratory external teacher": "yes (S17)",
-    "ACDC confirmation": "yes",
-    "follow-up E1/E2 students": "yes",
-    "follow-up E3 augmentation": "yes",
-    "follow-up compact teacher/cache": "yes",
-}
-# Display labels for the stopped study (supplement S15 describes it in one sentence).
+INVENTORY = ROOT / "evidence/final_experiment_inventory.csv"
+# One row per family of the frozen inventory, split where the runs of a family enter this article
+# differently. Each entry: (inventory family, row label, purpose, used in this article, predicate,
+# marked) with predicate(row) -> bool selecting the family's records for that row (None: all of
+# them). "Used in this article" is derived from the article; footnote d lists, row by row, where it
+# differs from the inventory's own field (computed in inventory_table; the last entry is unused).
+CW = "foreground class weights $(1.5,1.0,1.25)$"
+AUGM = r"$_{\mathrm{aug}}$"
+CMP = r"$_{\mathrm{cmp}}$"
+
+
+def _weighted(row: dict) -> bool:
+    """True if the run's recorded configuration uses foreground class weights."""
+    metadata = read_csv(ROOT / "results/paper_inputs/inventory_config_weights.csv")
+    matches = [x for x in metadata if x["run_path"] == row["path"]]
+    if len(matches) != 1:
+        raise ValueError(f"Missing archived configuration metadata: {row['path']}")
+    return matches[0]["weighted"] == "True"
+
+
+FO_REEVALUATED = (
+    "bds_lite_boundary_only",
+    "bds_lite_boundary_distill",
+    "bds_lite_boundary_gate",
+    "bds_lite_gate_surface",
+)
+INVENTORY_ROWS = [
+    (
+        "single-seed exploration",
+        "Single-seed exploration",
+        "Recipe development on validation data",
+        "no",
+        None,
+        False,
+    ),
+    (
+        "p1 gate pilot (single seed)",
+        "Gate pilot",
+        "Gate and stop-gradient pilot, one seed",
+        "no",
+        None,
+        False,
+    ),
+    (
+        "p1b gate-free multi-seed",
+        "Follow-up family: U and BDS-Lite",
+        "U and BDS-Lite, seeds 1--3",
+        "yes (retrained set and follow-up family, S5)",
+        lambda r: r["in_current_manuscript"] != "no",
+        False,
+    ),
+    (
+        "p1b gate-free multi-seed",
+        "Follow-up family: gate variants",
+        "Gate variants of the same checkpoints",
+        "no",
+        lambda r: r["in_current_manuscript"] == "no",
+        False,
+    ),
+    (
+        "p2 recent-loss baselines (GSL, Boundary DoU)",
+        "Earlier loss baselines",
+        "Earlier GSL and Boundary DoU runs",
+        "no",
+        None,
+        False,
+    ),
+    (
+        "p2b BDS-Lite(no gate)+GSL",
+        "BDS-Lite path + GSL",
+        "BDS-Lite path combined with GSL",
+        "no",
+        None,
+        False,
+    ),
+    (
+        "E1 long-schedule GSL",
+        "Long-schedule GSL",
+        "U-Net+GSL with a longer schedule",
+        "no",
+        None,
+        False,
+    ),
+    (
+        "family O reproducibility grid",
+        "Original grid: U and BDS-Lite",
+        "Models of the submitted version",
+        "yes (original set, S4, S5)",
+        lambda r: r["in_current_manuscript"] != "no",
+        False,
+    ),
+    (
+        "family O reproducibility grid",
+        "Original grid: four ablation arms",
+        "D, D+F, D+G and D+G+S of the 13-arm grid",
+        "S15 (re-evaluated post hoc)",
+        lambda r: r["in_current_manuscript"] == "no" and r["arm"] in FO_REEVALUATED,
+        True,
+    ),
+    (
+        "family O reproducibility grid",
+        "Original grid: other arms",
+        "Other arms of the 13-arm grid",
+        "no",
+        lambda r: r["in_current_manuscript"] == "no" and r["arm"] not in FO_REEVALUATED,
+        False,
+    ),
+    ("smoke", "Smoke tests", "Engineering", "no", None, False),
+    (
+        "EGE-UNet compact baseline",
+        "EGE-UNet compact baseline$^{c}$",
+        "Compact comparator, dropped before submission",
+        "no",
+        None,
+        False,
+    ),
+    (
+        "Phase 16 matched GSL",
+        "Original U-Net+GSL",
+        "U-Net+GSL rows of the submitted version",
+        "via retrain (S7)",
+        None,
+        False,
+    ),
+    (
+        "ISIC U/S/B/F factorial",
+        "ISIC2018 factorial",
+        "Development study: U, U+S, D+F+G, BDS-Lite",
+        "yes (these four arms on ISIC2018)",
+        None,
+        False,
+    ),
+    (
+        "ISIC pathway controls",
+        "ISIC2018 pathway controls",
+        "U+G and D+G (gate only; gate with decoder)",
+        "S15",
+        None,
+        True,
+    ),
+    (
+        "ISIC boundary-specificity control",
+        "ISIC2018 boundary-specificity control",
+        "D$_0$+F+G: feature matching without boundary supervision",
+        "S15",
+        None,
+        True,
+    ),
+    (
+        "ISIC D4 augmentation baseline",
+        "ISIC2018 D4 augmentation baseline",
+        "U with flips and rotations",
+        "S15 (validation images only)",
+        None,
+        True,
+    ),
+    (
+        "ACDC index-grid region vs paper-GSL",
+        "ACDC index-grid region vs paper-GSL",
+        "Development data, 10 patients",
+        "no",
+        None,
+        False,
+    ),
+    (
+        "ACDC three-index context control",
+        "ACDC three-slice context control",
+        "Three adjacent slices as input; development data",
+        "S15",
+        None,
+        True,
+    ),
+    (
+        "ACDC phase-reduction control",
+        "ACDC phase-reduction control",
+        "Loss reduction unit; development data",
+        "no",
+        None,
+        False,
+    ),
+    ("failed launch", "Failed launch", "--", "no", None, False),
+    (
+        "WP2/WP4 queue A",
+        "Prespecified ablations: main analysis",
+        "Ablation cells, Attention U-Net; no class weights",
+        "yes",
+        lambda r: r["arm"] != "wp5_full" and not _weighted(r),
+        False,
+    ),
+    (
+        "WP2/WP4 queue A",
+        "Prespecified ablations: gradient diagnostics",
+        "Seed-1 gradient probes of BDS-Lite (S10); ACDC run with " + CW,
+        "yes (S10)",
+        lambda r: r["arm"] == "wp5_full",
+        False,
+    ),
+    (
+        "WP2/WP4 queue A",
+        "Prespecified ablations: class-weighted",
+        "ACDC U+S with " + CW + ", seed 1",
+        "no (sensitivity arm, not reported)",
+        lambda r: r["arm"] != "wp5_full" and _weighted(r),
+        True,
+    ),
+    (
+        "WP4 queue B",
+        "Prespecified comparators",
+        "U-Net+GSL, U-Net+Boundary Loss, LB-UNet",
+        "yes",
+        None,
+        False,
+    ),
+    (
+        "WP2/WP3 Tier B",
+        "Prespecified sensitivity: used",
+        "D on ISIC2018 and Synapse; $\\alpha$ and $\\lambda$ sensitivity (S11)",
+        "yes",
+        lambda r: not _weighted(r),
+        False,
+    ),
+    (
+        "WP2/WP3 Tier B",
+        "Prespecified sensitivity: class-weighted",
+        "ACDC D with " + CW,
+        "no (replaced by unweighted runs, S13)",
+        lambda r: _weighted(r),
+        True,
+    ),
+    (
+        "Stage 1 expansion",
+        "Additional trainings",
+        "Seeds 4--10 on ISIC2018 (study 2); D+S; ACDC D without class weights",
+        "yes",
+        None,
+        False,
+    ),
+    ("Stage 2 Experiment C", "Stopped study", "--", "no", None, False),
+    ("withdrawn registration", "Withdrawn design slots", "--", "no", None, False),
+    ("reproduction gate", "Reproduction gates", "--", "no", None, False),
+    (
+        "ACDC confirmation",
+        "Replication (study 4)",
+        "D+KD-band and D, seeds 201--217",
+        "yes (S18)",
+        None,
+        False,
+    ),
+    (
+        "follow-up E3 augmentation",
+        "Augmentation comparison (study 5)",
+        f"D{AUGM} and D+KD-band{AUGM}, seeds 201--210",
+        "yes (S21)",
+        None,
+        False,
+    ),
+    (
+        "follow-up compact teacher/cache",
+        "Compact teacher (study 5)",
+        f"Teacher of D+KD-band{CMP}",
+        "yes (S21)",
+        None,
+        False,
+    ),
+    (
+        "follow-up E1/E2 students",
+        "Controls (study 5)",
+        f"D+KD-full and D+KD-band{CMP}, seeds 201--217",
+        "yes (S21)",
+        None,
+        False,
+    ),
+    (
+        "exploratory external KD students",
+        "External-teacher students (study 3)",
+        "D+KD-band, seeds 1--3, three datasets",
+        "yes (S17)",
+        None,
+        False,
+    ),
+    (
+        "exploratory external teacher",
+        "External teachers (study 3)",
+        "One pretrained teacher per dataset",
+        "yes (S17)",
+        None,
+        False,
+    ),
+]
+# Inventory field values shown with the vocabulary of this article.
 DISPLAY = {
-    "Stage 2 Experiment C": "Stopped study",
     "confirmatory, blind": "stopped, not analysed",
-    "no (blind)": "no",
-    "withdrawn registration": "withdrawn design slots",
-    # internal queue names of the stage-1 launches, shown as in the ledger table (S15)
-    "WP2/WP4 queue A": "Prespecified ablations",
-    "WP4 queue B": "Prespecified comparators",
-    "WP2/WP3 Tier B": "Prespecified sensitivity",
+    "registered": "prespecified",
 }
+# Exact functional reproductions among completed records (audit of 2026-11-07, Section 3.1), by
+# (family, arm): each run reproduces another completed run of this table.
+REPRODUCTIONS = [
+    (
+        "family O reproducibility grid",
+        "bds_lite_surface_only",
+    ),  # equals unet_surface_loss in every metric
+    ("WP4 queue B", "gsl"),  # seeds 1-3 reproduce the June U-Net+GSL runs exactly (S7)
+    ("WP2/WP4 queue A", "wp5_full"),  # gradient diagnostics replay seed-1 runs
+]
+COMPLETED = "completed_150_epoch_record"
 
 
 def inventory_table() -> None:
@@ -1135,52 +1530,159 @@ def inventory_table() -> None:
         for r in read_csv(INVENTORY)
         if r["row_type"] in ("training_record", "withdrawn_design_slot")
     ]
-    order: list[str] = []
-    for r in rows:
-        if r["family"] not in order:
-            order.append(r["family"])
+    families = list(dict.fromkeys(r["family"] for r in rows))
+    if families != list(dict.fromkeys(e[0] for e in INVENTORY_ROWS)):
+        raise ValueError("inventory families differ from INVENTORY_ROWS")
     lines = [
-        r"\begin{longtable}{@{}p{3.6cm}p{1.9cm}rrp{3.4cm}p{1.9cm}@{}}",
+        r"\begin{longtable}{@{}p{3.0cm}p{1.5cm}p{3.6cm}rrp{2.8cm}p{2.3cm}@{}}",
         r"\caption{\label{tab:inventory}All training records by family. $^{a}$Completed: a 150-epoch "
         r"trajectory was read from the run record; other statuses (completion recorded in the ledger "
         r"only, completed runs of the stopped study, partial, diagnostic, failed, not started, "
         r"withdrawn) are listed per run in the archived inventory (S16). $^{b}$Period not recorded in the "
         r"inventory; these runs were trained in November 2026 under the protocols of S17, S18 and "
-        r"S21. Evidence class and use are the inventory's fields; ``--'': not recorded.}\\",
+        r"S21. $^{c}$The training ledger records these nine runs as completed and their epoch-150 "
+        r"checkpoints are present, but no training trajectory can be read from their records, so they "
+        r"are not counted as completed. $^{d}$Used in this article: derived from this article (where the "
+        r"runs are used), not taken from the inventory; it differs from the inventory's own field "
+        + "{DIFFERENCES}"
+        + r". Only Evidence class is taken from the inventory; ``--'': not recorded.}\\",
         r"\toprule",
-        r"Family & Period & Records & Completed$^{a}$ & Evidence class & Used here \\",
+        r"Family & Period & Purpose & Records & Completed$^{a}$ & Evidence class & Used in this article$^{d}$ \\",
         r"\midrule",
         r"\endhead",
     ]
     total = completed = 0
-    for fam in order:
-        group = [r for r in rows if r["family"] == fam]
-        done = sum(r["observed_status"] == "completed_150_epoch_record" for r in group)
-        eras = sorted({r["era"] for r in group if r["era"]}) or ["Nov 2026$^{b}$"]
+    seen: list[dict] = []
+    differences: list[str] = []
+    blank: list[str] = []
+    for fam, label, purpose, used, pick, marked in INVENTORY_ROWS:
+        group = [r for r in rows if r["family"] == fam and (pick is None or pick(r))]
+        if not group:
+            raise ValueError(f"empty inventory row: {label}")
+        seen += group
+        done = sum(r["observed_status"] == COMPLETED for r in group)
+        eras = sorted({re.sub(r"^E\d+ ", "", r["era"]) for r in group if r["era"]}) or [
+            "Nov 2026$^{b}$"
+        ]
         classes = sorted({r["evidence_class"] for r in group if r["evidence_class"]})
-        used = sorted({r["in_current_manuscript"] for r in group if r["in_current_manuscript"]})
-        used_text = "; ".join(used) or USED_BLANK.get(fam, "--")
         total += len(group)
         completed += done
+        field = sorted({r["in_current_manuscript"] for r in group})
+        is_used = not used.startswith("no")
+        if field == [""]:
+            blank.append(label)
+            marked = True
+        elif any(f.startswith("no") == is_used for f in field):
+            differences.append(f"{label.split('$')[0]} (inventory: {'; '.join(field)})")
+            marked = True
+        else:
+            marked = False
+        evidence = "; ".join(DISPLAY.get(c, c) for c in classes) or "--"
+        for old, new in DISPLAY.items():
+            evidence = evidence.replace(old, new)
         cells = [
-            DISPLAY.get(fam, fam),
-            "; ".join(re.sub(r" \(commit [0-9a-f]+\)", "", e) for e in eras),
+            label,
+            "; ".join(re.sub(r" \(commit [0-9a-f]+\)", "", e).replace("-", "--") for e in eras),
+            purpose,
             str(len(group)),
             str(done),
-            "; ".join(DISPLAY.get(c, c) for c in classes).replace("registered", "prespecified")
-            or "--",
-            DISPLAY.get(used_text, used_text),
+            evidence.replace("&", r"\&").replace("_", r"\_"),
+            used + ("$^{d}$" if marked else ""),
         ]
-        lines.append(" & ".join(c.replace("&", r"\&").replace("_", r"\_") for c in cells) + r" \\")
+        lines.append(" & ".join(cells) + r" \\")
+    if len(seen) != len(rows) or len({id(r) for r in seen}) != len(rows):
+        raise ValueError("inventory rows are not partitioned exactly once")
+    text = (
+        "in these rows: "
+        + "; ".join(differences)
+        + "; the field is empty for "
+        + ", ".join(b.split(" (")[0] for b in blank)
+    )
+    lines[1] = lines[1].replace("{DIFFERENCES}", text.replace("_", r"\_"))
     lines += [
         r"\midrule",
-        f"Total & & {total} & {completed} & & \\\\",
+        f"Total & & & {total} & {completed} & & \\\\",
         r"\bottomrule",
         r"\end{longtable}",
     ]
+    # Counts of S15, all from this table's definition of a completed record.
+    done_rows = [r for r in rows if r["observed_status"] == COMPLETED]
+    same_checkpoint = sum(bool(r["duplicate_of"]) for r in done_rows)
+    reproductions = sum((r["family"], r["arm"]) in REPRODUCTIONS for r in done_rows)
+    if (same_checkpoint, reproductions) != (46, 21):
+        raise ValueError(f"duplicate counts changed: {same_checkpoint}, {reproductions}")
+    design_breakdown(rows)
     put("INV.records", str(total))
     put("INV.completed", str(completed))
+    put("INV.samecheckpoint", str(same_checkpoint))
+    put("INV.distinct", str(completed - same_checkpoint))
+    put("INV.reproductions", str(reproductions))
+    put("INV.independent", str(completed - same_checkpoint - reproductions))
     write("tab_s_inventory.tex", lines)
+
+
+DESIGN_FAMILIES = (
+    "ISIC U/S/B/F factorial",
+    "WP4 queue B",
+    "Stage 1 expansion",
+    "exploratory external KD students",
+    "exploratory external teacher",
+    "ACDC confirmation",
+    "follow-up E1/E2 students",
+    "follow-up compact teacher/cache",
+    "follow-up E3 augmentation",
+)
+
+
+def _design_run(r: dict) -> bool:
+    """Inventory records that are runs of the 237-run design (main-text Table 2)."""
+    fam, arm, ds = r["family"], r["arm"], r["dataset"]
+    if fam in DESIGN_FAMILIES:
+        return True
+    if fam == "p1b gate-free multi-seed":  # U on ACDC and Synapse, BDS-Lite on Synapse
+        return (arm == "p1b_unet" and ds in ("acdc", "synapse")) or (
+            arm == "p1b_bdslite_full_current" and ds == "synapse"
+        )
+    if fam == "WP2/WP4 queue A":
+        return arm != "wp5_full" and not _weighted(r)
+    if fam == "WP2/WP3 Tier B":  # D on ISIC2018 and Synapse
+        return arm == "m2_aux_boundary_only" and ds in ("isic2018", "synapse")
+    return False
+
+
+def design_breakdown(rows: list[dict]) -> None:
+    """How the 237 design runs relate to the independent trainings of the inventory (S15)."""
+    done = [r for r in rows if r["observed_status"] == COMPLETED]
+    reproduction = [r for r in done if (r["family"], r["arm"]) in REPRODUCTIONS]
+    independent = [r for r in done if not r["duplicate_of"] and r not in reproduction]
+    design = [r for r in independent if _design_run(r)]
+    # the November U-Net+GSL design runs reproduce the June runs, which stand in for them here
+    stand_in = [r for r in independent if r["family"] == "Phase 16 matched GSL"]
+    if len(design) + len(stand_in) != sum(DESIGN_SLOTS.values()):
+        raise ValueError(f"design runs in the inventory: {len(design)} + {len(stand_in)}")
+    other = [r for r in independent if not _design_run(r) and r not in stand_in]
+    grid = [r for r in other if r["family"] == "family O reproducibility grid"]
+    submitted = [r for r in grid if r["in_current_manuscript"] != "no"]
+    sensitivity = [
+        r for r in other if r["family"] == "WP2/WP3 Tier B" and r["arm"].startswith("s_")
+    ]
+    weighted = [
+        r
+        for r in other
+        if r["family"] in ("WP2/WP4 queue A", "WP2/WP3 Tier B", "p1b gate-free multi-seed")
+        and r not in sensitivity
+        and _weighted(r)
+    ]
+    development = [r for r in other if r not in grid + sensitivity + weighted]
+    put("INV.design", str(len(design) + len(stand_in)))
+    put("INV.designstandin", str(len(stand_in)))
+    put("INV.other", str(len(other)))
+    put("INV.grid", str(len(grid)))
+    put("INV.submitted", str(len(submitted)))
+    put("INV.development", str(len(development)))
+    put("INV.sensitivity", str(len(sensitivity)))
+    put("INV.weighted", str(len(weighted)))
+    put("INV.notindependent", str(len(done) - len(independent)))
 
 
 # ---------------------------------------------------------------- teacher evaluation (post hoc)
@@ -1199,7 +1701,7 @@ def teacher_eval() -> None:
     """Frozen teachers on official ACDC patients 101-150 (post hoc, descriptive).
 
     Source: results/teacher_eval/summary.json (evidence addendum
-    revision/EVIDENCE_ADDENDUM_20261111_teacher_eval.md). Formats saved values only.
+    evidence/EVIDENCE_ADDENDUM_20261111_teacher_eval.md). Formats saved values only.
     """
     summary = json.loads(TEACHER.read_text())
     teachers, comp = summary["teachers"], summary["comparisons"]
@@ -1327,10 +1829,10 @@ def design_composition() -> dict:
             for ds, _ in DATASETS:
                 for s in seeds13:
                     if m == "M7":
-                        path = es.cell_path("M7", ds, s, dry=False).relative_to(ROOT).as_posix()
+                        path = logical(es.cell_path("M7", ds, s, dry=False))
                     else:
-                        path = prov[f"{m}/{ds}/seed{s}"]
-                    if not (ROOT / path).exists():
+                        path = logical(prov[f"{m}/{ds}/seed{s}"])
+                    if not resolve(path).exists():
                         raise FileNotFoundError(path)
                     out[(m, ds, s)] = path
         return out
@@ -1344,8 +1846,8 @@ def design_composition() -> dict:
     ext = {}
     for arm in ("unet", "decoder", "full", "gsl"):
         for s in range(1, 11):
-            path = es.isic_path(arm, s).relative_to(ROOT).as_posix()
-            if not (ROOT / path).exists():
+            path = logical(es.isic_path(arm, s))
+            if not resolve(path).exists():
                 raise FileNotFoundError(path)
             ext[(arm, s)] = path
     ext_reused = {k for k, p in ext.items() if p in counted}
@@ -1640,7 +2142,7 @@ def main() -> None:
     splits = ROOT / "recovered/followup/splits"
     for ds in ("isic2018", "acdc", "synapse"):
         for part in ("train", "val", "test"):
-            path = splits / ds / f"{part}.json"
+            path = resolve(splits / ds / f"{part}.json")
             if path.exists():
                 put(f"SPL.{ds}.{part}", f"{json.loads(path.read_text())['count']:,}")
     if KEYS["FIN.runs.total"] != "237":

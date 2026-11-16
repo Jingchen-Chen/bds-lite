@@ -19,7 +19,7 @@ def main():
         (1, 0.05, 0.05, True): "M6",
     }
     rows = []
-    for record in csv.DictReader((ROOT / "revision/audit/checkpoints.csv").open()):
+    for record in csv.DictReader((ROOT / "results/audit/checkpoints.csv").open()):
         path = ROOT / record["path"]
         payload = torch.load(path, map_location="cpu", weights_only=False)
         config = payload.get("config", {})
@@ -79,7 +79,7 @@ def main():
                 status="candidate only: source/objective/split verification required",
             )
         )
-    with (ROOT / "revision/validation/ablation_candidates.csv").open("w") as stream:
+    with (ROOT / "results/validation/ablation_candidates.csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)

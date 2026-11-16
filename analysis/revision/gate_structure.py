@@ -3,7 +3,7 @@
 
 Per dataset, seeds 1-3, first 96 test images of the probe subset: mean |factor - 1|, its constant
 per-channel part, the spatial SD per channel, and the share of pixel labels changed by removing the
-gate. Output: revision/tables/families/gate_structure.csv
+gate. Output: results/tables/families/gate_structure.csv
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "analysis/revision"))
 import boundary_transfer_probe as probe  # noqa: E402
 
-OUT = ROOT / "revision/tables/families/gate_structure.csv"
+OUT = ROOT / "results/tables/families/gate_structure.csv"
 
 
 def main() -> None:

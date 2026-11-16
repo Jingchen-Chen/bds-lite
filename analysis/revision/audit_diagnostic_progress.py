@@ -75,7 +75,7 @@ def main():
     result = dict(
         scope="point-in-time checkpoint audit, not final scientific validation", reports=reports
     )
-    (ROOT / "revision/validation/diagnostic_progress.json").write_text(
+    (ROOT / "results/validation/diagnostic_progress.json").write_text(
         json.dumps(result, indent=2) + "\n"
     )
     print(json.dumps(result, indent=2))

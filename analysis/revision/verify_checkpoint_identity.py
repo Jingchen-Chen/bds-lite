@@ -9,7 +9,7 @@ written by scripts/reeval_main_seeds.py as np.save(uint8 argmax map)). If the lo
 checkpoints hold the same weights, regenerating those arrays reproduces the manifest hashes
 (up to rare argmax flips from CPU vs GPU arithmetic); a different training would reproduce
 almost none. Also reports tensor-level state hashes and checkpoint metadata.
-Output: revision/validation/checkpoint_identity.json
+Output: results/validation/checkpoint_identity.json
 """
 
 from __future__ import annotations
@@ -76,7 +76,7 @@ def main(manifest_path: str) -> None:
                 )
                 report.append(row)
                 print(json.dumps(row), flush=True)
-    out = ROOT / "revision/validation/checkpoint_identity.json"
+    out = ROOT / "results/validation/checkpoint_identity.json"
     out.write_text(json.dumps(report, indent=1) + "\n")
 
 

@@ -14,9 +14,9 @@ is not read by src/bds_lite/data (normalisation is applied once at conversion, c
 so both pipelines consume the same stored arrays.
 
 Outputs:
-  revision/tables/families/gsl_trajectory_comparison.csv  (one row per dataset/seed)
-  revision/tables/families/gsl_trajectory_epochs.csv      (long format, common epochs)
-  revision/tables/families/gsl_table2_reproduction.csv     (submitted U-Net+GSL Table-2 rows vs the
+  results/tables/families/gsl_trajectory_comparison.csv  (one row per dataset/seed)
+  results/tables/families/gsl_trajectory_epochs.csv      (long format, common epochs)
+  results/tables/families/gsl_table2_reproduction.csv     (submitted U-Net+GSL Table-2 rows vs the
       retrained runs' test predictions, original reeval_main_seeds.py aggregation; ISIC2018 rows use
       the 519-image validation set as in the submission)
 Runs not yet trained are reported with status=missing; partially trained runs are compared on
@@ -34,7 +34,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[2]
 PHASE16 = ROOT / "recovered/followup/results/gsl/runs"
 REVISION = ROOT / "results/revision_runs"
-OUT = ROOT / "revision/tables/families"
+OUT = ROOT / "results/tables/families"
 EPOCHS = 150
 REPRODUCTION_TOL = 2e-3  # epoch-1 |dDSC| below this is treated as numerical agreement
 
@@ -72,7 +72,7 @@ def table2_value(per_case: Path, metric: str) -> float:
 
 def table2_reproduction() -> list[dict]:
     out = []
-    source = ROOT / "revision/sources/github_release/matched_gsl_summary.csv"
+    source = ROOT / "docs/provenance/sources/github_release/matched_gsl_summary.csv"
     for r in csv.DictReader(source.open()):
         split = "val" if r["dataset"] == "isic2018" else "test"
         if r["split"] != split:

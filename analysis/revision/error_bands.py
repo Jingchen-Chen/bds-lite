@@ -8,7 +8,7 @@ overlap with the reference class ("spurious components"). False alarms on classe
 from the reference are counted as far FP and spurious components. Aggregates: per
 method/dataset, pixel totals per image averaged over seeds; far-FP share; spurious
 components per image.
-Output: revision/tables/families/error_bands.csv
+Output: results/tables/families/error_bands.csv
 """
 
 from __future__ import annotations
@@ -88,7 +88,7 @@ def main() -> None:
                 row[f"{key}_per_image"] = float(np.nanmean(values))
             rows.append(row)
             print(json.dumps(row), flush=True)
-    out = ROOT / "revision/tables/families/error_bands.csv"
+    out = ROOT / "results/tables/families/error_bands.csv"
     with out.open("w") as stream:
         writer = csv.DictWriter(
             stream, fieldnames=list(dict.fromkeys(k for r in rows for k in r)), lineterminator="\n"

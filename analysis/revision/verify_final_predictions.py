@@ -1,7 +1,7 @@
 """Independent sampled E3 prediction-to-mask audit; no models or inference.
 
 Reads completed E3 evaluation artifacts and four deterministic official-test masks.
-Writes only revision/evidence_freeze/final_prediction_audit.json.
+Writes only evidence/final_prediction_audit.json.
 """
 
 from __future__ import annotations
@@ -58,7 +58,7 @@ def digest(path: Path) -> str:
 def main() -> None:
     record_path = ROOT / "results/followup_eval/evaluation_record_e3.json"
     record = json.loads(record_path.read_text())
-    manifest_path = ROOT / "revision/acdc_confirm/official_test_manifest.json"
+    manifest_path = ROOT / "results/acdc_confirm/official_test_manifest.json"
     official_ids = sorted(json.loads(manifest_path.read_text())["sample_ids"])
     wanted = {
         f"acdc_followup_{arm}_seed{seed}"
@@ -137,7 +137,7 @@ def main() -> None:
         "source_sha256": {str(p.relative_to(ROOT)): digest(p) for p in sorted(sources)},
         "limits": "Samples four slices per run; not exhaustive recalculation of all E3 pixels.",
     }
-    path = ROOT / "revision/evidence_freeze/final_prediction_audit.json"
+    path = ROOT / "evidence/final_prediction_audit.json"
     path.write_text(json.dumps(result, indent=2) + "\n")
     print(
         json.dumps(

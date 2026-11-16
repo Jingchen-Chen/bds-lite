@@ -1,6 +1,6 @@
 """Constants and locked checks for the ACDC/Synapse KD study.
 
-Protocol: revision/KD_MULTICLASS_PROTOCOL.md.
+Protocol: protocols/kd_acdc_synapse/KD_MULTICLASS_PROTOCOL.md.
 """
 
 from __future__ import annotations
@@ -19,8 +19,8 @@ from scripts.kd.common import (
 )
 
 ROOT = Path(__file__).resolve().parents[2]
-PROTOCOL = ROOT / "revision/KD_MULTICLASS_PROTOCOL.md"
-WORKSPACE = ROOT / "revision/kd_multiclass"
+PROTOCOL = ROOT / "protocols/kd_acdc_synapse/KD_MULTICLASS_PROTOCOL.md"
+WORKSPACE = ROOT / "results/kd_acdc_synapse"
 RUNS = ROOT / "results/revision_runs"
 STOP = ROOT / "revision/STOP_KD_TRAINING"  # shared KD stop marker; STOP_TRAINING is Experiment C's
 GPU_LOCK = ROOT / "revision/.gpu.lock"

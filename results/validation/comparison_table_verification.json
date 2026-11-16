@@ -1,0 +1,447 @@
+{
+  "matched_models": [
+    {
+      "dataset": "isic2018",
+      "method": "M0",
+      "model": "U-Net",
+      "dsc_mean": 0.8410375972120735,
+      "dsc_sd": 0.0032538000904348487,
+      "boundary_f1_mean": 0.3633527258798192,
+      "boundary_f1_sd": 0.016527429574211664,
+      "hd95_mean": 28.2658732896446,
+      "hd95_sd": 1.3201941111451514
+    },
+    {
+      "dataset": "isic2018",
+      "method": "M2",
+      "model": "Decoder-only",
+      "dsc_mean": 0.8402352827656321,
+      "dsc_sd": 0.0016935658171615077,
+      "boundary_f1_mean": 0.37935248758450146,
+      "boundary_f1_sd": 0.014224971003631341,
+      "hd95_mean": 28.332665259456107,
+      "hd95_sd": 0.9218442656300194
+    },
+    {
+      "dataset": "isic2018",
+      "method": "M6",
+      "model": "BDS-Lite (full)",
+      "dsc_mean": 0.8373587816333454,
+      "dsc_sd": 0.005120753676059751,
+      "boundary_f1_mean": 0.3669608476974528,
+      "boundary_f1_sd": 0.014968338506977593,
+      "hd95_mean": 28.547503786124942,
+      "hd95_sd": 2.184299369773694
+    },
+    {
+      "dataset": "isic2018",
+      "method": "GSL",
+      "model": "U-Net + GSL",
+      "dsc_mean": 0.8419486263567098,
+      "dsc_sd": 0.003729816769513503,
+      "boundary_f1_mean": 0.38383900426439865,
+      "boundary_f1_sd": 0.016070679772154074,
+      "hd95_mean": 27.54585559825031,
+      "hd95_sd": 1.2809327614707742
+    },
+    {
+      "dataset": "isic2018",
+      "method": "C1",
+      "model": "U-Net + Boundary Loss",
+      "dsc_mean": 0.8411137735061907,
+      "dsc_sd": 0.005465400321189156,
+      "boundary_f1_mean": 0.3634340877514321,
+      "boundary_f1_sd": 0.044101015191922464,
+      "hd95_mean": 26.92996573817372,
+      "hd95_sd": 2.2871997882169395
+    },
+    {
+      "dataset": "isic2018",
+      "method": "C3",
+      "model": "Attention U-Net",
+      "dsc_mean": 0.8416514027999126,
+      "dsc_sd": 0.002338395093374654,
+      "boundary_f1_mean": 0.3746144390195138,
+      "boundary_f1_sd": 0.02507552323169375,
+      "hd95_mean": 28.032499015808863,
+      "hd95_sd": 0.39337303620330655
+    },
+    {
+      "dataset": "isic2018",
+      "method": "C4",
+      "model": "LB-UNet",
+      "dsc_mean": 0.856903929462833,
+      "dsc_sd": 0.008528671491948704,
+      "boundary_f1_mean": 0.34937618315451757,
+      "boundary_f1_sd": 0.03589390607352131,
+      "hd95_mean": 19.69155694642261,
+      "hd95_sd": 0.8158346015233443
+    },
+    {
+      "dataset": "acdc",
+      "method": "M0",
+      "model": "U-Net",
+      "dsc_mean": 0.7419520567923032,
+      "dsc_sd": 0.00800876967292502,
+      "boundary_f1_mean": 0.7828088922737211,
+      "boundary_f1_sd": 0.0013148214953551604,
+      "hd95_mean": 7.397874963035369,
+      "hd95_sd": 1.0830653951039755
+    },
+    {
+      "dataset": "acdc",
+      "method": "M2",
+      "model": "Decoder-only",
+      "dsc_mean": 0.7582783033654141,
+      "dsc_sd": 0.00798938179893363,
+      "boundary_f1_mean": 0.7993218284469212,
+      "boundary_f1_sd": 0.008010126374341718,
+      "hd95_mean": 8.876001922914197,
+      "hd95_sd": 0.8459927691749753
+    },
+    {
+      "dataset": "acdc",
+      "method": "M6",
+      "model": "BDS-Lite (full)",
+      "dsc_mean": 0.7583622747768625,
+      "dsc_sd": 0.0132391806062277,
+      "boundary_f1_mean": 0.8005850833386149,
+      "boundary_f1_sd": 0.009691560207077414,
+      "hd95_mean": 8.66839653850544,
+      "hd95_sd": 1.2813825723748935
+    },
+    {
+      "dataset": "acdc",
+      "method": "GSL",
+      "model": "U-Net + GSL",
+      "dsc_mean": 0.7619555011412109,
+      "dsc_sd": 0.008981371089723866,
+      "boundary_f1_mean": 0.8061049465698897,
+      "boundary_f1_sd": 0.005624877624834975,
+      "hd95_mean": 7.38627279208151,
+      "hd95_sd": 1.6303433791710331
+    },
+    {
+      "dataset": "acdc",
+      "method": "C1",
+      "model": "U-Net + Boundary Loss",
+      "dsc_mean": 0.7620162122878765,
+      "dsc_sd": 0.010245493038615525,
+      "boundary_f1_mean": 0.8073010491519484,
+      "boundary_f1_sd": 0.010896858344757676,
+      "hd95_mean": 5.848271909958648,
+      "hd95_sd": 0.42453093396275227
+    },
+    {
+      "dataset": "acdc",
+      "method": "C3",
+      "model": "Attention U-Net",
+      "dsc_mean": 0.756755119871803,
+      "dsc_sd": 0.0027857446008646486,
+      "boundary_f1_mean": 0.7957069917839824,
+      "boundary_f1_sd": 0.0044339397877787515,
+      "hd95_mean": 8.727935925669048,
+      "hd95_sd": 1.0813728693527038
+    },
+    {
+      "dataset": "acdc",
+      "method": "C4",
+      "model": "LB-UNet",
+      "dsc_mean": 0.5097635615355729,
+      "dsc_sd": 0.02554806263656353,
+      "boundary_f1_mean": 0.47207442587479254,
+      "boundary_f1_sd": 0.024050986312789513,
+      "hd95_mean": 14.393833891037833,
+      "hd95_sd": 0.10049250945472984
+    },
+    {
+      "dataset": "synapse",
+      "method": "M0",
+      "model": "U-Net",
+      "dsc_mean": 0.4869538931035713,
+      "dsc_sd": 0.02771273480215571,
+      "boundary_f1_mean": 0.5058936798597817,
+      "boundary_f1_sd": 0.02609148992983698,
+      "hd95_mean": 8.648661998980467,
+      "hd95_sd": 0.4786654464733875
+    },
+    {
+      "dataset": "synapse",
+      "method": "M2",
+      "model": "Decoder-only",
+      "dsc_mean": 0.5062239925861939,
+      "dsc_sd": 0.017628675372011026,
+      "boundary_f1_mean": 0.5246449875347192,
+      "boundary_f1_sd": 0.019128738906342403,
+      "hd95_mean": 8.73439612351074,
+      "hd95_sd": 0.8914163885401207
+    },
+    {
+      "dataset": "synapse",
+      "method": "M6",
+      "model": "BDS-Lite (full)",
+      "dsc_mean": 0.49571216619055214,
+      "dsc_sd": 0.012028474906190903,
+      "boundary_f1_mean": 0.5156675477576302,
+      "boundary_f1_sd": 0.013734851501116793,
+      "hd95_mean": 9.042857245907246,
+      "hd95_sd": 0.5688516505626532
+    },
+    {
+      "dataset": "synapse",
+      "method": "GSL",
+      "model": "U-Net + GSL",
+      "dsc_mean": 0.5324965431537338,
+      "dsc_sd": 0.02619657162650983,
+      "boundary_f1_mean": 0.5555468313635289,
+      "boundary_f1_sd": 0.027256555074355558,
+      "hd95_mean": 8.305095273863241,
+      "hd95_sd": 0.12156048925416701
+    },
+    {
+      "dataset": "synapse",
+      "method": "C1",
+      "model": "U-Net + Boundary Loss",
+      "dsc_mean": 0.5071786223642196,
+      "dsc_sd": 0.018810333990559917,
+      "boundary_f1_mean": 0.5281560208024944,
+      "boundary_f1_sd": 0.01732585422243853,
+      "hd95_mean": 8.53561417926666,
+      "hd95_sd": 0.37922284490572844
+    },
+    {
+      "dataset": "synapse",
+      "method": "C3",
+      "model": "Attention U-Net",
+      "dsc_mean": 0.521681418589807,
+      "dsc_sd": 0.009489560851164888,
+      "boundary_f1_mean": 0.5381890849745189,
+      "boundary_f1_sd": 0.009776084883062917,
+      "hd95_mean": 8.322393445920994,
+      "hd95_sd": 0.35566681487784035
+    },
+    {
+      "dataset": "synapse",
+      "method": "C4",
+      "model": "LB-UNet",
+      "dsc_mean": 0.21367957935496312,
+      "dsc_sd": 0.033014674240297276,
+      "boundary_f1_mean": 0.17702065610623718,
+      "boundary_f1_sd": 0.035015800751917285,
+      "hd95_mean": 26.05077300097424,
+      "hd95_sd": 5.735248917026168
+    }
+  ],
+  "main_matched_rows": 18,
+  "numerical_best": [
+    {
+      "dataset": "isic2018",
+      "metric": "dsc",
+      "mean": 0.8419486263567098,
+      "methods": [
+        "GSL"
+      ]
+    },
+    {
+      "dataset": "isic2018",
+      "metric": "boundary_f1",
+      "mean": 0.38383900426439865,
+      "methods": [
+        "GSL"
+      ]
+    },
+    {
+      "dataset": "isic2018",
+      "metric": "hd95",
+      "mean": 26.92996573817372,
+      "methods": [
+        "C1"
+      ]
+    },
+    {
+      "dataset": "acdc",
+      "metric": "dsc",
+      "mean": 0.7620162122878765,
+      "methods": [
+        "C1"
+      ]
+    },
+    {
+      "dataset": "acdc",
+      "metric": "boundary_f1",
+      "mean": 0.8073010491519484,
+      "methods": [
+        "C1"
+      ]
+    },
+    {
+      "dataset": "acdc",
+      "metric": "hd95",
+      "mean": 5.848271909958648,
+      "methods": [
+        "C1"
+      ]
+    },
+    {
+      "dataset": "synapse",
+      "metric": "dsc",
+      "mean": 0.5324965431537338,
+      "methods": [
+        "GSL"
+      ]
+    },
+    {
+      "dataset": "synapse",
+      "metric": "boundary_f1",
+      "mean": 0.5555468313635289,
+      "methods": [
+        "GSL"
+      ]
+    },
+    {
+      "dataset": "synapse",
+      "metric": "hd95",
+      "mean": 8.305095273863241,
+      "methods": [
+        "GSL"
+      ]
+    }
+  ],
+  "bold_policy": "Unrounded means; exact ties within 1e-12; numerical rank only, not significance.",
+  "adapted_lbunet_rows_preserved": "All three datasets in S7 generated/lb_adapted_scores.tex, generated/tab_comparator_means.tex and full contrast tables; original generated/lb_multiclass_scores.tex also retained unchanged",
+  "main_reporting_scope": "The same six models on every dataset: M0 M2 M6 GSL C1 C3. All C4 adaptations remain in S7 regardless of performance; published LB-UNet remains in panel B.",
+  "published_values": [
+    {
+      "method": "EGE-UNet",
+      "dataset": "ISIC2018",
+      "metric": "DSC",
+      "value": "89.46",
+      "units": "% (+-0.07)",
+      "source": "Ruan et al. 2023 arXiv:2307.08473v1",
+      "source_url": "https://arxiv.org/pdf/2307.08473v1",
+      "local_pdf_sha256": "0f7a8ec36aca0c9dcf25b54efcbefd0f27eb46a1835342af51c3032149db54de",
+      "page_or_table": "p.7 Table 1",
+      "protocol_notes": "see mIoU row; 0.053M params 0.072 GFLOPs",
+      "verification_status": "verified against PDF text 2026-11-02",
+      "local_pdf": "paper/literature/2307.08473v1.pdf",
+      "paper_metric_label": "DSC"
+    },
+    {
+      "method": "LB-UNet",
+      "dataset": "ISIC2018",
+      "metric": "DSC",
+      "value": "89.54",
+      "units": "% (+-0.05)",
+      "source": "Xu and Tong 2024 MICCAI",
+      "source_url": "https://papers.miccai.org/miccai-2024/paper/2135_paper.pdf",
+      "local_pdf_sha256": "4a727540745bd902191abce0c6129980c367beb5c11a9a7ab66f99ebb6642efa",
+      "page_or_table": "p.8 Table 1",
+      "protocol_notes": "see mIoU row",
+      "verification_status": "verified against PDF text 2026-11-02",
+      "local_pdf": "paper/literature/lbunet_miccai2024.pdf",
+      "paper_metric_label": "DSC"
+    },
+    {
+      "method": "TransUNet",
+      "dataset": "ACDC",
+      "metric": "DSC",
+      "value": "89.71",
+      "units": "% (mean RV/Myo/LV)",
+      "source": "Chen et al. 2021 arXiv:2102.04306v1",
+      "source_url": "https://arxiv.org/pdf/2102.04306v1",
+      "local_pdf_sha256": "cd18a02c8c37702759fed60004123f9dc491361612110fbe00f4df45f1f4c658",
+      "page_or_table": "p.10 Table 5",
+      "protocol_notes": "random 70/10/20 patient split (differs from ours); DSC only",
+      "verification_status": "verified against PDF text 2026-11-02",
+      "local_pdf": "paper/literature/2102.04306v1.pdf",
+      "paper_metric_label": "DSC"
+    },
+    {
+      "method": "Swin-Unet",
+      "dataset": "ACDC",
+      "metric": "DSC",
+      "value": "90.00",
+      "units": "% (mean RV/Myo/LV)",
+      "source": "Cao et al. 2021 arXiv:2105.05537v1",
+      "source_url": "https://arxiv.org/pdf/2105.05537v1",
+      "local_pdf_sha256": "1824363b093ee95ff38aa2349f2500987ff604d22dd94a7ff21290dfcb83b15e",
+      "page_or_table": "p.9 Table 2",
+      "protocol_notes": "70/10/20 split as TransUNet; DSC only",
+      "verification_status": "verified against PDF text 2026-11-02",
+      "local_pdf": "paper/literature/2105.05537v1.pdf",
+      "paper_metric_label": "DSC"
+    },
+    {
+      "method": "TransUNet",
+      "dataset": "Synapse",
+      "metric": "DSC",
+      "value": "77.48",
+      "units": "% (mean over 8 organs and 12 test cases)",
+      "source": "Chen et al. 2021 arXiv:2102.04306v1",
+      "source_url": "https://arxiv.org/pdf/2102.04306v1",
+      "local_pdf_sha256": "cd18a02c8c37702759fed60004123f9dc491361612110fbe00f4df45f1f4c658",
+      "page_or_table": "p.6 Table 1",
+      "protocol_notes": "18 train/12 test CT cases; 224x224; ImageNet-pretrained R50-ViT; 3D volume metrics; caption states HD in mm but official utils.py computes HD95 without spacing (voxels)",
+      "verification_status": "verified against PDF text 2026-11-02",
+      "local_pdf": "paper/literature/2102.04306v1.pdf",
+      "paper_metric_label": "DSC"
+    },
+    {
+      "method": "TransUNet",
+      "dataset": "Synapse",
+      "metric": "HD95",
+      "value": "31.69",
+      "units": "caption: mm (code: voxels)",
+      "source": "Chen et al. 2021 arXiv:2102.04306v1",
+      "source_url": "https://arxiv.org/pdf/2102.04306v1",
+      "local_pdf_sha256": "cd18a02c8c37702759fed60004123f9dc491361612110fbe00f4df45f1f4c658",
+      "page_or_table": "p.6 Table 1",
+      "protocol_notes": "see DSC row",
+      "verification_status": "verified against PDF text 2026-11-02",
+      "local_pdf": "paper/literature/2102.04306v1.pdf",
+      "paper_metric_label": "HD"
+    },
+    {
+      "method": "Swin-Unet",
+      "dataset": "Synapse",
+      "metric": "DSC",
+      "value": "79.13",
+      "units": "%",
+      "source": "Cao et al. 2021 arXiv:2105.05537v1",
+      "source_url": "https://arxiv.org/pdf/2105.05537v1",
+      "local_pdf_sha256": "1824363b093ee95ff38aa2349f2500987ff604d22dd94a7ff21290dfcb83b15e",
+      "page_or_table": "p.8 Table 1",
+      "protocol_notes": "TransUNet Synapse protocol; ImageNet-pretrained Swin-T; 224x224; flip/rotation augmentation",
+      "verification_status": "verified against PDF text 2026-11-02",
+      "local_pdf": "paper/literature/2105.05537v1.pdf",
+      "paper_metric_label": "DSC"
+    },
+    {
+      "method": "Swin-Unet",
+      "dataset": "Synapse",
+      "metric": "HD95",
+      "value": "21.55",
+      "units": "as reported",
+      "source": "Cao et al. 2021 arXiv:2105.05537v1",
+      "source_url": "https://arxiv.org/pdf/2105.05537v1",
+      "local_pdf_sha256": "1824363b093ee95ff38aa2349f2500987ff604d22dd94a7ff21290dfcb83b15e",
+      "page_or_table": "p.8 Table 1",
+      "protocol_notes": "see DSC row",
+      "verification_status": "verified against PDF text 2026-11-02",
+      "local_pdf": "paper/literature/2105.05537v1.pdf",
+      "paper_metric_label": "HD"
+    }
+  ],
+  "source_run_files": 63,
+  "absolute_run_metric_means": 189,
+  "summary_checks": 315,
+  "tolerance": 1e-10,
+  "max_error_vs_frozen_summary": 3.552713678800501e-15,
+  "aggregation": "Within each run: exclude classes absent in both masks; class macro within image/slice, then mean of defined images/slices. Across runs: mean and sample SD (ddof=1). HD95 is a positive distance, never a signed contrast.",
+  "published_dsc_conversion": "percent / 100; no distance conversion or metric imputation",
+  "scope": "Descriptive display of existing outputs only; no evaluation, inference, training or significance analysis.",
+  "architecture_sources": [
+    "https://arxiv.org/abs/2105.05537",
+    "https://arxiv.org/abs/2201.01266"
+  ]
+}

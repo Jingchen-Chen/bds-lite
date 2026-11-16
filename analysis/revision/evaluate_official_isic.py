@@ -55,20 +55,20 @@ def main():
     registered = subprocess.check_output(
         ["git", "show", "a6dc26c:analysis/revision/prereg_revision.md"], cwd=ROOT
     )
-    if registered != (ROOT / "analysis/revision/prereg_revision.md").read_bytes():
+    if registered != (ROOT / "protocols/ablation/revision_analysis_plan.md").read_bytes():
         raise ValueError("prospective plan differs from committed version")
-    parity = json.loads((ROOT / "revision/validation/official_inference_parity.json").read_text())
+    parity = json.loads((ROOT / "results/validation/official_inference_parity.json").read_text())
     if len(parity) != 9 or any(r["pixel_mismatches"] for r in parity):
         raise ValueError("inference parity gate has not passed")
     archives = ROOT / "data/revision/isic2018_official/archives"
-    receipt = json.loads((ROOT / "revision/sources/isic_acquisition.json").read_text())
+    receipt = json.loads((ROOT / "docs/provenance/sources/isic_acquisition.json").read_text())
     input_path = archives / f"ISIC2018_Task1-2_{args.split}_Input.zip"
     mask_path = archives / f"ISIC2018_Task1_{args.split}_GroundTruth.zip"
     for path in [input_path, mask_path]:
         record = next(r for r in receipt if r["path"] == str(path.relative_to(ROOT)))
         if sha(path) != record["sha256"]:
             raise ValueError("archive hash mismatch")
-    output = ROOT / f"revision/official_isic/{args.split.lower()}"
+    output = ROOT / f"results/official_isic/{args.split.lower()}"
     output.mkdir(parents=True, exist_ok=True)
     expected_n = 100 if args.split == "Validation" else 1000
     with zipfile.ZipFile(input_path) as images, zipfile.ZipFile(mask_path) as masks:

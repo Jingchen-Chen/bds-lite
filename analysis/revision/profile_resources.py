@@ -7,8 +7,8 @@ executed). "BDS-Lite gate-collapsed" removes P and the gate (U-Net-identical gra
 GPU latency: CUDA events, fp32 and AMP fp16 autocast, batch 1/8/16, 50 warm-up and 200
 timed forwards, median and IQR per batch. CPU latency: batch 1, 1 thread and all
 physical threads, 10 warm-up and 50 timed forwards. Kernel counts: torch.profiler CUDA
-kernel launches for one batch-1 forward. Output: revision/tables/resource_profile.csv
-and revision/validation/resource_profile_env.json.
+kernel launches for one batch-1 forward. Output: results/tables/resource_profile.csv
+and results/validation/resource_profile_env.json.
 """
 
 from __future__ import annotations
@@ -153,7 +153,7 @@ def main() -> None:
             model.cpu()
             rows.append(row)
             print(json.dumps(row), flush=True)
-    out = ROOT / "revision/tables/resource_profile.csv"
+    out = ROOT / "results/tables/resource_profile.csv"
     with out.open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
@@ -176,7 +176,7 @@ def main() -> None:
             text=True,
         ),
     )
-    (ROOT / "revision/validation/resource_profile_env.json").write_text(
+    (ROOT / "results/validation/resource_profile_env.json").write_text(
         json.dumps(env, indent=1) + "\n"
     )
 

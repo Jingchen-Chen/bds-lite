@@ -17,7 +17,7 @@ import tarfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "revision/evidence_freeze"
+OUT = ROOT / "evidence"
 BASE = OUT / "primary-evidence-20261110.sha256"
 DELTA = OUT / "final-supplement-20261110.tar.gz"
 SUMS = OUT / "final-supplement-20261110.sha256"
@@ -51,13 +51,13 @@ def selected() -> set[Path]:
             ):
                 paths.add(path)
     for folder in (
-        "revision/tables",
-        "revision/validation",
-        "revision/kd_unified",
-        "revision/kd_posthoc_balanced",
-        "revision/restructure_posthoc",
-        "revision/followup/results",
-        "revision/acdc_confirm/results",
+        "results/tables",
+        "results/validation",
+        "results/kd_unified",
+        "results/kd_posthoc_balanced",
+        "results/posthoc_restructure",
+        "results/followup/results",
+        "results/acdc_confirm/results",
     ):
         paths.update(
             p for p in (ROOT / folder).rglob("*") if p.suffix in (".csv", ".json") and p.is_file()
@@ -75,21 +75,21 @@ def selected() -> set[Path]:
         "results/followup_eval/evaluation_record_e1e2.json",
         "results/acdc_confirm_eval/evaluation_record.json",
         "results/acdc_confirm_eval_posthoc/teacher_cache_timing.json",
-        "revision/followup_registration.md",
-        "revision/followup/AMENDMENT_1.md",
-        "revision/followup/PROTOCOL_LOG.md",
-        "revision/followup/supervision/events.jsonl",
-        "revision/acdc_confirm/official_test_preprocessing.json",
-        "revision/acdc_confirm/official_test_manifest.json",
-        "revision/acdc_confirm/preprocessing_dev_gate.json",
-        "revision/acdc_confirm/preprocessing_impact.json",
-        "revision/queue_followup_e1e2.yaml",
-        "revision/queue_followup_e3.yaml",
-        "revision/COMPARATOR_PROTOCOL.md",
-        "revision/EXPANSION_PROTOCOL.md",
-        "revision/SYNAPSE_LABEL_SEMANTICS.md",
+        "protocols/followup/followup_registration.md",
+        "protocols/followup/AMENDMENT_1.md",
+        "protocols/followup/PROTOCOL_LOG.md",
+        "results/followup/supervision/events.jsonl",
+        "results/acdc_confirm/official_test_preprocessing.json",
+        "results/acdc_confirm/official_test_manifest.json",
+        "results/acdc_confirm/preprocessing_dev_gate.json",
+        "results/acdc_confirm/preprocessing_impact.json",
+        "protocols/followup/queue_followup_e1e2.yaml",
+        "protocols/followup/queue_followup_e3.yaml",
+        "protocols/comparators/COMPARATOR_PROTOCOL.md",
+        "protocols/expansion/EXPANSION_PROTOCOL.md",
+        "docs/provenance/SYNAPSE_LABEL_SEMANTICS.md",
         "pyproject.toml",
-        "revision/env_freeze.txt",
+        "docs/env_freeze.txt",
     ):
         paths.add(ROOT / name)
     # Preserve structured histories/configurations for every inventoried record,
@@ -112,7 +112,7 @@ def selected() -> set[Path]:
             candidate = directory / name
             if candidate.is_file():
                 paths.add(candidate)
-    paths.add(ROOT / "revision/audit/project_audit_20261107/experiment_ledger.csv")
+    paths.add(ROOT / "results/audit/project_audit_20261107/experiment_ledger.csv")
     for path in OUT.glob("final_*"):
         if path.suffix in (".json", ".csv", ".md") and path.name not in (
             "final_preservation.json",

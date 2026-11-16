@@ -1,8 +1,8 @@
-"""Frozen analysis for revision/HISTORICAL_REEVALUATION_PROTOCOL.md.
+"""Frozen analysis for protocols/historical_reevaluation/HISTORICAL_REEVALUATION_PROTOCOL.md.
 
-Uses the expansion estimator unchanged. Writes to revision/tables/families/:
+Uses the expansion estimator unchanged. Writes to results/tables/families/:
 historical_april.csv, historical_october.csv, historical_tolerance.csv.
-Refuses to run unless revision/historical_reevaluation/validation.json reports a pass.
+Refuses to run unless results/historical_reevaluation/validation.json reports a pass.
 """
 
 from __future__ import annotations
@@ -20,9 +20,9 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "analysis/revision"))
 import expansion_statistics as ex  # noqa: E402
 
-OUT = ROOT / "revision/historical_reevaluation"
-TABLES = ROOT / "revision/tables/families"
-EXTRA = ROOT / "revision/extra_cohorts"
+OUT = ROOT / "results/historical_reevaluation"
+TABLES = ROOT / "results/tables/families"
+EXTRA = ROOT / "results/extra_cohorts"
 SEEDS = (1, 2, 3)
 DATASETS = ("isic2018", "acdc", "synapse")
 H_CONTRASTS = {
@@ -57,7 +57,7 @@ def april_values(arm: str, dataset: str) -> list[dict]:
 
 def october_path(arm: str, seed: int) -> Path:
     if arm == "U":
-        return ROOT / f"revision/official_isic/test/U_seed{seed}/per_case.csv"
+        return ROOT / f"results/official_isic/test/U_seed{seed}/per_case.csv"
     if arm == "B":
         return EXTRA / f"isic_M3_B/isic2018_seed{seed}/test/per_case.csv"
     if arm == "M2":

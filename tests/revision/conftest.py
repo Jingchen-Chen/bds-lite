@@ -1,7 +1,7 @@
 """Skip the two Amendment 1 tests that read the freeze commit when that commit is absent.
 
 `tests/revision/test_acdc_confirm_amendment1.py` is listed with its SHA-256 in
-`revision/acdc_confirm/amendment1/AMENDMENT_1.md`, so it is left byte-identical. Two of its tests
+`protocols/acdc_confirm/AMENDMENT_1.md`, so it is left byte-identical. Two of its tests
 call `integrity_amended.frozen_study_files()`, which reads commit 345cacd with `git ls-tree` and
 `git show`. The public snapshot carries no development history, so there the commit object does
 not exist and the two tests are skipped. Where the commit exists, nothing is changed and the tests

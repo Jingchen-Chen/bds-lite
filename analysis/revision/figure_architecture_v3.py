@@ -1,7 +1,7 @@
 # ruff: noqa: E501
-"""Fig. 1 (Arms and training signals), vector source of revision/figures/architecture_final.pdf.
+"""Fig. 1 (Arms and training signals), vector source of paper/figures/architecture_final.pdf.
 
-History: the raster Fig. 1 (revision/figures/architecture.png) was redrawn in matplotlib and the
+History: the raster Fig. 1 (paper/figures/architecture.png) was redrawn in matplotlib and the
 redraw was approved by the author on 2026-11-10. Revision of 2026-11-11 (layout and typesetting
 only; no numbers, the figure carries none from result files):
 
@@ -18,7 +18,7 @@ only; no numbers, the figure carries none from result files):
 - surface-loss notation of Supplementary S2 (phi_nk, s_nk = max_u |phi_nk(u)|);
 - objectives box removed (Eqs. 4-5 and Table 3 state the objectives); one line of symbols kept.
 
-Output: revision/figures/architecture_final.{pdf,png}.
+Output: paper/figures/architecture_final.{pdf,png}.
 
     .venv/bin/python analysis/revision/figure_architecture_v3.py
 """
@@ -35,7 +35,7 @@ from matplotlib.lines import Line2D  # noqa: E402
 from matplotlib.patches import Circle, FancyArrowPatch, FancyBboxPatch  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-FINAL = ROOT / "revision/figures"
+FINAL = ROOT / "paper/figures"
 
 TEXTWIDTH_TEX_PT = 415.12572  # \the\textwidth of wlpeerj.cls (TeX points, 72.27 per inch)
 W_IN = TEXTWIDTH_TEX_PT / 72.27

@@ -18,7 +18,7 @@ Boundary F1 and DSC, patients 101-150), three estimates of the same Delta are se
 Patients with a defined value in every run of both arms are used (as in the frozen estimator).
 
     PYTHONPATH=src:. .venv/bin/python analysis/followup/posthoc_reference_estimators.py
-Outputs: revision/followup/results/posthoc_reference_estimators.{csv,json}
+Outputs: results/followup/results/posthoc_reference_estimators.{csv,json}
 """
 
 from __future__ import annotations
@@ -40,7 +40,7 @@ sys.path.insert(0, str(ROOT / "src"))
 import expansion_statistics as ex  # noqa: E402
 from analyze import CONTEXT, FAMILY, arm_runs  # noqa: E402
 
-OUT = ROOT / "revision/followup/results"
+OUT = ROOT / "results/followup/results"
 DRAWS = 10_000
 
 

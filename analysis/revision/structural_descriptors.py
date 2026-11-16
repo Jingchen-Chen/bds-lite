@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def main():
-    output = ROOT / "revision/structural_descriptors"
+    output = ROOT / "results/structural_descriptors"
     output.mkdir(exist_ok=True)
     groups = defaultdict(list)
     fields = [

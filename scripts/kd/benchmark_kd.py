@@ -4,7 +4,7 @@ Seed 0 (not an experimental seed). One training epoch each for the teacher and a
 student; the student reads a dummy teacher cache (the ground-truth masks), so no real teacher output
 exists. No validation or test metric is computed and no model state is saved. Validation cost is
 timed on random tensors of the validation-set size, in eval mode, with no labels. Records only loss
-finiteness, epoch time, peak VRAM, and GPU temperature, in revision/kd_comparator/benchmark.json.
+finiteness, epoch time, peak VRAM, and GPU temperature, in results/kd_isic2018/benchmark.json.
 """
 
 from __future__ import annotations

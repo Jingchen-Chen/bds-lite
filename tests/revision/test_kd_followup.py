@@ -1,4 +1,4 @@
-"""Unit tests for the exploratory follow-up controls (revision/followup_registration.md)."""
+"""Unit tests for the exploratory follow-up controls (protocols/followup/followup_registration.md)."""
 
 import copy
 

@@ -14,6 +14,7 @@ import h5py
 import numpy as np
 from scipy import ndimage as ndi
 from scipy.spatial import cKDTree
+from bds_lite.paths import current
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -97,12 +98,10 @@ def evaluate(entry):
     source = json.loads(marker.read_text())
     if source["outputs"]["predictions.npz"] != sha(folder / "predictions.npz"):
         raise ValueError("prediction archive integrity failure")
-    output = (
-        ROOT / f"revision/volume_results/{entry['family']}/{entry['dataset']}_seed{entry['seed']}"
-    )
+    output = ROOT / f"results/volume/{entry['family']}/{entry['dataset']}_seed{entry['seed']}"
     output.mkdir(parents=True, exist_ok=True)
     complete = output / "volume_complete.json"
-    protocol_sha = sha(ROOT / "revision/volume_evaluation_protocol.md")
+    protocol_sha = sha(ROOT / "protocols/volume/volume_evaluation_protocol.md")
     if complete.exists():
         previous = json.loads(complete.read_text())
         if (
@@ -192,12 +191,12 @@ def main():
     parser.add_argument("--family", default=None)
     args = parser.parse_args()
     validation = validate_backend()
-    (ROOT / "revision/validation/volume_distance_backend.json").write_text(
+    (ROOT / "results/validation/volume_distance_backend.json").write_text(
         json.dumps(validation, indent=2) + "\n"
     )
     entries = []
     for name in ["prediction_recovery_queue.json", "main_prediction_queue.json"]:
-        entries.extend(json.loads((ROOT / "revision" / name).read_text())["runs"])
+        entries.extend(json.loads((ROOT / current(f"revision/{name}")).read_text())["runs"])
     count = 0
     for entry in entries:
         if (

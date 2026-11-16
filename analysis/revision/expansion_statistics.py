@@ -1,5 +1,5 @@
 # ruff: noqa: E501
-"""Frozen analysis for revision/EXPANSION_PROTOCOL.md. Committed before any expansion result exists.
+"""Frozen analysis for protocols/expansion/EXPANSION_PROTOCOL.md. Committed before any expansion result exists.
 
 Experiment A (ISIC2018, official test, four arms, ten seeds)
   Six contrasts on all five metrics. Boundary F1 is primary. Unit of replication: the training run.
@@ -19,7 +19,7 @@ Experiment B (all datasets, seeds 1-3, 2x2 of decoder x surface loss)
 Component model: additive main effects over the eight ablation cells, as in
 narrative_component_effects.py, with the new cell and the ISIC2018 ten-seed arms.
 
-Outputs in revision/tables/families/: expansion_contrasts.csv, expansion_interaction.csv,
+Outputs in results/tables/families/: expansion_contrasts.csv, expansion_interaction.csv,
 expansion_components.csv. --dry-run uses seeds 1-3 only, substitutes BDS-Lite for the missing cell,
 writes to the scratch path given, and exists only to test this code on data already known.
 """
@@ -41,7 +41,7 @@ sys.path.insert(0, str(ROOT / "analysis/revision"))
 import family_statistics as fs  # noqa: E402
 
 RUNS = ROOT / "results/revision_runs"
-OFFICIAL = ROOT / "revision/official_isic/test"
+OFFICIAL = ROOT / "results/official_isic/test"
 METRICS = fs.METRICS
 SESOI = fs.SESOI
 DATASETS = ["isic2018", "acdc", "synapse"]
@@ -401,7 +401,7 @@ def main() -> None:
     parser.add_argument("--dry-run", type=Path, default=None)
     args = parser.parse_args()
     dry = args.dry_run is not None
-    folder = args.dry_run if dry else ROOT / "revision/tables/families"
+    folder = args.dry_run if dry else ROOT / "results/tables/families"
     if dry:
         a = experiment_a([1, 2, 3], [1, 2, 3])
         extra = None

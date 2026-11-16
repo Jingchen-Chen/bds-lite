@@ -30,7 +30,7 @@ import expansion_statistics as ex  # noqa: E402
 from analysis.revision import make_audit_assets as ma  # noqa: E402
 
 RUNS = ROOT / "results/revision_runs"
-OUT = ROOT / "revision/kd_comparator/phase2"
+OUT = ROOT / "results/kd_isic2018/phase2"
 FRESH, ALL = list(range(4, 11)), list(range(1, 11))
 
 

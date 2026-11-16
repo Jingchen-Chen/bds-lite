@@ -1,4 +1,6 @@
-"""KD-comparator copy of scripts/revision/run_queue.py (revision/KD_COMPARATOR_PROTOCOL.md 8, 9).
+"""KD-comparator copy of scripts/revision/run_queue.py.
+
+Protocol: protocols/kd_isic2018/KD_COMPARATOR_PROTOCOL.md, sections 8 and 9.
 
 Same launch guards, telemetry, and thermal stop as the validated dispatcher: refuse an occupied
 GPU; launch only below 80 C with < 1 GiB used and >= 25 GiB free disk; log nvidia-smi every 10 s to
@@ -24,6 +26,7 @@ from pathlib import Path
 
 import yaml
 
+from bds_lite.paths import current
 from scripts.kd.common import (
     CACHE_RUN,
     CUDA_VERSION,
@@ -92,7 +95,7 @@ def main():
     if not args.execute:
         print(json.dumps(queue, indent=2))
         return
-    gate = json.loads((ROOT / "revision/reproduction_gate.json").read_text())
+    gate = json.loads((ROOT / "results/gates/reproduction_gate.json").read_text())
     if gate.get("status") != "COMPLETE — VERIFIED" or not gate.get("evidence"):
         raise ValueError("reproduction has not passed; GPU execution forbidden")
     import torch
@@ -117,7 +120,7 @@ def main():
             resolved = yaml.safe_load(config.read_text())
             require_protocol(resolved)
             if (
-                sha(ROOT / resolved["revision"]["protocol"])
+                sha(ROOT / current(resolved["revision"]["protocol"]))
                 != resolved["revision"]["protocol_sha256"]
             ):
                 raise ValueError("training protocol changed")

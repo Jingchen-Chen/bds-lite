@@ -1,7 +1,7 @@
 # ruff: noqa: E501  (LaTeX table literals)
 """Generate every number and table of the revised manuscript from result CSVs.
 
-Output: revision/manuscript/generated/{numbers.tex, tab_*.tex, missing.txt}.
+Output: paper/generated/{numbers.tex, tab_*.tex, missing.txt}.
 numbers.tex defines keyed values used in the text as \\R{key}; a missing key renders a
 red placeholder in the PDF (see main.tex), so pending results stay visible and no
 number is typed by hand. Sources are listed in each generated table header.
@@ -16,8 +16,8 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "revision/manuscript/generated"
-FAM = ROOT / "revision/tables/families"
+OUT = ROOT / "paper/generated"
+FAM = ROOT / "results/tables/families"
 METRICS = ["dsc", "iou", "boundary_f1", "hd95", "assd"]
 MNAME = {"dsc": "DSC", "iou": "IoU", "boundary_f1": "BF1", "hd95": "HD95", "assd": "ASSD"}
 DNAME = {"isic2018": "ISIC2018", "acdc": "ACDC", "synapse": "Synapse"}
@@ -125,7 +125,7 @@ def mean_table(summary, methods, name, caption_source) -> None:
 
 
 def stats_table(data, family, methods, reference, name) -> None:
-    lines = [f"% generated from revision/tables/families/family_statistics.csv (family {family})"]
+    lines = [f"% generated from results/tables/families/family_statistics.csv (family {family})"]
     lines += [r"\begin{tabular}{lllrlll}", r"\toprule"]
     lines.append(
         r"Dataset ($n$ units) & Contrast & Metric & Oriented $\Delta$ & 95\% CI & Holm $p$ & SESOI judgement \\"
@@ -224,7 +224,7 @@ def comparator_table(data) -> None:
 def volume() -> None:
     """Stacked-volume contrasts (volume_families.py): submitted models (P) and replication."""
     data = rows(FAM / "volume_family_statistics.csv")
-    lines = ["% generated from revision/tables/families/volume_family_statistics.csv"]
+    lines = ["% generated from results/tables/families/volume_family_statistics.csv"]
     lines += [r"\begin{tabular}{lllrlll}", r"\toprule"]
     lines.append(r"Dataset & Family & Endpoint & $n$ & Oriented $\Delta$ & 95\% CI & Holm $p$ \\")
     lines.append(r"\midrule")
@@ -265,8 +265,8 @@ def gate_identity() -> None:
 
 
 def descriptors() -> None:
-    data = rows(ROOT / "revision/structural_descriptors/summary.csv")
-    lines = ["% generated from revision/structural_descriptors/summary.csv (training split)"]
+    data = rows(ROOT / "results/structural_descriptors/summary.csv")
+    lines = ["% generated from results/structural_descriptors/summary.csv (training split)"]
     lines += [r"\begin{tabular}{llrrrrr}", r"\toprule"]
     lines.append(
         r"Dataset & Class & Empty frac. & Area frac. & Components & $L/A$ (px$^{-1}$) & $\partial$DSC/1\,px \\"
@@ -291,9 +291,9 @@ def descriptors() -> None:
 
 
 def literature() -> None:
-    data = rows(ROOT / "revision/lit_numbers.csv")
+    data = rows(ROOT / "paper/lit_numbers.csv")
     lines = [
-        "% generated from revision/lit_numbers.csv (every row verified against the cited PDF page/table)"
+        "% generated from paper/lit_numbers.csv (every row verified against the cited PDF page/table)"
     ]
     lines += [r"\begin{tabular}{p{3.2cm}p{2.4cm}p{2.2cm}rp{5.2cm}}", r"\toprule"]
     lines.append(r"Method & Dataset & Metric & Value & Source and protocol differences \\")
@@ -314,9 +314,9 @@ def official_extra() -> None:
 
 
 def resources() -> None:
-    data = rows(ROOT / "revision/tables/resource_profile.csv")
+    data = rows(ROOT / "results/tables/resource_profile.csv")
     lines = [
-        "% generated from revision/tables/resource_profile.csv (ISIC2018 3-channel, 2-class graphs)"
+        "% generated from results/tables/resource_profile.csv (ISIC2018 3-channel, 2-class graphs)"
     ]
     lines += [r"\begin{tabular}{lrrrrrrrr}", r"\toprule"]
     lines.append(
@@ -439,7 +439,7 @@ def supplementary() -> None:
         "pixels or components per image, seed means; near = within 2 px of the reference contour",
     )
     generic_table(
-        ROOT / "revision/tables/gradient_summary.csv",
+        ROOT / "results/tables/gradient_summary.csv",
         "tab_s_gradient.tex",
         [
             ("dataset", "Dataset", None),
@@ -456,7 +456,7 @@ def supplementary() -> None:
 
 def original_submission() -> None:
     """Originally submitted Table 2 values preserved with their status (GitHub release 3104cb3)."""
-    src = ROOT / "revision/sources/github_release"
+    src = ROOT / "docs/provenance/sources/github_release"
     table = defaultdict(dict)
     for r in rows(src / "main_test_means.csv"):
         table[(r["dataset"], r["method"])][r["metric"]] = (r["mean"], r["std"])
@@ -469,7 +469,7 @@ def original_submission() -> None:
     }
     label = {"unet": "U-Net", "bds_lite_full": "BDS-Lite", "unet_gsl": "U-Net+GSL"}
     lines = [
-        "% generated from revision/sources/github_release/{main_test_means,matched_gsl_summary}.csv"
+        "% generated from docs/provenance/sources/github_release/{main_test_means,matched_gsl_summary}.csv"
     ]
     lines += [r"\begin{tabular}{llcccccl}", r"\toprule"]
     lines.append(r"Dataset & Method & DSC & IoU & BF1 & HD95 & ASSD & Status in revision \\")
@@ -492,7 +492,7 @@ def original_submission() -> None:
 
 
 def gradients() -> None:
-    for r in rows(ROOT / "revision/tables/gradient_summary.csv"):
+    for r in rows(ROOT / "results/tables/gradient_summary.csv"):
         key = f"GR.{r['dataset']}.{r['term']}.{r['window']}"
         put(key + ".cos", num(r["cosine_mean"], 2))
         put(key + ".conflict", num(100 * float(r["conflict_fraction"]), 1))
@@ -502,10 +502,10 @@ def gradients() -> None:
 
 def duplicates() -> None:
     data = rows(FAM / "isic_duplicate_sensitivity.csv")
-    flags = rows(ROOT / "revision/validation/isic_test_duplicates.csv")
+    flags = rows(ROOT / "results/validation/isic_test_duplicates.csv")
     for t in ("0.99", "0.96", "0.93", "0.9"):
         put(f"DUP.n.{t}", str(sum(float(r["max_r"]) > float(t) for r in flags)))
-    lines = ["% generated from revision/tables/families/isic_duplicate_sensitivity.csv"]
+    lines = ["% generated from results/tables/families/isic_duplicate_sensitivity.csv"]
     lines += [r"\begin{tabular}{lllrll}", r"\toprule"]
     lines.append(
         r"Family & Metric & Test images kept & $n$ & Oriented $\Delta$ [95\% CI] & SESOI judgement \\"
@@ -559,7 +559,7 @@ def gsl_trajectories() -> None:
     put("GSLT2.overlap", f"${mant}\\times10^{{{int(expo)}}}$")
     put("GSLT2.distance", f"{max(distance, default=float('nan')):.2f}")
     put("GSLT2.runs", str(len(complete)))
-    lines = ["% generated from revision/tables/families/gsl_trajectory_comparison.csv"]
+    lines = ["% generated from results/tables/families/gsl_trajectory_comparison.csv"]
     lines += [r"\begin{tabular}{llrrrrl}", r"\toprule"]
     lines.append(
         r"Dataset & Seed & Epochs & Epoch-1 val DSC (orig./retrain) & Max $|\Delta|$ over epochs & Best val DSC (epoch) & Status \\"
@@ -592,7 +592,7 @@ def omnibus_and_ablation_counts(data: list[dict]) -> None:
         positions = defaultdict(list)
         firsts: dict[tuple[str, str], int] = defaultdict(int)
         lines = [
-            "% generated from revision/tables/families/omnibus_friedman.csv; mean ranks, 1 = best"
+            "% generated from results/tables/families/omnibus_friedman.csv; mean ranks, 1 = best"
         ]
         methods = om[0]["methods"].split(";")
         lines += [r"\begin{tabular}{ll" + "r" * (2 + len(methods)) + "}", r"\toprule"]
@@ -721,7 +721,7 @@ def sensitivity() -> None:
             seeds = json.loads(r[f"{m}_seeds"])
             for i, v in enumerate(seeds, 1):
                 put(f"SEED.{r['dataset']}.{r['method']}.{m}.s{i}", num(v, digits(m)))
-    lines = ["% generated from revision/tables/families/sensitivity_means.csv and sensitivity.csv"]
+    lines = ["% generated from results/tables/families/sensitivity_means.csv and sensitivity.csv"]
     lines += [r"\begin{tabular}{lllcrrrrrr}", r"\toprule"]
     lines.append(
         r"Dataset & Parameter & Value & Seeds & Val DSC & DSC & IoU & BF1 & HD95 & ASSD \\"
@@ -738,7 +738,7 @@ def sensitivity() -> None:
     lines += [r"\bottomrule", r"\end{tabular}"]
     write("tab_s_sensitivity_means.tex", lines)
     lines = [
-        "% generated from revision/tables/families/sensitivity.csv; oriented deltas, positive favours the alternative value"
+        "% generated from results/tables/families/sensitivity.csv; oriented deltas, positive favours the alternative value"
     ]
     lines += [r"\begin{tabular}{llllrrrrr}", r"\toprule"]
     lines.append(r"Dataset & Parameter & Value & Reference & DSC & IoU & BF1 & HD95 & ASSD \\")
@@ -768,7 +768,7 @@ def sensitivity() -> None:
 
 def qualitative() -> None:
     """WP7c qualitative cases (figure_qualitative.py manifest): roles, deltas, per-panel stats."""
-    path = ROOT / "revision/figures/qualitative_manifest_v2.json"
+    path = ROOT / "paper/figures/qualitative_manifest_v2.json"
     if not path.exists():
         return
     roles = {"largest BDS-Lite gain": "gain", "median": "median", "largest BDS-Lite loss": "loss"}
@@ -815,7 +815,7 @@ def word_counts() -> None:
     original = ROOT / "recovered/peerj-submission/main.tex"
     if not original.exists():
         return
-    before, after = prose_words(original), prose_words(ROOT / "revision/manuscript/main.tex")
+    before, after = prose_words(original), prose_words(ROOT / "paper/main.tex")
     put("WC.orig", f"{before:,}")
     put("WC.rev", f"{after:,}")
     put("WC.pct", num(100 * (after / before - 1), 0, sign=True))
@@ -823,7 +823,7 @@ def word_counts() -> None:
 
 def gradient_residual() -> None:
     """WP5a separate-versus-combined gradient residual audit (gradient_residual_audit.py)."""
-    path = ROOT / "revision/validation/gradient_residual_audit.json"
+    path = ROOT / "results/validation/gradient_residual_audit.json"
     if not path.exists():
         return
     audit = json.loads(path.read_text())
@@ -838,7 +838,7 @@ def gradient_residual() -> None:
 def resource_overheads() -> None:
     data = {
         r["model"]: r
-        for r in rows(ROOT / "revision/tables/resource_profile.csv")
+        for r in rows(ROOT / "results/tables/resource_profile.csv")
         if r["dataset"] == "isic2018"
     }
     if "U-Net" not in data:

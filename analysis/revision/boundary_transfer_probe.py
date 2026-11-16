@@ -14,7 +14,7 @@ and post hoc: not part of prereg_revision.md. For each retrained arm, seed, and 
                is available from the prediction alone.
   gate_all, gate_band, gate_off   mean |1 + alpha (g - 0.5) - 1| overall, on, and off the boundary band.
 
-Output: revision/tables/families/boundary_transfer_probe.csv
+Output: results/tables/families/boundary_transfer_probe.csv
 """
 
 from __future__ import annotations
@@ -37,7 +37,7 @@ from bds_lite.models import BDSLiteUNet, UNet  # noqa: E402
 FOLLOWUP = ROOT / "recovered/followup/results/followup_20261018_v2"
 RUNS = ROOT / "results/revision_runs"
 CKPT = ROOT / "results/checkpoints"
-OUT = ROOT / "revision/tables/families/boundary_transfer_probe.csv"
+OUT = ROOT / "results/tables/families/boundary_transfer_probe.csv"
 DATASETS = ["isic2018", "acdc", "synapse"]
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 PIXELS = 3000

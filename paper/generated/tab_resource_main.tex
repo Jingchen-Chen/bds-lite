@@ -1,0 +1,11 @@
+% selected rows/columns of tab_resource.tex; full measurements retained in S19
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\toprule
+Model & Deploy params & GFLOPs$^a$ & GPU b1 & GPU b16 \\
+\midrule
+U-Net & 1,927,042 & 14.120 & 1.66 & 36.75 \\
+BDS-Lite (deployed) & 1,928,114 & 14.229 & 1.79 & 42.26 \\
+BDS-Lite (gate-collapsed) & 1,927,042 & 14.120 & 1.66 & 36.84 \\
+Attention U-Net & 1,948,773 & 14.431 & 1.86 & 41.05 \\
+\bottomrule
+\end{tabular*}

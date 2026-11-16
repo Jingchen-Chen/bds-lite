@@ -15,11 +15,11 @@ ROOT = Path(__file__).resolve().parents[2]
 def main():
     catalog = {
         r["path"]: r["sha256"]
-        for r in csv.DictReader((ROOT / "revision/audit/checkpoints.csv").open())
+        for r in csv.DictReader((ROOT / "results/audit/checkpoints.csv").open())
     }
     checks = []
     for split, n in [("Validation", 100), ("Test", 1000)]:
-        base = ROOT / f"revision/official_isic/{split.lower()}"
+        base = ROOT / f"results/official_isic/{split.lower()}"
         path = (
             ROOT
             / f"data/revision/isic2018_official/archives/ISIC2018_Task1_{split}_GroundTruth.zip"
@@ -77,7 +77,7 @@ def main():
                         checkpoint_catalog_match=True,
                     )
                 )
-    with (ROOT / "revision/validation/official_outputs.csv").open("w") as stream:
+    with (ROOT / "results/validation/official_outputs.csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(checks[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(checks)

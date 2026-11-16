@@ -18,7 +18,7 @@ def main():
     for family in ["main_p1b_unet", "main_p1b_full"]:
         for dataset in ["acdc", "synapse"]:
             for seed in [1, 2, 3]:
-                folder = ROOT / f"revision/volume_results/{family}/{dataset}_seed{seed}"
+                folder = ROOT / f"results/volume/{family}/{dataset}_seed{seed}"
                 if not (folder / "volume_complete.json").exists():
                     raise ValueError("main volume cohorts incomplete")
                 groups = defaultdict(list)
@@ -47,7 +47,7 @@ def main():
                                 complete_class_frames=value is not None,
                             )
                         )
-    output = ROOT / "revision/tables"
+    output = ROOT / "results/tables"
     with (output / "volume_per_unit_seed.csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(unit_rows[0]), lineterminator="\n")
         writer.writeheader()
@@ -146,7 +146,7 @@ def main():
     (output / "volume_statistics_scope.json").write_text(
         json.dumps(
             dict(
-                protocol="revision/volume_statistics_protocol.md",
+                protocol="protocols/volume/volume_statistics_protocol.md",
                 family="V: three volume endpoints within dataset",
                 surface_eligibility="Complete units across methods/seeds; penalties separate",
                 mde="Normal paired MDE80, alpha .05/3; not exact test power",

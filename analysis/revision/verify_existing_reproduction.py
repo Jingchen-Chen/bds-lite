@@ -52,22 +52,22 @@ def main():
         original_best_epoch=old_ckpt["epoch"],
         rerun_best_epoch=new_ckpt["epoch"],
         evidence=[
-            "revision/validation/reused_reproduction.json",
+            "results/validation/reused_reproduction.json",
             str(old_log.relative_to(ROOT)),
             str((new_run / "metrics.jsonl").relative_to(ROOT)),
             str((new_run / "status.json").relative_to(ROOT)),
-            "revision/validation/followup_overlap_recomputed.csv",
-            "revision/validation/followup_boundary_distance_recomputed.csv",
+            "results/validation/followup_overlap_recomputed.csv",
+            "results/validation/followup_boundary_distance_recomputed.csv",
         ],
         note=(
             "U seed1 tolerance passed; three-dataset gradient diagnostics"
             " and trainer resume pending"
         ),
     )
-    (ROOT / "revision/validation/reused_reproduction.json").write_text(
+    (ROOT / "results/validation/reused_reproduction.json").write_text(
         json.dumps(result, indent=2) + "\n"
     )
-    (ROOT / "revision/reproduction_gate.json").write_text(json.dumps(result, indent=2) + "\n")
+    (ROOT / "results/gates/reproduction_gate.json").write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result, indent=2))
     if not passed:
         raise ValueError("existing rerun fails verification")

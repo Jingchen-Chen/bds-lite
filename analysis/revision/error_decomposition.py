@@ -10,6 +10,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 from scipy import ndimage as ndi
+from bds_lite.paths import current
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -44,7 +45,7 @@ def load_targets(dataset, split, ids):
 def main():
     groups = defaultdict(list)
     for name in ["prediction_recovery_queue.json", "main_prediction_queue.json"]:
-        for entry in json.loads((ROOT / "revision" / name).read_text())["runs"]:
+        for entry in json.loads((ROOT / current(f"revision/{name}")).read_text())["runs"]:
             folder = ROOT / entry["output"]
             if not (folder / "evaluation_complete.json").exists():
                 raise ValueError("required prediction recovery incomplete")
@@ -66,7 +67,7 @@ def main():
                         family=f"followup_{arm}",
                         seed=seed,
                         path=ROOT
-                        / f"revision/official_isic/{split}/{arm}_seed{seed}/preds_{split}.npz",
+                        / f"results/official_isic/{split}/{arm}_seed{seed}/preds_{split}.npz",
                         classes=2,
                     )
                 )
@@ -84,7 +85,7 @@ def main():
                     classes=2,
                 )
             )
-    output = ROOT / "revision/error_analysis"
+    output = ROOT / "results/error_analysis"
     output.mkdir(exist_ok=True)
     aggregations = {}
     total_rows = 0

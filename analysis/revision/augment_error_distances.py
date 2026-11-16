@@ -4,6 +4,7 @@ import csv
 import json
 from collections import defaultdict
 from pathlib import Path
+from bds_lite.paths import current
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -11,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[2]
 def main():
     source = {}
     for name in ["prediction_recovery_queue.json", "main_prediction_queue.json"]:
-        for entry in json.loads((ROOT / "revision" / name).read_text())["runs"]:
+        for entry in json.loads((ROOT / current(f"revision/{name}")).read_text())["runs"]:
             source[entry["dataset"], entry["split"], entry["run_id"]] = (
                 ROOT / entry["output"] / "per_case.csv"
             )
@@ -19,7 +20,7 @@ def main():
         for arm in "USF":
             for seed in [1, 2, 3]:
                 source["isic2018", "official_" + split, f"followup_{arm}_seed{seed}"] = (
-                    ROOT / f"revision/official_isic/{split}/{arm}_seed{seed}/per_case.csv"
+                    ROOT / f"results/official_isic/{split}/{arm}_seed{seed}/per_case.csv"
                 )
     for arm in "USBF":
         for seed in [1, 2, 3]:
@@ -35,7 +36,7 @@ def main():
                 raise ValueError("missing class column in multiclass source")
             label = row.get("label", "1")
             index[(*key, row["id"], label)] = (row["hd95"], row["assd"])
-    directory = ROOT / "revision/error_analysis"
+    directory = ROOT / "results/error_analysis"
     original = directory / "per_image_class.csv"
     temporary = original.with_suffix(".enriched.tmp")
     aggregations = defaultdict(lambda: [0.0, 0.0, 0])

@@ -1,4 +1,4 @@
-"""Frozen inference for revision/HISTORICAL_REEVALUATION_PROTOCOL.md. CPU only; never trains.
+"""Frozen inference for protocols/historical_reevaluation/HISTORICAL_REEVALUATION_PROTOCOL.md. CPU only; never trains.
 
 Stages (run in this order by default):
   october    parity on 64 validation images, then official ISIC test, arms G, C, D.
@@ -42,8 +42,8 @@ from scripts.revision.train_run import OfficialTestDataset
 from scripts.revision.training_support import ManifestDataset
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "revision/historical_reevaluation"
-PROTOCOL = ROOT / "revision/HISTORICAL_REEVALUATION_PROTOCOL.md"
+OUT = ROOT / "results/historical_reevaluation"
+PROTOCOL = ROOT / "protocols/historical_reevaluation/HISTORICAL_REEVALUATION_PROTOCOL.md"
 CLASSES = {"isic2018": 2, "isic390": 2, "acdc": 4, "synapse": 9}
 CHANNELS = {"isic2018": 3, "isic390": 3, "acdc": 1, "synapse": 1}
 SEEDS = (1, 2, 3)
@@ -359,7 +359,9 @@ def stage_april(official) -> None:
 def stage_tolerance(official) -> None:
     stage2 = {
         r["run_id"]
-        for r in yaml.safe_load((ROOT / "revision/queue_confirmation.yaml").read_text())["runs"]
+        for r in yaml.safe_load(
+            (ROOT / "protocols/confirmation/queue_confirmation.yaml").read_text()
+        )["runs"]
     }
     ids, _, masks = official
     target = {
@@ -377,7 +379,7 @@ def stage_tolerance(official) -> None:
                 raise ValueError(f"Experiment C run requested: {run}")
             if arm in ("unet", "full") and seed <= 3:
                 source = (
-                    ROOT / f"revision/official_isic/test/{'U' if arm == 'unet' else 'F'}_seed{seed}"
+                    ROOT / f"results/official_isic/test/{'U' if arm == 'unet' else 'F'}_seed{seed}"
                 )
             else:
                 source = ROOT / f"results/revision_runs/{run}"

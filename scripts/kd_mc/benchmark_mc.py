@@ -2,7 +2,7 @@
 
 Seed 0. One training epoch each for the teacher and a D+KD-band student per dataset; the student
 reads a dummy cache (one-hot ground truth). No validation or test metric; no model saved. Writes
-revision/kd_multiclass/benchmark.json (epoch time, peak VRAM, temperature, loss finiteness).
+results/kd_acdc_synapse/benchmark.json (epoch time, peak VRAM, temperature, loss finiteness).
 """
 
 from __future__ import annotations

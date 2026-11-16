@@ -44,7 +44,7 @@ removing SHARED lowers the SE by less than 5% in every Boundary F1 contrast.
 Each recomputed Delta, SE and pre-specified interval must reproduce the recorded value
 (tolerance 1e-9), or the script fails.
 
-Outputs in revision/restructure_posthoc/:
+Outputs in results/posthoc_restructure/:
 - shared_component.csv (every comparison, five metrics);
 - shared_component.json (summary);
 - coverage.csv.
@@ -71,7 +71,7 @@ import family_statistics as fs  # noqa: E402
 from scripts.acdc_confirm.analyze import ARMS, new_path  # noqa: E402
 from scripts.acdc_confirm.common import SEEDS  # noqa: E402
 
-OUT = ROOT / "revision/restructure_posthoc"
+OUT = ROOT / "results/posthoc_restructure"
 RUNS = ROOT / "results/revision_runs"
 THRESHOLD = 0.05
 FACTORS = (0.5, 1.0, 1.5)
@@ -172,7 +172,7 @@ def stage3() -> list[dict]:
         arm: [ex.unit_values(new_path(arm, s, "official_test"), "acdc") for s in SEEDS]
         for arm in ARMS
     }
-    recorded = json.loads((ROOT / "revision/acdc_confirm/results/results.json").read_text())
+    recorded = json.loads((ROOT / "results/acdc_confirm/results/results.json").read_text())
     rows = []
     for metric in ex.METRICS:
         r = two_arm(
@@ -191,7 +191,7 @@ def stage3() -> list[dict]:
 
 
 def stage2() -> list[dict]:
-    frozen = list(csv.DictReader((ROOT / "revision/kd_posthoc_balanced/contrasts.csv").open()))
+    frozen = list(csv.DictReader((ROOT / "results/kd_posthoc_balanced/contrasts.csv").open()))
     rows = []
     for ds in ex.DATASETS:
         kd = [
@@ -232,7 +232,7 @@ def extension() -> list[dict]:
         for s in ex.ALL
     }
     recorded = list(
-        csv.DictReader((ROOT / "revision/tables/families/expansion_contrasts.csv").open())
+        csv.DictReader((ROOT / "results/tables/families/expansion_contrasts.csv").open())
     )
     rows = []
     for metric in ex.METRICS:
@@ -267,7 +267,7 @@ STAGE1 = {
 
 def stage1() -> tuple[list[dict], dict]:
     recorded = list(
-        csv.DictReader((ROOT / "revision/tables/families/expansion_interaction.csv").open())
+        csv.DictReader((ROOT / "results/tables/families/expansion_interaction.csv").open())
     )
     cache = {
         (ds, c): [ex.unit_values(ex.cell_path(c, ds, s, False), ds) for s in fs.SEEDS]

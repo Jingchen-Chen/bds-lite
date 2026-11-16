@@ -7,12 +7,12 @@ The items below are third-party material, or are derived from it, and keep their
 
 ### Figure 3 of the manuscript: ACDC cine-MRI slices (CC BY-NC-SA 4.0)
 
-- **Where:** `revision/figures/acdc_qualitative_main.pdf` (Figure 3), and the manuscript PDF that
-  embeds it, `revision/manuscript/main.pdf`.
-- **Content:** three slices of ACDC official test patients with their reference masks (ground
-  truth), the predictions of two of this study's models and a map of the pixels that changed. The
-  slices were resampled to the 224 x 224 processing grid, cropped, and drawn with these masks and a
-  scale bar.
+- **Where:** `paper/figures/acdc_qualitative_combined.pdf` (Figure 3; the separate official-test panel is also retained as `paper/figures/acdc_qualitative_main.pdf`), and the manuscript PDF that
+  embeds it, `paper/main.pdf`.
+- **Content:** six ACDC test slices with reference masks and predictions. Panel 3a shows three
+  internal test slices with U, D and BDS-Lite (study 1); panel 3b shows three official test slices
+  from patients 101–150 with D and D+KD-band (replication). Each panel includes a change map
+  against D. The slices were resampled to the 224 x 224 grid, cropped, and drawn with a scale bar.
 - **Source:** Automated Cardiac Diagnosis Challenge (ACDC),
   <https://www.creatis.insa-lyon.fr/Challenge/acdc/>.
 - **Licence:** Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
@@ -27,8 +27,8 @@ The items below are third-party material, or are derived from it, and keep their
 
 ### ISIC 2018 Task 1 reference masks in the contour figures (CC0)
 
-- **Where:** `revision/figures/contours_isic2018*.{pdf,png}`, and the PDFs that embed them
-  (`revision/manuscript/supplement.pdf`, `revision/manuscript/tracked_changes.pdf`).
+- **Where:** `paper/figures/contours_isic2018*.{pdf,png}`, and the PDF that embeds them
+  (`paper/supplement.pdf`).
 - **Content:** reference-mask boundaries of ISIC 2018 Task 1 test images and the agreement,
   false-positive and false-negative pixels of this study's predictions, on a white background. No
   pixel of any dermoscopic photograph is reproduced.
@@ -113,7 +113,7 @@ No other dataset image or annotation is included. In particular, the repository 
 
 ### Identifiers taken from other projects
 
-- `revision/sources/transunet/test_vol.txt`: the Synapse test-case list released with TransUNet
+- `docs/provenance/sources/transunet/test_vol.txt`: the Synapse test-case list released with TransUNet
   (<https://github.com/Beckschen/TransUNet>, Apache-2.0); J. Chen et al., "TransUNet: transformers
   make strong encoders for medical image segmentation", arXiv:2102.04306 (2021).
 

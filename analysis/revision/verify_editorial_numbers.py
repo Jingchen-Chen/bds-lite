@@ -5,7 +5,7 @@ Reimplements aggregation, uncertainty and Holm correction using pandas/NumPy/Sci
 imports expansion_statistics only for path resolution, never its statistical helpers.
 Does not read Experiment C, run inference/training, or rewrite frozen results.
 Usage: PYTHONPATH=src:. .venv/bin/python analysis/revision/verify_editorial_numbers.py
-Output: revision/validation/editorial_numerical_verification.csv (absolute tolerance 1e-10).
+Output: results/validation/editorial_numerical_verification.csv (absolute tolerance 1e-10).
 """
 
 import csv
@@ -99,7 +99,7 @@ def record(name, actual, expected, fields, source):
         )
 
 
-conf = root / "revision/acdc_confirm/results"
+conf = root / "results/acdc_confirm/results"
 csvrows = pd.read_csv(conf / "contrasts.csv").to_dict("records")
 perclass = pd.read_csv(conf / "per_class.csv").to_dict("records")
 prim = json.loads((conf / "results.json").read_text())
@@ -175,7 +175,7 @@ for label, structure in [(1, "RV"), (2, "myocardium"), (3, "LV")]:
             conf / "per_class.csv",
         )
 # Ten-run arms, both all seeds and untouched confirmation seeds, all six contrasts and metrics.
-expfile = root / "revision/tables/families/expansion_contrasts.csv"
+expfile = root / "results/tables/families/expansion_contrasts.csv"
 rows = pd.read_csv(expfile).to_dict("records")
 exp = {
     (arm, s): raw(str(paths.isic_path(arm, s)), "isic2018")
@@ -209,7 +209,7 @@ for m in metrics:
                 expfile,
             )
 # Study-1 central contrasts use pooled residual run variance, NOT Welch degrees of freedom.
-intfile = root / "revision/tables/families/expansion_interaction.csv"
+intfile = root / "results/tables/families/expansion_interaction.csv"
 ints = pd.read_csv(intfile).to_dict("records")
 effects = [
     ("2x2", "decoder without surface", "M2", "M0"),
@@ -258,7 +258,7 @@ for mode, effect, first, second in effects:
             "Study1 pooled " + effect + " " + m, got, expected, ["estimate", "low", "high"], intfile
         )
 # Exploratory KD: primary dataset family and its Holm correction.
-kfile = root / "revision/kd_unified/contrasts.csv"
+kfile = root / "results/kd_unified/contrasts.csv"
 krows = pd.read_csv(kfile).to_dict("records")
 family = []
 for ds in ["isic2018", "acdc", "synapse"]:
@@ -293,7 +293,7 @@ for rank, (ds, got, expected) in enumerate(sorted(family, key=lambda x: x[1]["p"
         kfile,
     )
 # Store audit independently of frozen result directories.
-out = root / "revision/validation/editorial_numerical_verification.csv"
+out = root / "results/validation/editorial_numerical_verification.csv"
 with out.open("w") as f:
     w = csv.DictWriter(f, fieldnames=list(checks[0]), lineterminator="\n")
     w.writeheader()

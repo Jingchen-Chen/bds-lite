@@ -27,13 +27,13 @@ def read_cases(path):
 def baseline(entry):
     ds, split, seed = entry["dataset"], entry["split"], entry["seed"]
     if ds != "isic2018":
-        folder = ROOT / f"revision/prediction_recovery/main_p1b_full/{ds}_seed{seed}/{split}"
+        folder = ROOT / f"results/prediction_recovery/main_p1b_full/{ds}_seed{seed}/{split}"
         return folder / "per_case.csv", folder / "predictions.npz"
     if split == "val":
         folder = ROOT / "recovered/followup/results/followup_20261018_v2" / f"isic2018_F_seed{seed}"
         return folder / "per_case.csv", folder / "predictions"
     split = split.removeprefix("official_")
-    folder = ROOT / f"revision/official_isic/{split}/F_seed{seed}"
+    folder = ROOT / f"results/official_isic/{split}/F_seed{seed}"
     return folder / "per_case.csv", folder / f"preds_{split}.npz"
 
 
@@ -45,7 +45,9 @@ def read_predictions(path):
 
 
 def main():
-    entries = json.loads((ROOT / "revision/gate_identity_queue.json").read_text())["runs"]
+    entries = json.loads((ROOT / "protocols/gate_identity/gate_identity_queue.json").read_text())[
+        "runs"
+    ]
     cohorts = defaultdict(list)
     pixels = []
     for entry in entries:
@@ -77,7 +79,7 @@ def main():
             )
         )
         cohorts[entry["dataset"], entry["split"]].append((entry["seed"], before, after))
-    output = ROOT / "revision/tables"
+    output = ROOT / "results/tables"
     unit_rows = []
     seed_rows = []
     results = []

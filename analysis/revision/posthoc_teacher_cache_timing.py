@@ -52,12 +52,14 @@ REPEATS = 3
 
 
 def registered_config() -> Path:
-    queue = yaml.safe_load((ROOT / "revision/queue_kd_mc.yaml").read_text())
+    queue = yaml.safe_load((ROOT / "protocols/kd_acdc_synapse/queue_kd_mc.yaml").read_text())
     text = json.dumps(queue)
     for path in sorted((ROOT / "configs").rglob("*acdc*teacher*.yaml")):
         if path.name in text or str(path.relative_to(ROOT)) in text:
             return path
-    raise FileNotFoundError("registered ACDC teacher config not found in revision/queue_kd_mc.yaml")
+    raise FileNotFoundError(
+        "registered ACDC teacher config not found in protocols/kd_acdc_synapse/queue_kd_mc.yaml"
+    )
 
 
 def main() -> None:

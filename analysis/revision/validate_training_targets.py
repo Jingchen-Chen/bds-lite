@@ -29,7 +29,7 @@ def main():
                 )
                 rows.append(row)
         print(dataset, len(manifest["sample_ids"]), "checked", flush=True)
-    with (ROOT / "revision/validation/training_targets.csv").open("w") as stream:
+    with (ROOT / "results/validation/training_targets.csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)

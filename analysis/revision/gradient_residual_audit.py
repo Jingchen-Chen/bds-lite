@@ -19,7 +19,7 @@ the 99th percentile of implied_cos_error is below 0.005 (half the last reported 
 two-decimal cosines) and its maximum is below the smallest between-dataset difference of the
 reported mean aux cosines. Probes with undefined cosines (zero norm) are skipped.
 
-Output: revision/validation/gradient_residual_audit.csv (per dataset) and .json (verdict).
+Output: results/validation/gradient_residual_audit.csv (per dataset) and .json (verdict).
 """
 
 from __future__ import annotations
@@ -81,7 +81,7 @@ def main() -> None:
         immaterial=bool(p99 < 0.005 and worst < min_gap),
         note="Exact separate/combined equivalence is not claimed; FP32 with cuDNN TF32 convolutions.",
     )
-    out = ROOT / "revision/validation/gradient_residual_audit"
+    out = ROOT / "results/validation/gradient_residual_audit"
     with out.with_suffix(".csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()

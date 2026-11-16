@@ -11,7 +11,7 @@ from bds_lite.evaluation.metrics import dice_score, iou_score
 
 ROOT = Path(__file__).resolve().parents[2]
 F = ROOT / "recovered/followup"
-OUT = ROOT / "revision/validation"
+OUT = ROOT / "results/validation"
 
 
 def dump_csv(path, rows):

@@ -1,13 +1,13 @@
-"""Figures that replace every dataset-image panel (revision/LICENSING_AUDIT.md).
+"""Figures that replace every dataset-image panel (docs/LICENSING_AUDIT.md).
 
 No dataset photograph, intensity image, or ACDC/Synapse annotation is read for drawing.
   targets          synthetic masks run through the released target code: class mask, union
-                   boundary target, signed-distance target -> revision/figures/synthetic_targets.pdf
+                   boundary target, signed-distance target -> paper/figures/synthetic_targets.pdf
   error_geometry   error pixels per image by type and location for four retrained arms, from
-                   revision/tables/families/error_bands.csv -> revision/figures/error_geometry.pdf
+                   results/tables/families/error_bands.csv -> paper/figures/error_geometry.pdf
   structures       missed structures by reference area and per-class DSC on ACDC and Synapse, from
                    collapse_by_area.csv and per_class_dsc.csv
-                   -> revision/figures/structure_errors.pdf
+                   -> paper/figures/structure_errors.pdf
 All inputs except the synthetic masks are aggregate tables of seeds 1-3.
 """
 
@@ -28,8 +28,8 @@ from matplotlib.patches import Patch  # noqa: E402
 from bds_lite.data.boundary import mask_to_boundary, mask_to_sdf  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-FAM = ROOT / "revision/tables/families"
-FIG = ROOT / "revision/figures"
+FAM = ROOT / "results/tables/families"
+FIG = ROOT / "paper/figures"
 INK, MUTED, GRID = "#2b2b2b", "#52514e", "#e9e8e4"
 BLUE, ORANGE, AQUA, YELLOW = "#2a78d6", "#eb6834", "#1baf7a", "#eda100"
 ARMS = {"M0": "U-Net", "M2": "Decoder", "M6": "BDS-Lite", "GSL": "U-Net+GSL"}

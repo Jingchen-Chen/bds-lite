@@ -1,10 +1,10 @@
 # ruff: noqa: E501
 """Table and figure for the central question: what does distillation add to a boundary decoder?
 
-Reads only the frozen outputs revision/tables/families/expansion_interaction.csv and
+Reads only the frozen outputs results/tables/families/expansion_interaction.csv and
 expansion_contrasts.csv (seeds 1-3 on all datasets, seeds 1-10 on ISIC2018). Nothing is recomputed.
 
-Writes generated/tab_central.tex and revision/figures/central_question.pdf (Fig. 2: a forest plot
+Writes generated/tab_central.tex and paper/figures/central_question.pdf (Fig. 2: a forest plot
 with a label column, the intervals and a Delta [95% CI] column formatted as Table 4; drawn at the
 text width, 415.13 TeX pt, with the shared settings of analysis/revision/figure_style.py and
 included unscaled).
@@ -29,9 +29,9 @@ from matplotlib.ticker import FuncFormatter  # noqa: E402
 from matplotlib.transforms import blended_transform_factory  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-FAM = ROOT / "revision/tables/families"
-GEN = ROOT / "revision/manuscript/generated"
-FIG = ROOT / "revision/figures"
+FAM = ROOT / "results/tables/families"
+GEN = ROOT / "paper/generated"
+FIG = ROOT / "paper/figures"
 DATASETS = ["isic2018", "acdc", "synapse"]
 NAMES = {"isic2018": "ISIC2018", "acdc": "ACDC", "synapse": "Synapse"}
 METRICS = [("boundary_f1", "Boundary F1", 3), ("dsc", "DSC", 3), ("hd95", "HD95 (px)", 2)]

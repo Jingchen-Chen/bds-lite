@@ -51,11 +51,11 @@ def main():
                         row["full_original_z"] = ordered == list(range(shape[0]))
                 rows.append(row)
     columns = list(dict.fromkeys(key for row in rows for key in row))
-    with (ROOT / "revision/validation/volume_mapping.csv").open("w") as stream:
+    with (ROOT / "results/validation/volume_mapping.csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=columns, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
-    official = set((ROOT / "revision/sources/transunet/test_vol.txt").read_text().split())
+    official = set((ROOT / "docs/provenance/sources/transunet/test_vol.txt").read_text().split())
     local = {
         row["volume"] for row in rows if row["dataset"] == "synapse" and row["split"] == "test"
     }
@@ -76,7 +76,7 @@ def main():
         no_missing_within_observed_z=all(row["contiguous"] for row in rows),
         physical_units_ready=False,
     )
-    (ROOT / "revision/validation/volume_mapping_summary.json").write_text(
+    (ROOT / "results/validation/volume_mapping_summary.json").write_text(
         json.dumps(result, indent=2) + "\n"
     )
     print(json.dumps(result, indent=2))

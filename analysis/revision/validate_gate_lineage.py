@@ -22,10 +22,12 @@ def signature(config):
 
 
 def main():
-    entries = json.loads((ROOT / "revision/gate_identity_queue.json").read_text())["runs"]
+    entries = json.loads((ROOT / "protocols/gate_identity/gate_identity_queue.json").read_text())[
+        "runs"
+    ]
     aliases = {
         (row["arm"], row["seed"]): row["identical"]
-        for row in json.loads((ROOT / "revision/validation/isic_main_aliases.json").read_text())
+        for row in json.loads((ROOT / "results/validation/isic_main_aliases.json").read_text())
     }
     rows = []
     for entry in entries:
@@ -35,7 +37,7 @@ def main():
         if ds != "isic2018":
             base = (
                 ROOT
-                / "revision/prediction_recovery/main_p1b_full"
+                / "results/prediction_recovery/main_p1b_full"
                 / f"{ds}_seed{seed}/{split}/provenance.json"
             )
             before = json.loads(base.read_text())
@@ -55,7 +57,7 @@ def main():
             else:
                 base = (
                     ROOT
-                    / "revision/official_isic"
+                    / "results/official_isic"
                     / split.removeprefix("official_")
                     / f"F_seed{seed}/provenance.json"
                 )
@@ -72,7 +74,7 @@ def main():
                 identity_operator_exact_logits=True,
             )
         )
-    with (ROOT / "revision/validation/gate_identity_lineage.csv").open("w") as stream:
+    with (ROOT / "results/validation/gate_identity_lineage.csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)

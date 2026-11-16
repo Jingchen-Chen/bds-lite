@@ -21,7 +21,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-GEN = ROOT / "revision/manuscript/generated"
+GEN = ROOT / "paper/generated"
 ORDER = [
     "numbers.tex",
     "numbers_extra.tex",
@@ -34,10 +34,7 @@ ORDER = [
     "numbers_review.tex",
 ]
 USERS = [
-    "revision/manuscript/main.tex",
-    "revision/response.template.md",
-    "revision/letter_to_editor.template.md",
-    "revision/PEERJ_REQUIREMENTS_CHECKLIST.template.md",
+    "paper/main.tex",
 ]
 NUMBER = re.compile(r"(?<![\d.])(\d+\.\d{4})(?!\d)")
 # four-decimal string -> three decimals of the exact value
@@ -154,7 +151,8 @@ def keys() -> dict[str, str]:
 def used() -> set[str]:
     found: set[str] = set()
     for name in USERS:
-        text = (ROOT / name).read_text()
+        path = ROOT / name
+        text = path.read_text()
         found |= set(re.findall(r"\\R\{([^}]+)\}", text))
         found |= set(re.findall(r"\{\{(?:R:)?([A-Za-z0-9_.+-]+)\}\}", text))
     return found
@@ -226,6 +224,7 @@ def main() -> None:
             count += 1
     # the unrounded lower bound of the replication is quoted once in the main text
     lines.append(rf"\expandafter\def\csname R@RAW.FIN.cf.low\endcsname{{{values['FIN.cf.low']}}}")
+    lines.append(rf"\expandafter\def\csname R@RAW.GID.maxabs\endcsname{{{values['GID.maxabs']}}}")
     teacher = int(values["KDC.acdc.teacher.params"].replace(",", ""))
     lines.append(rf"\expandafter\def\csname R@R3.teacher.m\endcsname{{{teacher / 1e6:.1f}}}")
     lines.append(

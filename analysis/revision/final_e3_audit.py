@@ -41,7 +41,7 @@ def main() -> None:
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     integrity = module.check("e3")
-    queue_path = ROOT / "revision/queue_followup_e3.yaml"
+    queue_path = ROOT / "protocols/followup/queue_followup_e3.yaml"
     queue = yaml.safe_load(queue_path.read_text())
     runs = []
     problems = list(integrity["problems"])
@@ -96,7 +96,7 @@ def main() -> None:
         "completed_run_count": len(runs),
         "problems": problems,
         "queue_sha256": sha(queue_path),
-        "registration_sha256": sha(ROOT / "revision/followup_registration.md"),
+        "registration_sha256": sha(ROOT / "protocols/followup/followup_registration.md"),
         "frozen_integrity_source_sha256": sha(path),
         "evaluation_source_sha256": sha(ROOT / "analysis/followup/evaluate_test.py"),
         "registered_e3_evaluation_record_exists_at_check": evaluation.exists(),
@@ -119,7 +119,7 @@ def main() -> None:
         ),
         "runs": runs,
     }
-    target = ROOT / "revision/evidence_freeze/final_audit_e3.json"
+    target = ROOT / "evidence/final_audit_e3.json"
     target.write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps({k: v for k, v in result.items() if k != "runs"}, indent=2))
     if problems:

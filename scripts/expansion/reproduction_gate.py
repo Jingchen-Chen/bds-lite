@@ -2,7 +2,7 @@
 
 For each ISIC2018 arm, trains seed 1 for a few epochs and compares validation DSC per epoch with the
 archived seed-1 run. Epochs only; training stops before any test evaluation. Writes
-revision/expansion_gate/gate.json. Exit code 1 on any mismatch.
+results/gates/expansion/gate.json. Exit code 1 on any mismatch.
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ import yaml
 from analysis.revision import expansion_arms as arms
 
 ROOT = Path(__file__).resolve().parents[2]
-GATE = ROOT / "revision/expansion_gate"
+GATE = ROOT / "results/gates/expansion"
 EPOCHS = 4
 ARMS = {
     "m0_unet": (arms.isic_unet, "p1b", "unet"),

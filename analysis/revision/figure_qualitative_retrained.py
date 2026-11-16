@@ -7,12 +7,12 @@ negative seed-averaged HD95 difference decoder-only minus BDS-Lite (positive = B
 from the per-case CSVs; lexicographic ID ties; samples with undefined HD95 in any seed of either arm
 are excluded. The shown seed is the one whose per-seed difference is closest to the seed mean.
 
-Licensing (revision/LICENSING_AUDIT.md): ISIC2018 Task 1 reference masks (CC-0) and our own
+Licensing (docs/LICENSING_AUDIT.md): ISIC2018 Task 1 reference masks (CC-0) and our own
 predictions on a white background only; no photograph is read or drawn. ACDC and Synapse labels feed
 statistics only and are never drawn.
 
-Writes revision/figures/contours_isic2018_retrained.{pdf,png} and
-revision/figures/qualitative_manifest_v3.json (cases, per-seed differences, panel statistics).
+Writes paper/figures/contours_isic2018_retrained.{pdf,png} and
+paper/figures/qualitative_manifest_v3.json (cases, per-seed differences, panel statistics).
 Usage: PYTHONPATH=src:. .venv/bin/python analysis/revision/figure_qualitative_retrained.py
 """
 
@@ -107,9 +107,9 @@ def render(cases: list, preds: dict, masks: dict) -> None:
     fig.legend(handles=legend, loc="lower center", ncol=4, frameon=False, fontsize=6.5)
     fig.tight_layout(rect=(0, 0.05, 1, 1), h_pad=0.2, w_pad=0.2)
     fig.savefig(
-        ROOT / "revision/figures/contours_isic2018_retrained.pdf", metadata={"CreationDate": None}
+        ROOT / "paper/figures/contours_isic2018_retrained.pdf", metadata={"CreationDate": None}
     )
-    fig.savefig(ROOT / "revision/figures/contours_isic2018_retrained.png", dpi=420)
+    fig.savefig(ROOT / "paper/figures/contours_isic2018_retrained.png", dpi=420)
     plt.close(fig)
 
 
@@ -151,7 +151,7 @@ def main() -> None:
             ],
             methods_shown=methods,
         )
-    (ROOT / "revision/figures/qualitative_manifest_v3.json").write_text(
+    (ROOT / "paper/figures/qualitative_manifest_v3.json").write_text(
         json.dumps(manifest, indent=1) + "\n"
     )
     print("written contours_isic2018_retrained and qualitative_manifest_v3.json")

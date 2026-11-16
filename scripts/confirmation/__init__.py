@@ -1,1 +1,1 @@
-"""Entry points for Experiment C; see revision/CONFIRMATION_PROTOCOL.md."""
+"""Entry points for Experiment C; see protocols/confirmation/CONFIRMATION_PROTOCOL.md."""

@@ -66,7 +66,7 @@ def main():
                 )
                 del model, payload
                 torch.cuda.empty_cache()
-    (ROOT / "revision/validation/official_inference_parity.json").write_text(
+    (ROOT / "results/validation/official_inference_parity.json").write_text(
         json.dumps(results, indent=2) + "\n"
     )
     print("All nine checkpoints reproduce eight masks each exactly")

@@ -1,12 +1,12 @@
 """Manuscript keys, tables and the figure for the follow-up controls and the post hoc analyses.
 
 Reads only committed analysis outputs (no statistics are computed here):
-  revision/followup/results/{results.json, contrasts.csv, per_class.csv, per_seed.csv}
-  revision/followup/results/posthoc_{stage_shift,reference_estimators,error_location}.json
-Writes revision/manuscript/generated/numbers_followup.tex (+ keys_followup.json),
+  results/followup/results/{results.json, contrasts.csv, per_class.csv, per_seed.csv}
+  results/followup/results/posthoc_{stage_shift,reference_estimators,error_location}.json
+Writes paper/generated/numbers_followup.tex (+ keys_followup.json),
 tab_followup_main.tex, tab_s_followup_all.tex, tab_s_followup_perclass.tex,
 tab_s_reference_estimators.tex, tab_s_error_location.tex, tab_s_stage_shift.tex and
-revision/figures/kd_followup.{pdf,png} (the style of Fig. 2, make_distillation_assets.figure).
+paper/figures/kd_followup.{pdf,png} (the style of Fig. 2, make_distillation_assets.figure).
 Sections whose inputs do not exist yet are skipped.
 
     PYTHONPATH=src:. .venv/bin/python analysis/followup/make_followup_assets.py
@@ -30,9 +30,9 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "analysis/revision"))
 from make_distillation_assets import BAND, BLUE, INK, KD_COLOR, MUTED, ci, num, pfmt  # noqa: E402
 
-RES = ROOT / "revision/followup/results"
-GEN = ROOT / "revision/manuscript/generated"
-FIG = ROOT / "revision/figures"
+RES = ROOT / "results/followup/results"
+GEN = ROOT / "paper/generated"
+FIG = ROOT / "paper/figures"
 KEYS: dict[str, str] = {}
 MLABEL = {"dsc": "DSC", "iou": "IoU", "boundary_f1": "Boundary F1", "hd95": "HD95", "assd": "ASSD"}
 FULL_COLOR, PEER_COLOR = "#1baa8c", "#9b5fc0"
@@ -367,7 +367,7 @@ def error_location() -> None:
 
 def thermal_resumes() -> None:
     """Guarded thermal resumes per queue, from the supervisor's event log."""
-    path = ROOT / "revision/followup/supervision/events.jsonl"
+    path = ROOT / "results/followup/supervision/events.jsonl"
     if not path.exists():
         return
     counts, queue = {}, None
@@ -383,7 +383,7 @@ def thermal_resumes() -> None:
 
 def pooling_weights() -> None:
     """Inverse-variance weight share of each dataset in the Stage 1 pooled Boundary F1 rows."""
-    rows = read_csv(ROOT / "revision/tables/families/expansion_interaction.csv")
+    rows = read_csv(ROOT / "results/tables/families/expansion_interaction.csv")
     for effect, tag in (
         ("decoder without surface", "dec"),
         ("distillation+gate without surface", "nosurf"),
@@ -404,7 +404,7 @@ def pooling_weights() -> None:
 
 def other_arms() -> None:
     """Keys for the main-text evidence summary of arms outside the core comparisons."""
-    fam = ROOT / "revision/tables/families"
+    fam = ROOT / "results/tables/families"
     for r in read_csv(fam / "expansion_contrasts.csv"):
         if r["metric"] != "boundary_f1":
             continue

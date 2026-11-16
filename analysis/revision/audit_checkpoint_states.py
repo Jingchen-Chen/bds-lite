@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[2]
 def main():
     rows = []
     groups = defaultdict(list)
-    for record in csv.DictReader((ROOT / "revision/audit/checkpoints.csv").open()):
+    for record in csv.DictReader((ROOT / "results/audit/checkpoints.csv").open()):
         path = ROOT / record["path"]
         payload = torch.load(path, map_location="cpu", weights_only=False)
         state = payload.get("model", payload.get("state_dict"))
@@ -39,11 +39,11 @@ def main():
                 gate_keys=sum("gate" in key for key in state),
             )
         )
-    with (ROOT / "revision/validation/checkpoint_states.csv").open("w") as stream:
+    with (ROOT / "results/validation/checkpoint_states.csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
-    with (ROOT / "revision/validation/checkpoint_state_duplicates.csv").open("w") as stream:
+    with (ROOT / "results/validation/checkpoint_state_duplicates.csv").open("w") as stream:
         writer = csv.writer(stream, lineterminator="\n")
         writer.writerow(["state_sha256", "path", "group_size"])
         for fingerprint, paths in groups.items():

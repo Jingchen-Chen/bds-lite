@@ -1,9 +1,9 @@
 # ruff: noqa: E501
 """Keys, tables and the ten-seed figure for the expansion and confirmation results.
 
-Reads the frozen outputs in revision/tables/families/ and writes generated/numbers_expansion.tex,
+Reads the frozen outputs in results/tables/families/ and writes generated/numbers_expansion.tex,
 tab_ten_seed.tex, tab_ten_seed_contrasts.tex, tab_components.tex, tab_s_ten_seed_all.tex,
-tab_s_interaction.tex, tab_s_seed_subset.tex and revision/figures/ten_seed.pdf. Confirmation keys and
+tab_s_interaction.tex, tab_s_seed_subset.tex and paper/figures/ten_seed.pdf. Confirmation keys and
 tables are written only when confirmation_contrasts.csv exists.
 """
 
@@ -24,9 +24,9 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "analysis/revision"))
 import expansion_statistics as ex  # noqa: E402
 
-FAM = ROOT / "revision/tables/families"
-GEN = ROOT / "revision/manuscript/generated"
-FIG = ROOT / "revision/figures"
+FAM = ROOT / "results/tables/families"
+GEN = ROOT / "paper/generated"
+FIG = ROOT / "paper/figures"
 METRICS = ["dsc", "iou", "boundary_f1", "hd95", "assd"]
 MLABEL = {
     "dsc": "DSC",

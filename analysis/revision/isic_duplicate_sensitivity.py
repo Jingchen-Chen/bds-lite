@@ -12,8 +12,8 @@ sensitivity analysis is bracketed: exclusion of test images with r > 0.99 (certa
 0.96, 0.93 and 0.90 (deliberately over-inclusive). The largest-gap threshold and a contact sheet
 around it are still saved for transparency.
 Sensitivity: family P (S6 vs S0) and P-replication on the official test excluding flagged images.
-Outputs: revision/validation/isic_test_duplicates.csv, revision/restricted_local/isic_duplicate_threshold.png (local only: shows photographs),
-revision/tables/families/isic_duplicate_sensitivity.csv
+Outputs: results/validation/isic_test_duplicates.csv, paper/restricted_local/isic_duplicate_threshold.png (local only: shows photographs),
+results/tables/families/isic_duplicate_sensitivity.csv
 """
 
 from __future__ import annotations
@@ -100,7 +100,7 @@ def main() -> None:
                 flagged=bool(best_r[i] > threshold),
             )
         )
-    path = ROOT / "revision/validation/isic_test_duplicates.csv"
+    path = ROOT / "results/validation/isic_test_duplicates.csv"
     with path.open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
@@ -122,7 +122,7 @@ def main() -> None:
         for a in ax:
             a.axis("off")
     fig.tight_layout()
-    fig.savefig(ROOT / "revision/restricted_local/isic_duplicate_threshold.png", dpi=110)
+    fig.savefig(ROOT / "paper/restricted_local/isic_duplicate_threshold.png", dpi=110)
     # sensitivity
     out = []
     for fam, a, b in [("P", "S6", "S0"), ("P-replication", "R6", "R0")]:
@@ -154,7 +154,7 @@ def main() -> None:
                         practical=fs.judgement(low, high, fs.SESOI[metric]),
                     )
                 )
-    with (ROOT / "revision/tables/families/isic_duplicate_sensitivity.csv").open("w") as stream:
+    with (ROOT / "results/tables/families/isic_duplicate_sensitivity.csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(out[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(out)

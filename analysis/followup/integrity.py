@@ -1,4 +1,6 @@
-"""Integrity check of a finished follow-up queue (revision/followup_registration.md section 5).
+"""Integrity check of a finished follow-up queue.
+
+See protocols/followup/followup_registration.md, section 5.
 
 For every registered entry that is not declared failed:
 - train: final_metrics.json with 150 epochs and test_evaluated False; config sha256 equal to the
@@ -9,7 +11,7 @@ For every registered entry that is not declared failed:
 - every registered source file still has its registered hash.
 
     PYTHONPATH=src:. .venv/bin/python analysis/followup/integrity.py --queue e1e2
-Writes revision/followup/integrity_<queue>.json; exits 1 on any problem.
+Writes results/followup/integrity_<queue>.json; exits 1 on any problem.
 """
 
 from __future__ import annotations

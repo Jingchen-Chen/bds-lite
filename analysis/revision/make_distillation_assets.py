@@ -3,19 +3,19 @@
 
 Reads existing result files for presentation; no inference, training or contrast analysis.
 The comparison-table helper recomputes descriptive absolute means/SDs only:
-  revision/kd_unified/{contrasts,costs}.csv                exploratory D+KD-band study (8ec14fe)
-  revision/kd_multiclass/benchmark.json                    teacher and student parameter counts
-  revision/acdc_confirm/results/{results.json,contrasts.csv,per_class.csv,per_seed.csv}
-  revision/acdc_confirm/seed_correlation_supplement.json   (Dev-3)
-  revision/acdc_confirm/{preprocessing_dev_gate,preprocessing_impact,official_test_integrity,
+  results/kd_unified/{contrasts,costs}.csv                exploratory D+KD-band study (8ec14fe)
+  results/kd_acdc_synapse/benchmark.json                    teacher and student parameter counts
+  results/acdc_confirm/results/{results.json,contrasts.csv,per_class.csv,per_seed.csv}
+  results/acdc_confirm/seed_correlation_supplement.json   (Dev-3)
+  results/acdc_confirm/{preprocessing_dev_gate,preprocessing_impact,official_test_integrity,
                          official_test_preprocessing}.json, PROTOCOL_LOG.md (timestamp entry)
-  revision/queue_acdc_confirm.yaml                         registered sources (Dev-1 counts)
-  revision/audit/experiment_c_blinding_check/experiment_c_status.json   (D7 counts)
-  revision/tables/families/{expansion_interaction,expansion_contrasts,historical_april}.csv
+  protocols/acdc_confirm/queue_acdc_confirm.yaml                         registered sources (Dev-1 counts)
+  results/audit/experiment_c_blinding_check/experiment_c_status.json   (D7 counts)
+  results/tables/families/{expansion_interaction,expansion_contrasts,historical_april}.csv
                                                            four-decimal claim-boundary A1 keys
-Writes revision/manuscript/generated/numbers_kd.tex (+ keys_kd.json), tab_kd.tex,
+Writes paper/generated/numbers_kd.tex (+ keys_kd.json), tab_kd.tex,
 tab_s_kd_all.tex, tab_s_kd_costs.tex, tab_s_confirm.tex, tab_s_confirm_perclass.tex,
-and revision/figures/kd_confirmation.{pdf,png} in the style of make_narrative_assets.py and
+and paper/figures/kd_confirmation.{pdf,png} in the style of make_narrative_assets.py and
 make_expansion_assets.py.
 
 Usage: PYTHONPATH=src:. .venv/bin/python analysis/revision/make_distillation_assets.py
@@ -42,11 +42,11 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "analysis/revision"))
 from make_manuscript_assets import prose_words  # noqa: E402
 
-GEN = ROOT / "revision/manuscript/generated"
-FIG = ROOT / "revision/figures"
-KDU = ROOT / "revision/kd_unified"
-CONF = ROOT / "revision/acdc_confirm"
-FAM = ROOT / "revision/tables/families"
+GEN = ROOT / "paper/generated"
+FIG = ROOT / "paper/figures"
+KDU = ROOT / "results/kd_unified"
+CONF = ROOT / "results/acdc_confirm"
+FAM = ROOT / "results/tables/families"
 DS = {"isic2018": "ISIC2018", "acdc": "ACDC", "synapse": "Synapse"}
 METRICS = ["dsc", "iou", "boundary_f1", "hd95", "assd"]
 MLABEL = {
@@ -148,7 +148,7 @@ def exploratory() -> dict[str, dict]:
 
 def balanced_exploratory() -> dict[str, dict]:
     """Read the explicitly post hoc display; preserve every frozen KD binding."""
-    rows = read_csv(ROOT / "revision/kd_posthoc_balanced/contrasts.csv")
+    rows = read_csv(ROOT / "results/kd_posthoc_balanced/contrasts.csv")
     out = {}
     for ds in DS:
         r = one(rows, dataset=ds, analysis="post hoc balanced presentation")
@@ -369,7 +369,7 @@ def tab_kd_main(explo: dict[str, dict], c: dict) -> None:
 
 # ---------------------------------------------------------------- costs (D8)
 def costs() -> None:
-    bench = json.loads((ROOT / "revision/kd_multiclass/benchmark.json").read_text())
+    bench = json.loads((ROOT / "results/kd_acdc_synapse/benchmark.json").read_text())
     params = {}
     for e in bench["results"]:
         params[(e["dataset"], e["role"])] = int(e["parameters"])
@@ -398,7 +398,7 @@ def costs() -> None:
     put("KDC.acdc.teacher.hours", f"{float(teacher['sum_epoch_hours']):.3f}")
     put("KDC.acdc.teacher.epoch", f"{float(teacher['median_epoch_seconds']):.2f}")
     # Teacher cache size from the registered shape (pre-registration section 8): 1350 x 4 x 224 x 224 float16.
-    prereg = (ROOT / "preregistration/acdc_confirmation.md").read_text()
+    prereg = (ROOT / "protocols/acdc_confirm/acdc_confirmation.md").read_text()
     m = re.search(r"\((\d+) × (\d+) × (\d+) × (\d+), float16\)", prereg)
     if not m:
         raise ValueError("teacher cache shape not found in the pre-registration")
@@ -409,7 +409,7 @@ def costs() -> None:
 
 # ---------------------------------------------------------------- deviations, data, timestamp, Experiment C
 def provenance() -> None:
-    queue = yaml.safe_load((ROOT / "revision/queue_acdc_confirm.yaml").read_text())
+    queue = yaml.safe_load((ROOT / "protocols/acdc_confirm/queue_acdc_confirm.yaml").read_text())
     counts = {len(r["sources"]) for r in queue["runs"]}
     if len(counts) != 1:
         raise ValueError("runs register different source counts")
@@ -447,7 +447,7 @@ def provenance() -> None:
     gates = read_csv(FAM / "gate_structure.csv")
     put("GATE.labels.runmax", f"{100 * max(float(r['labels_changed']) for r in gates):.2f}")
 
-    log = (CONF / "PROTOCOL_LOG.md").read_text()
+    log = (ROOT / "protocols/acdc_confirm/PROTOCOL_LOG.md").read_text()
     entry = [line for line in log.splitlines() if "attestation VERIFIED" in line]
     if len(entry) != 1:
         raise ValueError("expected one verified-timestamp entry")
@@ -490,7 +490,7 @@ def provenance() -> None:
     put("TS.lag.min", f"{lag.total_seconds() / 60:.0f}")
 
     status = json.loads(
-        (ROOT / "revision/audit/experiment_c_blinding_check/experiment_c_status.json").read_text()
+        (ROOT / "results/audit/experiment_c_blinding_check/experiment_c_status.json").read_text()
     )
     put("EXC.registered", str(status["registered_runs"]))
     put("EXC.completed", str(status["completed"]))
@@ -564,7 +564,7 @@ def second_pass() -> None:
     """Keys that replace hand-typed literals, and run-level-only variants of two generated tables."""
     res = {
         (r["dataset"], r["model"]): r
-        for r in read_csv(ROOT / "revision/tables/resource_profile.csv")
+        for r in read_csv(ROOT / "results/tables/resource_profile.csv")
     }
     unet, bds = res[("isic2018", "U-Net")], res[("isic2018", "BDS-Lite (deployed)")]
     put("PAR.unet.m", f"{int(unet['params_deployed']) / 1e6:.2f}")
@@ -572,7 +572,7 @@ def second_pass() -> None:
     put("PAR.gate", f"{int(bds['params_deployed']) - int(unet['params_deployed']):,}")
     put(
         "PAR.flops.pct",
-        f"{100 * (float(bds['gflops_b1_released_hook']) / float(unet['gflops_b1_released_hook']) - 1):.2f}",
+        f"{100 * (float(bds['gflops_b1']) / float(unet['gflops_b1']) - 1):.2f}",
     )
     # split sizes from the tracked locked manifests (ACDC, Synapse) and the official ISIC2018 test
     for name, pattern in (("acdc", r"(patient\d+)"), ("synapse", r"(case\d+)")):
@@ -580,7 +580,7 @@ def second_pass() -> None:
         for part in ("train", "val", "test"):
             ids = {re.match(pattern, s).group(1) for s in split[part]}
             put(f"DS.{name}.{part}.units", str(len(ids)))
-    official = ROOT / "revision/official_isic/test/U_seed1/per_case.csv"
+    official = ROOT / "results/official_isic/test/U_seed1/per_case.csv"
     put("DS.isic2018.test.n", f"{len({r['id'] for r in read_csv(official)}):,}")
     # typical half-width of the ten-run Boundary F1 contrasts
     con = [r for r in read_csv(FAM / "expansion_contrasts.csv") if r["metric"] == "boundary_f1"]
@@ -592,7 +592,7 @@ def second_pass() -> None:
         value = float(re.search(r"R@CTX\.dsc\." + end + r"\\endcsname\{([^}]*)\}", audit).group(1))
         put(f"CTX01.dsc.{end}", f"{value / 100:.3f}")
     # qualitative figure from the retrained set (manifest v3)
-    man = json.loads((ROOT / "revision/figures/qualitative_manifest_v3.json").read_text())
+    man = json.loads((ROOT / "paper/figures/qualitative_manifest_v3.json").read_text())
     extreme = unstable = 0
     for ds in ("isic2018", "acdc", "synapse"):
         for case in man[ds]["cases"]:
@@ -666,10 +666,16 @@ def resource_main_table() -> None:
         r"Model & Deploy params & GFLOPs$^a$ & GPU b1 & GPU b16 \\",
         r"\midrule",
     ]
+    profile = {
+        r["model"]: r
+        for r in read_csv(ROOT / "results/tables/resource_profile.csv")
+        if r["dataset"] == "isic2018"
+    }
     for line in resource.splitlines():
         if " & " in line and not line.startswith("Model &"):
             cells = line.removesuffix(r" \\").split(" & ")
             if cells[0] in main_models:
+                cells[2] = f"{float(profile[cells[0]]['gflops_b1']):.3f}"
                 compact.append(" & ".join(cells[i] for i in (0, 1, 2, 3, 5)) + r" \\")
     compact += [r"\bottomrule", r"\end{tabular*}"]
     (GEN / "tab_resource_main.tex").write_text("\n".join(compact) + "\n")
@@ -679,12 +685,12 @@ def lb_resource_table() -> None:
     """Keep every recorded LB-UNet profile field accessible in S19."""
     data = {
         row["dataset"]: row
-        for row in read_csv(ROOT / "revision/tables/resource_profile.csv")
+        for row in read_csv(ROOT / "results/tables/resource_profile.csv")
         if row["model"] == "LB-UNet"
     }
     datasets = ("isic2018", "synapse")
     lines = [
-        "% existing adapted LB-UNet measurements from revision/tables/resource_profile.csv",
+        "% existing adapted LB-UNet measurements from results/tables/resource_profile.csv",
         r"\begin{tabular}{lrr}",
         r"\toprule",
         r"Measurement & ISIC2018 & Synapse \\",
@@ -693,7 +699,7 @@ def lb_resource_table() -> None:
     for label, field, precision in (
         ("Total parameters", "params_total", 0),
         ("Deployed parameters", "params_deployed", 0),
-        ("GFLOPs (original counter)", "gflops_b1", 6),
+        ("GFLOPs (FlopCounterMode)", "gflops_b1", 6),
         ("GFLOPs (released-graph hooks)", "gflops_b1_released_hook", 6),
         ("CPU batch 1, one thread (ms)", "cpu_ms_b1_1thread", 4),
         ("CPU batch 1, all threads (ms)", "cpu_ms_b1_allthreads", 4),
@@ -886,7 +892,7 @@ def abstract_words(path: Path) -> int:
 
 def word_counts() -> None:
     original = ROOT / "recovered/peerj-submission/main.tex"
-    revised = ROOT / "revision/manuscript/main.tex"
+    revised = ROOT / "paper/main.tex"
     if not original.exists():
         return
     before, after = prose_words(original), prose_words(revised)
@@ -910,7 +916,6 @@ def main() -> None:
     provenance()
     in_network()
     second_pass()
-    word_counts()
     figure(explo, c)
     lines = ["% generated by analysis/revision/make_distillation_assets.py; do not edit"]
     lines += [f"\\expandafter\\def\\csname R@{k}\\endcsname{{{KEYS[k]}}}" for k in sorted(KEYS)]

@@ -14,7 +14,7 @@ def main():
     directory = ROOT / "data/revision/isic2018_official/archives"
     directory.mkdir(parents=True, exist_ok=True)
     receipt = []
-    for url in json.loads((ROOT / "revision/sources/isic_downloads.json").read_text()):
+    for url in json.loads((ROOT / "docs/provenance/sources/isic_downloads.json").read_text()):
         path = directory / url.rsplit("/", 1)[1]
         if not path.exists():
             temporary = path.with_suffix(".partial")
@@ -46,7 +46,7 @@ def main():
                 license="CC0 for 2018 Task1 row; final figure approval remains human",
             )
         )
-        (ROOT / "revision/sources/isic_acquisition.json").write_text(
+        (ROOT / "docs/provenance/sources/isic_acquisition.json").write_text(
             json.dumps(receipt, indent=2) + "\n"
         )
         print("Verified", path.name, path.stat().st_size, flush=True)

@@ -1,7 +1,8 @@
 """Queue step after a multiclass teacher: diagnostics, quality gate, frozen K-class teacher cache.
 
-revision/KD_MULTICLASS_PROTOCOL.md 3, 5. Training and validation images only. Same steps as
-scripts/kd/cache_teacher.py: true fp32 (TF32 off) inference; K-class softmax cached as float16 in
+protocols/kd_acdc_synapse/KD_MULTICLASS_PROTOCOL.md 3, 5. Training and validation images only.
+Same steps as scripts/kd/cache_teacher.py: true fp32 (TF32 off) inference; K-class softmax
+cached as float16 in
 manifest order; per-image, per-class DSC/IoU/Boundary F1/HD95/ASSD on training and validation
 images; band diagnostics from the cached values; cached-vs-online check on 20 training images
 (numpy default_rng(20261107), < 1e-3); quality gate: teacher validation Boundary F1 and DSC (means

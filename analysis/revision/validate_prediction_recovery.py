@@ -9,6 +9,7 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
+from bds_lite.paths import current
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -20,7 +21,7 @@ def sha(path):
 
 def main():
     queues = [
-        json.loads((ROOT / "revision" / name).read_text())
+        json.loads((ROOT / current(f"revision/{name}")).read_text())
         for name in [
             "prediction_recovery_queue.json",
             "main_prediction_queue.json",
@@ -109,7 +110,7 @@ def main():
                 output_hashes_valid=True,
             )
         )
-    with (ROOT / "revision/validation/prediction_recovery.csv").open("w") as stream:
+    with (ROOT / "results/validation/prediction_recovery.csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(checks[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(checks)

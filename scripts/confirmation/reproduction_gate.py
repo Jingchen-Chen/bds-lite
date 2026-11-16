@@ -2,7 +2,7 @@
 
 Trains seed 1 for a few epochs and compares validation DSC per epoch with the archived seed-1 run.
 Epochs only; training stops before any test evaluation. Writes
-revision/confirmation_gate/gate.json. Exit code 1 on any mismatch.
+results/gates/confirmation/gate.json. Exit code 1 on any mismatch.
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ import yaml
 from analysis.revision.confirmation_arms import build
 
 ROOT = Path(__file__).resolve().parents[2]
-GATE = ROOT / "revision/confirmation_gate"
+GATE = ROOT / "results/gates/confirmation"
 EPOCHS = 4
 ARMS = {
     "acdc_unet": ("acdc", "unet", "p1b", "acdc_p1b_unet_seed1"),

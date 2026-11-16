@@ -18,7 +18,7 @@ Classification against the SESOI of prereg_revision.md:
 Assumes additivity; the design has no decoder + surface cell, so interactions are not estimable.
 Pooled rows are inverse-variance fixed-effect estimates over the three datasets.
 
-Output: revision/tables/families/component_effects.csv
+Output: results/tables/families/component_effects.csv
 """
 
 from __future__ import annotations
@@ -49,7 +49,7 @@ DESIGN = {
     "M5": (1, 1, 1, 0),
     "M6": (1, 1, 1, 1),
 }
-OUT = ROOT / "revision/tables/families/component_effects.csv"
+OUT = ROOT / "results/tables/families/component_effects.csv"
 
 
 def unit_values(arm: str, dataset: str, seed: int) -> dict[str, dict[str, float]]:

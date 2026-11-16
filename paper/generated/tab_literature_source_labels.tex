@@ -1,0 +1,33 @@
+% generated from paper/lit_numbers.csv (every row verified against the cited PDF page/table)
+\begin{tabular}{p{3.2cm}p{2.4cm}p{2.2cm}rp{5.2cm}}
+\toprule
+Method & Dataset & Metric & Value & Source and protocol differences \\
+\midrule
+TransUNet & Synapse & DSC & 77.48 & Chen et al. 2021 arXiv:2102.04306v1, p.6 Table 1 \\
+TransUNet & Synapse & HD (source) & 31.69 & Chen et al. 2021 arXiv:2102.04306v1, p.6 Table 1 \\
+R50 U-Net (TransUNet table) & Synapse & DSC & 74.68 & Chen et al. 2021 arXiv:2102.04306v1, p.6 Table 1 \\
+R50 U-Net (TransUNet table) & Synapse & HD (source) & 36.87 & Chen et al. 2021 arXiv:2102.04306v1, p.6 Table 1 \\
+R50 AttnUNet (TransUNet table) & Synapse & DSC & 75.57 & Chen et al. 2021 arXiv:2102.04306v1, p.6 Table 1 \\
+R50 AttnUNet (TransUNet table) & Synapse & HD (source) & 36.97 & Chen et al. 2021 arXiv:2102.04306v1, p.6 Table 1 \\
+TransUNet & ACDC & DSC & 89.71 & Chen et al. 2021 arXiv:2102.04306v1, p.10 Table 5 \\
+R50-U-Net (TransUNet table) & ACDC & DSC & 87.55 & Chen et al. 2021 arXiv:2102.04306v1, p.10 Table 5 \\
+R50-AttnUNet (TransUNet table) & ACDC & DSC & 86.75 & Chen et al. 2021 arXiv:2102.04306v1, p.10 Table 5 \\
+Swin-Unet & Synapse & DSC & 79.13 & Cao et al. 2021 arXiv:2105.05537v1, p.8 Table 1 \\
+Swin-Unet & Synapse & HD (source) & 21.55 & Cao et al. 2021 arXiv:2105.05537v1, p.8 Table 1 \\
+U-Net (Swin-Unet table) & Synapse & DSC & 76.85 & Cao et al. 2021 arXiv:2105.05537v1, p.8 Table 1 \\
+U-Net (Swin-Unet table) & Synapse & HD (source) & 39.70 & Cao et al. 2021 arXiv:2105.05537v1, p.8 Table 1 \\
+Att-UNet (Swin-Unet table) & Synapse & DSC & 77.77 & Cao et al. 2021 arXiv:2105.05537v1, p.8 Table 1 \\
+Att-UNet (Swin-Unet table) & Synapse & HD (source) & 36.02 & Cao et al. 2021 arXiv:2105.05537v1, p.8 Table 1 \\
+Swin-Unet & ACDC & DSC & 90.00 & Cao et al. 2021 arXiv:2105.05537v1, p.9 Table 2 \\
+EGE-UNet & ISIC2018 & mIoU & 80.94 & Ruan et al. 2023 arXiv:2307.08473v1, p.7 Table 1 \\
+EGE-UNet & ISIC2018 & DSC & 89.46 & Ruan et al. 2023 arXiv:2307.08473v1, p.7 Table 1 \\
+LB-UNet & ISIC2018 & mIoU & 81.37 & Xu and Tong 2024 MICCAI, p.8 Table 1 \\
+LB-UNet & ISIC2018 & DSC & 89.54 & Xu and Tong 2024 MICCAI, p.8 Table 1 \\
+UNet (LB-UNet table) & ISIC2018 & mIoU & 77.86 & Xu and Tong 2024 MICCAI, p.8 Table 1 \\
+UNet (LB-UNet table) & ISIC2018 & DSC & 87.55 & Xu and Tong 2024 MICCAI, p.8 Table 1 \\
+ISIC2018 challenge rank 1 & ISIC2018 official test (1000) & thresholded Jaccard & 0.802 & Codella et al. 2019 arXiv:1902.03368v2, p.10 Table 1 (ALL) \\
+ISIC2018 challenge rank 1 & ISIC2018 official test (1000) & Jaccard & 0.838 & Codella et al. 2019 arXiv:1902.03368v2, p.10 Table 1 (ALL) \\
+ISIC2018 challenge rank 5 & ISIC2018 official test (1000) & thresholded Jaccard & 0.796 & Codella et al. 2019 arXiv:1902.03368v2, p.10 Table 1 (ALL) \\
+ISIC2018 challenge rank 5 & ISIC2018 official test (1000) & Jaccard & 0.837 & Codella et al. 2019 arXiv:1902.03368v2, p.10 Table 1 (ALL) \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,12 @@
+{
+  "description": "Validated figures embedded in the revised manuscript; full redraw needs the original datasets and saved predictions.",
+  "sha256": {
+    "run_level.pdf": "5e0764c51d3e23b644197c59076a25eac44119d4b7d859c20ca8dc4eac7a9772",
+    "error_geometry.pdf": "68b23ec5537765b3bbcbda58dcf4a198f5ca994b7c091f8d58305558f2179fa9",
+    "contours_isic2018_retrained.pdf": "c452af7e083d24796508ffd663f1cd870f9ee03001415a17c548e333bc101b5c",
+    "structure_errors.pdf": "29f7995079f9295ae503c45dd7cebc79ba35c741df6718b7c71137c09a71631a",
+    "ten_seed.pdf": "4320c10ac13ff64e9b821a7f229f34400f41b5948c1e0881a8624023197c5c50",
+    "transfer_mechanism.pdf": "d0ec6b4b9a3287adec0e8bd23d4643d6e67afc0854bf9963fca20b735f7c0973",
+    "acdc_qualitative_combined.pdf": "5d683c2fbae1ca2fcea947eb914e1823420d42764f11410b8663699e27f431a9"
+  }
+}

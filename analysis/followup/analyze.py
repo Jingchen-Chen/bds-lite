@@ -1,4 +1,6 @@
-"""Registered analysis of the follow-up controls (revision/followup_registration.md sections 7-9).
+"""Registered analysis of the follow-up controls.
+
+See protocols/followup/followup_registration.md, sections 7-9.
 
 Deterministic; reads only the one-time evaluation outputs (hash-checked against their evaluation
 records) and the training records. Every follow-up result is secondary and exploratory.
@@ -7,13 +9,13 @@ records) and the training records. Every follow-up result is secondary and explo
   C1 D+KD-band - D+KD-full; C2 D+KD-full - D; C3 D+KD-band(compact teacher) - D;
   C4 D+KD-band - D+KD-band(compact teacher). Secondary metrics: the same four, Holm within metric.
 - Context: the Stage 3 D+KD-band - D contrast, recomputed with the same function and checked
-  against revision/acdc_confirm/results/results.json.
+  against results/acdc_confirm/results/results.json.
 - Outcome categories P/N/E/U and the cases B1-B5, T1-T5 and the narrative of section 9, computed
   here from the numbers so that the reading is not chosen by hand.
 - Per structure, per seed, KD gradient probes, training time, the E2 teacher, and E3 (if run).
 
     PYTHONPATH=src:. .venv/bin/python analysis/followup/analyze.py
-Outputs: revision/followup/results/{results.json, contrasts.csv, per_class.csv, per_seed.csv,
+Outputs: results/followup/results/{results.json, contrasts.csv, per_class.csv, per_seed.csv,
 probes.csv}.
 """
 
@@ -49,7 +51,7 @@ from scripts.kd_followup.common import run_name as followup_run  # noqa: E402
 
 OUT = WORKSPACE / "results"
 STAGE3_EVAL = ROOT / "results/acdc_confirm_eval"
-STAGE3_RESULTS = ROOT / "revision/acdc_confirm/results/results.json"
+STAGE3_RESULTS = ROOT / "results/acdc_confirm/results/results.json"
 SPLIT = "official_test"
 METRICS = ex.METRICS
 SESOI = ex.SESOI

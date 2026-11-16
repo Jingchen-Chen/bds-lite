@@ -9,7 +9,7 @@ same-recipe: two disjoint groups of k runs of ONE recipe. There is no true diffe
   registered one: Wilcoxon signed-rank on per-unit differences of k-run means.
 contrast: k runs of each of two arms, compared with the estimate from all runs.
 
-Output: revision/tables/families/seed_subset.csv
+Output: results/tables/families/seed_subset.csv
 """
 
 from __future__ import annotations
@@ -32,7 +32,7 @@ METRICS = ["boundary_f1", "dsc", "hd95"]
 SEEDS = list(range(1, 11))
 ARMS = ["unet", "decoder", "full", "gsl"]
 SAMPLES = 2000
-OUT = ROOT / "revision/tables/families/seed_subset.csv"
+OUT = ROOT / "results/tables/families/seed_subset.csv"
 
 
 def matrix(arm: str, metric: str, cache: dict) -> np.ndarray:

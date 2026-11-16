@@ -1,9 +1,9 @@
 # ruff: noqa: E501
 """POST HOC analyses added in the review round of 2026-11-12 (no training, no model execution).
 
-Authorization and scope: revision/EVIDENCE_ADDENDUM_20261112_review_round.md. Reads only saved
+Authorization and scope: evidence/EVIDENCE_ADDENDUM_20261112_review_round.md. Reads only saved
 per-case evaluation outputs (hash-checked through analysis/followup/analyze.arm_runs for the
-official ACDC arms) and revision/tables/families/expansion_interaction.csv. No registered estimate,
+official ACDC arms) and results/tables/families/expansion_interaction.csv. No registered estimate,
 decision or reading is changed; every output of this script is post hoc and exploratory.
 
 1. Augmentation-by-distillation interaction on the official ACDC patients 101-150:
@@ -27,7 +27,7 @@ decision or reading is changed; every output of this script is post hoc and expl
 4. Missed structures and false alarms (per run, over slice-class or image-class pairs).
 
     PYTHONPATH=src:. .venv/bin/python analysis/revision/posthoc_review_20261112.py
-Outputs: revision/posthoc_review_20261112/{interaction,pooling_sensitivity,run_sd,
+Outputs: results/posthoc_review_20261112/{interaction,pooling_sensitivity,run_sd,
 missed_false_alarm}.csv and summary.json.
 """
 
@@ -52,7 +52,7 @@ import expansion_statistics as ex  # noqa: E402
 from analyze import arm_runs  # noqa: E402
 from posthoc_reference_estimators import anova_arm  # noqa: E402
 
-OUT = ROOT / "revision/posthoc_review_20261112"
+OUT = ROOT / "results/posthoc_review_20261112"
 DRAWS = 10_000
 SEED = 20261112
 WEIGHTS = {"kd_band": 1.0, "decoder": -1.0, "kd_band_aug": -1.0, "decoder_aug": 1.0}
@@ -235,7 +235,7 @@ def summary_row(effect: str, metric: str, rule: str, est: float, se: float, df: 
 
 
 def pooling() -> list[dict]:
-    with (ROOT / "revision/tables/families/expansion_interaction.csv").open() as stream:
+    with (ROOT / "results/tables/families/expansion_interaction.csv").open() as stream:
         source = [r for r in csv.DictReader(stream) if r["seeds"] == "1-3"]
     rows = []
     for effect in POOLED_EFFECTS:
@@ -406,7 +406,7 @@ def main() -> None:
     inputs = {
         str(p.relative_to(ROOT)): sha(p) for by_seed in paths.values() for p in by_seed.values()
     }
-    source = ROOT / "revision/tables/families/expansion_interaction.csv"
+    source = ROOT / "results/tables/families/expansion_interaction.csv"
     inputs[str(source.relative_to(ROOT))] = sha(source)
     (OUT / "summary.json").write_text(
         json.dumps(

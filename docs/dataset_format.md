@@ -33,13 +33,45 @@ data/processed/isic2018/train/ISIC_0000001.npz
 
 ## Split Files
 
-The directory-per-split layout is the default. If a dataset needs explicit split files, place them in:
+The basic `scripts/train.py` and `scripts/evaluate.py` interfaces read every `.npz` file in
+the selected split directory. They do not read an external split list.
+
+Paper experiments use JSON manifests containing `sample_ids` and split metadata, checked by
+their study-specific training adapters. The archived manifests can be extracted to:
 
 ```text
-data/splits/<dataset>/<split>.txt
+recovered/followup/splits/<dataset>/<split>.json
 ```
 
-Each line should contain a relative `.npz` path from `data/processed/<dataset>/`.
+See the [reproduction guide](reproducing.md#archived-inputs) for extraction and the
+[protocol index](../protocols/README.md) for each study's preprocessing and split requirements.
+The converters' random split options below are for new experiments; reproducing the paper requires
+its registered split membership.
+
+## ACDC Conversion
+
+Convert an official NIfTI training release containing `patient001/`, `patient002/`, etc.:
+
+```bash
+python scripts/convert_acdc.py \
+  --format nifti \
+  --src data/raw/acdc/training \
+  --output-root data/processed/acdc \
+  --image-size 224x224 \
+  --val-fraction 0.1 --test-fraction 0.2 --seed 2026
+```
+
+This creates patient-level train/validation/test splits for the basic training example in the
+README. It does not prepare the separate official-test evaluation of the paper.
+
+For a configuration that requires boundary or signed-distance targets, generate them after conversion:
+
+```bash
+python scripts/prepare_boundary_targets.py --dataset acdc --split train --num-classes 4
+```
+
+This command adds `boundary` and `sdf` arrays to the training samples in place.
+Use `python scripts/convert_synapse.py --help` for the Synapse converter's source-layout options.
 
 ## ISIC2018 Conversion
 

@@ -2,7 +2,7 @@
 
 CPU-only case-table arithmetic; no model execution, training, E3 or Experiment C reads.
 Only path resolution is imported from the registered analysis. Statistical calculations
-are implemented here. New audit receipts are written under revision/validation/.
+are implemented here. New audit receipts are written under results/validation/.
 """
 
 from __future__ import annotations
@@ -126,7 +126,7 @@ def check_holm(group: str, family: list, expected_key: str) -> None:
 def isic_path(arm: str, seed: int) -> Path:
     if arm in ("unet", "full") and seed <= 3:
         short = "U" if arm == "unet" else "F"
-        return ROOT / f"revision/official_isic/test/{short}_seed{seed}/per_case.csv"
+        return ROOT / f"results/official_isic/test/{short}_seed{seed}/per_case.csv"
     name = dict(unet="m0_unet", full="m6_full", decoder="m2_aux_boundary_only", gsl="gsl")[arm]
     return ROOT / f"results/revision_runs/isic2018_{name}_seed{seed}/per_case_test.csv"
 
@@ -159,7 +159,7 @@ def acdc_arms() -> dict:
 
 
 def confirmation_followup(arms: dict) -> None:
-    frame = table("revision/followup/results/contrasts.csv")
+    frame = table("results/followup/results/contrasts.csv")
     pairs = dict(
         S3=("kd_band", "decoder"),
         C1=("kd_band", "kd_full"),
@@ -178,7 +178,7 @@ def confirmation_followup(arms: dict) -> None:
         check_holm("ACDC Holm", family, "p_holm")
     COUNTS["acdc_contrasts"] = len(frame)
     COUNTS["acdc_holm"] = 20
-    primary = document("revision/acdc_confirm/results/results.json")["primary"]["contrast"]
+    primary = document("results/acdc_confirm/results/results.json")["primary"]["contrast"]
     compare(
         "ACDC primary JSON",
         "Boundary F1",
@@ -186,7 +186,7 @@ def confirmation_followup(arms: dict) -> None:
         primary,
         ("delta", "low", "high", "p"),
     )
-    perclass = table("revision/acdc_confirm/results/per_class.csv")
+    perclass = table("results/acdc_confirm/results/per_class.csv")
     for row in perclass.to_dict("records"):
         label = {"RV": 1, "myocardium": 2, "LV": 3}[row["structure"]]
         a, b = [
@@ -211,7 +211,7 @@ def confirmation_followup(arms: dict) -> None:
 
 
 def isic_extension() -> None:
-    frame = table("revision/tables/families/expansion_contrasts.csv")
+    frame = table("results/tables/families/expansion_contrasts.csv")
     for metric, block in frame.groupby("metric", sort=False):
         for prefix, seeds in (("all", range(1, 11)), ("fresh", range(4, 11))):
             family = []
@@ -241,7 +241,7 @@ def factorial() -> None:
         "distillation+gate with surface": dict(M6=1, M7=-1),
         "distillation+gate interaction with surface": dict(M6=1, M7=-1, M3=-1, M2=1),
     }
-    frame = table("revision/tables/families/expansion_interaction.csv")
+    frame = table("results/tables/families/expansion_interaction.csv")
     frame = frame[frame.seeds == "1-3"]
     for (effect, metric), block in frame.groupby(["effect", "metric"], sort=False):
         w = weights[effect]
@@ -284,7 +284,7 @@ def factorial() -> None:
 
 
 def exploratory_kd() -> None:
-    frame = table("revision/kd_unified/contrasts.csv")
+    frame = table("results/kd_unified/contrasts.csv")
     frame = frame[
         (frame.comparison == "KD-band - decoder-only")
         & ~((frame.dataset == "isic2018") & frame.seed_matched)
@@ -306,7 +306,7 @@ def exploratory_kd() -> None:
         if row["metric"] == "boundary_f1":
             family.append((ds, got, row))
     check_holm("exploratory KD Holm", family, "p_holm_over_datasets")
-    balanced = table("revision/kd_posthoc_balanced/contrasts.csv")
+    balanced = table("results/kd_posthoc_balanced/contrasts.csv")
     for analysis, block in balanced.groupby("analysis", sort=False):
         family = []
         for row in block.to_dict("records"):
@@ -335,7 +335,7 @@ def exploratory_kd() -> None:
 
 def absolute_scores() -> None:
     methods = {"M0", "M1", "M2", "M3", "M4", "M5", "M6", "GSL", "C1", "C3", "C4"}
-    frame = table("revision/tables/families/method_summary.csv")
+    frame = table("results/tables/families/method_summary.csv")
     n = 0
     for row in frame[frame.method.isin(methods)].to_dict("records"):
         per_seed = []
@@ -362,7 +362,7 @@ def absolute_scores() -> None:
 
 
 def reference_estimators(arms: dict) -> dict:
-    frame = table("revision/followup/results/posthoc_reference_estimators.csv")
+    frame = table("results/followup/results/posthoc_reference_estimators.csv")
     rng = np.random.default_rng(20261109)
     fractions = {}
     for row in frame.to_dict("records"):
@@ -525,7 +525,7 @@ def main() -> None:
             "Local dependency resolution does not establish environment portability.",
         ],
     )
-    out = ROOT / "revision/validation"
+    out = ROOT / "results/validation"
     (out / "scientific_revision_numbers.json").write_text(json.dumps(result, indent=2) + "\n")
     with (out / "scientific_revision_numbers.csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(CHECKS[0]), lineterminator="\n")

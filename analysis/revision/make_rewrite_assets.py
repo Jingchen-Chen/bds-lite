@@ -5,15 +5,15 @@ Everything is derived from existing per-case CSVs, checkpoints and summary table
 trained or re-run. Output is kept apart from make_manuscript_assets.py so that the two generators
 cannot overwrite one another:
 
-  revision/manuscript/generated/numbers_extra.tex, keys_extra.json   \\R{} keys
-  revision/manuscript/generated/tab_two_sets.tex                     original vs retrained U-Net/BDS-Lite
-  revision/manuscript/generated/tab_all_arms.tex                     every arm vs retrained U-Net
-  revision/manuscript/generated/tab_datasets.tex                     datasets and structure
-  revision/manuscript/generated/tab_lit_compact.tex                  published context + our rows
-  revision/manuscript/generated/tab_s_all_case.tex, tab_s_run_level.tex, tab_s_selected_epochs.tex
-  revision/manuscript/generated/rl_*.tex                             SESOI-relabelled copies
-  revision/tables/families/run_level_noise.csv, all_case_sensitivity.csv
-  revision/figures/run_level.pdf/.png
+  paper/generated/numbers_extra.tex, keys_extra.json   \\R{} keys
+  paper/generated/tab_two_sets.tex                     original vs retrained U-Net/BDS-Lite
+  paper/generated/tab_all_arms.tex                     every arm vs retrained U-Net
+  paper/generated/tab_datasets.tex                     datasets and structure
+  paper/generated/tab_lit_compact.tex                  published context + our rows
+  paper/generated/tab_s_all_case.tex, tab_s_run_level.tex, tab_s_selected_epochs.tex
+  paper/generated/rl_*.tex                             SESOI-relabelled copies
+  results/tables/families/run_level_noise.csv, all_case_sensitivity.csv
+  paper/figures/run_level.pdf/.png
 
 Added after the results were known (post hoc, not part of prereg_revision.md):
 run-level margin. Per dataset and metric, the within-arm variance of the three run means is pooled
@@ -49,9 +49,9 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "analysis/revision"))
 import family_statistics as fs  # noqa: E402
 
-GEN = ROOT / "revision/manuscript/generated"
-FAM = ROOT / "revision/tables/families"
-FIG = ROOT / "revision/figures"
+GEN = ROOT / "paper/generated"
+FAM = ROOT / "results/tables/families"
+FIG = ROOT / "paper/figures"
 DATASETS = ["isic2018", "acdc", "synapse"]
 NAMES = {"isic2018": "ISIC2018", "acdc": "ACDC", "synapse": "Synapse"}
 METRICS = fs.METRICS
@@ -241,7 +241,7 @@ def error_shares() -> None:
 
 
 def component_stats() -> None:
-    rows = [r for r in read(ROOT / "revision/structural_descriptors/per_sample_class.csv")]
+    rows = [r for r in read(ROOT / "results/structural_descriptors/per_sample_class.csv")]
     values = np.array(
         [int(r["components_4connected"]) for r in rows if r["dataset"] == "isic2018"], float
     )
@@ -431,7 +431,7 @@ def tab_all_arms(stats_by: dict, runs: dict) -> None:
 
 
 def tab_datasets() -> None:
-    rows = read(ROOT / "revision/structural_descriptors/summary.csv")
+    rows = read(ROOT / "results/structural_descriptors/summary.csv")
     info = {
         "isic2018": ("Dermoscopy", "1", "2,075 / 519 / 1,000 images", "image (1,000)"),
         "acdc": ("Cine MRI", "3", "1,350 / 186 / 366 slices", "patient (20)"),
@@ -462,7 +462,7 @@ def tab_datasets() -> None:
 
 def tab_lit_compact() -> None:
     lit = {
-        (r["method"], r["dataset"], r["metric"]): r for r in read(ROOT / "revision/lit_numbers.csv")
+        (r["method"], r["dataset"], r["metric"]): r for r in read(ROOT / "paper/lit_numbers.csv")
     }
     vol = {(r["dataset"], r["method"]): r for r in read(FAM / "volume_method_summary.csv")}
     jac = {r["method"]: r for r in read(FAM / "native_jaccard.csv")}

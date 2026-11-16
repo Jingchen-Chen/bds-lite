@@ -1,7 +1,7 @@
 # ruff: noqa: E501
 """Unified three-dataset analysis of external-teacher D+KD-band (exploratory; frozen before results).
 
-Plan: revision/KD_COMPARATOR_AMENDMENT_1.md item 5 (ISIC2018) and revision/KD_MULTICLASS_PROTOCOL.md 7
+Plan: protocols/kd_isic2018/KD_COMPARATOR_AMENDMENT_1.md item 5 (ISIC2018) and protocols/kd_acdc_synapse/KD_MULTICLASS_PROTOCOL.md 7
 (ACDC, Synapse). Estimator: analysis/revision/expansion_statistics.py::contrast and unit_values,
 unchanged (per-image values; ACDC/Synapse label-macro per slice, then the patient/case unit mean;
 delta of arm means of run means; SE = Welch run SE combined with the unit SE; Welch df).
@@ -20,7 +20,7 @@ false-alarm rates, validation contrasts against decoder-only, inverse-variance p
 per metric with Cochran's Q (exploratory), teacher test metrics, and training/inference cost.
 Boundary specificity is not assessed (no D+KD-full control).
 
-Outputs: revision/kd_unified/{unified_results.json, contrasts.csv, per_seed.csv, per_class.csv,
+Outputs: results/kd_unified/{unified_results.json, contrasts.csv, per_seed.csv, per_class.csv,
 costs.csv, summary.md}. Datasets without a completed test evaluation are reported as missing.
 """
 
@@ -49,7 +49,7 @@ from analysis.kd3.integrity import check  # noqa: E402
 from analysis.revision import make_audit_assets as ma  # noqa: E402
 
 RUNS = ROOT / "results/revision_runs"
-OUT = ROOT / "revision/kd_unified"
+OUT = ROOT / "results/kd_unified"
 DATASETS = ["isic2018", "acdc", "synapse"]
 METRICS = ex.METRICS
 SESOI = ex.SESOI
@@ -169,8 +169,8 @@ def deployed_parameters(folder: Path) -> int:
 
 def thermal_resumes(dataset: str) -> dict:
     files = [
-        ROOT / "revision/kd_comparator/supervision/events.jsonl",
-        ROOT / "revision/kd_multiclass/supervision/events.jsonl",
+        ROOT / "results/kd_isic2018/supervision/events.jsonl",
+        ROOT / "results/kd_acdc_synapse/supervision/events.jsonl",
     ]
     counts = defaultdict(int)
     for f in files:

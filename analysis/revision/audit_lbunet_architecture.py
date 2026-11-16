@@ -103,7 +103,7 @@ def main() -> None:
         ),
         scope="Static CPU parameter/checkpoint inspection only; no forward or training pass.",
     )
-    target = ROOT / "revision/validation/lbunet_architecture_audit.json"
+    target = ROOT / "results/validation/lbunet_architecture_audit.json"
     target.write_text(json.dumps(report, indent=2) + "\n")
     print(binary_count, conv_bn, omitted, f"{len(rows)} strict checkpoint checks passed")
 

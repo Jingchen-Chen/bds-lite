@@ -15,7 +15,7 @@ def ptext(value, latex=False):
 
 
 def main():
-    tables = ROOT / "revision/tables"
+    tables = ROOT / "results/tables"
     rows = [
         r
         for r in csv.DictReader((tables / "gate_identity_effects.csv").open())
@@ -87,7 +87,9 @@ def main():
             "not complete the training M5 ablation."
         ),
     ]
-    (ROOT / "revision/GATE_IDENTITY_FINDINGS.md").write_text("\n".join(text) + "\n")
+    (ROOT / "results/prediction_recovery/GATE_IDENTITY_FINDINGS.md").write_text(
+        "\n".join(text) + "\n"
+    )
     print(
         "Generated", len(rows), "gate endpoint table rows without rounding small p-values to zero"
     )

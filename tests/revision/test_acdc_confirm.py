@@ -1,4 +1,4 @@
-"""Unit tests for the pre-registered ACDC replication (preregistration/acdc_confirmation.md)."""
+"""Unit tests for the pre-registered ACDC replication (protocols/acdc_confirm/acdc_confirmation.md)."""
 
 import copy
 import math

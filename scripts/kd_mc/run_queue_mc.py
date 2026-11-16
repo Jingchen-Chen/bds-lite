@@ -1,4 +1,6 @@
-"""ACDC/Synapse copy of scripts/kd/run_queue_kd.py (revision/KD_MULTICLASS_PROTOCOL.md 6).
+"""ACDC/Synapse copy of scripts/kd/run_queue_kd.py.
+
+Protocol: protocols/kd_acdc_synapse/KD_MULTICLASS_PROTOCOL.md, section 6.
 
 Identical guards, telemetry and thermal stop. Differences: launches scripts/kd_mc/train_mc.py and
 scripts/kd_mc/cache_mc.py; checks configs with scripts/kd_mc/common.require_protocol; if a
@@ -31,6 +33,7 @@ from pathlib import Path
 
 import yaml
 
+from bds_lite.paths import current
 from scripts.kd.common import CUDA_VERSION, TORCH_VERSION, sha
 from scripts.kd_mc.common import GPU_LOCK, PROTOCOL, ROOT, STOP, cache_run, require_protocol
 
@@ -88,7 +91,7 @@ def main():
     if not args.execute:
         print(json.dumps(queue, indent=2))
         return
-    gate = json.loads((ROOT / "revision/reproduction_gate.json").read_text())
+    gate = json.loads((ROOT / "results/gates/reproduction_gate.json").read_text())
     if gate.get("status") != "COMPLETE — VERIFIED" or not gate.get("evidence"):
         raise ValueError("reproduction has not passed; GPU execution forbidden")
     import torch
@@ -113,7 +116,7 @@ def main():
             resolved = yaml.safe_load(config.read_text())
             require_protocol(resolved)
             if (
-                sha(ROOT / resolved["revision"]["protocol"])
+                sha(ROOT / current(resolved["revision"]["protocol"]))
                 != resolved["revision"]["protocol_sha256"]
             ):
                 raise ValueError("training protocol changed")

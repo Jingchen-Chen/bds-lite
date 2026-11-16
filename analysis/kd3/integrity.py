@@ -6,7 +6,7 @@ hashes equal to the queue registration; selected epoch equal to the first maximu
 DSC; all logged losses finite; teacher cache hash in each student's provenance equal to the cache
 record; gate PASSED; distinct seeds with differing first-epoch training losses; no test output.
 Feasibility (Amendment 1 item 3; multiclass protocol 6): L_kd decreased in every student.
-Writes revision/kd_unified/integrity_<dataset>.json and exits non-zero on any failure.
+Writes results/kd_unified/integrity_<dataset>.json and exits non-zero on any failure.
 """
 
 from __future__ import annotations
@@ -24,11 +24,11 @@ sys.path.insert(0, str(ROOT))
 from scripts.kd.common import sha  # noqa: E402
 
 RUNS = ROOT / "results/revision_runs"
-OUT = ROOT / "revision/kd_unified"
+OUT = ROOT / "results/kd_unified"
 QUEUES = {
-    "isic2018": "revision/queue_kd_phase1.yaml",
-    "acdc": "revision/queue_kd_mc.yaml",
-    "synapse": "revision/queue_kd_mc.yaml",
+    "isic2018": "protocols/kd_isic2018/queue_kd_phase1.yaml",
+    "acdc": "protocols/kd_acdc_synapse/queue_kd_mc.yaml",
+    "synapse": "protocols/kd_acdc_synapse/queue_kd_mc.yaml",
 }
 TEST_OUTPUTS = ["preds_test.npz", "per_case_test.csv", "test_metrics.json"]
 

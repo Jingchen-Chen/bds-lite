@@ -2,9 +2,9 @@
 
 Input: results/revision_runs/{dataset}_wp5_full_seed1/gradient_probes.json (every 50
 global steps, FP32, before the AMP update, on shared encoder parameters; see
-revision/TRAINING_ADAPTER_PROTOCOL.md). Only completed 150-epoch runs are used.
+protocols/ablation/TRAINING_ADAPTER_PROTOCOL.md). Only completed 150-epoch runs are used.
 Descriptive, single-seed diagnostic: no inferential test across datasets.
-Outputs: revision/tables/gradient_summary.csv, revision/figures/gradient_cosine.{pdf,png}.
+Outputs: results/tables/gradient_summary.csv, paper/figures/gradient_cosine.{pdf,png}.
 Null cosines (zero-norm component, e.g. constant SDF on empty batches) are excluded and
 counted.
 """
@@ -99,14 +99,14 @@ def figure() -> None:
     axes[0].set_ylabel("cosine on shared encoder")
     axes[0].legend(frameon=False, fontsize=8)
     fig.tight_layout()
-    out = ROOT / "revision/figures/gradient_cosine"
+    out = ROOT / "paper/figures/gradient_cosine"
     fig.savefig(out.with_suffix(".pdf"))
     fig.savefig(out.with_suffix(".png"), dpi=300)
 
 
 def main() -> None:
     rows = summary()
-    path = ROOT / "revision/tables/gradient_summary.csv"
+    path = ROOT / "results/tables/gradient_summary.csv"
     with path.open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()

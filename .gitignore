@@ -7,28 +7,33 @@ data/
 !src/bds_lite/data/
 outputs/
 recovered/
-results/
-revision/audit/*.bundle
-revision/.gpu.lock
 *.pt
 *.npy
 *.npz
+*.pid
 
-# Mutable live control state; frozen milestone snapshots are tracked.
-revision/training_supervision/
-revision/audit/thermal_supervisor.log
-revision/STOP_TRAINING
+# Per-run training outputs; the per-case results the analyses need are in the evidence archives.
+results/revision_runs/
+
+# Runtime control state of the training supervisors, and the optional original-layout links
+# (evidence/restore_original_layout.py); paths are fixed by the frozen study scripts.
+/revision/
 
 # Unlicensed upstream comparator code, fetched at a pinned commit; never redistributed.
 third_party/
 
-# Third-party papers fetched for number verification (hashes in revision/lit_numbers.csv)
-revision/sources/literature/
-revision/auto_refresh.log
+# Third-party papers fetched for number verification (hashes in paper/lit_numbers.csv).
+paper/literature/
 
 # Files that show dataset photographs or ACDC/Synapse annotations: local only, never committed
-# (revision/LICENSING_AUDIT.md).
-revision/restricted_local/
+# (docs/LICENSING_AUDIT.md).
+paper/restricted_local/
+preregistration/
 
-# Process-ID files written by the training supervisors (runtime state, not records).
-*.pid
+# Compiler intermediates are local caches; public paper builds retain only PDFs.
+/paper/*.aux
+/paper/*.log
+/paper/*.bbl
+/paper/*.blg
+/paper/*.out
+.venv

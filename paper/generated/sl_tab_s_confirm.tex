@@ -1,0 +1,17 @@
+% labels of the main text applied by analysis/revision/make_supplement_labels.py to tab_s_confirm.tex
+\begin{tabular}{llcc}
+\toprule
+Analysis & Metric & $\Delta$ [95\% CI] & Reading in the article \\
+\midrule
+Primary (confirmatory), seeds 201--217, 50 held-out patients & Boundary F1 & +0.0178 [+0.0098, +0.0258] & Success, of unclear size \\
+\addlinespace
+Secondary, same runs and patients & DSC & +0.0136 [+0.0061, +0.0211] & interval excludes zero \\
+Secondary, same runs and patients & IoU & +0.0183 [+0.0105, +0.0262] & interval excludes zero \\
+Secondary, same runs and patients & HD95 (px) & +1.22 [$-$0.09, +2.54] & not detected \\
+Secondary, same runs and patients & ASSD (px) & +0.39 [+0.05, +0.72] & interval excludes zero \\
+\addlinespace
+Seed-paired sensitivity (17 pairs) & Boundary F1 & +0.0178 [+0.0106, +0.0250] & descriptive \\
+Exploratory models (seeds 1--3) on the held-out patients & Boundary F1 & +0.0154 [$-$0.0031, +0.0338] & descriptive, not a confirmation \\
+Replication seeds on the internal 20 patients (already seen) & Boundary F1 & +0.0209 [+0.0088, +0.0330] & seed replication only \\
+\bottomrule
+\end{tabular}

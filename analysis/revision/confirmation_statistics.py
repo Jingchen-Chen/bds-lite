@@ -1,8 +1,8 @@
 # ruff: noqa: E501
-"""Frozen analysis for revision/CONFIRMATION_PROTOCOL.md. Committed before any confirmation run.
+"""Frozen analysis for protocols/confirmation/CONFIRMATION_PROTOCOL.md. Committed before any confirmation run.
 
 Reuses the expansion estimator (expansion_statistics.contrast). Positive favours the first arm.
-Outputs in revision/tables/families/: confirmation_contrasts.csv, confirmation_pooled.csv.
+Outputs in results/tables/families/: confirmation_contrasts.csv, confirmation_pooled.csv.
 --dry-run <dir> treats seeds 1-3 as the fresh seeds and writes to <dir>. It exists only to test this
 code on data already known.
 """
@@ -98,7 +98,7 @@ def main() -> None:
     parser.add_argument("--dry-run", type=Path)
     args = parser.parse_args()
     dry = args.dry_run is not None
-    out = args.dry_run if dry else ROOT / "revision/tables/families"
+    out = args.dry_run if dry else ROOT / "results/tables/families"
     out.mkdir(parents=True, exist_ok=True)
 
     def fresh(dataset: str) -> list[int]:

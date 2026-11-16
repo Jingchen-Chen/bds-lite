@@ -22,7 +22,7 @@ from scipy import stats
 from analysis.revision.expansion_statistics import cell_path, isic_path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "revision/kd_posthoc_balanced"
+OUT = ROOT / "results/kd_posthoc_balanced"
 RUNS = ROOT / "results/revision_runs"
 DATASETS = ("isic2018", "acdc", "synapse")
 
@@ -83,7 +83,7 @@ def holm(rows: list[dict]) -> None:
 
 
 def main() -> None:
-    frozen_file = ROOT / "revision/kd_unified/contrasts.csv"
+    frozen_file = ROOT / "results/kd_unified/contrasts.csv"
     frozen = list(csv.DictReader(frozen_file.open()))
     balanced, original, sources, errors = [], [], [], []
     for dataset in DATASETS:
@@ -200,8 +200,8 @@ def main() -> None:
         confirmation_hashes={
             str(p.relative_to(ROOT)): digest(p)
             for p in [
-                ROOT / "revision/acdc_confirm/results/results.json",
-                ROOT / "revision/acdc_confirm/results/contrasts.csv",
+                ROOT / "results/acdc_confirm/results/results.json",
+                ROOT / "results/acdc_confirm/results/contrasts.csv",
             ]
         },
     )

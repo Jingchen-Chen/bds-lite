@@ -18,6 +18,7 @@ from scipy import ndimage as ndi
 
 from analysis.revision.error_decomposition import load_targets
 from bds_lite.evaluation.metrics import surface, surface_distances
+from bds_lite.paths import current
 
 ROOT = Path(__file__).resolve().parents[2]
 MAX_SQUARED = 2 * 223**2
@@ -39,7 +40,7 @@ def write_csv(path, rows):
 def default_entries():
     entries = []
     for queue in ["main_prediction_queue.json", "prediction_recovery_queue.json"]:
-        for e in json.loads((ROOT / "revision" / queue).read_text())["runs"]:
+        for e in json.loads((ROOT / current(f"revision/{queue}")).read_text())["runs"]:
             if e["split"] not in ["test", "official_test"]:
                 continue
             entries.append(
@@ -61,7 +62,7 @@ def default_entries():
                     family=family,
                     seed=seed,
                     classes=2,
-                    path=f"revision/official_isic/test/{family}_seed{seed}/preds_test.npz",
+                    path=f"results/official_isic/test/{family}_seed{seed}/preds_test.npz",
                 )
             )
     return entries
@@ -186,7 +187,7 @@ def main():
     parser.add_argument(
         "--run-list", type=Path, help="JSON list: dataset/split/family/seed/classes/path"
     )
-    parser.add_argument("--output", type=Path, default=ROOT / "revision/surface_cdf")
+    parser.add_argument("--output", type=Path, default=ROOT / "results/surface_cdf")
     args = parser.parse_args()
     entries = json.loads(args.run_list.read_text()) if args.run_list else default_entries()
     args.output.mkdir(exist_ok=False)

@@ -8,7 +8,7 @@ ACDC/Synapse intensity images are shown only in the `_with_images` variant, pend
 licence approval (revision/licensing.md); the default variant shows label maps only.
 Targets are the stored training targets (union morphological-gradient boundary,
 per-class SDF); for multi-class SDF the minimum over classes is displayed.
-Outputs: revision/figures/dataset_examples{,_with_images}.{pdf,png} and a manifest.
+Outputs: paper/figures/dataset_examples{,_with_images}.{pdf,png} and a manifest.
 """
 
 from __future__ import annotations
@@ -86,7 +86,7 @@ def draw(with_images: bool) -> dict:
         ax.set_xticks([])
         ax.set_yticks([])
     fig.tight_layout()
-    stem = ROOT / f"revision/figures/dataset_examples{'_with_images' if with_images else ''}"
+    stem = ROOT / f"paper/figures/dataset_examples{'_with_images' if with_images else ''}"
     fig.savefig(stem.with_suffix(".pdf"))
     fig.savefig(stem.with_suffix(".png"), dpi=300)
     plt.close(fig)
@@ -97,7 +97,7 @@ def main() -> None:
     manifest = draw(False)
     draw(True)
     rule = "max present classes, then median foreground area, lexicographic ties (training split)"
-    (ROOT / "revision/figures/dataset_examples_manifest.json").write_text(
+    (ROOT / "paper/figures/dataset_examples_manifest.json").write_text(
         json.dumps(dict(rule=rule, samples=manifest), indent=1) + "\n"
     )
     print(manifest)
@@ -105,6 +105,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     raise SystemExit(
-        "Retired: dataset pixels may not be published (revision/LICENSING_AUDIT.md). Use figure_synthetic_targets.py."
+        "Retired: dataset pixels may not be published (docs/LICENSING_AUDIT.md). Use figure_synthetic_targets.py."
     )
     main()

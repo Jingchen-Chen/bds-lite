@@ -18,10 +18,11 @@ from collections import defaultdict
 from pathlib import Path
 
 from analysis.revision.family_statistics import per_case_path
+from analysis.revision.paper_archive_inputs import logical
 
 ROOT = Path(__file__).resolve().parents[2]
-GEN = ROOT / "revision/manuscript/generated"
-VALIDATION = ROOT / "revision/validation"
+GEN = ROOT / "paper/generated"
+VALIDATION = ROOT / "results/validation"
 DATASETS = {"isic2018": "ISIC2018", "acdc": "ACDC", "synapse": "Synapse"}
 METHODS = {
     "M0": "U-Net",
@@ -34,7 +35,7 @@ METHODS = {
 }
 METRICS = ("dsc", "boundary_f1", "hd95")
 # Swin-Unet is cited in its ECCV 2022 Workshops version (Cao2022SwinUnet); the values were
-# verified against the arXiv v1 text of the same paper (revision/lit_numbers.csv).
+# verified against the arXiv v1 text of the same paper (paper/lit_numbers.csv).
 PUBLISHED = [
     ("ISIC2018", "EGE-UNet", "Ruan2023EGEUNet", "2307.08473v1.pdf"),
     ("ISIC2018", "LB-UNet", "Xu2024LBUNet", "lbunet_miccai2024.pdf"),
@@ -85,7 +86,7 @@ def run_means(path: Path) -> dict[str, tuple[float, int]]:
 def build() -> dict:
     frozen = {
         (r["dataset"], r["method"]): r
-        for r in read(ROOT / "revision/tables/families/method_summary.csv")
+        for r in read(ROOT / "results/tables/families/method_summary.csv")
     }
     provenance, matched, errors = [], [], []
     for dataset in DATASETS:
@@ -116,7 +117,7 @@ def build() -> dict:
                             defined_images_or_slices=n,
                             frozen_run_mean=expected,
                             absolute_error=abs(value - expected),
-                            source=path.relative_to(ROOT).as_posix(),
+                            source=logical(path),
                             sha256=sha,
                         )
                     )
@@ -136,7 +137,7 @@ def build() -> dict:
             f"absolute scores do not reproduce frozen summary: max error {max(errors)}"
         )
 
-    literature = read(ROOT / "revision/lit_numbers.csv")
+    literature = read(ROOT / "paper/lit_numbers.csv")
     published, receipts = [], []
     for dataset, model, citation, filename in PUBLISHED:
         row = dict(dataset=dataset, model=model, citation=citation)
@@ -154,8 +155,8 @@ def build() -> dict:
             if len(candidates) != 1:
                 raise ValueError(f"ambiguous published source: {dataset} {model} {metric}")
             source = candidates[0]
-            pdf = ROOT / "revision/sources/literature" / filename
-            if digest(pdf) != source["local_pdf_sha256"]:
+            pdf = ROOT / "paper/literature" / filename
+            if pdf.exists() and digest(pdf) != source["local_pdf_sha256"]:
                 raise ValueError(f"published source hash mismatch: {pdf}")
             # DSC alone is converted from percent; distances remain as reported.
             row[metric] = float(source["value"]) / (100 if metric == "DSC" else 1)
@@ -163,6 +164,7 @@ def build() -> dict:
                 dict(
                     source,
                     local_pdf=pdf.relative_to(ROOT).as_posix(),
+                    source_pdf_checked=pdf.is_file(),
                     paper_metric_label="HD" if metric == "HD95" else metric,
                 )
             )

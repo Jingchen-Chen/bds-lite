@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def main():
-    directory = ROOT / "revision/surface_cdf"
+    directory = ROOT / "results/surface_cdf"
     scope = json.loads((directory / "scope.json").read_text())
     entries = {(e["dataset"], e["family"], str(e["seed"])): e for e in scope["entries"]}
     original = {}
@@ -95,7 +95,7 @@ def main():
         independent_kdtree_checks=checks,
         checks="all savedHD95/missingness, count-based pooledCDF, monotonic/endpoints/thresholds",
     )
-    (ROOT / "revision/validation/surface_cdf.json").write_text(json.dumps(report, indent=2) + "\n")
+    (ROOT / "results/validation/surface_cdf.json").write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps(report, indent=2))
 
 

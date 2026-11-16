@@ -1,9 +1,9 @@
 # ruff: noqa: E501
 """Independent verification of the official ISIC2018 test evaluation used for family P.
 
-Checks (results -> revision/validation/official_isic_verification.json):
+Checks (results -> results/validation/official_isic_verification.json):
 1. Archive integrity: SHA-256 and member counts of the four official archives equal the
-   acquisition receipt (revision/sources/isic_acquisition.json).
+   acquisition receipt (docs/provenance/sources/isic_acquisition.json).
 2. Identity: 1,000 test images and masks with identical IDs; no ID shared with the 2,594-image
    development pool (locked and seed-1 partitions); no near-duplicate content: every test image
    is compared with every development image on 16x16 grey thumbnails (Pearson r); pairs with
@@ -17,7 +17,7 @@ Checks (results -> revision/validation/official_isic_verification.json):
    with an independent implementation (scipy EDT surface distances) and compared with the
    per-case CSVs used by the statistics.
 6. Statistics re-implementation: family P on ISIC recomputed with pandas-free numpy code and a
-   different bootstrap RNG; compared with revision/tables/families/family_statistics.csv.
+   different bootstrap RNG; compared with results/tables/families/family_statistics.csv.
 """
 
 from __future__ import annotations
@@ -68,7 +68,7 @@ def surface_dist(a: np.ndarray, b: np.ndarray) -> np.ndarray | None:
 
 def main() -> None:
     report = {}
-    receipt = json.loads((ROOT / "revision/sources/isic_acquisition.json").read_text())
+    receipt = json.loads((ROOT / "docs/provenance/sources/isic_acquisition.json").read_text())
     report["archives"] = [
         dict(
             path=r["path"],
@@ -165,7 +165,7 @@ def main() -> None:
     pred_rows, metric_rows = [], []
     for cohort_name, method in [("famO_unet", "S0"), ("famO_full", "S6")]:
         for seed in (1, 2, 3):
-            folder = ROOT / f"revision/extra_cohorts/{cohort_name}/isic2018_seed{seed}/test"
+            folder = ROOT / f"results/extra_cohorts/{cohort_name}/isic2018_seed{seed}/test"
             stored = np.load(folder / "predictions.npz")
             maps = dict(zip([str(i) for i in stored["ids"]], stored["predictions"], strict=True))
             model = load(cohort_name, "isic2018", seed)
@@ -207,7 +207,7 @@ def main() -> None:
                 for r in csv.DictReader(
                     (
                         ROOT
-                        / f"revision/extra_cohorts/{method_dir}/isic2018_seed{s}/test/per_case.csv"
+                        / f"results/extra_cohorts/{method_dir}/isic2018_seed{s}/test/per_case.csv"
                     ).open()
                 )
             }
@@ -223,7 +223,7 @@ def main() -> None:
     u, b = per_image("famO_unet"), per_image("famO_full")
     published = {
         r["metric"]: r
-        for r in csv.DictReader((ROOT / "revision/tables/families/family_statistics.csv").open())
+        for r in csv.DictReader((ROOT / "results/tables/families/family_statistics.csv").open())
         if r["family"] == "P" and r["dataset"] == "isic2018"
     }
     rng = np.random.default_rng(12345)
@@ -246,7 +246,7 @@ def main() -> None:
             )
         )
     report["statistics"] = stats
-    out = ROOT / "revision/validation/official_isic_verification.json"
+    out = ROOT / "results/validation/official_isic_verification.json"
     out.write_text(json.dumps(report, indent=1) + "\n")
     print(json.dumps({k: report[k] for k in ["identity", "preprocessing"]}, indent=1))
     print(

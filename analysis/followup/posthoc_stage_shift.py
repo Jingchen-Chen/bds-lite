@@ -11,7 +11,7 @@ run-level estimator) and the patient-set shift within the same runs (mean of per
 with a t interval over runs; patients differ, so this is descriptive).
 
     PYTHONPATH=src:. .venv/bin/python analysis/followup/posthoc_stage_shift.py
-Outputs: revision/followup/results/posthoc_stage_shift.{json,csv}
+Outputs: results/followup/results/posthoc_stage_shift.{json,csv}
 """
 
 from __future__ import annotations
@@ -31,7 +31,7 @@ import family_statistics as fs  # noqa: E402
 
 RUNS = ROOT / "results/revision_runs"
 EVAL = ROOT / "results/acdc_confirm_eval"
-OUT = ROOT / "revision/followup/results"
+OUT = ROOT / "results/followup/results"
 STAGE3 = range(201, 218)
 EARLY = (1, 2, 3)
 EARLY_NAME = {

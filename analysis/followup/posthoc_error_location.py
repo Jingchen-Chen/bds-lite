@@ -14,7 +14,7 @@ Hypothesis-generating only; labelled post hoc wherever reported. Patients 101-15
   gain), so that chance errors of the same D runs do not enter both quantities.
 
     PYTHONPATH=src:. .venv/bin/python analysis/followup/posthoc_error_location.py
-Outputs: revision/followup/results/posthoc_error_location.{json,csv}
+Outputs: results/followup/results/posthoc_error_location.{json,csv}
 """
 
 from __future__ import annotations
@@ -40,7 +40,7 @@ from analyze import STRUCTURES, arm_runs  # noqa: E402
 from analysis.kd3.unified_analysis import label_values  # noqa: E402
 
 OFFICIAL = ROOT / "data/processed/acdc_official_test/test"
-OUT = ROOT / "revision/followup/results"
+OUT = ROOT / "results/followup/results"
 SPLIT_A, SPLIT_B = tuple(range(201, 209)), tuple(range(209, 218))
 KD_ARMS = ("kd_band", "kd_full", "kd_band_peer")
 

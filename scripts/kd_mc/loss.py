@@ -1,4 +1,6 @@
-"""Multiclass boundary-band probability distillation (revision/KD_MULTICLASS_PROTOCOL.md 4).
+"""Multiclass boundary-band probability distillation.
+
+Protocol: protocols/kd_acdc_synapse/KD_MULTICLASS_PROTOCOL.md, section 4.
 
 Generalisation of scripts/kd/kd_loss.py chosen so that it reduces to the ISIC2018 loss for K = 2:
 - teacher hard map M_t = argmax_k p_t (for K = 2 this equals 1[p_fg > 0.5], ties going to

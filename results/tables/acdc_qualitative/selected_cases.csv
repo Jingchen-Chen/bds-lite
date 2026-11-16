@@ -1,0 +1,4 @@
+row_percentile,sample_id,patient,frame,phase,slice,seed,delta_target_at_percentile,delta_mean_dice,D_mean_dice,D_RV,D_MYO,D_LV,KD_mean_dice,KD_RV,KD_MYO,KD_LV,mm_per_row,mm_per_col,figure_label_D,figure_label_KD,figure_label_delta
+90,patient117_frame01_slice_4,patient117,frame01,ED,4,206,0.06228,0.06193,0.843142,0.855139,0.795529,0.87876,0.905077,0.922506,0.867654,0.925071,1.3184,1.5625,0.843,0.905,+0.062
+50,patient121_frame10_slice_3,patient121,frame10,ES,3,206,0.00801,0.00804,0.929024,0.922549,0.912432,0.95209,0.93706,0.952202,0.915183,0.943796,1.2351,1.7857,0.929,0.937,+0.008
+10,patient124_frame07_slice_6,patient124,frame07,ES,6,206,-0.03467,-0.03435,0.87554,0.79205,0.876979,0.957589,0.84119,0.727132,0.862816,0.933624,1.5625,1.262,0.876,0.841,-0.034

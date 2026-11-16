@@ -63,7 +63,7 @@ class Cohort:
             ):
                 raise ValueError("official count/identity mismatch")
             identity = (
-                ROOT / f"revision/official_isic/{split.lower()}/identity_and_preprocessing.json"
+                ROOT / f"results/official_isic/{split.lower()}/identity_and_preprocessing.json"
             )
             if json.loads(identity.read_text())["id_overlap"]:
                 raise ValueError("official overlap gate failed")
@@ -247,7 +247,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--execute", action="store_true")
     parser.add_argument(
-        "--queue", type=Path, default=ROOT / "revision/prediction_recovery_queue.json"
+        "--queue",
+        type=Path,
+        default=ROOT / "protocols/prediction_recovery/prediction_recovery_queue.json",
     )
     args = parser.parse_args()
     queue_path = args.queue.resolve()

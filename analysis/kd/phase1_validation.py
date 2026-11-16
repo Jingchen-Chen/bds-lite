@@ -3,7 +3,7 @@
 
 Reads the teacher run, the cache/gate record, D+KD-band seeds 1-3, and the recorded decoder-only
 validation files (seeds 1-10). Never opens a test file; it refuses to run if any new-arm folder
-contains a test output. Writes revision/kd_comparator/phase1/phase1_validation.{json,md}.
+contains a test output. Writes results/kd_isic2018/phase1/phase1_validation.{json,md}.
 
 Feasibility rule (Option A, frozen): proceed to Phase 2 if and only if
   F1 the teacher passed the quality gate (OPEN-1);
@@ -36,8 +36,8 @@ TEACHER = RUNS / "isic2018_kd_teacher_seed100"
 CACHE = RUNS / "isic2018_kd_teacher_cache"
 STUDENTS = [RUNS / f"isic2018_kd_band_seed{s}" for s in (1, 2, 3)]
 DECODER = [RUNS / f"isic2018_m2_aux_boundary_only_seed{s}" for s in range(1, 11)]
-EVENTS = ROOT / "revision/kd_comparator/supervision/events.jsonl"
-OUT = ROOT / "revision/kd_comparator/phase1"
+EVENTS = ROOT / "results/kd_isic2018/supervision/events.jsonl"
+OUT = ROOT / "results/kd_isic2018/phase1"
 TEST_OUTPUTS = ["preds_test.npz", "per_case_test.csv", "test_metrics.json"]
 METRICS = ["boundary_f1", "dsc", "hd95", "iou", "assd"]
 

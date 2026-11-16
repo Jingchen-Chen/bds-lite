@@ -10,9 +10,11 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def main():
-    entries = json.loads((ROOT / "revision/main_prediction_queue.json").read_text())["runs"]
+    entries = json.loads(
+        (ROOT / "protocols/prediction_recovery/main_prediction_queue.json").read_text()
+    )["runs"]
     catalog = {
-        row["path"]: row for row in csv.DictReader((ROOT / "revision/audit/checkpoints.csv").open())
+        row["path"]: row for row in csv.DictReader((ROOT / "results/audit/checkpoints.csv").open())
     }
     checks = []
     for entry in entries:
@@ -40,7 +42,7 @@ def main():
                 within_reproduction_dsc_tolerance=abs(old - observed) <= 0.005,
             )
         )
-    with (ROOT / "revision/validation/main_selection_replay.csv").open("w") as stream:
+    with (ROOT / "results/validation/main_selection_replay.csv").open("w") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(checks[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(checks)

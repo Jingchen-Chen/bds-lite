@@ -6,12 +6,12 @@ of their reference mask on the 224 x 224 grid, ties broken by image ID, and the 
 arm, the lowest seed (seed 1), is drawn for every image. No score of any model enters the
 selection.
 
-Licensing (revision/LICENSING_AUDIT.md): only ISIC2018 Task 1 test reference masks (CC-0) and
+Licensing (docs/LICENSING_AUDIT.md): only ISIC2018 Task 1 test reference masks (CC-0) and
 this study's own predicted masks are read and drawn, on a white background. The photograph
 archive is never opened. ACDC and Synapse images and annotations are not drawn.
 
-Writes revision/figures/contours_isic2018_kd.{pdf,png} and
-revision/figures/qualitative_manifest_kd.json (rule, image IDs, areas, per-panel scores read
+Writes paper/figures/contours_isic2018_kd.{pdf,png} and
+paper/figures/qualitative_manifest_kd.json (rule, image IDs, areas, per-panel scores read
 from the per-case result files, source paths and hashes).
 Usage: PYTHONPATH=src:. .venv/bin/python analysis/revision/figure_qualitative_kd.py
 """
@@ -40,7 +40,7 @@ SEED = 1
 QUANTILES = (0.10, 0.30, 0.50, 0.70, 0.90)
 # arm label -> run directory holding preds_test.npz and per_case_test.csv (seed 1)
 ARMS = {
-    "U": ROOT / "revision/official_isic/test/U_seed1",
+    "U": ROOT / "results/official_isic/test/U_seed1",
     "D": ROOT / "results/revision_runs/isic2018_m2_aux_boundary_only_seed1",
     "D+KD-band": ROOT / "results/revision_runs/isic2018_kd_band_seed1",
 }
@@ -140,14 +140,14 @@ def main() -> None:
     ]
     fig.legend(handles=legend, loc="lower center", ncol=5, frameon=False, fontsize=6)
     fig.tight_layout(rect=(0, 0.045, 1, 1), h_pad=0.2, w_pad=0.2)
-    out = ROOT / "revision/figures"
+    out = ROOT / "paper/figures"
     fig.savefig(out / "contours_isic2018_kd.pdf", metadata={"CreationDate": None})
     fig.savefig(out / "contours_isic2018_kd.png", dpi=420)
     plt.close(fig)
 
     manifest = {
         "rule": " ".join(__doc__.split("\n\n")[1].split()),
-        "licensing": "revision/LICENSING_AUDIT.md: ISIC2018 Task 1 test reference masks (CC-0) "
+        "licensing": "docs/LICENSING_AUDIT.md: ISIC2018 Task 1 test reference masks (CC-0) "
         "and this study's predictions only; no photograph is read",
         "reference_archive": str(MASKS.relative_to(ROOT)),
         "reference_archive_sha256": sha(MASKS),

@@ -56,7 +56,7 @@ def main():
                 )
             )
             print(folder.name, max_error, flush=True)
-    with (ROOT / "revision/validation/followup_boundary_distance_recomputed.csv").open("w") as f:
+    with (ROOT / "results/validation/followup_boundary_distance_recomputed.csv").open("w") as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)

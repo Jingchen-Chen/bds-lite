@@ -1,7 +1,7 @@
 """Queue-only, epoch-resumable training for the KD comparator (teacher and students).
 
 Mirrors scripts/revision/train_run.py::main and reuses its epoch_train, evaluate, and resume state
-unchanged. Differences, all required by revision/KD_COMPARATOR_PROTOCOL.md:
+unchanged. Differences, all required by protocols/kd_isic2018/KD_COMPARATOR_PROTOCOL.md:
 - no official-test dataset is built and no test prediction or metric is computed (protocol 9.1);
   test evaluation is the separate step scripts/kd/evaluate_test.py (protocol 9.8);
 - students add lambda_kd * L_kd from the cached teacher probabilities (scripts/kd/kd_loss.py);

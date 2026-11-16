@@ -1,4 +1,6 @@
-"""Shared constants and helpers for the KD comparator (revision/KD_COMPARATOR_PROTOCOL.md).
+"""Shared constants and helpers for the KD comparator.
+
+Protocol: protocols/kd_isic2018/KD_COMPARATOR_PROTOCOL.md.
 
 Nothing here changes the existing training sources. The locked student recipe is read from the
 registered decoder-only configuration and compared field by field, so the new arms cannot drift
@@ -15,8 +17,8 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
-PROTOCOL = ROOT / "revision/KD_COMPARATOR_PROTOCOL.md"
-WORKSPACE = ROOT / "revision/kd_comparator"
+PROTOCOL = ROOT / "protocols/kd_isic2018/KD_COMPARATOR_PROTOCOL.md"
+WORKSPACE = ROOT / "results/kd_isic2018"
 RUNS = ROOT / "results/revision_runs"
 # KD training has its own stop marker. revision/STOP_TRAINING is the author's stop for Experiment C
 # and is left in place; it must not be removed to run this experiment.

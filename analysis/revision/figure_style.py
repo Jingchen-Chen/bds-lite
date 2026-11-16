@@ -1,4 +1,4 @@
-"""Shared typesetting of the main-text figures (Figs. 1-3 of revision/manuscript/main.tex).
+"""Shared typesetting of the main-text figures (Figs. 1-3 of paper/main.tex).
 
 - width: \\the\\textwidth of wlpeerj.cls, 415.12572 TeX pt (measured with tectonic); figures are
   drawn at this width and included without scaling, so the drawn type size is the printed one;

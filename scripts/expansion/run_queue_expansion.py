@@ -1,4 +1,6 @@
-"""Expansion-queue copy of scripts/revision/run_queue.py (revision/EXPANSION_PROTOCOL.md).
+"""Expansion-queue copy of scripts/revision/run_queue.py.
+
+Protocol: protocols/expansion/EXPANSION_PROTOCOL.md.
 
 Differences: seeds 1-10 are accepted through scripts/expansion/train_expansion.py, and only that
 entry point may be launched. Shares revision/.gpu.lock, so it never runs alongside another queue.
@@ -25,6 +27,8 @@ import time
 from pathlib import Path
 
 import yaml
+
+from bds_lite.paths import current
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -92,7 +96,9 @@ def gpu_reading():
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--queue", type=Path, default=ROOT / "revision/queue_expansion.yaml")
+    parser.add_argument(
+        "--queue", type=Path, default=ROOT / "protocols/expansion/queue_expansion.yaml"
+    )
     parser.add_argument("--execute", action="store_true")
     args = parser.parse_args()
     queue = yaml.safe_load(args.queue.read_text())
@@ -102,7 +108,7 @@ def main():
     if not args.execute:
         print(json.dumps(queue, indent=2))
         return
-    gate = json.loads((ROOT / "revision/reproduction_gate.json").read_text())
+    gate = json.loads((ROOT / "results/gates/reproduction_gate.json").read_text())
     if gate.get("status") != "COMPLETE — VERIFIED" or not gate.get("evidence"):
         raise ValueError("reproduction has not passed; GPU execution forbidden")
     if not all((ROOT / p).is_file() for p in gate["evidence"]):
@@ -127,7 +133,7 @@ def main():
             resolved = yaml.safe_load(config.read_text())
             require_protocol(resolved)
             if (
-                digest(ROOT / resolved["revision"]["protocol"])
+                digest(ROOT / current(resolved["revision"]["protocol"]))
                 != resolved["revision"]["protocol_sha256"]
             ):
                 raise ValueError("training protocol changed")

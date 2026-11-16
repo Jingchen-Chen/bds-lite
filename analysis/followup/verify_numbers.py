@@ -2,7 +2,7 @@
 
 Recomputes every follow-up contrast from the raw per-case CSVs with code written separately from
 expansion_statistics.contrast (pandas-free, plain csv + numpy + scipy), then compares each value,
-rounded as printed, with revision/manuscript/generated/{tab_followup_main.tex,
+rounded as printed, with paper/generated/{tab_followup_main.tex,
 tab_s_followup_all.tex, keys_followup.json}. Exits 1 on any mismatch.
 
     PYTHONPATH=src:. .venv/bin/python analysis/followup/verify_numbers.py
@@ -22,7 +22,7 @@ import numpy as np
 from scipy import stats
 
 ROOT = Path(__file__).resolve().parents[2]
-GEN = ROOT / "revision/manuscript/generated"
+GEN = ROOT / "paper/generated"
 SEEDS = range(201, 218)
 S3_EVAL, FU_EVAL = ROOT / "results/acdc_confirm_eval", ROOT / "results/followup_eval"
 CSV = "per_case_official_test.csv"
