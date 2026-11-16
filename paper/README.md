@@ -8,7 +8,7 @@
 
 Run `bash paper/build.sh` from the repository root to regenerate the keys, tables and figures and compile
 both PDFs (see the [reproduction guide](../docs/reproducing.md#building-the-paper) for its inputs).
-It does not rerun frozen analyses or training.
+It restores checksum-verified supporting inputs automatically. It does not rerun frozen analyses or training.
 `analysis/revision/verify_editorial_numbers.py` checks the central numbers against the per-case files.
 
 The absolute means and SDs of the comparison table come from `analysis/revision/make_comparison_table.py`.

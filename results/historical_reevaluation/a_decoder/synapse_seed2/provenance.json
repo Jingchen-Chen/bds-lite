@@ -1,8 +1,0 @@
-{
- "checkpoint": "outputs/runs/synapse_bds_lite_boundary_only_seed2/best.pt",
- "checkpoint_sha256": "fd9003b7fbe5cdc4be70dcf7d9e167ea89621541ef94b56789189782b9b1ee09",
- "n_samples": 1568,
- "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
- "per_case_sha256": "84922003b26265f86ff63e0b2e9c976427bbdf59f779dea092905db148c2a7bd",
- "protocol_sha256": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095"
-}

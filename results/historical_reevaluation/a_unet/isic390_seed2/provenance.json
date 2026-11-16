@@ -1,8 +1,0 @@
-{
- "checkpoint": "outputs/runs/isic2018_unet_seed2/best.pt",
- "checkpoint_sha256": "135d3f643f81c48e2d3981e44f223d4950ee166833873ef5317bf8c7a1b83861",
- "n_samples": 390,
- "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
- "per_case_sha256": "2128af593cfc7baad6308cde269dc9f029735233bf7ba4ac2b51f0db0419a334",
- "protocol_sha256": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095"
-}

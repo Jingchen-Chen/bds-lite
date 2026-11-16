@@ -44,7 +44,7 @@ recovered/followup/splits/<dataset>/<split>.json
 ```
 
 See the [reproduction guide](reproducing.md#archived-inputs) for extraction and the
-[protocol index](../protocols/README.md) for each study's preprocessing and split requirements.
+[study index](../evidence/README.md#study-index) for each study's preprocessing and split requirements.
 The converters' random split options below are for new experiments; reproducing the paper requires
 its registered split membership.
 

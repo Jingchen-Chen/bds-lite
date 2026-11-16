@@ -1,7 +1,0 @@
-{
- "checkpoint": "outputs/runs/synapse_bds_lite_full_seed1/best.pt",
- "checkpoint_sha256": "314f5877d953184638b5af99dcd047ae9b720bb4ccfe11eea72f49cba8e606d4",
- "n_samples": 1568,
- "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
- "per_case_sha256": "0bd459399bf88b6fd618043b4ecbc38f99aaf2ca4c204623350ae68f9a15fc25"
-}

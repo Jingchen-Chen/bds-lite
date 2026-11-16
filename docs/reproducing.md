@@ -9,8 +9,9 @@ training example. This guide covers the archived paper experiments and their dep
 [env_freeze.txt](env_freeze.txt) records a partial study environment inventory, including PyTorch
 2.11.0 and CUDA 13.0. The external teacher uses `segmentation_models_pytorch==0.6.0`.
 The recorded environment includes local overlays and has not been validated as a portable installation;
-some study trainers explicitly check the recorded PyTorch/CUDA versions. See the dated
-[reproducibility status](REPRODUCIBILITY_STATUS_20261110.md) for the dependency audit at that cutoff.
+some study trainers explicitly check the recorded PyTorch/CUDA versions. The dated dependency
+audit is preserved as `docs/REPRODUCIBILITY_STATUS_20261110.md` in the supporting records;
+restore it with `python evidence/restore.py --group provenance`.
 
 For statistical verification alone, a separate CPU environment with NumPy and SciPy is sufficient:
 
@@ -27,6 +28,18 @@ archives. The second verifies the primary archive's member checksums and indepen
 25 contrasts and 20 Holm-adjusted values. Neither script changes the saved results.
 
 ## Archived inputs
+
+Supporting results, protocols and provenance are packaged to keep the public checkout compact.
+Restore their exact original paths before running study analyses or training:
+
+```bash
+python evidence/restore.py
+```
+
+Use `--check` for a read-only integrity check, or `--group results`, `--group protocols` or
+`--group provenance` to select records. Existing different files are never overwritten.
+The [evidence index](../evidence/README.md) describes each archive and study;
+the [restoration manifest](../evidence/archived_paths.csv) lists every destination and SHA-256.
 
 The primary and supplementary evidence archives contain the case-level outputs used for reanalysis.
 Archive digests are recorded in [BDS_LITE_EVIDENCE_FREEZE.md](../evidence/BDS_LITE_EVIDENCE_FREEZE.md);
@@ -65,14 +78,15 @@ training configuration.
 
 | Study | Training / queue entry points | Specification |
 | --- | --- | --- |
-| Ablations | `scripts/revision/run_queue.py`, `scripts/revision/train_run.py` | [Ablation protocol](../protocols/ablation/ABLATION_PROTOCOL.md) |
-| Comparators | `scripts/comparators/run_queue_b.py`, `scripts/comparators/train_comparator.py` | [Comparator protocol](../protocols/comparators/COMPARATOR_PROTOCOL.md) |
-| ISIC2018 external teacher | `scripts/kd/run_queue_kd.py`, `scripts/kd/train_kd.py` | [KD protocol](../protocols/kd_isic2018/KD_COMPARATOR_PROTOCOL.md) |
-| ACDC / Synapse external teacher | `scripts/kd_mc/run_queue_mc.py`, `scripts/kd_mc/train_mc.py` | [Multiclass KD protocol](../protocols/kd_acdc_synapse/KD_MULTICLASS_PROTOCOL.md) |
-| ACDC confirmation | `scripts/acdc_confirm/run_queue.py`, `scripts/acdc_confirm/launch.py` | [Confirmation protocol](../protocols/acdc_confirm/acdc_confirmation.md) |
-| Follow-up controls | `scripts/kd_followup/run_queue.py` | [Follow-up registration](../protocols/followup/followup_registration.md) |
+| Ablations | `scripts/revision/run_queue.py`, `scripts/revision/train_run.py` | `protocols/ablation/ABLATION_PROTOCOL.md` |
+| Comparators | `scripts/comparators/run_queue_b.py`, `scripts/comparators/train_comparator.py` | `protocols/comparators/COMPARATOR_PROTOCOL.md` |
+| ISIC2018 external teacher | `scripts/kd/run_queue_kd.py`, `scripts/kd/train_kd.py` | `protocols/kd_isic2018/KD_COMPARATOR_PROTOCOL.md` |
+| ACDC / Synapse external teacher | `scripts/kd_mc/run_queue_mc.py`, `scripts/kd_mc/train_mc.py` | `protocols/kd_acdc_synapse/KD_MULTICLASS_PROTOCOL.md` |
+| ACDC confirmation | `scripts/acdc_confirm/run_queue.py`, `scripts/acdc_confirm/launch.py` | `protocols/acdc_confirm/acdc_confirmation.md` |
+| Follow-up controls | `scripts/kd_followup/run_queue.py` | `protocols/followup/followup_registration.md` |
 
-The complete [protocol index](../protocols/README.md) links additional studies and queue files.
+Protocol paths become available after restoration. The [study index](../evidence/README.md#study-index)
+covers additional studies; the complete protocol/queue index is restored to `protocols/README.md`.
 Training requires the processed datasets and a GPU; teacher experiments also require the pretrained
 weights and caches specified by their protocols.
 
@@ -116,11 +130,12 @@ contain pending calendar attestations only. Supplementary S18 and S21 describe t
 
 ## Tests
 
-Install the `dev` extra, extract the split manifests and copy them to the location used by the split
+Install the `dev` extra, restore supporting records, extract the split manifests and copy them to the location used by the split
 integrity tests (for a fresh checkout):
 
 ```bash
 mkdir -p data
+python evidence/restore.py
 cp -r recovered/followup/splits data/splits
 PYTHONPATH=src:. python -m pytest -q
 ```
@@ -134,6 +149,7 @@ Additional requirements for the full suite:
 - Two tests in `tests/revision/test_acdc_confirm_amendment1.py` depend on development commit
   `345cacd` and are skipped in this snapshot. Their source is retained as registered in Amendment 1.
 - One test in `tests/revision/test_kd_multiclass.py` is skipped without `segmentation_models_pytorch`.
+- The exploratory-contrast test is skipped if its per-run case CSVs have not been extracted from the primary archive.
 
 ## Building the paper
 
@@ -143,8 +159,9 @@ Prebuilt PDFs are in [paper/](../paper/README.md). To regenerate figures, tables
 bash paper/build.sh
 ```
 
-The build uses `.venv/bin/python`, Tectonic (default `~/.local/bin/tectonic`, or set `TECTONIC`),
-and `pdftotext` / `pdfinfo` from Poppler. It formats the saved structured evidence, checks published
+The build uses `.venv/bin/python` with Matplotlib installed, Tectonic (default `~/.local/bin/tectonic`,
+or set `TECTONIC`), and `pdftotext` / `pdfinfo` from Poppler. It automatically restores supporting
+results, protocols and provenance, then formats the saved structured evidence, checks published
 figure assets, and compiles the documents. It does not train models, run inference, measure latency,
 or recompute scientific contrast analyses. The supplemental labels layer verifies that numeric tokens
 are preserved when applying the manuscript's terminology.

@@ -36,4 +36,22 @@ preregistration/
 /paper/*.bbl
 /paper/*.blg
 /paper/*.out
+
+# Restored supporting records; the tracked copies are the evidence archives and manifests.
+/protocols/
+/docs/provenance/
+/docs/LICENSING_AUDIT.md
+/docs/REPRODUCIBILITY_STATUS_20261110.md
+/results/*
+!/results/README.md
+!/results/tables/
+!/results/paper_inputs/
+!/results/followup/
+/results/followup/*
+!/results/followup/results/
+/results/followup/results/*
+!/results/followup/results/contrasts.csv
+
+# Figure previews generated alongside the PDF assets used by the paper.
+/paper/figures/*.png
 .venv

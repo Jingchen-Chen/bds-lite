@@ -1,8 +1,0 @@
-{
- "checkpoint": "outputs/runs/acdc_bds_lite_gate_surface_seed2/best.pt",
- "checkpoint_sha256": "72bdc565bef230a157501417e2c8afbf27435d4b4e24243d3f378c578bac3564",
- "n_samples": 366,
- "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
- "per_case_sha256": "417cbb3504dd0796623cb98ba73592f1d2df59f9c96a85a3613846c39b6fb6be",
- "protocol_sha256": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095"
-}

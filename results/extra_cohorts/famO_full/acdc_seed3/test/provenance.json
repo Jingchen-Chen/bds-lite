@@ -1,7 +1,0 @@
-{
- "checkpoint": "outputs/runs/acdc_bds_lite_full_seed3/best.pt",
- "checkpoint_sha256": "6bbf2dc9d44717a688f7264dff374b4d6fc0dfe5976bd0e1d0f372c51234d01f",
- "n_samples": 366,
- "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
- "per_case_sha256": "45623f14b9d1c962ff4a5072ec2ac424732260985c950522880b5809b57c94be"
-}

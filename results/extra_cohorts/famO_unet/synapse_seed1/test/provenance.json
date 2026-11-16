@@ -1,7 +1,0 @@
-{
- "checkpoint": "outputs/runs/synapse_unet_seed1/best.pt",
- "checkpoint_sha256": "6ed6bee44aced73aaa8affb2bd90d004b291d15fefe07752ec5ca0e2be312985",
- "n_samples": 1568,
- "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
- "per_case_sha256": "bfaa6a5db1ac140e936255167d2d161cbd52c7f1088bb294dfa33029585c87f6"
-}

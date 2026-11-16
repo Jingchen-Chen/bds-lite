@@ -1,7 +1,0 @@
-{
-  "source": "full_cdf.csv",
-  "sha256": "0aa5f446be765dfb438a88d087e9cb71dabbc9d7e5261f01bb33ebdf74868ed6",
-  "plot": "right-continuous steps, consistent colors/labels, zero distance retained",
-  "previous_render": "initial_linear_render.pdf/png preserved; not final figure",
-  "scope": "descriptive; separate seed2026 Attention and legacy GSL references"
-}

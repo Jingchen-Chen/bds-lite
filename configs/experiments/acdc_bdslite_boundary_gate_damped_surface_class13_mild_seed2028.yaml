@@ -1,9 +1,0 @@
-extends:
-  - configs/experiments/acdc_bdslite_boundary_gate_damped_surface_class13_mild.yaml
-
-project:
-  seed: 2028
-
-experiment:
-  name: acdc_bdslite_boundary_gate_damped_surface_class13_mild_seed2028
-  group: bds_lite_repeated_seeds

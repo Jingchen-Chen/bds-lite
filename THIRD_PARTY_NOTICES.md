@@ -52,7 +52,7 @@ No other dataset image or annotation is included. In particular, the repository 
   <https://github.com/aecelaya/gen-surf-loss> (commit `2115cca`, cited in the module), also
   distributed as `GenSurfLoss` in MIST, <https://github.com/mist-medical/MIST>. Both are under the
   Apache License 2.0.
-- **Licence text:** `THIRD_PARTY_LICENSES/Apache-2.0-MIST.txt` (Copyright [2024] [Adrian Celaya]).
+- **Licence text:** `docs/licenses/Apache-2.0-MIST.txt` (Copyright [2024] [Adrian Celaya]).
 - **Modifications (Apache-2.0 section 4(b)):** ported from a 3D loss to a 2D multi-class module;
   explicit per-class weights with a weighted sum-then-divide aggregation; squared-Dice +
   cross-entropy region term; step, linear and cosine alpha schedules.
@@ -66,7 +66,7 @@ No other dataset image or annotation is included. In particular, the repository 
 - **Upstream:** <https://github.com/LIVIAETS/boundary-loss> at commit
   `171c32d88a4ce59af8be46fb88b96d3637b9515b` (`SurfaceLoss`, `one_hot2dist`, and the
   `gdl_surface_steal` weight schedule).
-- **Licence text:** `THIRD_PARTY_LICENSES/MIT-boundary-loss.txt` (Copyright (c) 2023 Hoel
+- **Licence text:** `docs/licenses/MIT-boundary-loss.txt` (Copyright (c) 2023 Hoel
   Kervadec), the upstream `LICENSE` file at that commit.
 - **Modifications:** the region term is this study's CE + soft Dice instead of generalized Dice, and
   all foreground classes are used.

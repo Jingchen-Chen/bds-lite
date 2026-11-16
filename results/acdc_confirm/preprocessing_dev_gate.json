@@ -1,8 +1,0 @@
-{
-  "slices": 1536,
-  "image_max_abs_diff": 0.014783859252929688,
-  "tolerance": 0.015,
-  "mask_mismatched_pixels": 0,
-  "slice_count_mismatches": [],
-  "passed": true
-}

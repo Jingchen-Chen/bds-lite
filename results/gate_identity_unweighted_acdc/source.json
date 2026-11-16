@@ -1,6 +1,0 @@
-{
-  "archive": "evidence/addendum-20261115.tar.gz",
-  "archive_sha256": "0b31f743a7cf6e524db959b73e7f80958b3f60d7434630521d27c8ccff6651af",
-  "member": "revision/gate_identity_unweighted_acdc/revision/tables/gate_identity_effects.csv",
-  "member_sha256": "e926ac48dfc9bf2c4b15bac26b33939cb1f4feebe00291cc0493f866a04501fc"
-}

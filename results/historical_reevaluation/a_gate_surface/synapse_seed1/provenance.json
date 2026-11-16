@@ -1,8 +1,0 @@
-{
- "checkpoint": "outputs/runs/synapse_bds_lite_gate_surface_seed1/best.pt",
- "checkpoint_sha256": "c4734b75e9e07ac36cf3618f90c81f79d03a61efe9a0a7b0feebf37b4d26b3a2",
- "n_samples": 1568,
- "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
- "per_case_sha256": "313d283243b7b3c8d505c33c394b86073431df7592fbd604231fd730ac87fa52",
- "protocol_sha256": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095"
-}

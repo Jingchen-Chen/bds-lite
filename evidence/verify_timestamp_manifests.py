@@ -13,7 +13,10 @@ import re
 import sys
 from pathlib import Path
 
+from restore import restore
+
 ROOT = Path(__file__).resolve().parents[1]
+restore(groups=("protocols",))
 MANIFESTS = (
     "protocols/acdc_confirm/TIMESTAMP_MANIFEST.txt",
     "protocols/followup/TIMESTAMP_MANIFEST.txt",

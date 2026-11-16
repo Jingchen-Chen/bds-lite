@@ -11,6 +11,10 @@ sys.path.insert(0, str(ROOT / "analysis/revision"))
 
 
 def main() -> None:
+    from evidence.restore import restore
+
+    restore(groups=("results", "protocols", "provenance"))
+
     import expansion_statistics as es
     import family_statistics as fs
     import make_comparison_table as comparison
@@ -24,13 +28,15 @@ def main() -> None:
     import verify_final_assets as verify
     import verify_paper_sources as sources
 
+    from analysis.revision import family_statistics as comparison_statistics
     from analysis.revision.paper_archive_inputs import CACHE, prepare, verify_config_weights
 
     prepare()
     verify_config_weights()
     # The statistical modules are imported only for their saved-file locators.
     # Their analysis entry points are never called and their source files stay unchanged.
-    fs.RUNS = es.RUNS = CACHE / "results/revision_runs"
+    # Frozen generators import the locator both as a package and as a direct module.
+    fs.RUNS = comparison_statistics.RUNS = es.RUNS = CACHE / "results/revision_runs"
     with tempfile.TemporaryDirectory(prefix="bds-paper-checks-") as directory:
         comparison.VALIDATION = Path(directory)
         distillation.main()

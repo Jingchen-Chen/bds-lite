@@ -31,4 +31,4 @@ This MIT License covers the original code and text of this repository. It does n
   - the ISIC 2018 Task 1 reference masks drawn in the contour figures (CC0);
   - the ISIC 2018, ACDC and Synapse datasets, which are not redistributed here.
 
-See THIRD_PARTY_NOTICES.md and THIRD_PARTY_LICENSES/.
+See THIRD_PARTY_NOTICES.md and docs/licenses/.

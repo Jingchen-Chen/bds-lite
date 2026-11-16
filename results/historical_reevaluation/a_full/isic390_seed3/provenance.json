@@ -1,8 +1,0 @@
-{
- "checkpoint": "outputs/runs/isic2018_bds_lite_full_seed3/best.pt",
- "checkpoint_sha256": "a8dc81f75860985d921a3b82b751ac281c0bc2f5d87b24503758a4f4a125b2ee",
- "n_samples": 390,
- "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
- "per_case_sha256": "b9a5b2df6f7c73a7c487de0dd39175284bd4d352ddc5a87d62104121249c42be",
- "protocol_sha256": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095"
-}

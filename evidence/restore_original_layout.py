@@ -13,6 +13,11 @@ import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# Restore the compact release's supporting records before creating old-path links.
+from restore import restore  # noqa: E402
+
+restore()
 made = 0
 with (ROOT / "evidence/path_map.csv").open(newline="") as stream:
     for row in csv.DictReader(stream):

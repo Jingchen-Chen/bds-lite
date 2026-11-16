@@ -1,8 +1,0 @@
-{
- "checkpoint": "outputs/runs/acdc_bds_lite_boundary_gate_seed2/best.pt",
- "checkpoint_sha256": "e4421b08125acd99c07ad27834744c1fe7ba43c4b13daadb0b58d9a89ba70959",
- "n_samples": 366,
- "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
- "per_case_sha256": "04acbba723dd4d9e8858c544a7e97ddf19762b3d56e7bd37678874ecb5eea51c",
- "protocol_sha256": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095"
-}

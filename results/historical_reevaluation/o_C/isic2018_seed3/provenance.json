@@ -1,8 +1,0 @@
-{
- "checkpoint": "recovered/followup/results/pathway_controls_20261018/isic2018_C_seed3/best.pt",
- "checkpoint_sha256": "d2645c5a1ed087778201b9a6391b7372d8e8218127c3ba5290932f46ab57f4c1",
- "n_samples": 1000,
- "evaluator": "recover_predictions.case_metrics; CPU fp32; argmax",
- "per_case_sha256": "987e2c459e0908496e6b1ae05d8f08c7e7c98d4742e8c4b49163f0491b946e32",
- "protocol_sha256": "8e770fee3d4f9569c8eca0a650994e24972f812be12cb40fd9ff71ba60da0095"
-}

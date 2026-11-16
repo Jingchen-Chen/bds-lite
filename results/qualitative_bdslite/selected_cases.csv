@@ -1,4 +1,0 @@
-row_percentile,sample_id,patient,phase,slice,seed,delta_target_at_percentile,delta_dsc_bdslite_minus_d,dsc_U,dsc_D,dsc_BDSLite,mm_per_row,mm_per_col,fov_needed_mm
-90,patient071_frame01_slice_6,patient071,ED,6,2,0.04476,0.04458,0.844189,0.861944,0.906521,1.7857,1.3393,90.59
-50,patient065_frame14_slice_3,patient065,ES,3,2,-0.00642,-0.00654,0.922793,0.932675,0.926132,1.875,1.7578,98.17
-10,patient013_frame14_slice_5,patient013,ES,5,2,-0.06621,-0.06577,0.794281,0.840346,0.774574,1.6518,1.3937,103.18
